@@ -8,3 +8,4 @@ config.codekit
 .tmp
 app/styles/design_system.css
 npm-debug.log
+scss-lint.log
