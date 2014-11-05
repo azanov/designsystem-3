@@ -16,8 +16,8 @@ angular.module('designSystemApp')
         markerSelected: 0,
         markers: {
           whq: {
-            lat: 41.0374559,
-            lng: -73.5395857,
+            lat: 41.07075041,
+            lng: -73.5486067,
             message: "World Headquarters",
             focus: true,
             draggable: false
