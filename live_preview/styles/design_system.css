@@ -1,5 +1,5 @@
 /*!
-* DesignSystem - v0.9.1 - 2014-11-05
+* DesignSystem - v0.9.1 - 2014-12-01
 * http://http://guxstaging.pbi.global.pvt/design_system/
 * Copyright (c) 2014 ; All Rights Reserved
 */
@@ -64,7 +64,7 @@ a:hover { color: #00487F; }
 a.read-more { font-size: 14px; white-space: nowrap; }
 a.read-more:after { content: '\2026'; }
 
-body { font-family: "Ubuntu", Helvetica, Arial, sans-serif; font-size: 16px !important; font-weight: 400; color: #59595A; }
+body { font-family: "Ubuntu", Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #59595A; }
 body .has-error { color: #CC0000; }
 
 dl dt { margin-top: 10px; }
@@ -784,8 +784,6 @@ th { font-weight: normal; }
 
 .tabbable.scroll > .tab-content { padding: 20px; }
 
-.tab-content .panel-default { border: 0; max-width: 90%; padding: 0; }
-.tab-content .panel-default .panel-body { padding: 0; }
 .tab-content.tab-content-bordered { border: 1px solid #e1e1e1; border-top: 0; }
 
 .thumb-detail h4 { font-weight: 700; }

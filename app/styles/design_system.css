@@ -59,7 +59,7 @@ a:hover { color: #00487F; }
 a.read-more { font-size: 14px; white-space: nowrap; }
 a.read-more:after { content: '\2026'; }
 
-body { font-family: "Ubuntu", Helvetica, Arial, sans-serif; font-size: 16px !important; font-weight: 400; color: #59595A; }
+body { font-family: "Ubuntu", Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #59595A; }
 body .has-error { color: #CC0000; }
 
 dl dt { margin-top: 10px; }

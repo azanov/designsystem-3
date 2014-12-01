@@ -39,7 +39,7 @@ a {
 
 body {
   font-family: $font-family-base;
-  font-size  : $font-size-base !important; // for ie8
+  font-size  : $font-size-base; // originally they had !important "for ie8" but I removed
   font-weight: 400;
   color      : $text-color;
      .has-error {
