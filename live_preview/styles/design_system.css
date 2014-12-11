@@ -1,5 +1,5 @@
 /*!
-* DesignSystem - v0.9.1 - 2014-12-01
+* DesignSystem - v0.9.1 - 2014-12-11
 * http://http://guxstaging.pbi.global.pvt/design_system/
 * Copyright (c) 2014 ; All Rights Reserved
 */
@@ -139,10 +139,6 @@ ul { list-style-type: circle; }
 
 .nvd3 .nv-axis .nv-axisMaxMin text { font-weight: normal; }
 
-.checkboxList { width: 100%; height: 100px; overflow-y: scroll; }
-.checkboxList label { color: #59595A; margin-bottom: 0; }
-.checkboxList .ms-checkboxitem { margin-bottom: 2px; }
-
 .badge { background-color: #0070C4; }
 
 .badge-gray { background-color: #e1e1e1 !important; }
@@ -259,6 +255,10 @@ ul { list-style-type: circle; }
 .icon-addon .form-control:focus + .glyphicon, .icon-addon:hover .glyphicon, .icon-addon .form-control:focus + .fa, .icon-addon:hover .fa { color: #2580db; }
 
 .icon-addon input:disabled + .glyphicon, .icon-addon select:disabled + .glyphicon, .icon-addon input:disabled + .fa, .icon-addon select:disabled + .fa { color: #ccc; }
+
+.checkboxList { width: 100%; height: 100px; overflow-y: scroll; }
+.checkboxList label { color: #59595A; margin-bottom: 0; }
+.checkboxList .ms-checkboxitem { margin-bottom: 2px; }
 
 .help-block.text-error { display: none; }
 .has-error .help-block.text-error { display: block; color: #CC0000; }

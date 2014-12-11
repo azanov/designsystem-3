@@ -2,6 +2,20 @@
 
 //* -- FORMS -- */
 
+
+.checkboxList {
+  width:100%;
+  height: 100px;
+  overflow-y: scroll;
+  label {
+    color: $gray-text;
+    margin-bottom: 0;
+  }
+  .ms-checkboxitem {
+    margin-bottom: 2px;
+  }
+}
+
 .help-block.text-error {
   display: none;
   .has-error & {
