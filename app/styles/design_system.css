@@ -1,36 +1,47 @@
-@font-face { font-family: "pbfont"; src: url("../fonts/pbfont.eot"); font-weight: normal; font-style: normal; }
-@font-face { font-family: "pbfont"; src: url("../fonts/pbfont.eot"); src: url("../fonts/pbfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pbfont.woff") format("woff"), url("../fonts/pbfont.ttf") format("truetype"), url("../fonts/pbfont.svg?#pbfont") format("svg"); font-weight: normal; font-style: normal; }
-.pbfont { font-family: "pbfont"; display: inline-block; vertical-align: middle; line-height: 1; font-weight: normal; font-style: normal; speak: none; text-decoration: inherit; text-transform: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+@font-face { font-family: 'pbfont'; src: url("../fonts/pbfont.eot?-ugwrh6"); src: url("../fonts/pbfont.eot?#iefix-ugwrh6") format("embedded-opentype"), url("../fonts/pbfont.woff?-ugwrh6") format("woff"), url("../fonts/pbfont.ttf?-ugwrh6") format("truetype"), url("../fonts/pbfont.svg?-ugwrh6#pbfont") format("svg"); font-weight: normal; font-style: normal; }
+[class^="pb-"], [class*=" pb-"] { font-family: 'pbfont'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
-.pb-address-book:before { content: "\f101"; }
+.pb-metadata:before { content: "\e600"; }
 
-.pb-addtocatalog:before { content: "\f102"; }
+.pb-metadatatemplate:before { content: "\e601"; }
 
-.pb-catalog:before { content: "\f103"; }
+.pb-connection:before { content: "\e602"; }
 
-.pb-connection:before { content: "\f104"; }
+.pb-newconnection:before { content: "\e603"; }
 
-.pb-line:before { content: "\f105"; }
+.pb-databaseconnection:before { content: "\e604"; }
 
-.pb-metadata:before { content: "\f106"; }
+.pb-filesystemconnection:before { content: "\e605"; }
 
-.pb-metadatatemplate:before { content: "\f107"; }
+.pb-catalog:before { content: "\e606"; }
 
-.pb-newcatalog:before { content: "\f108"; }
+.pb-newcatalog:before { content: "\e607"; }
 
-.pb-newconnection:before { content: "\f109"; }
+.pb-addtocatalog:before { content: "\e608"; }
 
-.pb-newfolder:before { content: "\f10a"; }
+.pb-folder:before { content: "\e609"; }
 
-.pb-newtable:before { content: "\f10b"; }
+.pb-newfolder:before { content: "\e60a"; }
 
-.pb-point:before { content: "\f10c"; }
+.pb-addtofolder:before { content: "\e60b"; }
 
-.pb-polygon:before { content: "\f10d"; }
+.pb-table:before { content: "\e60c"; }
 
-.pb-scales:before { content: "\f10e"; }
+.pb-layer:before { content: "\e60d"; }
 
-.pb-tile:before { content: "\f10f"; }
+.pb-newtable:before { content: "\e60e"; }
+
+.pb-map:before { content: "\e60f"; }
+
+.pb-tile:before { content: "\e610"; }
+
+.pb-address-book:before { content: "\e614"; }
+
+.pb-point:before { content: "\e611"; }
+
+.pb-polygon:before { content: "\e612"; }
+
+.pb-line:before { content: "\e613"; }
 
 .serif { font-family: Georgia, Times, "Times New Roman", serif; }
 
@@ -133,10 +144,6 @@ ul { list-style-type: circle; }
 .sparkline h2 { font-size: 1.5em; }
 
 .nvd3 .nv-axis .nv-axisMaxMin text { font-weight: normal; }
-
-.checkboxList { width: 100%; height: 100px; overflow-y: scroll; }
-.checkboxList label { color: #59595A; margin-bottom: 0; }
-.checkboxList .ms-checkboxitem { margin-bottom: 2px; }
 
 .badge { background-color: #0070C4; }
 
@@ -254,6 +261,10 @@ ul { list-style-type: circle; }
 .icon-addon .form-control:focus + .glyphicon, .icon-addon:hover .glyphicon, .icon-addon .form-control:focus + .fa, .icon-addon:hover .fa { color: #2580db; }
 
 .icon-addon input:disabled + .glyphicon, .icon-addon select:disabled + .glyphicon, .icon-addon input:disabled + .fa, .icon-addon select:disabled + .fa { color: #ccc; }
+
+.checkboxList { width: 100%; height: 100px; overflow-y: scroll; }
+.checkboxList label { color: #59595A; margin-bottom: 0; }
+.checkboxList .ms-checkboxitem { margin-bottom: 2px; }
 
 .help-block.text-error { display: none; }
 .has-error .help-block.text-error { display: block; color: #CC0000; }
@@ -779,8 +790,6 @@ th { font-weight: normal; }
 
 .tabbable.scroll > .tab-content { padding: 20px; }
 
-.tab-content .panel-default { border: 0; max-width: 90%; padding: 0; }
-.tab-content .panel-default .panel-body { padding: 0; }
 .tab-content.tab-content-bordered { border: 1px solid #e1e1e1; border-top: 0; }
 
 .thumb-detail h4 { font-weight: 700; }

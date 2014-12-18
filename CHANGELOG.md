@@ -3,6 +3,9 @@
 
 ##Release Notes
 
+###0.9.5 December 18, 2014
+- Updated PB Font to use new icons from Beth and created via IcoMoon. Please replace your pbfonts with thse and replace the design_system.css file.
+
 
 
 ###0.8.8  September 23, 2014
