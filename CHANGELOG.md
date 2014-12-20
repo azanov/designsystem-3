@@ -3,6 +3,9 @@
 
 ##Release Notes
 
+###0.9.6
+- updated Miller Columns to not respond to window resizing.  As indicated on page, they are desktop-only at this point; they will now resize up to a point, but will not stack.
+
 ###0.9.5 December 18, 2014
 - Updated PB Font to use new icons from Beth and created via IcoMoon. Please replace your pbfonts with thse and replace the design_system.css file.
 
