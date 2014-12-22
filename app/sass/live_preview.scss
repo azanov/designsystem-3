@@ -293,6 +293,10 @@ p[class^="bg"] {
 	}
 }
 
+.clearRow {
+	clear: left;
+}
+
 
 //* color swatch backgrounds */
 .brand-primary { background-color: $brand-primary; }
