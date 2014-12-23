@@ -76,6 +76,8 @@ p[class^="bg"] { padding: 10px; }
 
 .text-center .pie, .text-center .donut { margin: 0 auto 20px; width: 100px; }
 
+.clearRow { clear: left; }
+
 .brand-primary { background-color: #0070C4; }
 
 .brand-success { background-color: #007D00; }
