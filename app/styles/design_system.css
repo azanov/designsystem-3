@@ -196,6 +196,8 @@ ul { list-style-type: circle; }
 .btn-link, .btn-cancel { color: #0070C4; }
 .btn-link.disabled, .btn-link.disabled:hover, .btn-link.disabled:active, .btn-link.disabled.active, .btn-link[disabled], .btn-link[disabled]:hover, .btn-link[disabled]:active, .btn-link[disabled].active, fieldset[disabled] .btn-link, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:active, fieldset[disabled] .btn-link.active, .btn-cancel.disabled, .btn-cancel.disabled:hover, .btn-cancel.disabled:active, .btn-cancel.disabled.active, .btn-cancel[disabled], .btn-cancel[disabled]:hover, .btn-cancel[disabled]:active, .btn-cancel[disabled].active, fieldset[disabled] .btn-cancel, fieldset[disabled] .btn-cancel:hover, fieldset[disabled] .btn-cancel:active, fieldset[disabled] .btn-cancel.active { color: #AFD2EC; text-decoration: none; opacity: 1; }
 
+.open > .dropdown-toggle.btn-default { color: #fff; }
+
 .btn-group-sm .btn i.fa { font-size: 16px; }
 .btn-group-xs .btn i.fa { font-size: 14px; }
 

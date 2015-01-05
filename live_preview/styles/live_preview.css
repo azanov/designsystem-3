@@ -1,7 +1,7 @@
 /*!
-* DesignSystem - v0.9.1 - 2014-12-18
+* DesignSystem - v0.9.1 - 2015-01-05
 * http://http://guxstaging.pbi.global.pvt/design_system/
-* Copyright (c) 2014 ; All Rights Reserved
+* Copyright (c) 2015 ; All Rights Reserved
 */
 .clearfix { zoom: 1; }
 .clearfix:before, .clearfix:after { content: ''; display: table; }
@@ -80,6 +80,8 @@ p[class^="bg"] { padding: 10px; }
 .glyphicons li { text-align: center; margin-bottom: 20px; font-size: .8em; }
 
 .text-center .pie, .text-center .donut { margin: 0 auto 20px; width: 100px; }
+
+.clearRow { clear: left; }
 
 .brand-primary { background-color: #0070C4; }
 

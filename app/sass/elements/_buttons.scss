@@ -63,7 +63,6 @@
         	background-color: darken($color, 25%);
         	border-color    : darken($color, 25%);
         }
-
   }
   &.disabled,
   &[disabled],
@@ -152,6 +151,9 @@
 	@include borderless-button($button-color);
 }
 
+.open>.dropdown-toggle.btn-default {
+  color: #fff;
+}
 
 
 
