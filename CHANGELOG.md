@@ -3,9 +3,6 @@
 
 ##Release Notes
 
-###0.9.6.1
-- fixed color bug in button dropdown
-
 ###0.9.6
 - updated Miller Columns to not respond to window resizing.  As indicated on page, they are desktop-only at this point; they will now resize up to a point, but will not stack.
 
