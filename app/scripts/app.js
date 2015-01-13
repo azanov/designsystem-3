@@ -28,10 +28,10 @@ angular.module('designSystemApp', [
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: 'views/home.html',
         controller: 'IndexCtrl',
-        className: 'main',
-        pageTitle: 'Home'
+        className: 'home',
+        pageTitle: 'Design System Live Preview'
       })
       .when('/leftnav', {
         templateUrl: 'views/leftnav.html',

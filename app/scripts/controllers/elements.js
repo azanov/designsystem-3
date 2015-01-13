@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('designSystemApp')
-    .controller('ElementsCtrl', ['$scope', '$route', '$location', '$timeout', '$log', 'NavFactory', 'FaIconFactory', 'PeopleFactory', 'PbfontFactory', 'ngProgress',
-        function($scope, $route, $location, $timeout, $log, NavFactory, FaIconFactory, PeopleFactory, PbfontFactory, ngProgress) {
+    .controller('ElementsCtrl', ['$scope', '$route', '$location', '$timeout', '$log', 'NavFactory', 'FaIconFactory', 'PeopleFactory',  'PbfontFactory', 'ngProgress','ColorFactory',
+        function($scope, $route, $location, $timeout, $log, NavFactory, FaIconFactory, PeopleFactory, PbfontFactory, ngProgress, ColorFactory) {
 
             //get the subnav data
             NavFactory.getSubNav('elements').then(function(data) {
@@ -49,6 +49,11 @@ angular.module('designSystemApp')
             PeopleFactory.getPeople().then(function(response) {
                 $scope.peopleData = response.data;
             });
+
+            ColorFactory.getColors().then(function(response) {
+              $scope.colorData = response.colors;
+            });
+
 
 
 

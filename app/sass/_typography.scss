@@ -1,106 +1,331 @@
-.serif { font-family: $font-family-serif; }
-.sans  { font-family: $font-family-sans-serif; }
+@import '../bower_components/bourbon/dist/settings/_asset-pipeline.scss';
+@import '../bower_components/bourbon/dist/css3/_font-face.scss';
 
-h1 { font-size: $font-size-h1;}
-h2 { font-size: $font-size-h2;}
-h3 { font-size: $font-size-h3;}
-h4 { font-size: $font-size-h4;}
-h5 { font-size: $font-size-h5;}
-h6 { font-size: $font-size-h6;}
+@include font-face('PrecisionSans_W_Rg', '../fonts/PrecisionSans_W_Rg', '400', 'normal');
+@include font-face('PrecisionSans_W_Bd', '../fonts/PrecisionSans_W_Bd', '700', 'normal');
+@include font-face('PrecisionSans_W_RgIt', '../fonts/PrecisionSans_W_RgIt', '400', 'italic');
+@include font-face('PrecisionSans_W_BdIt', '../fonts/PrecisionSans_W_BdIt', '700', 'italic');
+@include font-face('PrecisionSans_W_Lt', '../fonts/PrecisionSans_W_Lt', '300', 'normal');
+@include font-face('PrecisionSans_W_LtIt', '../fonts/PrecisionSans_W_LtIt', '300', 'italic');
+@include font-face('PrecisionSans_W_Md', '../fonts/PrecisionSans_W_Md', '500', 'normal');
+@include font-face('PrecisionSans_W_MdIt', '../fonts/PrecisionSans_W_MdIt', '500', 'italic');
 
-h1,h2,h3,h4 {
-  font-family: $font-family-sans-serif;
-  font-weight: $headings-font-weight;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+%aa {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
 }
-h5,h6 {
+%ps-light {
+  @extend %aa;
+  font-family: 'PrecisionSans_W_Lt', Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+%ps-light-italic {
+  @extend %aa;
+  font-family: 'PrecisionSans_W_LtIt', Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+%ps-regular {
+  @extend %aa;
+  font-family: 'PrecisionSans_W_Rg', Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+%ps-regular-italic {
+  @extend %aa;
+  font-family: 'PrecisionSans_W_RgIt', Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+%ps-medium {
+  @extend %aa;
+  font-family: 'PrecisionSans_W_Md', Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+%ps-medium-italic {
+  font-family: 'PrecisionSans_W_MdIt', Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+%ps-bold {
+  @extend %aa;
+  font-family: 'PrecisionSans_W_Bd', Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+%ps-bold-italic {
+  @extend %aa;
+  font-family: 'PrecisionSans_W_BdIt', Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+
+}
+$font-family-base: $font-family-sans-serif;
+// Helvetica
+$headings-font-family: 'PrecisionSans_W_Rg', Arial, sans-serif;
+$headings-font-weight: normal;
+$headings-line-height: 1.1;
+$headings-color: inherit;
+
+$btn-font-weight: normal;
+
+$font-family-serif: Georgia, Times, "Times New Roman", serif;
+
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
+
+.serif {
+  font-family: $font-family-serif;
+}
+.sans {
+  font-family: $font-family-sans-serif;
+}
+code,
+.code {
+  font-family: $font-family-monospace;
+
+}
+// heading sizes, from variables.scss
+h1 {
+  font-size: $font-size-h1;
+}
+h2 {
+  font-size: $font-size-h2;
+}
+h3 {
+  font-size: $font-size-h3;
+}
+h4 {
+  font-size: $font-size-h4;
+}
+h5 {
+  font-size: $font-size-h5;
+  font-weight: bold;
+}
+h6 {
+  font-size: $font-size-h6;
   font-weight: bold;
 }
 
+
+
+
+h1,
+h2,
+h3 {
+  @extend %ps-regular;
+  font-variant-ligatures: common-ligatures;
+  color: map-get($chord, color1);
+}
+h4,
+h5,
+h6 {
+ font-family: $font-family-sans-serif;
+
+}
+// when you need light text
+// sets the bold and italic accordingly
+.ps-light {
+  @extend %ps-light;
+  &.italic,
+  em,
+  i {
+    @extend %ps-light-italic;
+
+  }
+  // since regular bold is a bit much on light
+  b,
+  strong {
+    @extend %ps-medium;
+  }
+
+}
+p.lead,
+p.lede {
+  @extend %ps-bold;
+
+}
+.media-heading {
+  @extend %ps-bold;
+  font-weight: normal !important;
+
+}
+dt {
+  @extend %ps-bold;
+
+}
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
   border-top: 1px solid $gray;
-}
 
+}
 a {
   color: $link-color;
   &:hover {
     color: $link-color-hover;
   }
   &.read-more {
-    font-size: $font-size-base - 2; // 2 px smaller
+    font-size: $font-size-base - 2;
+    // 2 px smaller
     white-space: nowrap;
     &:after {
-      content: '\2026'; // ellipsis
+      content: '\2026';
+      // ellipsis
     }
   }
-}
 
+}
 body {
+  @extend %aa;
   font-family: $font-family-base;
-  font-size  : $font-size-base; // originally they had !important "for ie8" but I removed
+  font-size: $font-size-base;
+  // originally they had !important "for ie8" but I removed
   font-weight: 400;
-  color      : $text-color;
-     .has-error {
-      color: $brand-error;
+  color: $text-color;
+  .has-error {
+    color: $brand-error;
   }
-}
 
+}
 dl dt {
   margin-top: 10px;
+
 }
-ul.spaced, ol.spaced {
+ul.spaced,
+ol.spaced {
   > li {
     margin-top: 10px;
     &:first-child {
       margin-top: 0;
     }
   }
+
+}
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+  margin-left: 0;
+  padding-left: 1.5em;
+
+}
+ul {
+  //list-style-type: circle;
+
+}
+.btn:focus {
+  outline: none !important;
+
+}
+.fa-active {
+  color: $brand-primary;
+
+}
+// ----- make some items PS
+
+.nav-tabs>li>a,
+.nav-pills>li>a {
+  @extend %ps-regular;
+
+}
+label {
+  @extend %ps-regular;
+  font-size: 14px;
+  font-weight: normal;
+  color: $gray-text;
+
+}
+.btn {
+  @extend %ps-regular;
+}
+legend {
+  @extend %ps-regular;
+
 }
 
-label {
-    font-size  : 14px;
-    font-weight: normal;
-    color      : $gray-text;
+.panel-heading {
+  @extend %ps-regular;
+
 }
+// boostrap makes changing the weight of the logo quite difficult
+#header .navbar .navbar-brand.brand-text,
+#header .navbar .container .navbar-brand.brand-text,
+header .navbar .navbar-brand.brand-text,
+header .navbar .container .navbar-brand.brand-text {
+  @extend %ps-regular;
+  font-weight: 400 !important;
+
+}
+.nav.navbar-nav {
+  @extend %ps-regular;
+
+}
+// ---- turn some oddball items to helvetica
+
+.checkboxList span {
+  font-family: $font-family-sans-serif;
+
+}
+// ------SPECIAL SIZES--------
 
 // Ex: 14px base font * 85% = about 12px
-small, .small  { font-size: 85%; }
+small,
+.small {
+  font-size: 85%;
 
-// Undo browser default styling
-cite    { font-style: normal; }
-
-.media-heading {
-  font-weight: 700;
 }
+// Undo browser default styling
+cite {
+  font-style: normal;
 
-p.lead, p.lede {
-  font-weight: 700;
 }
 .text-large {
   font-size: $font-size-large;
-}
 
+}
 .text-small {
   font-size: $font-size-small;
-}
 
+}
 .text-xs {
   font-size: $font-size-xsmall;
 }
 .text-mouse {
   font-size: $font-size-mouse;
+
 }
-
-
 // Alignment
-.text-left           { text-align: left; }
-.text-right          { text-align: right; }
-.text-center         { text-align: center; }
-.text-justify        { text-align: justify; }
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
 
+}
+// Typography
+// [converter] $parent hack
+@mixin text-emphasis-variant($parent, $color) {
+  #{$parent} {
+    color: $color;
+  }
+  a#{$parent}:hover {
+    color: darken($color, 10%);
+  }
 
+}
 // Contextual colors
 @include text-emphasis-variant('.text-primary', $brand-primary);
 @include text-emphasis-variant('.text-muted', $text-muted);
@@ -109,51 +334,16 @@ p.lead, p.lede {
 @include text-emphasis-variant('.text-warning', $state-warning-text);
 @include text-emphasis-variant('.text-danger', $state-danger-text);
 
-ul, ol {
-  margin-top   : 0;
-  margin-bottom: 10px;
-  margin-left  : 0;
-  padding-left : 1.5em;
-}
-
-ul {
-  list-style-type: circle;
-}
-
-.btn:focus {
-  outline: none !important;
-}
-
 // all paragraphs in a grouping with a "lead" paragraph
 // p.lead ~ p {
 // 	font-family: $font-family-serif;
 // }
 
-.serif, .serif p {
+.serif,
+.serif p {
   font-family: $font-family-serif;
+
 }
-
-
 .help-block {
   font-size: $font-size-small;
-}
-
-
-
-.fa-active {
-  color: $brand-primary;
-}
-
-.sparkline {
-  h6 {
-    font-size: 1em;
-  }
-  h2 {
-    font-size: 1.5em;
-  }
-}
-
-// D3 *SVG* override
-.nvd3 .nv-axis .nv-axisMaxMin text {
-  font-weight: normal;
 }

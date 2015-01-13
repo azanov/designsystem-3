@@ -53,16 +53,17 @@
   &:focus,
   .open .dropdown-toggle & {
 		color           : $foreground;
-		background-color: darken($color, 15%);
-		border-color    : darken($color, 15%);
+		background-color: shade($color, 40%);
+		border-color    : shade($color, 40%);
         .btn-group &, .btn-group-vertical & {
-			background-color: darken($color, 15%);
-			border-color    : darken($color, 15%);
+			background-color: shade($color, 60%);
+			border-color    : shade($color, 60%);
         }
         &:hover {
-        	background-color: darken($color, 25%);
-        	border-color    : darken($color, 25%);
+        	background-color: shade($color, 60%);
+        	border-color    : shade($color, 60%);
         }
+
   }
   &.disabled,
   &[disabled],
@@ -90,18 +91,18 @@
 	transition        : background-color .3s, color .3s;
   &:hover {
 		color           : #fff;
-		background-color: darken($color, 10%);
-		border-color    : darken($color, 10%);
+		background-color: shade($color, 60%);
+		border-color    : shade($color, 60%);
   }
   &:active,
   &.active,
   .open .dropdown-toggle & {
 		color           : #fff;
-		background-color: darken($color, 25%);
-		border-color    : darken($color, 25%);
+		background-color: shade($color, 40%);
+		border-color    : shade($color, 40%);
         .btn-group & {
-			background-color: darken($color, 15%);
-			border-color    : darken($color, 15%);
+    			background-color: shade($color, 50%);
+    			border-color    : shade($color, 50%);
         }
   }
   &.disabled,
@@ -141,7 +142,7 @@
 	@include outline-button($button-color);
 }
 .btn-default-ko {
-	@include outline-button(#fff, $brand-primary, $gray);
+	@include outline-button(#fff, $button-color, $gray);
 }
 
 .btn-primary {
@@ -151,9 +152,6 @@
 	@include borderless-button($button-color);
 }
 
-.open>.dropdown-toggle.btn-default {
-  color: #fff;
-}
 
 
 
@@ -234,23 +232,19 @@
 
 
 
-// Alternate buttons
+// Bootstrap buttons
 // --------------------------------------------------
 
 
-// Success appears as green
 .btn-success {
   @include solid-button($brand-success);
 }
-// Info appears as blue-green
 .btn-info {
   @include solid-button($brand-info);
 }
-// Warning appears as orange
 .btn-warning {
   @include solid-button($brand-warning);
 }
-// Danger and error appear as red
 .btn-danger {
   @include solid-button($brand-danger);
 }

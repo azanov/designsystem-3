@@ -1,40 +1,12 @@
 {
-    "nav": [{
-        "label": "Pages",
-        "value": "#",
-        "toggle": "dropdown",
-        "children": [{
-            "label": "Faceted Search",
-            "value": "faceted_search"
-        }, {
-            "label": "Forms",
-            "value": "forms"
-        }, {
-            "label": "Left Nav",
-            "value": "leftnav"
-        }, {
-            "label": "Maps",
-            "value": "maps"
-        }, {
-            "label": "Gallery",
-            "value": "gallery"
-        }, {
-            "label": "Two-Panel Selector",
-            "value": "two_panel_selector"
-        }]
-    }, {
+     "nav": [
+    {
         "label": "Components",
         "value": "#",
         "toggle": "dropdown",
         "children": [{
             "label": "Accordion",
             "value": "accordion"
-        }, {
-            "label": "Data Grid",
-            "value": "data_grid"
-        }, {
-            "label": "Headers & Footers",
-            "value": "headers"
         }, {
             "label": "Panels",
             "value": "panels"
@@ -50,9 +22,13 @@
           "header": true
         },{
             "label": "Kendo UI",
+            "type": "optional",
+            "optional": true,
             "value": "kendo"
         }, {
             "label": "UI Bootstrap",
+            "type": "optional",
+            "optional": true,
             "value": "bootstrap-ui"
         }]
     }, {

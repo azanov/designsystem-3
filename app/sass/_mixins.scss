@@ -9,6 +9,10 @@
     }
 }
 
+// tint and shade functions
+@function tint($color, $percentage) { @return mix($color, #fff, $percentage); }
+@function shade($color, $percentage) { @return mix($color, #000, $percentage); }
+
 
 // Required mixins pulled from Bootstrap's mixins.scss
 

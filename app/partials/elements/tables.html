@@ -16,7 +16,7 @@
               <th>#</th>
               <th>First name</th>
               <th>Last name</th>
-              <th>User name</th>
+              <th class="currency">Gross Sales</th>
             </tr>
           </thead>
           <tbody>
@@ -24,7 +24,7 @@
               <td>00{{p.id}}</td>
               <td>{{p.firstName}}</td>
               <td>{{p.lastName}}</td>
-              <td><a href="">{{p.userName}}</a></td>
+              <td class="currency">{{p.gross_sales}}</td>
             </tr>
           </tbody>
         </table>
@@ -39,15 +39,15 @@
               <th>#</th>
               <th>First name</th>
               <th>Last name</th>
-              <th>User name</th>
+              <th class="currency">Gross Sales</th>
             </tr>
           </thead>
           <tbody>
             <tr ng-repeat="p in peopleData">
-              <td>00{{p.id}}</td>
+              <td>{{$index + 1}}</td>
               <td>{{p.firstName}}</td>
               <td>{{p.lastName}}</td>
-              <td><a href="">{{p.userName}}</a></td>
+              <td class="currency">{{p.gross_sales}}</td>
             </tr>
           </tbody>
         </table>
@@ -65,7 +65,7 @@
               <th>#</th>
               <th>First name</th>
               <th>Last name</th>
-              <th>User name</th>
+              <th class="currency">Gross Sales</th>
             </tr>
           </thead>
           <tbody>
@@ -73,7 +73,7 @@
               <td>00{{p.id}}</td>
               <td>{{p.firstName}}</td>
               <td>{{p.lastName}}</td>
-              <td><a href="">{{p.userName}}</a></td>
+              <td class="currency">{{p.gross_sales}}</td>
             </tr>
           </tbody>
         </table>
@@ -86,7 +86,7 @@
             <th>#</th>
             <th>First name</th>
             <th>Last name</th>
-            <th>User name</th>
+            <th class="currency">Gross Sales</th>
           </tr>
         </thead>
         <tbody>
@@ -94,7 +94,7 @@
             <td>00{{p.id}}</td>
             <td>{{p.firstName}}</td>
             <td>{{p.lastName}}</td>
-            <td><a href="">{{p.userName}}</a></td>
+            <td class="currency">{{p.gross_sales}}</td>
           </tr>
         </tbody>
       </table>
@@ -110,7 +110,7 @@
               <th>#</th>
               <th>First name</th>
               <th>Last name</th>
-              <th>User name</th>
+              <th class="currency">Gross Sales</th>
             </tr>
           </thead>
           <tbody>
@@ -118,7 +118,7 @@
               <td>00{{p.id}}</td>
               <td>{{p.firstName}}</td>
               <td>{{p.lastName}}</td>
-              <td><a href="">{{p.userName}}</a></td>
+              <td class="currency">{{p.gross_sales}}</td>
             </tr>
           </tbody>
         </table>
@@ -131,7 +131,7 @@
             <th>#</th>
             <th>First name</th>
             <th>Last name</th>
-            <th>User name</th>
+            <th class="currency">Gross Sales</th>
           </tr>
         </thead>
         <tbody>
@@ -139,7 +139,7 @@
             <td>00{{p.id}}</td>
             <td>{{p.firstName}}</td>
             <td>{{p.lastName}}</td>
-            <td><a href="">{{p.userName}}</a></td>
+            <td class="currency">{{p.gross_sales}}</td>
           </tr>
         </tbody>
       </table>
@@ -160,7 +160,7 @@
           <th>#</th>
           <th>First name</th>
           <th>Last name</th>
-          <th>User name</th>
+          <th class="currency">Gross Sales</th>
         </tr>
       </thead>
       <tbody>
@@ -168,7 +168,7 @@
           <td>00{{p.id}}</td>
           <td>{{p.firstName}}</td>
           <td>{{p.lastName}}</td>
-          <td><a href="">{{p.userName}}</a></td>
+          <td class="currency">{{p.gross_sales}}</td>
         </tr>
       </tbody>
     </table>
@@ -186,7 +186,7 @@
             <th>#</th>
             <th>First name</th>
             <th>Last name</th>
-            <th>User name</th>
+            <th class="currency">Gross Sales</th>
           </tr>
         </thead>
         <tbody>
@@ -194,7 +194,7 @@
             <td>00{{p.id}}</td>
             <td>{{p.firstName}}</td>
             <td>{{p.lastName}}</td>
-            <td><a href="">{{p.userName}}</a></td>
+            <td class="currency">{{p.gross_sales}}</td>
           </tr>
         </tbody>
       </table>

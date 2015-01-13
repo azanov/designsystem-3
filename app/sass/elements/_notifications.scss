@@ -4,7 +4,7 @@
       border-radius: 4px 4px 0 0;
       cursor: move;
       &:active {
-        background-color: darken($gray-light, 10%);
+        background-color: $pb-light-gray;
       }
     }
 
@@ -30,24 +30,24 @@
 }
 //* alerts */
 .alert-danger {
-  background-color: $alert-danger-bg;
-  border-color: $alert-danger-border;
-  color: $alert-danger-text;
+  background-color: $state-danger-bg;
+  border-color: $state-danger-border;
+  color: $state-danger-text;
 }
 .alert-success {
-  background-color: $alert-success-bg;
-  border-color: $alert-success-border;
-  color: $alert-success-text;
+  background-color: $state-success-bg;
+  border-color: $state-success-border;
+  color: $state-success-text;
 }
 .alert-warning {
-  background-color: $alert-warning-bg;
-  border-color: $alert-warning-border;
-  color: $alert-warning-text;
+  background-color: $state-warning-bg;
+  border-color: $state-warning-border;
+  color: $state-warning-text;
 }
 .alert-info {
-  background-color: $alert-info-bg;
-  border-color: $alert-info-border;
-  color: $alert-info-text;
+  background-color: $state-info-bg;
+  border-color: $state-info-border;
+  color: $state-info-text;
   a {
     color: darken($link-color, 20%);
   }
@@ -109,7 +109,7 @@
     position                : absolute;
     top                     : 15%;
     right                   : 0;
-    background              :$brand-primary;
+    background              : map-get($chord, color4);
     font-size               : 10px;
     color                   : #fff;
     font-weight             : 700;
@@ -126,35 +126,39 @@
 
 
 // Contextual backgrounds
-// For now we'll leave these alongside the text classes until v4 when we can
-// safely shift things around (per SemVer rules).
-.bg-primary {
-  // Given the contrast here, this is the only class to have its color inverted
-  // automatically.
-  color: #fff;
+
+@mixin contextual-box($bg, $fg) {
+  background-color: $bg;
+  color: $fg;
 }
-@include bg-variant('.bg-primary', $brand-primary);
-@include bg-variant('.bg-success', $state-success-bg);
-@include bg-variant('.bg-info', $state-info-bg);
-@include bg-variant('.bg-warning', $state-warning-bg);
-@include bg-variant('.bg-danger', $state-danger-bg);
+
+.bg-primary { @include contextual-box($state-primary-bg, $state-primary-text); }
+.bg-success { @include contextual-box($state-success-bg, $state-success-text); }
+.bg-info { @include contextual-box($state-info-bg, $state-info-text); }
+.bg-warning { @include contextual-box($state-warning-bg, $state-warning-text); }
+.bg-danger { @include contextual-box($state-danger-bg, $state-danger-text); }
 
 
+
+
+blockquote {
+  border-left: 4px solid $pb-light-gray;
+}
 
 //* CALLOUTS (from the BS docs, but useful) */
 .callout {
     margin: 20px 0;
     padding: 20px;
-    border-left: 4px solid #eee;
+    border-left: 4px solid $pb-light-gray;
   &.callout-info {
-    background-color: lighten($state-info-bg, 12%);
+    background-color: $state-info-bg;
     border-color    : $state-info-border;
     h4 {
       color: $state-info-text;
     }
   }
   &.callout-danger {
-    background-color: lighten($state-danger-bg, 2%);
+    background-color: $state-danger-bg;
     border-color    : $state-danger-border;
     h4 {
       color: $state-danger-text;
@@ -177,6 +181,7 @@
 }
 
 
+// what follows are overrides for extensions/plugins
 
 
 //*Messagebox */

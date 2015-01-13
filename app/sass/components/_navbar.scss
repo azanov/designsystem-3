@@ -5,13 +5,10 @@
   color: $brand-primary;
 }
 
-.nav-tabs {
-border-color: $gray;
-}
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
   background-color: $brand-primary;
 }
 .nav > li > a:hover, .nav > li > a:focus {
-  background-color: $gray;
+  background-color: $pb-light-gray;
 }

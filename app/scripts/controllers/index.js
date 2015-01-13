@@ -43,7 +43,7 @@ angular.module('designSystemApp').controller('IndexCtrl', ['$scope', '$interval'
                 series: {
                     lines: {
                         show: true,
-                        fill: true
+                        fill: 1
                     },
                     points: {
                         show: false
@@ -77,7 +77,7 @@ angular.module('designSystemApp').controller('IndexCtrl', ['$scope', '$interval'
                     position: 'left'
 
                 },
-                colors: ['#bfdbf0', '#4094d3', '#185994'],
+                colors: ['#72bf44', '#009dbf', '#3E53a4'],
                 tooltip: true,
                 tooltipOpts: {
                     content: "%s: %y on %x",
@@ -111,12 +111,12 @@ angular.module('designSystemApp').controller('IndexCtrl', ['$scope', '$interval'
             options: {
                 type: 'bar',
                 height: '50px',
-                barColor: '#00cb74',
+                barColor: '#72bf44',
                 barWidth: 6,
                 barSpacing: 2,
                 chartRangeMin: 0,
                 chartRangeMax: 100,
-                highlightColor: '#ff4900',
+                highlightColor: '#ef8200',
                 tooltipFormat: '<span>{{value}}</span>'
             },
             data: [100, 90, 80, 70, 80, 60, 60, 80, 85, 90, 70, 80]
@@ -132,9 +132,9 @@ angular.module('designSystemApp').controller('IndexCtrl', ['$scope', '$interval'
                 highlightColor: '#D0E1E7',
                 lineWidth: '2',
                 spotRadius: 0,
-                lineColor: '#8106A9',
-                fillColor: '#c899d8',
-                highlightLineColor: '#215262',
+                lineColor: '#3e53a4',
+                fillColor: '#009dbf',
+                highlightLineColor: '#edb700',
                 tooltipFormat: '<span>{{y}}</span>'
             },
             data: [100, 90, 80, 70, 80, 60, 60, 80, 85, 90, 70, 80]
@@ -146,7 +146,7 @@ angular.module('designSystemApp').controller('IndexCtrl', ['$scope', '$interval'
                 height: '50px',
                 chartRangeMin: 0,
                 chartRangeMax: 100,
-                sliceColors: ['#0070c4', '#ffbf00', '#ff4900'],
+                sliceColors: ['#0082d5', '#edb700', '#cf0989'],
                 //highlightColor: '#000'
                 highlightLighten: 0.8,
                 tooltipFormat: '<span>{{value}}</span>'
@@ -158,9 +158,9 @@ angular.module('designSystemApp').controller('IndexCtrl', ['$scope', '$interval'
             options: {
                 type: 'box',
                 height: '50px',
-                boxFillColor: '#00cb74',
-                medianColor: '#ff4900',
-                whiskerColor: '#ACACAD',
+                boxFillColor: '#72bf44',
+                medianColor: '#ee6b0b',
+                whiskerColor: '#c0c0c0',
                 tooltipFormat: '<span>{{value}}</span>'
             },
             data: [3.9, 4.1, 4.2, 4.3, 4.3, 4.4, 4.4, 4.4, 4.4, 4.5, 4.5, 4.6, 4.7, 4.8, 4.9, 5.0, 5.1]
@@ -168,7 +168,7 @@ angular.module('designSystemApp').controller('IndexCtrl', ['$scope', '$interval'
 
 
         // pie chart variables
-        $scope.colors = ['#ffbf00', '#ff9200', '#ff4900'];
+        $scope.colors = ['#edb700', '#ee6b0b', '#cf0989'];
         $scope.piesize = '120';
         $scope.pieThickness = '25';
 

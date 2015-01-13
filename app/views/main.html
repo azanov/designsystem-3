@@ -91,22 +91,21 @@
 		<table class="table table-hover table-striped table-condensed">
 			<thead>
 			<tr>
-				<th>Photo</th>
-				<th>Number</th>
 				<th>First Name</th>
 				<th>Last Name</th>
 				<th>Address</th>
 				<th>User ID</th>
+				<th class="currency">Gross Sales</th>
 			</tr>
 			</thead>
 			<tbody>
-			<tr ng-repeat="t in tabledata">
-				<td><img class="img-responsive" ng-src="images/{{t.image}}" alt="" /></td>
-				<td>00{{t.id}}</td>
+                <tr ng-repeat="t in tabledata" class="animate-repeat">
+		
 				<td>{{t.firstName}}</td>
 				<td>{{t.lastName}}</td>
 				<td ng-bind-html="t.address"></td>
-				<td><a href="">{{t.userName}}</a></td>
+                <td><a href="">{{t.firstName | limitTo: 1}}{{t.lastName}}</a></td>
+                <td class="currency">{{t.gross_sales}}</td>
 			</tr>
 			</tbody>
 		</table>
@@ -123,18 +122,18 @@
 					Team Leaders
 				  </div>
 
-					<table class="table table-hover">
+					<table class="table table-hover table-striped table-clickable">
 					<thead>
 					<tr>
-						<th>User ID</th>
-						<th>Last Name</th>
+						<th class="centered">Available</th>
+						<th>Name</th>
 					</tr>
 					</thead>
 					 <tbody>
-						<tr ng-repeat="t in tabledata">
-						 <td>{{t.userName}}</td>
-						 <td>{{t.lastName}}</td>
-					 </tr>
+						<tr ng-repeat="t in tabledata" ng-click="t.isChecked=!t.isChecked">
+                            <td class="centered"><input type="checkbox" ng-model="t.isChecked" ng-click="$event.stopPropagation()"></td>
+                            <td>{{t.firstName}} {{t.lastName}}</td>
+                        </tr>
 
 					 </tbody>
 					</table>

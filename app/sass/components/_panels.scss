@@ -7,6 +7,10 @@
   }
 }
 
+.panel-default>.panel-heading {
+  background-color: lighten(map-get($chord, color1), 55%);
+}
+
 
 
 

@@ -13,12 +13,10 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <!-- <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" rel="stylesheet" type="text/css"> -->
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 
-    <!-- build:css({tmp,app,.tmp}) styles/vendor.css -->
+    <!-- build:css styles/vendor.css -->
     <link rel="stylesheet" href="bower_components/leaflet-dist/leaflet.css" />
     <link rel="stylesheet" href="bower_components/ngprogress/ngProgress.css" />
     <link rel="stylesheet" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
@@ -43,7 +41,7 @@
   </head>
 
 
-  <body ng-cloak ng-class="{'fixed-header': settings.isFixed}">
+  <body ng-cloak ng-class="{'fixed-header': settings.isFixed}" class={{routeClassName}}>
 
     <div class="settings" ng-class="{'activate': settings.isOpen}">
       <div class="settings-tab" ng-click="settings.show()">
@@ -74,7 +72,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand brand-text" href="#/">Design System Beta</a>
+            <span class="navbar-brand brand-text"><a class="brand-top" href="http://designsystem.pbi.global.pvt:8080">Design System</a>&nbsp;<a href="#/">Live Preview</a></span>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -115,9 +113,13 @@
       </div>
     </div>
 
+    <!--[if lte IE 9]>
+    <p class="browsehappy" style="text-align:center; ">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
 
     <!-- Add your site or application content here -->
-    <div ng-view class="view-animate"></div>
+    <div ng-view></div>
 
 
     <!-- FOOTER -->
@@ -128,7 +130,7 @@
 
           <!-- Copyright -->
           <div class="col-md-6">
-            <a href="http://www.pb.com" class="pb-footerlogo" target="_blank"></a>&copy;2014 Pitney Bowes Inc. All rights reserved.
+              <a href="http://www.pb.com"><i class="pb-footer-logo gradient"></i></a>&copy; 2015 Pitney Bowes Inc. All rights reserved.
           </div>
 
           <!-- Social -->
@@ -173,15 +175,15 @@
     </div>
 
     <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
-    <!-- build:js scripts/ie8.js -->
     <!--[if lt IE 9]>
+    <!-- build:js scripts/ie8.js -->
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <script src="bower_components/respondJs/src/respond.js"></script>
-    <![endif]-->
     <!-- endbuild -->
+    <![endif]-->
 
-    <!-- build:js({.tmp,app})  scripts/vendor.js -->
+    <!-- build:js  scripts/vendor.js -->
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/moment/min/moment.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
@@ -213,17 +215,7 @@
     <!-- endbuild -->
 
 
-    <!-- build:js({.tmp,app})  scripts/kendo.js -->
-    <!--<script src="bower_components/kendo-ui/js/kendo.core.min.js"></script>-->
-    <!--<script src="bower_components/kendo-ui/js/kendo.ui.core.min.js"></script>-->
-    <!--<script src="bower_components/angular-kendo-ui/angular-kendo.js"></script>-->
-    <!-- endbuild -->
-
-    <!-- pre-built kendo.min.js at end of document -->
-
-
-
-    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <!-- build:js scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/services/ChartFactory.js"></script>
     <script src="scripts/services/PeopleFactory.js"></script>
@@ -234,6 +226,7 @@
     <script src="scripts/services/MillerColumnFactory.js"></script>
     <script src="scripts/services/CountryFactory.js"></script>
     <script src="scripts/services/PbfontFactory.js"></script>
+    <script src="scripts/services/ColorFactory.js"></script>
     <script src="scripts/directives/pb-left-nav.js"></script>
     <script src="scripts/directives/pb-fixed-navbar.js"></script>
     <script src="scripts/directives/pb-tree-nav.js"></script>
