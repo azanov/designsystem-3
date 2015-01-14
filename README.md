@@ -9,6 +9,8 @@ Production-ready CSS file is `/build/styles/design_system.css`.
 
 Source files are in `/app`.
 
+**IMPORTANT** instructions to upgrade to version 1.0 or higher from beta versions in the [CHANGELOG](https://github.com/PBGUX/designsystem/blob/master/CHANGELOG.md).
+
 
 ---
 ###Details

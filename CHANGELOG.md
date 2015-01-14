@@ -1,8 +1,31 @@
-
-
-
 ##Release Notes
 
+###1.0 January 14, 2015
+- Incorporates color and typography changes for new branding
+- Switched build system from Grunt to Gulp
+- Simplified folder structure
+
+----------------
+#####Upgrading to 1.0.0 from previous versions
+
+- Copy `/build/css/design_system.css` and overwrite your project design system CSS file
+- Remove `<head>` links to fonts hosted at Google, for example:
+```html
+<link href="http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+```
+- Copy all PrecisionSans fonts from `/build/fonts` to your project fonts folder
+- Replace the copyright column in the footer with the following markup:
+
+```html
+<!-- Copyright -->
+<div class="col-md-6">
+	<a href="http://www.pb.com"><i class="pb-footer-logo gradient"></i></a>&copy; 2015 Pitney Bowes Inc. All rights reserved.
+</div>
+```
+
+----------------
+
+<br/>
 ###0.9.6.1
 - fixed color bug in button dropdown
 
