@@ -112,9 +112,6 @@ h6 {
   font-weight: bold;
 }
 
-
-
-
 h1,
 h2,
 h3 {
@@ -233,10 +230,9 @@ ul {
 .nav-tabs>li>a,
 .nav-pills>li>a {
   @extend %ps-regular;
-
 }
+
 label {
-  @extend %ps-regular;
   font-size: 14px;
   font-weight: normal;
   color: $gray-text;
@@ -245,15 +241,22 @@ label {
 .btn {
   @extend %ps-regular;
 }
-legend {
-  @extend %ps-regular;
-
-}
+// legend {
+//   @extend %ps-regular;
+// }
 
 .panel-heading {
   @extend %ps-regular;
-
+  // tables inside panel heads
+  td,th {
+    font-family: $font-family-sans-serif;
+  }
 }
+
+
+
+
+
 // boostrap makes changing the weight of the logo quite difficult
 #header .navbar .navbar-brand.brand-text,
 #header .navbar .container .navbar-brand.brand-text,
@@ -326,7 +329,8 @@ cite {
   }
 
 }
-// Contextual colors
+// Contextual colors, from bootstrap
+
 @include text-emphasis-variant('.text-primary', $brand-primary);
 @include text-emphasis-variant('.text-muted', $text-muted);
 @include text-emphasis-variant('.text-success', $state-success-text);

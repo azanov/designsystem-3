@@ -51,7 +51,7 @@
 .ps-light i, h1,
 h2,
 h3, .nav-tabs > li > a,
-.nav-pills > li > a, label, .btn, legend, .panel-heading, #header .navbar .navbar-brand.brand-text,
+.nav-pills > li > a, .btn, .panel-heading, #header .navbar .navbar-brand.brand-text,
 #header .navbar .container .navbar-brand.brand-text,
 header .navbar .navbar-brand.brand-text,
 header .navbar .container .navbar-brand.brand-text, .nav.navbar-nav, .hero .hero-menu > li, .ps-light b,
@@ -75,7 +75,7 @@ p.lede, .media-heading, dt, body {
 h1,
 h2,
 h3, .nav-tabs > li > a,
-.nav-pills > li > a, label, .btn, legend, .panel-heading, #header .navbar .navbar-brand.brand-text,
+.nav-pills > li > a, .btn, .panel-heading, #header .navbar .navbar-brand.brand-text,
 #header .navbar .container .navbar-brand.brand-text,
 header .navbar .navbar-brand.brand-text,
 header .navbar .container .navbar-brand.brand-text, .nav.navbar-nav, .hero .hero-menu > li {
@@ -191,6 +191,9 @@ label {
   font-size: 14px;
   font-weight: normal;
   color: #4e4e4e; }
+
+.panel-heading td, .panel-heading th {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 #header .navbar .navbar-brand.brand-text,
 #header .navbar .container .navbar-brand.brand-text,

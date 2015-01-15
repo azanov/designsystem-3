@@ -132,7 +132,7 @@
 .ps-light i, h1,
 h2,
 h3, .nav-tabs > li > a,
-.nav-pills > li > a, label, .btn, legend, .panel-heading, #header .navbar .navbar-brand.brand-text,
+.nav-pills > li > a, .btn, .panel-heading, #header .navbar .navbar-brand.brand-text,
 #header .navbar .container .navbar-brand.brand-text,
 header .navbar .navbar-brand.brand-text,
 header .navbar .container .navbar-brand.brand-text, .nav.navbar-nav, .ps-light b,
@@ -159,7 +159,7 @@ header .navbar .container .navbar-brand.brand-text .brand-top, body {
 h1,
 h2,
 h3, .nav-tabs > li > a,
-.nav-pills > li > a, label, .btn, legend, .panel-heading, #header .navbar .navbar-brand.brand-text,
+.nav-pills > li > a, .btn, .panel-heading, #header .navbar .navbar-brand.brand-text,
 #header .navbar .container .navbar-brand.brand-text,
 header .navbar .navbar-brand.brand-text,
 header .navbar .container .navbar-brand.brand-text, .nav.navbar-nav {
@@ -278,6 +278,9 @@ label {
   font-size: 14px;
   font-weight: normal;
   color: #4e4e4e; }
+
+.panel-heading td, .panel-heading th {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 #header .navbar .navbar-brand.brand-text,
 #header .navbar .container .navbar-brand.brand-text,
@@ -1562,26 +1565,6 @@ input.cmn-toggle-round-flat:checked + label:after {
   margin-left: 50px;
   background-color: #0082d5; }
 
-.table > tbody > tr > td, .table > tbody > tr > th {
-  -webkit-transition: background-color .3s;
-  transition: background-color .3s; }
-
-.table-condensed-extra {
-  font-size: 14px; }
-  .table-condensed-extra > thead > tr > th,
-  .table-condensed-extra > thead > tr > td,
-  .table-condensed-extra > tbody > tr > th,
-  .table-condensed-extra > tbody > tr > td,
-  .table-condensed-extra > tfoot > tr > th,
-  .table-condensed-extra > tfoot > tr > td {
-    padding: 2px; }
-
-td.currency {
-  text-align: right; }
-
-th.currency {
-  text-align: center; }
-
 .ats-switch {
   border-color: #9b9b9b; }
 
@@ -2251,12 +2234,23 @@ td.centered, th.centered {
 
 .table > thead > tr > th,
 .table > tbody > tr > th,
-.table > tfoot > tr > th {
+.table > tfoot > tr > th,
+.table thead th {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: #0082d5;
   border-bottom-color: #0082d5;
   border-bottom-width: 1px; }
+
+.table > tbody > tr > td, .table > tbody > tr > th {
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s; }
+
+td.currency {
+  text-align: right; }
+
+th.currency {
+  text-align: center; }
 
 .tab-pane {
   padding: 15px; }

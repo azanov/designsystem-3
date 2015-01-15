@@ -1,10 +1,10 @@
 //
 // Variables
 // --------------------------------------------------
-// updated 12/22/14
+// updated 1/15/15
 
-//== PB Colors
-//
+//== Colors
+//== Here we assign colors to variables; we don't actually color anything here
 
 //PRIMARY
 $pb-cyan:        rgb(0, 155, 223);
@@ -32,16 +32,7 @@ $chord1: (color1:$pb-medium-blue,  color2: $pb-blue,         color3: $pb-light-g
 $chord2: (color1:$pb-dark-orange,  color2: $pb-magenta,      color3: $pb-light-gray, color4: $pb-yellow);
 $chord3: (color1:$pb-dark-green ,  color2: $pb-blue,         color3: $pb-light-gray, color4: $pb-medium-blue);
 
-
-// $chord2: (color1:$pb-magenta,      color2: $pb-blue,         color3: $pb-light-gray, color4: $pb-orange);
-// $chord3: (color1:$pb-purple,       color2: $pb-medium-blue,  color3: $pb-light-gray, color4: $pb-dark-orange);
-//
-// $chord5: (color1:$pb-medium-blue , color2: $pb-dark-green,   color3: $pb-light-gray, color4: $pb-magenta);
-// $chord6: (color1:$pb-cyan ,        color2: $pb-yellow,       color3: $pb-light-gray, color4: $pb-blue);
-// $chord7: (color1:$pb-dark-green ,  color2: $pb-dark-orange,  color3: $pb-light-gray, color4: $pb-cyan);
-
-
-// set the chord to use
+// set the chord to use, everywhere else can now refer to map-get($chord, colorX)
 $chord: $chord1;
 
 
@@ -59,16 +50,19 @@ $link-color-hover:    lighten($link-color, 15%);
 $link-hover-color:    $link-color-hover; // the bootstrap name is link-hover-color, so I'm just synching them up here
 $link-color-disabled: scale-color($link-color, $lightness: 75%, $saturation: -60%);
 
-
 $button-color: map-get($chord, color1);
 $disabled-button: scale-color($button-color, $lightness: 75%, $saturation: -60%);
 
+$body-bg: #fff;
+$background-color: $body-bg;
 
-
+//** Global text color on `<body>`.
+$text-color: $gray-text;
+$text-color-dark: $gray-dark;
 
 
 //Bootstrap colors / Functional Colors - do not change with chords
-$brand-error:   #b92222; //error
+$brand-error:   #b92222;
 $brand-danger:  $brand-error;
 $brand-success: $pb-dark-green;
 $brand-info:    $pb-blue;
@@ -82,21 +76,13 @@ $chart-yellow: $pb-yellow;
 $chart-orange: $pb-orange;
 $chart-red:    $pb-magenta;
 
-// BLUE TINTS (monochrome charts)
-// $blue1: #3322aa;
-// $blue2: #3344cc;
-// $blue3: #3366ff;
-// $blue4: #668cff;
-// $blue5: #99b2ff;
-// $blue6: #ccd9ff;
-
+// Blue TINTS (monotone charts)
 $blue1: $pb-blue;
 $blue2: scale-color($pb-blue, $lightness: 20%, $saturation: -5%);
 $blue3: scale-color($pb-blue, $lightness: 40%, $saturation: 0%);
 $blue4: scale-color($pb-blue, $lightness: 50%, $saturation: -5%);
 $blue5: scale-color($pb-blue, $lightness: 60%, $saturation: -10%);
 $blue6: scale-color($pb-blue, $lightness: 70%, $saturation: -20%);
-
 
 // GRAY TINTS (grayscale charts)
 $gray1: darken($pb-dark-gray, 5%);
@@ -108,28 +94,19 @@ $gray6: $pb-light-gray;
 
 
 $social-colors:
-('twitter' #55ACEE)
-('facebook' #4964A1)
-('linkedin' #1A85BC)
-('youtube' #CC181E)
-('google-plus' #D94E40);
+('twitter' #55acee)
+('facebook' #4964a1)
+('linkedin' #1a85bc)
+('youtube' #cc181e)
+('google-plus' #d94e40);
 
-//== Scaffolding
-//
-// ## Settings for some of the most global styles.
-
-//** Background color for `<body>`.
-$body-bg: #fff;
-$background-color: $body-bg;
-//** Global text color on `<body>`.
-$text-color: $gray-text;
-$text-color-dark: $gray-dark;
+// -- END colors
 
 
 
 
 //== Typography
-//
+//== see also typography.scss
 $font-size-base  : 16px;
 $font-size-large : ceil(($font-size-base * 1.125)); // ~18px
 $font-size-small : ceil(($font-size-base * .87)); 	// ~14px
@@ -154,7 +131,8 @@ $line-height-computed: floor(($font-size-base * $line-height-base)); // ~20px
 
 
 
-//-- Iconography
+//-- Bootstrap Iconography
+//-- our custom font in pbfont.scss
 //
 //** Load fonts from this directory.
 $icon-font-path:          "../fonts/";
@@ -162,6 +140,7 @@ $icon-font-path:          "../fonts/";
 $icon-font-name:          "glyphicons-halflings-regular";
 //** Element ID within SVG icon file.
 $icon-font-svg-id:        "glyphicons_halflingsregular";
+
 
 //== Components
 //
@@ -199,7 +178,8 @@ $caret-width-large: 5px;
 
 //== Tables
 //
-//## Customizes the `.table` component with basic values, each used across all table variations.
+// Customizes the `.table` component with basic values, each used across all table variations.
+// see also tables.scss for specific overrides and all assignments
 
 //** Padding for `<th>`s and `<td>`s.
 $table-cell-padding: 8px;
