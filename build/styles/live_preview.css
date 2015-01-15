@@ -192,7 +192,8 @@ label {
   font-weight: normal;
   color: #4e4e4e; }
 
-.panel-heading td, .panel-heading th {
+.panel-heading td,
+.panel-heading th {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 #header .navbar .navbar-brand.brand-text,
@@ -238,38 +239,20 @@ cite {
 .text-primary {
   color: #0082d5; }
 
-a.text-primary:hover {
-  color: #0063a2; }
-
 .text-muted {
   color: silver; }
-
-a.text-muted:hover {
-  color: #a7a7a7; }
 
 .text-success {
   color: #00b140; }
 
-a.text-success:hover {
-  color: #007e2e; }
-
 .text-info {
   color: #3e53a4; }
-
-a.text-info:hover {
-  color: #30407f; }
 
 .text-warning {
   color: #ee6b0b; }
 
-a.text-warning:hover {
-  color: #bd5509; }
-
 .text-danger {
   color: #b92222; }
-
-a.text-danger:hover {
-  color: #8e1a1a; }
 
 .serif,
 .serif p {

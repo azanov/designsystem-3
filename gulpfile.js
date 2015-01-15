@@ -31,7 +31,8 @@ var gulp         = require('gulp'),
     gutil        = require('gulp-util'),
     ftp          = require('gulp-ftp'),
     print        = require('gulp-print'),  // displays files in the console
-    prompt       = require('gulp-prompt'); // asks for password in the console before connecting
+    prompt       = require('gulp-prompt'), // asks for password in the console before connecting
+    runSequence = require('run-sequence');
 
 
 
@@ -60,8 +61,7 @@ gulp.task('styles-nomaps', function() {
     browsers: ['last 2 versions', 'ios 6', 'android 4']
   }))
   .pipe(gulp.dest('build/styles'))
-  .pipe(filter('**/*.css'))
-  .pipe(notify({ message: 'Styles Built' }));
+  .pipe(filter('**/*.css'));
 });
 
 
@@ -157,8 +157,15 @@ gulp.task('prompt_password', ['prompt_user'], function ()
 // run this to open project in browser and watch for changes in CSS
 gulp.task('default',['styles','browser-sync', 'watch']);
 
-gulp.task('build', ['clean'],function() {
-	gulp.run(['styles-nomaps','usemin','scripts','assets']);
+// gulp.task('build', ['clean'],function() {
+// 	gulp.run(['styles-nomaps','usemin','scripts','assets']);
+// });
+
+gulp.task('build', function(cb) {
+  runSequence(
+    'clean',
+    ['styles-nomaps','usemin','scripts','assets'],
+    cb);
 });
 
 
