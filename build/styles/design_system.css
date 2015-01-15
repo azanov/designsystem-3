@@ -758,25 +758,28 @@ fieldset[disabled] .form-control.timepicker {
   .input-group .form-control:last-child {
     border-left: 0; }
 .input-group .input-group-addon {
-  padding: 6px 12px;
   font-size: 14px;
   font-weight: normal;
-  line-height: 1;
-  color: #4e4e4e;
+  line-height: 1.2;
+  padding: 6px 12px;
   text-align: center;
-  background-color: #fff;
+  color: #4e4e4e;
   border: 1px solid #9b9b9b;
-  border-radius: 3px; }
+  border-radius: 3px;
+  background-color: #fff; }
   .input-group .input-group-addon:first-child {
-    border-bottom-right-radius: 0;
+    border-right: 0;
     border-top-right-radius: 0;
-    border-right: 0; }
+    border-bottom-right-radius: 0; }
   .input-group .input-group-addon:last-child {
-    border-bottom-left-radius: 0;
+    border-left: 0;
     border-top-left-radius: 0;
-    border-left: 0; }
+    border-bottom-left-radius: 0; }
 .input-group .btn {
-  font-size: 14px; }
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 6px 12px;
+  line-height: 1.45; }
 .input-group .input-group-btn {
   z-index: 3; }
 .input-group.input-group-lg {
