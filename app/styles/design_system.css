@@ -279,7 +279,8 @@ label {
   font-weight: normal;
   color: #4e4e4e; }
 
-.panel-heading td, .panel-heading th {
+.panel-heading td,
+.panel-heading th {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 #header .navbar .navbar-brand.brand-text,
@@ -325,38 +326,20 @@ cite {
 .text-primary {
   color: #0082d5; }
 
-a.text-primary:hover {
-  color: #0063a2; }
-
 .text-muted {
   color: silver; }
-
-a.text-muted:hover {
-  color: #a7a7a7; }
 
 .text-success {
   color: #00b140; }
 
-a.text-success:hover {
-  color: #007e2e; }
-
 .text-info {
   color: #3e53a4; }
-
-a.text-info:hover {
-  color: #30407f; }
 
 .text-warning {
   color: #ee6b0b; }
 
-a.text-warning:hover {
-  color: #bd5509; }
-
 .text-danger {
   color: #b92222; }
-
-a.text-danger:hover {
-  color: #8e1a1a; }
 
 .serif,
 .serif p {
@@ -711,12 +694,12 @@ a.text-danger:hover {
   color: #ccc; }
 
 .checkboxList {
+  overflow-y: scroll;
   width: 100%;
-  height: 100px;
-  overflow-y: scroll; }
+  height: 100px; }
   .checkboxList label {
-    color: #4e4e4e;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    color: #4e4e4e; }
   .checkboxList .ms-checkboxitem {
     margin-bottom: 2px; }
 
@@ -730,8 +713,8 @@ fieldset {
   margin-top: 40px; }
 
 .form-control {
-  box-shadow: none;
-  border: 1px solid #9b9b9b; }
+  border: 1px solid #9b9b9b;
+  box-shadow: none; }
 
 select[disabled] {
   color: #9b9b9b !important; }
@@ -776,10 +759,10 @@ fieldset[disabled] .form-control.timepicker {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
 .input-group .btn {
-  font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 6px 12px;
-  line-height: 1.45; }
+  font-size: 14px;
+  line-height: 1.45;
+  padding: 6px 12px; }
 .input-group .input-group-btn {
   z-index: 3; }
 .input-group.input-group-lg {

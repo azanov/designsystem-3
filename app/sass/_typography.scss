@@ -109,8 +109,8 @@ h5 {
 h6 {
   font-size: $font-size-h6;
   font-weight: bold;
-}
 
+}
 h1,
 h2,
 h3 {
@@ -121,7 +121,7 @@ h3 {
 h4,
 h5,
 h6 {
- font-family: $font-family-sans-serif;
+  font-family: $font-family-base;
 
 }
 // when you need light text
@@ -229,8 +229,8 @@ ul {
 .nav-tabs>li>a,
 .nav-pills>li>a {
   @extend %ps-regular;
-}
 
+}
 label {
   font-size: 14px;
   font-weight: normal;
@@ -239,23 +239,17 @@ label {
 }
 .btn {
   @extend %ps-regular;
-}
-// legend {
-//   @extend %ps-regular;
-// }
 
+}
 .panel-heading {
   @extend %ps-regular;
   // tables inside panel heads
-  td,th {
-    font-family: $font-family-sans-serif;
+  td,
+  th {
+    font-family: $font-family-base;
   }
+
 }
-
-
-
-
-
 // boostrap makes changing the weight of the logo quite difficult
 #header .navbar .navbar-brand.brand-text,
 #header .navbar .container .navbar-brand.brand-text,
@@ -317,26 +311,27 @@ cite {
   text-align: justify;
 
 }
-// Typography
-// [converter] $parent hack
-@mixin text-emphasis-variant($parent, $color) {
-  #{$parent} {
-    color: $color;
-  }
-  a#{$parent}:hover {
-    color: darken($color, 10%);
-  }
+// // Contextual colors, from bootstrap
+//
+.text-primary {
+  color: $brand-primary;
+}
+.text-muted {
+  color: $text-muted;
+}
+.text-success {
+  color: $state-success-text;
+}
+.text-info {
+  color: $state-info-text;
+}
+.text-warning {
+  color: $state-warning-text;
+}
+.text-danger {
+  color: $state-danger-text;
 
 }
-// Contextual colors, from bootstrap
-
-@include text-emphasis-variant('.text-primary', $brand-primary);
-@include text-emphasis-variant('.text-muted', $text-muted);
-@include text-emphasis-variant('.text-success', $state-success-text);
-@include text-emphasis-variant('.text-info', $state-info-text);
-@include text-emphasis-variant('.text-warning', $state-warning-text);
-@include text-emphasis-variant('.text-danger', $state-danger-text);
-
 // all paragraphs in a grouping with a "lead" paragraph
 // p.lead ~ p {
 // 	font-family: $font-family-serif;
