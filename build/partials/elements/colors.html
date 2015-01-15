@@ -7,8 +7,9 @@
       <div class="row color-swatches">
         <div class="col-md-2 col-xs-12" ng-repeat="c in colorData.primary">
           <div class="color-swatch" style="background-color:{{c.hex}}"></div>
-          {{c.name}}<br>
-          {{c.hex}}<br>
+          {{c.name}}
+          <br> {{c.hex}}
+          <br>
           <small>{{c.varname}}</small>
         </div>
       </div>
@@ -17,21 +18,23 @@
       <div class="row color-swatches">
         <div class="col-md-2 col-xs-12 color-swatch-container" ng-repeat="c in colorData.secondary" ng-class="{clearRow: $index==5}">
           <div class="color-swatch" style="background-color:{{c.hex}}"></div>
-          {{c.name}}<br>
-          {{c.hex}}<br>
+          {{c.name}}
+          <br> {{c.hex}}
+          <br>
           <small>{{c.varname}}</small>
         </div>
       </div>
 
-        <h3 class="section-head">Neutrals</h3>
-        <div class="row color-swatches">
-            <div class="col-md-2 col-xs-12 color-swatch-container" ng-repeat="c in colorData.neutrals" ng-class="{clearRow: $index==5}">
-                <div class="color-swatch" style="background-color:{{c.hex}}"></div>
-                {{c.name}}<br>
-                {{c.hex}}<br>
-                <small>{{c.varname}}</small>
-            </div>
+      <h3 class="section-head">Neutrals</h3>
+      <div class="row color-swatches">
+        <div class="col-md-2 col-xs-12 color-swatch-container" ng-repeat="c in colorData.neutrals" ng-class="{clearRow: $index==5}">
+          <div class="color-swatch" style="background-color:{{c.hex}}"></div>
+          {{c.name}}
+          <br> {{c.hex}}
+          <br>
+          <small>{{c.varname}}</small>
         </div>
+      </div>
 
 
 
@@ -42,26 +45,32 @@
           <div class="color-swatch brand-danger"></div>
           <p>Error
             <br>#CC0000
-            <br><small>$brand-danger</small>
+            <br>
+            <small>$brand-danger</small>
           </p>
         </div>
         <div class="col-md-2 col-xs-12">
           <div class="color-swatch alert-danger"></div>
           <p>#FAE6E6/#F5CCCC
-            <br><small>$alert-danger-bg/<br>$alert-danger-border</small>
+            <br>
+            <small>$alert-danger-bg/
+              <br>$alert-danger-border</small>
           </p>
         </div>
         <div class="col-md-2 col-xs-12">
           <div class="color-swatch brand-warning"></div>
           <p>Warning
             <br>#826000
-            <br><small>$brand-warning</small>
+            <br>
+            <small>$brand-warning</small>
           </p>
         </div>
         <div class="col-md-2 col-xs-12">
           <div class="color-swatch alert-warning"></div>
           <p>#fbf0e8/#fae2cf
-            <br><small>$alert-warning-bg/<br>$alert-warning-border</small>
+            <br>
+            <small>$alert-warning-bg/
+              <br>$alert-warning-border</small>
           </p>
         </div>
 
@@ -72,58 +81,67 @@
           <div class="color-swatch brand-success"></div>
           <p>Success
             <br>#007D00
-            <br><small>$brand-success</small>
+            <br>
+            <small>$brand-success</small>
           </p>
         </div>
         <div class="col-md-2 col-xs-12">
           <div class="color-swatch alert-success"></div>
           <p>#e9f3ed/#d0ebda
-            <br><small>$alert-success-bg/<br>$alert-success-border</small>
+            <br>
+            <small>$alert-success-bg/
+              <br>$alert-success-border</small>
           </p>
         </div>
         <div class="col-md-2 col-xs-12">
           <div class="color-swatch brand-info"></div>
           <p>Info
             <br>#0070C4
-            <br><small>$brand-info</small>
+            <br>
+            <small>$brand-info</small>
           </p>
         </div>
         <div class="col-md-2 col-xs-12">
           <div class="color-swatch alert-info"></div>
           <p>#eceef5/#cfd4e8
-            <br><small>$alert-info-bg/<br>$alert-info-border</small>
+            <br>
+            <small>$alert-info-bg/
+              <br>$alert-info-border</small>
           </p>
         </div>
       </div>
 
 
       <h3 class="section-head">Chart Colors</h3>
-        <div class="row color-swatches">
-            <div class="col-md-2 col-xs-12 color-swatch-container" ng-repeat="c in colorData.charts" ng-class="{clearRow: $index==6}">
-                <div class="color-swatch" style="background-color:{{c.hex}}"></div>
-                {{c.name}}<br>
-                {{c.hex}}<br>
-                <small>{{c.varname}}</small>
-            </div>
+      <div class="row color-swatches">
+        <div class="col-md-2 col-xs-12 color-swatch-container" ng-repeat="c in colorData.charts" ng-class="{clearRow: $index==6}">
+          <div class="color-swatch" style="background-color:{{c.hex}}"></div>
+          {{c.name}}
+          <br> {{c.hex}}
+          <br>
+          <small>{{c.varname}}</small>
         </div>
+      </div>
 
 
-        <h3 class="section-head">Chart Blue Tints</h3>
-        <div class="row color-swatches">
-            <div class="col-md-2 col-xs-12 color-swatch-container" ng-repeat="c in colorData.blues" ng-class="{clearRow: $index==6}">
-                <div class="color-swatch" style="background-color:{{c.hex}}"></div>
-                {{c.name}}<br>
-                {{c.hex}}<br>
-                <small>{{c.varname}}</small>
-            </div>
+      <h3 class="section-head">Chart Blue Tints</h3>
+      <div class="row color-swatches">
+        <div class="col-md-2 col-xs-12 color-swatch-container" ng-repeat="c in colorData.blues" ng-class="{clearRow: $index==6}">
+          <div class="color-swatch" style="background-color:{{c.hex}}"></div>
+          {{c.name}}
+          <br> {{c.hex}}
+          <br>
+          <small>{{c.varname}}</small>
         </div>
+      </div>
 
       <h3 class="section-head">Gray Tints</h3>
       <div class="row color-swatches">
         <div class="col-md-2 col-xs-12 color-swatch-container" ng-repeat="c in colorData.chartgrays" ng-class="{clearRow: $index==6}">
           <div class="color-swatch" style="background-color:{{c.hex}}"></div>
-          {{c.name}}<br>
-          {{c.hex}}<br>
+          {{c.name}}
+          <br> {{c.hex}}
+          <br>
           <small>{{c.varname}}</small>
         </div>
       </div>
@@ -146,9 +164,13 @@
         <h5 class="color1">Type in one hue.</h5>
         <p class="color2">Link Color</p>
         <p class="small">Combined with neutral palette:</p>
-        <p><span style="color:#000;">Black</span><br>
-        <span style="color:#4e4e4e;">Dark gray</span><br>
-        <span style="color:#9b9b9b;">Gray</span></p>
+        <p>
+          <span style="color:#000;">Black</span>
+          <br>
+          <span style="color:#4e4e4e;">Dark gray</span>
+          <br>
+          <span style="color:#9b9b9b;">Gray</span>
+        </p>
       </div>
     </div>
   </section>
@@ -166,7 +188,8 @@
         </div>
 
         <ul class="list-unstyled color-blocks" ng-repeat="c in colorData.chartgrays">
-          <li><span class="gray{{$index+1}}"></span> {{c.hex}}</li>
+          <li>
+            <span class="gray{{$index+1}}"></span> {{c.hex}}</li>
         </ul>
 
       </div>
@@ -178,8 +201,9 @@
           <div class="pie" dataset="colorCharts.blue.pie.data" options="colorCharts.blue.pie.options" width="80px" height="80px" flot></div>
         </div>
 
-        <ul class="list-unstyled color-blocks" ng-repeat="c in colorData.chartblues" >
-          <li><span class="blue{{$index+1}}"></span> {{c.hex}}</li>
+        <ul class="list-unstyled color-blocks" ng-repeat="c in colorData.blues">
+          <li>
+            <span class="blue{{$index+1}}"></span> {{c.hex}}</li>
         </ul>
 
       </div>

@@ -1,6 +1,6 @@
 /*
  * gulp
- * $ npm install gulp-ruby-sass gulp-autoprefixer gulp-minify-css gulp-jshint gulp-concat gulp-uglify gulp-imagemin gulp-notify gulp-rename gulp-cache del gulp-usemin gulp-rev gulp-minify-html browser-sync gulp-connect gulp-plumber gulp-filter gulp-util gulp-ftp gulp-prompt --save-dev
+ * $ npm install gulp-ruby-sass gulp-autoprefixer gulp-minify-css gulp-jshint gulp-concat gulp-uglify gulp-imagemin gulp-notify gulp-rename gulp-cache del gulp-usemin gulp-rev gulp-minify-html browser-sync gulp-connect gulp-plumber gulp-filter gulp-util gulp-ftp gulp-prompt run-sequence --save-dev
  */
 
 /*jshint strict:false */

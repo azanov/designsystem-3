@@ -172,7 +172,7 @@
                   "name": "Chart Gray5"
                 }, {
                   "varname": "$gray6",
-                  "hex": "silver",
+                  "hex": "#c0c0c0",
                   "name": "Chart Gray6"
                 }
                 ]
