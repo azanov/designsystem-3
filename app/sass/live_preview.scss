@@ -5,13 +5,14 @@
   zoom: 1;
   &:before,
   &:after {
-  display: table;
+    display: table;
 
-  content: '';
-}
+    content: '';
+  }
   &:after {
-  clear: both;
-}
+    clear: both;
+  }
+
 }
 // Bootstrap UI (required)
 
@@ -24,160 +25,160 @@
 .debug {
   border: 1px solid #f00;
   &.green {
-  border-color: #008000;
-}
+    border-color: #008000;
+  }
   &.pink {
-  border-color: #ffc0b0;
-}
-}
+    border-color: #ffc0b0;
+  }
 
+}
 .hero {
   height: 640px;
 
-  background-image: url('../images/livepreview_keyboard.jpg');
+  background-image: url("../images/livepreview_keyboard.jpg");
   background-size: cover;
   .hero-unit {
-  margin-top: 80px;
+    margin-top: 80px;
 
-  color: #fff;
-  border-top: 2px solid #fff;
+    color: #fff;
+    border-top: 2px solid #fff;
     h1 {
-  font-size: 36px;
-
-  padding-top: 20px;
-
-  color: #fff;
-
       @extend %ps-light;
-}
+      font-size: 36px;
+      padding-top: 20px;
+      color: #fff;
+    }
     h2 {
-  font-size: 22px;
-  line-height: 1.3;
-
-  color: #fff;
-
       @extend %ps-light;
-}
-}
+      font-size: 22px;
+      line-height: 1.3;
+      color: #fff;
+    }
+
+  }
   .hero-menu {
-  padding-left: 0;
+    padding-left: 0;
 
-  list-style-type: none;
+    list-style-type: none;
 
-  $accent: lighten(map-get($chord1, color4), 35%);
+    $accent: lighten(map-get($chord1, color4), 35%);
     > li {
-  font-size: 18px;
-
-  margin-top: 30px;
-  padding-top: 10px;
-
-  border-top: 1px solid $accent;
-
       @extend %ps-regular;
+      font-size: 18px;
+
+      margin-top: 30px;
+      padding-top: 10px;
+
+      border-top: 1px solid $accent;
+
       a {
-  color: $accent;
+        color: $accent;
         &:hover {
-  text-decoration: none;
-}
-}
+          text-decoration: none;
+        }
+
+      }
       ul {
-  margin-top: 5px;
-  padding-left: 0;
+        margin-top: 5px;
+        padding-left: 0;
 
-  list-style-type: none;
+        list-style-type: none;
 
-  column-count: 3;
+        column-count: 3;
         li {
           a {
-  color: #fff;
-}
-}
-}
-}
-    .dropdown-header, .divider, .optional {
-  display: none;
-}
-}
-}
+            color: #fff;
+          }
+        }
+      }
 
+    }
+    .dropdown-header,
+    .divider,
+    .optional {
+      display: none;
+    }
+  }
 
+}
 .home #footer {
   margin-top: 0;
+
 }
-
-
 .chord-display {
   margin-bottom: 20px;
-}
 
+}
 // TODO: refactor below into loop; errors with interpolating variable name $chord1 etc.
 #chord1 {
   .color1 {
-  color: map-get($chord1, color1);
+    color: map-get($chord1, color1);
 
-  fill: map-get($chord1, color1);
-}
+    fill: map-get($chord1, color1);
+  }
   .color2 {
-  color: map-get($chord1, color2);
+    color: map-get($chord1, color2);
 
-  fill: map-get($chord1, color2);
-}
+    fill: map-get($chord1, color2);
+  }
   .color3 {
-  color: map-get($chord1, color3);
+    color: map-get($chord1, color3);
 
-  fill: map-get($chord1, color3);
-}
+    fill: map-get($chord1, color3);
+  }
   .color4 {
-  color: map-get($chord1, color4);
+    color: map-get($chord1, color4);
 
-  fill: map-get($chord1, color4);
-}
+    fill: map-get($chord1, color4);
+  }
+
 }
 #chord2 {
   .color1 {
-  color: map-get($chord2, color1);
+    color: map-get($chord2, color1);
 
-  fill: map-get($chord2, color1);
-}
+    fill: map-get($chord2, color1);
+  }
   .color2 {
-  color: map-get($chord2, color2);
+    color: map-get($chord2, color2);
 
-  fill: map-get($chord2, color2);
-}
+    fill: map-get($chord2, color2);
+  }
   .color3 {
-  color: map-get($chord2, color3);
+    color: map-get($chord2, color3);
 
-  fill: map-get($chord2, color3);
-}
+    fill: map-get($chord2, color3);
+  }
   .color4 {
-  color: map-get($chord2, color4);
+    color: map-get($chord2, color4);
 
-  fill: map-get($chord2, color4);
-}
+    fill: map-get($chord2, color4);
+  }
+
 }
 #chord3 {
   .color1 {
-  color: map-get($chord3, color1);
+    color: map-get($chord3, color1);
 
-  fill: map-get($chord3, color1);
-}
+    fill: map-get($chord3, color1);
+  }
   .color2 {
-  color: map-get($chord3, color2);
+    color: map-get($chord3, color2);
 
-  fill: map-get($chord3, color2);
-}
+    fill: map-get($chord3, color2);
+  }
   .color3 {
-  color: map-get($chord3, color3);
+    color: map-get($chord3, color3);
 
-  fill: map-get($chord3, color3);
-}
+    fill: map-get($chord3, color3);
+  }
   .color4 {
-  color: map-get($chord3, color4);
+    color: map-get($chord3, color4);
 
-  fill: map-get($chord3, color4);
-}
-}
+    fill: map-get($chord3, color4);
+  }
 
+}
 // spacing and page layout mods for the design system pages
 section.row {
   margin-bottom: 60px;
@@ -188,16 +189,18 @@ h3.sh {
 
   margin: 50px 0 20px;
   &:first-child {
-  margin-top: 0;
-}
+    margin-top: 0;
+  }
+
 }
 h6.sh {
   clear: both;
 
   margin-top: 40px;
   &:first-child {
-  margin-top: 0;
-}
+    margin-top: 0;
+  }
+
 }
 hr {
   margin-top: 30px;
@@ -207,6 +210,7 @@ hr {
   border: 0;
   border-top: 3px solid $gray;
   border-radius: 0;
+
 }
 //* HEADER & FOOTER EXAMPLES */
 .header-title {
@@ -225,8 +229,9 @@ hr {
 .footer-example {
   box-shadow: 0 0 6px rgba(0, 0, 0, .2);
   &.footer-last {
-  margin-bottom: 120px;
-}
+    margin-bottom: 120px;
+  }
+
 }
 //* Linear Gradients & Pseudo Element */
 .pseudo {
@@ -258,6 +263,7 @@ hr {
   background-repeat: repeat-x;
   background-position: 50% -30px;
   background-size: 20px 40px;
+
 }
 //* Charting Demos */
 
@@ -266,40 +272,42 @@ hr {
 
   display: inline-block;
   span {
-  font-size: 20px;
+    font-size: 20px;
 
-  position: absolute;
-  top: 0;
-  left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 
-  display: block;
+    display: block;
 
-  width: 100%;
-  height: 100%;
-  padding-top: 35%;
+    width: 100%;
+    height: 100%;
+    padding-top: 35%;
 
-  text-align: center;
-}
+    text-align: center;
+  }
+
 }
 .sparkline {
   .chart {
-  display: inline-block;
-  float: left;
-}
+    display: inline-block;
+    float: left;
+  }
   .caption {
-  display: inline-block;
-  float: left;
+    display: inline-block;
+    float: left;
 
-  margin-left: 10px;
-}
+    margin-left: 10px;
+  }
   h6 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   h2 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
 }
 legend .more-info,
 h3 .more-info,
@@ -310,6 +318,7 @@ h1 .more-info {
   float: right;
 
   margin-top: 10px;
+
 }
 //* the tab that pops out of the  Live Preview */
 
@@ -324,52 +333,55 @@ $tab-color: #333;
   width: 185px;
   height: 100px;
 
-  transition: all .3s;
+  transition: all 0.3s;
   &.activate {
-  right: 0;
+    right: 0;
 
-  width: 185px;
-}
+    width: 185px;
+  }
   .settings-tab {
-  float: left;
+    float: left;
 
-  width: 35px;
-  padding: 5px;
+    width: 35px;
+    padding: 5px;
 
-  text-align: center;
+    text-align: center;
 
-  color: #fff;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  background: $tab-color;
-  box-shadow: 3px 5px 8px rgba(0, 0, 0, .3);
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: $tab-color;
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, .3);
     &:hover {
-  cursor: pointer;
-}
+      cursor: pointer;
+    }
     &:active {
-  background: #71a6b9;
-}
-}
+      background: #71a6b9;
+    }
+
+  }
   .settings-form {
-  float: right;
+    float: right;
 
-  width: 150px;
-  height: 125px;
-  padding: 0 10px 10px 15px;
+    width: 150px;
+    height: 125px;
+    padding: 0 10px 10px 15px;
 
-  color: #fff;
-  border-bottom-left-radius: 5px;
-  background-color: $tab-color;
-  box-shadow: 3px 5px 8px rgba(0, 0, 0, .3);
+    color: #fff;
+    border-bottom-left-radius: 5px;
+    background-color: $tab-color;
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, .3);
     label {
-  font-size: 12px !important;
+      font-size: 12px !important;
 
-  color: #fff;
-}
-}
+      color: #fff;
+    }
+  }
+
 }
 p[class^='bg'] {
   padding: 10px;
+
 }
 //* Color swatches */
 .row-left-border {
@@ -378,35 +390,37 @@ p[class^='bg'] {
 .color-swatches {
   margin-bottom: 20px;
   .color-swatch-container {
-  margin-bottom: 30px;
-}
+    margin-bottom: 30px;
+  }
   .color-swatch {
-  display: block;
+    display: block;
 
-  width: 100%;
+    width: 100%;
     // set them to use the BS grid
-  height: 72px;
-  margin-bottom: 5px;
+    height: 72px;
+    margin-bottom: 5px;
     &[class*='alert'] {
-  border-right-width: 16px;
-  border-right-style: solid;
-}
+      border-right-width: 16px;
+      border-right-style: solid;
+    }
     &.color-swatch-small {
-  display: inline-block;
+      display: inline-block;
 
-  width: 33px;
-  height: 33px;
-}
-}
+      width: 33px;
+      height: 33px;
+    }
+
+  }
   p {
-  font-size: 14px;
+    font-size: 14px;
 
-  color: $gray-text;
+    color: $gray-text;
     small {
-  font-size: 11px;
-  line-height: 1.2;
-}
-}
+      font-size: 11px;
+      line-height: 1.2;
+    }
+  }
+
 }
 //* color charts */
 .color-chart-nested {
@@ -416,24 +430,26 @@ p[class^='bg'] {
 
   margin-right: 30px;
   .pie {
-  position: absolute;
-  top: 86px;
-  left: 86px;
-}
+    position: absolute;
+    top: 86px;
+    left: 86px;
+  }
+
 }
 .color-blocks {
   li {
-  margin-bottom: 7px;
+    margin-bottom: 7px;
     span {
-  display: inline-block;
+      display: inline-block;
 
-  width: 35px;
-  height: 35px;
-  margin-right: 15px;
+      width: 35px;
+      height: 35px;
+      margin-right: 15px;
 
-  vertical-align: middle;
-}
-}
+      vertical-align: middle;
+    }
+  }
+
 }
 .donut-varied-padded {
   margin-right: 25px;
@@ -446,26 +462,29 @@ p[class^='bg'] {
 }
 .glyphicons {
   li {
-  font-size: .8em;
+    font-size: 0.8em;
 
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 
-  text-align: center;
+    text-align: center;
     .glyphicon,
     .pbfont {
       //font-size: 2em;
-}
-}
+    }
+  }
+
 }
 .text-center {
   .pie,
   .donut {
-  width: 100px;
-  margin: 0 auto 20px;
-}
+    width: 100px;
+    margin: 0 auto 20px;
+  }
+
 }
 .clearRow {
   clear: left;
+
 }
 //
 // //* color swatch backgrounds */
@@ -484,6 +503,7 @@ p[class^='bg'] {
 }
 .brand-warning {
   background-color: $brand-warning;
+
 }
 //
 // .gray-dark { background-color    : $gray-dark; }
@@ -511,6 +531,7 @@ p[class^='bg'] {
 }
 .chart-red {
   background-color: $chart-red;
+
 }
 //
 .blue1 {
@@ -548,58 +569,61 @@ p[class^='bg'] {
 }
 .gray6 {
   background-color: $gray6;
+
 }
 //* panels page */
 .list-group-details {
   .form-group {
-  margin-bottom: 0;
-}
+    margin-bottom: 0;
+  }
   .control-label {
-  padding-top: 3px;
-  padding-right: 0;
+    padding-top: 3px;
+    padding-right: 0;
 
-  text-align: left;
+    text-align: left;
     strong {
-  font-weight: normal;
+      font-weight: normal;
 
-  padding-right: .3em;
+      padding-right: 0.3em;
 
-  color: $gray-text;
-  background-color: #fff;
-}
+      color: $gray-text;
+      background-color: #fff;
+    }
     &:before {
-  float: left;
+      float: left;
 
-  width: 0;
+      width: 0;
 
-  content: '..........................................';
-  white-space: nowrap;
+      content: '..........................................';
+      white-space: nowrap;
 
-  color: $gray;
-}
-}
+      color: $gray;
+    }
+
+  }
   .form-control-static {
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: .3em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 0.3em;
 
-  word-wrap: break-word;
+    word-wrap: break-word;
 
-  background-color: #fff;
-}
+    background-color: #fff;
+  }
+
 }
 .view-animate {
-  -webkit-transition: all .3s;
-          transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   &.ng-enter,
   &.ng-leave {
-  opacity: 1;
-}
+    opacity: 1;
+  }
   &.ng-enter,
   &.ng-leave-active,
   &.ng-hide {
-  height: 0;
+    height: 0;
 
-  opacity: 0;
-}
+    opacity: 0;
+  }
 }

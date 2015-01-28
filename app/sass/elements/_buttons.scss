@@ -63,7 +63,6 @@
         	background-color: shade($color, 60%);
         	border-color    : shade($color, 60%);
         }
-
   }
   &.disabled,
   &[disabled],
@@ -104,6 +103,16 @@
     			background-color: shade($color, 50%);
     			border-color    : shade($color, 50%);
         }
+  }
+  // try to eliminated focus color problem
+  &:focus {
+    color           : #fff;
+    background-color: $color;
+    border-color    : $color;
+    .btn-group & {
+      background-color: $color;
+      border-color    : $color;
+    }
   }
   &.disabled,
   &[disabled],

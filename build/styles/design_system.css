@@ -473,6 +473,13 @@ cite {
     .btn-group .btn-primary:active, .btn-group .btn-primary.active, .btn-group .open .dropdown-toggle .btn-primary {
       background-color: #00416a;
       border-color: #00416a; }
+  .btn-primary:focus {
+    color: #fff;
+    background-color: #0082d5;
+    border-color: #0082d5; }
+    .btn-group .btn-primary:focus {
+      background-color: #0082d5;
+      border-color: #0082d5; }
   .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
     background-color: #cbdde9;
     border-color: #cbdde9;
@@ -541,6 +548,13 @@ cite {
     .btn-group .btn-success:active, .btn-group .btn-success.active, .btn-group .open .dropdown-toggle .btn-success {
       background-color: #005820;
       border-color: #005820; }
+  .btn-success:focus {
+    color: #fff;
+    background-color: #00b140;
+    border-color: #00b140; }
+    .btn-group .btn-success:focus {
+      background-color: #00b140;
+      border-color: #00b140; }
   .btn-success.disabled, .btn-success.disabled:hover, .btn-success.disabled:active, .btn-success.disabled.active, .btn-success[disabled], .btn-success[disabled]:hover, .btn-success[disabled]:active, .btn-success[disabled].active, fieldset[disabled] .btn-success, fieldset[disabled] .btn-success:hover, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success.active {
     background-color: #cbdde9;
     border-color: #cbdde9;
@@ -564,6 +578,13 @@ cite {
     .btn-group .btn-info:active, .btn-group .btn-info.active, .btn-group .open .dropdown-toggle .btn-info {
       background-color: #1f2952;
       border-color: #1f2952; }
+  .btn-info:focus {
+    color: #fff;
+    background-color: #3e53a4;
+    border-color: #3e53a4; }
+    .btn-group .btn-info:focus {
+      background-color: #3e53a4;
+      border-color: #3e53a4; }
   .btn-info.disabled, .btn-info.disabled:hover, .btn-info.disabled:active, .btn-info.disabled.active, .btn-info[disabled], .btn-info[disabled]:hover, .btn-info[disabled]:active, .btn-info[disabled].active, fieldset[disabled] .btn-info, fieldset[disabled] .btn-info:hover, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn-info.active {
     background-color: #cbdde9;
     border-color: #cbdde9;
@@ -587,6 +608,13 @@ cite {
     .btn-group .btn-warning:active, .btn-group .btn-warning.active, .btn-group .open .dropdown-toggle .btn-warning {
       background-color: #773505;
       border-color: #773505; }
+  .btn-warning:focus {
+    color: #fff;
+    background-color: #ee6b0b;
+    border-color: #ee6b0b; }
+    .btn-group .btn-warning:focus {
+      background-color: #ee6b0b;
+      border-color: #ee6b0b; }
   .btn-warning.disabled, .btn-warning.disabled:hover, .btn-warning.disabled:active, .btn-warning.disabled.active, .btn-warning[disabled], .btn-warning[disabled]:hover, .btn-warning[disabled]:active, .btn-warning[disabled].active, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-warning:hover, fieldset[disabled] .btn-warning:active, fieldset[disabled] .btn-warning.active {
     background-color: #cbdde9;
     border-color: #cbdde9;
@@ -610,6 +638,13 @@ cite {
     .btn-group .btn-danger:active, .btn-group .btn-danger.active, .btn-group .open .dropdown-toggle .btn-danger {
       background-color: #5c1111;
       border-color: #5c1111; }
+  .btn-danger:focus {
+    color: #fff;
+    background-color: #b92222;
+    border-color: #b92222; }
+    .btn-group .btn-danger:focus {
+      background-color: #b92222;
+      border-color: #b92222; }
   .btn-danger.disabled, .btn-danger.disabled:hover, .btn-danger.disabled:active, .btn-danger.disabled.active, .btn-danger[disabled], .btn-danger[disabled]:hover, .btn-danger[disabled]:active, .btn-danger[disabled].active, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-danger:hover, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger.active {
     background-color: #cbdde9;
     border-color: #cbdde9;
