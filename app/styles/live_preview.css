@@ -140,6 +140,9 @@ h6 {
 .media-heading {
   font-weight: normal !important; }
 
+dt:first-child {
+  margin-top: 0; }
+
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -319,7 +322,9 @@ cite {
                 column-count: 3; }
         .hero .hero-menu > li ul li a {
           color: #fff; }
-    .hero .hero-menu .dropdown-header, .hero .hero-menu .divider, .hero .hero-menu .optional {
+    .hero .hero-menu .dropdown-header,
+    .hero .hero-menu .divider,
+    .hero .hero-menu .optional {
       display: none; }
 
 .home #footer {
@@ -477,8 +482,8 @@ h1 .more-info {
   right: -150px;
   width: 185px;
   height: 100px;
-  -webkit-transition: all .3s;
-          transition: all .3s; }
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s; }
   .settings.activate {
     right: 0;
     width: 185px; }
@@ -565,7 +570,7 @@ p[class^='bg'] {
   background-color: #aaa; }
 
 .glyphicons li {
-  font-size: .8em;
+  font-size: 0.8em;
   margin-bottom: 20px;
   text-align: center; }
 
@@ -654,7 +659,7 @@ p[class^='bg'] {
   text-align: left; }
   .list-group-details .control-label strong {
     font-weight: normal;
-    padding-right: .3em;
+    padding-right: 0.3em;
     color: #4e4e4e;
     background-color: #fff; }
   .list-group-details .control-label:before {
@@ -666,13 +671,13 @@ p[class^='bg'] {
 .list-group-details .form-control-static {
   padding-top: 2px;
   padding-bottom: 2px;
-  padding-left: .3em;
+  padding-left: 0.3em;
   word-wrap: break-word;
   background-color: #fff; }
 
 .view-animate {
-  -webkit-transition: all .3s;
-  transition: all .3s; }
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
   .view-animate.ng-enter, .view-animate.ng-leave {
     opacity: 1; }
   .view-animate.ng-enter, .view-animate.ng-leave-active, .view-animate.ng-hide {

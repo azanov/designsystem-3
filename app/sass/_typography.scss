@@ -153,7 +153,9 @@ p.lede {
 }
 dt {
   @extend %ps-bold;
-
+  &:first-child {
+    margin-top: 0;
+  }
 }
 hr {
   margin-top: 20px;

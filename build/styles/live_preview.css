@@ -140,6 +140,9 @@ h6 {
 .media-heading {
   font-weight: normal !important; }
 
+dt:first-child {
+  margin-top: 0; }
+
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
