@@ -4,7 +4,7 @@
 // updated 1/15/15
 
 //== Colors
-//== Here we assign colors to variables; we don't actually color elements 
+//== Here we assign colors to variables; we don't actually color elements
 
 //PRIMARY
 $pb-cyan:        rgb(0, 155, 223);
@@ -62,11 +62,11 @@ $text-color-dark: $gray-dark;
 
 
 //Bootstrap colors / Functional Colors - do not change with chords
-$brand-error:   #b92222;
-$brand-danger:  $brand-error;
-$brand-success: $pb-dark-green;
-$brand-info:    $pb-blue;
-$brand-warning: $pb-dark-orange;
+$brand-error:   #cc0000;
+$brand-danger:  #cc0000;
+$brand-success: #007d00;
+$brand-info:    #0070c4;
+$brand-warning: #826000;
 
 // CHART COLORS
 $chart-green:  $pb-dark-green;

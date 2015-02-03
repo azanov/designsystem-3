@@ -165,7 +165,7 @@ body {
   font-weight: 400;
   color: #4e4e4e; }
   body .has-error {
-    color: #b92222; }
+    color: #cc0000; }
 
 dl dt {
   margin-top: 10px; }
@@ -246,16 +246,16 @@ cite {
   color: silver; }
 
 .text-success {
-  color: #00b140; }
+  color: #007d00; }
 
 .text-info {
-  color: #3e53a4; }
+  color: #0070c4; }
 
 .text-warning {
-  color: #ee6b0b; }
+  color: #826000; }
 
 .text-danger {
-  color: #b92222; }
+  color: #cc0000; }
 
 .serif,
 .serif p {
@@ -586,16 +586,16 @@ p[class^='bg'] {
   background-color: #0082d5; }
 
 .brand-success {
-  background-color: #00b140; }
+  background-color: #007d00; }
 
 .brand-danger {
-  background-color: #b92222; }
+  background-color: #cc0000; }
 
 .brand-info {
-  background-color: #3e53a4; }
+  background-color: #0070c4; }
 
 .brand-warning {
-  background-color: #ee6b0b; }
+  background-color: #826000; }
 
 .chart-green {
   background-color: #00b140; }
