@@ -1,5 +1,9 @@
 ##Release Notes
 
+###1.01 February 3, 2015
+- Fixed space above DT (Issue #7)
+- Fixed functional colors hex labels
+
 ###1.0 January 14, 2015
 - Incorporates color and typography changes for new branding
 - Switched build system from Grunt to Gulp
