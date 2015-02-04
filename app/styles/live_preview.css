@@ -1,3 +1,5 @@
+/* this file contains styles for the live preview site ONLY!
+   these styles are not meant to be used on projects, only use the design_system.css */
 @font-face {
   font-family: "PrecisionSans_W_Rg";
   font-weight: "400";
@@ -56,7 +58,7 @@ h3, .nav-tabs > li > a,
 header .navbar .navbar-brand.brand-text,
 header .navbar .container .navbar-brand.brand-text, .nav.navbar-nav, .hero .hero-menu > li, .ps-light b,
 .ps-light strong, p.lead,
-p.lede, .media-heading, dt, body {
+p.lede, .media-heading, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -90,15 +92,15 @@ header .navbar .container .navbar-brand.brand-text, .nav.navbar-nav, .hero .hero
   font-style: normal; }
 
 p.lead,
-p.lede, .media-heading, dt {
+p.lede, .media-heading {
   font-family: 'PrecisionSans_W_Bd', Arial, sans-serif;
   font-weight: normal;
   font-style: normal; }
 
-.serif {
+.serif, .serif p {
   font-family: Georgia, Times, "Times New Roman", serif; }
 
-.sans {
+.sans, .sans p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 code,
@@ -140,9 +142,6 @@ h6 {
 .media-heading {
   font-weight: normal !important; }
 
-dt:first-child {
-  margin-top: 0; }
-
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -167,8 +166,11 @@ body {
   body .has-error {
     color: #cc0000; }
 
-dl dt {
-  margin-top: 10px; }
+dt {
+  margin-top: 10px;
+  margin-bottom: 3px; }
+  dt:first-child {
+    margin-top: 0; }
 
 ul.spaced > li,
 ol.spaced > li {
@@ -208,8 +210,7 @@ header .navbar .container .navbar-brand.brand-text {
 .checkboxList span {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-small,
-.small {
+small, .small {
   font-size: 85%; }
 
 cite {
@@ -243,7 +244,7 @@ cite {
   color: #0082d5; }
 
 .text-muted {
-  color: silver; }
+  color: #e6e6e6; }
 
 .text-success {
   color: #007d00; }
@@ -256,10 +257,6 @@ cite {
 
 .text-danger {
   color: #cc0000; }
-
-.serif,
-.serif p {
-  font-family: Georgia, Times, "Times New Roman", serif; }
 
 .help-block {
   font-size: 14px; }
@@ -683,6 +680,35 @@ p[class^='bg'] {
   .view-animate.ng-enter, .view-animate.ng-leave-active, .view-animate.ng-hide {
     height: 0;
     opacity: 0; }
+
+[class*="block-grid-"] {
+  display: block;
+  padding: 0;
+  margin: 0 -.55556rem;
+  zoom: 1; }
+  [class*="block-grid-"]:before, [class*="block-grid-"]:after {
+    content: '';
+    display: table; }
+  [class*="block-grid-"]:after {
+    clear: both; }
+  [class*="block-grid-"] > li {
+    display: block;
+    height: auto;
+    float: left;
+    padding: 0 .55556rem 1.11111rem; }
+
+.block-grid-6 > li {
+  width: 16.66666%; }
+
+.small-block-grid-3 > li {
+  width: 33.33333%;
+  list-style: none; }
+
+.small-block-grid-3 > li:nth-of-type(1n) {
+  clear: none; }
+
+.small-block-grid-3 > li:nth-of-type(3n+1) {
+  clear: both; }
 
 
 

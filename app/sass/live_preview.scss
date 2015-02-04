@@ -1,4 +1,9 @@
-@import '_variables';
+/* this file contains styles for the live preview site ONLY!
+   these styles are not meant to be used on projects, only use the design_system.css */
+
+
+@import 'variables';
+@import 'mixins';
 @import 'typography';
 
 .clearfix {
@@ -14,8 +19,8 @@
   }
 
 }
-// Bootstrap UI (required)
 
+// Bootstrap UI
 .nav,
 .pagination,
 .carousel,
@@ -626,4 +631,38 @@ p[class^='bg'] {
 
     opacity: 0;
   }
+}
+
+
+
+//* experimental block grid code, will not work in IE8  */
+// used to display icons on icons page
+[class*="block-grid-"] {
+    display: block;
+    padding: 0;
+    margin: 0 -.55556rem;
+    @include clearfix;
+    > li {
+        display: block;
+        height: auto;
+        float: left;
+        padding: 0 .55556rem 1.11111rem;
+    }
+}
+
+.block-grid-6 > li {
+  width: 16.66666%;
+}
+
+.small-block-grid-3 > li {
+    width: 33.33333%;
+    list-style: none;
+}
+
+.small-block-grid-3 > li:nth-of-type(1n) {
+    clear: none;
+}
+
+.small-block-grid-3 > li:nth-of-type(3n+1) {
+    clear: both;
 }

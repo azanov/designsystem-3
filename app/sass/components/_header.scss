@@ -8,7 +8,6 @@ body.fixed-header {
       padding: 0 40px;
     }
   }
-
 }
 #header,
 header {
@@ -34,7 +33,6 @@ header {
           @extend %ps-bold;
         }
       }
-
     }
     // fixed navbar has a shadow that appears when scrolled via jQuery
     &.navbar-fixed-top {
@@ -45,7 +43,6 @@ header {
         -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
         box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
       }
-
     }
     // &.navbar-scroll {
     // }
@@ -64,7 +61,6 @@ header {
           background-color: transparent;
           color: $brand-primary;
         }
-
       }
       // you can designate an LI as "active" and highlight its link
       .active a {
@@ -73,7 +69,6 @@ header {
           background-color: transparent;
           color: $brand-primary;
         }
-
       }
       .dropdown-menu {
         background-color: $gray-light;
@@ -104,7 +99,6 @@ header {
         }
       }
     }
-
   }
   &.header-stacked {
     .nav.navbar-nav {
@@ -112,7 +106,6 @@ header {
       > li > a {
         padding-top: 0;
       }
-
     }
     .navbar-brand {
       padding-bottom: 0;
@@ -124,7 +117,6 @@ header {
       }
     }
   }
-
 }
 // MEDIA QUERIES */
 

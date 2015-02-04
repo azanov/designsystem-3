@@ -40,8 +40,8 @@
             }
         }
         &.complete {
-            & > .progress {
-                & > .progress-bar {
+            > .progress {
+                 > .progress-bar {
                     width:100%;
                     background-color: $chart-green;
                 }
@@ -51,8 +51,8 @@
             }
         }
         &.active {
-            & > .progress {
-                & > .progress-bar {
+             > .progress {
+                 > .progress-bar {
                     width:50%;
                     background-color: $chart-blue;
                 }
@@ -63,30 +63,29 @@
         }
     }
 
-
-    & > .bs-wizard-step:first-child.active {
-        & > .progress {
-            & > .progress-bar {
+     > .bs-wizard-step:first-child.active {
+         > .progress {
+             > .progress-bar {
                 width:0%;
             }
         }
     }
-    & > .bs-wizard-step:last-child.active {
-        & > .progress {
-            & > .progress-bar {
+     > .bs-wizard-step:last-child.active {
+         > .progress {
+             > .progress-bar {
                 width: 100%;
             }
         }
     }
 
-    & > .bs-wizard-step:first-child {
-        & > .progress {
+     > .bs-wizard-step:first-child {
+         > .progress {
             left: 50%;
 
         }
     }
-    & > .bs-wizard-step:last-child {
-        & > .progress {
+     > .bs-wizard-step:last-child {
+         > .progress {
             width: 0;
         }
     }

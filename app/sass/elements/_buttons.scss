@@ -1,4 +1,4 @@
-// moved to separate file to minimized scrolling in main file
+// moved to separate file to minimize scrolling in main file
 //
 //*/ Buttons */
 // --------------------------------------------------
@@ -35,7 +35,8 @@
   @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-xsmall, $line-height-small, $border-radius-small);
 }
 
-// -- Button variants outline and solid
+// -- Button variants: outline and solid -- //
+
 // outline button, we added a knockout one, hence the added params
 @mixin outline-button($color: $c, $foreground: #fff, $disabled: $disabled-button) {
 	color             : $color;
@@ -79,6 +80,7 @@
   }
 }
 
+// solid-color button, usually "primary" button, see below
 @mixin solid-button ($color) {
 	color             : #fff;
 	background-color  : $color;
@@ -104,7 +106,6 @@
     			border-color    : shade($color, 50%);
         }
   }
-  // try to eliminated focus color problem
   &:focus {
     color           : #fff;
     background-color: $color;
@@ -129,6 +130,7 @@
   }
 }
 
+// borderless "link" button
 @mixin borderless-button($color) {
 	color: $color;
 	&.disabled,
@@ -145,6 +147,7 @@
 	}
 }
 
+//* Now we actually define the button classes
 
 // set up our two types of buttons
 .btn-default {
@@ -164,7 +167,7 @@
 
 
 
-// some font overrides
+// font awesome icon size overrides in button groups
 .btn-group {
 	&-sm {
 		.btn {
@@ -173,7 +176,6 @@
 			}
 		}
 	}
-
 	&-xs {
 		.btn {
 			i.fa {
@@ -181,8 +183,6 @@
 			}
 		}
 	}
-
-
 }
 
 .btn-group-borderless {
@@ -216,9 +216,6 @@
 }
 
 
-
-
-
 //  transitory alert msg next to button
 .btn-response {
 	display: inline-block;
@@ -227,18 +224,14 @@
 
 // overrides for bootstrap's Close button
 .close {
-	// color: $gray-mid;
 	transition: color .5s;
 	opacity: 1.0;
 	filter: alpha(opacity=1);
 	&:hover {
-		// color: $link-color-hover;
 		opacity: 1.0;
 		filter: alpha(opacity=1);
 	}
 }
-
-
 
 
 // Bootstrap buttons

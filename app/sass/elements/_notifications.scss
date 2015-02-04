@@ -7,7 +7,6 @@
         background-color: $pb-light-gray;
       }
     }
-
   }
   .modal-body {
     font-size: 14px;
@@ -26,8 +25,8 @@
       font-size: 16px;
     }
   }
-
 }
+
 //* alerts */
 .alert-danger {
   background-color: $state-danger-bg;
@@ -51,78 +50,60 @@
   a {
     color: darken($link-color, 20%);
   }
-
 }
 
 // alert box
 
-.alert-box
-{
-  font-size       : 18px;
-  font-weight     : normal;
-
-  position        : absolute;
-  z-index         : 2000;
-  right           : 30px;
-  bottom          : 60px;
-
-  display         : block;
-
-  width           : 300px;
-  padding         : 20px;
-
-  text-align      : center;
-
-  color           : #fff;
-  border-width    : 1px;
-  border-style    : solid;
-  border-color    : $brand-info;
+.alert-box {
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  z-index: 2000;
+  right: 30px;
+  bottom: 60px;
+  display: block;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $brand-info;
   background-color: $brand-info;
-  box-shadow      : 3px 3px 6px rgba(0, 0, 0, .5);
-  &.success
-  {
-      color           : #fff;
-      border-color    : $brand-success;
-      background-color: $brand-success;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, .5);
+  &.success {
+    color: #fff;
+    border-color: $brand-success;
+    background-color: $brand-success;
   }
-
 }
 
 
-
 // Activity Notification at top of page
-
 .activity {
   position: relative;
-
   &:hover {
     color: $text-color !important;
     .badge {
       -webkit-transform: scale(1.2);
-      -ms-transform    : scale(1.2);
-      -o-transform     : scale(1.2);
-      transform        : scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2);
     }
   }
-
   .badge {
-    position                : absolute;
-    top                     : 15%;
-    right                   : 0;
-    background              : map-get($chord, color4);
-    font-size               : 10px;
-    color                   : #fff;
-    font-weight             : 700;
-    text-align              : center;
-    line-height             : normal;
-    -webkit-transition      : all .1s;
-    -o-transition           : all .1s;
-    transition              : all .1s;
+    position: absolute;
+    top: 15%;
+    right: 0;
+    background: map-get($chord, color4);
+    font-size: 10px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    line-height: normal;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
   }
 }
-
-
-
 
 
 // Contextual backgrounds
@@ -131,49 +112,55 @@
   background-color: $bg;
   color: $fg;
 }
-
-.bg-primary { @include contextual-box($state-primary-bg, $state-primary-text); }
-.bg-success { @include contextual-box($state-success-bg, $state-success-text); }
-.bg-info { @include contextual-box($state-info-bg, $state-info-text); }
-.bg-warning { @include contextual-box($state-warning-bg, $state-warning-text); }
-.bg-danger { @include contextual-box($state-danger-bg, $state-danger-text); }
-
-
-
-
+.bg-primary {
+  @include contextual-box($state-primary-bg, $state-primary-text);
+}
+.bg-success {
+  @include contextual-box($state-success-bg, $state-success-text);
+}
+.bg-info {
+  @include contextual-box($state-info-bg, $state-info-text);
+}
+.bg-warning {
+  @include contextual-box($state-warning-bg, $state-warning-text);
+}
+.bg-danger {
+  @include contextual-box($state-danger-bg, $state-danger-text);
+}
 blockquote {
   border-left: 4px solid $pb-light-gray;
 }
 
 //* CALLOUTS (from the BS docs, but useful) */
 .callout {
-    margin: 20px 0;
-    padding: 20px;
-    border-left: 4px solid $pb-light-gray;
+  margin: 20px 0;
+  padding: 20px;
+  border-left: 4px solid $pb-light-gray;
   &.callout-info {
     background-color: $state-info-bg;
-    border-color    : $state-info-border;
+    border-color: $state-info-border;
     h4 {
       color: $state-info-text;
     }
   }
   &.callout-danger {
     background-color: $state-danger-bg;
-    border-color    : $state-danger-border;
+    border-color: $state-danger-border;
     h4 {
       color: $state-danger-text;
     }
+
   }
   &.callout-warning {
     background-color: $state-warning-bg;
-    border-color    : $state-warning-border;
+    border-color: $state-warning-border;
     h4 {
       color: $state-warning-text;
     }
   }
   &.callout-success {
     background-color: $state-success-bg;
-    border-color    : $state-success-border;
+    border-color: $state-success-border;
     h4 {
       color: $state-success-text;
     }
@@ -181,8 +168,9 @@ blockquote {
 }
 
 
-// what follows are overrides for extensions/plugins
 
+
+// what follows are overrides for extensions/plugins
 
 //*Messagebox */
 
@@ -205,18 +193,18 @@ blockquote {
 
 .MessageBoxContainer {
   background-color: rgba(0, 0, 0, .8);
-  color           : #fff;
-  padding         : 20px;
-  position        : relative;
-  top             : 35%;
-  width           : 100%;
+  color: #fff;
+  padding: 20px;
+  position: relative;
+  top: 35%;
+  width: 100%;
   input {
     padding: 5px;
-    width  : 50%;
+    width: 50%;
   }
   select {
     padding: 5px;
-    width  : 50%;
+    width: 50%;
   }
 }
 .MessageBoxMiddle {
@@ -232,7 +220,6 @@ blockquote {
     font-style: 30px;
   }
 }
-
 .MessageBoxButtonSection {
   height: 30px;
   width: 100%;
@@ -243,11 +230,8 @@ blockquote {
     margin-right: 7px;
     padding-left: 15px;
     padding-right: 15px;
-
   }
 }
-
-
 //* End of MessageBox */
 
 .LoadingBoxContainer {
@@ -256,13 +240,12 @@ blockquote {
   position: relative;
   top: 20%;
   width: 100%;
-
 }
 .LoadingBoxMiddle {
-  left    : 20%;
-  padding : 10px;
+  left: 20%;
+  padding: 10px;
   position: relative;
-  width   : 50%;
+  width: 50%;
   .MsgTitle {
     font-size: 26px;
   }
@@ -270,33 +253,31 @@ blockquote {
     font-style: 30px;
   }
 }
-
 #LoadingPoints {
   position: absolute;
-
 }
 //* bigBoxes */
 .bigBox {
-  -moz-box-sizing   : content-box;
+  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
-  background-color  : #004d60;
-  border-left       : 5px solid rgba(0, 0, 0, .15);
-  bottom            : 10px;
-  box-sizing        : content-box;
-  color             : #fff;
-  height            : 150px;
-  overflow          : hidden;
-  padding           : 10px 10px 5px;
-  position          : fixed;
-  right             : 10px;
-  width             : 390px;
-  z-index           : 99999;
+  background-color: #004d60;
+  border-left: 5px solid rgba(0, 0, 0, .15);
+  bottom: 10px;
+  box-sizing: content-box;
+  color: #fff;
+  height: 150px;
+  overflow: hidden;
+  padding: 10px 10px 5px;
+  position: fixed;
+  right: 10px;
+  width: 390px;
+  z-index: 99999;
   span {
-    display       : block;
-    font-size     : 17px;
-    font-weight   : 300;
+    display: block;
+    font-size: 17px;
+    font-weight: 300;
     letter-spacing: -1px;
-    padding       : 5px 0 !important;
+    padding: 5px 0 !important;
   }
   p {
     font-size: 13px;
@@ -316,8 +297,6 @@ blockquote {
     width: 100%;
   }
 }
-
-
 #divMiniIcons {
   bottom: 180px;
   float: right;
@@ -327,16 +306,16 @@ blockquote {
   z-index: 9999;
   .cajita {
     background-color: #f00;
-    color           : #fff;
-    cursor          : pointer;
-    display         : block;
-    float           : right;
-    font-size       : 17px;
-    margin-left     : 4px;
-    margin-top      : 5px;
-    padding         : 4px 6px;
-    text-align      : center;
-    vertical-align  : middle;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-size: 17px;
+    margin-left: 4px;
+    margin-top: 5px;
+    padding: 4px 6px;
+    text-align: center;
+    vertical-align: middle;
   }
   .cajita:active {
     left: 1px;
@@ -349,7 +328,7 @@ blockquote {
   display: block;
   font-size: 18px;
   height: 16px;
-  opacity: .5;
+  opacity: 0.5;
   position: absolute;
   right: 10px;
   top: 15px;
@@ -358,26 +337,19 @@ blockquote {
 }
 .botClose:hover {
   opacity: 1;
-
 }
-
 .cajita img {
   height: 23px;
   padding-left: 3px;
   padding-top: 3px;
   width: 23px;
-
 }
-
-
 //* SmallBox */
 #divSmallBoxes {
-
   position: fixed;
   right: 0;
   top: 0;
   z-index: 9999;
-
 }
 .SmallBox {
   border: 1px solid transparent;
@@ -399,72 +371,72 @@ blockquote {
     width: 93%;
   }
   .textoFoto {
-    float : left;
+    float: left;
     margin: 3px 20px 3px 80px;
-    width : 78%;
+    width: 78%;
   }
   span {
-    display       : block;
-    font-size     : 17px;
-    font-weight   : 300;
+    display: block;
+    font-size: 17px;
+    font-weight: 300;
     letter-spacing: -1px;
-    margin        : 4px 0;
+    margin: 4px 0;
   }
   p {
     font-size: 13px;
     margin-top: 2px;
-
   }
-
 }
 .SmallBox:hover {
   border: 1px solid #fff;
   cursor: pointer;
-
 }
 .miniPic {
   bottom: 8px;
   position: absolute;
   right: 9px;
-
 }
 .miniIcono {
   font-size: 20px;
   height: 100%;
-
 }
 //* End of SmallBox */
 
-#pageslide {
-  -webkit-box-shadow: inset 0 0 5px 5px #222;
-  // Specify the width of your pageslide here */
-  // These styles MUST be included. Do not change. */
-  height            : 100%;
-  position          : fixed;
-  padding           : 20px;
-  top               : 0;
-  z-index           : 999999;
-  // These styles are optional, and describe how the pageslide will look */
-  position          : absolute;
-  -moz-shadow       : inset 0 0 0 0 #222;
-  display           : none;
-  box-shadow        : inset 0 0 0 0 #222;
-  color             : #fff;
-  background-color  : #004d60;
-  width             : 305px;
 
-}
-.purehtml {
-  color: #fff;
-  font-size: 16px;
+// TODO: what is this stuff?
+// #pageslide {
+//   -webkit-box-shadow: inset 0 0 5px 5px #222;
+//   // Specify the width of your pageslide here */
+//   // These styles MUST be included. Do not change. */
+//   height: 100%;
+//   position: fixed;
+//   padding: 20px;
+//   top: 0;
+//   z-index: 999999;
+//   // These styles are optional, and describe how the pageslide will look */
+//   position: absolute;
+//   -moz-shadow: inset 0 0 0 0 #222;
+//   display: none;
+//   box-shadow: inset 0 0 0 0 #222;
+//   color: #fff;
+//   background-color: #004d60;
+//   width: 305px;
+// }
+// .purehtml {
+//   color: #fff;
+//   font-size: 16px;
+//
+// }
 
-}
+
+
 // Mobile Phones */
 @media screen and (max-width: 450px) and (max-width: 767px) {
 
   .MessageBoxContainer select {
     padding: 5px;
-    width  : 50%;
+    width: 50%;
+
   }
   // Messagebox Responsive */
   // End of MessageBox Responsive */
@@ -478,15 +450,15 @@ blockquote {
   }
   .bigBox {
     background-color: #004d60;
-    bottom          : 10px;
-    color           : #fff;
-    height          : 150px;
-    padding         : 10px 10px 5px;
-    position        : fixed;
-    right           : 10px;
+    bottom: 10px;
+    color: #fff;
+    height: 150px;
+    padding: 10px 10px 5px;
+    position: fixed;
+    right: 10px;
 
-    width           : 88%;
-    z-index         : 99999;
+    width: 88%;
+    z-index: 99999;
   }
   .MessageBoxMiddle .MsgTitle {
     font-size: 22px;
@@ -502,6 +474,7 @@ blockquote {
     top: 0;
     width: 100%;
     z-index: 100000;
+
   }
   // End of SmallBox Responsive*/
   .SmallBox span {
@@ -513,9 +486,9 @@ blockquote {
 
   }
   .SmallBox .textoFoto {
-    float : left;
+    float: left;
     margin: 3px 20px 3px 80px;
-    width : 55%;
+    width: 55%;
   }
   .MessageBoxButtonSection button {
     float: right;
@@ -543,13 +516,13 @@ blockquote {
   }
   .MessageBoxContainer input {
     padding: 5px;
-    width  : 50%;
+    width: 50%;
   }
   .MessageBoxMiddle {
-    left    : 0;
-    padding : 3px;
+    left: 0;
+    padding: 3px;
     position: relative;
-    width   : 100%;
+    width: 100%;
   }
   .MessageBoxContainer {
     background-color: #232323;
@@ -572,35 +545,13 @@ blockquote {
   animation-duration: 1s;
   animation-fill-mode: both;
   &.fast {
-    -moz-animation-duration: .4s;
-    -ms-animation-duration: .4s;
-    -o-animation-duration: .4s;
-    -webkit-animation-duration: .4s;
-    animation-duration: .4s;
-
+    -ms-animation-duration: 0.4s;
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
   }
+
 }
-
-
 @-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-
-}
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-
-}
-@-o-keyframes fadeIn {
   0% {
     opacity: 0;
   }
@@ -619,8 +570,6 @@ blockquote {
 
 }
 .fadeIn {
-  -moz-animation-name: fadeIn;
-  -o-animation-name: fadeIn;
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 
@@ -637,45 +586,21 @@ blockquote {
   }
 
 }
-@-moz-keyframes fadeInRight {
-  0% {
-    -moz-transform: translateX(20px);
-    opacity: 0;
-
-  }
-  100% {
-    -moz-transform: translateX(0);
-    opacity: 1;
-  }
-
-}
-@-o-keyframes fadeInRight {
-  0% {
-    -o-transform: translateX(20px);
-    opacity: 0;
-
-  }
-  100% {
-    -o-transform: translateX(0);
-    opacity: 1;
-  }
-
-}
 @keyframes fadeInRight {
   0% {
     opacity: 0;
+    -webkit-transform: translateX(20px);
     transform: translateX(20px);
 
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 
 }
 .fadeInRight {
-  -moz-animation-name: fadeInRight;
-  -o-animation-name: fadeInRight;
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
 
@@ -692,68 +617,26 @@ blockquote {
   }
 
 }
-@-moz-keyframes fadeInUp {
-  0% {
-    -moz-transform: translateY(20px);
-    opacity: 0;
-
-  }
-  100% {
-    -moz-transform: translateY(0);
-    opacity: 1;
-  }
-
-}
-@-o-keyframes fadeInUp {
-  0% {
-    -o-transform: translateY(20px);
-    opacity: 0;
-
-  }
-  100% {
-    -o-transform: translateY(0);
-    opacity: 1;
-  }
-
-}
 @keyframes fadeInUp {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(20px);
     transform: translateY(20px);
 
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 
 }
 .fadeInUp {
-  -moz-animation-name: fadeInUp;
-  -o-animation-name: fadeInUp;
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
 
 }
 @-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-
-}
-@-moz-keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-
-}
-@-o-keyframes fadeOut {
   0% {
     opacity: 1;
   }
@@ -772,8 +655,6 @@ blockquote {
 
 }
 .fadeOut {
-  -moz-animation-name: fadeOut;
-  -o-animation-name: fadeOut;
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
 }
@@ -789,45 +670,21 @@ blockquote {
   }
 
 }
-@-moz-keyframes fadeOutLeft {
-  0% {
-    -moz-transform: translateX(0);
-    opacity: 1;
-
-  }
-  100% {
-    -moz-transform: translateX(-20px);
-    opacity: 0;
-  }
-
-}
-@-o-keyframes fadeOutLeft {
-  0% {
-    -o-transform: translateX(0);
-    opacity: 1;
-
-  }
-  100% {
-    -o-transform: translateX(-20px);
-    opacity: 0;
-  }
-
-}
 @keyframes fadeOutLeft {
   0% {
     opacity: 1;
+    -webkit-transform: translateX(0);
     transform: translateX(0);
 
   }
   100% {
     opacity: 0;
+    -webkit-transform: translateX(-20px);
     transform: translateX(-20px);
   }
 
 }
 .fadeOutLeft {
-  -moz-animation-name: fadeOutLeft;
-  -o-animation-name: fadeOutLeft;
   -webkit-animation-name: fadeOutLeft;
   animation-name: fadeOutLeft;
 }

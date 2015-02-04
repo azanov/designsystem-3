@@ -1,32 +1,28 @@
-
 //* TABLES */
+// color variable values are defined in variables.scss
 
-// colors are defined in variables.scss
-
-.table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th {
-    background-color: $table-bg-hover;
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+  background-color: $table-bg-hover;
 }
-
 .table-striped>tbody>tr:nth-child(odd) {
   background-color: $table-bg-accent;
 }
-
 // table transitions for hovers
-.table> tbody > tr > td, .table > tbody > tr > th {
-  -webkit-transition: background-color .3s;
-  transition        : background-color .3s;
+.table> tbody > tr > td,
+.table > tbody > tr > th {
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
-
 .table-clickable {
-    tr {
-        cursor: pointer;
-    }
+  tr {
+    cursor: pointer;
+  }
 }
-
-td.centered, th.centered {
-    text-align: center;
+td.centered,
+th.centered {
+  text-align: center;
 }
-
 .table-condensed-extra {
   font-size: 14px;
   > thead,
@@ -40,7 +36,6 @@ td.centered, th.centered {
     }
   }
 }
-
 .table>thead>tr>th,
 .table>tbody>tr>th,
 .table>tfoot>tr>th,
@@ -51,13 +46,11 @@ td.centered, th.centered {
   border-bottom-color: map-get($chord, color1);
   border-bottom-width: 1px;
 }
-
-.table > tbody > tr > td, .table > tbody > tr > th {
-  -webkit-transition: background-color .3s;
-  transition        : background-color .3s;
+.table > tbody > tr > td,
+.table > tbody > tr > th {
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
-
-
 td.currency {
   text-align: right;
 }

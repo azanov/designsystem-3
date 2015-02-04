@@ -62,7 +62,9 @@ angular.module('designSystemApp')
             $scope.numericStepper = {
                 'limit': [0, ], // no negative numbers
                 'wheelStep': 1,
-                'arrowStep': 1
+                'arrowStep': 1,
+                'incrementButton': '<i class="fa fa-caret-up"></i>',
+                'decrementButton': '<i class="fa fa-caret-down"></i>'
             };
 
             $scope.transitoryAlert = {

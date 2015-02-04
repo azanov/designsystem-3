@@ -2,14 +2,19 @@
   $indent: 10px;
   a {
     padding: 3px;
-  }
-  ul.nav.nav-list.tree {
-    display: none;
+    color: $text-color;
+    &:hover {
+      color: $brand-primary;
+    }
   }
   > li {
     padding-top: 5px;
   }
+
   ul {
+    &.nav.nav-list.tree {
+      display: none;
+    }
     li {
       padding-left: $indent;
       &:hover {
@@ -42,12 +47,7 @@
       }
     }
   }
-  a {
-    color: $text-color;
-    &:hover {
-      color: $brand-primary;
-    }
-  }
+
 
   // utility nav tree menu. no triangles. BYO icons.
   &.utility-nav {

@@ -1,4 +1,6 @@
 
+// overrides for Bootstrap's form controls with "add-ons" that have icons
+
 .input-group .icon-addon .form-control {
     border-radius: 0;
 }
@@ -78,12 +80,12 @@
 .icon-addon:hover .glyphicon,
 .icon-addon .form-control:focus + .fa,
 .icon-addon:hover .fa {
-    color: #2580db;
+    color: $brand-primary;
 }
 
 .icon-addon input:disabled + .glyphicon,
 .icon-addon select:disabled + .glyphicon,
 .icon-addon input:disabled + .fa,
 .icon-addon select:disabled + .fa {
-	color:#ccc;
+	color: $gray-light;
 }

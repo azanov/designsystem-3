@@ -1,5 +1,13 @@
 ##Release Notes
 
+###1.02 February 4, 2015
+- Updated variables to match Bootstrap 3.32 structure
+- Updated Bootstrap CDN ro 3.32
+- Updated Font Awesome CDN to 4.3.0
+- Removed some deprecated Sass/CSS
+- Fixed arrows in numeric stepper control to use FA glyphs
+- cleaned up Sass files for readability
+
 ###1.01 February 3, 2015
 - Fixed space above DT (Issue #7)
 - Fixed functional colors hex labels

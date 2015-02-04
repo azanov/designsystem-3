@@ -7,6 +7,13 @@
       @extend %isotope-transition-duration;
       -webkit-transition-property: -webkit-transform, opacity;
       transition-property:         transform, opacity;
+      img.image {
+        max-width: 100%;
+        margin-top: 9px;
+      }
+      h4 a {
+        color: #333;
+      }
     }
     .row {
        margin-left:0;
@@ -15,16 +22,8 @@
     .well {
         border-color:#eee;
     }
-    .item h4 a {
-      color: #333;
-    }
     .badge {
         background-color: $gray-dark;
-    }
-
-    .item img.image {
-      max-width: 100%;
-      margin-top: 9px;
     }
     .info {
         padding:4px;

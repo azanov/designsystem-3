@@ -78,39 +78,23 @@ $font-family-serif: Georgia, Times, "Times New Roman", serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
 
-.serif {
-  font-family: $font-family-serif;
-}
-.sans {
-  font-family: $font-family-sans-serif;
-}
+// easily change something to serif or sans-serif
+.serif, .serif p { font-family: $font-family-serif; }
+.sans, .sans p { font-family: $font-family-sans-serif; }
+
 code,
 .code {
   font-family: $font-family-monospace;
-
 }
+
 // heading sizes, from variables.scss
-h1 {
-  font-size: $font-size-h1;
-}
-h2 {
-  font-size: $font-size-h2;
-}
-h3 {
-  font-size: $font-size-h3;
-}
-h4 {
-  font-size: $font-size-h4;
-}
-h5 {
-  font-size: $font-size-h5;
-  font-weight: bold;
-}
-h6 {
-  font-size: $font-size-h6;
-  font-weight: bold;
+h1 { font-size: $font-size-h1; }
+h2 { font-size: $font-size-h2; }
+h3 { font-size: $font-size-h3; }
+h4 { font-size: $font-size-h4; }
+h5 { font-size: $font-size-h5; font-weight: bold; }
+h6 { font-size: $font-size-h6; font-weight: bold; }
 
-}
 h1,
 h2,
 h3 {
@@ -118,12 +102,13 @@ h3 {
   font-variant-ligatures: common-ligatures;
   color: map-get($chord, color1);
 }
+
 h4,
 h5,
 h6 {
   font-family: $font-family-base;
-
 }
+
 // when you need light text
 // sets the bold and italic accordingly
 .ps-light {
@@ -132,38 +117,33 @@ h6 {
   em,
   i {
     @extend %ps-light-italic;
-
   }
   // since regular bold is a bit much on light
   b,
   strong {
     @extend %ps-medium;
   }
-
 }
+
 p.lead,
 p.lede {
   @extend %ps-bold;
-
 }
+
 .media-heading {
   @extend %ps-bold;
   font-weight: normal !important;
+}
 
-}
-dt {
-  @extend %ps-bold;
-  &:first-child {
-    margin-top: 0;
-  }
-}
+
+
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
   border-top: 1px solid $gray;
-
 }
+
 a {
   color: $link-color;
   &:hover {
@@ -178,8 +158,8 @@ a {
       // ellipsis
     }
   }
-
 }
+
 body {
   @extend %aa;
   font-family: $font-family-base;
@@ -190,12 +170,17 @@ body {
   .has-error {
     color: $brand-error;
   }
-
 }
-dl dt {
+
+dt {
   margin-top: 10px;
-
+  margin-bottom: 3px;
+  &:first-child {
+    margin-top: 0;
+  }
 }
+
+
 ul.spaced,
 ol.spaced {
   > li {
@@ -204,54 +189,48 @@ ol.spaced {
       margin-top: 0;
     }
   }
-
 }
+
 ul,
 ol {
   margin-top: 0;
   margin-bottom: 10px;
   margin-left: 0;
   padding-left: 1.5em;
-
 }
-ul {
-  //list-style-type: circle;
 
-}
 .btn:focus {
   outline: none !important;
-
 }
+
 .fa-active {
   color: $brand-primary;
-
 }
-// ----- make some items PS
 
 .nav-tabs>li>a,
 .nav-pills>li>a {
   @extend %ps-regular;
-
 }
+
 label {
   font-size: 14px;
   font-weight: normal;
   color: $gray-text;
-
 }
+
 .btn {
   @extend %ps-regular;
-
 }
+
 .panel-heading {
   @extend %ps-regular;
-  // tables inside panel heads
+  // tables inside panel heads, edge case
   td,
   th {
     font-family: $font-family-base;
   }
-
 }
+
 // boostrap makes changing the weight of the logo quite difficult
 #header .navbar .navbar-brand.brand-text,
 #header .navbar .container .navbar-brand.brand-text,
@@ -263,87 +242,36 @@ header .navbar .container .navbar-brand.brand-text {
 }
 .nav.navbar-nav {
   @extend %ps-regular;
-
 }
-// ---- turn some oddball items to helvetica
 
-.checkboxList span {
-  font-family: $font-family-sans-serif;
+.checkboxList span { font-family: $font-family-sans-serif; }
 
-}
+
 // ------SPECIAL SIZES--------
 
 // Ex: 14px base font * 85% = about 12px
-small,
-.small {
-  font-size: 85%;
+small,.small { font-size: 85%; }
 
-}
 // Undo browser default styling
-cite {
-  font-style: normal;
+cite { font-style: normal; }
 
-}
-.text-large {
-  font-size: $font-size-large;
+.text-large { font-size: $font-size-large; }
+.text-small { font-size: $font-size-small; }
+.text-xs    { font-size: $font-size-xsmall; }
+.text-mouse { font-size: $font-size-mouse; }
 
-}
-.text-small {
-  font-size: $font-size-small;
-
-}
-.text-xs {
-  font-size: $font-size-xsmall;
-}
-.text-mouse {
-  font-size: $font-size-mouse;
-
-}
 // Alignment
-.text-left {
-  text-align: left;
-}
-.text-right {
-  text-align: right;
-}
-.text-center {
-  text-align: center;
-}
-.text-justify {
-  text-align: justify;
+.text-left    { text-align: left; }
+.text-right   { text-align: right; }
+.text-center  { text-align: center; }
+.text-justify { text-align: justify; }
 
-}
-// // Contextual colors, from bootstrap
-//
-.text-primary {
-  color: $brand-primary;
-}
-.text-muted {
-  color: $text-muted;
-}
-.text-success {
-  color: $state-success-text;
-}
-.text-info {
-  color: $state-info-text;
-}
-.text-warning {
-  color: $state-warning-text;
-}
-.text-danger {
-  color: $state-danger-text;
+// Contextual colors, from bootstrap
+.text-primary { color: $brand-primary; }
+.text-muted   { color: $text-muted; }
+.text-success { color: $state-success-text; }
+.text-info    { color: $state-info-text; }
+.text-warning { color: $state-warning-text; }
+.text-danger  { color: $state-danger-text; }
 
-}
-// all paragraphs in a grouping with a "lead" paragraph
-// p.lead ~ p {
-// 	font-family: $font-family-serif;
-// }
-
-.serif,
-.serif p {
-  font-family: $font-family-serif;
-
-}
-.help-block {
-  font-size: $font-size-small;
-}
+.help-block { font-size: $font-size-small; }
