@@ -27,21 +27,35 @@
   }
 }
 
+
+
 //* alerts */
 .alert-danger {
   background-color: $state-danger-bg;
   border-color: $state-danger-border;
   color: $state-danger-text;
+  a {
+    color: darken($link-color, 20%);
+    text-decoration: underline;
+  }
 }
 .alert-success {
   background-color: $state-success-bg;
   border-color: $state-success-border;
   color: $state-success-text;
+  a {
+    color: darken($link-color, 20%);
+    text-decoration: underline;
+  }
 }
 .alert-warning {
   background-color: $state-warning-bg;
   border-color: $state-warning-border;
   color: $state-warning-text;
+  a {
+    color: darken($link-color, 20%);
+    text-decoration: underline;
+  }
 }
 .alert-info {
   background-color: $state-info-bg;
@@ -49,6 +63,7 @@
   color: $state-info-text;
   a {
     color: darken($link-color, 20%);
+    text-decoration: underline;
   }
 }
 

@@ -50,7 +50,7 @@ gulp.task('styles', function() {
   }))
   .pipe(gulp.dest('app/styles'))
   .pipe(filter('**/*.css'))
-  .pipe(reload({stream:true}))
+  .pipe(reload({stream:true}));
 //  .pipe(notify({ message: 'Styles task complete' }));
 });
 

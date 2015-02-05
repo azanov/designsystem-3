@@ -851,23 +851,33 @@ fieldset[disabled] .form-control.timepicker {
   background-color: #f9e7e7;
   border-color: #f9c8c8;
   color: #cc0000; }
+  .alert-danger a {
+    color: #222e5a;
+    text-decoration: underline; }
 
 .alert-success {
   background-color: #e6f2e6;
   border-color: #c9e8c9;
   color: #007d00; }
+  .alert-success a {
+    color: #222e5a;
+    text-decoration: underline; }
 
 .alert-warning {
   background-color: #fbf3dd;
   border-color: #fbe9b7;
   color: #826000; }
+  .alert-warning a {
+    color: #222e5a;
+    text-decoration: underline; }
 
 .alert-info {
   background-color: #e4f1fa;
   border-color: #b8dcf7;
   color: #0070c4; }
   .alert-info a {
-    color: #222e5a; }
+    color: #222e5a;
+    text-decoration: underline; }
 
 .alert-box {
   font-size: 18px;
