@@ -9,6 +9,18 @@
     }
 }
 
+// for vertical spacing, add to elements
+$spacers: (sm: 10px, med: 20px, lg: 30px, xlg: 40px);
+$directions: (top, bottom);
+
+@each $direction in $directions {
+  @each $spacer, $amt in $spacers {
+      .spacer-#{$direction}-#{$spacer} {
+          margin-#{$direction}: $amt;
+      }
+  }
+}
+
 // tint and shade functions
 @function tint($color, $percentage) { @return mix($color, #fff, $percentage); }
 @function shade($color, $percentage) { @return mix($color, #000, $percentage); }

@@ -1,5 +1,29 @@
 /* this file contains styles for the live preview site ONLY!
    these styles are not meant to be used on projects, only use the design_system.css */
+.spacer-top-sm {
+  margin-top: 10px; }
+
+.spacer-top-med {
+  margin-top: 20px; }
+
+.spacer-top-lg {
+  margin-top: 30px; }
+
+.spacer-top-xlg {
+  margin-top: 40px; }
+
+.spacer-bottom-sm {
+  margin-bottom: 10px; }
+
+.spacer-bottom-med {
+  margin-bottom: 20px; }
+
+.spacer-bottom-lg {
+  margin-bottom: 30px; }
+
+.spacer-bottom-xlg {
+  margin-bottom: 40px; }
+
 @font-face {
   font-family: "PrecisionSans_W_Rg";
   font-weight: "400";
