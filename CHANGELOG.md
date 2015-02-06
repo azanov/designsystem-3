@@ -1,5 +1,10 @@
 ##Release Notes
 
+###1.04 February 6, 2015
+- Added "spacer" classes to add margins above and/or below objects.
+- Use `spacer-top.xsm`, `spacer-top.sm`, `spacer-top.med`, `spacer-top.lg`, `spacer-top.xlg` (or `-bottom-`) to add margin of 10, 20, 30, 40, or 50 pixels, respectively.
+
+
 ###1.03 February 4, 2015
 - Updated variables to match Bootstrap 3.32 structure
 - Updated Bootstrap CDN to 3.32

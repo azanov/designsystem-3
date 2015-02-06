@@ -1,26 +1,32 @@
-.spacer-top-sm {
+.spacer-top-xsm {
   margin-top: 10px; }
 
-.spacer-top-med {
+.spacer-top-sm {
   margin-top: 20px; }
 
-.spacer-top-lg {
+.spacer-top-med {
   margin-top: 30px; }
 
-.spacer-top-xlg {
+.spacer-top-lg {
   margin-top: 40px; }
 
-.spacer-bottom-sm {
+.spacer-top-xlg {
+  margin-top: 50px; }
+
+.spacer-bottom-xsm {
   margin-bottom: 10px; }
 
-.spacer-bottom-med {
+.spacer-bottom-sm {
   margin-bottom: 20px; }
 
-.spacer-bottom-lg {
+.spacer-bottom-med {
   margin-bottom: 30px; }
 
-.spacer-bottom-xlg {
+.spacer-bottom-lg {
   margin-bottom: 40px; }
+
+.spacer-bottom-xlg {
+  margin-bottom: 50px; }
 
 @font-face {
   font-family: 'pbfont';
