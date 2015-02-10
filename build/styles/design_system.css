@@ -2219,6 +2219,18 @@ th.currency {
 .tab-pane {
   padding: 15px; }
 
+.nav-tabs > li:active > a, .nav-tabs > li:active > a:hover, .nav-tabs > li:active > a:focus, .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  color: #0082d5; }
+.nav-tabs > li > a {
+  color: #4e4e4e; }
+  .nav-tabs > li > a:hover {
+    background-color: #e6e6e6; }
+
+.nav-pills > li > a {
+  color: #4e4e4e; }
+  .nav-pills > li > a:hover {
+    background-color: #e6e6e6; }
+
 .nav.nav-list.tree-menu a {
   padding: 3px;
   color: #4e4e4e; }

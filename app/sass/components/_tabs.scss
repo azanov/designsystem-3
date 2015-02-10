@@ -29,3 +29,31 @@
 // .thumb-detail h4 {
 //   font-weight: 700;
 // }
+
+.nav-tabs {
+  > li {
+    &:active, &.active {
+      > a, > a:hover, > a:focus {
+        color: map-get($chord, color1);
+      }
+    }
+    > a {
+      color: $text-color;
+      &:hover {
+        background-color: $gray-light;
+      }
+    }
+  }
+}
+
+.nav-pills {
+  >li {
+    > a {
+      color: $text-color;
+      &:hover {
+        background-color: $gray-light;
+      }
+    }
+  }
+
+  }
