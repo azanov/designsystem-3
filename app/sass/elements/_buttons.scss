@@ -244,9 +244,9 @@
   }
   &:focus,
   .open .dropdown-toggle & {
-    color           : #fff;
-    background-color: shade($button-color, 40%);
-    border-color    : shade($button-color, 40%);
+    color           : $button-color;
+    background-color: transparent;
+    border-color    : $button-color;
         .btn-group &, .btn-group-vertical & {
       background-color: shade($button-color, 60%);
       border-color    : shade($button-color, 60%);
@@ -254,6 +254,7 @@
         &:hover {
           background-color: shade($button-color, 60%);
           border-color    : shade($button-color, 60%);
+          color: #fff;
         }
   }
   &.disabled,
