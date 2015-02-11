@@ -37,6 +37,9 @@
 
 // -- Button variants: outline and solid -- //
 
+
+//FIXME: I removed dependency on these mixins for btn-default and btn-primary... Remove?
+
 // outline button, we added a knockout one, hence the added params
 @mixin outline-button($color: $c, $foreground: #fff, $disabled: $disabled-button) {
 	color             : $color;
@@ -51,6 +54,15 @@
 	}
   &:active,
   &.active,
+  .open>.dropdown-toggle & {
+    color           : #fff;
+    background-color: shade($color, 40%);
+    border-color    : shade($color, 40%);
+        .btn-group & {
+          background-color: shade($color, 50%);
+          border-color    : shade($color, 50%);
+        }
+  }
   &:focus,
   .open .dropdown-toggle & {
 		color           : $foreground;
@@ -79,6 +91,8 @@
     }
   }
 }
+
+
 
 // solid-color button, usually "primary" button, see below
 @mixin solid-button ($color) {
@@ -130,9 +144,14 @@
   }
 }
 
+
+
+//* Now we actually define the button classes
+
+
 // borderless "link" button
-@mixin borderless-button($color) {
-	color: $color;
+.btn-link, .btn-cancel  {
+	color: $button-color;
 	&.disabled,
 	&[disabled],
 	fieldset[disabled] & {
@@ -147,23 +166,118 @@
 	}
 }
 
-//* Now we actually define the button classes
 
-// set up our two types of buttons
-.btn-default {
-	@include outline-button($button-color);
-}
 .btn-default-ko {
 	@include outline-button(#fff, $button-color, $gray);
 }
 
 .btn-primary {
-	@include solid-button($button-color);
-}
-.btn-link, .btn-cancel {
-	@include borderless-button($button-color);
+  color             : #fff;
+  background-color  : $button-color;
+  border-color      : $button-color;
+  -webkit-transition: background-color .3s, color .3s;
+  -moz-transition   : background-color .3s, color .3s;
+  -ms-transition    : background-color .3s, color .3s;
+  -o-transition     : background-color .3s, color .3s;
+  transition        : background-color .3s, color .3s;
+  &:hover {
+    color           : #fff;
+    background-color: shade($button-color, 60%);
+    border-color    : shade($button-color, 60%);
+  }
+  &:active,
+  &.active,
+  .open .dropdown-toggle & {
+    color           : #fff;
+    background-color: shade($button-color, 40%);
+    border-color    : shade($button-color, 40%);
+        .btn-group & {
+          background-color: shade($button-color, 50%);
+          border-color    : shade($button-color, 50%);
+        }
+  }
+  &:focus {
+    color           : #fff;
+    background-color: $button-color;
+    border-color    : $button-color;
+    .btn-group & {
+      background-color: $button-color;
+      border-color    : $button-color;
+    }
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:active,
+    &.active {
+      background-color: $disabled-button;
+      border-color    : $disabled-button;
+      color           : #fff;
+      opacity         : 1;
+    }
+  }
 }
 
+.btn-default {
+  color             : $button-color;
+  background-color  : transparent;
+  border-color      : $button-color;
+  -webkit-transition: background-color .3s, color .3s;
+  transition        : background-color .3s, color .3s;
+  &:hover {
+    color           : #fff;
+    background-color: $button-color;
+    border-color    : $button-color;
+  }
+  &:active,
+  &.active,
+  .open>.dropdown-toggle & {
+    color           : #fff;
+    background-color: shade($button-color, 40%);
+    border-color    : shade($button-color, 40%);
+        .btn-group & {
+          background-color: shade($button-color, 50%);
+          border-color    : shade($button-color, 50%);
+        }
+  }
+  &:focus,
+  .open .dropdown-toggle & {
+    color           : #fff;
+    background-color: shade($button-color, 40%);
+    border-color    : shade($button-color, 40%);
+        .btn-group &, .btn-group-vertical & {
+      background-color: shade($button-color, 60%);
+      border-color    : shade($button-color, 60%);
+        }
+        &:hover {
+          background-color: shade($button-color, 60%);
+          border-color    : shade($button-color, 60%);
+        }
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:active,
+    &.active {
+    background-color: transparent;
+    border-color    : $disabled-button;
+    color           : $disabled-button;
+    opacity         : 1;
+    }
+  }
+}
+
+// i give up, bootstrap, here you go
+.open>.dropdown-toggle.btn-default {
+  color: #fff;
+  background-color: $button-color;
+  border-color: $button-color;
+  box-shadow: none;
+}
 
 
 

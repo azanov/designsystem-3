@@ -1,5 +1,9 @@
 ##Release Notes
 
+###1.05 February 11, 2015
+- fixed , hopefully for good, button text color on open dropdown buttons
+- added PB favicons.  They are in `/images/favicons`, so to use them upload this directory and copy the code in head of `index.html`
+
 ###1.04 February 6, 2015
 - Added "spacer" classes to add margins above and/or below objects.
 - Use `spacer-top.xsm`, `spacer-top.sm`, `spacer-top.med`, `spacer-top.lg`, `spacer-top.xlg` (or `-bottom-`) to add margin of 10, 20, 30, 40, or 50 pixels, respectively.
