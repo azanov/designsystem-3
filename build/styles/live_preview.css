@@ -181,7 +181,7 @@ hr {
 a {
   color: #3e53a4; }
   a:hover {
-    color: #687cc6; }
+    color: tint(#3e53a4, 20%); }
   a.read-more {
     font-size: 14px;
     white-space: nowrap; }
@@ -274,16 +274,16 @@ cite {
   color: #0082d5; }
 
 .text-muted {
-  color: #e6e6e6; }
+  color: silver; }
 
 .text-success {
-  color: #007d00; }
+  color: #3c763d; }
 
 .text-info {
-  color: #0070c4; }
+  color: #31708f; }
 
 .text-warning {
-  color: #826000; }
+  color: #8a6d3b; }
 
 .text-danger {
   color: #cc0000; }
@@ -345,8 +345,8 @@ cite {
         padding-left: 0;
         list-style-type: none;
         -webkit-column-count: 3;
-           -moz-column-count: 3;
-                column-count: 3; }
+        -moz-column-count: 3;
+        column-count: 3; }
         .hero .hero-menu > li ul li a {
           color: #fff; }
     .hero .hero-menu .dropdown-header,
@@ -594,7 +594,11 @@ p[class^='bg'] {
 
 .fpo-grad {
   padding: 10px;
-  background-color: #aaa; }
+  background-image: url("../images/livepreview_keyboard.jpg");
+  background-position: center center;
+  background-size: fit; }
+  .fpo-grad p.help-text {
+    color: #fff; }
 
 .glyphicons li {
   font-size: 0.8em;
@@ -613,16 +617,16 @@ p[class^='bg'] {
   background-color: #0082d5; }
 
 .brand-success {
-  background-color: #007d00; }
+  background-color: #5cb85c; }
 
 .brand-danger {
   background-color: #cc0000; }
 
 .brand-info {
-  background-color: #0070c4; }
+  background-color: #5bc0de; }
 
 .brand-warning {
-  background-color: #826000; }
+  background-color: #f0ad4e; }
 
 .chart-green {
   background-color: #00b140; }

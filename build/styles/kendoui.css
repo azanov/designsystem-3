@@ -1,5 +1,5 @@
 .k-slider-track {
-  background-color: #e6e6e6;
+  background-color: silver;
   box-shadow: none; }
 
 .k-slider-selection {
@@ -21,7 +21,7 @@
   border-color: #9b9b9b; }
 
 .k-splitbar {
-  background-color: #e6e6e6; }
+  background-color: silver; }
   .k-splitbar:hover {
     background-color: #9b9b9b; }
 
