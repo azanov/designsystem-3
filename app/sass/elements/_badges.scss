@@ -8,10 +8,10 @@ $badges: (
   'gray-light': $gray-light,
   'gray-text': $gray-text,
   'gray-dark': $gray-dark,
-  'brand-danger': $brand-danger,
-  'brand-warning': $brand-warning,
-  'brand-success': $brand-success,
-  'brand-info': $brand-info
+  'brand-success':         $brand-success,
+  'brand-info':            $brand-info,
+  'brand-warning':         $brand-warning,
+  'brand-danger':          $brand-danger,
 );
 
 @each $badge, $color in $badges {

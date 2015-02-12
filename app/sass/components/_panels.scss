@@ -1,5 +1,5 @@
 .panel-default>.panel-heading {
-  background-color: lighten(map-get($chord, color1), 55%);
+  background-color: tint(map-get($chord, color1), 15%);
 }
 .panel {
   -webkit-box-shadow: none;

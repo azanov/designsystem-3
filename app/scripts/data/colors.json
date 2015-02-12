@@ -57,29 +57,61 @@
 
 
     ],
-      "neutrals" : [
-          {
-              "varname" : "$pb-light-gray",
-              "hex" : "#c0c0c0",
-              "name" : "PB Light Gray"
-          },
-          {
-              "varname" : "$pb-medium-gray",
-              "hex" : "#9b9b9b",
-              "name" : "PB Medium Gray"
-          },
-          {
-              "varname" : "$pb-dark-gray",
-              "hex" : "#4e4e4e",
-              "name" : "PB Dark Gray"
-          },
-          {
-              "varname" : "$pb-black",
-              "hex" : "#000000",
-              "name" : "PB Black"
-          }
+    "neutrals" : [
+        {
+            "varname" : "$gray-xlight",
+            "hex" : "#eee",
+            "name": "Gray Rules"
 
-      ],
+        },
+        {
+            "varname" : "$gray-lighter",
+            "hex" : "#ddd",
+            "name": "Gray Hover"
+
+        },
+        {
+            "varname" : "$pb-light-gray",
+            "hex" : "#c0c0c0",
+            "name" : "PB Light Gray"
+        },
+        {
+            "varname" : "$pb-medium-gray",
+            "hex" : "#9b9b9b",
+            "name" : "PB Medium Gray"
+        },
+        {
+            "varname" : "$pb-dark-gray",
+            "hex" : "#4e4e4e",
+            "name" : "PB Dark Gray"
+        }
+
+    ],
+    "functional" : [
+        {
+            "varname" : "$brand-danger",
+            "hex" : "#cc0000",
+            "name": "Brand Danger"
+
+        },
+        {
+            "varname" : "$brand-warning",
+            "hex" : "#F0AD4E",
+            "name": "Brand Warning"
+
+        },
+        {
+            "varname" : "$brand-success",
+            "hex" : "#5CB85C",
+            "name" : "Brand Sucess"
+        },
+        {
+            "varname" : "$brand-info",
+            "hex" : "#5BC0DE",
+            "name" : "Brand Info"
+        }
+
+    ],
 
       "blues" : [
           {

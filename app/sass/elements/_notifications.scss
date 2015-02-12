@@ -30,68 +30,6 @@
 
 
 //* alerts */
-.alert-danger {
-  background-color: $state-danger-bg;
-  border-color: $state-danger-border;
-  color: $state-danger-text;
-  a {
-    color: darken($link-color, 20%);
-    text-decoration: underline;
-  }
-}
-.alert-success {
-  background-color: $state-success-bg;
-  border-color: $state-success-border;
-  color: $state-success-text;
-  a {
-    color: darken($link-color, 20%);
-    text-decoration: underline;
-  }
-}
-.alert-warning {
-  background-color: $state-warning-bg;
-  border-color: $state-warning-border;
-  color: $state-warning-text;
-  a {
-    color: darken($link-color, 20%);
-    text-decoration: underline;
-  }
-}
-.alert-info {
-  background-color: $state-info-bg;
-  border-color: $state-info-border;
-  color: $state-info-text;
-  a {
-    color: darken($link-color, 20%);
-    text-decoration: underline;
-  }
-}
-
-// alert box
-
-.alert-box {
-  font-size: 18px;
-  font-weight: normal;
-  position: absolute;
-  z-index: 2000;
-  right: 30px;
-  bottom: 60px;
-  display: block;
-  width: 300px;
-  padding: 20px;
-  text-align: center;
-  color: #fff;
-  border-width: 1px;
-  border-style: solid;
-  border-color: $brand-info;
-  background-color: $brand-info;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, .5);
-  &.success {
-    color: #fff;
-    border-color: $brand-success;
-    background-color: $brand-success;
-  }
-}
 
 
 // Activity Notification at top of page
@@ -123,28 +61,28 @@
 
 // Contextual backgrounds
 
-@mixin contextual-box($bg, $fg) {
-  background-color: $bg;
-  color: $fg;
-}
-.bg-primary {
-  @include contextual-box($state-primary-bg, $state-primary-text);
-}
-.bg-success {
-  @include contextual-box($state-success-bg, $state-success-text);
-}
-.bg-info {
-  @include contextual-box($state-info-bg, $state-info-text);
-}
-.bg-warning {
-  @include contextual-box($state-warning-bg, $state-warning-text);
-}
-.bg-danger {
-  @include contextual-box($state-danger-bg, $state-danger-text);
-}
-blockquote {
-  border-left: 4px solid $pb-light-gray;
-}
+// @mixin contextual-box($bg, $fg) {
+//   background-color: $bg;
+//   color: $fg;
+// }
+// .bg-primary {
+//   @include contextual-box($state-primary-bg, $state-primary-text);
+// }
+// .bg-success {
+//   @include contextual-box($state-success-bg, $state-success-text);
+// }
+// .bg-info {
+//   @include contextual-box($state-info-bg, $state-info-text);
+// }
+// .bg-warning {
+//   @include contextual-box($state-warning-bg, $state-warning-text);
+// }
+// .bg-danger {
+//   @include contextual-box($state-danger-bg, $state-danger-text);
+// }
+// blockquote {
+//   border-left: 4px solid $pb-light-gray;
+// }
 
 //* CALLOUTS (from the BS docs, but useful) */
 .callout {

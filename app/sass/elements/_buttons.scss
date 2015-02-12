@@ -1,276 +1,96 @@
-// moved to separate file to minimize scrolling in main file
-//
 //*/ Buttons */
 // --------------------------------------------------
-// just to remove the BS inset shadows
- .btn:active, .btn.active {
-	outline           : 0;
-	background-image  : none;
-	-webkit-box-shadow: none;
-	box-shadow        : none;
-}
 
-// Button Sizes
-// --------------------------------------------------
-
-// -- mixin
-@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
-	padding      : $padding-vertical $padding-horizontal;
-	font-size    : $font-size;
-	line-height  : $line-height;
-	border-radius: $border-radius;
-}
-
-// -- sizing definitions
-.btn {
-  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-base);
-}
-.btn-lg {
-  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
-}
-.btn-sm {
-  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);
-}
-.btn-xs {
-  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-xsmall, $line-height-small, $border-radius-small);
-}
-
-// -- Button variants: outline and solid -- //
+// UPDATED FEB 12, 2015 to Bootstrap 3.32 SASS
+// using default bs sass mixind for button generation now
 
 
-//FIXME: I removed dependency on these mixins for btn-default and btn-primary... Remove?
+// the main buttons definitions
 
-// outline button, we added a knockout one, hence the added params
-@mixin outline-button($color: $c, $foreground: #fff, $disabled: $disabled-button) {
-	color             : $color;
-	background-color  : transparent;
-	border-color      : $color;
-	-webkit-transition: background-color .3s, color .3s;
-	transition        : background-color .3s, color .3s;
-	&:hover {
-		color           : $foreground;
-		background-color: $color;
-		border-color    : $color;
-	}
-  &:active,
-  &.active,
-  .open>.dropdown-toggle & {
-    color           : #fff;
-    background-color: shade($color, 40%);
-    border-color    : shade($color, 40%);
-        .btn-group & {
-          background-color: shade($color, 50%);
-          border-color    : shade($color, 50%);
-        }
-  }
-  &:focus,
-  .open .dropdown-toggle & {
-		color           : $foreground;
-		background-color: shade($color, 40%);
-		border-color    : shade($color, 40%);
-        .btn-group &, .btn-group-vertical & {
-			background-color: shade($color, 60%);
-			border-color    : shade($color, 60%);
-        }
-        &:hover {
-        	background-color: shade($color, 60%);
-        	border-color    : shade($color, 60%);
-        }
-  }
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    &,
-    &:hover,
-    &:active,
-    &.active {
-		background-color: transparent;
-		border-color    : $disabled;
-		color           : $disabled;
-		opacity         : 1;
-    }
+.btn-default {
+  @include button-variant($button-color, transparent, $button-color);
+  &.active, &.focus {
+    @include button-variant(#fff, $button-color, $button-color);
   }
 }
-
-
-
-// solid-color button, usually "primary" button, see below
-@mixin solid-button ($color) {
-	color             : #fff;
-	background-color  : $color;
-	border-color      : $color;
-	-webkit-transition: background-color .3s, color .3s;
-	-moz-transition   : background-color .3s, color .3s;
-	-ms-transition    : background-color .3s, color .3s;
-	-o-transition     : background-color .3s, color .3s;
-	transition        : background-color .3s, color .3s;
-  &:hover {
-		color           : #fff;
-		background-color: shade($color, 60%);
-		border-color    : shade($color, 60%);
-  }
-  &:active,
-  &.active,
-  .open .dropdown-toggle & {
-		color           : #fff;
-		background-color: shade($color, 40%);
-		border-color    : shade($color, 40%);
-        .btn-group & {
-    			background-color: shade($color, 50%);
-    			border-color    : shade($color, 50%);
-        }
-  }
-  &:focus {
-    color           : #fff;
-    background-color: $color;
-    border-color    : $color;
-    .btn-group & {
-      background-color: $color;
-      border-color    : $color;
-    }
-  }
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    &,
-    &:hover,
-    &:active,
-    &.active {
-			background-color: $disabled-button;
-			border-color    : $disabled-button;
-			color           : #fff;
-			opacity         : 1;
-    }
-  }
-}
-
-
-
-//* Now we actually define the button classes
-
-
-// borderless "link" button
-.btn-link, .btn-cancel  {
-	color: $button-color;
-	&.disabled,
-	&[disabled],
-	fieldset[disabled] & {
-	  &,
-	  &:hover,
-	  &:active,
-	  &.active {
-	    color: $disabled-button;
-	    text-decoration: none;
-	    opacity: 1;
-	  }
-	}
-}
-
 
 .btn-default-ko {
-	@include outline-button(#fff, $button-color, $gray);
+  @include button-variant(#fff, transparent, #fff);
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    @include button-variant($gray-light, transparent, $gray-light);
+  }
 }
 
 .btn-primary {
-  color             : #fff;
-  background-color  : $button-color;
-  border-color      : $button-color;
-  -webkit-transition: background-color .3s, color .3s;
-  -moz-transition   : background-color .3s, color .3s;
-  -ms-transition    : background-color .3s, color .3s;
-  -o-transition     : background-color .3s, color .3s;
-  transition        : background-color .3s, color .3s;
-  &:hover {
-    color           : #fff;
-    background-color: shade($button-color, 60%);
-    border-color    : shade($button-color, 60%);
-  }
+  @include button-variant(#fff, $button-color, $button-color);
+}
+.btn-success {
+  @include button-variant(#fff, $brand-success, $brand-success);
+}
+.btn-info {
+  @include button-variant(#fff, $brand-info, $brand-info);
+}
+.btn-warning {
+  @include button-variant(#fff, $brand-warning, $brand-warning);
+}
+.btn-danger {
+  @include button-variant(#fff, $brand-danger, $brand-danger);
+}
+
+
+// Make a button look and behave like a link
+.btn-link, .btn-cancel {
+  color: $button-color;
+  font-weight: normal;
+  border-radius: 0;
+  &,
   &:active,
   &.active,
-  .open .dropdown-toggle & {
-    color           : #fff;
-    background-color: shade($button-color, 40%);
-    border-color    : shade($button-color, 40%);
-        .btn-group & {
-          background-color: shade($button-color, 50%);
-          border-color    : shade($button-color, 50%);
-        }
-  }
-  &:focus {
-    color           : #fff;
-    background-color: $button-color;
-    border-color    : $button-color;
-    .btn-group & {
-      background-color: $button-color;
-      border-color    : $button-color;
-    }
-  }
-  &.disabled,
   &[disabled],
   fieldset[disabled] & {
-    &,
+    background-color: transparent;
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+  &:hover,
+  &:focus {
+    color: $button-hover-color;
+    text-decoration: underline;
+    background-color: transparent;
+  }
+  &[disabled],
+  fieldset[disabled] & {
     &:hover,
-    &:active,
-    &.active {
-      background-color: $disabled-button;
-      border-color    : $disabled-button;
-      color           : #fff;
-      opacity         : 1;
+    &:focus {
+      color: $button-color;
+      text-decoration: none;
     }
   }
 }
 
-.btn-default {
-  color             : $button-color;
-  background-color  : transparent;
-  border-color      : $button-color;
-  -webkit-transition: background-color .3s, color .3s;
-  transition        : background-color .3s, color .3s;
-  &:hover {
-    color           : #fff;
-    background-color: $button-color;
-    border-color    : $button-color;
-  }
-  &:active,
-  &.active,
-  .open>.dropdown-toggle & {
-    color           : #fff;
-    background-color: shade($button-color, 40%);
-    border-color    : shade($button-color, 40%);
-        .btn-group & {
-          background-color: shade($button-color, 50%);
-          border-color    : shade($button-color, 50%);
-        }
-  }
-  &:focus,
-  .open .dropdown-toggle & {
-    color           : $button-color;
-    background-color: transparent;
-    border-color    : $button-color;
-        .btn-group &, .btn-group-vertical & {
-      background-color: shade($button-color, 60%);
-      border-color    : shade($button-color, 60%);
-        }
-        &:hover {
-          background-color: shade($button-color, 60%);
-          border-color    : shade($button-color, 60%);
-          color: #fff;
-        }
-  }
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    &,
-    &:hover,
-    &:active,
-    &.active {
-    background-color: transparent;
-    border-color    : $disabled-button;
-    color           : $disabled-button;
-    opacity         : 1;
-    }
-  }
+
+// -- sizing definitions
+
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
 }
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+}
+.btn-xs {
+  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+}
+
+
+///** bs overrides **//
 
 // i give up, bootstrap, here you go
 .open>.dropdown-toggle.btn-default {
@@ -280,7 +100,12 @@
   box-shadow: none;
 }
 
-
+// just to remove the BS inset shadows
+ .btn:active, .btn.active {
+  outline           : 0;
+  background-image  : none;
+  box-shadow        : none;
+}
 
 // font awesome icon size overrides in button groups
 .btn-group {
@@ -304,6 +129,15 @@
 	.btn {
 		border: 0;
 	}
+}
+
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: alpha(opacity=35);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity: .35;
 }
 
 .btn-group-justified {
@@ -330,7 +164,6 @@
   }
 }
 
-
 //  transitory alert msg next to button
 .btn-response {
 	display: inline-block;
@@ -346,22 +179,4 @@
 		opacity: 1.0;
 		filter: alpha(opacity=1);
 	}
-}
-
-
-// Bootstrap buttons
-// --------------------------------------------------
-
-
-.btn-success {
-  @include solid-button($brand-success);
-}
-.btn-info {
-  @include solid-button($brand-info);
-}
-.btn-warning {
-  @include solid-button($brand-warning);
-}
-.btn-danger {
-  @include solid-button($brand-danger);
 }

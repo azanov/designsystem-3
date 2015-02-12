@@ -1,5 +1,14 @@
 ##Release Notes
 
+###1.10 February 12, 2015
+- re-organized and simplified color variables
+- reverted alert and callout colors to Bootstrap defaults
+- reverted functional colors (except Danger) to Bootstrap defaults
+- re-organized buttons to re-use as much Bootstrap code as possible
+- hard-coded link color to be pb-dark-blue no matter active chord
+- changed buttons to use 4th color in chord (active chord = pb-purple)
+- a great deal of scss code cleaned up
+
 ###1.05 February 11, 2015
 - fixed , hopefully for good, button text color on open dropdown buttons
 - added PB favicons.  They are in `/images/favicons`, so to use them upload this directory and copy the code in head of `index.html`

@@ -39,77 +39,19 @@
 
 
 
-      <h3 class="section-head">Functional Colors</h3>
+      <h3 class="section-head">Functional Colors (from Bootstrap)</h3>
       <div class="row color-swatches">
-        <div class="col-md-2 col-xs-12">
-          <div class="color-swatch brand-danger"></div>
-          Error
-            <br>#CC0000
-            <br>
-            <small>$brand-danger</small>
-
+        <div class="col-md-2 col-xs-12 color-swatch-container" ng-repeat="c in colorData.functional" ng-class="{clearRow: $index==5}">
+          <div class="color-swatch" style="background-color:{{c.hex}}"></div>
+          {{c.name}}
+          <br> {{c.hex}}
+          <br>
+          <small>{{c.varname}}</small>
         </div>
-        <div class="col-md-2 col-xs-12">
-          <div class="color-swatch alert-danger"></div>
-          #f9e7e7/#f9c8c8
-            <br>
-            <small>$alert-danger-bg/
-            <br>$alert-danger-border</small>
-
-        </div>
-        <div class="col-md-2 col-xs-12">
-          <div class="color-swatch brand-warning"></div>
-          Warning
-            <br>#826000
-            <br>
-            <small>$brand-warning</small>
-          
-        </div>
-        <div class="col-md-2 col-xs-12">
-          <div class="color-swatch alert-warning"></div>
-          #fbf3dd/#fbe9b7
-            <br>
-            <small>$alert-warning-bg/
-              <br>$alert-warning-border</small>
-
-        </div>
-
       </div>
 
-      <div class="row color-swatches">
-        <div class="col-md-2 col-xs-12">
-          <div class="color-swatch brand-success"></div>
-          Success
-            <br>#007D00
-            <br>
-            <small>$brand-success</small>
 
-        </div>
-        <div class="col-md-2 col-xs-12">
-          <div class="color-swatch alert-success"></div>
-          #e6f2e6/#c9e8c9
-            <br>
-            <small>$alert-success-bg/
-              <br>$alert-success-border</small>
 
-        </div>
-        <div class="col-md-2 col-xs-12">
-          <div class="color-swatch brand-info"></div>
-          Info
-            <br>#0070C4
-            <br>
-            <small>$brand-info</small>
-
-        </div>
-        <div class="col-md-2 col-xs-12">
-          <div class="color-swatch alert-info"></div>
-          #e4f1fa/#b8dcf7
-            <br>
-            <small>$alert-info-bg/
-              <br>$alert-info-border</small>
-
-        </div>
-      </div>
 
 
       <h3 class="section-head">Chart Colors</h3>

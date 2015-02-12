@@ -16,7 +16,7 @@
   display: none;
   .has-error & {
     display: block;
-    color: $brand-error;
+    color: $brand-danger;
   }
 }
 fieldset {
@@ -36,7 +36,7 @@ select[disabled] {
 }
 .has-error {
   .form-control {
-    border-color: $brand-error;
+    border-color: $brand-danger;
   }
 }
 .form-control[disabled].datepicker,

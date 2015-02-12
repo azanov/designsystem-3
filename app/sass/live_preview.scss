@@ -89,6 +89,8 @@
 
         list-style-type: none;
 
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
         column-count: 3;
         li {
           a {
@@ -462,8 +464,14 @@ p[class^='bg'] {
 }
 .fpo-grad {
   padding: 10px;
+  // background-image: linear-gradient(#ddd, #666);
+  background-image: url("../images/livepreview_keyboard.jpg");
+  background-position: center center;
+  background-size: fit;
+  p.help-text {
+    color: #fff;
+  }
 
-  background-color: #aaa;
 }
 .glyphicons {
   li {
@@ -501,7 +509,7 @@ p[class^='bg'] {
   background-color: $brand-success;
 }
 .brand-danger {
-  background-color: $brand-error;
+  background-color: $brand-danger;
 }
 .brand-info {
   background-color: $brand-info;

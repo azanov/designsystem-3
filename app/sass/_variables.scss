@@ -38,36 +38,44 @@ $chord: $chord1;
 
 // assigning 1.0 colors to pre-1.0 names:
 $brand-primary: map-get($chord, color1);
-$gray-dark:     $pb-dark-gray;
-$gray-text:     $pb-dark-gray;
-$gray:          $pb-medium-gray;
-$gray-light:    lighten($pb-light-gray, 15%);
-$gray-lighter:  lighten($pb-light-gray, 10%);
 $gray-disabled: $pb-light-gray;
+$gray-text:     $pb-dark-gray;
+
+
+// neutrals
+$gray-dark:    $pb-dark-gray;
+$gray:         $pb-medium-gray;
+$gray-light:   $pb-light-gray;
+$gray-lighter: #dddddd;
+$gray-xlight:  #f7f7f7;
+
+
 
 // links
-$link-color:          map-get($chord, color2);
-$link-color-hover:    lighten($link-color, 15%);
+$link-color:          $pb-blue;
+$link-color-hover:    tint($link-color, 20%);
 $link-hover-color:    $link-color-hover; // the bootstrap name is link-hover-color, so I'm just synching them up here
-$link-color-disabled: scale-color($link-color, $lightness: 75%, $saturation: -60%);
+$link-color-disabled: tint($link-color, 70%);
 
-$button-color: map-get($chord, color1);
-$disabled-button: scale-color($button-color, $lightness: 75%, $saturation: -60%);
+// buttons
+$button-color: map-get($chord, color4);
+$button-hover-color: tint($button-color, 20%);
+$button-active-color: shade($button-color, 10%);
 
+// body
 $body-bg: #fff;
 $background-color: $body-bg;
 
-//** Global text color on `<body>`.
+// text color on `<body>`.
 $text-color: $gray-text;
 $text-color-dark: $gray-dark;
 
 
-//Bootstrap colors / Functional Colors - do not change with chords
-$brand-error:   #cc0000;
-$brand-danger:  #cc0000;
-$brand-success: #007d00;
-$brand-info:    #0070c4;
-$brand-warning: #826000;
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #cc0000 !default;
+
 
 // CHART COLORS
 $chart-green:  $pb-dark-green;
@@ -186,13 +194,13 @@ $table-condensed-extra-cell-padding: 2px !default;
 //** Default background color used for all tables.
 $table-bg: transparent;
 //** Background color used for `.table-striped`.
-$table-bg-accent: transparentize($gray-light, .7);
+$table-bg-accent: $gray-light;
 //** Background color used for `.table-hover`.
 $table-bg-hover: lighten(map-get($chord, color4), 50%);
 $table-bg-active: map-get($chord, color4);
 
 //** Border color for table and cell borders.
-$table-border-color: $pb-light-gray;
+$table-border-color: $gray-lighter;
 
 
 //== Buttons  // see buttons.scss
@@ -517,50 +525,27 @@ $jumbotron-font-size: ceil(($font-size-base * 1.5)) !default;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text: $brand-success !default;
-$state-success-bg: scale-color($state-success-text, $lightness: 90%, $saturation: -70%) !default;
-$state-success-border:  scale-color($state-success-text, $lightness: 80%, $saturation: -60%) !default;
+$state-success-text: #3c763d !default;
+// $state-success-bg: scale-color($state-success-text, $lightness: 90%, $saturation: -70%) !default;
+$state-success-bg: #dff0d8 !default;
+$state-success-border:  #d6e9c6  !default;
 
-$state-info-text: $brand-info !default;
-$state-info-bg: scale-color($state-info-text, $lightness: 90%, $saturation: -30%) !default;
-$state-info-border: scale-color($state-info-text, $lightness: 75%, $saturation: -20%) !default;
+$state-info-text: #31708f !default;
+$state-info-bg: #d9edf7  !default;
+$state-info-border: #bce8f1 !default;
 
-$state-primary-text: $brand-primary !default;
-$state-primary-bg: scale-color($state-primary-text, $lightness: 90%, $saturation: -30%) !default;
-$state-primary-border: scale-color($state-primary-text, $lightness: 80%, $saturation: -40%) !default;
+// $state-primary-text: $brand-primary !default;
+// $state-primary-bg: scale-color($state-primary-text, $lightness: 90%, $saturation: -30%) !default;
+// $state-primary-border: scale-color($state-primary-text, $lightness: 80%, $saturation: -40%) !default;
 
-$state-warning-text: $brand-warning !default;
-$state-warning-bg: scale-color($state-warning-text, $lightness: 90%, $saturation: -20%) !default;
-$state-warning-border: scale-color($state-warning-text, $lightness: 80%, $saturation: -10%) !default;
+$state-warning-text: #8a6d3b !default;
+$state-warning-bg: #fcf8e3 !default;
+$state-warning-border: #faebcc !default;
 
-$state-danger-text: $brand-error !default;
-$state-danger-bg: scale-color($state-danger-text, $lightness: 90%, $saturation: -40%) !default;
-$state-danger-border: scale-color($state-danger-text, $lightness: 80%, $saturation: -20%) !default;
+$state-danger-text: $brand-danger !default;
+$state-danger-bg: #f2dede !default;
+$state-danger-border: #ebccd1 !default;
 
-
-//== Alerts
-//
-//## Define alert colors, border radius, and padding.
-
-$alert-padding: 15px !default;
-$alert-border-radius: $border-radius-base !default;
-$alert-link-font-weight: 500 !default;
-
-$alert-success-bg: $state-success-bg !default;
-$alert-success-text: $state-success-text !default;
-$alert-success-border: $state-success-border !default;
-
-$alert-info-bg: $state-info-bg !default;
-$alert-info-text: $state-info-text !default;
-$alert-info-border: $state-info-border !default;
-
-$alert-warning-bg: $state-warning-bg !default;
-$alert-warning-text: $state-warning-text !default;
-$alert-warning-border: $state-warning-border !default;
-
-$alert-danger-bg: $state-danger-bg !default;
-$alert-danger-text: $state-danger-text !default;
-$alert-danger-border: $state-danger-border !default;
 
 
 
@@ -591,7 +576,7 @@ $popover-bg:                          #fff !default;
 //** Popover maximum width
 $popover-max-width:                   276px !default;
 //** Popover border color
-$popover-border-color:                rgba(0,0,0,.2) !default;
+$popover-border-color:                rgba(0, 0, 0, .2) !default;
 //** Popover fallback border color
 $popover-fallback-border-color:       #ccc !default;
 
@@ -611,22 +596,6 @@ $popover-arrow-outer-color:           fade_in($popover-border-color, 0.05) !defa
 $popover-arrow-outer-fallback-color:  darken($popover-fallback-border-color, 20%) !default;
 
 
-//== Labels
-//
-//##
-
-//** Default label background color
-$label-default-bg: $gray-light !default;
-//** Primary label background color
-$label-primary-bg: $brand-primary !default;
-//** Success label background color
-$label-success-bg: $brand-success !default;
-//** Info label background color
-$label-info-bg: $brand-info !default;
-//** Warning label background color
-$label-warning-bg: $brand-warning !default;
-//** Danger label background color
-$label-danger-bg: $brand-danger !default;
 
 //** Default label text color
 $label-color: #fff !default;
@@ -650,7 +619,7 @@ $modal-title-line-height:     $line-height-base !default;
 //** Background color of modal content area
 $modal-content-bg:                             #fff !default;
 //** Modal content border color
-$modal-content-border-color:                   rgba(0,0,0,.2) !default;
+$modal-content-border-color:                   rgba(0, 0, 0, .2) !default;
 //** Modal content border color **for IE8**
 $modal-content-fallback-border-color:          #999 !default;
 
@@ -668,13 +637,8 @@ $modal-md:                    600px !default;
 $modal-sm:                    300px !default;
 
 
-
-
-
-
 //== Progress bars
-//
-//##
+
 
 //** Background color of the whole progress component
 $progress-bg:                 #f5f5f5 !default;
@@ -684,20 +648,18 @@ $progress-bar-color:          #fff !default;
 $progress-border-radius:      $border-radius-base !default;
 
 //** Default progress bar color
-$progress-bar-bg:             $brand-primary !default;
-//** Success progress bar color
-$progress-bar-success-bg:     $brand-success !default;
-//** Warning progress bar color
-$progress-bar-warning-bg:     $brand-warning !default;
-//** Danger progress bar color
-$progress-bar-danger-bg:      $brand-danger !default;
-//** Info progress bar color
-$progress-bar-info-bg:        $brand-info !default;
+// $progress-bar-bg:             $brand-primary !default;
+// //** Success progress bar color
+// $progress-bar-success-bg:     $brand-success !default;
+// //** Warning progress bar color
+// $progress-bar-warning-bg:     $brand-warning !default;
+// //** Danger progress bar color
+// $progress-bar-danger-bg:      $brand-danger !default;
+// //** Info progress bar color
+// $progress-bar-info-bg:        $brand-info !default;
 
 
 //== List group
-//
-//##
 
 //** Background color on `.list-group-item`
 $list-group-bg:                 #fff !default;
@@ -728,43 +690,6 @@ $list-group-link-color:         #555 !default;
 $list-group-link-hover-color:   $list-group-link-color !default;
 $list-group-link-heading-color: #333 !default;
 
-
-
-//== Panels
-//
-//##
-
-$panel-bg: #fff !default;
-$panel-body-padding: 15px;
-$panel-border-radius: $border-radius-base;
-
-//** Border color for elements within panels
-$panel-inner-border: #ddd;
-$panel-footer-bg: #f5f5f5;
-
-$panel-default-text: $gray-text;
-$panel-default-border: #ddd;
-$panel-default-heading-bg: #f5f5f5;
-
-$panel-primary-text: $state-primary-text;
-$panel-primary-border: $state-primary-border;
-$panel-primary-heading-bg: $state-primary-bg;
-
-$panel-success-text: $state-success-text;
-$panel-success-border: $state-success-border;
-$panel-success-heading-bg: $state-success-bg;
-
-$panel-info-text: $state-info-text;
-$panel-info-border: $state-info-border;
-$panel-info-heading-bg: $state-info-bg;
-
-$panel-warning-text: $state-warning-text;
-$panel-warning-border: $state-warning-border;
-$panel-warning-heading-bg: $state-warning-bg;
-
-$panel-danger-text: $state-danger-text;
-$panel-danger-border: $state-danger-border;
-$panel-danger-heading-bg: $state-danger-bg;
 
 
 //== Thumbnails
@@ -832,7 +757,7 @@ $breadcrumb-separator:          "/" !default;
 //
 //##
 
-$carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6) !default;
+$carousel-text-shadow:                        0 1px 2px rgba(0, 0, 0, .6) !default;
 
 $carousel-control-color:                      #fff !default;
 $carousel-control-width:                      15% !default;
