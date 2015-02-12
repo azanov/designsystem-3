@@ -1491,10 +1491,10 @@ input.cmn-toggle-round-flat:checked + label:after {
   background-color: #0082d5; }
 
 .ats-switch {
-  border-color: #9b9b9b; }
+  border-color: #f7f7f7; }
 
 .switch {
-  border-color: #9b9b9b;
+  border-color: #f7f7f7;
   border-radius: 5px; }
   .switch * {
     background-image: none !important; }
@@ -1505,8 +1505,10 @@ input.cmn-toggle-round-flat:checked + label:after {
     background-color: #0082d5;
     border-color: #9b9b9b; }
   .switch .switch-right {
-    background-color: #9b9b9b;
+    background-color: #dddddd;
     border-color: #9b9b9b; }
+  .switch.disabled {
+    opacity: .55; }
 
 .bs-wizard .bs-wizard-step {
   padding: 0;
@@ -2002,7 +2004,7 @@ a.list-group-item {
   background-color: #f6e8f5; }
 
 .table-striped > tbody > tr:nth-child(odd) {
-  background-color: silver; }
+  background-color: #f7f7f7; }
 
 .table > tbody > tr > td,
 .table > tbody > tr > th {

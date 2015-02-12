@@ -1,11 +1,11 @@
 
 // toggle switch
 .ats-switch {
-  border-color: $gray;
+  border-color: $gray-xlight;
 }
 
 .switch {
-    border-color: $gray;
+    border-color: $gray-xlight;
     -o-border-radius: 5px;
     border-radius: 5px;
     * {
@@ -20,8 +20,11 @@
         border-color: $gray;
     }
     .switch-right {
-        background-color: $gray;
+        background-color: $gray-lighter;
         border-color: $gray;
+    }
+    &.disabled {
+      opacity: .55;
     }
 }
 
