@@ -1,5 +1,8 @@
 ##Release Notes
 
+###1.12 Feb. 17, 2015
+- fixed alert links to aways be underlined
+
 ###1.10 February 12, 2015
 - re-organized and simplified color variables
 - reverted alert and callout colors to Bootstrap defaults
