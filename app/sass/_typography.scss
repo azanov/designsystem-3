@@ -14,34 +14,34 @@ $font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 %aa {
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  // -moz-osx-font-smoothing: grayscale;
 }
 %ps-light {
-  @extend %aa;
+  @extend %aa !optional;
   font-family: 'PrecisionSans_W_Lt', Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 %ps-light-italic {
-  @extend %aa;
+  @extend %aa !optional;
   font-family: 'PrecisionSans_W_LtIt', Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 %ps-regular {
-  @extend %aa;
+  @extend %aa !optional;
   font-family: 'PrecisionSans_W_Rg', Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 %ps-regular-italic {
-  @extend %aa;
+  @extend %aa !optional;
   font-family: 'PrecisionSans_W_RgIt', Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 %ps-medium {
-  @extend %aa;
+  @extend %aa !optional;
   font-family: 'PrecisionSans_W_Md', Arial, sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -52,13 +52,13 @@ $font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
 }
 %ps-bold {
-  @extend %aa;
+  @extend %aa !optional;
   font-family: 'PrecisionSans_W_Bd', Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
 %ps-bold-italic {
-  @extend %aa;
+  @extend %aa !optional;
   font-family: 'PrecisionSans_W_BdIt', Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -92,7 +92,7 @@ h1 { font-size: $font-size-h1; }
 h2 { font-size: $font-size-h2; }
 h3 { font-size: $font-size-h3; }
 h4 { font-size: $font-size-h4; }
-h5 { font-size: $font-size-h5; font-weight: bold; }
+h5 { font-size: $font-size-h5; }
 h6 { font-size: $font-size-h6; font-weight: bold; }
 
 h1,
@@ -107,6 +107,7 @@ h4,
 h5,
 h6 {
   font-family: $font-family-base;
+  font-weight: bold;
 }
 
 // when you need light text
@@ -127,7 +128,8 @@ h6 {
 
 p.lead,
 p.lede {
-  @extend %ps-bold;
+  @extend %ps-regular;
+  font-size: 16px;
 }
 
 .media-heading {
@@ -161,7 +163,7 @@ a {
 }
 
 body {
-  @extend %aa;
+  @extend %aa !optional;
   font-family: $font-family-base;
   font-size: $font-size-base;
   // originally they had !important "for ie8" but I removed
@@ -242,6 +244,7 @@ header .navbar .container .navbar-brand.brand-text {
 }
 .nav.navbar-nav {
   @extend %ps-regular;
+  font-size: 16px;
 }
 
 .checkboxList span { font-family: $font-family-sans-serif; }

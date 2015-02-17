@@ -160,18 +160,17 @@
 .ps-light em,
 .ps-light i, h1,
 h2,
-h3, .nav-tabs > li > a,
+h3, p.lead,
+p.lede, .nav-tabs > li > a,
 .nav-pills > li > a, .btn, .panel-heading, #header .navbar .navbar-brand.brand-text,
 #header .navbar .container .navbar-brand.brand-text,
 header .navbar .navbar-brand.brand-text,
 header .navbar .container .navbar-brand.brand-text, .nav.navbar-nav, .ps-light b,
-.ps-light strong, p.lead,
-p.lede, .media-heading, #header .navbar .navbar-brand.brand-text .brand-top,
+.ps-light strong, .media-heading, #header .navbar .navbar-brand.brand-text .brand-top,
 #header .navbar .container .navbar-brand.brand-text .brand-top,
 header .navbar .navbar-brand.brand-text .brand-top,
 header .navbar .container .navbar-brand.brand-text .brand-top, body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -webkit-font-smoothing: antialiased; }
 
 .ps-light {
   font-family: 'PrecisionSans_W_Lt', Arial, sans-serif;
@@ -187,7 +186,8 @@ header .navbar .container .navbar-brand.brand-text .brand-top, body {
 
 h1,
 h2,
-h3, .nav-tabs > li > a,
+h3, p.lead,
+p.lede, .nav-tabs > li > a,
 .nav-pills > li > a, .btn, .panel-heading, #header .navbar .navbar-brand.brand-text,
 #header .navbar .container .navbar-brand.brand-text,
 header .navbar .navbar-brand.brand-text,
@@ -202,8 +202,7 @@ header .navbar .container .navbar-brand.brand-text, .nav.navbar-nav {
   font-weight: 500;
   font-style: normal; }
 
-p.lead,
-p.lede, .media-heading, #header .navbar .navbar-brand.brand-text .brand-top,
+.media-heading, #header .navbar .navbar-brand.brand-text .brand-top,
 #header .navbar .container .navbar-brand.brand-text .brand-top,
 header .navbar .navbar-brand.brand-text .brand-top,
 header .navbar .container .navbar-brand.brand-text .brand-top {
@@ -234,11 +233,10 @@ h4 {
   font-size: 18px; }
 
 h5 {
-  font-size: 18px;
-  font-weight: bold; }
+  font-size: 16px; }
 
 h6 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold; }
 
 h1,
@@ -251,7 +249,12 @@ h3 {
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold; }
+
+p.lead,
+p.lede {
+  font-size: 16px; }
 
 .media-heading {
   font-weight: normal !important; }
@@ -320,6 +323,9 @@ label {
 header .navbar .navbar-brand.brand-text,
 header .navbar .container .navbar-brand.brand-text {
   font-weight: 400 !important; }
+
+.nav.navbar-nav {
+  font-size: 16px; }
 
 .checkboxList span {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
@@ -842,6 +848,9 @@ fieldset[disabled] .form-control.timepicker {
     color: #0082d5;
     font-size: 16px; }
 
+.alert a {
+  text-decoration: underline; }
+
 .activity {
   position: relative; }
   .activity:hover {
@@ -1181,7 +1190,6 @@ fieldset[disabled] .form-control.timepicker {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
   .animated.fast {
-    -ms-animation-duration: 0.4s;
     -webkit-animation-duration: 0.4s;
     animation-duration: 0.4s; }
 
@@ -1329,6 +1337,7 @@ fieldset[disabled] .form-control.timepicker {
   transition: all .3s ease-in 0s;
   background: #fff;
   background-image: -webkit-linear-gradient(center top, rgba(0, 0, 0, 0.1) 0%, transparent 100%);
+  background-image: -o-linear-gradient(center top, rgba(0, 0, 0, 0.1) 0%, transparent 100%);
   border: 2px solid #e1e1e1;
   border-radius: 5px;
   bottom: 0;

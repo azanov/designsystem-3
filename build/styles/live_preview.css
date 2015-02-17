@@ -82,15 +82,14 @@
 .ps-light em,
 .ps-light i, h1,
 h2,
-h3, .nav-tabs > li > a,
+h3, p.lead,
+p.lede, .nav-tabs > li > a,
 .nav-pills > li > a, .btn, .panel-heading, #header .navbar .navbar-brand.brand-text,
 #header .navbar .container .navbar-brand.brand-text,
 header .navbar .navbar-brand.brand-text,
 header .navbar .container .navbar-brand.brand-text, .nav.navbar-nav, .hero .hero-menu > li, .ps-light b,
-.ps-light strong, p.lead,
-p.lede, .media-heading, body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+.ps-light strong, .media-heading, body {
+  -webkit-font-smoothing: antialiased; }
 
 .ps-light, .hero .hero-unit h1, .hero .hero-unit h2 {
   font-family: 'PrecisionSans_W_Lt', Arial, sans-serif;
@@ -106,7 +105,8 @@ p.lede, .media-heading, body {
 
 h1,
 h2,
-h3, .nav-tabs > li > a,
+h3, p.lead,
+p.lede, .nav-tabs > li > a,
 .nav-pills > li > a, .btn, .panel-heading, #header .navbar .navbar-brand.brand-text,
 #header .navbar .container .navbar-brand.brand-text,
 header .navbar .navbar-brand.brand-text,
@@ -121,8 +121,7 @@ header .navbar .container .navbar-brand.brand-text, .nav.navbar-nav, .hero .hero
   font-weight: 500;
   font-style: normal; }
 
-p.lead,
-p.lede, .media-heading {
+.media-heading {
   font-family: 'PrecisionSans_W_Bd', Arial, sans-serif;
   font-weight: normal;
   font-style: normal; }
@@ -150,11 +149,10 @@ h4 {
   font-size: 18px; }
 
 h5 {
-  font-size: 18px;
-  font-weight: bold; }
+  font-size: 16px; }
 
 h6 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold; }
 
 h1,
@@ -167,7 +165,12 @@ h3 {
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold; }
+
+p.lead,
+p.lede {
+  font-size: 16px; }
 
 .media-heading {
   font-weight: normal !important; }
@@ -236,6 +239,9 @@ label {
 header .navbar .navbar-brand.brand-text,
 header .navbar .container .navbar-brand.brand-text {
   font-weight: 400 !important; }
+
+.nav.navbar-nav {
+  font-size: 16px; }
 
 .checkboxList span {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
