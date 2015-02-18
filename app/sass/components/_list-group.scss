@@ -1,24 +1,26 @@
 a.list-group-item {
+  @extend %ps-regular;
+  font-size: 16px;
   border            : 0;
   border-radius     : 0;
   -webkit-transition: background-color .3s, color .2s;
   transition        : background-color .3s, color .2s;
   &:hover {
-    color           : $brand-primary;
-    background-color: $gray-light;
+    color           : $link-color-hover;
+    background-color: $gray-xlight;
   }
   &:first-child {
     border-top-left-radius : 0;
     border-top-right-radius: 0;
   }
   &.active {
-    background-color: $gray-light;
-    border-color    : $gray-light;
-    color           : $brand-primary;
+    background-color: $gray-xlight;
+    border-color    : $gray-xlight;
+    color           : $link-color;
     &:hover, &:focus {
-      background-color: $gray;
-      border-color    : $gray;
-      color           : $brand-primary;
+      background-color: $gray-light;
+      border-color    : $gray-light;
+      color           : $link-color-hover;
     }
     .badge {
       color: #fff;

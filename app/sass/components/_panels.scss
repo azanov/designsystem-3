@@ -9,6 +9,10 @@
 .panel-title {
   font-weight: 700;
 }
+.panel-footer {
+  background-color: $gray-xlight;
+  border-top-color: $gray-lighter;
+}
 
 // simple row divider
 .row.divider {

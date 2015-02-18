@@ -1,5 +1,5 @@
 .badge {
-  background-color: $brand-primary;
+  background-color: map-get($chord, color4);
 }
 
 //* badge contextual alternatives */
