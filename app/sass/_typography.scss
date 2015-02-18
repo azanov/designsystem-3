@@ -14,7 +14,7 @@ $font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 %aa {
   -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
 }
 %ps-light {
   @extend %aa !optional;

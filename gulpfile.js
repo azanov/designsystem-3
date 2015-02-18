@@ -30,7 +30,7 @@ var gulp         = require('gulp'),
     del          = require('del'),
     gutil        = require('gulp-util'),
     ftp          = require('gulp-ftp'),
-    print        = require('gulp-print'),  // displays files in the console
+    printfiles   = require('gulp-print'),  // displays files in the console
     prompt       = require('gulp-prompt'), // asks for password in the console before connecting
     runSequence = require('run-sequence');
 
@@ -118,7 +118,7 @@ var userPass = '';
 gulp.task('ftp', ['prompt_password'], function()
 {
     return gulp.src('build/**/*')
-    .pipe(print())
+    .pipe(printfiles())
     .pipe(ftp({
         host: '10.50.8.173',
         user: userName,

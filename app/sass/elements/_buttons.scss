@@ -39,6 +39,9 @@
   @include button-variant(#fff, $brand-danger, $brand-danger);
 }
 
+.btn {
+  font-size: 14px;
+}
 
 // Make a button look and behave like a link
 .btn-link, .btn-cancel {

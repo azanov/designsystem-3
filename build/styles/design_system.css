@@ -170,7 +170,8 @@ header .navbar .container .navbar-brand.brand-text, .nav.navbar-nav, .ps-light b
 #header .navbar .container .navbar-brand.brand-text .brand-top,
 header .navbar .navbar-brand.brand-text .brand-top,
 header .navbar .container .navbar-brand.brand-text .brand-top, body {
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 .ps-light {
   font-family: 'PrecisionSans_W_Lt', Arial, sans-serif;
@@ -270,14 +271,14 @@ a {
   a:hover {
     color: tint(#3e53a4, 20%); }
   a.read-more {
-    font-size: 14px;
+    font-size: 12px;
     white-space: nowrap; }
     a.read-more:after {
       content: '\2026'; }
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   color: #4e4e4e; }
   body .has-error {
@@ -559,6 +560,9 @@ cite {
     color: #cc0000;
     background-color: #fff; }
 
+.btn {
+  font-size: 14px; }
+
 .btn-link, .btn-cancel {
   color: #a03f9b;
   font-weight: normal;
@@ -800,7 +804,7 @@ fieldset[disabled] .form-control.timepicker {
 .input-group .input-group-btn {
   z-index: 3; }
 .input-group.input-group-lg {
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 4px; }
 .input-group.input-group-sm {
   font-size: 12px;
@@ -847,6 +851,14 @@ fieldset[disabled] .form-control.timepicker {
   .modal .modal-header .modal-title {
     color: #0082d5;
     font-size: 16px; }
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000; }
 
 .alert a {
   text-decoration: underline; }
@@ -1386,7 +1398,7 @@ fieldset[disabled] .form-control.timepicker {
 .input-group.input-group-lg .selectize-control .selectize-input {
   padding: 10px 16px;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 14px;
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
   border-top-right-radius: 0;

@@ -89,7 +89,8 @@ p.lede, .nav-tabs > li > a,
 header .navbar .navbar-brand.brand-text,
 header .navbar .container .navbar-brand.brand-text, .nav.navbar-nav, .hero .hero-menu > li, .ps-light b,
 .ps-light strong, .media-heading, body {
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 .ps-light, .hero .hero-unit h1, .hero .hero-unit h2 {
   font-family: 'PrecisionSans_W_Lt', Arial, sans-serif;
@@ -186,14 +187,14 @@ a {
   a:hover {
     color: tint(#3e53a4, 20%); }
   a.read-more {
-    font-size: 14px;
+    font-size: 12px;
     white-space: nowrap; }
     a.read-more:after {
       content: '\2026'; }
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   color: #4e4e4e; }
   body .has-error {

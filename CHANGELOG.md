@@ -1,6 +1,9 @@
 ##Release Notes
 
-###1.12 Feb. 17, 2015
+###1.1.3 Feb 18, 2015
+- fixed modal backdrop
+
+###1.1.2 Feb. 17, 2015
 - fixed alert links to aways be underlined
 
 ###1.10 February 12, 2015
