@@ -87,6 +87,29 @@ code,
   font-family: $font-family-monospace;
 }
 
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid $gray;
+}
+
+a {
+  color: $link-color;
+  &:hover {
+    color: $link-color-hover;
+  }
+  &.read-more {
+    font-size: $font-size-base - 2;
+    // 2 px smaller
+    white-space: nowrap;
+    &:after {
+      content: '\2026';
+      // ellipsis
+    }
+  }
+}
+
 // heading sizes, from variables.scss
 h1 { font-size: $font-size-h1; }
 h2 { font-size: $font-size-h2; }
@@ -95,19 +118,20 @@ h4 { font-size: $font-size-h4; }
 h5 { font-size: $font-size-h5; }
 h6 { font-size: $font-size-h6; font-weight: bold; }
 
-h1,
-h2,
-h3 {
+h1, h1 a,
+h2, h2 a,
+h3, h3 a {
   @extend %ps-regular;
   font-variant-ligatures: common-ligatures;
   color: map-get($chord, color1);
 }
 
-h4,
-h5,
-h6 {
+h4, h4 a,
+h5, h5 a,
+h6, h6 a {
   font-family: $font-family-base;
   font-weight: bold;
+  color: $text-color;
 }
 
 // when you need light text
@@ -139,28 +163,7 @@ p.lede {
 
 
 
-hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 0;
-  border-top: 1px solid $gray;
-}
 
-a {
-  color: $link-color;
-  &:hover {
-    color: $link-color-hover;
-  }
-  &.read-more {
-    font-size: $font-size-base - 2;
-    // 2 px smaller
-    white-space: nowrap;
-    &:after {
-      content: '\2026';
-      // ellipsis
-    }
-  }
-}
 
 body {
   @extend %aa !optional;
@@ -205,6 +208,10 @@ ol {
   outline: none !important;
 }
 
+.btn {
+  @extend %ps-regular;
+}
+
 .fa-active {
   color: $brand-primary;
 }
@@ -220,9 +227,6 @@ label {
   color: $gray-text;
 }
 
-.btn {
-  @extend %ps-regular;
-}
 
 .panel-heading {
   @extend %ps-regular;

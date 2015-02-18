@@ -12,6 +12,7 @@
 // for vertical spacing, add to elements
 $spacers: (xsm: 10px,sm: 20px, med: 30px, lg: 40px, xlg: 50px);
 $directions: (top, bottom);
+// usage "spacer-top-sm"
 
 @each $direction in $directions {
   @each $spacer, $amt in $spacers {
