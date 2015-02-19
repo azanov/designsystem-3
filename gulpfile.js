@@ -32,7 +32,7 @@ var gulp         = require('gulp'),
     ftp          = require('gulp-ftp'),
     printfiles   = require('gulp-print'),  // displays files in the console
     prompt       = require('gulp-prompt'), // asks for password in the console before connecting
-    runSequence = require('run-sequence');
+    runSequence  = require('run-sequence');
 
 
 

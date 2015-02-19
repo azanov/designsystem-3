@@ -1,33 +1,33 @@
 /* this file contains styles for the live preview site ONLY!
    these styles are not meant to be used on projects, only use the design_system.css */
-.spacer-top-xsm {
+.spacer-top-xs {
   margin-top: 10px; }
 
 .spacer-top-sm {
   margin-top: 20px; }
 
-.spacer-top-med {
+.spacer-top-md {
   margin-top: 30px; }
 
 .spacer-top-lg {
   margin-top: 40px; }
 
-.spacer-top-xlg {
+.spacer-top-xl {
   margin-top: 50px; }
 
-.spacer-bottom-xsm {
+.spacer-bottom-xs {
   margin-bottom: 10px; }
 
 .spacer-bottom-sm {
   margin-bottom: 20px; }
 
-.spacer-bottom-med {
+.spacer-bottom-md {
   margin-bottom: 30px; }
 
 .spacer-bottom-lg {
   margin-bottom: 40px; }
 
-.spacer-bottom-xlg {
+.spacer-bottom-xl {
   margin-bottom: 50px; }
 
 @font-face {
