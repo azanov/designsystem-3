@@ -426,20 +426,20 @@ cite {
   .btn-default .badge {
     color: transparent;
     background-color: #a03f9b; }
-  .btn-default.active, .btn-default.focus {
+  .btn-default.active, .btn-default.focus, .btn-default:hover {
     color: #fff;
     background-color: #a03f9b;
     border-color: #a03f9b; }
-    .btn-default.active:hover, .btn-default.active:focus, .btn-default.active.focus, .btn-default.active:active, .btn-default.active.active, .open > .btn-default.active.dropdown-toggle, .btn-default.focus:hover, .btn-default.focus:focus, .btn-default.focus.focus, .btn-default.focus:active, .btn-default.focus.active, .open > .btn-default.focus.dropdown-toggle {
+    .btn-default.active:hover, .btn-default.active:focus, .btn-default.active.focus, .btn-default.active:active, .btn-default.active.active, .open > .btn-default.active.dropdown-toggle, .btn-default.focus:hover, .btn-default.focus:focus, .btn-default.focus.focus, .btn-default.focus:active, .btn-default.focus.active, .open > .btn-default.focus.dropdown-toggle, .btn-default:hover:hover, .btn-default:hover:focus, .btn-default:hover.focus, .btn-default:hover:active, .btn-default:hover.active, .open > .btn-default:hover.dropdown-toggle {
       color: #fff;
       background-color: #7b3178;
       border-color: #742e70; }
-    .btn-default.active:active, .btn-default.active.active, .open > .btn-default.active.dropdown-toggle, .btn-default.focus:active, .btn-default.focus.active, .open > .btn-default.focus.dropdown-toggle {
+    .btn-default.active:active, .btn-default.active.active, .open > .btn-default.active.dropdown-toggle, .btn-default.focus:active, .btn-default.focus.active, .open > .btn-default.focus.dropdown-toggle, .btn-default:hover:active, .btn-default:hover.active, .open > .btn-default:hover.dropdown-toggle {
       background-image: none; }
-    .btn-default.active.disabled, .btn-default.active.disabled:hover, .btn-default.active.disabled:focus, .btn-default.active.disabled.focus, .btn-default.active.disabled:active, .btn-default.active.disabled.active, .btn-default.active[disabled], .btn-default.active[disabled]:hover, .btn-default.active[disabled]:focus, .btn-default.active[disabled].focus, .btn-default.active[disabled]:active, .btn-default.active[disabled].active, fieldset[disabled] .btn-default.active, fieldset[disabled] .btn-default.active:hover, fieldset[disabled] .btn-default.active:focus, fieldset[disabled] .btn-default.active.focus, fieldset[disabled] .btn-default.active:active, fieldset[disabled] .btn-default.active.active, .btn-default.focus.disabled, .btn-default.focus.disabled:hover, .btn-default.focus.disabled:focus, .btn-default.focus.disabled.focus, .btn-default.focus.disabled:active, .btn-default.focus.disabled.active, .btn-default.focus[disabled], .btn-default.focus[disabled]:hover, .btn-default.focus[disabled]:focus, .btn-default.focus[disabled].focus, .btn-default.focus[disabled]:active, .btn-default.focus[disabled].active, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default.focus:hover, fieldset[disabled] .btn-default.focus:focus, fieldset[disabled] .btn-default.focus.focus, fieldset[disabled] .btn-default.focus:active, fieldset[disabled] .btn-default.focus.active {
+    .btn-default.active.disabled, .btn-default.active.disabled:hover, .btn-default.active.disabled:focus, .btn-default.active.disabled.focus, .btn-default.active.disabled:active, .btn-default.active.disabled.active, .btn-default.active[disabled], .btn-default.active[disabled]:hover, .btn-default.active[disabled]:focus, .btn-default.active[disabled].focus, .btn-default.active[disabled]:active, .btn-default.active[disabled].active, fieldset[disabled] .btn-default.active, fieldset[disabled] .btn-default.active:hover, fieldset[disabled] .btn-default.active:focus, fieldset[disabled] .btn-default.active.focus, fieldset[disabled] .btn-default.active:active, fieldset[disabled] .btn-default.active.active, .btn-default.focus.disabled, .btn-default.focus.disabled:hover, .btn-default.focus.disabled:focus, .btn-default.focus.disabled.focus, .btn-default.focus.disabled:active, .btn-default.focus.disabled.active, .btn-default.focus[disabled], .btn-default.focus[disabled]:hover, .btn-default.focus[disabled]:focus, .btn-default.focus[disabled].focus, .btn-default.focus[disabled]:active, .btn-default.focus[disabled].active, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default.focus:hover, fieldset[disabled] .btn-default.focus:focus, fieldset[disabled] .btn-default.focus.focus, fieldset[disabled] .btn-default.focus:active, fieldset[disabled] .btn-default.focus.active, .btn-default:hover.disabled, .btn-default:hover.disabled:hover, .btn-default:hover.disabled:focus, .btn-default:hover.disabled.focus, .btn-default:hover.disabled:active, .btn-default:hover.disabled.active, .btn-default:hover[disabled], .btn-default:hover[disabled]:hover, .btn-default:hover[disabled]:focus, .btn-default:hover[disabled].focus, .btn-default:hover[disabled]:active, .btn-default:hover[disabled].active, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:hover:hover, fieldset[disabled] .btn-default:hover:focus, fieldset[disabled] .btn-default:hover.focus, fieldset[disabled] .btn-default:hover:active, fieldset[disabled] .btn-default:hover.active {
       background-color: #a03f9b;
       border-color: #a03f9b; }
-    .btn-default.active .badge, .btn-default.focus .badge {
+    .btn-default.active .badge, .btn-default.focus .badge, .btn-default:hover .badge {
       color: #a03f9b;
       background-color: #fff; }
 
@@ -565,7 +565,7 @@ cite {
   font-size: 14px; }
 
 .btn-link, .btn-cancel {
-  color: #a03f9b;
+  color: #3e53a4;
   font-weight: normal;
   border-radius: 0; }
   .btn-link, .btn-link:active, .btn-link.active, .btn-link[disabled], fieldset[disabled] .btn-link, .btn-cancel, .btn-cancel:active, .btn-cancel.active, .btn-cancel[disabled], fieldset[disabled] .btn-cancel {

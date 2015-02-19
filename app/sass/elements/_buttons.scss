@@ -9,7 +9,7 @@
 
 .btn-default {
   @include button-variant($button-color, transparent, $button-color);
-  &.active, &.focus {
+  &.active, &.focus, &:hover {
     @include button-variant(#fff, $button-color, $button-color);
   }
 }
@@ -45,7 +45,7 @@
 
 // Make a button look and behave like a link
 .btn-link, .btn-cancel {
-  color: $button-color;
+  color: $link-color;
   font-weight: normal;
   border-radius: 0;
   &,

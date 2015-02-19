@@ -1,5 +1,8 @@
 ##Release Notes
 
+###1.1.5 Feb 19, 2015
+- bug in default button hover state fixed
+
 ###1.1.4 Feb 19, 2015
 - renamed spacer classes.  2-letter sizes now: xs, sm, md, lg, xl. If you have used these, you will need to find/replace.
 
