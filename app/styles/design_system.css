@@ -786,6 +786,8 @@ cite {
 
 fieldset {
   margin-top: 40px; }
+  fieldset legend {
+    color: #0082d5; }
 
 .form-control {
   border: 1px solid #9b9b9b;

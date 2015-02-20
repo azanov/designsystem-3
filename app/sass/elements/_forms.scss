@@ -21,6 +21,9 @@
 }
 fieldset {
   margin-top: 40px;
+  legend {
+    color: map-get($chord, color1);
+  }
 }
 .form-control {
   border: 1px solid $gray;
