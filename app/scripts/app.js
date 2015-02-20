@@ -101,6 +101,12 @@ angular.module('designSystemApp', [
         className: 'forms',
         pageTitle: 'Forms'
       })
+      .when('/signin', {
+        templateUrl: 'views/signin.html',
+        controller: 'SigninCtrl',
+        className: 'signin',
+        pageTitle: 'Sign In'
+      })
       .when('/tabs', {
         templateUrl: 'views/tabs.html',
         controller: 'TabsDemoCtrl',

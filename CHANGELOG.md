@@ -1,5 +1,9 @@
 ##Release Notes
 
+###1.2.0 Feb 20,2015
+- Added "sign-in screen"
+- fixed button hovers to lighten button instead of darken
+
 ###1.1.5 Feb 19, 2015
 - bug in default button hover state fixed
 

@@ -1,0 +1,61 @@
+// body is assigned class of 'signin' via router
+
+
+.signin {
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: -webkit-linear-gradient(-45deg, #4cc6f3 0%, #32b1e5 10%, #254d9d 53%, #bc278d 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #header,
+  #footer {
+    display: none;
+  }
+  .signin-box {
+    background-color: #fff;
+    padding: 40px;
+    margin-top: 60px;
+    @include bp(baby-bear) {
+      margin-top: 0;
+    }
+  }
+  .prod-name {
+    @extend %ps-bold;
+    font-size: 24px;
+    color: $pb-medium-blue;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $pb-medium-blue;
+  }
+  .title {
+    @extend %ps-light;
+    font-size: 32px;
+    color: $pb-medium-blue;
+  }
+  .signin-footer {
+    color: tint($pb-purple, 50%);
+    margin-top: 20px;
+    a {
+      color: inherit;
+    }
+    .nav {
+      padding-top: 5px;
+    }
+    @include bp(baby-bear) {
+      .logo {
+        text-align: center;
+      }
+      .nav {
+        text-align: center;
+        padding-top: 10px;
+      }
+    }
+  }
+
+
+}

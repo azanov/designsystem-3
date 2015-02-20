@@ -9,6 +9,23 @@
     }
 }
 
+@mixin bp($point) {
+
+  $bp-babybear: "(max-width: 600px)";
+  $bp-mamabear: "(max-width: 1024px)";
+  $bp-papabear: "(max-width: 1600px)";
+
+  @if $point == papa-bear {
+      @media #{$bp-papabear} { @content; }
+  } @else if $point == mama-bear {
+      @media #{$bp-mamabear} { @content; }
+  } @else if $point == baby-bear {
+      @media #{$bp-babybear}  { @content; }
+  }
+
+}
+
+
 // for vertical spacing, add to elements
 $spacers: (xs: 10px,sm: 20px, md: 30px, lg: 40px, xl: 50px);
 $directions: (top, bottom);
@@ -107,7 +124,6 @@ $grid-column-padding: 15px;
   background-color: $background;
   border-color: $border;
 
-  &:hover,
   &:focus,
   &.focus,
   &:active,
@@ -116,6 +132,11 @@ $grid-column-padding: 15px;
     color: $color;
     background-color: darken($background, 10%);
         border-color: darken($border, 12%);
+  }
+  &:hover {
+    color: $color;
+    background-color: lighten($background, 10%);
+        border-color: lighten($border, 12%);
   }
   &:active,
   &.active,

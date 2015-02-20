@@ -25,6 +25,7 @@
 
 .btn-primary {
   @include button-variant(#fff, $button-color, $button-color);
+
 }
 .btn-success {
   @include button-variant(#fff, $brand-success, $brand-success);

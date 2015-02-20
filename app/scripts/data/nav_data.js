@@ -14,6 +14,10 @@
           "value" : "panels"
         },
         {
+          "label" : "Sign-In Screen",
+          "value" : "signin"
+        },
+        {
           "label" : "Tabs",
           "value" : "tabs"
         },
