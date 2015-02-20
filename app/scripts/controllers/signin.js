@@ -1,9 +1,11 @@
 'use strict';
 
 angular.module('designSystemApp')
-    .controller('SigninCtrl', ['$scope', '$route',
-        function($scope, $route) {
+    .controller('SigninCtrl',
+        function($scope) {
 
-          
+          $scope.errorCondition = true;
+
+
         }
-    ]);
+    );

@@ -1623,6 +1623,7 @@ input.cmn-toggle-round-flat:checked + label:after {
   left: 0;
   bottom: 0;
   right: 0;
+  background-color: #3e53a4;
   background: -webkit-linear-gradient(-45deg, #4cc6f3 0%, #32b1e5 10%, #254d9d 53%, #bc278d 100%);
   background: -webkit-linear-gradient(315deg, #4cc6f3 0%, #32b1e5 10%, #254d9d 53%, #bc278d 100%);
   background: linear-gradient(135deg, #4cc6f3 0%, #32b1e5 10%, #254d9d 53%, #bc278d 100%);
