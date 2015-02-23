@@ -46,7 +46,7 @@
 
 // Make a button look and behave like a link
 .btn-link, .btn-cancel {
-  color: $link-color;
+  color: $button-color;
   font-weight: normal;
   border-radius: 0;
   &,
@@ -64,7 +64,7 @@
   }
   &:hover,
   &:focus {
-    color: $button-hover-color;
+    color: #bc56b7 !important;  //FIXME: bootstrap refuses to let go of its default color for the variable.
     text-decoration: underline;
     background-color: transparent;
   }
@@ -77,6 +77,9 @@
     }
   }
 }
+// .btn-link:focus, .btn-link:hover {
+//   color: #bc56b7 !important;
+// }
 
 
 // -- sizing definitions

@@ -601,7 +601,7 @@ cite {
   font-size: 14px; }
 
 .btn-link, .btn-cancel {
-  color: #3e53a4;
+  color: #a03f9b;
   font-weight: normal;
   border-radius: 0; }
   .btn-link, .btn-link:active, .btn-link.active, .btn-link[disabled], fieldset[disabled] .btn-link, .btn-cancel, .btn-cancel:active, .btn-cancel.active, .btn-cancel[disabled], fieldset[disabled] .btn-cancel {
@@ -609,7 +609,7 @@ cite {
   .btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active, .btn-cancel, .btn-cancel:hover, .btn-cancel:focus, .btn-cancel:active {
     border-color: transparent; }
   .btn-link:hover, .btn-link:focus, .btn-cancel:hover, .btn-cancel:focus {
-    color: tint(#a03f9b, 20%);
+    color: #bc56b7 !important;
     text-decoration: underline;
     background-color: transparent; }
   .btn-link[disabled]:hover, .btn-link[disabled]:focus, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:focus, .btn-cancel[disabled]:hover, .btn-cancel[disabled]:focus, fieldset[disabled] .btn-cancel:hover, fieldset[disabled] .btn-cancel:focus {
