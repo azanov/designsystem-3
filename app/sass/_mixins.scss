@@ -130,8 +130,8 @@ $grid-column-padding: 15px;
   &.active,
   .open > &.dropdown-toggle {
     color: $color;
-    background-color: darken($background, 10%);
-        border-color: darken($border, 12%);
+    background-color: shade($background, 80%);
+        border-color: shade($background, 80%);
   }
   &:hover {
     color: $color;
@@ -156,10 +156,49 @@ $grid-column-padding: 15px;
           border-color: $border;
     }
   }
+}
 
-  .badge {
-    color: $background;
-    background-color: $color;
+@mixin outline-button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: #fff;
+    background-color: shade($color, 80%);
+        border-color: shade($color, 80%);
+        &:hover {
+          color: #fff;
+          background-color: $color;
+          border-color: $color;
+        }
+  }
+  &:hover {
+    color: lighten($color, 12%);
+    background-color: transparentize($color, .8);
+        border-color: lighten($border, 12%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: $background;
+          border-color: $border;
+    }
   }
 }
 

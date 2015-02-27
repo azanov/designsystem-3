@@ -26,11 +26,20 @@ $pb-medium-gray: rgb(155, 155, 155);
 $pb-dark-gray:   rgb(78, 78, 78);
 $pb-black:       rgb(0, 0, 0);
 
+// neutrals
+$gray-dark:    $pb-dark-gray;
+$gray:         $pb-medium-gray;
+$gray-light:   $pb-light-gray;
+$gray-lighter: #ddd;
+$gray-xlight:  #eee;
+
 
 //Color chords
-$chord1: (color1:$pb-medium-blue,  color2: $pb-blue,    color3: $pb-light-gray, color4: $pb-purple);
-$chord2: (color1:$pb-dark-orange,  color2: $pb-magenta, color3: $pb-light-gray, color4: $pb-yellow);
-$chord3: (color1:$pb-dark-green ,  color2: $pb-blue,    color3: $pb-light-gray, color4: $pb-medium-blue);
+$chord1: (color1:$pb-medium-blue, color2: $pb-purple, color3:  rgb(78, 78, 78), color4: $pb-blue, color5: $pb-green, color6: $pb-light-gray);
+
+$chord2: (color1:$pb-dark-orange ,  color2: $pb-medium-blue,    color3: rgb(78, 78, 78), color4: $pb-blue,color5: $pb-yellow, color6: $pb-light-gray);
+
+$chord3: (color1:$pb-dark-green,  color2: $pb-medium-blue, color3:  rgb(78, 78, 78), color4: $pb-blue,color5: $pb-magenta, color6: $pb-light-gray);
 
 // set the chord to use, everywhere else can now refer to 'map-get($chord, colorX)'
 $chord: $chord1;
@@ -42,12 +51,7 @@ $gray-disabled: $pb-light-gray;
 $gray-text:     $pb-dark-gray;
 
 
-// neutrals
-$gray-dark:    $pb-dark-gray;
-$gray:         $pb-medium-gray;
-$gray-light:   $pb-light-gray;
-$gray-lighter: #ddd;
-$gray-xlight:  #eee;
+
 
 
 
@@ -58,9 +62,8 @@ $link-hover-color:    $link-color-hover; // the bootstrap name is link-hover-col
 $link-color-disabled: tint($link-color, 70%);
 
 // buttons
-$button-color: map-get($chord, color4);
-$button-hover-color: tint($button-color, 20%);
-$button-active-color: shade($button-color, 10%);
+$button-primary-color:  map-get($chord, color2);
+$button-tertiary-color: map-get($chord, color3);
 
 // body
 $body-bg: #fff;

@@ -1,31 +1,18 @@
 //*/ Buttons */
 // --------------------------------------------------
 
-// UPDATED FEB 12, 2015 to Bootstrap 3.32 SASS
-// using default bs sass mixind for button generation now
-
-
-// the main buttons definitions
-
-.btn-default {
-  @include button-variant($button-color, transparent, $button-color);
-  &.active, &.focus, &:hover {
-    @include button-variant(#fff, $button-color, $button-color);
-  }
-}
-
-.btn-default-ko {
-  @include button-variant(#fff, transparent, #fff);
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    @include button-variant($gray-light, transparent, $gray-light);
-  }
-}
-
 .btn-primary {
-  @include button-variant(#fff, $button-color, $button-color);
-
+  @include button-variant(#fff, $button-primary-color, $button-primary-color);
+}
+.btn-default {
+  @include outline-button-variant($button-primary-color, transparent, $button-primary-color);
+}
+.btn-group .btn-default,
+.btn-group-vertical .btn-default {
+  @include outline-button-variant($button-tertiary-color, transparent, $button-tertiary-color);
+}
+.btn-default-ko {
+  @include outline-button-variant(#fff, transparent, #fff);
 }
 .btn-success {
   @include button-variant(#fff, $brand-success, $brand-success);
@@ -39,14 +26,13 @@
 .btn-danger {
   @include button-variant(#fff, $brand-danger, $brand-danger);
 }
-
 .btn {
   font-size: 14px;
 }
-
 // Make a button look and behave like a link
-.btn-link, .btn-cancel {
-  color: $button-color;
+.btn-link,
+.btn-cancel {
+  color: $button-primary-color;
   font-weight: normal;
   border-radius: 0;
   &,
@@ -64,7 +50,7 @@
   }
   &:hover,
   &:focus {
-    color: #bc56b7 !important;  //FIXME: bootstrap refuses to let go of its default color for the variable.
+    color: $button-primary-color !important;
     text-decoration: underline;
     background-color: transparent;
   }
@@ -72,7 +58,7 @@
   fieldset[disabled] & {
     &:hover,
     &:focus {
-      color: $button-color;
+      color: $button-primary-color;
       text-decoration: none;
     }
   }
@@ -82,8 +68,8 @@
 // }
 
 
-// -- sizing definitions
 
+// -- sizing definitions
 .btn-lg {
   // line-height: ensure even-numbered height of button next to large input
   @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
@@ -95,58 +81,53 @@
 .btn-xs {
   @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $border-radius-small);
 }
-
-
 ///** bs overrides **//
-
 // i give up, bootstrap, here you go
 .open>.dropdown-toggle.btn-default {
   color: #fff;
-  background-color: $button-color;
-  border-color: $button-color;
+  background-color: $button-tertiary-color;
+  border-color: $button-tertiary-color;
   box-shadow: none;
 }
-
 // just to remove the BS inset shadows
- .btn:active, .btn.active {
-  outline           : 0;
-  background-image  : none;
-  box-shadow        : none;
+.btn:active,
+.btn.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: none;
 }
-
 // font awesome icon size overrides in button groups
 .btn-group {
-	&-sm {
-		.btn {
-			i.fa {
-				font-size: 16px;
-			}
-		}
-	}
-	&-xs {
-		.btn {
-			i.fa {
-				font-size: 14px;
-			}
-		}
-	}
+  &-sm {
+    .btn {
+      i.fa {
+        font-size: 16px;
+      }
+    }
+  }
+  &-xs {
+    .btn {
+      i.fa {
+        font-size: 14px;
+      }
+    }
+  }
 }
-
 .btn-group-borderless {
-	.btn {
-		border: 0;
-	}
+  .btn {
+    border: 0;
+  }
 }
-
-.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
   pointer-events: none;
   cursor: not-allowed;
-  filter: alpha(opacity=35);
+  filter:alpha(opacity=35);
   -webkit-box-shadow: none;
   box-shadow: none;
-  opacity: .35;
+  opacity: 0.35;
 }
-
 .btn-group-justified {
   display: table;
   width: 100%;
@@ -163,27 +144,24 @@
   }
   // correct the "double borders"
   > .btn-group:not(:first-child) > .btn {
-	border-left: 0;
+    border-left: 0;
   }
-
   > .btn-group .dropdown-menu {
     left: auto;
   }
 }
-
 //  transitory alert msg next to button
 .btn-response {
-	display: inline-block;
-	margin-left: 10px;
+  display: inline-block;
+  margin-left: 10px;
 }
-
 // overrides for bootstrap's Close button
 .close {
-	transition: color .5s;
-	opacity: 1.0;
-	filter: alpha(opacity=1);
-	&:hover {
-		opacity: 1.0;
-		filter: alpha(opacity=1);
-	}
+  transition: color 0.5s;
+  opacity: 1.0;
+  filter:alpha(opacity=1);
+  &:hover {
+    opacity: 1.0;
+    filter:alpha(opacity=1);
+  }
 }

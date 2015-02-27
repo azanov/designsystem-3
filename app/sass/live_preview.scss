@@ -120,69 +120,81 @@
 #chord1 {
   .color1 {
     color: map-get($chord1, color1);
-
     fill: map-get($chord1, color1);
   }
   .color2 {
     color: map-get($chord1, color2);
-
     fill: map-get($chord1, color2);
   }
   .color3 {
     color: map-get($chord1, color3);
-
     fill: map-get($chord1, color3);
   }
   .color4 {
     color: map-get($chord1, color4);
-
     fill: map-get($chord1, color4);
+  }
+  .color5 {
+    color: map-get($chord1, color5);
+    fill: map-get($chord1, color5);
+  }
+  .color6 {
+    color: map-get($chord1, color6);
+    fill: map-get($chord1, color6);
   }
 
 }
 #chord2 {
   .color1 {
     color: map-get($chord2, color1);
-
     fill: map-get($chord2, color1);
   }
   .color2 {
     color: map-get($chord2, color2);
-
     fill: map-get($chord2, color2);
   }
   .color3 {
     color: map-get($chord2, color3);
-
     fill: map-get($chord2, color3);
   }
   .color4 {
     color: map-get($chord2, color4);
-
     fill: map-get($chord2, color4);
+  }
+  .color5 {
+    color: map-get($chord2, color5);
+    fill: map-get($chord2, color5);
+  }
+  .color6 {
+    color: map-get($chord2, color6);
+    fill: map-get($chord2, color6);
   }
 
 }
 #chord3 {
   .color1 {
     color: map-get($chord3, color1);
-
     fill: map-get($chord3, color1);
   }
   .color2 {
     color: map-get($chord3, color2);
-
     fill: map-get($chord3, color2);
   }
   .color3 {
     color: map-get($chord3, color3);
-
     fill: map-get($chord3, color3);
   }
   .color4 {
     color: map-get($chord3, color4);
-
     fill: map-get($chord3, color4);
+  }
+  .color5 {
+    color: map-get($chord3, color5);
+    fill: map-get($chord3, color5);
+  }
+  .color6 {
+    color: map-get($chord3, color6);
+    fill: map-get($chord3, color6);
   }
 
 }
