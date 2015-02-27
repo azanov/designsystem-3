@@ -343,9 +343,9 @@ cite {
       font-size: 18px;
       margin-top: 30px;
       padding-top: 10px;
-      border-top: 1px solid #e0b1de; }
+      border-top: 1px solid #b2bce2; }
       .hero .hero-menu > li a {
-        color: #e0b1de; }
+        color: #b2bce2; }
         .hero .hero-menu > li a:hover {
           text-decoration: none; }
       .hero .hero-menu > li ul {
@@ -372,40 +372,58 @@ cite {
   color: #0082d5;
   fill: #0082d5; }
 #chord1 .color2 {
-  color: #3e53a4;
-  fill: #3e53a4; }
-#chord1 .color3 {
-  color: silver;
-  fill: silver; }
-#chord1 .color4 {
   color: #a03f9b;
   fill: #a03f9b; }
+#chord1 .color3 {
+  color: #4e4e4e;
+  fill: #4e4e4e; }
+#chord1 .color4 {
+  color: #3e53a4;
+  fill: #3e53a4; }
+#chord1 .color5 {
+  color: #72bf44;
+  fill: #72bf44; }
+#chord1 .color6 {
+  color: silver;
+  fill: silver; }
 
 #chord2 .color1 {
   color: #ee6b0b;
   fill: #ee6b0b; }
 #chord2 .color2 {
-  color: #cf0989;
-  fill: #cf0989; }
+  color: #0082d5;
+  fill: #0082d5; }
 #chord2 .color3 {
-  color: silver;
-  fill: silver; }
+  color: #4e4e4e;
+  fill: #4e4e4e; }
 #chord2 .color4 {
+  color: #3e53a4;
+  fill: #3e53a4; }
+#chord2 .color5 {
   color: #edb700;
   fill: #edb700; }
+#chord2 .color6 {
+  color: silver;
+  fill: silver; }
 
 #chord3 .color1 {
   color: #00b140;
   fill: #00b140; }
 #chord3 .color2 {
-  color: #3e53a4;
-  fill: #3e53a4; }
-#chord3 .color3 {
-  color: silver;
-  fill: silver; }
-#chord3 .color4 {
   color: #0082d5;
   fill: #0082d5; }
+#chord3 .color3 {
+  color: #4e4e4e;
+  fill: #4e4e4e; }
+#chord3 .color4 {
+  color: #3e53a4;
+  fill: #3e53a4; }
+#chord3 .color5 {
+  color: #cf0989;
+  fill: #cf0989; }
+#chord3 .color6 {
+  color: silver;
+  fill: silver; }
 
 section.row {
   margin-bottom: 60px; }

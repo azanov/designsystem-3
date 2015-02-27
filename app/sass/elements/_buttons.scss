@@ -9,7 +9,10 @@
 }
 .btn-group .btn-default,
 .btn-group-vertical .btn-default {
-  @include outline-button-variant($button-tertiary-color, transparent, $button-tertiary-color);
+  @include tertiary-button-variant($button-tertiary-color, $gray-xlight, $button-tertiary-color);
+}
+.btn-group-borderless .btn-default  {
+  @include tertiary-button-variant($button-tertiary-color, transparent, $button-tertiary-color);
 }
 .btn-default-ko {
   @include outline-button-variant(#fff, transparent, #fff);
@@ -96,6 +99,23 @@
   background-image: none;
   box-shadow: none;
 }
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+  color: $text-color;
+  text-decoration: none;
+  background-color: $gray-lighter;
+}
+
+
+
+
+
+
+
+
+
+
+
 // font awesome icon size overrides in button groups
 .btn-group {
   &-sm {

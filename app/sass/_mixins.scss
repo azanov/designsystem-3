@@ -119,6 +119,8 @@ $grid-column-padding: 15px;
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
 
+
+// solid "primary" buttons
 @mixin button-variant($color, $background, $border) {
   color: $color;
   background-color: $background;
@@ -158,6 +160,7 @@ $grid-column-padding: 15px;
   }
 }
 
+// outline "default" buttons
 @mixin outline-button-variant($color, $background, $border) {
   color: $color;
   background-color: $background;
@@ -180,6 +183,51 @@ $grid-column-padding: 15px;
   &:hover {
     color: lighten($color, 12%);
     background-color: transparentize($color, .8);
+        border-color: lighten($border, 12%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: $background;
+          border-color: $border;
+    }
+  }
+}
+
+// these are the newer gray outline buttons
+@mixin tertiary-button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: #fff;
+    background-color: $pb-medium-gray;
+        border-color: $color;
+        &:hover {
+          color: #fff;
+          background-color: $color;
+          border-color: $color;
+        }
+  }
+  &:hover {
+    color: $color;
+    background-color: shade($background, 90%);
         border-color: lighten($border, 12%);
   }
   &:active,
