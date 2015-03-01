@@ -1289,6 +1289,7 @@ fieldset[disabled] .form-control.timepicker {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
   .animated.fast {
+    -ms-animation-duration: 0.4s;
     -webkit-animation-duration: 0.4s;
     animation-duration: 0.4s; }
 
@@ -1436,7 +1437,6 @@ fieldset[disabled] .form-control.timepicker {
   transition: all .3s ease-in 0s;
   background: #fff;
   background-image: -webkit-linear-gradient(center top, rgba(0, 0, 0, 0.1) 0%, transparent 100%);
-  background-image: -o-linear-gradient(center top, rgba(0, 0, 0, 0.1) 0%, transparent 100%);
   border: 2px solid #e1e1e1;
   border-radius: 5px;
   bottom: 0;
