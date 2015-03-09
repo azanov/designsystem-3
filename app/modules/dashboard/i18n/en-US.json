@@ -1,0 +1,9 @@
+{
+  "DASHBOARD": {
+    "TITLE": "Dashboard",
+	"ENTITLEMENT": {
+	  "TRY": "Try", 
+	  "BUY": "Buy"
+	}
+  }
+}

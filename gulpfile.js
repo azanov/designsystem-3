@@ -37,9 +37,9 @@ var gulp         = require('gulp'),
 
 
 
-
-gulp.task('styles', function() {
-  return sass('app/sass/', { sourcemap: true })
+//styles
+gulp.task('sass', function() {
+  return sass('app/assets/sass/app.scss', { sourcemap: true })
   .pipe(plumber())
   .pipe(autoprefixer({
     browsers: ['last 2 versions', 'ios 6', 'android 4']
@@ -48,10 +48,9 @@ gulp.task('styles', function() {
     includeContent: false,
     sourceRoot: '/source'
   }))
-  .pipe(gulp.dest('app/styles'))
+  .pipe(gulp.dest('app/assets/css'))
   .pipe(filter('**/*.css'))
   .pipe(reload({stream:true}));
-//  .pipe(notify({ message: 'Styles task complete' }));
 });
 
 gulp.task('styles-nomaps', function() {
@@ -71,7 +70,7 @@ gulp.task('usemin', function() {
     .pipe(usemin({
       css: [minifycss(), 'concat'],
       //html: [minifyhtml({empty: true})],
-      js: [uglify({mangle: false}), rev()]
+      js: [uglify({mangle: false})]
     }))
     .pipe(gulp.dest('build/'));
   });
@@ -98,6 +97,7 @@ gulp.task('clean', function(cb) {
     del(['build/**/*'], cb);
 });
 
+
 // browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
   browsersync({
@@ -109,53 +109,9 @@ gulp.task('browser-sync', function() {
 
 
 
-// FTP
-
-var userName = '';
-var userPass = '';
-
-// 1 You call this task to FTP. It first runs the task in the brackets...
-gulp.task('ftp', ['prompt_password'], function()
-{
-    return gulp.src('build/**/*')
-    .pipe(printfiles())
-    .pipe(ftp({
-        host: '10.50.8.173',
-        user: userName,
-        pass: userPass,
-        remotePath: '/'
-    }));
-});
-
-// 3 ... this is run by step 2, after finishing it falls back to 2, then 1, "inception-style"
-gulp.task('prompt_user', function ()
-{
-    return gulp.src('build/index.html')
-    .pipe(prompt.prompt({
-        type: 'input',
-        name: 'user_input',
-        message: 'Please enter your username'
-    }, function(res){
-        userName = res.user_input;
-    }));
-});
-
-// 2  ...which first runs the task in the brackets...
-gulp.task('prompt_password', ['prompt_user'], function ()
-{
-    return gulp.src('build/index.html')
-    .pipe(prompt.prompt({
-        type: 'password',
-        name: 'password_input',
-        message: 'Please enter your password'
-    }, function(res){
-        userPass = res.password_input;
-    }));
-});
-
 
 // run this to open project in browser and watch for changes in CSS
-gulp.task('default',['styles','browser-sync', 'watch']);
+gulp.task('default',['sass','browser-sync', 'watch']);
 
 // gulp.task('build', ['clean'],function() {
 // 	gulp.run(['styles-nomaps','usemin','scripts','assets']);
@@ -170,27 +126,19 @@ gulp.task('build', function(cb) {
 
 
 
+//watch files for changes
+gulp.task('watch', function () { //'default'
+  gulp.watch(
+    [
+      'app/assets/sass/**/*.scss',
+      'app/modules/**/*.scss'
+    ], ['sass']);
 
-
-
-// Watch
-gulp.task('watch', function() {
-
-  // Watch .scss files
-  gulp.watch('app/sass/**/*.scss', ['styles']);
-
-  gulp.watch('app/**/*.html', function(){
-    reload();
+  gulp.watch([
+    'app/**/*.js',
+    'app/**/*.json',
+    'app/**/*.html'], function(){
+      browsersync.reload();
   });
-
-  // Watch .js files
-   gulp.watch('app/scripts/**/*.js', function(){
-     reload();
-   });
-
-  // Watch image files
-//  gulp.watch('app/images/**/*', ['images']);
-
-
 
 });

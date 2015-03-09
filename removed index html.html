@@ -1,0 +1,72 @@
+<!-- build:css styles/vendor.css -->
+<link rel="stylesheet" href="bower_components/leaflet-dist/leaflet.css" />
+<link rel="stylesheet" href="bower_components/ngprogress/ngProgress.css" />
+<link rel="stylesheet" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+<link rel="stylesheet" href="bower_components/bootstrap-vertical-tabs/bootstrap.vertical-tabs.min.css" />
+<link rel="stylesheet" href="bower_components/kendo-ui/styles/web/kendo.common-bootstrap.core.min.css" />
+<link rel="stylesheet" href="bower_components/kendo-ui/styles/web/kendo.bootstrap.min.css" />
+<link rel="stylesheet" href="bower_components/angular-rangeslider/angular.rangeSlider.css" />
+<link rel="stylesheet" href="bower_components/selectize/dist/css/selectize.bootstrap3.css" />
+<link rel="stylesheet" href="bower_components/angular-toggle-switch/angular-toggle-switch.css" />
+<link rel="stylesheet" href="bower_components/angular-toggle-switch/angular-toggle-switch-bootstrap.css" />
+<!-- endbuild -->
+
+
+
+
+
+  <div id="header">
+    <div class="navbar navbar-default" ng-class="{'navbar-fixed-top': settings.isFixed,'navbar-scroll': !settings.isFixed}" role="navigation" pb-fixed-navbar>
+      <div ng-class="{'container-fluid': settings.isFluid, 'container': !settings.isFluid}">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="navbar-brand brand-text"><a href="#/">Live Preview</a></span>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li ng-class="{'dropdown':(n.children.length)}" ng-repeat="n in navData"><a data-target="{{n.value}}" data-toggle="{{n.toggle}}">{{n.label}} <i class="fa fa-angle-down"></i></a>
+              <ul class="dropdown-menu" role="menu">
+                <li ng-repeat="p in n.children" ng-class="{'dropdown-header': p.header, 'divider': p.divider}" ng-switch on="p.type">
+                  <span ng-switch-when="header">{{p.label}}</span>
+                  <span ng-switch-when="divider"></span>
+                  <a ng-href="#/{{p.value}}" ng-switch-default>{{p.label}}</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a class="activity"><i class="fa fa-envelope fa-lg"></i> <b class="badge"> 21 </b></a>
+            </li>
+            <li>
+              <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user fa-lg"></i>&nbsp;&nbsp;Arthur Walter&nbsp;&nbsp;<i class="fa fa-angle-down"></i></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href><i class="fa fa-cogs"></i>&nbsp;&nbsp;My Account</a>
+                </li>
+                <li><a><i class="fa fa-dashboard"></i>&nbsp;&nbsp;Dashboard</a>
+                </li>
+                <li class="divider"></li>
+                <li><a><i class="fa fa-sign-out"></i>&nbsp;&nbsp;Sign Out</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+
+      </div>
+    </div>
+  </div>
+
+  <!--[if lte IE 9]>
+  <p class="browsehappy" style="text-align:center; ">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
