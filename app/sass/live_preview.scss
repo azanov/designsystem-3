@@ -116,88 +116,36 @@
   margin-bottom: 20px;
 
 }
-// TODO: refactor below into loop; errors with interpolating variable name $chord1 etc.
+
+
+
+//* These are only for the purposes of displaying the chord colors in the SVGs *//
+
+//** * Chord Color Mixin * * @access public * * @requires {List} $colors - Space Deliminated list of Colors * */
+@mixin chord-color($colors) {
+  $i: 0;
+  @each $color in $colors {
+    $i: $i + 1;
+    .color#{$i} {
+      color: $color;
+      fill: $color;
+    }
+  }
+}
+//** * Chord1 */
 #chord1 {
-  .color1 {
-    color: map-get($chord1, color1);
-    fill: map-get($chord1, color1);
-  }
-  .color2 {
-    color: map-get($chord1, color2);
-    fill: map-get($chord1, color2);
-  }
-  .color3 {
-    color: map-get($chord1, color3);
-    fill: map-get($chord1, color3);
-  }
-  .color4 {
-    color: map-get($chord1, color4);
-    fill: map-get($chord1, color4);
-  }
-  .color5 {
-    color: map-get($chord1, color5);
-    fill: map-get($chord1, color5);
-  }
-  .color6 {
-    color: map-get($chord1, color6);
-    fill: map-get($chord1, color6);
-  }
-
+  @include chord-color($pb-medium-blue $pb-purple $pb-dark-gray $pb-blue $pb-green $pb-light-gray);
 }
-#chord2 {
-  .color1 {
-    color: map-get($chord2, color1);
-    fill: map-get($chord2, color1);
-  }
-  .color2 {
-    color: map-get($chord2, color2);
-    fill: map-get($chord2, color2);
-  }
-  .color3 {
-    color: map-get($chord2, color3);
-    fill: map-get($chord2, color3);
-  }
-  .color4 {
-    color: map-get($chord2, color4);
-    fill: map-get($chord2, color4);
-  }
-  .color5 {
-    color: map-get($chord2, color5);
-    fill: map-get($chord2, color5);
-  }
-  .color6 {
-    color: map-get($chord2, color6);
-    fill: map-get($chord2, color6);
-  }
 
+#chord2{
+  @include chord-color($pb-dark-orange  $pb-medium-blue $pb-dark-gray $pb-blue $pb-yellow $pb-light-gray);
 }
-#chord3 {
-  .color1 {
-    color: map-get($chord3, color1);
-    fill: map-get($chord3, color1);
-  }
-  .color2 {
-    color: map-get($chord3, color2);
-    fill: map-get($chord3, color2);
-  }
-  .color3 {
-    color: map-get($chord3, color3);
-    fill: map-get($chord3, color3);
-  }
-  .color4 {
-    color: map-get($chord3, color4);
-    fill: map-get($chord3, color4);
-  }
-  .color5 {
-    color: map-get($chord3, color5);
-    fill: map-get($chord3, color5);
-  }
-  .color6 {
-    color: map-get($chord3, color6);
-    fill: map-get($chord3, color6);
-  }
 
+#chord3{
+  @include chord-color($pb-dark-green $pb-medium-blue $pb-dark-gray $pb-blue $pb-magenta $pb-light-gray);
 }
+
+
 // spacing and page layout mods for the design system pages
 section.row {
   margin-bottom: 60px;
