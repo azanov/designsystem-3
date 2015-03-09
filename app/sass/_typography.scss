@@ -166,7 +166,7 @@ p.lede {
 
 
 body {
-  @extend %aa !optional;
+  @extend %aa;
   font-family: $font-family-base;
   font-size: $font-size-base;
   // originally they had !important "for ie8" but I removed
@@ -221,6 +221,8 @@ ol {
   @extend %ps-regular;
 }
 
+
+
 label {
   font-size: 14px;
   font-weight: normal;
@@ -251,8 +253,12 @@ header .navbar .container .navbar-brand.brand-text {
   font-size: 16px;
 }
 
-.checkboxList span { font-family: $font-family-sans-serif; }
-
+// some items need to be set back to default body font:
+.checkboxList span,
+a.list-group-item {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+}
 
 // ------SPECIAL SIZES--------
 
