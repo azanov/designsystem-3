@@ -58,8 +58,9 @@
 
     <section class="row">
       <div class="col-md-6">
-        <h4 class="sh">Table striped condensed</h4>
-        <table class="table table-striped table-condensed">
+        <h4 class="sh">Table  hover</h4>
+
+        <table class="table table-hover">
           <thead>
             <tr>
               <th>#</th>
@@ -77,10 +78,13 @@
             </tr>
           </tbody>
         </table>
+
       </div>
     <div class="col-md-6">
-      <h4 class="sh">Table condensed</h4>
-      <table class="table table-condensed">
+
+      <h4 class="sh">Table striped hover</h4>
+
+      <table class="table table-striped table-hover">
         <thead>
           <tr>
             <th>#</th>
@@ -98,13 +102,14 @@
           </tr>
         </tbody>
       </table>
+
     </div>
   </section>
 
     <section class="row">
       <div class="col-md-6">
-        <h4 class="sh">Table striped extra condensed</h4>
-        <table class="table table-striped table-condensed-extra">
+        <h4 class="sh">Table condensed</h4>
+        <table class="table table-condensed">
           <thead>
             <tr>
               <th>#</th>
@@ -145,59 +150,3 @@
       </table>
     </div>
   </section>
-
-
-
-
-  <div class="row hidden-xs hidden-sm">
-
-  <div class="col-md-6">
-    <h4 class="sh">Table striped hover</h4>
-
-    <table class="table table-striped table-hover">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>First name</th>
-          <th>Last name</th>
-          <th class="currency">Gross Sales</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat="p in peopleData">
-          <td>00{{p.id}}</td>
-          <td>{{p.firstName}}</td>
-          <td>{{p.lastName}}</td>
-          <td class="currency">{{p.gross_sales}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-
-
-
-    <div class="col-md-6">
-      <h4 class="sh">Table striped hover condensed</h4>
-
-      <table class="table table-striped table-hover table-condensed">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>First name</th>
-            <th>Last name</th>
-            <th class="currency">Gross Sales</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="p in peopleData">
-            <td>00{{p.id}}</td>
-            <td>{{p.firstName}}</td>
-            <td>{{p.lastName}}</td>
-            <td class="currency">{{p.gross_sales}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-  </div> <!-- /row -->

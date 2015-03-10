@@ -1,54 +1,23 @@
-<section class="row">
+<div class="row">
   <div class="col-md-10">
-    <h1>Alerts/Callouts</h1>
-
-    <h3 class="sh">"Spot" alerts</h3>
-
-    <p>Use inline on page where important info needs to be shown to user. May also contain linked text.</p>
-    <h4>Danger</h4>
-    <div class="alert alert-danger">
-      <strong>Oh snap!</strong> Change a few things up and try submitting again. <a href="">FAQ</a>
-    </div>
-
-    <h4>Warning</h4>
-    <div class="alert alert-warning">
-      <strong>Warning!</strong> Better check yourself, you're not looking too good. <a href="">TIPS</a>
-    </div>
-
-    <h4>Success</h4>
-    <div class="alert alert-success">
-      <strong>Excellent!</strong> You've finished the process. <a href="">Learn more.</a>
-    </div>
-
-    <h4>Info</h4>
-    <div class="alert alert-info">
-      <strong>Note:</strong> There are many help resources <a href="">available</a>.
-    </div>
-
-
-
-    <h3 class="sh">Dismissable Alert</h3>
-    <div class="alert alert-danger alert-dismissable">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      If you don't want to be nagged, click the close box.
-    </div>
+    <h2>Alerts/Callouts</h2>
   </div>
-</section>
-
+</div>
 
 <section class="row">
   <div class="col-md-10">
-    <h3 class="sh">Transitory alert</h3>
-    <span ng-model="transitoryAlert" pb-transitory-alert>
+    <h4 class="sh spacer-bottom-sm">Transitory alert</h4>
+    <p ng-model="transitoryAlert" pb-transitory-alert>
       <button class="btn btn-primary btn-lg" ng-click="setMessage()">Click Me</button>
-    </span>
+    </p>
   </div>
 </section>
 
 
 <section class="row">
   <div class="col-md-10">
-    <h3 class="sh">Dialogs</h3>
+    <h4 class="sh">Modal Dialogs</h4>
+    <p>See also the <a href="/#/bootstrap-ui">UI-Bootstrap modal dialogs</a></p>
 
     <!-- Buttons to trigger modals -->
     <button class="btn btn-default" data-toggle="modal" data-target="#modal-01">Simplest dialog box</button>&nbsp;
@@ -60,15 +29,57 @@
 </section>
 
 
+<section class="row">
+  <div class="col-md-10">
+    <h4 class="sh">"Spot" alerts</h4>
+
+    <p>Use inline on page where important info needs to be shown to user. May also contain linked text.</p>
+
+    <h5>Danger</h5>
+    <div class="alert alert-danger">
+      <strong>Oh snap!</strong> Change a few things up and try submitting again. <a href="">FAQ</a>
+    </div>
+
+    <h5>Warning</h5>
+    <div class="alert alert-warning">
+      <strong>Warning!</strong> Better check yourself, you're not looking too good. <a href="">TIPS</a>
+    </div>
+
+    <h5>Success</h5>
+    <div class="alert alert-success">
+      <strong>Excellent!</strong> You've finished the process. <a href="">Learn more.</a>
+    </div>
+
+    <h5>Info</h5>
+    <div class="alert alert-info">
+      <strong>Note:</strong> There are many help resources <a href="">available</a>.
+    </div>
+
+
+
+    <h5 class="sh">Dismissable Alert</h5>
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      If you don't want to be nagged, click the close box.
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
 
 <section class="row">
   <div class="col-md-10">
-    <h3 class="sh">Blockquote</h3>
+    <h4 class="sh">Blockquote</h4>
     <blockquote>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
     </blockquote>
 
-    <h3 class="sh">Callouts</h3>
+    <h4 class="sh">Callouts</h4>
 
     <h4>Danger</h4>
     <div class="callout callout-danger">
@@ -103,7 +114,7 @@
 
 <section class="row">
   <div class="col-md-10">
-    <h3 class="sh">Contextual Color Backgrounds</h3>
+    <h4 class="sh">Contextual Color Backgrounds</h4>
     <p class="bg-primary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, sapiente!</p>
     <p class="bg-danger">Dolores assumenda vero tempore a deleniti perferendis veniam ipsa.</p>
     <p class="bg-warning">Dolores assumenda vero tempore a deleniti perferendis veniam ipsa.</p>
@@ -115,7 +126,7 @@
 
 <section class="row">
   <div class="col-md-10">
-    <h3 class="sh">Badges</h3>
+    <h4 class="sh">Badges</h4>
     <span class="badge">badge</span>
     <span class="badge badge-gray">gray</span>
     <span class="badge badge-gray-text">gray-text</span>

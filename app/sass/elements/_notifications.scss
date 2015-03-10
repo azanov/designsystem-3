@@ -26,7 +26,6 @@
     }
   }
 }
-
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -35,15 +34,10 @@
   left: 0;
   background-color: #000;
 }
-
-
 //* alerts */
-
 .alert a {
   text-decoration: underline;
 }
-
-
 // Activity Notification at top of page
 .activity {
   position: relative;
@@ -69,10 +63,7 @@
     transition: all 0.1s;
   }
 }
-
-
 // Contextual backgrounds
-
 // @mixin contextual-box($bg, $fg) {
 //   background-color: $bg;
 //   color: $fg;
@@ -95,7 +86,6 @@
 // blockquote {
 //   border-left: 4px solid $pb-gray-200;
 // }
-
 //* CALLOUTS (from the BS docs, but useful) */
 .callout {
   margin: 20px 0;
@@ -114,7 +104,6 @@
     h4 {
       color: $state-danger-text;
     }
-
   }
   &.callout-warning {
     background-color: $state-warning-bg;
@@ -135,27 +124,23 @@
 
 
 
+
 // what follows are overrides for extensions/plugins
-
 //*Messagebox */
-
 .divMessageBox {
   background: rgba(0, 0, 0, .6);
   height: 100%;
   left: 0;
   position: fixed;
   top: 0;
-
   width: 100%;
   z-index: 100000;
-
 }
 //
 // .MessageIE{
 //     background-image: url("@{base-url}/bg.png");
 //
 // }
-
 .MessageBoxContainer {
   background-color: rgba(0, 0, 0, .8);
   color: #fff;
@@ -198,7 +183,6 @@
   }
 }
 //* End of MessageBox */
-
 .LoadingBoxContainer {
   background-color: #232323;
   color: #fff;
@@ -298,7 +282,6 @@
   right: 10px;
   top: 15px;
   width: 15px;
-
 }
 .botClose:hover {
   opacity: 1;
@@ -366,8 +349,6 @@
   height: 100%;
 }
 //* End of SmallBox */
-
-
 // TODO: what is this stuff?
 // #pageslide {
 //   -webkit-box-shadow: inset 0 0 5px 5px #222;
@@ -392,16 +373,11 @@
 //   font-size: 16px;
 //
 // }
-
-
-
 // Mobile Phones */
 @media screen and (max-width: 450px) and (max-width: 767px) {
-
   .MessageBoxContainer select {
     padding: 5px;
     width: 50%;
-
   }
   // Messagebox Responsive */
   // End of MessageBox Responsive */
@@ -409,7 +385,6 @@
   // bigBoxes Responsive */
   // SmallBox Responsive */
   .SmallBox:hover {
-
     box-shadow: 0 0 10px #888;
     cursor: pointer;
   }
@@ -421,7 +396,6 @@
     padding: 10px 10px 5px;
     position: fixed;
     right: 10px;
-
     width: 88%;
     z-index: 99999;
   }
@@ -439,7 +413,6 @@
     top: 0;
     width: 100%;
     z-index: 100000;
-
   }
   // End of SmallBox Responsive*/
   .SmallBox span {
@@ -448,7 +421,6 @@
   .MessageBoxButtonSection {
     height: 30px;
     width: 100%;
-
   }
   .SmallBox .textoFoto {
     float: left;
@@ -496,10 +468,8 @@
     top: 25%;
     width: 100%;
   }
-
 }
 //* Animations */
-
 .animated {
   -moz-animation-duration: 1s;
   -moz-animation-fill-mode: both;
@@ -514,7 +484,6 @@
     -webkit-animation-duration: 0.4s;
     animation-duration: 0.4s;
   }
-
 }
 @-webkit-keyframes fadeIn {
   0% {
@@ -523,7 +492,6 @@
   100% {
     opacity: 1;
   }
-
 }
 @keyframes fadeIn {
   0% {
@@ -532,74 +500,62 @@
   100% {
     opacity: 1;
   }
-
 }
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
-
 }
 @-webkit-keyframes fadeInRight {
   0% {
     -webkit-transform: translateX(20px);
     opacity: 0;
-
   }
   100% {
     -webkit-transform: translateX(0);
     opacity: 1;
   }
-
 }
 @keyframes fadeInRight {
   0% {
     opacity: 0;
     -webkit-transform: translateX(20px);
     transform: translateX(20px);
-
   }
   100% {
     opacity: 1;
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
-
 }
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
-
 }
 @-webkit-keyframes fadeInUp {
   0% {
     -webkit-transform: translateY(20px);
     opacity: 0;
-
   }
   100% {
     -webkit-transform: translateY(0);
     opacity: 1;
   }
-
 }
 @keyframes fadeInUp {
   0% {
     opacity: 0;
     -webkit-transform: translateY(20px);
     transform: translateY(20px);
-
   }
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
-
 }
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
-
 }
 @-webkit-keyframes fadeOut {
   0% {
@@ -608,7 +564,6 @@
   100% {
     opacity: 0;
   }
-
 }
 @keyframes fadeOut {
   0% {
@@ -617,7 +572,6 @@
   100% {
     opacity: 0;
   }
-
 }
 .fadeOut {
   -webkit-animation-name: fadeOut;
@@ -627,27 +581,23 @@
   0% {
     -webkit-transform: translateX(0);
     opacity: 1;
-
   }
   100% {
     -webkit-transform: translateX(-20px);
     opacity: 0;
   }
-
 }
 @keyframes fadeOutLeft {
   0% {
     opacity: 1;
     -webkit-transform: translateX(0);
     transform: translateX(0);
-
   }
   100% {
     opacity: 0;
     -webkit-transform: translateX(-20px);
     transform: translateX(-20px);
   }
-
 }
 .fadeOutLeft {
   -webkit-animation-name: fadeOutLeft;

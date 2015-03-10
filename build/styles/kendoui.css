@@ -1,17 +1,17 @@
 .k-slider-track {
-  background-color: silver;
+  background-color: #c0c0c0;
   box-shadow: none; }
 
 .k-slider-selection {
-  background-color: #0082d5; }
+  background-color: #a03f9b; }
 
 .k-button {
-  border: 1px solid #0082d5;
+  border: 1px solid #a03f9b;
   background-color: transparent;
-  color: #0082d5; }
+  color: #a03f9b; }
   .k-button:hover {
-    border-color: #0082d5;
-    background-color: #0082d5;
+    border-color: #a03f9b;
+    background-color: #a03f9b;
     color: #fff; }
 
 .k-widget, .k-button {
@@ -21,12 +21,12 @@
   border-color: #9b9b9b; }
 
 .k-splitbar {
-  background-color: silver; }
+  background-color: #c0c0c0; }
   .k-splitbar:hover {
     background-color: #9b9b9b; }
 
 .k-block, .k-widget, .k-popup, .k-content, .k-dropdown .k-input {
-  color: #4e4e4e; }
+  color: #4E4E4e; }
 
 .k-widget *, .k-animation-container *, .k-widget *:before, .k-animation-container *:after {
   box-sizing: border-box; }

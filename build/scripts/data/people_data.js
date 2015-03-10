@@ -1,8 +1,8 @@
 {
   "data" : [
     {
-        "firstName" : "Sam",
-        "lastName" : "Lowry",
+        "firstName" : "Malcolm",
+        "lastName" : "Reynolds",
       "gross_sales" : "$3,012,445.00",
       "type" : "user",
       "image" : "avatar100_m01.jpg",
@@ -10,8 +10,8 @@
       "isChecked" : false
     },
     {
-      "firstName" : "Harry",
-      "lastName" : "Tuttle",
+      "firstName" : "Zoe",
+      "lastName" : "Washburne",
       "gross_sales" : "£92,773.00",
       "type" : "wrench",
       "image" : "avatar100_m02.jpg",
@@ -19,8 +19,8 @@
       "isChecked" : true
     },
     {
-      "firstName" : "Jill",
-      "lastName" : "Layton",
+      "firstName" : "Inara",
+      "lastName" : "Sierra",
       "gross_sales" : "€1,055,613.00",
       "type" : "thumbs-up",
       "image" : "avatar100_f02.jpg",
@@ -28,8 +28,8 @@
       "isChecked" : false
     },
     {
-      "firstName" : "Theora",
-      "lastName" : "Jones",
+      "firstName" : "Simon",
+      "lastName" : "Tam",
       "gross_sales" : "¥76,330,989.00",
       "type" : "trophy",
       "image" : "avatar100_f01.jpg",

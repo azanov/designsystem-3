@@ -58,8 +58,16 @@
           "value" : "elements?section=Buttons"
         },
         {
-          "label" : "Colors",
+          "label" : "Color Swatches",
           "value" : "elements?section=Colors"
+        },
+        {
+          "label" : "Color Usage",
+          "value" : "elements?section=ColorUsage"
+        },
+        {
+          "label" : "Chart Colors",
+          "value" : "elements?section=Charts"
         },
         {
           "label" : "Grid",

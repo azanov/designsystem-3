@@ -57,10 +57,10 @@ header {
       // no color behind top-level items when open
       .open a {
         background-color: transparent;
-        color: $brand-primary;
+        color: $brand-secondary;
         &:hover {
           background-color: transparent;
-          color: $brand-primary;
+          color: $brand-secondary;
         }
       }
       // you can designate an LI as "active" and highlight its link
@@ -68,7 +68,7 @@ header {
         background-color: transparent;
         &:hover {
           background-color: transparent;
-          color: $brand-primary;
+          color: $brand-secondary;
         }
       }
       .dropdown-menu {

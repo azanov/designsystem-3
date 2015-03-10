@@ -3,10 +3,10 @@
 <div class="row">
   <div class="col-md-12">
     <!-- breadcrumb -->
-    <ol class="breadcrumb">
+    <!-- <ol class="breadcrumb">
       <li><a href="#/">Home</a></li>
       <li class="active">UI Bootstrap</li>
-    </ol>
+    </ol> -->
 
     <h1 class="page-header">UI Bootstrap <span class="more-info"><a href="http://angular-ui.github.io/bootstrap" target="_blank">More Info <i class="fa fa-external-link"></i></a></span></h1>
 
@@ -25,7 +25,7 @@
 
   <div class="col-xs-12">
 
-    <h3 class="sh">Dialogs</h3>
+    <h4 class="sh">Dialogs</h4>
 
     <button class="btn btn-default" ng-click="modals.simple()">Simplest dialog box</button>
     <button class="btn btn-default" ng-click="modals.modal()">Modal dialog</button>
@@ -43,7 +43,7 @@
 <section class="row">
 
   <div class="col-xs-12">
-    <h3 class="sh">Date picker</h3>
+    <h4 class="sh">Date picker</h4>
 
     <div class="input-group col-xs-4">
       <input type="text" class="form-control" datepicker-popup="{{calendar.format}}" ng-model="dt" is-open="calendar.opened" datepicker-options="{{calendar.options}}" close-text="Close" show-button-bar="false" ng-click="calendar.open($event)" />
@@ -60,7 +60,7 @@
 <!-- TIMEPICKER -->
 <section class="row">
   <div class="col-xs-12">
-    <h3 class="sh">Time picker</h3>
+    <h4 class="sh">Time picker</h4>
 
     <div class="input-group col-xs-3">
       <input type="text" class="form-control" value="{{mytime | date:'shortTime' }}" readonly />
@@ -82,7 +82,7 @@
 <!-- TABS -->
 <section class="row">
   <div class="col-xs-12">
-    <h3 class="sh">Tabs</h3>
+    <h4 class="sh">Tabs</h4>
 
       <section class="row">
 

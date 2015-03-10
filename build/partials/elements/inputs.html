@@ -5,7 +5,7 @@
     <!-- left col -->
 
     <fieldset>
-      <legend>This page is divided by fieldsets.  This text is a legend.</legend>
+      <legend>This text is a Fieldset Legend.</legend>
 
       <p>Fieldsets are for grouping of for elements. The section title, or Legend, has a gray rule under it.</p>
 
@@ -36,7 +36,7 @@
 
 
     <fieldset>
-      <legend>Column sizing</legend>
+      <h4>Column sizing</h4>
       <div class="row">
         <div class="col-md-3">
           <div class="form-group">
@@ -59,19 +59,19 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <span class="help-block">Wrap inputs in grid columns, or any custom parent element, to easily enforce desired widths. <br>
-            Form controls are always 100% of their container's width.</span>
+          <span class="help-block">Wrap inputs in grid columns, or any custom parent element, to easily enforce desired widths.
+            <br> Form controls are always 100% of their container's width.</span>
         </div>
       </div>
     </fieldset>
 
 
 
-<!--
+    <!--
     <fieldset ng-controller="DatePickerCtrl">
-      <legend>Date &amp; time picker
+      <h4>Date &amp; time picker
         <a href="http://eonasdan.github.io/bootstrap-datetimepicker/" target="_blank"><span class="more-info">More info <i class="fa fa-external-link"></i></span></a>
-      </legend>
+      </h4>
 
       <div class="row">
         <div class="col-md-6">
@@ -98,10 +98,10 @@
 -->
 
     <fieldset>
-      <legend>Numeric stepper
+      <h4>Numeric stepper
         <span class="more-info"><a href="https://github.com/xFlatlinex/Numeric-Stepper" target="_blank">More info <i class="fa fa-external-link"></i></a></span>
 
-      </legend>
+      </h4>
 
       <div class="row">
         <div class="col-md-6">
@@ -118,7 +118,7 @@
 
 
     <fieldset>
-      <legend>Specialized text fields</legend>
+      <h4>Specialized text fields</h4>
 
       <div class="row">
         <div class="form-group col-md-6">
@@ -126,7 +126,7 @@
           <div class="input-group">
             <span class="input-group-addon">
               <i class="fa fa-search"></i>
-        	  </span>
+            </span>
             <input class="form-control" placeholder="Search" type="text">
           </div>
         </div>
@@ -135,9 +135,9 @@
           <label for="">Text field appended</label>
           <div class="input-group">
             <input class="form-control" placeholder="User Name" type="text">
-              <span class="input-group-addon">
-        	     <i class="fa fa-user"></i>
-              </span>
+            <span class="input-group-addon">
+              <i class="fa fa-user"></i>
+            </span>
           </div>
 
         </div>
@@ -158,9 +158,9 @@
           <label for="">Text field appended, large</label>
           <div class="input-group input-group-lg">
             <input class="form-control" placeholder="User Name" type="text">
-              <span class="input-group-addon">
-               <i class="fa fa-user"></i>
-              </span>
+            <span class="input-group-addon">
+              <i class="fa fa-user"></i>
+            </span>
           </div>
         </div>
       </div>
@@ -180,9 +180,9 @@
           <label for="">Text field appended, small</label>
           <div class="input-group input-group-sm">
             <input class="form-control" placeholder="User Name" type="text">
-              <span class="input-group-addon">
-               <i class="fa fa-user"></i>
-              </span>
+            <span class="input-group-addon">
+              <i class="fa fa-user"></i>
+            </span>
           </div>
         </div>
       </div>
@@ -217,8 +217,8 @@
           <div class="input-group">
             <input class="form-control" placeholder="User Name" type="text">
             <span class="input-group-btn">
-        	                <button class="btn btn-default">Go</button>
-        	            </span>
+              <button class="btn btn-default">Go</button>
+            </span>
           </div>
         </div>
       </div>
@@ -229,8 +229,8 @@
 
           <div class="input-group" pb-checkable-input-group>
             <span class="input-group-addon">
-                      <input type="checkbox" ng-model="checkable.checked">
-                  </span>
+              <input type="checkbox" ng-model="checkable.checked">
+            </span>
             <input type="text" class="form-control" ng-disabled="!checkable.checked" ng-model="checkable.value">
           </div>
         </div>
@@ -245,7 +245,7 @@
     <div class="row">
       <div class="col-md-12">
         <fieldset>
-          <legend>Input field sizes</legend>
+          <h4>Input field sizes</h4>
 
           <input class="form-control input-lg" type="text" placeholder=".input-lg">
           <br>
@@ -352,7 +352,8 @@
         <div class="checkboxList form-control">
           <div class="ms-checkboxitem" ng-repeat="person in peopleData">
             <label>
-              <input type="checkbox" ng-model="person.isChecked">&nbsp;<span>{{person.firstName}} {{person.lastName}}</span>
+              <input type="checkbox" ng-model="person.isChecked">&nbsp;
+              <span>{{person.firstName}} {{person.lastName}}</span>
             </label>
           </div>
         </div>
@@ -361,12 +362,12 @@
 
 
     <fieldset>
-      <legend>Selectize select menu
+      <h4>Selectize select menu
         <span class="more-info">
           <a href="http://brianreavis.github.io/selectize.js/" target="_blank">Basic info <i class="fa fa-external-link"></i></a>
           <a href="https://github.com/kbanman/selectize-ng" target="_blank">Angular info <i class="fa fa-external-link"></i></a>
         </span>
-      </legend>
+      </h4>
 
       <div ng-controller="SelectizeCtrl">
 
@@ -392,25 +393,7 @@
 
         </div>
 
-        <div class="row">
 
-          <div class="form-group col-md-4 col-md-offset-4">
-            <label>Large Size</label>
-            <div class="input-group input-group-lg">
-              <input type="text" selectize="countrySelect.options" options="countries" ng-model="country.selected" />
-              <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-            </div>
-          </div>
-
-          <div class="form-group col-md-4 ">
-            <label>Small Size</label>
-            <div class="input-group input-group-sm">
-              <input type="text" selectize="countrySelect.options" options="countries" ng-model="country.selected" />
-              <span class="input-group-addon"><i class="fa fa-beer fa-fw"></i></span>
-            </div>
-          </div>
-
-        </div>
 
 
       </div>
@@ -421,7 +404,7 @@
 
 
     <fieldset>
-      <legend>Checkboxes</legend>
+      <h4>Checkboxes</h4>
 
 
       <div class="row">
@@ -471,7 +454,7 @@
     </fieldset>
 
     <fieldset>
-      <legend>Radio buttons</legend>
+      <h4>Radio buttons</h4>
       <div class="row">
         <div class="form-group col-md-6">
           <label>Radio default</label>
@@ -506,13 +489,13 @@
 
 
     <fieldset>
-      <legend>
+      <h4>
         Switches
         <span class="more-info">
-              <a href="http://www.bootstrap-switch.org" target="_blank">Basic info <i class="fa fa-external-link"></i></a>
-              <a href="http://cgarvis.github.io/angular-toggle-switch/" target="_blank">Angular info <i class="fa fa-external-link"></i></a>
-              </span>
-      </legend>
+          <a href="http://www.bootstrap-switch.org" target="_blank">Basic info <i class="fa fa-external-link"></i></a>
+          <a href="http://cgarvis.github.io/angular-toggle-switch/" target="_blank">Angular info <i class="fa fa-external-link"></i></a>
+        </span>
+      </h4>
       <div class="form-group switches row">
         <div class="col-md-3">
           <div toggle-switch model="switchStatus1"></div>
@@ -530,7 +513,9 @@
 
       <div class="row">
         <div class="col-md-12">
-          <h4>CSS-only switch <small>IE9+</small></h4>
+          <h4>CSS-only switch
+            <small>IE9+</small>
+          </h4>
 
           <div class="onoffswitch">
             <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>

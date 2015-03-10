@@ -7,27 +7,27 @@
 //== Here we assign colors to variables; we don't actually color elements
 
 //PRIMARY
-$pb-cyan:        rgb(0, 155, 223);
-$pb-medium-blue: rgb(0, 130, 213);
-$pb-blue:        rgb(62, 83, 164);
-$pb-purple:      rgb(160, 63, 155);
-$pb-magenta:     rgb(207, 9, 137);
+$pb-cyan:        #009dbf;
+$pb-medium-blue: #0072b8;
+$pb-blue:        #3e53a4;
+$pb-purple:      #a03f9b;
+$pb-magenta:     #cf0989;
 
 // SECONDARY
-$pb-dark-orange: rgb(238, 107, 11);
-$pb-orange:      rgb(239, 130, 0);
-$pb-yellow:      rgb(237, 183, 0);
-$pb-green:       rgb(114, 191, 68);
-$pb-dark-green:  rgb(0, 177, 64);
+$pb-dark-orange: #ee6b0b;
+$pb-orange:      #ef8200;
+$pb-yellow:      #edb700;
+$pb-green:       #72bf44;
+$pb-dark-green:  #00b140;
 
 // new grays use for all NEUTRALS
-$pb-gray:     #4E4E4e;
-$pb-gray-50:  #f0f0f0;
-$pb-gray-100: #dbdbdb;
-$pb-gray-200: #c0c0c0;
-$pb-gray-300: #9b9b9b;
-$pb-gray-400: #717171;
-$pb-gray-500: $pb-gray; // aliased for completeness
+$pb-gray:        #4E4E4e;
+$pb-gray-50:     #f0f0f0;
+$pb-gray-100:    #dbdbdb;
+$pb-gray-200:    #c0c0c0;
+$pb-gray-300:    #9b9b9b;
+$pb-gray-400:    #717171;
+$pb-gray-500:    $pb-gray; // aliased for completeness
 
 
 
@@ -176,7 +176,7 @@ $border-radius-small:       2px;
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff;
 //** Global background color for active items (e.g., navs or dropdowns).
-$component-active-bg:       $brand-primary;
+$component-active-bg:       $brand-secondary;
 
 //** Width of the `border` for generating carets that indicator dropdowns.
 $caret-width-base:          4px;
@@ -196,15 +196,14 @@ $table-condensed-cell-padding: 5px;
 $table-condensed-extra-cell-padding: 2px;
 
 //** Default background color used for all tables.
-$table-bg: transparent;
+$table-bg: #fff;
 //** Background color used for `.table-striped`.
 $table-bg-accent: $pb-gray-50;
-//** Background color used for `.table-hover`.
-$table-bg-hover: lighten($brand-secondary, 50%);
-$table-bg-active: lighten($brand-secondary, 40%);
-
 //** Border color for table and cell borders.
 $table-border-color: $pb-gray-100;
+//** Background color used for `.table-hover`.
+$table-bg-hover: tint($brand-secondary, 10%);
+$table-bg-active: tint($brand-secondary, 20%);
 
 
 //== Buttons  // see buttons.scss
@@ -226,7 +225,7 @@ $input-color: $pb-gray;
 $input-border: $pb-gray-300;
 
 //** Border color for inputs on focus
-$input-border-focus: lighten($brand-secondary, 50%);
+$input-border-focus: tint($brand-secondary, 80%);
 
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -529,27 +528,21 @@ $jumbotron-font-size: ceil(($font-size-base * 1.5));
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text: #3c763d;
-// $state-success-bg: scale-color($state-success-text, $lightness: 90%, $saturation: -70%);
-$state-success-bg: #dff0d8;
-$state-success-border:  #d6e9c6 ;
+$state-success-text:             #3c763d !default;
+$state-success-bg:               #dff0d8 !default;
+$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
 
-$state-info-text: #31708f;
-$state-info-bg: #d9edf7 ;
-$state-info-border: #bce8f1;
+$state-info-text:                #31708f !default;
+$state-info-bg:                  #d9edf7 !default;
+$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
 
-// $state-primary-text: $brand-primary;
-// $state-primary-bg: scale-color($state-primary-text, $lightness: 90%, $saturation: -30%);
-// $state-primary-border: scale-color($state-primary-text, $lightness: 80%, $saturation: -40%);
+$state-warning-text:             #8a6d3b !default;
+$state-warning-bg:               #fcf8e3 !default;
+$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
 
-$state-warning-text: #8a6d3b;
-$state-warning-bg: #fcf8e3;
-$state-warning-border: #faebcc;
-
-$state-danger-text: $brand-danger;
-$state-danger-bg: #f2dede;
-$state-danger-border: #ebccd1;
-
+$state-danger-text:              #a94442 !default;
+$state-danger-bg:                #f2dede !default;
+$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 
 
 

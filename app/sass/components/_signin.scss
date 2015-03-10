@@ -29,18 +29,18 @@
   .prod-name {
     @extend %ps-bold;
     font-size: 24px;
-    color: $pb-medium-blue;
+    color: $brand-secondary;
     padding-bottom: 20px;
     margin-bottom: 20px;
-    border-bottom: 1px solid $pb-medium-blue;
+    border-bottom: 1px solid $brand-secondary;
   }
   .title {
     @extend %ps-light;
     font-size: 32px;
-    color: $pb-medium-blue;
+    color: $brand-primary;
   }
   .signin-footer {
-    color: tint($pb-purple, 50%);
+    color: tint($brand-primary, 50%);
     margin-top: 20px;
     a {
       color: inherit;

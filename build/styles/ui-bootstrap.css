@@ -12,12 +12,11 @@ ul[datepicker-popup-wrap] {
     border: 0; }
   ul[datepicker-popup-wrap] tbody tr td {
     padding-right: 1px;
-    padding-left: 1px;
-    border: #f00; }
+    padding-left: 1px; }
     ul[datepicker-popup-wrap] tbody tr td button {
       border: 0; }
       ul[datepicker-popup-wrap] tbody tr td button.active {
-        background: #0082d5; }
+        background: #a03f9b; }
         ul[datepicker-popup-wrap] tbody tr td button.active span {
           color: #fff; }
 

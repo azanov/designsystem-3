@@ -10,6 +10,8 @@
 @include font-face('PrecisionSans_W_Md', '../fonts/PrecisionSans_W_Md', '500', 'normal');
 @include font-face('PrecisionSans_W_MdIt', '../fonts/PrecisionSans_W_MdIt', '500', 'italic');
 
+@include font-face('pbfont', '../fonts/pbfont');
+
 $font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 %aa {
@@ -282,12 +284,10 @@ cite { font-style: normal; }
 .text-center  { text-align: center; }
 .text-justify { text-align: justify; }
 
-// Contextual colors, from bootstrap
-.text-primary { color: $brand-primary; }
-.text-muted   { color: $text-muted; }
-.text-success { color: $state-success-text; }
-.text-info    { color: $state-info-text; }
-.text-warning { color: $state-warning-text; }
-.text-danger  { color: $state-danger-text; }
-
-.help-block { font-size: $font-size-small; }
+// // Contextual colors, from bootstrap
+// .text-primary { color: $brand-primary; }
+// .text-muted   { color: $text-muted; }
+// .text-success { color: $state-success-text; }
+// .text-info    { color: $state-info-text; }
+// .text-warning { color: $state-warning-text; }
+.text-danger  { color: $brand-danger; }

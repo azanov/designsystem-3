@@ -1,10 +1,20 @@
 //* TABLES */
-// color variable values are defined in variables.scss
 
+
+// for some reason, bootstrap will not do this with the variables.
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
-  background-color: $table-bg-hover;
+  background-color: #E5F5FC;
 }
+.table-hover > tbody > tr:active > td,
+.table-hover > tbody > tr:active > th,
+.table-hover > tbody > tr.active > td,
+.table-hover > tbody > tr.active > th,
+ {
+  background-color: #CCEBF9;
+}
+
+
 .table-striped>tbody>tr:nth-child(odd) {
   background-color: $table-bg-accent;
 }
