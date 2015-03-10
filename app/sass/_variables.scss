@@ -223,7 +223,7 @@ $input-bg-disabled: $pb-gray-100;
 //** Text color for `<input>`s
 $input-color: $pb-gray;
 //** `<input>` border color
-$input-border: $pb-gray-200;
+$input-border: $pb-gray-300;
 
 //** Border color for inputs on focus
 $input-border-focus: lighten($brand-secondary, 50%);
@@ -451,7 +451,7 @@ $navbar-inverse-toggle-border-color: #333;
 
 //=== Shared nav styles
 $nav-link-padding: 10px 15px;
-$nav-link-hover-bg: $pb-gray-200;
+$nav-link-hover-bg: $pb-gray-50;
 
 $nav-disabled-link-color: $pb-gray-200;
 $nav-disabled-link-hover-color: $pb-gray-200;
@@ -643,24 +643,22 @@ $modal-sm:                    300px;
 
 //== Progress bars
 
-
 //** Background color of the whole progress component
 $progress-bg:                 #f5f5f5;
 //** Progress bar text color
 $progress-bar-color:          #fff;
 //** Variable for setting rounded corners on progress bar.
 $progress-border-radius:      $border-radius-base;
-
 //** Default progress bar color
-// $progress-bar-bg:             $brand-primary;
-// //** Success progress bar color
-// $progress-bar-success-bg:     $brand-success;
-// //** Warning progress bar color
-// $progress-bar-warning-bg:     $brand-warning;
-// //** Danger progress bar color
-// $progress-bar-danger-bg:      $brand-danger;
-// //** Info progress bar color
-// $progress-bar-info-bg:        $brand-info;
+$progress-bar-bg:             $brand-secondary;
+//** Success progress bar color
+$progress-bar-success-bg:     $brand-success;
+//** Warning progress bar color
+$progress-bar-warning-bg:     $brand-warning;
+//** Danger progress bar color
+$progress-bar-danger-bg:      $brand-danger;
+//** Info progress bar color
+$progress-bar-info-bg:        $brand-info;
 
 
 //== List group
@@ -697,8 +695,6 @@ $list-group-link-heading-color: #333;
 
 
 //== Thumbnails
-//
-//##
 
 //** Padding around the thumbnail image
 $thumbnail-padding:           4px;
@@ -716,15 +712,12 @@ $thumbnail-caption-padding:   9px;
 
 
 //== Wells
-//
-//##
+
 $well-bg:                     #f5f5f5;
 $well-border:                 darken($well-bg, 7%);
 
 
 //== Badges
-//
-//##
 
 $badge-color:                 #fff;
 //** Linked badge text color on hover
@@ -735,14 +728,12 @@ $badge-bg:                    $pb-gray-200;
 $badge-active-color:          $link-color;
 //** Badge background color in active nav link
 $badge-active-bg:             #fff;
-
 $badge-font-weight:           500;
 $badge-line-height:           1;
 $badge-border-radius:         10px;
 
+
 //== Breadcrumbs
-//
-//##
 
 $breadcrumb-padding-vertical:   8px;
 $breadcrumb-padding-horizontal: 15px;
@@ -773,20 +764,14 @@ $carousel-indicator-border-color:             #fff;
 
 $carousel-caption-color:                      #fff;
 
-
 //== Close
-//
-//##
 
 $close-font-weight:           bold;
 $close-color:                 #000;
 $close-text-shadow:           0 1px 0 #fff;
 
 
-
 //== Code
-//
-//##
 
 $code-color:                  #c7254e;
 $code-bg:                     #f9f2f4;
@@ -801,8 +786,6 @@ $pre-scrollable-max-height:   340px;
 
 
 //== Type
-//
-//##
 
 //** Horizontal offset for forms and lists.
 $component-offset-horizontal: 180px;

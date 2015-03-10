@@ -1,59 +1,62 @@
 //* TABS */
 .tab-pane {
   padding: 15px;
-
 }
-
-// NOTE: no idea what this is, but it broke the tabs
-
-// .tabbable.scroll>.tab-content {
-//   padding: 20px;
-// }
-// .nav-tabs {
-//   border-color: $pb-gray-200;
-//   li {
-//     &.active {
-//       a {
-//         border-color: $pb-gray-200 $pb-gray-200 transparent;
-//       }
-//     }
-//   }
-// }
-//
-// .tab-content {
-//   &.tab-content-bordered {
-//     border: 1px solid $pb-gray-200;
-//     border-top: 0;
-//   }
-// }
-// .thumb-detail h4 {
-//   font-weight: 700;
-// }
-
+.tabbable.scroll>.tab-content {
+  padding: 20px;
+}
+.tab-content {
+  &.tab-content-bordered {
+    border: 1px solid $nav-tabs-border-color;
+    border-top: 0;
+  }
+}
 .nav-tabs {
+  border-color: $nav-tabs-border-color;
   > li {
-    &:active, &.active {
-      > a, > a:hover, > a:focus {
-        color: $brand-primary;
+    &:active,
+    &.active {
+      > a,
+      > a:focus {
+        color: $brand-secondary;
+        border-color: $nav-tabs-border-color $nav-tabs-border-color transparent;
       }
     }
     > a {
       color: $text-color;
       &:hover {
-        background-color: $pb-gray-200;
+        background-color: $nav-link-hover-bg;
+        border-color: transparent transparent $nav-tabs-border-color;
+      }
+    }
+  }
+  &.tabs-left {
+    > li {
+      &:active,
+      &.active {
+        > a,
+        > a:focus {
+          color: $brand-secondary;
+          border-color: $nav-tabs-border-color transparent $nav-tabs-border-color $nav-tabs-border-color;
+        }
+      }
+      > a {
+        color: $text-color;
+        &:hover {
+          background-color: $nav-link-hover-bg;
+          border-color: transparent $nav-tabs-border-color transparent transparent;
+        }
       }
     }
   }
 }
-
 .nav-pills {
   >li {
     > a {
       color: $text-color;
       &:hover {
-        background-color: $pb-gray-200;
+        background-color: $nav-link-hover-bg;
       }
     }
   }
-
-  }
+}

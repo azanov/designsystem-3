@@ -1,37 +1,49 @@
 //*/ Buttons */
 // --------------------------------------------------
 
+//*/ $button-primary-color is set in _variables.scss
+
 .btn-primary {
   @include button-variant(#fff, $button-primary-color, $button-primary-color);
 }
+
 .btn-default {
-  @include outline-button-variant($button-primary-color, transparent, $button-primary-color);
+  @include button-variant($button-primary-color, transparent, $button-primary-color);
 }
+
 .btn-group .btn-default,
 .btn-group-vertical .btn-default {
-  @include tertiary-button-variant($button-tertiary-color, $pb-gray-50, $button-tertiary-color);
+  @include tertiary-button-variant($button-tertiary-color, #fff, $button-tertiary-color);
 }
-.btn-group-borderless .btn-default  {
-  @include tertiary-button-variant($button-tertiary-color, transparent, $button-tertiary-color);
+
+.btn-group-borderless .btn-default {
+  @include tertiary-button-variant($button-tertiary-color, #fff, $button-tertiary-color);
 }
+
 .btn-default-ko {
-  @include outline-button-variant(#fff, transparent, #fff);
+  @include button-variant(#fff, transparent, #fff);
 }
+
 .btn-success {
   @include button-variant(#fff, $brand-success, $brand-success);
 }
+
 .btn-info {
   @include button-variant(#fff, $brand-info, $brand-info);
 }
+
 .btn-warning {
   @include button-variant(#fff, $brand-warning, $brand-warning);
 }
+
 .btn-danger {
   @include button-variant(#fff, $brand-danger, $brand-danger);
 }
+
 .btn {
   font-size: 14px;
 }
+
 // Make a button look and behave like a link
 .btn-link,
 .btn-cancel {
@@ -69,9 +81,6 @@
 // .btn-link:focus, .btn-link:hover {
 //   color: #bc56b7 !important;
 // }
-
-
-
 // -- sizing definitions
 .btn-lg {
   // line-height: ensure even-numbered height of button next to large input
@@ -99,23 +108,12 @@
   background-image: none;
   box-shadow: none;
 }
-
-.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover {
   color: $text-color;
   text-decoration: none;
   background-color: $pb-gray-100;
 }
-
-
-
-
-
-
-
-
-
-
-
 // font awesome icon size overrides in button groups
 .btn-group {
   &-sm {

@@ -11,7 +11,7 @@
 }
 
 .onoffswitch-label {
-  border: 1px solid $pb-gray-300;
+  border: 1px solid $input-border;
   border-radius: 5px;
   cursor: pointer;
   display: block;
@@ -43,15 +43,15 @@
 }
 
 .onoffswitch-inner:before {
-  background-color: $brand-primary;
+  background-color: $brand-secondary;
   color: #fff;
   content: '';
   padding-left: 10px;
 }
 
 .onoffswitch-inner:after {
-  background-color: #f2f2f2;
-  color: #59595a;
+  background-color: $pb-gray-50;
+  color: $pb-gray;
   content: '';
   padding-right: 10px;
   text-align: right;
@@ -60,10 +60,8 @@
 .onoffswitch-switch {
   -webkit-transition: all .3s ease-in 0s;
   transition        : all .3s ease-in 0s;
-  background        : #fff;
-  background-image  : -webkit-linear-gradient(center top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 0) 100%);
-  background-image  : -o-linear-gradient(center top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 0) 100%);
-  border            : 2px solid #e1e1e1;
+   background-color: $pb-gray-50;
+  border            : 1px solid $input-border;
   border-radius     : 5px;
   bottom            : 0;
   display           : block;
