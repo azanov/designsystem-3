@@ -1729,17 +1729,28 @@ footer {
   #footer .row,
   footer .row {
     padding: 40px 0; }
+  #footer ul.social .fa-stack-2x,
+  footer ul.social .fa-stack-2x {
+    font-size: 2.4em;
+    margin-top: -3px; }
+  #footer ul.social .fa-stack-1x,
+  footer ul.social .fa-stack-1x {
+    font-size: 1.2em; }
   #footer ul.social li,
   footer ul.social li {
-    padding: 0; }
+    padding-right: 2px; }
     #footer ul.social li:first-child,
     footer ul.social li:first-child {
-      padding-right: 10px; }
+      padding-right: 10px;
+      display: inline-block; }
+    #footer ul.social li:last-child,
+    footer ul.social li:last-child {
+      padding-right: 0; }
     #footer ul.social li a,
     footer ul.social li a {
       color: #4E4E4e;
-      -webkit-transition: 0.2s color;
-      transition: 0.2s color; }
+      -webkit-transition: 0.2s all;
+      transition: 0.2s all; }
       #footer ul.social li a:hover,
       footer ul.social li a:hover {
         -webkit-transform: scale(1.3);
