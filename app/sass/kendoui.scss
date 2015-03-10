@@ -5,7 +5,7 @@
 
 // slider
 .k-slider-track {
-	background-color: $gray-light;
+	background-color: $pb-gray-200;
 	box-shadow: none;
 }
 .k-slider-selection {
@@ -26,17 +26,17 @@
 	box-shadow: none;
 }
 .k-widget {
-	border-color: $gray;
+	border-color: $pb-gray-300;
 }
 .k-splitbar {
-	background-color: $gray-light;
+	background-color: $pb-gray-200;
 	&:hover  {
-		background-color: $gray;
+		background-color: $pb-gray-300;
 	}
 }
 
 .k-block, .k-widget, .k-popup, .k-content, .k-dropdown .k-input {
-	color: $gray-text;
+	color: $pb-gray;
 }
 
 .k-widget *, .k-animation-container *, .k-widget *:before, .k-animation-container *:after {

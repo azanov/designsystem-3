@@ -7,19 +7,19 @@ a.list-group-item {
   transition        : background-color .3s, color .2s;
   &:hover {
     color           : $link-color-hover;
-    background-color: $gray-xlight;
+    background-color: $pb-gray-50;
   }
   &:first-child {
     border-top-left-radius : 0;
     border-top-right-radius: 0;
   }
   &.active {
-    background-color: $gray-xlight;
-    border-color    : $gray-xlight;
+    background-color: $pb-gray-50;
+    border-color    : $pb-gray-50;
     color           : $link-color;
     &:hover, &:focus {
-      background-color: $gray-light;
-      border-color    : $gray-light;
+      background-color: $pb-gray-200;
+      border-color    : $pb-gray-200;
       color           : $link-color-hover;
     }
     .badge {

@@ -66,7 +66,7 @@
 
     list-style-type: none;
 
-    $accent: lighten(map-get($chord1, color4), 35%);
+    $accent: lighten($brand-primary, 35%);
     > li {
       @extend %ps-regular;
       font-size: 18px;
@@ -134,15 +134,15 @@
 }
 //** * Chord1 */
 #chord1 {
-  @include chord-color($pb-medium-blue $pb-purple $pb-dark-gray $pb-blue $pb-green $pb-light-gray);
+  @include chord-color($pb-medium-blue $pb-purple $pb-gray $pb-blue $pb-green $pb-gray-200);
 }
 
 #chord2{
-  @include chord-color($pb-dark-orange  $pb-medium-blue $pb-dark-gray $pb-blue $pb-yellow $pb-light-gray);
+  @include chord-color($pb-dark-orange  $pb-medium-blue $pb-gray $pb-blue $pb-yellow $pb-gray-200);
 }
 
 #chord3{
-  @include chord-color($pb-dark-green $pb-medium-blue $pb-dark-gray $pb-blue $pb-magenta $pb-light-gray);
+  @include chord-color($pb-dark-green $pb-medium-blue $pb-gray $pb-blue $pb-magenta $pb-gray-200);
 }
 
 
@@ -175,7 +175,7 @@ hr {
 }
 .grid-sample .panel {
   border: 0;
-  border-top: 3px solid $gray;
+  border-top: 3px solid $pb-gray-300;
   border-radius: 0;
 
 }
@@ -352,7 +352,7 @@ p[class^='bg'] {
 }
 //* Color swatches */
 .row-left-border {
-  border-left: 1px solid $gray;
+  border-left: 1px solid $pb-gray-300;
 }
 
 .color-swatches {
@@ -377,11 +377,11 @@ p[class^='bg'] {
     }
   }
   p {
-    font-size: 14px;
+    font-size: 16px;
 
-    color: $gray-text;
+    color: $pb-gray;
     small {
-      font-size: 11px;
+      font-size: 12px;
       line-height: 1.2;
     }
   }
@@ -404,6 +404,7 @@ ul.swatches {
     }
     &:first-child {
       height: 75px;
+      font-size: 18px;
       color: #fff;
       margin-bottom: 5px;
 
@@ -506,14 +507,8 @@ ul.swatches {
   background-color: $brand-warning;
 
 }
-//
-// .gray-dark { background-color    : $gray-dark; }
-// .gray-text { background-color    : $gray-text; }
-// .gray { background-color     		 : $gray; }
-// .gray-light { background-color   : $gray-light; }
-// .gray-disabled { background-color: $gray-disabled; }
-// .link-hover { background-color   : $link-color-hover; }
-// .link-disabled { background-color: $link-color-disabled; }
+
+
 
 .chart-green {
   background-color: $chart-green;
@@ -554,22 +549,22 @@ ul.swatches {
   background-color: $blue6;
 }
 .gray1 {
-  background-color: $gray1;
+  background-color: $pb-gray;
 }
 .gray2 {
-  background-color: $gray2;
+  background-color: $pb-gray-400;
 }
 .gray3 {
-  background-color: $gray3;
+  background-color: $pb-gray-300;
 }
 .gray4 {
-  background-color: $gray4;
+  background-color: $pb-gray-200;
 }
 .gray5 {
-  background-color: $gray5;
+  background-color: $pb-gray-100;
 }
 .gray6 {
-  background-color: $gray6;
+  background-color: $pb-gray-50;
 
 }
 //* panels page */
@@ -587,7 +582,7 @@ ul.swatches {
 
       padding-right: 0.3em;
 
-      color: $gray-text;
+      color: $pb-gray;
       background-color: #fff;
     }
     &:before {
@@ -598,7 +593,7 @@ ul.swatches {
       content: '..........................................';
       white-space: nowrap;
 
-      color: $gray;
+      color: $pb-gray-300;
     }
 
   }

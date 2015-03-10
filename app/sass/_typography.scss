@@ -91,7 +91,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid $gray;
+  border-top: 1px solid $pb-gray-300;
 }
 
 a {
@@ -123,7 +123,7 @@ h2, h2 a,
 h3, h3 a {
   @extend %ps-regular;
   font-variant-ligatures: common-ligatures;
-  color: map-get($chord, color1);
+  color: $brand-primary;
 }
 
 h4, h4 a,
@@ -226,7 +226,7 @@ ol {
 label {
   font-size: 14px;
   font-weight: normal;
-  color: $gray-text;
+  color: $pb-gray;
 }
 
 

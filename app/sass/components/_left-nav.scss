@@ -49,19 +49,19 @@
         .menu-heading {
             -webkit-transition: none;
             transition        : none;
-            background-color  : $gray-light;
+            background-color  : $pb-gray-200;
             width             : 200px;
         }
 
         .menu-title {
           display: inline-block !important;
-          background-color: $gray-light;
+          background-color: $pb-gray-200;
           font-weight: 700;
         }
         .menu-content {
           -webkit-transition: all .3s;
           transition        : all .3s;
-          background-color  : $gray-light;
+          background-color  : $pb-gray-200;
           position          : absolute;
           width             : 165px;
           left              : 45px;
@@ -105,7 +105,7 @@
     li {
       white-space: nowrap;
       &:hover {
-        background: $gray-light;
+        background: $pb-gray-200;
         color: $brand-primary;
       }
       a {

@@ -42,8 +42,8 @@ th.centered {
 .table thead th {
   font-family: $font-family-sans-serif;
   font-weight: normal;
-  color: map-get($chord, color1);
-  border-bottom-color: map-get($chord, color1);
+  color: $brand-primary;
+  border-bottom-color: $brand-primary;
   border-bottom-width: 1px;
 }
 .table > tbody > tr > td,

@@ -1,5 +1,5 @@
 .bs-wizard {
-  $track-color: $gray;
+  $track-color: $pb-gray-300;
   $dot-color: $text-color;
   $bar-height: 8px;
   $offset: 1.75; // amount larger the dots should be than bar
@@ -21,7 +21,7 @@
             width: $dot-size;
             height: $dot-size;
             display: block;
-            background: darken($gray, 10%);
+            background: darken($pb-gray-300, 10%);
             top: -(($dot-size/2)-($bar-height/2));
             left: 55%;
             margin-left: -$dot-size;

@@ -1,5 +1,5 @@
 .selectize-input {
-  border-color: $gray;
+  border-color: $pb-gray-300;
 }
 
 
@@ -7,7 +7,7 @@
   .selectize-control {
     .selectize-input {
       overflow: initial;
-      border-color: $gray;
+      border-color: $pb-gray-300;
       @include flat-right;
     }
 
@@ -48,5 +48,5 @@
   }
 }
 .selectize-control.single .selectize-input  {
-  border-color: $gray;
+  border-color: $pb-gray-300;
 }

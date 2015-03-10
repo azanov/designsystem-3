@@ -4,7 +4,7 @@
       border-radius: 4px 4px 0 0;
       cursor: move;
       &:active {
-        background-color: $pb-light-gray;
+        background-color: $pb-gray-200;
       }
     }
   }
@@ -59,7 +59,7 @@
     position: absolute;
     top: 15%;
     right: 0;
-    background: map-get($chord, color4);
+    background: $brand-accent;
     font-size: 10px;
     color: #fff;
     font-weight: 700;
@@ -93,14 +93,14 @@
 //   @include contextual-box($state-danger-bg, $state-danger-text);
 // }
 // blockquote {
-//   border-left: 4px solid $pb-light-gray;
+//   border-left: 4px solid $pb-gray-200;
 // }
 
 //* CALLOUTS (from the BS docs, but useful) */
 .callout {
   margin: 20px 0;
   padding: 20px;
-  border-left: 4px solid $pb-light-gray;
+  border-left: 4px solid $pb-gray-200;
   &.callout-info {
     background-color: $state-info-bg;
     border-color: $state-info-border;

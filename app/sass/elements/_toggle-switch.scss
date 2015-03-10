@@ -1,27 +1,27 @@
 
 // toggle switch
 .ats-switch {
-  border-color: $gray-xlight;
+  border-color: $pb-gray-50;
 }
 
 .switch {
-    border-color: $gray-xlight;
+    border-color: $pb-gray-50;
     -o-border-radius: 5px;
     border-radius: 5px;
     * {
         background-image: none !important;;
     }
     .knob {
-        background-color: $gray-light;
-        border-color: $gray;
+        background-color: $pb-gray-200;
+        border-color: $pb-gray-300;
       }
     .switch-left {
         background-color: $brand-primary;
-        border-color: $gray;
+        border-color: $pb-gray-300;
     }
     .switch-right {
-        background-color: $gray-lighter;
-        border-color: $gray;
+        background-color: $pb-gray-100;
+        border-color: $pb-gray-300;
     }
     &.disabled {
       opacity: .55;

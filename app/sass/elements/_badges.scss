@@ -1,13 +1,13 @@
 .badge {
-  background-color: map-get($chord, color4);
+  background-color: $brand-accent;
 }
 
 //* badge contextual alternatives */
 $badges: (
-  'gray': $gray,
-  'gray-light': $gray-light,
-  'gray-text': $gray-text,
-  'gray-dark': $gray-dark,
+  'gray': $pb-gray-300,
+  'gray-light': $pb-gray-200,
+  'gray-text': $pb-gray,
+  'gray-dark': $pb-gray,
   'brand-success':         $brand-success,
   'brand-info':            $brand-info,
   'brand-warning':         $brand-warning,

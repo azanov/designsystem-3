@@ -21,11 +21,11 @@ header {
     .container .navbar-brand {
       padding: 15px 0;
       margin-left: 0;
-      color: map-get($chord, color1);
+      color: $brand-secondary;
       font-weight: 700;
       a { color: inherit; }
       &.brand-text {
-        color:map-get($chord, color1);
+        color:$brand-secondary;
         font-weight: 700;
         margin-right: 20px;
         a { color: inherit; }
@@ -52,7 +52,7 @@ header {
       -webkit-border-radius: 0;
       -moz-border-radius: 0;
       border-radius: 0;
-      border-bottom: 1px solid $brand-primary;
+      border-bottom: 1px solid $brand-secondary;
       // no color behind top-level items when open
       .open a {
         background-color: transparent;
@@ -71,7 +71,7 @@ header {
         }
       }
       .dropdown-menu {
-        background-color: $gray-lighter;
+        background-color: $pb-gray-100;
         border: 0;
         margin-top: 1px;
         //enough to clear the rule below header
@@ -83,7 +83,7 @@ header {
           height: 1px;
           margin: 9px 20px;
           overflow: hidden;
-          background-color: $gray;
+          background-color: $pb-gray-300;
         }
         > li {
           > a {
@@ -91,7 +91,7 @@ header {
             padding: 6px 20px;
             font-weight: normal;
             line-height: 1.4;
-            color: $text-color-dark;
+            color: $text-color;
             font-size: 16px;
             white-space: nowrap;
             font-family: $font-family-sans-serif;

@@ -37,7 +37,7 @@ div.accordion-group {
         &:before {
             display           : inline-block;
             margin-right      : 5px;
-            color             : $gray-text;
+            color             : $pb-gray;
             -webkit-transition: all .2s;
             transition        : all .2s;
             @include triangle-closed;
@@ -76,7 +76,7 @@ div.accordion-group {
   &:before {
     display           : inline-block;
     margin-right      : 5px;
-    color             : $gray-text;
+    color             : $pb-gray;
     -webkit-transition: all .2s;
     transition        : all .2s;
     @include triangle-closed;

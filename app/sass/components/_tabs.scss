@@ -10,11 +10,11 @@
 //   padding: 20px;
 // }
 // .nav-tabs {
-//   border-color: $pb-light-gray;
+//   border-color: $pb-gray-200;
 //   li {
 //     &.active {
 //       a {
-//         border-color: $pb-light-gray $pb-light-gray transparent;
+//         border-color: $pb-gray-200 $pb-gray-200 transparent;
 //       }
 //     }
 //   }
@@ -22,7 +22,7 @@
 //
 // .tab-content {
 //   &.tab-content-bordered {
-//     border: 1px solid $pb-light-gray;
+//     border: 1px solid $pb-gray-200;
 //     border-top: 0;
 //   }
 // }
@@ -34,13 +34,13 @@
   > li {
     &:active, &.active {
       > a, > a:hover, > a:focus {
-        color: map-get($chord, color1);
+        color: $brand-primary;
       }
     }
     > a {
       color: $text-color;
       &:hover {
-        background-color: $gray-light;
+        background-color: $pb-gray-200;
       }
     }
   }
@@ -51,7 +51,7 @@
     > a {
       color: $text-color;
       &:hover {
-        background-color: $gray-light;
+        background-color: $pb-gray-200;
       }
     }
   }

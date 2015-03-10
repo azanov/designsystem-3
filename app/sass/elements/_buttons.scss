@@ -9,7 +9,7 @@
 }
 .btn-group .btn-default,
 .btn-group-vertical .btn-default {
-  @include tertiary-button-variant($button-tertiary-color, $gray-xlight, $button-tertiary-color);
+  @include tertiary-button-variant($button-tertiary-color, $pb-gray-50, $button-tertiary-color);
 }
 .btn-group-borderless .btn-default  {
   @include tertiary-button-variant($button-tertiary-color, transparent, $button-tertiary-color);
@@ -103,7 +103,7 @@
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
   color: $text-color;
   text-decoration: none;
-  background-color: $gray-lighter;
+  background-color: $pb-gray-100;
 }
 
 

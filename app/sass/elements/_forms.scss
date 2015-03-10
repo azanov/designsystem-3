@@ -6,7 +6,7 @@
   height: 100px;
   label {
     margin-bottom: 0;
-    color: $gray-text;
+    color: $pb-gray;
   }
   .ms-checkboxitem {
     margin-bottom: 2px;
@@ -22,11 +22,11 @@
 fieldset {
   margin-top: 40px;
   legend {
-    color: map-get($chord, color1);
+    color: $brand-primary;
   }
 }
 .form-control {
-  border: 1px solid $gray;
+  border: 1px solid $pb-gray-300;
   box-shadow: none;
 }
 select[disabled] {
@@ -72,8 +72,8 @@ fieldset[disabled] .form-control.timepicker {
 
     text-align: center;
 
-    color: $gray-text;
-    border: 1px solid $gray;
+    color: $pb-gray;
+    border: 1px solid $pb-gray-300;
     border-radius: $border-radius-base;
     background-color: #fff;
     // when the add-on is on the left

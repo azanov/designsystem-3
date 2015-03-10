@@ -144,9 +144,9 @@ hr {
   border-top: 1px solid #9b9b9b; }
 
 a {
-  color: #3e53a4; }
+  color: #0082d5; }
   a:hover {
-    color: tint(#3e53a4, 20%); }
+    color: tint(#0082d5, 20%); }
   a.read-more {
     font-size: 12px;
     white-space: nowrap; }
@@ -177,14 +177,14 @@ h2, h2 a,
 h3, h3 a {
   -webkit-font-variant-ligatures: common-ligatures;
           font-variant-ligatures: common-ligatures;
-  color: #0082d5; }
+  color: #a03f9b; }
 
 h4, h4 a,
 h5, h5 a,
 h6, h6 a {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
-  color: #4e4e4e; }
+  color: #4E4E4e; }
 
 p.lead,
 p.lede {
@@ -197,7 +197,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #4e4e4e; }
+  color: #4E4E4e; }
   body .has-error {
     color: #cc0000; }
 
@@ -225,12 +225,12 @@ ol {
   outline: none !important; }
 
 .fa-active {
-  color: #0082d5; }
+  color: #a03f9b; }
 
 label {
   font-size: 14px;
   font-weight: normal;
-  color: #4e4e4e; }
+  color: #4E4E4e; }
 
 .panel-heading td,
 .panel-heading th {
@@ -281,10 +281,10 @@ cite {
   text-align: justify; }
 
 .text-primary {
-  color: #0082d5; }
+  color: #a03f9b; }
 
 .text-muted {
-  color: silver; }
+  color: #c0c0c0; }
 
 .text-success {
   color: #3c763d; }
@@ -345,9 +345,9 @@ cite {
       font-size: 18px;
       margin-top: 30px;
       padding-top: 10px;
-      border-top: 1px solid #b2bce2; }
+      border-top: 1px solid #e0b1de; }
       .hero .hero-menu > li a {
-        color: #b2bce2; }
+        color: #e0b1de; }
         .hero .hero-menu > li a:hover {
           text-decoration: none; }
       .hero .hero-menu > li ul {
@@ -377,8 +377,8 @@ cite {
   color: #a03f9b;
   fill: #a03f9b; }
 #chord1 .color3 {
-  color: #4e4e4e;
-  fill: #4e4e4e; }
+  color: #4E4E4e;
+  fill: #4E4E4e; }
 #chord1 .color4 {
   color: #3e53a4;
   fill: #3e53a4; }
@@ -386,8 +386,8 @@ cite {
   color: #72bf44;
   fill: #72bf44; }
 #chord1 .color6 {
-  color: silver;
-  fill: silver; }
+  color: #c0c0c0;
+  fill: #c0c0c0; }
 
 #chord2 .color1 {
   color: #ee6b0b;
@@ -396,8 +396,8 @@ cite {
   color: #0082d5;
   fill: #0082d5; }
 #chord2 .color3 {
-  color: #4e4e4e;
-  fill: #4e4e4e; }
+  color: #4E4E4e;
+  fill: #4E4E4e; }
 #chord2 .color4 {
   color: #3e53a4;
   fill: #3e53a4; }
@@ -405,8 +405,8 @@ cite {
   color: #edb700;
   fill: #edb700; }
 #chord2 .color6 {
-  color: silver;
-  fill: silver; }
+  color: #c0c0c0;
+  fill: #c0c0c0; }
 
 #chord3 .color1 {
   color: #00b140;
@@ -415,8 +415,8 @@ cite {
   color: #0082d5;
   fill: #0082d5; }
 #chord3 .color3 {
-  color: #4e4e4e;
-  fill: #4e4e4e; }
+  color: #4E4E4e;
+  fill: #4E4E4e; }
 #chord3 .color4 {
   color: #3e53a4;
   fill: #3e53a4; }
@@ -424,8 +424,8 @@ cite {
   color: #cf0989;
   fill: #cf0989; }
 #chord3 .color6 {
-  color: silver;
-  fill: silver; }
+  color: #c0c0c0;
+  fill: #c0c0c0; }
 
 section.row {
   margin-bottom: 60px; }
@@ -592,10 +592,10 @@ p[class^='bg'] {
       width: 33px;
       height: 33px; }
   .color-swatches p {
-    font-size: 14px;
-    color: #4e4e4e; }
+    font-size: 16px;
+    color: #4E4E4e; }
     .color-swatches p small {
-      font-size: 11px;
+      font-size: 12px;
       line-height: 1.2; }
 
 ul.swatches {
@@ -613,6 +613,7 @@ ul.swatches {
       opacity: .4; }
     ul.swatches li.color-swatch:first-child {
       height: 75px;
+      font-size: 18px;
       color: #fff;
       margin-bottom: 5px; }
     ul.swatches li.color-swatch:nth-child(n+6) {
@@ -662,7 +663,7 @@ ul.swatches {
   clear: left; }
 
 .brand-primary {
-  background-color: #0082d5; }
+  background-color: #a03f9b; }
 
 .brand-success {
   background-color: #5cb85c; }
@@ -713,22 +714,22 @@ ul.swatches {
   background-color: #c5cbe4; }
 
 .gray1 {
-  background-color: #414141; }
+  background-color: #4E4E4e; }
 
 .gray2 {
-  background-color: #4e4e4e; }
+  background-color: #717171; }
 
 .gray3 {
-  background-color: #686868; }
-
-.gray4 {
-  background-color: #818181; }
-
-.gray5 {
   background-color: #9b9b9b; }
 
+.gray4 {
+  background-color: #c0c0c0; }
+
+.gray5 {
+  background-color: #dbdbdb; }
+
 .gray6 {
-  background-color: silver; }
+  background-color: #f0f0f0; }
 
 .list-group-details .form-group {
   margin-bottom: 0; }
@@ -739,7 +740,7 @@ ul.swatches {
   .list-group-details .control-label strong {
     font-weight: normal;
     padding-right: 0.3em;
-    color: #4e4e4e;
+    color: #4E4E4e;
     background-color: #fff; }
   .list-group-details .control-label:before {
     float: left;

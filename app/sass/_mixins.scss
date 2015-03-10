@@ -217,7 +217,7 @@ $grid-column-padding: 15px;
   &.active,
   .open > &.dropdown-toggle {
     color: #fff;
-    background-color: $pb-medium-gray;
+    background-color: $pb-gray-300;
         border-color: $color;
         &:hover {
           color: #fff;
