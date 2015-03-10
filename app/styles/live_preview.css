@@ -598,6 +598,26 @@ p[class^='bg'] {
       font-size: 11px;
       line-height: 1.2; }
 
+ul.swatches {
+  margin: 10px 0 30px;
+  padding-left: 0; }
+  ul.swatches li.color-swatch {
+    height: 30px;
+    margin-bottom: 0;
+    text-align: right;
+    padding: 5px 10px;
+    color: #000; }
+    ul.swatches li.color-swatch span {
+      display: inline-block;
+      float: left;
+      opacity: .4; }
+    ul.swatches li.color-swatch:first-child {
+      height: 75px;
+      color: #fff;
+      margin-bottom: 5px; }
+    ul.swatches li.color-swatch:nth-child(n+6) {
+      color: #fff; }
+
 .color-chart-nested {
   position: relative;
   float: left;

@@ -3,35 +3,34 @@
   <div class="row">
     <!-- title -->
     <div class="col-md-12">
-
       <!-- breadcrumb -->
-      <ol class="breadcrumb">
+      <!-- <ol class="breadcrumb">
         <li><a href="#/">Home</a></li>
         <li class="active">Elements</li>
-      </ol>
+      </ol> -->
       <h1 class="page-header">Elements</h1>
-
     </div>
   </div>
 
   <div class="row">
 
     <!-- left column -->
-    <div class="col-md-2 col-sm-3">
+    <div class="col-md-2 col-sm-2">
       <div class="list-group left-nav">
-        <a ng-href="#/elements?section={{l.label}}" class="list-group-item" ng-repeat="l in subnav.children | orderBy: 'label'" ng-class="{'active': l.label == submenu}" ng-click="select(l.label)">{{l.label}}</a>
+        <a ng-href="#/elements?section={{l.label}}" class="list-group-item" ng-repeat="l in subnav.children" ng-class="{'active': l.label == submenu}" ng-click="select(l.label)">{{l.label}}</a>
       </div>
     </div>
 
 
     <!-- right column -->
-    <div class="col-md-10 col-sm-9">
+    <div class="col-md-10 col-sm-10">
 
       <div ng-switch on="submenu">
         <div ng-switch-when="Alerts"><div ng-include="'partials/elements/alerts.html'"></div></div>
         <div ng-switch-when="Buttons"><div ng-include="'partials/elements/buttons.html'"></div></div>
-        <!-- <div ng-switch-when="Carousel"><div ng-include="'partials/elements/carousel.html'"></div></div> -->
-        <div ng-switch-when="Colors"><div ng-include="'partials/elements/colors.html'"></div></div>
+        <div ng-switch-when="Color Swatches"><div ng-include="'partials/elements/colors.html'"></div></div>
+        <div ng-switch-when="Color Usage"><div ng-include="'partials/elements/colorusage.html'"></div></div>
+        <div ng-switch-when="Chart Colors"><div ng-include="'partials/elements/chartcolors.html'"></div></div>
         <div ng-switch-when="Grid"><div ng-include="'partials/elements/grid.html'"></div></div>
         <div ng-switch-when="Icons"><div ng-include="'partials/elements/icons.html'"></div></div>
         <div ng-switch-when="Images"><div ng-include="'partials/elements/images.html'"></div></div>

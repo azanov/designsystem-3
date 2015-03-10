@@ -354,6 +354,7 @@ p[class^='bg'] {
 .row-left-border {
   border-left: 1px solid $gray;
 }
+
 .color-swatches {
   margin-bottom: 20px;
   .color-swatch-container {
@@ -361,7 +362,6 @@ p[class^='bg'] {
   }
   .color-swatch {
     display: block;
-
     width: 100%;
     // set them to use the BS grid
     height: 72px;
@@ -372,11 +372,9 @@ p[class^='bg'] {
     }
     &.color-swatch-small {
       display: inline-block;
-
       width: 33px;
       height: 33px;
     }
-
   }
   p {
     font-size: 14px;
@@ -387,8 +385,38 @@ p[class^='bg'] {
       line-height: 1.2;
     }
   }
-
 }
+
+// march 2015, changes swatches for main colors into lists of tints
+ul.swatches {
+  margin: 10px 0 30px;
+  padding-left: 0;
+  li.color-swatch {
+    height: 30px;
+    margin-bottom: 0;
+    text-align: right;
+    padding: 5px 10px;
+    color: #000;
+    span {
+      display: inline-block;
+      float: left;
+      opacity: .4;
+    }
+    &:first-child {
+      height: 75px;
+      color: #fff;
+      margin-bottom: 5px;
+
+    }
+    &:nth-child(n+6) {
+      color: #fff;
+    }
+  }
+}
+
+
+
+
 //* color charts */
 .color-chart-nested {
   position: relative;
