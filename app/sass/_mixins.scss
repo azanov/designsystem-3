@@ -178,18 +178,18 @@ $grid-column-padding: 15px;
   &.active,
   .open > &.dropdown-toggle {
     color: #fff;
-    background-color: $color;
-        border-color: $color;
+    background-color: $pb-gray-300;
+        border-color: $border;
         &:hover {
           color: #fff;
-          background-color: $color;
-          border-color: $color;
+          background-color: $pb-gray-400;
+          border-color: $border;
         }
   }
   &:hover {
     color: $color;
-    background-color: shade($background, 90%);
-        border-color: lighten($border, 12%);
+    background-color: $pb-gray-50;
+        border-color: $border;
   }
   &:active,
   &.active,

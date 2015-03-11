@@ -51,26 +51,9 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="callout callout-info">
-        <p class="help-text">
-          <strong>Note:</strong> Desktop and tablet only, height of panel-group must be set.</p>
-
-        <form class="form-inline" name="panel" no-validate>
-          <div class="form-group" ng-class="{'has-error': panel.height.$error.min || panel.height.$error.max}">
-            <span>Change height:&nbsp;</span>
-            <input class="form-control" name="height" style="display: inline-block; width: 70px;" type="number" min="150" max="400" step="25" ng-model="panelHeight" ng-init="panelHeight=200" />
-            <span ng-show="panel.height.$error.min">&nbsp;Height must be a minimum of 150.</span>
-            <span ng-show="panel.height.$error.max">&nbsp;Height must be a maximum of 400.</span>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
 
   <!-- miller columns with spectrum data -->
-  <section class="row miller-columns" ng-style="{height:panelHeight}">
+  <div class="row miller-columns" style="height:200px;">
 
     <!-- top level -->
     <div class="col-xs-4 first-column">
@@ -133,9 +116,27 @@
       </div>
     </div>
 
-  </section>
+  </div>
 
 
+
+
+  <div class="row spacer-bottom-lg">
+    <div class="col-xs-12">
+      <div class="callout callout-info">
+        <p class="help-text">
+          <strong>Note:</strong> Miller Columns above are desktop and tablet only, height of panel-group must be a set value.</p>
+        <!-- <form class="form-inline" name="panel" no-validate>
+          <div class="form-group" ng-class="{'has-error': panel.height.$error.min || panel.height.$error.max}">
+            <span>Change height:&nbsp;</span>
+            <input class="form-control" name="height" style="display: inline-block; width: 70px;" type="number" min="150" max="400" step="25" ng-model="panelHeight" ng-init="panelHeight=200" />
+            <span ng-show="panel.height.$error.min">&nbsp;Height must be a minimum of 150.</span>
+            <span ng-show="panel.height.$error.max">&nbsp;Height must be a maximum of 400.</span>
+          </div>
+        </form> -->
+      </div>
+    </div>
+  </div>
 
 
 

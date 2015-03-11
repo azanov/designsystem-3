@@ -435,7 +435,7 @@ cite {
 .btn-group-vertical .btn-default {
   color: #4E4E4e;
   background-color: #fff;
-  border-color: #4E4E4e; }
+  border-color: #9b9b9b; }
   .btn-group .btn-default:focus, .btn-group .btn-default.focus, .btn-group .btn-default:active, .btn-group .btn-default.active, .open > .btn-group .btn-default.dropdown-toggle,
   .btn-group-vertical .btn-default:focus,
   .btn-group-vertical .btn-default.focus,
@@ -443,8 +443,8 @@ cite {
   .btn-group-vertical .btn-default.active, .open >
   .btn-group-vertical .btn-default.dropdown-toggle {
     color: #fff;
-    background-color: #4E4E4e;
-    border-color: #4E4E4e; }
+    background-color: #9b9b9b;
+    border-color: #9b9b9b; }
     .btn-group .btn-default:focus:hover, .btn-group .btn-default.focus:hover, .btn-group .btn-default:active:hover, .btn-group .btn-default.active:hover, .open > .btn-group .btn-default.dropdown-toggle:hover,
     .btn-group-vertical .btn-default:focus:hover,
     .btn-group-vertical .btn-default.focus:hover,
@@ -452,13 +452,13 @@ cite {
     .btn-group-vertical .btn-default.active:hover, .open >
     .btn-group-vertical .btn-default.dropdown-toggle:hover {
       color: #fff;
-      background-color: #4E4E4e;
-      border-color: #4E4E4e; }
+      background-color: #717171;
+      border-color: #9b9b9b; }
   .btn-group .btn-default:hover,
   .btn-group-vertical .btn-default:hover {
     color: #4E4E4e;
-    background-color: #e5e5e5;
-    border-color: #6d6d6d; }
+    background-color: #f0f0f0;
+    border-color: #9b9b9b; }
   .btn-group .btn-default:active, .btn-group .btn-default.active, .open > .btn-group .btn-default.dropdown-toggle,
   .btn-group-vertical .btn-default:active,
   .btn-group-vertical .btn-default.active, .open >
@@ -484,29 +484,29 @@ cite {
   .btn-group-vertical .btn-default:active, fieldset[disabled]
   .btn-group-vertical .btn-default.active {
     background-color: #fff;
-    border-color: #4E4E4e; }
+    border-color: #9b9b9b; }
 
 .btn-group-borderless .btn-default {
   color: #4E4E4e;
   background-color: #fff;
-  border-color: #4E4E4e; }
+  border-color: #9b9b9b; }
   .btn-group-borderless .btn-default:focus, .btn-group-borderless .btn-default.focus, .btn-group-borderless .btn-default:active, .btn-group-borderless .btn-default.active, .open > .btn-group-borderless .btn-default.dropdown-toggle {
     color: #fff;
-    background-color: #4E4E4e;
-    border-color: #4E4E4e; }
+    background-color: #9b9b9b;
+    border-color: #9b9b9b; }
     .btn-group-borderless .btn-default:focus:hover, .btn-group-borderless .btn-default.focus:hover, .btn-group-borderless .btn-default:active:hover, .btn-group-borderless .btn-default.active:hover, .open > .btn-group-borderless .btn-default.dropdown-toggle:hover {
       color: #fff;
-      background-color: #4E4E4e;
-      border-color: #4E4E4e; }
+      background-color: #717171;
+      border-color: #9b9b9b; }
   .btn-group-borderless .btn-default:hover {
     color: #4E4E4e;
-    background-color: #e5e5e5;
-    border-color: #6d6d6d; }
+    background-color: #f0f0f0;
+    border-color: #9b9b9b; }
   .btn-group-borderless .btn-default:active, .btn-group-borderless .btn-default.active, .open > .btn-group-borderless .btn-default.dropdown-toggle {
     background-image: none; }
   .btn-group-borderless .btn-default.disabled, .btn-group-borderless .btn-default.disabled:hover, .btn-group-borderless .btn-default.disabled:focus, .btn-group-borderless .btn-default.disabled.focus, .btn-group-borderless .btn-default.disabled:active, .btn-group-borderless .btn-default.disabled.active, .btn-group-borderless .btn-default[disabled], .btn-group-borderless .btn-default[disabled]:hover, .btn-group-borderless .btn-default[disabled]:focus, .btn-group-borderless .btn-default[disabled].focus, .btn-group-borderless .btn-default[disabled]:active, .btn-group-borderless .btn-default[disabled].active, fieldset[disabled] .btn-group-borderless .btn-default, fieldset[disabled] .btn-group-borderless .btn-default:hover, fieldset[disabled] .btn-group-borderless .btn-default:focus, fieldset[disabled] .btn-group-borderless .btn-default.focus, fieldset[disabled] .btn-group-borderless .btn-default:active, fieldset[disabled] .btn-group-borderless .btn-default.active {
     background-color: #fff;
-    border-color: #4E4E4e; }
+    border-color: #9b9b9b; }
 
 .btn-default-ko {
   color: #fff;
@@ -1865,17 +1865,17 @@ header {
           color: #0072b8; }
       #header .navbar.navbar-default .dropdown-menu,
       header .navbar.navbar-default .dropdown-menu {
-        background-color: #dbdbdb;
+        background-color: #f0f0f0;
         border: 0;
         margin-top: 1px;
         border-radius: 0;
-        box-shadow: none; }
+        box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.3); }
         #header .navbar.navbar-default .dropdown-menu .divider,
         header .navbar.navbar-default .dropdown-menu .divider {
           height: 1px;
           margin: 9px 20px;
           overflow: hidden;
-          background-color: #9b9b9b; }
+          background-color: #c0c0c0; }
         #header .navbar.navbar-default .dropdown-menu > li > a,
         header .navbar.navbar-default .dropdown-menu > li > a {
           padding: 6px 20px;
@@ -2287,6 +2287,41 @@ th.currency {
   font-size: 14px; }
   .breadcrumb + h1 {
     margin-top: 0; }
+
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+  cursor: pointer; }
+
+ul[datepicker-popup-wrap] {
+  padding: 15px 10px; }
+  ul[datepicker-popup-wrap] table:focus {
+    outline: none; }
+  ul[datepicker-popup-wrap] thead tr th button {
+    border: 0; }
+  ul[datepicker-popup-wrap] tbody tr td {
+    padding-right: 1px;
+    padding-left: 1px; }
+    ul[datepicker-popup-wrap] tbody tr td button {
+      border: 0; }
+      ul[datepicker-popup-wrap] tbody tr td button.active {
+        background: #a03f9b; }
+        ul[datepicker-popup-wrap] tbody tr td button.active span {
+          color: #fff; }
+
+table[timepicker] tbody tr td {
+  padding-left: 3px;
+  padding-right: 3px; }
+  table[timepicker] tbody tr td input {
+    padding: 0; }
+.dropdown-menu table[timepicker] {
+  margin: 10px; }
+
+.tab-content-bordered .tab-content {
+  border: 1px solid #c0c0c0;
+  border-top: 0;
+  border-radius: 0 0 4px 4px; }
 
 .container-fluid {
   padding-left: 40px;

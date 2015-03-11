@@ -11,8 +11,8 @@
     <h1 class="page-header">UI Bootstrap <span class="more-info"><a href="http://angular-ui.github.io/bootstrap" target="_blank">More Info <i class="fa fa-external-link"></i></a></span></h1>
 
     <div class="callout callout-info">
-      <p>UI Bootstrap (<a href="http://angular-ui.github.io/bootstrap/" target="_blank">more info</a>) is a set of native AngularJS directives based on Bootstrap's markup and CSS. This page demonstrates several of those components adapted to the look and feel of the Design System.  All of these items also exist in the Design System as "plain" Bootstrap/Angular, and those are recommended over these.</p>
-      <p>The angular-ui bootstrap components require the <code>design_system_bootstrap_ui.css</code> stylesheet to be included in your project.  <br>See <code>index.html</code> code comments for details. </p>
+      <p>UI Bootstrap (<a href="http://angular-ui.github.io/bootstrap/" target="_blank">more info</a>) is a set of native AngularJS directives based on Bootstrap's markup and CSS. This page demonstrates several of those components adapted to the look and feel of the Design System.  All of these items also exist in the Design System as "plain" Bootstrap.</p>
+
       <p>Due to limitations in the bootstrap-ui directives and templates, additional classes may be required on components for proper styling <br>using <code>ng-class</code>. Some variations of components may not be available and are noted in the examples below.</p>
     </div>
 
@@ -23,7 +23,7 @@
 <!-- MODAL -->
 <section class="row">
 
-  <div class="col-xs-12">
+  <div class="col-md-12">
 
     <h4 class="sh">Dialogs</h4>
 
@@ -42,10 +42,10 @@
 <!-- DATE PICKER -->
 <section class="row">
 
-  <div class="col-xs-12">
+  <div class="col-md-12">
     <h4 class="sh">Date picker</h4>
 
-    <div class="input-group col-xs-4">
+    <div class="input-group col-md-4">
       <input type="text" class="form-control" datepicker-popup="{{calendar.format}}" ng-model="dt" is-open="calendar.opened" datepicker-options="{{calendar.options}}" close-text="Close" show-button-bar="false" ng-click="calendar.open($event)" />
       <span class="input-group-btn">
         <button type="button" class="btn btn-default" ng-click="calendar.open($event)"><i class="fa fa-calendar"></i></button>
@@ -59,10 +59,10 @@
 
 <!-- TIMEPICKER -->
 <section class="row">
-  <div class="col-xs-12">
+  <div class="col-md-12">
     <h4 class="sh">Time picker</h4>
 
-    <div class="input-group col-xs-3">
+    <div class="input-group col-md-3">
       <input type="text" class="form-control" value="{{mytime | date:'shortTime' }}" readonly />
       <span class="input-group-btn" dropdown>
         <button type="button" class="btn btn-default dropdown-toggle"><i class="fa fa-clock-o"></i></button>
@@ -70,7 +70,6 @@
             <div ng-model="mytime" show-meridian="true" timepicker></div>
           </div>
       </span>
-
     </div>
 
   </div>
@@ -81,12 +80,12 @@
 
 <!-- TABS -->
 <section class="row">
-  <div class="col-xs-12">
+  <div class="col-md-12">
     <h4 class="sh">Tabs</h4>
 
       <section class="row">
 
-        <div class="col-xs-6">
+        <div class="col-md-6">
           <tabset>
             <tab heading="Static title">Static content</tab>
             <tab ng-repeat="tab in tabs.tabset01" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
@@ -101,7 +100,7 @@
           </tabset>
         </div>
 
-        <div class="col-xs-6">
+        <div class="col-md-6">
           <tabset ng-class="'tab-content-bordered'">
             <tab heading="Static title">Static content</tab>
             <tab ng-repeat="tab in tabs.tabset02" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
@@ -120,13 +119,13 @@
 
       <div class="row">
 
-        <div class="col-xs-6">
+        <div class="col-md-6">
           <div class="callout callout-danger">
-            <p>"Vertical tabs" are not supported in UI Bootstrap. See <a href="http://guxstaging.pbi.global.pvt/design_system/#/tabs">here</a>.</p>
+            <div>"Vertical tabs" are not supported in UI Bootstrap. <a href="http://guxstaging.pbi.global.pvt/design_system/#/tabs">Use Bootstrap tabs</a>.</div>
           </div>
         </div>
 
-        <div class="col-xs-6">
+        <div class="col-md-6">
           <tabset type="pills">
             <tab heading="Static title">Static content</tab>
             <tab ng-repeat="tab in tabs.tabset03" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">

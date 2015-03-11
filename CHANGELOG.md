@@ -1,5 +1,12 @@
 ##Release Notes
 
+###1.3.0 March 11,2015
+- New color assignments, based on a 5-color "chord 1"
+- Normalized colors of all items, such as form fields, buttons, panels, etc.
+- Removed a lot of non-Bootstrap css to use defaults wherever possible
+- Integrated UI-Bootstrap overrides into DS css.
+- Updated a couple of Bower components.
+
 ###1.2.0 Feb 20,2015
 - Added "sign-in screen"
 - fixed button hovers to lighten button instead of darken

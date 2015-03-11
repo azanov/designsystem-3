@@ -13,11 +13,11 @@
 
 .btn-group .btn-default,
 .btn-group-vertical .btn-default {
-  @include tertiary-button-variant($button-tertiary-color, #fff, $button-tertiary-color);
+  @include tertiary-button-variant($button-tertiary-color, #fff, $pb-gray-300);
 }
 
 .btn-group-borderless .btn-default {
-  @include tertiary-button-variant($button-tertiary-color, #fff, $button-tertiary-color);
+  @include tertiary-button-variant($button-tertiary-color, #fff, $pb-gray-300);
 }
 
 .btn-default-ko {
