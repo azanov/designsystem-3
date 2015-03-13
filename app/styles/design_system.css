@@ -304,8 +304,12 @@ cite {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.pb-scales:before {
+  content: "\e613"; }
 
 .pb-metadata:before {
   content: "\e600"; }
@@ -368,7 +372,7 @@ cite {
   content: "\e612"; }
 
 .pb-line:before {
-  content: "\e613"; }
+  content: "\e615"; }
 
 .badge {
   background-color: #72bf44; }

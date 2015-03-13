@@ -1,89 +1,101 @@
-// see typography.scss for loading the fonts
-// @font-face {
-//     font-family: 'pbfont';
-//     src:url('../fonts/pbfont.eot?-ugwrh6');
-//     src:url('../fonts/pbfont.eot?#iefix-ugwrh6') format('embedded-opentype'),
-//         url('../fonts/pbfont.woff?-ugwrh6') format('woff'),
-//         url('../fonts/pbfont.ttf?-ugwrh6') format('truetype'),
-//         url('../fonts/pbfont.svg?-ugwrh6#pbfont') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-// }
-
 [class^="pb-"], [class*=" pb-"] {
-    font-family: 'pbfont';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+	font-family: 'pbfont';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
 
-    //* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.pb-scales:before {
+	content: "\e613";
 }
 
 .pb-metadata:before {
-    content: "\e600";
+	content: "\e600";
 }
+
 .pb-metadatatemplate:before {
-    content: "\e601";
+	content: "\e601";
 }
+
 .pb-connection:before {
-    content: "\e602";
+	content: "\e602";
 }
+
 .pb-newconnection:before {
-    content: "\e603";
+	content: "\e603";
 }
+
 .pb-databaseconnection:before {
-    content: "\e604";
+	content: "\e604";
 }
+
 .pb-filesystemconnection:before {
-    content: "\e605";
+	content: "\e605";
 }
+
 .pb-catalog:before {
-    content: "\e606";
+	content: "\e606";
 }
+
 .pb-newcatalog:before {
-    content: "\e607";
+	content: "\e607";
 }
+
 .pb-addtocatalog:before {
-    content: "\e608";
+	content: "\e608";
 }
+
 .pb-folder:before {
-    content: "\e609";
+	content: "\e609";
 }
+
 .pb-newfolder:before {
-    content: "\e60a";
+	content: "\e60a";
 }
+
 .pb-addtofolder:before {
-    content: "\e60b";
+	content: "\e60b";
 }
+
 .pb-table:before {
-    content: "\e60c";
+	content: "\e60c";
 }
+
 .pb-layer:before {
-    content: "\e60d";
+	content: "\e60d";
 }
+
 .pb-newtable:before {
-    content: "\e60e";
+	content: "\e60e";
 }
+
 .pb-map:before {
-    content: "\e60f";
+	content: "\e60f";
 }
+
 .pb-tile:before {
-    content: "\e610";
+	content: "\e610";
 }
+
 .pb-address-book:before {
-    content: "\e614";
+	content: "\e614";
 }
+
 .pb-point:before {
-    content: "\e611";
+	content: "\e611";
 }
+
 .pb-polygon:before {
-    content: "\e612";
+	content: "\e612";
 }
+
 .pb-line:before {
-    content: "\e613";
+	content: "\e615";
 }

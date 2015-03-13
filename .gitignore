@@ -10,3 +10,5 @@ app/styles/design_system.css
 npm-debug.log
 scss-lint.log
 build/bower_components/jquery-ui/themes
+.idea/.name
+workspace.xml

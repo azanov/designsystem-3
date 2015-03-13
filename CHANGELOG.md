@@ -1,4 +1,6 @@
 ##Release Notes
+###1.3.1 March 13, 2015
+- Added missing "scales" glyph in PB font, updated font to [1.5.3](https://github.com/PBGUX/pb-font/tree/1.5.3)
 
 ###1.3.0 March 11,2015
 - New color assignments, based on a 5-color "chord 1"
