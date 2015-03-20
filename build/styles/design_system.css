@@ -84,9 +84,7 @@
   src: url("../fonts/pbfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pbfont.woff") format("woff"), url("../fonts/pbfont.ttf") format("truetype"), url("../fonts/pbfont.svg#pbfont") format("svg"); }
 .ps-light, .signin .title, .ps-light.italic,
 .ps-light em,
-.ps-light i, h1, h1 a,
-h2, h2 a,
-h3, h3 a, p.lead,
+.ps-light i, p.lead,
 p.lede, .btn, .nav-tabs > li > a,
 .nav-pills > li > a, .panel-heading, #header .navbar .navbar-brand.brand-text,
 #header .navbar .container .navbar-brand.brand-text,
@@ -111,9 +109,7 @@ header .navbar .container .navbar-brand.brand-text .brand-top, body {
   font-weight: 300;
   font-style: normal; }
 
-h1, h1 a,
-h2, h2 a,
-h3, h3 a, p.lead,
+p.lead,
 p.lede, .btn, .nav-tabs > li > a,
 .nav-pills > li > a, .panel-heading, #header .navbar .navbar-brand.brand-text,
 #header .navbar .container .navbar-brand.brand-text,
@@ -179,12 +175,14 @@ h5 {
   font-size: 14px; }
 
 h6 {
-  font-size: 12px;
-  font-weight: bold; }
+  font-size: 12px; }
 
 h1, h1 a,
 h2, h2 a,
 h3, h3 a {
+  font-family: "PrecisionSans_W_Lt", "Helveticia Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.1;
   -webkit-font-variant-ligatures: common-ligatures;
           font-variant-ligatures: common-ligatures;
   color: #a03f9b; }
