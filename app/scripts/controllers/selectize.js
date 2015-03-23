@@ -85,7 +85,8 @@ angular.module('designSystemApp')
         options: {
           valueField: 'code',
           labelField: 'name',
-          searchField: ['name']
+          searchField: ['name'],
+          plugins: ['remove_button']
         }
       };
 
