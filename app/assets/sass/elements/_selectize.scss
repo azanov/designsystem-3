@@ -1,0 +1,52 @@
+.selectize-input {
+  border-color: $pb-gray-300;
+}
+
+
+.input-group {
+  .selectize-control {
+    .selectize-input {
+      overflow: initial;
+      border-color: $pb-gray-300;
+      @include flat-right;
+    }
+
+  }
+  .input-group-addon {
+    &:first-child {
+      ~ .selectize-control {
+        .selectize-input {
+          @include flat-left;
+        }
+      }
+    }
+
+  }
+  &.input-group-lg {
+    .selectize-control {
+      .selectize-input {
+        padding: $padding-large-vertical $padding-large-horizontal;
+        line-height: 1.5;
+        font-size: $font-size-base;
+        @include flat-right($border-radius-large);
+        .has-items {
+          padding: $padding-large-vertical $padding-large-horizontal;
+        }
+      }
+    }
+
+  }
+  &.input-group-sm {
+    .selectize-control {
+      .selectize-input {
+        padding: $padding-small-vertical $padding-small-horizontal;
+        line-height: 1;
+        font-size: $font-size-xsmall;
+        border-radius: $border-radius-small;
+      }
+    }
+  }
+}
+.selectize-control.single .selectize-input  {
+  border-color: $pb-gray-300;
+}

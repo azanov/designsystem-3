@@ -1,0 +1,13 @@
+.navbar-default .navbar-nav > li > a {
+  color: $text-color;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: $brand-secondary;
+
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: $pb-gray-200;
+}

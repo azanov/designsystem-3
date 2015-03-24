@@ -11,33 +11,23 @@
 
 @mixin bp($point) {
 
-  $bp-babybear: "(max-width: 600px)";
-  $bp-mamabear: "(max-width: 1024px)";
-  $bp-papabear: "(max-width: 1600px)";
+ $screen-xs: "(max-width: 767px)";
+ $screen-sm: "(min-width: 768px)";
+ $screen-md: "(min-width: 992px)";
+ $screen-lg: "(min-width: 1200px)";
 
-  @if $point == papa-bear {
-      @media #{$bp-papabear} { @content; }
-  } @else if $point == mama-bear {
-      @media #{$bp-mamabear} { @content; }
-  } @else if $point == baby-bear {
-      @media #{$bp-babybear}  { @content; }
-  }
+ @if $point == screen-xs {
+     @media #{$screen-xs} { @content; }
+ } @else if $point == screen-sm {
+     @media #{$screen-sm} { @content; }
+ } @else if $point == screen-md {
+     @media #{$screen-md}  { @content; }
+ } @else if $point == screen-lg {
+     @media #{$screen-lg}  { @content; }
+ }
 
 }
 
-
-// for vertical spacing, add to elements
-$spacers: (xs: 10px,sm: 20px, md: 30px, lg: 40px, xl: 50px);
-$directions: (top, bottom);
-// usage "spacer-top-sm"
-
-@each $direction in $directions {
-  @each $spacer, $amt in $spacers {
-      .spacer-#{$direction}-#{$spacer} {
-          margin-#{$direction}: $amt;
-      }
-  }
-}
 
 // tint and shade functions
 @function tint($color, $percentage) { @return mix($color, #fff, $percentage); }
@@ -126,25 +116,23 @@ $grid-column-padding: 15px;
   background-color: $background;
   border-color: $border;
 
+  &:hover,
   &:focus,
   &.focus,
   &:active,
   &.active,
   .open > &.dropdown-toggle {
-    color: $color;
-    background-color: shade($background, 80%);
-        border-color: shade($background, 80%);
+               color: darken($color, 10%);;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
   }
-  &:hover {
-    color: $color;
-    background-color: lighten($background, 10%);
-        border-color: lighten($border, 12%);
-  }
+
   &:active,
   &.active,
   .open > &.dropdown-toggle {
     background-image: none;
   }
+
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
@@ -158,52 +146,13 @@ $grid-column-padding: 15px;
           border-color: $border;
     }
   }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
 }
 
-// outline "default" buttons
-@mixin outline-button-variant($color, $background, $border) {
-  color: $color;
-  background-color: $background;
-  border-color: $border;
-
-  &:focus,
-  &.focus,
-  &:active,
-  &.active,
-  .open > &.dropdown-toggle {
-    color: #fff;
-    background-color: shade($color, 80%);
-        border-color: shade($color, 80%);
-        &:hover {
-          color: #fff;
-          background-color: $color;
-          border-color: $color;
-        }
-  }
-  &:hover {
-    color: lighten($color, 12%);
-    background-color: transparentize($color, .8);
-        border-color: lighten($border, 12%);
-  }
-  &:active,
-  &.active,
-  .open > &.dropdown-toggle {
-    background-image: none;
-  }
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    &,
-    &:hover,
-    &:focus,
-    &.focus,
-    &:active,
-    &.active {
-      background-color: $background;
-          border-color: $border;
-    }
-  }
-}
 
 // these are the newer gray outline buttons
 @mixin tertiary-button-variant($color, $background, $border) {
@@ -217,18 +166,18 @@ $grid-column-padding: 15px;
   &.active,
   .open > &.dropdown-toggle {
     color: #fff;
-    background-color: $pb-medium-gray;
-        border-color: $color;
+    background-color: $pb-gray-300;
+        border-color: $border;
         &:hover {
           color: #fff;
-          background-color: $color;
-          border-color: $color;
+          background-color: $pb-gray-400;
+          border-color: $border;
         }
   }
   &:hover {
     color: $color;
-    background-color: shade($background, 90%);
-        border-color: lighten($border, 12%);
+    background-color: $pb-gray-50;
+        border-color: $border;
   }
   &:active,
   &.active,
@@ -256,4 +205,21 @@ $grid-column-padding: 15px;
   font-size: $font-size;
   line-height: $line-height;
   border-radius: $border-radius;
+}
+
+@mixin border-top-radius($radius) {
+  border-top-right-radius: $radius;
+   border-top-left-radius: $radius;
+}
+@mixin border-right-radius($radius) {
+  border-bottom-right-radius: $radius;
+     border-top-right-radius: $radius;
+}
+@mixin border-bottom-radius($radius) {
+  border-bottom-right-radius: $radius;
+   border-bottom-left-radius: $radius;
+}
+@mixin border-left-radius($radius) {
+  border-bottom-left-radius: $radius;
+     border-top-left-radius: $radius;
 }

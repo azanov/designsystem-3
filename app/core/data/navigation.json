@@ -40,6 +40,12 @@
       "label": "Colors",
       "value": "elements.colors"
     }, {
+      "label": "Color Usage",
+      "value": "elements.colorusage"
+    }, {
+      "label": "Color Charts",
+      "value": "elements.colorcharts"
+    }, {
       "label": "Grid",
       "value": "elements.grid"
     }, {

@@ -7,138 +7,157 @@
 /*jshint node:true */
 
 
-var gulp         = require('gulp'),
-    usemin       = require('gulp-usemin'),
-    sass         = require('gulp-ruby-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    minifycss    = require('gulp-minify-css'),
-    minifyhtml   = require('gulp-minify-html'),
-    jshint       = require('gulp-jshint'),
-    uglify       = require('gulp-uglify'),
-    imagemin     = require('gulp-imagemin'),
-    rename       = require('gulp-rename'),
-    concat       = require('gulp-concat'),
-    notify       = require('gulp-notify'),
-    cache        = require('gulp-cache'),
-    connect      = require('gulp-connect'),
-    browsersync  = require('browser-sync'),
-    reload       = browsersync.reload,
-    rev          = require('gulp-rev'),
-    sourcemaps   = require('gulp-sourcemaps'),
-    filter       = require('gulp-filter'),
-    plumber      = require('gulp-plumber'),
-    del          = require('del'),
-    gutil        = require('gulp-util'),
-    ftp          = require('gulp-ftp'),
-    printfiles   = require('gulp-print'),  // displays files in the console
-    prompt       = require('gulp-prompt'), // asks for password in the console before connecting
-    runSequence  = require('run-sequence');
-
-
-
+var gulp = require('gulp'),
+  usemin = require('gulp-usemin'),
+  sass = require('gulp-ruby-sass'),
+  autoprefixer = require('gulp-autoprefixer'),
+  minifycss = require('gulp-minify-css'),
+  minifyhtml = require('gulp-minify-html'),
+  jshint = require('gulp-jshint'),
+  uglify = require('gulp-uglify'),
+  imagemin = require('gulp-imagemin'),
+  rename = require('gulp-rename'),
+  concat = require('gulp-concat'),
+  notify = require('gulp-notify'),
+  cache = require('gulp-cache'),
+  connect = require('gulp-connect'),
+  browsersync = require('browser-sync'),
+  reload = browsersync.reload,
+  rev = require('gulp-rev'),
+  sourcemaps = require('gulp-sourcemaps'),
+  filter = require('gulp-filter'),
+  plumber = require('gulp-plumber'),
+  del = require('del'),
+  gutil = require('gulp-util'),
+  ftp = require('gulp-ftp'),
+  printfiles = require('gulp-print'), // displays files in the console
+  prompt = require('gulp-prompt'), // asks for password in the console before connecting
+  runSequence = require('run-sequence'),
+  header = require('gulp-header');
 
 //styles
 gulp.task('sass', function() {
-  return sass('app/assets/sass/app.scss', { sourcemap: true })
-  .pipe(plumber())
-  .pipe(autoprefixer({
-    browsers: ['last 2 versions', 'ios 6', 'android 4']
-  }))
-  .pipe(sourcemaps.write('maps', {
-    includeContent: false,
-    sourceRoot: '/source'
-  }))
-  .pipe(gulp.dest('app/assets/css'))
-  .pipe(filter('**/*.css'))
-  .pipe(reload({stream:true}));
+  return sass('app/assets/sass/app.scss', {
+      sourcemap: true,
+      style: 'compact'
+    })
+    .pipe(plumber())
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions']
+    }))
+    .pipe(sourcemaps.write('maps', {
+      includeContent: false,
+      sourceRoot: '/source'
+    }))
+    .pipe(gulp.dest('app/assets/css'))
+    .pipe(filter('**/*.css'))
+    .pipe(reload({
+      stream: true
+    }));
 });
 
-gulp.task('styles-nomaps', function() {
-  return sass('app/sass/', { sourcemap: false })
-  .pipe(plumber())
-  .pipe(autoprefixer({
-    browsers: ['last 2 versions', 'ios 6', 'android 4']
-  }))
-  .pipe(gulp.dest('build/styles'))
-  .pipe(filter('**/*.css'));
+gulp.task('sass-nomaps', function() {
+  return sass('app/sass/', {
+      sourcemap: false,
+      style: 'compact'
+    })
+    .pipe(plumber())
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions']
+    }))
+    .pipe(header(banner, {
+      pkg: pkg
+    }))
+    .pipe(gulp.dest('build/styles'))
+    .pipe(filter('**/*.css'));
 });
-
-
 
 gulp.task('usemin', function() {
   gulp.src('app/*.html')
     .pipe(usemin({
       css: [minifycss(), 'concat'],
       //html: [minifyhtml({empty: true})],
-      js: [uglify({mangle: false})]
+      js: [uglify({
+        mangle: false
+      })]
     }))
     .pipe(gulp.dest('build/'));
-  });
+});
 
-
-
+var today = new Date();
+var pkg = require('./package.json');
+var banner = ['/**',
+  ' * <%= pkg.name %> - <%= pkg.description %>',
+  ' * @version v<%= pkg.version %>',
+  ' * @link <%= pkg.homepage %>',
+  ' * ' + today + ' ',
+  ' */',
+  ''
+].join('\n');
 
 // for final build, paths stored in external json file:
 var config = require('./build.config.json');
 
-gulp.task('scripts', function(){
+gulp.task('scripts', function() {
   gulp.src(config.extras.js)
-  .pipe(gulp.dest(config.build_dir));
+    .pipe(gulp.dest(config.buildDir));
 });
-gulp.task('assets', function(){
+gulp.task('assets', function() {
   gulp.src(config.extras.assets)
-  .pipe(gulp.dest(config.build_dir));
+    .pipe(gulp.dest(config.buildDir));
 });
-
-
-
 
 gulp.task('clean', function(cb) {
-    del(['build/**/*'], cb);
+  del(['build/**/*'], cb);
 });
-
 
 // browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
   browsersync({
     server: {
-      baseDir: "./app"
+      baseDir: './app'
     }
   });
 });
 
-
-
-
 // run this to open project in browser and watch for changes in CSS
-gulp.task('default',['sass','browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'sass', 'watch']);
 
 // gulp.task('build', ['clean'],function() {
-// 	gulp.run(['styles-nomaps','usemin','scripts','assets']);
+//  gulp.run(['sass-nomaps','usemin','scripts','assets']);
 // });
 
 gulp.task('build', function(cb) {
   runSequence(
-    'clean',
-    ['styles-nomaps','usemin','scripts','assets'],
+    'clean', ['sass-nomaps', 'usemin', 'scripts', 'assets'],
     cb);
 });
 
+// Watch
+gulp.task('watch', function() {
 
-
-//watch files for changes
-gulp.task('watch', function () { //'default'
+  // Watch .scss files
   gulp.watch(
     [
       'app/assets/sass/**/*.scss',
       'app/modules/**/*.scss'
     ], ['sass']);
 
-  gulp.watch([
+  gulp.watch(
+    [
     'app/**/*.js',
     'app/**/*.json',
-    'app/**/*.html'], function(){
-      browsersync.reload();
+    'app/**/*.html'
+  ], function() {
+    reload();
   });
+
+  // Watch .js files
+  gulp.watch('app/scripts/**/*.js', function() {
+    reload();
+  });
+
+  // Watch image files
+  //  gulp.watch('app/images/**/*', ['images']);
 
 });

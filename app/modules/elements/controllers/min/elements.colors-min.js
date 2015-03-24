@@ -180,3 +180,5 @@ $scope.bar_chart_01 = $scope.bar([100,80,60,50,40,30], '110px', $scope.colors.ch
 
   }
 ]);
+
+
