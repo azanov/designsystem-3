@@ -21,7 +21,7 @@ $pb-green:       #72bf44;
 $pb-dark-green:  #00b140;
 
 // new grays use for all NEUTRALS
-$pb-gray:        #4E4E4e;
+$pb-gray:        #4e4e4e;
 $pb-gray-50:     #f0f0f0;
 $pb-gray-100:    #dbdbdb;
 $pb-gray-200:    #c0c0c0;
@@ -77,7 +77,7 @@ $text-color: $brand-tertiary;
 $brand-success:         #5cb85c;
 $brand-info:            #5bc0de;
 $brand-warning:         #f0ad4e;
-$brand-danger:          #cc0000;
+$brand-danger:          #c00;
 
 
 // CHART COLORS
@@ -96,15 +96,6 @@ $blue4: scale-color($pb-blue, $lightness: 50%, $saturation: -5%);
 $blue5: scale-color($pb-blue, $lightness: 60%, $saturation: -10%);
 $blue6: scale-color($pb-blue, $lightness: 70%, $saturation: -20%);
 
-// GRAY TINTS (grayscale charts)
-// $pb-gray-3001: darken($pb-gray, 5%);
-// $pb-gray-3002: $pb-gray;;
-// $pb-gray-3003: lighten($pb-gray, 10%);
-// $pb-gray-3004: lighten($pb-gray, 20%);
-// $pb-gray-3005: $pb-gray-300;
-// $pb-gray-3006: $pb-gray-200;
-
-
 $social-colors:
 ('twitter' #55acee)
 ('facebook' #4964a1)
@@ -122,15 +113,15 @@ $font-size-base  : 14px;
 
 $font-size-base:          14px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
-$font-size-xsmall:        ceil(($font-size-base * 0.72)) !default; // ~10px
+$font-size-small:         ceil(($font-size-base * .85)) !default; // ~12px
+$font-size-xsmall:        ceil(($font-size-base * .72)) !default; // ~10px
 
-$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
-$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
-$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
-$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-h5:            $font-size-base !default;
-$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+$font-size-h1:            32px;
+$font-size-h2:            28px;
+$font-size-h3:            24px;
+$font-size-h4:            18px;
+$font-size-h5:            16px;
+$font-size-h6:            14px;
 
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base: 1.428571429; // 20/14
@@ -588,7 +579,7 @@ $popover-arrow-color:                 $popover-bg;
 //** Popover outer arrow width
 $popover-arrow-outer-width:           ($popover-arrow-width + 1);
 //** Popover outer arrow color
-$popover-arrow-outer-color:           fade_in($popover-border-color, 0.05);
+$popover-arrow-outer-color:           fade_in($popover-border-color, .05);
 //** Popover outer arrow fallback color
 $popover-arrow-outer-fallback-color:  darken($popover-fallback-border-color, 20%);
 

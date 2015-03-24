@@ -1,4 +1,10 @@
 ##Release Notes
+
+###1.3.2 March 24, 2015
+- fixed header font sizes to match Victor's specs
+- fixed font to Precision Sans Light
+- added utility no-margin classes
+
 ###1.3.1 March 13, 2015
 - Added missing "scales" glyph in PB font, updated font to [1.5.3](https://github.com/PBGUX/pb-font/tree/1.5.3)
 

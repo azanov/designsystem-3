@@ -1,16 +1,23 @@
-@import '../bower_components/bourbon/dist/settings/_asset-pipeline.scss';
-@import '../bower_components/bourbon/dist/css3/_font-face.scss';
+@import "../bower_components/bourbon/dist/settings/_asset-pipeline.scss";
+@import "../bower_components/bourbon/dist/css3/_font-face.scss";
 
-@include font-face('PrecisionSans_W_Rg', '../fonts/PrecisionSans_W_Rg', '400', 'normal');
-@include font-face('PrecisionSans_W_Bd', '../fonts/PrecisionSans_W_Bd', '700', 'normal');
-@include font-face('PrecisionSans_W_RgIt', '../fonts/PrecisionSans_W_RgIt', '400', 'italic');
-@include font-face('PrecisionSans_W_BdIt', '../fonts/PrecisionSans_W_BdIt', '700', 'italic');
-@include font-face('PrecisionSans_W_Lt', '../fonts/PrecisionSans_W_Lt', '300', 'normal');
-@include font-face('PrecisionSans_W_LtIt', '../fonts/PrecisionSans_W_LtIt', '300', 'italic');
-@include font-face('PrecisionSans_W_Md', '../fonts/PrecisionSans_W_Md', '500', 'normal');
-@include font-face('PrecisionSans_W_MdIt', '../fonts/PrecisionSans_W_MdIt', '500', 'italic');
+@include font-face("PrecisionSans_W_Rg", "../fonts/PrecisionSans_W_Rg", "400", "normal");
 
-@include font-face('pbfont', '../fonts/pbfont');
+@include font-face("PrecisionSans_W_Bd", "../fonts/PrecisionSans_W_Bd", "700", "normal");
+
+@include font-face("PrecisionSans_W_RgIt", "../fonts/PrecisionSans_W_RgIt", "400", "italic");
+
+@include font-face("PrecisionSans_W_BdIt", "../fonts/PrecisionSans_W_BdIt", "700", "italic");
+
+@include font-face("PrecisionSans_W_Lt", "../fonts/PrecisionSans_W_Lt", "300", "normal");
+
+@include font-face("PrecisionSans_W_LtIt", "../fonts/PrecisionSans_W_LtIt", "300", "italic");
+
+@include font-face("PrecisionSans_W_Md", "../fonts/PrecisionSans_W_Md", "500", "normal");
+
+@include font-face("PrecisionSans_W_MdIt", "../fonts/PrecisionSans_W_MdIt", "500", "italic");
+
+@include font-face("pbfont", "../fonts/pbfont");
 
 $font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -18,57 +25,66 @@ $font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 %ps-light {
   @extend %aa !optional;
   font-family: 'PrecisionSans_W_Lt', Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
 }
+
 %ps-light-italic {
   @extend %aa !optional;
   font-family: 'PrecisionSans_W_LtIt', Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
 }
+
 %ps-regular {
   @extend %aa !optional;
   font-family: 'PrecisionSans_W_Rg', Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
 %ps-regular-italic {
   @extend %aa !optional;
   font-family: 'PrecisionSans_W_RgIt', Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
 %ps-medium {
   @extend %aa !optional;
   font-family: 'PrecisionSans_W_Md', Arial, sans-serif;
   font-weight: 500;
   font-style: normal;
 }
+
 %ps-medium-italic {
   font-family: 'PrecisionSans_W_MdIt', Arial, sans-serif;
   font-weight: 500;
   font-style: normal;
 }
+
 %ps-bold {
   @extend %aa !optional;
   font-family: 'PrecisionSans_W_Bd', Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
+
 %ps-bold-italic {
   @extend %aa !optional;
   font-family: 'PrecisionSans_W_BdIt', Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-
 }
+
 $font-family-base: $font-family-sans-serif;
+
 // Helvetica
-$headings-font-family: 'PrecisionSans_W_Lt', 'Helveticia Neue', Helvetica, Arial, sans-serif;
+$headings-font-family: "PrecisionSans_W_Lt", "Helveticia Neue", Helvetica, Arial, sans-serif;
 $headings-font-weight: normal;
 $headings-line-height: 1.1;
 $headings-color: inherit;
@@ -81,8 +97,13 @@ $font-family-serif: Georgia, Times, "Times New Roman", serif;
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
 
 // easily change something to serif or sans-serif
-.serif, .serif p { font-family: $font-family-serif; }
-.sans, .sans p { font-family: $font-family-sans-serif; }
+.serif, .serif p {
+  font-family: $font-family-serif;
+}
+
+.sans, .sans p {
+  font-family: $font-family-sans-serif;
+}
 
 code,
 .code {
@@ -98,27 +119,48 @@ hr {
 
 a {
   color: $link-color;
+
   &:hover {
     color: $link-color-hover;
   }
+
   &.read-more {
     font-size: $font-size-base - 2;
     // 2 px smaller
     white-space: nowrap;
+
     &:after {
       content: '\2026';
       // ellipsis
+
     }
   }
 }
 
 // heading sizes, from variables.scss
-h1 { font-size: $font-size-h1; }
-h2 { font-size: $font-size-h2; }
-h3 { font-size: $font-size-h3; }
-h4 { font-size: $font-size-h4; }
-h5 { font-size: $font-size-h5; }
-h6 { font-size: $font-size-h6; }
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h3 {
+  font-size: $font-size-h3;
+}
+
+h4 {
+  font-size: $font-size-h4;
+}
+
+h5 {
+  font-size: $font-size-h5;
+}
+
+h6 {
+  font-size: $font-size-h6;
+}
 
 h1, h1 a,
 h2, h2 a,
@@ -138,15 +180,27 @@ h6, h6 a {
   color: $text-color;
 }
 
+.no-margin-top {
+  margin-top: 0;
+}
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+.no-margins {
+  margin: 0;
+}
+
 // when you need light text
 // sets the bold and italic accordingly
 .ps-light {
   @extend %ps-light;
+
   &.italic,
   em,
   i {
     @extend %ps-light-italic;
   }
+
   // since regular bold is a bit much on light
   b,
   strong {
@@ -165,10 +219,6 @@ p.lede {
   font-weight: normal !important;
 }
 
-
-
-
-
 body {
   @extend %aa;
   font-family: $font-family-base;
@@ -176,6 +226,7 @@ body {
   // originally they had !important "for ie8" but I removed
   font-weight: 400;
   color: $text-color;
+
   .has-error {
     color: $brand-danger;
   }
@@ -184,16 +235,17 @@ body {
 dt {
   margin-top: 10px;
   margin-bottom: 3px;
+
   &:first-child {
     margin-top: 0;
   }
 }
 
-
 ul.spaced,
 ol.spaced {
   > li {
     margin-top: 10px;
+
     &:first-child {
       margin-top: 0;
     }
@@ -220,8 +272,8 @@ ol {
   color: $brand-primary;
 }
 
-.nav-tabs>li>a,
-.nav-pills>li>a {
+.nav-tabs > li > a,
+.nav-pills > li > a {
   @extend %ps-regular;
 }
 
@@ -229,16 +281,15 @@ ol {
   color: $pb-gray-400;
 }
 
-
 label {
   font-size: 14px;
   font-weight: normal;
   color: $pb-gray;
 }
 
-
 .panel-heading {
   @extend %ps-regular;
+
   // tables inside panel heads, edge case
   td,
   th {
@@ -253,8 +304,8 @@ header .navbar .navbar-brand.brand-text,
 header .navbar .container .navbar-brand.brand-text {
   @extend %ps-regular;
   font-weight: 400 !important;
-
 }
+
 .nav.navbar-nav {
   @extend %ps-regular;
   font-size: 16px;
@@ -270,21 +321,47 @@ a.list-group-item {
 // ------SPECIAL SIZES--------
 
 // Ex: 14px base font * 85% = about 12px
-small,.small { font-size: 85%; }
+small, .small {
+  font-size: 85%;
+}
 
 // Undo browser default styling
-cite { font-style: normal; }
+cite {
+  font-style: normal;
+}
 
-.text-large { font-size: $font-size-large; }
-.text-small { font-size: $font-size-small; }
-.text-xs    { font-size: $font-size-xsmall; }
-.text-mouse { font-size: $font-size-xsmall; }
+.text-large {
+  font-size: $font-size-large;
+}
+
+.text-small {
+  font-size: $font-size-small;
+}
+
+.text-xs {
+  font-size: $font-size-xsmall;
+}
+
+.text-mouse {
+  font-size: $font-size-xsmall;
+}
 
 // Alignment
-.text-left    { text-align: left; }
-.text-right   { text-align: right; }
-.text-center  { text-align: center; }
-.text-justify { text-align: justify; }
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
 
 // // Contextual colors, from bootstrap
 // .text-primary { color: $brand-primary; }
@@ -292,4 +369,7 @@ cite { font-style: normal; }
 // .text-success { color: $state-success-text; }
 // .text-info    { color: $state-info-text; }
 // .text-warning { color: $state-warning-text; }
-.text-danger  { color: $brand-danger; }
+
+.text-danger {
+  color: $brand-danger;
+}
