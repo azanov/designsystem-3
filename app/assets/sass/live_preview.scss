@@ -1,28 +1,25 @@
-
-
-
 /* -- THIS FILE CONTAINS STYLES FOR THE LIVE PREVIEW SITE ONLY!                         */
 
 /* -- THESE STYLES ARE NOT MEANT TO BE USED ON PROJECTS, ONLY USE THE DESIGN_SYSTEM.CSS */
-   
 
-@import 'variables';
-@import 'mixins';
-@import 'typography';
-
-
+@import "base/variables";
+@import "base/mixins";
+@import "base/typography";
 
 .clearfix {
   zoom: 1;
+
   &:before,
   &:after {
     display: table;
     content: '';
   }
+
   &:after {
     clear: both;
   }
 }
+
 // Bootstrap UI
 .nav,
 .pagination,
@@ -30,29 +27,36 @@
 .panel-title a {
   cursor: pointer;
 }
+
 .debug {
   border: 1px solid #f00;
+
   &.green {
     border-color: #008000;
   }
+
   &.pink {
     border-color: #ffc0b0;
   }
 }
+
 .hero {
   height: 640px;
   background-image: url("../images/livepreview_keyboard.jpg");
   background-size: cover;
+
   .hero-unit {
     margin-top: 80px;
     color: #fff;
     border-top: 2px solid #fff;
+
     h1 {
       @extend %ps-light;
       font-size: 36px;
       padding-top: 20px;
       color: #fff;
     }
+
     h2 {
       @extend %ps-light;
       font-size: 22px;
@@ -60,29 +64,33 @@
       color: #fff;
     }
   }
+
   .hero-menu {
     padding-left: 0;
     list-style-type: none;
     $accent: lighten($brand-primary, 35%);
+
     > li {
       @extend %ps-regular;
       font-size: 18px;
       margin-top: 30px;
       padding-top: 10px;
       border-top: 1px solid $accent;
+
       a {
         color: $accent;
+
         &:hover {
           text-decoration: none;
         }
       }
+
       ul {
         margin-top: 5px;
         padding-left: 0;
         list-style-type: none;
-        -webkit-column-count: 3;
-        -moz-column-count: 3;
         column-count: 3;
+
         li {
           a {
             color: #fff;
@@ -90,6 +98,7 @@
         }
       }
     }
+
     .dropdown-header,
     .divider,
     .optional {
@@ -97,36 +106,43 @@
     }
   }
 }
+
 .home #footer {
   margin-top: 0;
 }
+
 .chord-display {
   margin-bottom: 20px;
 }
+
 //* These are only for the purposes of displaying the chord colors in the SVGs *//
 //** * Chord Color Mixin * * @access public * * @requires {List} $colors - Space Deliminated list of Colors * */
+
 @mixin chord-color($colors) {
   $i: 0;
+
   @each $color in $colors {
     $i: $i + 1;
+
     .color#{$i} {
       color: $color;
       fill: $color;
     }
   }
 }
+
 //** * Chord1 */
 #chord1 {
   @include chord-color($pb-medium-blue $pb-purple $pb-gray $pb-blue $pb-green $pb-gray-200);
 }
+
 #chord2 {
   @include chord-color($pb-dark-orange $pb-medium-blue $pb-gray $pb-blue $pb-yellow $pb-gray-200);
 }
+
 #chord3 {
   @include chord-color($pb-dark-green $pb-medium-blue $pb-gray $pb-blue $pb-magenta $pb-gray-200);
 }
-
-
 
 // spacing and page layout mods for the design system pages
 section.row {
@@ -139,12 +155,14 @@ section.row {
 
 h4, h1 {
   margin-bottom: 10px;
+
   .more-info {
     float: right;
     font-size: 12px;
     color: $link-color;
-      font-weight: normal;
-      padding-top: 7px;
+    font-weight: normal;
+    padding-top: 7px;
+
     a {
       color: inherit;
       font-weight: normal;
@@ -155,51 +173,28 @@ h4, h1 {
 h6.sh {
   clear: both;
   margin-top: 40px;
+
   &:first-child {
     margin-top: 0;
   }
 }
+
 hr {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
 .grid-sample .panel {
   border: 0;
   border-top: 3px solid $input-border;
   border-radius: 0;
 }
 
-//* Linear Gradients & pb- Element */
-// .pseudo {
-//   position: relative;
-//   z-index: 2;
-//   box-sizing: border-box;
-//   border-bottom: 10px solid transparent;
-//   background-color: #fff;
-//   background-clip: padding-box;
-//   -webkit-filter: drop-shadow(rgba(0, 0, 0, .55) 0 1px 2px);
-// }
-// .pseudo:after {
-//   position: absolute;
-//   z-index: 1;
-//   bottom: -10px;
-//   left: 0;
-//   display: block;
-//   width: 100%;
-//   height: 10px;
-//   content: '';
-//   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 33.333%, #fff 33.333%, #fff 66.667%, rgba(0, 0, 0, 0) 66.667%), linear-gradient(-45deg, rgba(0, 0, 0, 0) 33.333%, #fff 33.333%, #fff 66.667%, rgba(0, 0, 0, 0) 66.667%);
-//   background-repeat: repeat-x;
-//   background-position: 50% -30px;
-//   background-size: 20px 40px;
-// }
-
-
-
 //* Charting Demos */
 .piechart {
   position: relative;
   display: inline-block;
+
   span {
     font-size: 20px;
     position: absolute;
@@ -212,25 +207,30 @@ hr {
     text-align: center;
   }
 }
+
 .sparkline {
   .chart {
     display: inline-block;
     float: left;
   }
+
   .caption {
     display: inline-block;
     float: left;
     margin-left: 10px;
   }
+
   h6 {
     margin-top: 0;
     margin-bottom: 0;
   }
+
   h2 {
     margin-top: 0;
     margin-bottom: 0;
   }
 }
+
 legend .more-info,
 h3 .more-info,
 h1 .more-info {
@@ -239,8 +239,10 @@ h1 .more-info {
   float: right;
   margin-top: 10px;
 }
+
 //* the tab that pops out of the  Live Preview */
 $tab-color: #333;
+
 .settings {
   position: fixed;
   z-index: 2000;
@@ -248,11 +250,13 @@ $tab-color: #333;
   right: -150px;
   width: 185px;
   height: 100px;
-  transition: all 0.3s;
+  transition: all .3s;
+
   &.activate {
     right: 0;
     width: 185px;
   }
+
   .settings-tab {
     float: left;
     width: 35px;
@@ -262,14 +266,17 @@ $tab-color: #333;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     background: $tab-color;
-    box-shadow: 3px 5px 8px rgba(0, 0, 0, .3);
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.3);
+
     &:hover {
       cursor: pointer;
     }
+
     &:active {
       background: #71a6b9;
     }
   }
+
   .settings-form {
     float: right;
     width: 150px;
@@ -278,90 +285,109 @@ $tab-color: #333;
     color: #fff;
     border-bottom-left-radius: 5px;
     background-color: $tab-color;
-    box-shadow: 3px 5px 8px rgba(0, 0, 0, .3);
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.3);
+
     label {
       font-size: 12px !important;
       color: #fff;
     }
   }
 }
+
 p[class^='bg'] {
   padding: 10px;
 }
+
 //* Color swatches */
 .row-left-border {
   border-left: 1px solid $pb-gray-300;
 }
+
 .color-swatches {
   margin-bottom: 20px;
+
   .color-swatch-container {
     margin-bottom: 30px;
   }
+
   .color-swatch {
     display: block;
     width: 100%;
     // set them to use the BS grid
     height: 72px;
     margin-bottom: 5px;
+
     &[class*='alert'] {
       border-right-width: 16px;
       border-right-style: solid;
     }
+
     &.color-swatch-small {
       display: inline-block;
       width: 33px;
       height: 33px;
     }
   }
+
   p {
     font-size: 16px;
     color: $pb-gray;
+
     small {
       font-size: 12px;
       line-height: 1.2;
     }
   }
 }
+
 // march 2015, changes swatches for main colors into lists of tints
 ul.swatches {
   margin: 10px 0 30px;
   padding-left: 0;
+
   li.color-swatch {
     height: 30px;
     margin-bottom: 0;
     text-align: right;
     padding: 5px 10px;
     color: #000;
+
     span {
       display: inline-block;
       float: left;
-      opacity: 0.4;
+      opacity: .4;
     }
+
     &:first-child {
       height: 75px;
       font-size: 18px;
       color: #fff;
       margin-bottom: 5px;
     }
+
     &:nth-child(n+6) {
       color: #fff;
     }
   }
 }
+
 //* color charts */
 .color-chart-nested {
   position: relative;
   float: left;
   margin-right: 30px;
+
   .pie {
     position: absolute;
     top: 86px;
     left: 86px;
   }
 }
+
 .color-blocks {
   li {
     margin-bottom: 7px;
+
     span {
       display: inline-block;
       width: 35px;
@@ -371,31 +397,38 @@ ul.swatches {
     }
   }
 }
+
 .donut-varied-padded {
   margin-right: 25px;
   margin-left: 25px;
 }
+
 .fpo-grad {
   padding: 10px;
   // background-image: linear-gradient(#ddd, #666);
   background-image: url("../images/livepreview_keyboard.jpg");
   background-position: center center;
   background-size: fit;
+
   p.help-text {
     color: #fff;
   }
 }
+
 .glyphicons {
   li {
-    font-size: 0.8em;
+    font-size: .8em;
     margin-bottom: 20px;
     text-align: center;
+
     .glyphicon,
     .pbfont {
       //font-size: 2em;
+
     }
   }
 }
+
 .text-center {
   .pie,
   .donut {
@@ -403,96 +436,124 @@ ul.swatches {
     margin: 0 auto 20px;
   }
 }
+
 .clearRow {
   clear: left;
 }
+
 //
 // //* color swatch backgrounds */
 .brand-primary {
   background-color: $brand-primary;
 }
+
 .brand-success {
   background-color: $brand-success;
 }
+
 .brand-danger {
   background-color: $brand-danger;
 }
+
 .brand-info {
   background-color: $brand-info;
 }
+
 .brand-warning {
   background-color: $brand-warning;
 }
+
 .chart-green {
   background-color: $chart-green;
 }
+
 .chart-blue {
   background-color: $chart-blue;
 }
+
 .chart-purple {
   background-color: $chart-purple;
 }
+
 .chart-yellow {
   background-color: $chart-yellow;
 }
+
 .chart-orange {
   background-color: $chart-orange;
 }
+
 .chart-red {
   background-color: $chart-red;
 }
+
 //
 .blue1 {
   background-color: $blue1;
 }
+
 .blue2 {
   background-color: $blue2;
 }
+
 .blue3 {
   background-color: $blue3;
 }
+
 .blue4 {
   background-color: $blue4;
 }
+
 .blue5 {
   background-color: $blue5;
 }
+
 .blue6 {
   background-color: $blue6;
 }
+
 .gray1 {
   background-color: $pb-gray;
 }
+
 .gray2 {
   background-color: $pb-gray-400;
 }
+
 .gray3 {
   background-color: $pb-gray-300;
 }
+
 .gray4 {
   background-color: $pb-gray-200;
 }
+
 .gray5 {
   background-color: $pb-gray-100;
 }
+
 .gray6 {
   background-color: $pb-gray-50;
 }
+
 //* panels page */
 .list-group-details {
   .form-group {
     margin-bottom: 0;
   }
+
   .control-label {
     padding-top: 3px;
     padding-right: 0;
     text-align: left;
+
     strong {
       font-weight: normal;
-      padding-right: 0.3em;
+      padding-right: .3em;
       color: $pb-gray;
       background-color: #fff;
     }
+
     &:before {
       float: left;
       width: 0;
@@ -501,21 +562,24 @@ ul.swatches {
       color: $pb-gray-300;
     }
   }
+
   .form-control-static {
     padding-top: 2px;
     padding-bottom: 2px;
-    padding-left: 0.3em;
+    padding-left: .3em;
     word-wrap: break-word;
     background-color: #fff;
   }
 }
+
 .view-animate {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  transition: all .3s;
+
   &.ng-enter,
   &.ng-leave {
     opacity: 1;
   }
+
   &.ng-enter,
   &.ng-leave-active,
   &.ng-hide {
@@ -523,30 +587,36 @@ ul.swatches {
     opacity: 0;
   }
 }
-//* experimental block grid code, will not work in IE8  */
+
+//* experimental block grid code, will not work in IE8
 // used to display icons on icons page
 [class*="block-grid-"] {
+  @include clearfix;
   display: block;
   padding: 0;
   margin: 0 -.55556rem;
-  @include clearfix;
+
   > li {
     display: block;
     height: auto;
     float: left;
-    padding: 0 0.55556rem 1.11111rem;
+    padding: 0 .55556rem 1.11111rem;
   }
 }
+
 .block-grid-6 > li {
   width: 16.66666%;
 }
+
 .small-block-grid-3 > li {
   width: 33.33333%;
   list-style: none;
 }
+
 .small-block-grid-3 > li:nth-of-type(1n) {
   clear: none;
 }
+
 .small-block-grid-3 > li:nth-of-type(3n+1) {
   clear: both;
 }
