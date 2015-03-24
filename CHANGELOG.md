@@ -1,5 +1,10 @@
 ##Release Notes
 
+###1.3.3 March 24, 2015 
+-- added condensed definition list.  Add class "dlist-condensed" to any DL
+-- added banner task to gulp; css file will not be stamped with time and version
+-- changed CSS output to "compact"
+
 ###1.3.2 March 24, 2015
 - fixed header font sizes to match Victor's specs
 - fixed font to Precision Sans Light

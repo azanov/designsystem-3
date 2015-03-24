@@ -180,15 +180,6 @@ h6, h6 a {
   color: $text-color;
 }
 
-.no-margin-top {
-  margin-top: 0;
-}
-.no-margin-bottom {
-  margin-bottom: 0;
-}
-.no-margins {
-  margin: 0;
-}
 
 // when you need light text
 // sets the bold and italic accordingly
@@ -238,6 +229,17 @@ dt {
 
   &:first-child {
     margin-top: 0;
+  }
+}
+
+// condensed definition list */
+.dlist-condensed {
+  dt {
+    margin-bottom: 0;
+  }
+
+  dd {
+    line-height: 1.2;
   }
 }
 
