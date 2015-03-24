@@ -1,5 +1,5 @@
-@import '../../../bower_components/bourbon/dist/settings/asset-pipeline';
-@import '../../../bower_components/bourbon/dist/css3/font-face';
+@import "../../../bower_components/bourbon/app/assets/stylesheets/settings/asset-pipeline";
+@import "../../../bower_components/bourbon/app/assets/stylesheets/css3/font-face";
 
 @include font-face("PrecisionSans_W_Rg", "../../fonts/PrecisionSans_W_Rg", "400", "normal");
 
@@ -17,7 +17,7 @@
 
 @include font-face("PrecisionSans_W_MdIt", "../../fonts/PrecisionSans_W_MdIt", "500", "italic");
 
-@include font-face("pbfont", "../fonts/pbfont");
+@include font-face("pbfont", "../../fonts/pbfont");
 
 $font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 

@@ -1,26 +1,18 @@
 <div class="container-fluid">
-
   <div class="row">
-
     <div class="col-md-12">
       <h1 translate="ELEMENTS.TITLE"></h1>
     </div>
-
   </div>
-
   <div class="row">
-
     <div class="col-xs-2">
-      <ul class="nav nav-pills nav-stacked">
-        <li ng-repeat="e in ec.leftNav.children" ui-sref-active="active"><a ui-sref="{{e.value}}" href="">{{e.label}}</a></li>
+      <ul class="list-group left-nav">
+        <li class="list-group-item" ng-repeat="e in ec.leftNav.children" ui-sref-active="active"><a ui-sref="{{e.value}}" href="">{{e.label}}</a></li>
       </ul>
-
     </div>
-
     <div class="col-xs-10">
       <div ui-view></div>
     </div>
-
   </div>
-
 </div>
+

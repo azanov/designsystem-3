@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app')
+angular.module('pb.elements')
   .controller('ColorsCtrl', function($scope, $log, ColorFactory) {
 
     ColorFactory.getColors().then(function(response) {

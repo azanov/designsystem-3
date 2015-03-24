@@ -121,7 +121,7 @@ gulp.task('browser-sync', function() {
 });
 
 // run this to open project in browser and watch for changes in CSS
-gulp.task('default', ['browser-sync', 'sass', 'watch']);
+gulp.task('default', ['sass', 'browser-sync', 'watch']);
 
 // gulp.task('build', ['clean'],function() {
 //  gulp.run(['sass-nomaps','usemin','scripts','assets']);
@@ -138,10 +138,7 @@ gulp.task('watch', function() {
 
   // Watch .scss files
   gulp.watch(
-    [
-      'app/assets/sass/**/*.scss',
-      'app/modules/**/*.scss'
-    ], ['sass']);
+    ['app/assets/sass/**/*.scss'], ['sass']);
 
   gulp.watch(
     [
@@ -151,13 +148,5 @@ gulp.task('watch', function() {
   ], function() {
     reload();
   });
-
-  // Watch .js files
-  gulp.watch('app/scripts/**/*.js', function() {
-    reload();
-  });
-
-  // Watch image files
-  //  gulp.watch('app/images/**/*', ['images']);
 
 });

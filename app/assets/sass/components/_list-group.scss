@@ -1,26 +1,25 @@
 a.list-group-item {
   @extend %ps-regular;
   font-size: 16px;
-  border            : 0;
-  border-radius     : 0;
-  -webkit-transition: background-color .3s, color .2s;
-  transition        : background-color .3s, color .2s;
+  border: 0;
+  border-radius: 0;
+  transition: background-color .3s, color .2s;
   &:hover {
-    color           : $link-color-hover;
+    color: $link-color-hover;
     background-color: $pb-gray-50;
   }
   &:first-child {
-    border-top-left-radius : 0;
+    border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
   &.active {
     background-color: $pb-gray-50;
-    border-color    : $pb-gray-50;
-    color           : $link-color;
+    border-color: $pb-gray-50;
+    color: $link-color;
     &:hover, &:focus {
       background-color: $pb-gray-200;
-      border-color    : $pb-gray-200;
-      color           : $link-color-hover;
+      border-color: $pb-gray-200;
+      color: $link-color-hover;
     }
     .badge {
       color: #fff;
@@ -28,3 +27,4 @@ a.list-group-item {
     }
   }
 }
+
