@@ -1,13 +1,13 @@
 'use strict';
 
-angular.module('app').factory('fontawesome', ['$http', function($http) {
+angular.module('app').factory('FontawesomeFactory', ['$http', function($http) {
 
-  var fa = {};
+  var FontawesomeFactory = {};
 
-  fa.get = function(){
+  FontawesomeFactory.get = function() {
     return $http.get('core/data/fontawesome.json');
   };
 
-  return fa;
+  return FontawesomeFactory;
 
 }]);

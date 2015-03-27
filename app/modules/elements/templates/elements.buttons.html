@@ -212,7 +212,6 @@
     <div class="col-md-4">
     </div>
   </div>
-  </div>
 </section>
 <!--  second main row -->
 <section class="row">
@@ -446,20 +445,32 @@
   <div class="col-md-6">
     <h4 class="section-head">Toggle buttons</h4>
     <!-- FIXME: directive doesn't allow this to be styled differently from regular default buttons -->
-    <!-- <h6 class="sh">Single toggle</h6>
-    <button type="button" class="btn btn-default" ng-model="singleModel" btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">Single Toggle</button> -->
+    <h6 class="sh">Single toggle</h6>
+      <button type="button" class="btn btn-default" data-toggle="button" aria-pressed="false" autocomplete="off">Single toggle</button>
+
     <h6 class="sh">Checkbox (Multiple Selection)</h6>
-    <div class="btn-group">
-      <label class="btn btn-default" ng-model="checkModel[0]" btn-checkbox>East</label>
-      <label class="btn btn-default" ng-model="checkModel[1]" btn-checkbox>Central</label>
-      <label class="btn btn-default" ng-model="checkModel[2]" btn-checkbox>Mountain</label>
-      <label class="btn btn-default" ng-model="checkModel[3]" btn-checkbox>Pacific</label>
+    <div class="btn-group" data-toggle="buttons">
+      <label class="btn btn-default active">
+        <input type="checkbox" autocomplete="off" checked> Checkbox 1 (pre-checked)
+      </label>
+      <label class="btn btn-default">
+        <input type="checkbox" autocomplete="off"> Checkbox 2
+      </label>
+      <label class="btn btn-default">
+        <input type="checkbox" autocomplete="off"> Checkbox 3
+      </label>
     </div>
     <h6 class="sh">Radio (Single Selection)</h6>
-    <div class="btn-group">
-      <label class="btn btn-default" ng-model="radioModel" btn-radio="'Left'"><i class="fa fa-align-left"></i> Left</label>
-      <label class="btn btn-default" ng-model="radioModel" btn-radio="'Middle'"><i class="fa fa-align-center"></i> Centered</label>
-      <label class="btn btn-default" ng-model="radioModel" btn-radio="'Right'"><i class="fa fa-align-right"></i> Right</label>
+    <div class="btn-group" data-toggle="buttons">
+      <label class="btn btn-default active">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
+      </label>
+      <label class="btn btn-default">
+        <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+      </label>
+      <label class="btn btn-default">
+        <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+      </label>
     </div>
   </div>
   <div class="col-md-6">

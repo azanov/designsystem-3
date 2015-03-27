@@ -1,13 +1,13 @@
 'use strict';
 
-angular.module('app').factory('people', ['$http', function($http) {
+angular.module('app').factory('PeopleFactory', ['$http', function($http) {
 
-  var people = {};
+  var PeopleFactory = {};
 
-  people.get = function(){
+  PeopleFactory.get = function() {
     return $http.get('core/data/people.json');
   };
 
-  return people;
+  return PeopleFactory;
 
 }]);

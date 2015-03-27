@@ -37,7 +37,7 @@ var gulp = require('gulp'),
 
 //styles
 gulp.task('sass', function() {
-  return sass('app/assets/sass/app.scss', {
+  return sass('app/assets/sass/', {
       sourcemap: true,
       style: 'compact'
     })
@@ -142,10 +142,12 @@ gulp.task('watch', function() {
 
   gulp.watch(
     [
-    'app/**/*.js',
-    'app/**/*.json',
-    'app/**/*.html'
-  ], function() {
+    'app/core/**/*.js',
+    'app/modules/**/*.js',
+    'app/core/**/*.json',
+    'app/core/**/*.html',
+    'app/modules/**/*.html'
+    ], function() {
     reload();
   });
 

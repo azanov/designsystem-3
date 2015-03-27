@@ -12,9 +12,6 @@ angular.module('pb.elements', ['ui.router'])
         translate: function($translatePartialLoader) {
           $translatePartialLoader.addPart('/modules/elements/i18n');
         },
-        people: function(people) {
-          return people.get();
-        },
         navigation: function(navigation) {
           return navigation.getSubNav('Elements');
         }
@@ -57,8 +54,8 @@ angular.module('pb.elements', ['ui.router'])
       templateUrl: 'modules/elements/templates/elements.icons.html',
       controller: 'IconsCtrl as ic',
       resolve: {
-        faIcons: function(fontawesome) {
-          return fontawesome.get();
+        faIconsResolve: function(FontawesomeFactory) {
+          return FontawesomeFactory.get();
         }
       }
     })
@@ -83,7 +80,13 @@ angular.module('pb.elements', ['ui.router'])
     })
     .state('elements.tables', {
       url: '/tables',
-      templateUrl: 'modules/elements/templates/elements.tables.html'
+      templateUrl: 'modules/elements/templates/elements.tables.html',
+      controller: 'TablesCtrl as tc',
+      resolve: {
+        peopleResolve: function(PeopleFactory) {
+          return PeopleFactory.get();
+        }
+      }
     })
     .state('elements.typography', {
       url: '/typography',

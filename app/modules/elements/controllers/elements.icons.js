@@ -1,10 +1,35 @@
 'use strict';
 
 angular.module('pb.elements')
-.controller('IconsCtrl', ['$log', 'faIcons', function($log, faIcons) {
+  .controller('IconsCtrl', function($log, faIconsResolve) {
 
-  var ctrl = this;
+    var _this = this;
 
-  ctrl.faIcons = faIcons.data.icons;
+    _this.faIcons = faIconsResolve.data.icons;
 
-}]);
+    _this.pbIcons =  [
+        'address-book',
+        'addtocatalog',
+        'addtofolder',
+        'catalog',
+        'connection',
+        'databaseconnection',
+        'filesystemconnection',
+        'folder',
+        'layer',
+        'line',
+        'map',
+        'metadata',
+        'metadatatemplate',
+        'newcatalog',
+        'newconnection',
+        'newfolder',
+        'newtable',
+        'point',
+        'polygon',
+        'scales',
+        'table',
+        'tile'
+      ];
+
+  });

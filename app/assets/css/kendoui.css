@@ -1,7 +1,7 @@
 /*
 Error: File to import not found or unreadable: variables.
-       Load path: /Users/stevelombardi/Documents/designsystem/app/sass
-        on line 4 of app/sass/kendoui.scss
+       Load path: /Users/stevelombardi/Documents/designsystem/app/assets/sass
+        on line 4 of app/assets/sass/kendoui.scss
 
 1: 
 2: //* kendo UI *\/
@@ -10,11 +10,11 @@ Error: File to import not found or unreadable: variables.
 5: 
 6: // slider
 7: .k-slider-track {
-8: 	background-color: $gray-light;
+8: 	background-color: $pb-gray-200;
 9: 	box-shadow: none;
 
 Backtrace:
-app/sass/kendoui.scss:4
+app/assets/sass/kendoui.scss:4
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/tree/import_node.rb:66:in `rescue in import'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/tree/import_node.rb:45:in `import'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -57,4 +57,4 @@ app/sass/kendoui.scss:4
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: variables.\A        Load path: /Users/stevelombardi/Documents/designsystem/app/sass\A         on line 4 of app/sass/kendoui.scss\A \A 1: \A 2: //* kendo UI */\A 3: \A 4: @import 'variables';\A 5: \A 6: // slider\A 7: .k-slider-track {\A 8: 	background-color: $gray-light;\A 9: 	box-shadow: none;"; }
+  content: "Error: File to import not found or unreadable: variables.\A        Load path: /Users/stevelombardi/Documents/designsystem/app/assets/sass\A         on line 4 of app/assets/sass/kendoui.scss\A \A 1: \A 2: //* kendo UI */\A 3: \A 4: @import 'variables';\A 5: \A 6: // slider\A 7: .k-slider-track {\A 8: 	background-color: $pb-gray-200;\A 9: 	box-shadow: none;"; }
