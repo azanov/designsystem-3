@@ -7,7 +7,7 @@
 @font-face { font-family: "PrecisionSans_W_Md"; font-style: "normal"; font-weight: "500"; src: font-source-declaration("PrecisionSans_W_Md", "../fonts/PrecisionSans_W_Md", false, eot woff2 woff ttf svg, font-url-prefixer(false)); }
 @font-face { font-family: "PrecisionSans_W_MdIt"; font-style: "italic"; font-weight: "500"; src: font-source-declaration("PrecisionSans_W_MdIt", "../fonts/PrecisionSans_W_MdIt", false, eot woff2 woff ttf svg, font-url-prefixer(false)); }
 @font-face { font-family: "pbfont"; font-style: normal; font-weight: normal; src: font-source-declaration("pbfont", "../fonts/pbfont", false, eot woff2 woff ttf svg, font-url-prefixer(false)); }
-.ps-light, .signin .title, .ps-light.italic, .ps-light em, .ps-light i, p.lead, p.lede, .btn, .nav-tabs > li > a, .nav-pills > li > a, .panel-heading, #header .navbar .navbar-brand.brand-text, #header .navbar .container .navbar-brand.brand-text, header .navbar .navbar-brand.brand-text, header .navbar .container .navbar-brand.brand-text, .nav.navbar-nav, a.list-group-item, .ps-light b, .ps-light strong, .media-heading, .signin .prod-name, #header .navbar .navbar-brand.brand-text .brand-top, #header .navbar .container .navbar-brand.brand-text .brand-top, header .navbar .navbar-brand.brand-text .brand-top, header .navbar .container .navbar-brand.brand-text .brand-top, body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.ps-light, .signin .title, .ps-light.italic, .ps-light em, .ps-light i, p.lead, p.lede, .btn, .nav-tabs > li > a, .nav-pills > li > a, .panel-heading, #header .navbar .navbar-brand.brand-text, #header .navbar .container .navbar-brand.brand-text, header .navbar .navbar-brand.brand-text, header .navbar .container .navbar-brand.brand-text, .nav.navbar-nav, a.list-group-item, .ps-light b, .ps-light strong, .media-heading, #header .navbar .navbar-brand.brand-text .brand-top, #header .navbar .container .navbar-brand.brand-text .brand-top, header .navbar .navbar-brand.brand-text .brand-top, header .navbar .container .navbar-brand.brand-text .brand-top, .signin .prod-name, body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 .ps-light, .signin .title { font-family: 'PrecisionSans_W_Lt', Arial, sans-serif; font-weight: 300; font-style: normal; }
 
@@ -17,7 +17,7 @@ p.lead, p.lede, .btn, .nav-tabs > li > a, .nav-pills > li > a, .panel-heading, #
 
 .ps-light b, .ps-light strong { font-family: 'PrecisionSans_W_Md', Arial, sans-serif; font-weight: 500; font-style: normal; }
 
-.media-heading, .signin .prod-name, #header .navbar .navbar-brand.brand-text .brand-top, #header .navbar .container .navbar-brand.brand-text .brand-top, header .navbar .navbar-brand.brand-text .brand-top, header .navbar .container .navbar-brand.brand-text .brand-top { font-family: 'PrecisionSans_W_Bd', Arial, sans-serif; font-weight: normal; font-style: normal; }
+.media-heading, #header .navbar .navbar-brand.brand-text .brand-top, #header .navbar .container .navbar-brand.brand-text .brand-top, header .navbar .navbar-brand.brand-text .brand-top, header .navbar .container .navbar-brand.brand-text .brand-top, .signin .prod-name { font-family: 'PrecisionSans_W_Bd', Arial, sans-serif; font-weight: normal; font-style: normal; }
 
 .serif, .serif p { font-family: Georgia, Times, "Times New Roman", serif; }
 
@@ -193,18 +193,6 @@ table[timepicker] tbody tr td input { padding: 0; }
 .dropdown-menu table[timepicker] { margin: 10px; }
 
 .tab-content-bordered .tab-content { border: 1px solid #c0c0c0; border-top: 0; border-radius: 0 0 4px 4px; }
-
-.signin .bg { position: absolute; top: 0; left: 0; bottom: 0; right: 0; background-color: #3e53a4; background: linear-gradient(135deg, #4cc6f3 0%, #32b1e5 10%, #254d9d 53%, #bc278d 100%); background-size: cover; background-repeat: no-repeat; }
-.signin #header, .signin #footer { display: none; }
-.signin .signin-box { background-color: #fff; padding: 40px; margin-top: 60px; }
-@media (max-width: 767px) { .signin .signin-box { margin-top: 0; } }
-.signin .prod-name { font-size: 24px; color: #0072b8; padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid #0072b8; }
-.signin .title { font-size: 32px; color: #a03f9b; }
-.signin .signin-footer { color: #cf9fcd; margin-top: 20px; }
-.signin .signin-footer a { color: inherit; }
-.signin .signin-footer .nav { padding-top: 5px; }
-@media (max-width: 767px) { .signin .signin-footer .logo { text-align: center; }
-  .signin .signin-footer .nav { text-align: center; padding-top: 10px; } }
 
 div.accordion-group .panel-body { padding: 15px; }
 div.accordion-group.compact .panel-default { border: 0; border-radius: 0; }
@@ -803,6 +791,18 @@ a.list-group-item:first-child { border-top-left-radius: 0; border-top-right-radi
 a.list-group-item.active { background-color: #f0f0f0; border-color: #f0f0f0; color: #0072b8; }
 a.list-group-item.active:hover, a.list-group-item.active:focus { background-color: #c0c0c0; border-color: #c0c0c0; color: tint(#0072b8, 20%); }
 a.list-group-item.active .badge { color: #fff; background-color: #a03f9b; }
+
+.signin .bg { position: fixed; top: 0; left: 0; bottom: 0; right: 0; background-color: #254d9d; background: linear-gradient(135deg, #4cc6f3 0%, #32b1e5 10%, #254d9d 53%, #bc278d 100%); background-size: cover; background-repeat: no-repeat; }
+.signin #header, .signin #footer { display: none; }
+.signin .signin-box { background-color: #fff; padding: 40px; margin-top: 60px; }
+@media (max-width: 767px) { .signin .signin-box { margin-top: 0; } }
+.signin .prod-name { font-size: 24px; color: #0072b8; padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid #0072b8; }
+.signin .title { font-size: 32px; color: #a03f9b; }
+.signin .signin-footer { color: #cf9fcd; margin-top: 20px; }
+.signin .signin-footer a { color: inherit; }
+.signin .signin-footer .nav { padding-top: 5px; }
+@media (max-width: 767px) { .signin .signin-footer .logo { text-align: center; }
+  .signin .signin-footer .nav { text-align: center; padding-top: 10px; } }
 
 
 
