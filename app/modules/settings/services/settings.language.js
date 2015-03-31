@@ -1,40 +1,44 @@
-angular.module('pb.settings').factory('languageFactory',
-  [
+angular.module('pb.settings').factory('languageFactory', [
   '$log',
   '$translateLocalStorage',
   '$rootScope',
   '$translate',
   'tmhDynamicLocale',
   '$http',
-  function($log, $translateLocalStorage, $rootScope, $translate, tmhDynamicLocale, $http){
+  function($log, $translateLocalStorage, $rootScope, $translate, tmhDynamicLocale, $http) {
 
-  var lang = {};
+    var lang = {};
 
-  lang.get = function(){
-    return $http.get('/core/config/languages.json');
-  };
+    lang.get = function() {
+      return $http.get('/core/config/languages.json');
+    };
 
-  lang.getStored = function(){
+    lang.getStored = function() {
 
-    var code = $translateLocalStorage.get('NG_TRANSLATE_LANG_KEY'),
-    codeArray = code.split('-'),
-    language =  codeArray[0],
-    country = codeArray[1],
-    obj = {'code':code, 'language':language, 'country': country};
+      var code = $translateLocalStorage.get('NG_TRANSLATE_LANG_KEY'),
+        codeArray = code.split('-'),
+        language = codeArray[0],
+        country = codeArray[1],
+        obj = {
+          'code': code,
+          'language': language,
+          'country': country
+        };
 
-    return obj;
-  };
+      return obj;
+    };
 
-  lang.change = function(country, language, rtl){
+    lang.change = function(country, language, rtl) {
 
-    var code = language + '-' + country;
+      var code = language + '-' + country;
 
-    $rootScope.rtl = (rtl) ? 'rtl':'ltr';
+      $rootScope.rtl = (rtl) ? 'rtl' : 'ltr';
 
-    $translate.use(code);
-    tmhDynamicLocale.set(code.toLowerCase());
-  };
+      $translate.use(code);
+      tmhDynamicLocale.set(code.toLowerCase());
+    };
 
-  return lang;
+    return lang;
 
-}]);
+  }
+]);

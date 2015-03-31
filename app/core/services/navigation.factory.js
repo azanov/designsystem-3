@@ -1,30 +1,30 @@
 'use strict';
 
 angular.module('app')
-.factory('navigation', ['$log','$http', function($log, $http) {
+  .factory('navigation', ['$log', '$http', function($log, $http) {
 
-  var navigation = {};
+    var navigation = {};
 
-  navigation.get = function(){
-    return $http.get('core/data/navigation.json');
-  };
+    navigation.get = function() {
+      return $http.get('core/data/navigation.json');
+    };
 
-  navigation.getSubNav = function(subnav){
-    return navigation.get().then(function(response){
+    navigation.getSubNav = function(subnav) {
+      return navigation.get().then(function(response) {
 
-      var sub = {};
+        var sub = {};
 
-      angular.forEach(response.data.nav, function(v, k) {
-        if (angular.lowercase(v.label) === angular.lowercase(subnav)) {
-          sub = v;
-        }
+        angular.forEach(response.data.nav, function(v, k) {
+          if (angular.lowercase(v.label) === angular.lowercase(subnav)) {
+            sub = v;
+          }
+        });
+
+        return sub;
+
       });
+    };
 
-      return sub;
+    return navigation;
 
-    });
-  };
-
-  return navigation;
-
-}]);
+  }]);

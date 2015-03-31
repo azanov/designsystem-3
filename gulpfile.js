@@ -7,33 +7,33 @@
 /*jshint node:true */
 
 
-var gulp = require('gulp'),
-  usemin = require('gulp-usemin'),
-  sass = require('gulp-ruby-sass'),
+var gulp       = require('gulp'),
+  usemin       = require('gulp-usemin'),
+  sass         = require('gulp-ruby-sass'),
   autoprefixer = require('gulp-autoprefixer'),
-  minifycss = require('gulp-minify-css'),
-  minifyhtml = require('gulp-minify-html'),
-  jshint = require('gulp-jshint'),
-  uglify = require('gulp-uglify'),
-  imagemin = require('gulp-imagemin'),
-  rename = require('gulp-rename'),
-  concat = require('gulp-concat'),
-  notify = require('gulp-notify'),
-  cache = require('gulp-cache'),
-  connect = require('gulp-connect'),
-  browsersync = require('browser-sync'),
-  reload = browsersync.reload,
-  rev = require('gulp-rev'),
-  sourcemaps = require('gulp-sourcemaps'),
-  filter = require('gulp-filter'),
-  plumber = require('gulp-plumber'),
-  del = require('del'),
-  gutil = require('gulp-util'),
-  ftp = require('gulp-ftp'),
-  printfiles = require('gulp-print'), // displays files in the console
-  prompt = require('gulp-prompt'), // asks for password in the console before connecting
-  runSequence = require('run-sequence'),
-  header = require('gulp-header');
+  minifycss    = require('gulp-minify-css'),
+  minifyhtml   = require('gulp-minify-html'),
+  jshint       = require('gulp-jshint'),
+  uglify       = require('gulp-uglify'),
+  imagemin     = require('gulp-imagemin'),
+  rename       = require('gulp-rename'),
+  concat       = require('gulp-concat'),
+  notify       = require('gulp-notify'),
+  cache        = require('gulp-cache'),
+  connect      = require('gulp-connect'),
+  browsersync  = require('browser-sync'),
+  reload       = browsersync.reload,
+  rev          = require('gulp-rev'),
+  sourcemaps   = require('gulp-sourcemaps'),
+  filter       = require('gulp-filter'),
+  plumber      = require('gulp-plumber'),
+  del          = require('del'),
+  gutil        = require('gulp-util'),
+  ftp          = require('gulp-ftp'),
+  printfiles   = require('gulp-print'), // displays files in the console
+  prompt       = require('gulp-prompt'), // asks for password in the console before connecting
+  runSequence  = require('run-sequence'),
+  header       = require('gulp-header');
 
 //styles
 gulp.task('sass', function() {

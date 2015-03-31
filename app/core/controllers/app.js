@@ -7,7 +7,7 @@ app.controller('AppCtrl', [
   '$state',
   function($log, $rootScope, $state) {
 
-    var ctrl = this;
+    var _this = this;
     $rootScope.$state = $state;
 
   }

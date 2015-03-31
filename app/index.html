@@ -46,13 +46,13 @@
 
 
     <!-- header -->
-    <div header></div>
+    <div header ng-if="showHeaderFooter"></div>
 
     <!-- content -->
     <div ui-view=""></div>
 
     <!-- FOOTER -->
-    <div footer></div>
+    <div footer ng-if="showHeaderFooter"></div>
 
 
 

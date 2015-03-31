@@ -1,11 +1,11 @@
 /* global pbDashboard */
 /* jshint strict:false */
 
-  pbDashboard.controller('DashboardCtrl', ['$log','people',
-    function($log, people){
-      var ctrl = this;
+pbDashboard.controller('DashboardCtrl', ['$log', 'people',
+  function($log, people) {
+    var _this = this;
 
-      ctrl.people = people.data.data;
+    _this.people = people.data.data;
 
-    }
-  ]);
+  }
+]);

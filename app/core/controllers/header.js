@@ -1,17 +1,18 @@
 /* global app */
 /* jshint strict:false */
 
-  app.controller('HeaderCtrl', [
-    '$log',
-    'navigation',
-    function($log, navigation){
+app.controller('HeaderCtrl', [
+  '$log',
+  'navigation',
+  function($log, navigation) {
 
-    var ctrl = this;
-    ctrl.nav = {};
+    var _this = this;
+    _this.nav = {};
 
-    navigation.get().then(function(response){
+    navigation.get().then(function(response) {
       //$log.debug(response);
-      ctrl.nav = response.data.nav;
+      _this.nav = response.data.nav;
     });
 
-  }]);
+  }
+]);

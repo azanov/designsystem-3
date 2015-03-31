@@ -11,7 +11,7 @@ angular.module('app')
     return {
       restrict: 'EA',
       scope: {
-        options: "="
+        options: '='
       },
       link: function postLink(scope, element, attrs) {
         element.stepper(scope.options);

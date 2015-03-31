@@ -3,5 +3,5 @@
 
 //app constants
 app.constant('config', {
-  'debug': true
+  debug: true
 });
