@@ -14,7 +14,8 @@ var app = angular.module('app', [
   'pb.components',
   'pb.elements',
   'pb.settings',
-  'pb.signin'
+  'pb.signin',
+  'ui.bootstrap'
 ]);
 
 //debugging

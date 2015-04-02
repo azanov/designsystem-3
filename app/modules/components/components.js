@@ -28,8 +28,8 @@ angular.module('pb.components', ['ui.router'])
     templateUrl: 'modules/components/templates/components.panels.html',
     controller: 'PanelsCtrl as pc',
     resolve: {
-      people: function(people){
-        return people.get();
+      people: function(PeopleFactory){
+        return PeopleFactory.get();
       },
       millerColumn: function(millerColumn){
         return millerColumn.get();
@@ -49,7 +49,7 @@ angular.module('pb.components', ['ui.router'])
   .state('components.uibootstrap', {
     url: '/uibootstrap',
     templateUrl: 'modules/components/templates/components.uibootstrap.html',
-    controller: 'UIBootstrapCtrl as uc'
+    controller: 'UIBootstrapCtrl'
   })
   ;
 }]);

@@ -45,14 +45,14 @@
   <body ng-controller="AppCtrl as app" dir="{{rtl}}">
 
 
-    <!-- header -->
-    <div header ng-if="showHeaderFooter"></div>
+    <!-- header  -->
+    <div header></div>
 
     <!-- content -->
     <div ui-view=""></div>
 
     <!-- FOOTER -->
-    <div footer ng-if="showHeaderFooter"></div>
+    <div footer></div>
 
 
 
@@ -83,6 +83,8 @@
     <script src="bower_components/selectize-ng/dist/selectize-ng.js"></script>
     <script src="bower_components/angular-toggle-switch/angular-toggle-switch.js"></script>
     <script src="bower_components/ngprogress/build/ngProgress.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     <!-- endbuild  -->
 
 
@@ -129,6 +131,10 @@
     <script src="modules/components/controllers/components.tabs.js"></script>
     <script src="modules/components/controllers/components.kendoui.js"></script>
     <script src="modules/components/controllers/components.uibootstrap.js"></script>
+    <script src="modules/components/controllers/bootstrap-ui-modal.js"></script>
+    <script src="modules/components/controllers/bootstrap-ui-draggable-modal.js"></script>
+    <script src="modules/components/controllers/bootstrap-ui-prompt-modal.js"></script>
+    <script src="modules/components/controllers/bootstrap-ui-simple-modal.js"></script>
 
     <script src="modules/settings/settings.js"></script>
     <script src="modules/settings/controllers/settings.js"></script>

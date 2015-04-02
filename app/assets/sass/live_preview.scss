@@ -1,20 +1,16 @@
 /* -- THIS FILE CONTAINS STYLES FOR THE LIVE PREVIEW SITE ONLY!                         */
-
 /* -- THESE STYLES ARE NOT MEANT TO BE USED ON PROJECTS, ONLY USE THE DESIGN_SYSTEM.CSS */
 
-@import "base/variables";
-@import "base/mixins";
-@import "base/typography";
+@import "settings/settings";
+
+
 
 .clearfix {
   zoom: 1;
-
-  &:before,
-  &:after {
+  &:before, &:after {
     display: table;
     content: '';
   }
-
   &:after {
     clear: both;
   }
@@ -30,11 +26,9 @@
 
 .debug {
   border: 1px solid #f00;
-
   &.green {
     border-color: #008000;
   }
-
   &.pink {
     border-color: #ffc0b0;
   }
@@ -44,19 +38,16 @@
   height: 640px;
   background-image: url("../images/livepreview_keyboard.jpg");
   background-size: cover;
-
   .hero-unit {
     margin-top: 80px;
     color: #fff;
     border-top: 2px solid #fff;
-
     h1 {
       @extend %ps-light;
       font-size: 36px;
       padding-top: 20px;
       color: #fff;
     }
-
     h2 {
       @extend %ps-light;
       font-size: 22px;
@@ -64,33 +55,27 @@
       color: #fff;
     }
   }
-
   .hero-menu {
     padding-left: 0;
     list-style-type: none;
     $accent: lighten($brand-primary, 35%);
-
     > li {
       @extend %ps-regular;
       font-size: 18px;
       margin-top: 30px;
       padding-top: 10px;
       border-top: 1px solid $accent;
-
       a {
         color: $accent;
-
         &:hover {
           text-decoration: none;
         }
       }
-
       ul {
         margin-top: 5px;
         padding-left: 0;
         list-style-type: none;
         column-count: 3;
-
         li {
           a {
             color: #fff;
@@ -98,7 +83,6 @@
         }
       }
     }
-
     .dropdown-header,
     .divider,
     .optional {
@@ -117,7 +101,6 @@
 
 //* These are only for the purposes of displaying the chord colors in the SVGs *//
 //** * Chord Color Mixin * * @access public * * @requires {List} $colors - Space Deliminated list of Colors * */
-
 @mixin chord-color($colors) {
   $i: 0;
 
@@ -130,6 +113,7 @@
     }
   }
 }
+
 
 //** * Chord1 */
 #chord1 {
@@ -153,16 +137,15 @@ section.row {
   margin-top: 60px;
 }
 
-h4, h1 {
+h4,
+h1 {
   margin-bottom: 10px;
-
   .more-info {
     float: right;
     font-size: 12px;
     color: $link-color;
     font-weight: normal;
     padding-top: 7px;
-
     a {
       color: inherit;
       font-weight: normal;
@@ -173,7 +156,6 @@ h4, h1 {
 h6.sh {
   clear: both;
   margin-top: 40px;
-
   &:first-child {
     margin-top: 0;
   }
@@ -194,7 +176,6 @@ hr {
 .piechart {
   position: relative;
   display: inline-block;
-
   span {
     font-size: 20px;
     position: absolute;
@@ -213,18 +194,15 @@ hr {
     display: inline-block;
     float: left;
   }
-
   .caption {
     display: inline-block;
     float: left;
     margin-left: 10px;
   }
-
   h6 {
     margin-top: 0;
     margin-bottom: 0;
   }
-
   h2 {
     margin-top: 0;
     margin-bottom: 0;
@@ -242,7 +220,6 @@ h1 .more-info {
 
 //* the tab that pops out of the  Live Preview */
 $tab-color: #333;
-
 .settings {
   position: fixed;
   z-index: 2000;
@@ -251,12 +228,10 @@ $tab-color: #333;
   width: 185px;
   height: 100px;
   transition: all .3s;
-
   &.activate {
     right: 0;
     width: 185px;
   }
-
   .settings-tab {
     float: left;
     width: 35px;
@@ -267,16 +242,13 @@ $tab-color: #333;
     border-bottom-left-radius: 5px;
     background: $tab-color;
     box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.3);
-
     &:hover {
       cursor: pointer;
     }
-
     &:active {
       background: #71a6b9;
     }
   }
-
   .settings-form {
     float: right;
     width: 150px;
@@ -286,7 +258,6 @@ $tab-color: #333;
     border-bottom-left-radius: 5px;
     background-color: $tab-color;
     box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.3);
-
     label {
       font-size: 12px !important;
       color: #fff;
@@ -305,34 +276,28 @@ p[class^='bg'] {
 
 .color-swatches {
   margin-bottom: 20px;
-
   .color-swatch-container {
     margin-bottom: 30px;
   }
-
   .color-swatch {
     display: block;
     width: 100%;
     // set them to use the BS grid
     height: 72px;
     margin-bottom: 5px;
-
     &[class*='alert'] {
       border-right-width: 16px;
       border-right-style: solid;
     }
-
     &.color-swatch-small {
       display: inline-block;
       width: 33px;
       height: 33px;
     }
   }
-
   p {
     font-size: 16px;
     color: $pb-gray;
-
     small {
       font-size: 12px;
       line-height: 1.2;
@@ -344,27 +309,23 @@ p[class^='bg'] {
 ul.swatches {
   margin: 10px 0 30px;
   padding-left: 0;
-
   li.color-swatch {
     height: 30px;
     margin-bottom: 0;
     text-align: right;
     padding: 5px 10px;
     color: #000;
-
     span {
       display: inline-block;
       float: left;
       opacity: .4;
     }
-
     &:first-child {
       height: 75px;
       font-size: 18px;
       color: #fff;
       margin-bottom: 5px;
     }
-
     &:nth-child(n+6) {
       color: #fff;
     }
@@ -376,7 +337,6 @@ ul.swatches {
   position: relative;
   float: left;
   margin-right: 30px;
-
   .pie {
     position: absolute;
     top: 86px;
@@ -387,7 +347,6 @@ ul.swatches {
 .color-blocks {
   li {
     margin-bottom: 7px;
-
     span {
       display: inline-block;
       width: 35px;
@@ -409,7 +368,6 @@ ul.swatches {
   background-image: url("../images/livepreview_keyboard.jpg");
   background-position: center center;
   background-size: fit;
-
   p.help-text {
     color: #fff;
   }
@@ -420,18 +378,14 @@ ul.swatches {
     font-size: .8em;
     margin-bottom: 20px;
     text-align: center;
-
-    .glyphicon,
-    .pbfont {
+    .glyphicon, .pbfont {
       //font-size: 2em;
-
     }
   }
 }
 
 .text-center {
-  .pie,
-  .donut {
+  .pie, .donut {
     width: 100px;
     margin: 0 auto 20px;
   }
@@ -541,19 +495,16 @@ ul.swatches {
   .form-group {
     margin-bottom: 0;
   }
-
   .control-label {
     padding-top: 3px;
     padding-right: 0;
     text-align: left;
-
     strong {
       font-weight: normal;
       padding-right: .3em;
       color: $pb-gray;
       background-color: #fff;
     }
-
     &:before {
       float: left;
       width: 0;
@@ -562,7 +513,6 @@ ul.swatches {
       color: $pb-gray-300;
     }
   }
-
   .form-control-static {
     padding-top: 2px;
     padding-bottom: 2px;
@@ -574,12 +524,9 @@ ul.swatches {
 
 .view-animate {
   transition: all .3s;
-
-  &.ng-enter,
-  &.ng-leave {
+  &.ng-enter, &.ng-leave {
     opacity: 1;
   }
-
   &.ng-enter,
   &.ng-leave-active,
   &.ng-hide {
@@ -595,7 +542,6 @@ ul.swatches {
   display: block;
   padding: 0;
   margin: 0 -.55556rem;
-
   > li {
     display: block;
     height: auto;
@@ -620,3 +566,4 @@ ul.swatches {
 .small-block-grid-3 > li:nth-of-type(3n+1) {
   clear: both;
 }
+
