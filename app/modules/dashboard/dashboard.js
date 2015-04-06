@@ -13,13 +13,14 @@ var pbDashboard = angular.module('pb.dashboard', [
       translate: function($translatePartialLoader) {
         $translatePartialLoader.addPart('/modules/dashboard/i18n');
       },
-      people: function(people) {
-        return people.get();
+      navigationResolve: function(navigation) {
+        return navigation.get();
       }
     },
     data: {
       pageTitle: 'Dashboard',
-      access: 'private'
+      access: 'public',
+      className: 'home'
     }
   });
 }]);

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('app')
-  .factory('navigation', ['$log', '$http', function($log, $http) {
+  .factory('navigation', function($log, $http) {
 
     var navigation = {};
 
@@ -27,4 +27,4 @@ angular.module('app')
 
     return navigation;
 
-  }]);
+  });

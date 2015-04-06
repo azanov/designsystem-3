@@ -1,81 +1,79 @@
 {
   "nav": [{
-    "label": "Components",
-    "value": "#",
-    "toggle": "dropdown",
-    "children": [{
-      "label": "Accordion",
-      "value": "components.accordion"
+      "label": "Components",
+      "value": "#",
+      "toggle": "dropdown",
+      "children": [{
+        "label": "Accordion",
+        "value": "components.accordion"
+      }, {
+        "label": "Panels",
+        "value": "components.panels"
+      }, {
+        "label": "Tabs",
+        "value": "components.tabs"
+      }, {
+        "type": "divider",
+        "divider": true
+      }, {
+        "label": "Other Directives",
+        "type": "header",
+        "header": true
+      }, {
+        "label": "Kendo UI",
+        "value": "components.kendoui"
+      }, {
+        "label": "UI Bootstrap",
+        "value": "components.uibootstrap"
+      }]
     }, {
-      "label": "Panels",
-      "value": "components.panels"
+      "label": "Elements",
+      "value": "",
+      "toggle": "dropdown",
+      "children": [{
+        "label": "Alerts",
+        "value": "elements.alerts"
+      }, {
+        "label": "Buttons",
+        "value": "elements.buttons"
+      }, {
+        "label": "Colors",
+        "value": "elements.colors"
+      }, {
+        "label": "Color Usage",
+        "value": "elements.colorusage"
+      }, {
+        "label": "Color Charts",
+        "value": "elements.colorcharts"
+      }, {
+        "label": "Icons",
+        "value": "elements.icons"
+      }, {
+        "label": "Inputs",
+        "value": "elements.inputs"
+      }, {
+        "label": "Popovers",
+        "value": "elements.popovers",
+        "className": "popovers"
+      }, {
+        "label": "Progress",
+        "value": "elements.progress"
+      }, {
+        "label": "Tables",
+        "value": "elements.tables"
+      }, {
+        "label": "Typography",
+        "value": "elements.typography"
+      }]
     }, {
-      "label": "Tabs",
-      "value": "components.tabs"
-    }, {
-      "type": "divider",
-      "divider": true
-    }, {
-      "label": "Other Directives",
-      "type": "header",
-      "header": true
-    }, {
-      "label": "Kendo UI",
-      "value": "components.kendoui"
-    }, {
-      "label": "UI Bootstrap",
-      "value": "components.uibootstrap"
-    }]
-  }, {
-    "label": "Elements",
-    "value": "",
-    "toggle": "dropdown",
-    "children": [{
-      "label": "Alerts",
-      "value": "elements.alerts"
-    }, {
-      "label": "Buttons",
-      "value": "elements.buttons"
-    }, {
-      "label": "Colors",
-      "value": "elements.colors"
-    }, {
-      "label": "Color Usage",
-      "value": "elements.colorusage"
-    }, {
-      "label": "Color Charts",
-      "value": "elements.colorcharts"
-    },  {
-      "label": "Icons",
-      "value": "elements.icons"
-    }, {
-      "label": "Inputs",
-      "value": "elements.inputs"
-    }, {
-      "label": "Popovers",
-      "value": "elements.popovers",
-      "className": "popovers"
-    }, {
-      "label": "Progress",
-      "value": "elements.progress"
-    }, {
-      "label": "Tables",
-      "value": "elements.tables"
-    }, {
-      "label": "Typography",
-      "value": "elements.typography"
-    }]
-  },{
-    "label": "Pages",
-    "value": "",
-    "toggle": "dropdown",
-    "children": [
-      {
+      "label": "Pages",
+      "value": "",
+      "toggle": "dropdown",
+      "children": [{
         "label": "Sign-in",
         "value": "signin"
-      }
-    ]
-  }
+      }]
+    }
 
   ]
 }

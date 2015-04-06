@@ -1,11 +1,13 @@
 /* global pbDashboard */
 /* jshint strict:false */
 
-pbDashboard.controller('DashboardCtrl', ['$log', 'people',
-  function($log, people) {
+pbDashboard.controller('DashboardCtrl',
+  function($log, navigationResolve) {
     var _this = this;
 
-    _this.people = people.data.data;
+    _this.navData = navigationResolve.data;
+
+    $log.debug(navigationResolve.data);
 
   }
-]);
+);
