@@ -2,14 +2,14 @@
 
 angular.module('pb.components', ['ui.router'])
 
-.config(['$stateProvider',function($stateProvider){
+.config(['$stateProvider', function($stateProvider) {
   $stateProvider.state('components', {
     url: '/components',
     abstract: true,
     templateUrl: 'modules/components/templates/components.html',
     controller: 'ComponentsCtrl as cc',
     resolve: {
-      translate: function($translatePartialLoader){
+      translate: function($translatePartialLoader) {
         $translatePartialLoader.addPart('/modules/components/i18n');
       }
     },
@@ -28,10 +28,10 @@ angular.module('pb.components', ['ui.router'])
     templateUrl: 'modules/components/templates/components.panels.html',
     controller: 'PanelsCtrl as pc',
     resolve: {
-      people: function(PeopleFactory){
+      people: function(PeopleFactory) {
         return PeopleFactory.get();
       },
-      millerColumn: function(millerColumn){
+      millerColumn: function(millerColumn) {
         return millerColumn.get();
       }
     }

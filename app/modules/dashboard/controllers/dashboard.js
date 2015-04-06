@@ -1,13 +1,16 @@
 /* global pbDashboard */
 /* jshint strict:false */
 
-pbDashboard.controller('DashboardCtrl',
-  function($log, navigationResolve) {
+angular.module('pb.dashboard').controller('DashboardCtrl',
+  function($log, navigation) {
+
     var _this = this;
+    _this.navdata = {};
 
-    _this.navData = navigationResolve.data;
-
-    $log.debug(navigationResolve.data);
+    navigation.get().then(function(response) {
+      //$log.debug(response);
+      _this.navdata = response.data.nav;
+    });
 
   }
 );

@@ -1,10 +1,10 @@
 /* jshint strict:false */
 
-var pbDashboard = angular.module('pb.dashboard', [
+angular.module('pb.dashboard', [
   'ui.router'
 ])
 
-.config(['$stateProvider', function($stateProvider) {
+.config(function($stateProvider) {
   $stateProvider.state('dashboard', {
     url: '/dashboard',
     templateUrl: 'modules/dashboard/templates/dashboard.html',
@@ -12,9 +12,6 @@ var pbDashboard = angular.module('pb.dashboard', [
     resolve: {
       translate: function($translatePartialLoader) {
         $translatePartialLoader.addPart('/modules/dashboard/i18n');
-      },
-      navigationResolve: function(navigation) {
-        return navigation.get();
       }
     },
     data: {
@@ -23,4 +20,4 @@ var pbDashboard = angular.module('pb.dashboard', [
       className: 'home'
     }
   });
-}]);
+});

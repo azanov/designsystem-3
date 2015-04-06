@@ -11,9 +11,7 @@ angular.module('app')
 
     navigation.getSubNav = function(subnav) {
       return navigation.get().then(function(response) {
-
         var sub = {};
-
         angular.forEach(response.data.nav, function(v, k) {
           if (angular.lowercase(v.label) === angular.lowercase(subnav)) {
             sub = v;
@@ -26,5 +24,4 @@ angular.module('app')
     };
 
     return navigation;
-
   });
