@@ -65,5 +65,17 @@
       "label": "Typography",
       "value": "elements.typography"
     }]
-  }]
+  },{
+    "label": "Pages",
+    "value": "",
+    "toggle": "dropdown",
+    "children": [
+      {
+        "label": "Sign-in",
+        "value": "signin"
+      }
+    ]
+  }
+
+  ]
 }
