@@ -1,11 +1,8 @@
-angular.module('pb.settings').factory('languageFactory', [
-  '$log',
-  '$translateLocalStorage',
-  '$rootScope',
-  '$translate',
-  'tmhDynamicLocale',
-  '$http',
-  function($log, $translateLocalStorage, $rootScope, $translate, tmhDynamicLocale, $http) {
+(function() {
+
+  'use strict';
+
+  angular.module('pb.settings').factory('languageFactory', function($log, $translateLocalStorage, $rootScope, $translate, tmhDynamicLocale, $http) {
 
     var lang = {};
 
@@ -20,9 +17,9 @@ angular.module('pb.settings').factory('languageFactory', [
         language = codeArray[0],
         country = codeArray[1],
         obj = {
-          'code': code,
-          'language': language,
-          'country': country
+          code: code,
+          language: language,
+          country: country
         };
 
       return obj;
@@ -40,5 +37,6 @@ angular.module('pb.settings').factory('languageFactory', [
 
     return lang;
 
-  }
-]);
+  });
+
+})();

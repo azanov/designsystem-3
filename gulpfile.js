@@ -6,7 +6,6 @@
 /*jshint strict:false */
 /*jshint node:true */
 
-
 var gulp       = require('gulp'),
   usemin       = require('gulp-usemin'),
   sass         = require('gulp-ruby-sass'),
@@ -33,7 +32,8 @@ var gulp       = require('gulp'),
   printfiles   = require('gulp-print'), // displays files in the console
   prompt       = require('gulp-prompt'), // asks for password in the console before connecting
   runSequence  = require('run-sequence'),
-  header       = require('gulp-header');
+  header       = require('gulp-header'),
+  ngAnnotate   = require('gulp-ng-annotate');
 
 //styles
 gulp.task('sass', function() {
@@ -57,7 +57,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('sass-nomaps', function() {
-  return sass('app/sass/', {
+  return sass('app/assets/sass/', {
       sourcemap: false,
       style: 'compact'
     })
@@ -77,9 +77,10 @@ gulp.task('usemin', function() {
     .pipe(usemin({
       css: [minifycss(), 'concat'],
       //html: [minifyhtml({empty: true})],
-      js: [uglify({
-        mangle: false
-      })]
+      js: [
+        ngAnnotate({remove: true, add: true, single_quotes: true}),
+        uglify({mangle: false})
+      ]
     }))
     .pipe(gulp.dest('build/'));
 });
@@ -102,6 +103,7 @@ gulp.task('scripts', function() {
   gulp.src(config.extras.js)
     .pipe(gulp.dest(config.buildDir));
 });
+
 gulp.task('assets', function() {
   gulp.src(config.extras.assets)
     .pipe(gulp.dest(config.buildDir));

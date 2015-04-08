@@ -1,33 +1,31 @@
-/* jshint strict:false */
+(function() {
 
-angular.module('pb.settings', [
-  'ui.router'
-])
+  'use strict';
 
-.config(['$stateProvider', function($stateProvider) {
-  $stateProvider.state('settings', {
-    url: '/settings',
-    templateUrl: 'modules/settings/templates/settings.html',
-    controller: 'SettingsCtrl as sc',
-    resolve: {
-      translate: function($translatePartialLoader) {
-        $translatePartialLoader.addPart('/modules/settings/i18n');
+  angular.module('pb.settings', ['ui.router']);
+
+  angular.module('pb.settings').config(function($stateProvider) {
+    $stateProvider.state('settings', {
+      url: '/settings',
+      templateUrl: 'modules/settings/templates/settings.html',
+      controller: 'SettingsCtrl as sc',
+      resolve: {
+        translate: function($translatePartialLoader) {
+          $translatePartialLoader.addPart('/modules/settings/i18n');
+        },
+        languages: function(languageFactory) {
+          return languageFactory.get();
+        }
       },
-      languages: function(languageFactory) {
-        return languageFactory.get();
+      data: {
+        pageTitle: 'Settings',
+        access: 'private'
       }
-    },
-    data: {
-      pageTitle: 'Settings',
-      access: 'private'
-    }
+    });
   });
-}])
 
-
-// TRANSLATE CONFIG
-.config(['$translateProvider', '$translatePartialLoaderProvider',
-  function($translateProvider, $translatePartialLoaderProvider) {
+  // TRANSLATE CONFIG
+  angular.module('pb.settings').config(function($translateProvider, $translatePartialLoaderProvider) {
 
     $translateProvider.useLoaderCache(true);
 
@@ -35,37 +33,30 @@ angular.module('pb.settings', [
       urlTemplate: '{part}/{lang}.json'
     });
 
-    $translatePartialLoaderProvider.addPart('modules/i18n');
     //additional parts loaded in module controllers
+    $translatePartialLoaderProvider.addPart('modules/i18n');
 
     $translateProvider.preferredLanguage('en-us');
     $translateProvider.fallbackLanguage('en-us');
     $translateProvider.useLocalStorage();
-  }
-])
+  });
 
-
-// DYNAMIC LOCALE CONFIG
-.config(['tmhDynamicLocaleProvider',
-  function(tmhDynamicLocaleProvider) {
+  // DYNAMIC LOCALE CONFIG
+  angular.module('pb.settings').config(function(tmhDynamicLocaleProvider) {
     tmhDynamicLocaleProvider.useCookieStorage('NG_TRANSLATE_LANG_KEY');
+
     //gulp copies the i18n locale files from bower_components to modules/i18n
     tmhDynamicLocaleProvider.localeLocationPattern('/modules/i18n/angular-i18n/angular-locale_{{locale}}.js');
-  }
-])
 
+  });
 
-.run([
-  '$rootScope',
-  '$log',
-  '$translate',
-  function($rootScope, $log, $translate) {
+  angular.module('pb.settings').run(function($rootScope, $log, $translate) {
 
     //refresh as parts are added in controllers
     $rootScope.$on('$translatePartialLoaderStructureChanged', function() {
       $translate.refresh();
     });
 
+  });
 
-  }
-]);
+})();

@@ -1,55 +1,50 @@
-/* global pbSettings */
-/* jshint strict:false */
+(function() {
 
-angular.module('pb.settings').controller('SettingsCtrl', [
-  '$log',
-  '$scope',
-  'languages',
-  '$filter',
-  'languageFactory',
-  function($log, $scope, languages, $filter, languageFactory) {
+  'use strict';
 
-    var ctrl = this;
+  angular.module('pb.settings').controller('SettingsCtrl', function($log, $scope, languages, $filter, languageFactory) {
+
+    var _this = this;
 
     // languages from resolve in ui-router $state config
-    ctrl.languages = languages.data.countries;
+    _this.languages = languages.data.countries;
 
     ///////
 
-    ctrl.init = function() {
+    _this.init = function() {
 
       var code = languageFactory.getStored();
 
       //filter the country/language on the cookie
-      ctrl.selectedCountry = $filter('filter')(ctrl.languages, {
+      _this.selectedCountry = $filter('filter')(_this.languages, {
         value: code.country
       })[0];
-      ctrl.selectedLanguage = $filter('filter')(ctrl.selectedCountry.languages, {
+
+      _this.selectedLanguage = $filter('filter')(_this.selectedCountry.languages, {
         value: code.language
       })[0];
 
-      languageFactory.change(ctrl.selectedCountry.value, ctrl.selectedLanguage.value, ctrl.selectedLanguage.rtl);
+      languageFactory.change(_this.selectedCountry.value, _this.selectedLanguage.value, _this.selectedLanguage.rtl);
 
       // watch the selected country to set the selected language
       $scope.$watch('sc.selectedCountry', function(newVal, oldVal) {
         $log.debug('WATCH:', newVal, oldVal);
         if (newVal !== oldVal) {
-          ctrl.selectedLanguage = ctrl.selectedCountry.languages[0];
-          ctrl.changeLang();
+          _this.selectedLanguage = _this.selectedCountry.languages[0];
+          _this.changeLang();
         }
 
       });
 
     };
 
-
-    ctrl.changeLang = function() {
-      languageFactory.change(ctrl.selectedCountry.value, ctrl.selectedLanguage.value, ctrl.selectedLanguage.rtl);
+    _this.changeLang = function() {
+      languageFactory.change(_this.selectedCountry.value, _this.selectedLanguage.value, _this.selectedLanguage.rtl);
     };
 
-
     //run initialize function
-    ctrl.init();
+    _this.init();
 
-  }
-]);
+  });
+
+})();
