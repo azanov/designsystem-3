@@ -9,3 +9,4 @@ config.codekit
 node_modules
 npm-debug.log
 scss-lint.log
+.idea/.name
