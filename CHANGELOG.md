@@ -1,6 +1,10 @@
 ##Release Notes
 
-###1.3.3 March 24, 2015 
+###1.3.4  April 9, 2015
+- Fixed header fonts to be Precision Sans Light
+- Fixed typos on Text page
+
+###1.3.3 March 24, 2015
 - added condensed definition list.  Add class "dlist-condensed" to any DL
 - added banner task to gulp; css file will not be stamped with time and version
 - changed CSS output to "compact"
