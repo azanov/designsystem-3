@@ -8,6 +8,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+      <!-- Browser detect -->
+    <script src="bower_components/bowser/bowser.min.js"></script>
+    <script>
+      var bowser = bowser;
+      //console.log(bowser);
+      if(bowser.msie && bowser.version < 9){
+        window.location.assign('unsupported.html');
+      }
+    </script>
+
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 
