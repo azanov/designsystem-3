@@ -11,7 +11,7 @@
               <li ng-repeat="p in n.children" ng-class="{'dropdown-header': p.header, 'divider': p.divider, 'optional': p.optional}" ng-switch on="p.type">
                 <span ng-switch-when="header">{{p.label}}</span>
                 <span ng-switch-when="divider"></span>
-                <a ng-href="#/{{p.value}}" ng-switch-default>{{p.label}}</a>
+                <a href="" ui-sref="{{p.value}}" ng-switch-default>{{p.label}}</a>
               </li>
             </ul>
           </li>
