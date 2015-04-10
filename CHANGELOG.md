@@ -1,5 +1,8 @@
 ##Release Notes
 
+###1.3.5 April 10, 2015
+- Set font anti-aliasing back to system default.  Will greatly improve text rendering on Windows Chrome and FF.
+
 ###1.3.4  April 9, 2015
 - Fixed header fonts to be Precision Sans Light
 - Fixed typos on Text page
