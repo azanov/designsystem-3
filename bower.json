@@ -49,6 +49,7 @@
     "bootstrap": "3.3.0",
     "moment": ">=2.8.0",
     "angular": "1.2.26",
-    "angular-cookies": "~1.2.26"
+    "angular-cookies": "~1.2.26",
+    "sifter": "0.4.x"
   }
 }
