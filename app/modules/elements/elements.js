@@ -34,6 +34,7 @@ angular.module('pb.elements', ['ui.router'])
       url: '/colors',
       templateUrl: 'modules/elements/templates/elements.colors.html',
       controller: 'ColorsCtrl'
+
     })
     .state('elements.colorusage', {
       url: '/colorusage',
@@ -43,7 +44,8 @@ angular.module('pb.elements', ['ui.router'])
     .state('elements.colorcharts', {
       url: '/colorcharts',
       templateUrl: 'modules/elements/templates/elements.colorcharts.html',
-      controller: 'ColorsCtrl'
+      controller: 'ChartColorsCtrl'
+
     })
     .state('elements.grid', {
       url: '/grid',
