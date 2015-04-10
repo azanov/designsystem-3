@@ -17,7 +17,7 @@ angular.module('pb.dashboard', [
     data: {
       pageTitle: 'Dashboard',
       access: 'public',
-      className: 'home'
+      bodyclass: 'home'
     }
   });
 });
