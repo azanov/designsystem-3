@@ -12,10 +12,7 @@
 
 $font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-%aa {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+
 
 %ps-light {
   @extend %aa !optional;
@@ -202,7 +199,7 @@ p.lede {
 }
 
 body {
-  @extend %aa;
+  @extend %aa !optional;
   font-family: $font-family-base;
   font-size: $font-size-base;
   // originally they had !important "for ie8" but I removed

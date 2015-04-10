@@ -4,7 +4,7 @@
 /* -- THIS FILE CONTAINS STYLES FOR THE LIVE PREVIEW SITE ONLY!                         */
 
 /* -- THESE STYLES ARE NOT MEANT TO BE USED ON PROJECTS, ONLY USE THE DESIGN_SYSTEM.CSS */
-   
+
 
 @import 'variables';
 @import 'mixins';
@@ -65,7 +65,7 @@
     list-style-type: none;
     $accent: lighten($brand-primary, 35%);
     > li {
-      @extend %ps-regular;
+      @extend %ps-light;
       font-size: 18px;
       margin-top: 30px;
       padding-top: 10px;
