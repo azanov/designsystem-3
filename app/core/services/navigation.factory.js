@@ -1,7 +1,8 @@
-'use strict';
+(function() {
 
-angular.module('app')
-  .factory('navigation', function($log, $http) {
+  'use strict';
+
+  angular.module('app').factory('navigation', function($log, $http) {
 
     var navigation = {};
 
@@ -25,3 +26,5 @@ angular.module('app')
 
     return navigation;
   });
+
+})();

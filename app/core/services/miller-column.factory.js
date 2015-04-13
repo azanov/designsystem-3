@@ -1,13 +1,17 @@
-'use strict';
+(function() {
 
-angular.module('app').factory('millerColumn', ['$http', function($http) {
+  'use strict';
 
-  var millerColumn = {};
+  angular.module('app').factory('millerColumn', function($http) {
 
-  millerColumn.get = function() {
-    return $http.get('core/data/miller_column.json');
-  };
+    var millerColumn = {};
 
-  return millerColumn;
+    millerColumn.get = function() {
+      return $http.get('core/data/miller_column.json');
+    };
 
-}]);
+    return millerColumn;
+
+  });
+
+})();

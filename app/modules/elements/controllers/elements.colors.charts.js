@@ -1,7 +1,8 @@
-'use strict';
+(function() {
 
-angular.module('pb.elements')
-  .controller('ChartColorsCtrl', function($scope, $log, ColorFactory) {
+  'use strict';
+
+  angular.module('pb.elements').controller('ChartColorsCtrl', function($scope, $log, ColorFactory) {
 
     $scope.colorData = {};
 
@@ -151,12 +152,11 @@ angular.module('pb.elements')
     $scope.donutsVaried = {
       donut01: $scope.donut([30, 20, 20, 13, 10, 7], $scope.colors.grays.all()),
       donut02: $scope.donut([30, 20, 20, 13, 10, 7], $scope.colors.blues.all()),
-      donut03: $scope.donut([30, 20, 20, 13, 10, 7], [$scope.colors.blues.$blue1, $scope.colors.charts.$orange, $scope.colors.blues.$blue3, $scope.colors.blues.$blue4, $scope.colors.blues.$blue5, $scope.colors.blues.$blue6]),
+      donut03: $scope.donut([30, 20, 20, 13, 10, 7], [$scope.colors.blues.$blue1, $scope.colors.charts.$orange, $scope.colors.blues.$blue3, $scope.colors.blues.$blue4, $scope.colors.blues.$blue5, $scope.colors.blues.$blue6])
     };
     $scope.radial_01 = $scope.easypiechart(100, $scope.colors.blues.$blue1, 20, 63);
     $scope.radial_02 = $scope.easypiechart(100, $scope.colors.blues.$blue6, 20, 37);
     $scope.radial_03 = $scope.easypiechart(100, $scope.colors.blues.$blue4, 20, 90);
-
 
     $scope.percentage_01 = $scope.easypiechart(100, $scope.colors.charts.$green, 20, 90);
     $scope.percentage_02 = $scope.easypiechart(100, $scope.colors.charts.$blue, 20, 75);
@@ -177,5 +177,6 @@ angular.module('pb.elements')
 
     $scope.bar_chart_01 = $scope.bar([100, 80, 60, 50, 40, 30], '110px', $scope.colors.charts.all(), 27, 6);
 
-
   });
+
+})();

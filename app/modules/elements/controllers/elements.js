@@ -1,9 +1,12 @@
-/* global pbDashboard */
-/* jshint strict:false */
+(function() {
 
-angular.module('pb.elements').controller('ElementsCtrl', function($log, navigation) {
+  'use strict';
 
-  var _this = this;
-  _this.leftNav = navigation;
+  angular.module('pb.elements').controller('ElementsCtrl', function($log, navigation) {
 
-});
+    var _this = this;
+    _this.leftNav = navigation;
+
+  });
+
+})();

@@ -1,11 +1,11 @@
-/* global pbDashboard */
-/* jshint strict:false */
+(function() {
 
-angular.module('pb.components')
+  'use strict';
 
-.controller('ComponentsCtrl', ['$log', function($log){
+  angular.module('pb.components').controller('ComponentsCtrl', function($log) {
 
-      var ctrl = this;
+    var _this = this;
 
-    }
-  ]);
+  });
+
+})();

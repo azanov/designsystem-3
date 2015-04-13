@@ -1,13 +1,17 @@
-'use strict';
+(function() {
 
-angular.module('app').factory('FontawesomeFactory', ['$http', function($http) {
+  'use strict';
 
-  var FontawesomeFactory = {};
+  angular.module('app').factory('FontawesomeFactory', function($http) {
 
-  FontawesomeFactory.get = function() {
-    return $http.get('core/data/fontawesome.json');
-  };
+    var FontawesomeFactory = {};
 
-  return FontawesomeFactory;
+    FontawesomeFactory.get = function() {
+      return $http.get('core/data/fontawesome.json');
+    };
 
-}]);
+    return FontawesomeFactory;
+
+  });
+
+})();

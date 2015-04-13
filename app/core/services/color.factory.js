@@ -1,7 +1,8 @@
-'use strict';
+(function() {
 
-angular.module('app').factory('ColorFactory',
-  function($http) {
+  'use strict';
+
+  angular.module('app').factory('ColorFactory', function($http) {
 
     var colorData;
 
@@ -12,9 +13,11 @@ angular.module('app').factory('ColorFactory',
             return response.data;
           });
         }
+
         return colorData;
       }
     };
 
-  }
-);
+  });
+
+})();

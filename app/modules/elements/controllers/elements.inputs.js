@@ -1,14 +1,16 @@
-'use strict';
+(function() {
 
-angular.module('pb.elements')
-  .controller('InputsCtrl', ['$log', 'countriesList', function($log, countriesList) {
+  'use strict';
+
+  angular.module('pb.elements').controller('InputsCtrl', function($log, countriesList) {
 
     var _this = this;
+
     //numeric stepper
     _this.numericStepper = {
-      'limit': [0], // no negative numbers
-      'wheelStep': 1,
-      'arrowStep': 1
+      limit: [0], // no negative numbers
+      wheelStep: 1,
+      arrowStep: 1
     };
 
     //datetimepicker1
@@ -72,6 +74,7 @@ angular.module('pb.elements')
         email: 'nicole@email.com'
       }]
     };
+
     //selectize country selects (all on page)
     _this.countrySelect = {
       options: {
@@ -87,4 +90,7 @@ angular.module('pb.elements')
     _this.switchStatus2 = false;
     _this.switchStatus3 = true;
     _this.switchStatus4 = false;
-  }]);
+
+  });
+
+})();

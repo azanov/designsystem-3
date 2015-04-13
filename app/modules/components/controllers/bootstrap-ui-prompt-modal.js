@@ -1,14 +1,8 @@
-'use strict';
+(function() {
 
-/**
- * @ngdoc function
- * @name designSystemApp.controller:BootstrapUiPromptModalCtrl
- * @description
- * # BootstrapUiPromptModalCtrl
- * Controller of the designSystemApp
- */
-angular.module('pb.components')
-  .controller('BootstrapUiPromptModalCtrl', function($scope, $modalInstance) {
+  'use strict';
+
+  angular.module('pb.components').controller('BootstrapUiPromptModalCtrl', function($scope, $modalInstance) {
 
     $scope.fullname = '';
 
@@ -23,3 +17,5 @@ angular.module('pb.components')
     };
 
   });
+
+})();

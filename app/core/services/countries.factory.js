@@ -1,13 +1,17 @@
-'use strict';
+(function() {
 
-angular.module('app').factory('countries', ['$http', function($http) {
+  'use strict';
 
-  var countries = {};
+  angular.module('app').factory('countries', function($http) {
 
-  countries.get = function() {
-    return $http.get('core/data/countries.json');
-  };
+    var countries = {};
 
-  return countries;
+    countries.get = function() {
+      return $http.get('core/data/countries.json');
+    };
 
-}]);
+    return countries;
+
+  });
+
+})();

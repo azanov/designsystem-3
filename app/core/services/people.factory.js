@@ -1,13 +1,17 @@
-'use strict';
+(function() {
 
-angular.module('app').factory('PeopleFactory', ['$http', function($http) {
+  'use strict';
 
-  var PeopleFactory = {};
+  angular.module('app').factory('PeopleFactory', function($http) {
 
-  PeopleFactory.get = function() {
-    return $http.get('core/data/people.json');
-  };
+    var PeopleFactory = {};
 
-  return PeopleFactory;
+    PeopleFactory.get = function() {
+      return $http.get('core/data/people.json');
+    };
 
-}]);
+    return PeopleFactory;
+
+  });
+
+})();

@@ -1,9 +1,11 @@
-/* jshint strict:false */
+(function() {
 
-angular.module('pb.elements', ['ui.router'])
+  'use strict';
 
-.config(['$stateProvider', function($stateProvider) {
-  $stateProvider.state('elements', {
+  angular.module('pb.elements', ['ui.router']);
+
+  angular.module('pb.elements').config(function($stateProvider) {
+    $stateProvider.state('elements', {
       url: '/elements',
       abstract: true,
       templateUrl: 'modules/elements/templates/elements.html',
@@ -94,4 +96,6 @@ angular.module('pb.elements', ['ui.router'])
       url: '/typography',
       templateUrl: 'modules/elements/templates/elements.typography.html'
     });
-}]);
+  });
+
+})();

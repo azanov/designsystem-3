@@ -1,8 +1,10 @@
-angular.module('pb.components')
-.controller('UIBootstrapCtrl', function($log, $scope, $modal, $timeout, $window){
+(function() {
 
-   $scope.modals = {
+  'use strict';
 
+  angular.module('pb.components').controller('UIBootstrapCtrl', function($log, $scope, $modal, $timeout, $window) {
+
+    $scope.modals = {
       simple: function() {
         $modal.open({
           templateUrl: 'modules/components/templates/bootstrap-ui/modals/simple.html',
@@ -37,9 +39,7 @@ angular.module('pb.components')
           backdrop: 'static'
         });
       }
-
     };
-
 
     $scope.calendar = {
       format: 'MMMM dd, yyyy',
@@ -61,7 +61,6 @@ angular.module('pb.components')
         event.preventDefault();
       }
     };
-
 
     $scope.tabs = {
       tabset01: [{
@@ -95,4 +94,6 @@ angular.module('pb.components')
       }
     };
 
-});
+  });
+
+})();

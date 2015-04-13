@@ -1,61 +1,42 @@
-'use strict';
+(function() {
 
-angular.module('pb.components')
-.controller('PanelsCtrl', ['$log', 'people', 'millerColumn', function($log, people, millerColumn){
+  'use strict';
 
-  var ctrl = this;
+  angular.module('pb.components').controller('PanelsCtrl', function($log, people, millerColumn) {
 
-  ctrl.people = people.data.data;
+    var _this = this;
 
-  console.log(millerColumn);
+    _this.people = people.data.data;
 
-  ctrl.millercolumn = {
-      data: millerColumn.data.versionInfos,
-      level1: null,
-      level2: null
+    _this.millercolumn = {
+        data: millerColumn.data.versionInfos,
+        level1: null,
+        level2: null
+      };
+
+    _this.getSublevel1 = function(index) {
+      _this.millercolumn.level1 = _this.millercolumn.data[index].versionInfos;
+      _this.millercolumn.dataSelected = index;
+      _this.millercolumn.level2 = null;
+      _this.millercolumn.level1Selected = null;
+      $log.log(_this.millercolumn.level1);
     };
 
-  ctrl.getSublevel1 = function(index){
-    ctrl.millercolumn.level1 = ctrl.millercolumn.data[index].versionInfos;
-    ctrl.millercolumn.dataSelected = index;
-    ctrl.millercolumn.level2 = null;
-    ctrl.millercolumn.level1Selected = null;
-    $log.log(ctrl.millercolumn.level1);
-  };
+    _this.getSublevel2 = function(index) {
+      _this.millercolumn.level2 = _this.millercolumn.level1[index].versionInfos;
+      _this.millercolumn.level1Selected = index;
+    };
 
-  ctrl.getSublevel2 = function(index){
-    ctrl.millercolumn.level2 = ctrl.millercolumn.level1[index].versionInfos;
-    ctrl.millercolumn.level1Selected = index;
-  };
+    //draggable options
+    _this.draggable = {
+      connectWith: '.column',
+      handle: '.panel-heading',
+      cursor: 'move',
+      placeholder: 'placeholder',
+      forcePlaceholderSize: true,
+      opacity: 0.4
+    };
 
+  });
 
-
-  //draggable options
-  ctrl.draggable = {
-    connectWith: '.column',
-    handle: '.panel-heading',
-    cursor: 'move',
-    placeholder: 'placeholder',
-    forcePlaceholderSize: true,
-    opacity: 0.4
-  };
-
-}]);
-
-
-
-
-
-// angular.module('designSystemApp').controller('PanelsCtrl', ['ctrl', '$log', 'PeopleFactory', 'MillerColumnFactory',
-// function($scope, $log, PeopleFactory, MillerColumnFactory) {
-//
-//
-//
-//
-
-//
-//
-//
-//
-// }
-// ]);
+})();

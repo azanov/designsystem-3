@@ -1,6 +1,9 @@
-angular.module('pb.components')
-.controller('AccordionCtrl', ['$log',function($log){
+(function() {
 
-  var ctrl = this;
+  angular.module('pb.components').controller('AccordionCtrl', function($log) {
 
-}]);
+    var _this = this;
+
+  });
+
+})();

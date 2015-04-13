@@ -1,18 +1,19 @@
-'use strict';
+(function() {
 
-angular.module('designSystemApp')
-  .factory('ChartFactory', ['$http',
-    function($http) {
+  'use strict';
 
-      return {
-        getChartData: function() {
-          var chartData = $http.get('scripts/data/flot_example_data.js').then(function(response) {
-            return response.data;
-          });
+  angular.module('designSystemApp').factory('ChartFactory', function($http) {
 
-          return chartData;
-        }
-      };
+    return {
+      getChartData: function() {
+        var chartData = $http.get('scripts/data/flot_example_data.js').then(function(response) {
+          return response.data;
+        });
 
-    }
-  ]);
+        return chartData;
+      }
+    };
+
+  });
+
+})();

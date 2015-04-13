@@ -1,4 +1,9 @@
-angular.module('pb.components')
-.controller('TabsCtrl', ['$log',function($log){
+(function() {
 
-}]);
+  'use strict';
+
+  angular.module('pb.components').controller('TabsCtrl', function($log) {
+
+  });
+
+})();
