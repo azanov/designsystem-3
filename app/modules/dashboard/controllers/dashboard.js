@@ -1,8 +1,8 @@
-/* global pbDashboard */
-/* jshint strict:false */
+(function() {
 
-angular.module('pb.dashboard').controller('DashboardCtrl',
-  function($log, navigation) {
+  'use strict';
+
+  angular.module('pb.dashboard').controller('DashboardCtrl', function($log, navigation) {
 
     var _this = this;
     _this.navdata = {};
@@ -12,5 +12,6 @@ angular.module('pb.dashboard').controller('DashboardCtrl',
       _this.navdata = response.data.nav;
     });
 
-  }
-);
+  });
+
+})();
