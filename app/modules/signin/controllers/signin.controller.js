@@ -1,12 +1,13 @@
-'use strict';
+(function() {
 
-angular.module('pb.signin')
-  .controller('SigninCtrl',
-    function($scope, $log) {
+  'use strict';
 
-      var _this = this;
+  angular.module('pb.signin').controller('SigninCtrl', function($scope, $log) {
 
-      _this.showHeaderFooter = false;
+    var _this = this;
 
-    }
-  );
+    _this.showHeaderFooter = false;
+
+  });
+
+});
