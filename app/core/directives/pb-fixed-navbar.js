@@ -1,21 +1,23 @@
-/* global app */
-/* global $ */
-/* jshint strict:false */
+(function(){
 
-app.directive('pbFixedNavbar', function() {
-  return {
-    restrict: 'AE',
-    link: function postLink(scope, element) {
+  'use strict';
 
-      $('body').addClass('fixed-header');
+  angular.module('app').directive('pbFixedNavbar', function() {
+    return {
+      restrict: 'AE',
+      link: function postLink(scope, element) {
 
-      $(window).scroll(function() {
-        if ($(this).scrollTop() > 20) {
-          element.addClass('shadow');
-        } else {
-          element.removeClass('shadow');
-        }
-      });
-    }
-  };
-});
+        $('body').addClass('fixed-header');
+
+        $(window).scroll(function() {
+          if ($(this).scrollTop() > 20) {
+            element.addClass('shadow');
+          } else {
+            element.removeClass('shadow');
+          }
+        });
+      }
+    };
+  });
+
+})();

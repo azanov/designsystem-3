@@ -1,7 +1,8 @@
-'use strict';
+(function(){
 
-angular.module('app')
-  .directive('pbTransitoryAlert', function() {
+  'use strict';
+
+  angular.module('app').directive('pbTransitoryAlert', function() {
     return {
       restrict: 'A',
       require: 'ngModel',
@@ -31,3 +32,5 @@ angular.module('app')
       }
     };
   });
+
+})();

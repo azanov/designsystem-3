@@ -1,7 +1,8 @@
-'use strict';
+(function() {
 
-angular.module('app')
-  .directive('pbPanelDraggable', function() {
+  'use strict';
+
+  angular.module('app').directive('pbPanelDraggable', function() {
     return {
       restrict: 'EA',
       require: 'ngModel',
@@ -13,3 +14,5 @@ angular.module('app')
       }
     };
   });
+
+})();

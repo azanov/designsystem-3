@@ -1,7 +1,8 @@
-'use strict';
+(function() {
 
-angular.module('app')
-  .directive('pbPanelCollapsible', function() {
+  'use strict';
+
+  angular.module('app').directive('pbPanelCollapsible', function() {
     return {
       restrict: 'EA',
       scope: {
@@ -34,3 +35,5 @@ angular.module('app')
       }
     };
   });
+
+})();

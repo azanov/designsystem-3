@@ -1,14 +1,16 @@
-/* global app */
-/* global $ */
-/* jshint strict:false */
+(function() {
 
-app.directive('pbBootstrapPopover', function() {
-  return {
-    restrict: 'AE',
-    link: function postLink(scope, element) {
+  'use strict';
 
-      $(element).popover();
+  angular.module('app').directive('pbBootstrapPopover', function() {
+    return {
+      restrict: 'AE',
+      link: function postLink(scope, element) {
 
-    }
-  };
-});
+        $(element).popover();
+
+      }
+    };
+  });
+
+})();

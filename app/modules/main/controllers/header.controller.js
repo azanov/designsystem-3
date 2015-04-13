@@ -1,10 +1,8 @@
-/* global app */
-/* jshint strict:false */
+(function() {
 
-app.controller('HeaderCtrl', [
-  '$log',
-  'navigation',
-  function($log, navigation) {
+  'use strict';
+
+  angular.module('app').controller('HeaderCtrl', function($log, navigation) {
 
     var _this = this;
     _this.nav = {};
@@ -14,5 +12,6 @@ app.controller('HeaderCtrl', [
       _this.nav = response.data.nav;
     });
 
-  }
-]);
+  });
+
+})();

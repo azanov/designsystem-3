@@ -27,7 +27,7 @@
       languageFactory.change(_this.selectedCountry.value, _this.selectedLanguage.value, _this.selectedLanguage.rtl);
 
       // watch the selected country to set the selected language
-      $scope.$watch('sc.selectedCountry', function(newVal, oldVal) {
+      $scope.$watch('settings.selectedCountry', function(newVal, oldVal) {
         $log.debug('WATCH:', newVal, oldVal);
         if (newVal !== oldVal) {
           _this.selectedLanguage = _this.selectedCountry.languages[0];

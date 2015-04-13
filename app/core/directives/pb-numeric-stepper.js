@@ -1,13 +1,8 @@
-'use strict';
+(function() {
 
-/**
- * @ngdoc directive
- * @name designSystemApp.directive:pbNumericStepper
- * @description
- * # pbNumericStepper
- */
-angular.module('app')
-  .directive('pbNumericStepper', function() {
+  'use strict';
+
+  angular.module('app').directive('pbNumericStepper', function() {
     return {
       restrict: 'EA',
       scope: {
@@ -18,3 +13,5 @@ angular.module('app')
       }
     };
   });
+
+})();
