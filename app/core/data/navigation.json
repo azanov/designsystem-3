@@ -46,6 +46,9 @@
         "label": "Color Charts",
         "value": "elements.colorcharts"
       }, {
+        "label": "Grid",
+        "value": "elements.grid"
+      }, {
         "label": "Icons",
         "value": "elements.icons"
       }, {
