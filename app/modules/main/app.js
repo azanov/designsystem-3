@@ -13,7 +13,6 @@
     'selectize-ng',
     'toggle-switch',
     'ui.bootstrap',
-    'ui-rangeSlider',
     'chart.js',
     'pb.dashboard',
     'pb.components',
