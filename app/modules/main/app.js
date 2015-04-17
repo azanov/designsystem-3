@@ -12,6 +12,8 @@
     'tmh.dynamicLocale',
     'selectize-ng',
     'toggle-switch',
+    'ui.bootstrap',
+    'chart.js',
     'pb.dashboard',
     'pb.components',
     'pb.elements',
