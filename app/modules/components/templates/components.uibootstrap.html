@@ -18,7 +18,7 @@
 <!-- MODAL -->
 <section class="row">
   <div class="col-xs-12">
-    <h3 class="sh">Dialogs</h3>
+    <h4>Dialogs</h4>
     <button class="btn btn-default" ng-click="modals.simple()">Simplest dialog box</button>
     <button class="btn btn-default" ng-click="modals.modal()">Modal dialog</button>
     <button class="btn btn-default" ng-click="modals.prompt()">Prompt</button>
@@ -29,7 +29,7 @@
 <!-- DATE PICKER -->
 <section class="row">
   <div class="col-xs-12">
-    <h3 class="sh">Date picker</h3>
+    <h4>Date picker</h4>
     <div class="input-group col-xs-4">
       <input type="text" class="form-control" datepicker-popup="{{calendar.format}}" ng-model="dt" is-open="calendar.opened" datepicker-options="{{calendar.options}}" close-text="Close" show-button-bar="false" ng-click="calendar.open($event)" />
       <span class="input-group-btn">
@@ -41,7 +41,7 @@
 <!-- TIMEPICKER -->
 <section class="row">
   <div class="col-xs-12">
-    <h3 class="sh">Time picker</h3>
+    <h4>Time picker</h4>
     <div class="input-group col-xs-3">
       <input type="text" class="form-control" value="{{mytime | date:'shortTime' }}" readonly />
       <span class="input-group-btn" dropdown>
@@ -56,7 +56,7 @@
 <!-- TABS -->
 <section class="row">
   <div class="col-xs-12">
-    <h3 class="sh">Tabs</h3>
+    <h4>Tabs</h4>
     <section class="row">
       <div class="col-xs-6">
         <tabset>
@@ -111,4 +111,3 @@
   </div>
 </section>
 <!-- /container -->
-

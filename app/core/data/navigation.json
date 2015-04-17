@@ -20,9 +20,6 @@
         "type": "header",
         "header": true
       }, {
-        "label": "Kendo UI",
-        "value": "components.kendoui"
-      }, {
         "label": "UI Bootstrap",
         "value": "components.uibootstrap"
       }]
