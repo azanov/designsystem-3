@@ -17,7 +17,8 @@
     'pb.elements',
     'pb.settings',
     'pb.signin',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'ui-rangeSlider'
   ]);
 
   //debugging

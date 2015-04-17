@@ -575,10 +575,6 @@ select[disabled] { color: #9b9b9b !important; }
 
 .input-group-addon { background-color: #fff; border-color: #9b9b9b; }
 
-.ngrs-range-slider { box-shadow: none; border: 1px solid #c0c0c0; }
-.ngrs-range-slider .ngrs-join { position: absolute; z-index: 1; top: 50%; left: 0; right: 100%; height: 14px; margin: -7px 0 0; border-radius: 4px; background-color: #a03f9b; background-image: none; }
-.ngrs-range-slider .ngrs-handle { position: absolute; z-index: 2; height: 100%; width: 12px; margin: 0 0 -6px; background: #fff; border: 1px solid #a03f9b; border-radius: 0; }
-
 .modal.draggable .modal-header { border-radius: 4px 4px 0 0; cursor: move; }
 .modal.draggable .modal-header:active { background-color: #c0c0c0; }
 .modal .modal-body { font-size: 14px; }
