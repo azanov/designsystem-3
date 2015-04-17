@@ -30,6 +30,7 @@
     "bowser": "~0.7.2",
     "moment": "2.8.0",
     "modernizr": "2.8.1",
+    "angular-rangeslider": "~0.0.13"
     "angular-chart.js": "0.6.0",
     "Chart.js": "~1.0.2"
   },

@@ -13,14 +13,13 @@
     'selectize-ng',
     'toggle-switch',
     'ui.bootstrap',
+    'ui-rangeSlider',
     'chart.js',
     'pb.dashboard',
     'pb.components',
     'pb.elements',
     'pb.settings',
-    'pb.signin',
-    'ui.bootstrap',
-    'ui-rangeSlider'
+    'pb.signin'
   ]);
 
   //debugging
