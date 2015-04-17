@@ -102,9 +102,13 @@ cite { font-style: normal; }
 
 .text-danger { color: #c00; }
 
-[class^="pb-"], [class*=" pb-"] { font-family: 'pbfont'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+[class^="pb-"], [class*=" pb-"] { font-family: 'pbfont'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; }
 
-.pb-scales:before { content: "\e613"; }
+.pb-treeview:before { content: "\e616"; }
+
+.pb-flag-o:before { content: "\f11d"; }
+
+.pb-scale:before { content: "\e613"; }
 
 .pb-metadata:before { content: "\e600"; }
 
@@ -132,15 +136,23 @@ cite { font-style: normal; }
 
 .pb-table:before { content: "\e60c"; }
 
+.pb-newtable:before { content: "\e60e"; }
+
+.pb-labellayer:before { content: "\e617"; }
+
 .pb-layer:before { content: "\e60d"; }
 
-.pb-newtable:before { content: "\e60e"; }
+.pb-newlayer:before { content: "\e618"; }
 
 .pb-map:before { content: "\e60f"; }
 
+.pb-newmap:before { content: "\e619"; }
+
 .pb-tile:before { content: "\e610"; }
 
-.pb-address-book:before { content: "\e614"; }
+.pb-newtile:before { content: "\e61a"; }
+
+.pb-addressbook:before { content: "\e614"; }
 
 .pb-point:before { content: "\e611"; }
 

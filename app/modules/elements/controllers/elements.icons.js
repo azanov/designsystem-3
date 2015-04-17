@@ -9,7 +9,7 @@
     _this.faIcons = faIconsResolve.data.icons;
 
     _this.pbIcons =  [
-      'address-book',
+      'addressbook',
       'addtocatalog',
       'addtofolder',
       'catalog',
@@ -17,6 +17,7 @@
       'databaseconnection',
       'filesystemconnection',
       'folder',
+      'labellayer',
       'layer',
       'line',
       'map',
@@ -25,12 +26,16 @@
       'newcatalog',
       'newconnection',
       'newfolder',
+      'newlayer',
+      'newmap',
       'newtable',
+      'newtile',
       'point',
       'polygon',
-      'scales',
+      'scale',
       'table',
-      'tile'
+      'tile',
+      'treeview'
     ];
 
   });
