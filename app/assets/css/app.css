@@ -795,6 +795,43 @@ input.cmn-toggle-round-flat:checked + label:after { margin-left: 50px; backgroun
 .bs-wizard > .bs-wizard-step:first-child > .progress { left: 50%; }
 .bs-wizard > .bs-wizard-step:last-child > .progress { width: 0; }
 
+.sequence-map .complete { color: #5cb85c; fill: #5cb85c; }
+.sequence-map .dot { fill: #4e4e4e; }
+
+.progress-bar { background-color: #0072b8; }
+
+.progress-bar-success { background-color: #5cb85c; }
+
+.progress-bar-info { background-color: #5bc0de; }
+
+.progress-bar-warning { background-color: #f0ad4e; }
+
+.progress-bar-danger { background-color: #c00; }
+
+.progress-bar-green { background-color: #00b140; }
+
+.progress-bar-blue { background-color: #009dbf; }
+
+.progress-bar-purple { background-color: #a03f9b; }
+
+.progress-bar-yellow { background-color: #edb700; }
+
+.progress-bar-orange { background-color: #ef8200; }
+
+.progress-bar-red { background-color: #cf0989; }
+
+.progress-bar-blue1 { background-color: #3e53a4; }
+
+.progress-bar-blue2 { background-color: #5d71be; }
+
+.progress-bar-blue3 { background-color: #8393d0; }
+
+.progress-bar-blue4 { background-color: #9aa6d6; }
+
+.progress-bar-blue5 { background-color: #afb9dd; }
+
+.progress-bar-blue6 { background-color: #c5cbe4; }
+
 .signin .bg { position: fixed; top: 0; left: 0; bottom: 0; right: 0; background-color: #254d9d; background: linear-gradient(135deg, #4cc6f3 0%, #32b1e5 10%, #254d9d 53%, #bc278d 100%); background-size: cover; background-repeat: no-repeat; }
 .signin #header, .signin #footer { display: none; }
 .signin .signin-box { background-color: #fff; padding: 40px; margin-top: 60px; }
