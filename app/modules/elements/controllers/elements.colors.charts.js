@@ -4,50 +4,20 @@
 
   angular.module('pb.elements').controller('ChartColorsCtrl', function($scope, $log, ColorFactory) {
 
-    $scope.labels = [''];
-
-    $scope.data = [
-      [50],
-      [45],
-      [40],
-      [35],
-      [30],
-      [25]
-    ];
-
-
-
-
-    $scope.options = {
-      scaleShowGridLines: false,
-      barShowStroke: true,
-      barStrokeWidth: 8,
-      showScale: false,
-      showTooltips: false,
-      scaleOverride: true,
-      scaleSteps: 5,
-      scaleStartValue: 0,
-      scaleStepWidth: 10,
-      barDatasetSpacing: 3,
-    };
-
-
     $scope.charts = {
       gray: {
         sixColor: {
           data: [300, 500, 100, 200, 300, 400],
           labels: ['', '', '', '', '', ''],
-
-          //colors: ['#414141', '#4e4e4e', '#686868', '#818181', '#9b9b9b', '#c0c0c0'],
           colors: ['#414141', '#4e4e4e', '#686868', '#818181', '#9b9b9b', '#c0c0c0'],
           options: {
             showTooltips: false,
             segmentShowStroke: false,
-            percentageInnerCutout: 60
+            percentageInnerCutout : 60
           }
         },
         threeColor: {
-          data: [33, 33, 33],
+          data: [300, 500, 100],
           labels: ['', '', ''],
           colors: ['#414141', '#686868', '#9b9b9b'],
           options: {
@@ -69,7 +39,7 @@
           }
         },
         threeColor: {
-          data: [33, 33, 33],
+          data: [300, 500, 100],
           labels: ['', '', ''],
           colors: ['#3e53a4', '#8393d0', '#afb9dd'],
           options: {
