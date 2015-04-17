@@ -35,7 +35,7 @@
 @import 'elements/date-picker';
 @import 'elements/form-icons';
 @import 'elements/forms';
-@import 'elements/ngrs-range-slider';
+// @import 'elements/ngrs-range-slider';
 @import 'elements/notifications';
 @import 'elements/onoff';
 @import 'elements/popover';
@@ -44,7 +44,7 @@
 @import 'elements/switches';
 @import 'elements/toggle-switch';
 @import 'elements/wizard';
-// @import 'progress-bar';
+@import 'elements/progress-bar';
 // @import 'button-groups';
 
 
@@ -53,4 +53,3 @@
 // ========================================
 
 @import "../../modules/signin/sass/signin";
-
