@@ -12,12 +12,13 @@
     'tmh.dynamicLocale',
     'selectize-ng',
     'toggle-switch',
+    'ui.bootstrap',
+    'chart.js',
     'pb.dashboard',
     'pb.components',
     'pb.elements',
     'pb.settings',
-    'pb.signin',
-    'ui.bootstrap'
+    'pb.signin'
   ]);
 
   //debugging
