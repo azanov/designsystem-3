@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('designSystemApp').factory('ChartFactory', function($http) {
+  angular.module('app').factory('ChartFactory', function($http) {
 
     return {
       getChartData: function() {
