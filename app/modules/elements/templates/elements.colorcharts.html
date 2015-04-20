@@ -96,15 +96,11 @@
 
 
 
-
-
-
-
-
-    <section class="row">
+    <div class="row spacer-top-xl">
       <div class="col-md-6 text-center">
         <p>Color Order 2: Percentage Charts</p>
-        <section class="row">
+
+        <div class="row">
           <div class="col-md-4 col-xs-4 text-center">
             <div class="piechart" ng-model="percentage_01">
               <div easypiechart options="percentage_01.options" percent="percentage_01.percent"></div>
@@ -125,10 +121,10 @@
               <span>{{percentage_03.percent}}%</span>
             </div>
           </div>
-        </section>
+        </div>
 
 
-        <section class="row">
+        <div class="row">
           <div class="col-md-4 col-xs-4 text-center">
             <div class="piechart" ng-model="percentage_04">
               <div easypiechart options="percentage_04.options" percent="percentage_04.percent"></div>
@@ -149,10 +145,10 @@
               <span>{{percentage_06.percent}}%</span>
             </div>
           </div>
-        </section>
+        </div>
 
 
-        <section class="row">
+        <div class="row">
           <div class="col-md-6 col-xs-6 text-center">
             <p>Color Order 1:
               <br>Donut Chart</p>
@@ -164,7 +160,7 @@
               <br>Pie Chart</p>
             <div class="pie" dataset="pie_chart.data" options="pie_chart.options" width="100px" height="100px" flot></div>
           </div>
-        </section>
+        </div>
 
       </div>
 
@@ -173,40 +169,38 @@
       <div class="col-md-6">
 
         <div class="row">
-          <div class="col-md-6 col-xs-6 text-center">
+          <div class="col-md-4 col-xs-4 text-center">
             <p>Every Other 1</p>
-            <div class="pie" dataset="tri_pie_01.data" options="tri_pie_01.options" width="100px" height="100px" flot></div>
+            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.multi.threeColor.data" colours="charts.multi.threeColor.colors.other1" options="charts.multi.threeColor.options" labels="charts.multi.threeColor.labels"></canvas>
           </div>
 
-          <div class="col-md-6 col-xs-6 text-center">
+          <div class="col-md-4 col-xs-4 text-center">
             <p>Every Other 2</p>
-            <div class="pie" dataset="tri_pie_02.data" options="tri_pie_02.options" width="100px" height="100px" flot></div>
+            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.multi.threeColor.data" colours="charts.multi.threeColor.colors.other2" options="charts.multi.threeColor.options" labels="charts.multi.threeColor.labels"></canvas>
           </div>
-        </div>
 
-        <div class="row">
-          <div class="col-md-6 col-xs-6 text-center">
+          <div class="col-md-4 col-xs-4 text-center">
             <p>First Three</p>
-            <div class="pie" dataset="tri_pie_03.data" options="tri_pie_03.options" width="100px" height="100px" flot></div>
-          </div>
-
-          <div class="col-md-6 col-xs-6 text-center">
-            <p>Last Three</p>
-            <div class="pie" dataset="tri_pie_04.data" options="tri_pie_04.options" width="100px" height="100px" flot></div>
+            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.multi.threeColor.data" colours="charts.multi.threeColor.colors.first3" options="charts.multi.threeColor.options" labels="charts.multi.threeColor.labels"></canvas>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-6 col-xs-6 text-center">
-            <p>Traffic Light</p>
-            <div class="pie" dataset="tri_pie_05.data" options="tri_pie_05.options" width="100px" height="100px" flot></div>
+        <div class="row spacer-top-xl">
+          <div class="col-md-4 col-xs-6 text-center">
+            <p>Last Three</p>
+            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.multi.threeColor.data" colours="charts.multi.threeColor.colors.last3" options="charts.multi.threeColor.options" labels="charts.multi.threeColor.labels"></canvas>
           </div>
 
-          <div class="col-md-6 col-xs-6 text-center">
+          <div class="col-md-4 col-xs-6 text-center">
+            <p>Traffic Light</p>
+            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.multi.threeColor.data" colours="charts.multi.threeColor.colors.traffic" options="charts.multi.threeColor.options" labels="charts.multi.threeColor.labels"></canvas>
+          </div>
+
+          <div class="col-md-4 col-xs-6 text-center">
             <p>Monochrome</p>
-            <div class="pie" dataset="tri_pie_06.data" options="tri_pie_06.options" width="100px" height="100px" flot></div>
+            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.multi.threeColor.data" colours="charts.multi.threeColor.colors.mono" options="charts.multi.threeColor.options" labels="charts.multi.threeColor.labels"></canvas>
           </div>
         </div>
 
       </div>
-    </section>
+    </div>
