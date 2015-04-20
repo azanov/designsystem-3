@@ -26,8 +26,32 @@
     </div>
   </div>
 
+  <div class="row spacer-top-lg">
 
-  <div class="row">
+    <div class="col-xs-3 col-xs-offset-1">
+      <canvas style="width: 100px; height: 100px;"
+        class="chart chart-bar"
+        data="charts.gray.sixColor.barData"
+        labels="charts.gray.sixColor.barLabels"
+        options="charts.gray.sixColor.options"
+        colours="charts.gray.sixColor.colors">
+      </canvas>
+    </div>
+
+    <div class="col-xs-3 col-xs-offset-3">
+      <canvas style="width: 100px; height: 100px;"
+        class="chart chart-bar"
+        data="charts.blue.sixColor.barData"
+        labels="charts.blue.sixColor.barLabels"
+        options="charts.blue.sixColor.options"
+        colours="charts.blue.sixColor.colors">
+      </canvas>
+    </div>
+
+  </div>
+
+
+  <div class="row spacer-top-lg">
     <div class="col-xs-2">
       <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.gray.threeColor.data" colours="charts.gray.threeColor.colors" options="charts.gray.threeColor.options" labels="charts.gray.threeColor.labels"></canvas>
     </div>
@@ -37,68 +61,16 @@
     </div>
 
     <div class="col-xs-2">
-      <canvas style="width: 100px; height: 100px;" class="chart chart-bar" data="data" labels="labels" options="options" colours="charts.gray.sixColor.colors"></canvas>
+      <canvas style="width: 100px; height: 100px;" class="chart chart-doughnut" data="charts.blue.sixColor.data" colours="charts.blue.sixColor.colorsAccent" options="charts.blue.sixColor.options" labels="charts.blue.sixColor.labels"></canvas>
     </div>
+
   </div>
 
 
 
 
 
-    <section class="row">
-      <div class="col-md-6 text-center">
-        <div class="chart" jq-sparkline ng-model="sparkline" data="colorCharts.grayscale.bar.data" options="colorCharts.grayscale.bar.options"></div>
-      </div>
-
-      <div class="col-md-6 text-center">
-        <div class="chart" jq-sparkline ng-model="sparkline" data="colorCharts.blue.bar.data" options="colorCharts.blue.bar.options"></div>
-      </div>
-    </section>
-
-
-    <section class="row">
-      <div class="col-md-6">
-        <div class="row">
-          <div class="col-md-4 col-xs-4">
-            <div dataset="donutsVaried.donut01.data" options="donutsVaried.donut01.options" width="140px" height="140px" flot></div>
-          </div>
-          <div class="col-md-4 col-xs-4">
-            <div dataset="donutsVaried.donut02.data" options="donutsVaried.donut02.options" width="140px" height="140px" flot></div>
-          </div>
-          <div class="col-md-4 col-xs-4">
-            <div dataset="donutsVaried.donut03.data" options="donutsVaried.donut03.options" width="140px" height="140px" flot></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="row">
-          <div class="col-md-4 col-xs-4">
-            <div class="piechart text-center" ng-model="radial_01">
-              <div easypiechart options="radial_01.options" percent="radial_01.percent"></div>
-              <span>{{radial_01.percent}}%</span>
-            </div>
-          </div>
-          <div class="col-md-4 col-xs-4">
-            <div class="piechart tetext-center" ng-model="radial_02">
-              <div easypiechart options="radial_02.options" percent="radial_02.percent"></div>
-              <span>{{radial_02.percent}}%</span>
-            </div>
-          </div>
-          <div class="col-md-4 col-xs-4">
-            <div class="piechart tetext-center" ng-model="radial_03">
-              <div easypiechart options="radial_03.options" percent="radial_03.percent"></div>
-              <span>{{radial_03.percent}}%</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-    </section>
-
-
-    <section class="row">
+    <div class="row spacer-top-lg">
       <div class="col-md-6 text-center">
         <p>Color Order 2: Success Rate</p>
         <div class="color-swatches ">
@@ -110,11 +82,17 @@
           <span class="color-swatch color-swatch-small chart-red"></span>
         </div>
       </div>
-      <div class="col-md-6 text-center">
+      <div class="col-md-3 col-md-offset-2 text-center">
         <p>Color Order 2: Bar Graph</p>
-        <div class="chart" data="bar_chart_01.data" options="bar_chart_01.options" jq-sparkline></div>
+        <canvas style="width: 100px; height: 100px;"
+          class="chart chart-bar"
+          data="charts.multi.sixColor.barData"
+          labels="charts.multi.sixColor.barLabels"
+          options="charts.multi.sixColor.options"
+          colours="charts.multi.sixColor.colors">
+        </canvas>
       </div>
-    </section>
+    </div>
 
 
 
