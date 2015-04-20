@@ -98,7 +98,14 @@
         threeColor: {
           data: [33, 33, 33],
           labels: ['', '', ''],
-          colors: ['#3e53a4', '#8393d0', '#afb9dd'],
+          colors: {
+            other1: ['#00B140', '#A03F9B', '#EF8200'],
+            other2: ['#009DBF', '#EDB700', '#CF0989'],
+            first3: ['#00B140', '#009DBF', '#A03F9B'],
+            last3: ['#EDB700', '#EF8200', '#CF0989'],
+            traffic: ['#00B140', '#EDB700', '#CF0989'],
+            mono: ['#3e53a4', '#8393d0', '#afb9dd']
+          },
           options: {
             showTooltips: false,
             segmentShowStroke: false,
