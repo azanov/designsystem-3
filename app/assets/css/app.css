@@ -188,18 +188,6 @@ cite { font-style: normal; }
 
 .container-fluid { padding-left: 40px; padding-right: 40px; margin-left: auto; margin-right: auto; }
 
-.pb-gray, .pb-gray-500 { background-color: #4e4e4e; }
-
-.pb-gray-400 { background-color: #717171; }
-
-.pb-gray-300 { background-color: #9b9b9b; }
-
-.pb-gray-200 { background-color: #c0c0c0; }
-
-.pb-gray-100 { background-color: #dbdbdb; }
-
-.pb-gray-50 { background-color: #f0f0f0; }
-
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
 ul[datepicker-popup-wrap] { padding: 15px 10px; }
