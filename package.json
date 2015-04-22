@@ -6,7 +6,8 @@
   "private": true,
   "dependencies": {
     "gulp-header": "^1.2.2",
-    "gulp-ng-annotate": "^0.5.2"
+    "gulp-ng-annotate": "^0.5.2",
+    "vinyl-ftp": "^0.4.0"
   },
   "devDependencies": {
     "browser-sync": "1.7.1",

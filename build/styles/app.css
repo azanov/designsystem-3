@@ -1,3 +1,9 @@
+/**
+ * DesignSystem - 
+ * @version v1.5.0
+ * @link http://guxstaging.pbi.global.pvt/design_system
+ * Mon Apr 20 2015 15:05:39 GMT-0400 (EDT) 
+ */
 @font-face { font-family: "PrecisionSans_W_Rg"; font-weight: "400"; font-style: "normal"; src: url("../fonts/PrecisionSans_W_Rg.eot"); src: url("../fonts/PrecisionSans_W_Rg.eot?#iefix") format("embedded-opentype"), url("../fonts/PrecisionSans_W_Rg.woff") format("woff"), url("../fonts/PrecisionSans_W_Rg.ttf") format("truetype"), url("../fonts/PrecisionSans_W_Rg.svg#PrecisionSans_W_Rg") format("svg"); }
 @font-face { font-family: "PrecisionSans_W_Bd"; font-weight: "700"; font-style: "normal"; src: url("../fonts/PrecisionSans_W_Bd.eot"); src: url("../fonts/PrecisionSans_W_Bd.eot?#iefix") format("embedded-opentype"), url("../fonts/PrecisionSans_W_Bd.woff") format("woff"), url("../fonts/PrecisionSans_W_Bd.ttf") format("truetype"), url("../fonts/PrecisionSans_W_Bd.svg#PrecisionSans_W_Bd") format("svg"); }
 @font-face { font-family: "PrecisionSans_W_RgIt"; font-weight: "400"; font-style: "italic"; src: url("../fonts/PrecisionSans_W_RgIt.eot"); src: url("../fonts/PrecisionSans_W_RgIt.eot?#iefix") format("embedded-opentype"), url("../fonts/PrecisionSans_W_RgIt.woff") format("woff"), url("../fonts/PrecisionSans_W_RgIt.ttf") format("truetype"), url("../fonts/PrecisionSans_W_RgIt.svg#PrecisionSans_W_RgIt") format("svg"); }
@@ -187,18 +193,6 @@ cite { font-style: normal; }
 .no-margins { margin: 0; }
 
 .container-fluid { padding-left: 40px; padding-right: 40px; margin-left: auto; margin-right: auto; }
-
-.pb-gray, .pb-gray-500 { background-color: #4e4e4e; }
-
-.pb-gray-400 { background-color: #717171; }
-
-.pb-gray-300 { background-color: #9b9b9b; }
-
-.pb-gray-200 { background-color: #c0c0c0; }
-
-.pb-gray-100 { background-color: #dbdbdb; }
-
-.pb-gray-50 { background-color: #f0f0f0; }
 
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
@@ -851,7 +845,3 @@ input.cmn-toggle-round-flat:checked + label:after { margin-left: 50px; backgroun
 .signin .signin-footer .nav { padding-top: 5px; }
 @media (max-width: 767px) { .signin .signin-footer .logo { text-align: center; }
   .signin .signin-footer .nav { text-align: center; padding-top: 10px; } }
-
-
-
-/*# sourceMappingURL=maps/app.css.map */

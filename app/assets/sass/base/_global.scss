@@ -4,3 +4,47 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.pb-gray, .pb-gray-500 {
+  background-color: $pb-gray;
+}
+
+.pb-gray-400 {
+  background-color: $pb-gray-400;
+}
+
+.pb-gray-300 {
+  background-color: $pb-gray-300;
+}
+
+.pb-gray-200 {
+  background-color: $pb-gray-200;
+}
+
+.pb-gray-100 {
+  background-color: $pb-gray-100;
+}
+
+.pb-gray-50 {
+  background-color: $pb-gray-50;
+}
+
+
+$all-color-map:
+'pb-cyan',
+'pb-medium-blue',
+'pb-blue',
+'pb-purple',
+'pb-magenta',
+'pb-dark-orange',
+'pb-orange',
+'pb-yellow',
+'pb-green',
+'pb-dark-green',
+'pb-gray',
+'pb-gray-50',
+'pb-gray-100',
+'pb-gray-200',
+'pb-gray-300',
+'pb-gray-400',
+'pb-gray-500';
