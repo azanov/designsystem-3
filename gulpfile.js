@@ -1,36 +1,42 @@
-
-
 /*jshint strict:false */
 /*jshint node:true */
 
-var gulp = require('gulp'),
-  usemin = require('gulp-usemin'),
-  sass = require('gulp-ruby-sass'),
+var gulp       = require('gulp'),
+  usemin       = require('gulp-usemin'),
+  sass         = require('gulp-ruby-sass'),
   autoprefixer = require('gulp-autoprefixer'),
-  minifycss = require('gulp-minify-css'),
-  minifyhtml = require('gulp-minify-html'),
-  jshint = require('gulp-jshint'),
-  uglify = require('gulp-uglify'),
-  imagemin = require('gulp-imagemin'),
-  rename = require('gulp-rename'),
-  concat = require('gulp-concat'),
-  notify = require('gulp-notify'),
-  cache = require('gulp-cache'),
-  connect = require('gulp-connect'),
-  browsersync = require('browser-sync'),
-  reload = browsersync.reload,
-  rev = require('gulp-rev'),
-  sourcemaps = require('gulp-sourcemaps'),
-  filter = require('gulp-filter'),
-  plumber = require('gulp-plumber'),
-  del = require('del'),
-  gutil = require('gulp-util'),
-  printfiles = require('gulp-print'),
-  prompt = require('gulp-prompt'),
-  ftp = require('vinyl-ftp'),
-  runSequence = require('run-sequence'),
-  header = require('gulp-header'),
-  ngAnnotate = require('gulp-ng-annotate');
+  minifyCss    = require('gulp-minify-css'),
+  minifyHtml   = require('gulp-minify-html'),
+  jshint       = require('gulp-jshint'),
+  uglify       = require('gulp-uglify'),
+  imagemin     = require('gulp-imagemin'),
+  rename       = require('gulp-rename'),
+  concat       = require('gulp-concat'),
+  notify       = require('gulp-notify'),
+  cache        = require('gulp-cache'),
+  connect      = require('gulp-connect'),
+  browsersync  = require('browser-sync'),
+  reload       = browsersync.reload,
+  rev          = require('gulp-rev'),
+  sourcemaps   = require('gulp-sourcemaps'),
+  filter       = require('gulp-filter'),
+  plumber      = require('gulp-plumber'),
+  del          = require('del'),
+  gutil        = require('gulp-util'),
+  printfiles   = require('gulp-print'),
+  prompt       = require('gulp-prompt'),
+  ftp          = require('vinyl-ftp'),
+  runSequence  = require('run-sequence'),
+  header       = require('gulp-header'),
+  replace      = require('gulp-replace'),
+  ngAnnotate   = require('gulp-ng-annotate');
+
+
+// clean dist folder
+gulp.task('clean:dist', function(cb) {
+  return del(['./build'], cb);
+});
+
 
 //styles
 gulp.task('sass', function() {
@@ -65,30 +71,35 @@ gulp.task('sass-nomaps', function() {
     .pipe(header(banner, {
       pkg: pkg
     }))
-    .pipe(gulp.dest('build/styles'))
+    .pipe(gulp.dest('build/assets/css'))
     .pipe(filter('**/*.css'));
 });
 
-gulp.task('usemin', function() {
-  gulp.src('app/*.html')
+//usemin
+gulp.task('usemin', [], function() {
+  gulp.src('./app/index.html')
     .pipe(usemin({
-      css: [minifycss(), 'concat'],
-
-      //html: [minifyhtml({empty: true})],
-      js: [
+      css: [minifyCss(), 'concat'],
+      html: [minifyHtml({
+        empty: true
+      })],
+      vendorjs: [uglify({
+        mangle: true
+      })],
+      appjs: [
+        replace("'debug': true", "'debug': false"),
         ngAnnotate({
           remove: true,
           add: true,
           single_quotes: true
         }),
         uglify({
-          mangle: false
+          mangle: true
         })
       ]
     }))
-    .pipe(gulp.dest('build/'));
+    .pipe(gulp.dest('./build'));
 });
-
 
 
 var today = new Date();
@@ -102,18 +113,76 @@ var banner = ['/**',
   ''
 ].join('\n');
 
-// for final build, paths stored in external json file:
-var config = require('./build.config.json');
 
-gulp.task('scripts', function() {
-  gulp.src(config.extras.js)
-    .pipe(gulp.dest(config.buildDir));
+//copy modules
+gulp.task('copy:modules', [], function() {
+  gulp.src([
+      './app/modules/**/i18n/*',
+      './app/modules/**/templates/*'
+    ])
+    .pipe(gulp.dest('./build/modules'));
 });
 
-gulp.task('assets', function() {
-  gulp.src(config.extras.assets)
-    .pipe(gulp.dest(config.buildDir));
+//copy core templates views
+gulp.task('copy:core-templates', [], function() {
+  gulp.src([
+      './app/core/templates/*'
+    ])
+    .pipe(gulp.dest('./build/core/templates'));
 });
+
+//copy modules data json
+gulp.task('copy:json-data', [], function() {
+  gulp.src([
+      './app/modules/**/services/**/*.json'
+    ])
+    .pipe(gulp.dest('./build/modules'));
+});
+
+//copy core data json
+gulp.task('copy:json-core-data', [], function() {
+  gulp.src([
+      './app/core/data/**/*.json'
+    ])
+    .pipe(gulp.dest('./build/core/data/'));
+});
+
+//copy localization json
+gulp.task('copy:json-i18n-data', [], function() {
+  gulp.src([
+    './app/modules/**/i18n/**/*.json'
+    ])
+    .pipe(gulp.dest('./build/modules'));
+});
+
+//copy fonts
+gulp.task('copy:fonts', [], function() {
+  gulp.src([
+      './app/assets/fonts/*'
+    ])
+    .pipe(gulp.dest('./build/assets/fonts'));
+});
+
+//copy images
+gulp.task('copy:images', [], function() {
+  gulp.src([
+      './app/assets/images/*'
+    ])
+    .pipe(gulp.dest('./build/assets/images'));
+});
+
+//copy core/config
+gulp.task('copy:core-config', [], function() {
+  gulp.src([
+      './app/core/config/*'
+    ])
+    .pipe(gulp.dest('build/core/config'));
+});
+
+
+
+
+
 
 gulp.task('clean', function(cb) {
   del(['build/**/*'], cb);
@@ -135,10 +204,19 @@ gulp.task('default', ['sass', 'browser-sync', 'watch']);
 //  gulp.run(['sass-nomaps','usemin','scripts','assets']);
 // });
 
-gulp.task('build', function(cb) {
+//build
+gulp.task('build', ['clean:dist', 'sass-nomaps'], function() {
   runSequence(
-    'clean', ['sass-nomaps', 'usemin', 'scripts', 'assets'],
-    cb);
+    'usemin',
+    'copy:modules',
+    'copy:core-templates',
+    'copy:json-data',
+    'copy:json-core-data',
+    'copy:images',
+    'copy:fonts',
+    'copy:core-config',
+    'copy:json-i18n-data'
+  );
 });
 
 // Watch
@@ -160,62 +238,4 @@ gulp.task('watch', function() {
       reload();
     });
 
-});
-
-
-
-
-// FTP
-var userName = '';
-var userPass = '';
-
-// 1 You call this task to FTP. It first runs the task in the brackets...
-gulp.task('ftp', ['prompt_password'], function() {
-  var conn = ftp.create({
-    host: '10.50.8.173',
-    user: 'userName',
-    password: 'userPass',
-    parallel: 10,
-    log: gutil.log
-  });
-
-  var globs = [
-    'build/**/*'
-  ];
-
-  // using base = '.' will transfer everything to /public_html correctly
-  // turn off buffering in gulp.src for best performance
-
-  return gulp.src(globs, {
-      base: '.',
-      buffer: false
-    })
-
-  //.pipe(conn.newer('/public_html')) // only upload newer files
-    .pipe(conn.dest('/public_html'))
-    .pipe(notify('FTP finished.'));
-});
-
-// 3 ... this is run by step 2, after finishing it falls back to 2, then 1
-gulp.task('prompt_user', function() {
-  return gulp.src('build/index.html')
-    .pipe(prompt.prompt({
-      type: 'input',
-      name: 'userInput',
-      message: 'Please enter your username'
-    }, function(res) {
-      userName = res.userInput;
-    }));
-});
-
-// 2  ...which first runs the task in the brackets...
-gulp.task('prompt_password', ['prompt_user'], function() {
-  return gulp.src('build/index.html')
-    .pipe(prompt.prompt({
-      type: 'password',
-      name: 'passwordInput',
-      message: 'Please enter your password'
-    }, function(res) {
-      userPass = res.passwordInput;
-    }));
 });
