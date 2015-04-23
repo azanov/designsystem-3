@@ -1,0 +1,206 @@
+
+<h1 class="spacer-bottom-xl">Chart colors</h1>
+
+
+  <div class="row">
+    <div class="col-xs-4">
+      <canvas style="width: 100px; height: 100px;" class="chart chart-doughnut" data="charts.gray.sixColor.data" colours="charts.gray.sixColor.colors" options="charts.gray.sixColor.options" labels="charts.gray.sixColor.labels"></canvas>
+    </div>
+
+    <div class="col-xs-2">
+      <ul class="list-unstyled color-blocks" ng-repeat="c in colorData.chartgrays">
+        <li>
+          <span class="gray{{$index+1}}"></span> {{c.hex}}</li>
+      </ul>
+    </div>
+
+    <div class="col-xs-4">
+      <canvas style="width: 100px; height: 100px;" class="chart chart-doughnut" data="charts.blue.sixColor.data" colours="charts.blue.sixColor.colors" options="charts.blue.sixColor.options" labels="charts.blue.sixColor.labels"></canvas>
+    </div>
+
+    <div class="col-xs-2">
+      <ul class="list-unstyled color-blocks" ng-repeat="c in colorData.blues">
+        <li>
+          <span class="blue{{$index+1}}"></span> {{c.hex}}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row spacer-top-lg">
+
+    <div class="col-xs-3 col-xs-offset-1">
+      <canvas style="width: 100px; height: 100px;"
+        class="chart chart-bar"
+        data="charts.gray.sixColor.barData"
+        labels="charts.gray.sixColor.barLabels"
+        options="charts.gray.sixColor.options"
+        colours="charts.gray.sixColor.colors">
+      </canvas>
+    </div>
+
+    <div class="col-xs-3 col-xs-offset-3">
+      <canvas style="width: 100px; height: 100px;"
+        class="chart chart-bar"
+        data="charts.blue.sixColor.barData"
+        labels="charts.blue.sixColor.barLabels"
+        options="charts.blue.sixColor.options"
+        colours="charts.blue.sixColor.colors">
+      </canvas>
+    </div>
+
+  </div>
+
+
+  <div class="row spacer-top-lg">
+    <div class="col-xs-2">
+      <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.gray.threeColor.data" colours="charts.gray.threeColor.colors" options="charts.gray.threeColor.options" labels="charts.gray.threeColor.labels"></canvas>
+    </div>
+
+    <div class="col-xs-2">
+      <canvas style="width: 100px; height: 100px;" class="chart chart-doughnut" data="charts.blue.threeColor.data" colours="charts.blue.threeColor.colors" options="charts.blue.threeColor.options" labels="charts.blue.threeColor.labels"></canvas>
+    </div>
+
+    <div class="col-xs-2">
+      <canvas style="width: 100px; height: 100px;" class="chart chart-doughnut" data="charts.blue.sixColor.data" colours="charts.blue.sixColor.colorsAccent" options="charts.blue.sixColor.options" labels="charts.blue.sixColor.labels"></canvas>
+    </div>
+
+  </div>
+
+
+
+
+
+    <div class="row spacer-top-lg">
+      <div class="col-md-6 text-center">
+        <p>Color Order 2: Success Rate</p>
+        <div class="color-swatches ">
+          <span class="color-swatch color-swatch-small chart-green"></span>
+          <span class="color-swatch color-swatch-small chart-blue"></span>
+          <span class="color-swatch color-swatch-small chart-purple"></span>
+          <span class="color-swatch color-swatch-small chart-yellow"></span>
+          <span class="color-swatch color-swatch-small chart-orange"></span>
+          <span class="color-swatch color-swatch-small chart-red"></span>
+        </div>
+      </div>
+      <div class="col-md-3 col-md-offset-2 text-center">
+        <p>Color Order 2: Bar Graph</p>
+        <canvas style="width: 100px; height: 100px;"
+          class="chart chart-bar"
+          data="charts.multi.sixColor.barData"
+          labels="charts.multi.sixColor.barLabels"
+          options="charts.multi.sixColor.options"
+          colours="charts.multi.sixColor.colors">
+        </canvas>
+      </div>
+    </div>
+
+
+
+    <div class="row spacer-top-xl">
+      <div class="col-md-6 text-center">
+        <p>Color Order 2: Percentage Charts</p>
+
+        <div class="row">
+          <div class="col-md-4 col-xs-4 text-center">
+            <div class="piechart" ng-model="percentage_01">
+              <div easypiechart options="percentage_01.options" percent="percentage_01.percent"></div>
+              <span>{{percentage_01.percent}}%</span>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-xs-4 text-center">
+            <div class="piechart" ng-model="percentage_02">
+              <div easypiechart options="percentage_02.options" percent="percentage_02.percent"></div>
+              <span>{{percentage_02.percent}}%</span>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-xs-4 text-center">
+            <div class="piechart" ng-model="percentage_03">
+              <div easypiechart options="percentage_03.options" percent="percentage_03.percent"></div>
+              <span>{{percentage_03.percent}}%</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-4 col-xs-4 text-center">
+            <div class="piechart" ng-model="percentage_04">
+              <div easypiechart options="percentage_04.options" percent="percentage_04.percent"></div>
+              <span>{{percentage_04.percent}}%</span>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-xs-4 text-center">
+            <div class="piechart" ng-model="percentage_05">
+              <div easypiechart options="percentage_05.options" percent="percentage_05.percent"></div>
+              <span>{{percentage_05.percent}}%</span>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-xs-4 text-center">
+            <div class="piechart" ng-model="percentage_06">
+              <div easypiechart options="percentage_06.options" percent="percentage_06.percent"></div>
+              <span>{{percentage_06.percent}}%</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-6 col-xs-6 text-center">
+            <p>Color Order 1:
+              <br>Donut Chart</p>
+            <div class="donut" dataset="donut_chart.data" options="donut_chart.options" width="100px" height="100px" flot></div>
+          </div>
+
+          <div class="col-md-6 col-xs-6 text-center">
+            <p>Color Order 2:
+              <br>Pie Chart</p>
+            <div class="pie" dataset="pie_chart.data" options="pie_chart.options" width="100px" height="100px" flot></div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div class="col-md-6">
+
+        <div class="row">
+          <div class="col-md-4 col-xs-4 text-center">
+            <p>Every Other 1</p>
+            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.multi.threeColor.data" colours="charts.multi.threeColor.colors.other1" options="charts.multi.threeColor.options" labels="charts.multi.threeColor.labels"></canvas>
+          </div>
+
+          <div class="col-md-4 col-xs-4 text-center">
+            <p>Every Other 2</p>
+            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.multi.threeColor.data" colours="charts.multi.threeColor.colors.other2" options="charts.multi.threeColor.options" labels="charts.multi.threeColor.labels"></canvas>
+          </div>
+
+          <div class="col-md-4 col-xs-4 text-center">
+            <p>First Three</p>
+            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.multi.threeColor.data" colours="charts.multi.threeColor.colors.first3" options="charts.multi.threeColor.options" labels="charts.multi.threeColor.labels"></canvas>
+          </div>
+        </div>
+
+        <div class="row spacer-top-xl">
+          <div class="col-md-4 col-xs-6 text-center">
+            <p>Last Three</p>
+            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.multi.threeColor.data" colours="charts.multi.threeColor.colors.last3" options="charts.multi.threeColor.options" labels="charts.multi.threeColor.labels"></canvas>
+          </div>
+
+          <div class="col-md-4 col-xs-6 text-center">
+            <p>Traffic Light</p>
+            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.multi.threeColor.data" colours="charts.multi.threeColor.colors.traffic" options="charts.multi.threeColor.options" labels="charts.multi.threeColor.labels"></canvas>
+          </div>
+
+          <div class="col-md-4 col-xs-6 text-center">
+            <p>Monochrome</p>
+            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.multi.threeColor.data" colours="charts.multi.threeColor.colors.mono" options="charts.multi.threeColor.options" labels="charts.multi.threeColor.labels"></canvas>
+          </div>
+        </div>
+
+      </div>
+    </div>
