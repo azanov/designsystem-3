@@ -7,7 +7,7 @@
 }
 @each $item, $color in $pbcolors {
   @each $shade, $value in $color {
-    .#{$item}-#{$shade} {
+    .text-#{$item}-#{$shade} {
       color: $value;
     }
   }
