@@ -91,10 +91,7 @@
       controller: 'TablesCtrl as tc',
       resolve: {
         peopleResolve: function($log, MockDataFactory) {
-          //return PeopleFactory.get();
-
           return MockDataFactory.query({filename: 'people'}, function(response) {
-            $log.debug(response);
             return response;
           });
 

@@ -3,19 +3,8 @@
   'use strict';
 
   angular.module('app', [
-    'ngCookies',
-    'ngAnimate',
-    'ngResource',
-    'ngSanitize',
-    'ui.router',
-    'angular-loading-bar',
-    'pascalprecht.translate',
-    'tmh.dynamicLocale',
-    'selectize-ng',
-    'toggle-switch',
-    'ui.bootstrap',
-    'ui-rangeSlider',
-    'chart.js',
+    //third party modules are in /core/core.module.js
+    'pb.core',
     'pb.dashboard',
     'pb.components',
     'pb.elements',
