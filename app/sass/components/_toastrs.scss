@@ -1,0 +1,198 @@
+
+//{ REQUIREMENTS: Design Systems variables.scss }
+
+$pb-cyan-200: pbcolor(pbcyan, 200);
+$pb-cyan-500: pbcolor(pbcyan, 500);
+
+$pb-green-400: pbcolor(pbgreen, 400);
+$pb-green-800: pbcolor(pbgreen, 800);
+
+$pb-orange-300: pbcolor(pborange, 300);
+$pb-orange-600: pbcolor(pborange, 600);
+
+$pb-purple-300: pbcolor(pbpurple, 300);
+$pb-purple-600: pbcolor(pbpurple, 600);
+
+//List that pairs toastr classes with colors
+$toastr-list: ".toast-info"     $pb-cyan-200    $pb-cyan-500,
+              ".toast-success"  $pb-green-400   $pb-green-800, 
+              ".toast-warning"  $pb-orange-300  $pb-orange-600, 
+              ".toast-error"    $brand-danger   $state-danger-text, 
+              ".toast-custom"   $pb-purple-300  $pb-purple-600;
+
+//mixin that creates a single toastr instance
+@mixin create-toastr($color-primary, $color-secondary) {
+  //create tints & shades for color
+  $toastr-bg-color     : $color-primary;
+  $toastr-txt-color    : $pb-gray;
+  $toastr-border-color : $color-secondary;
+
+  //use colors to style toaster
+  background-color     : $toastr-bg-color;
+  border-color         : $toastr-border-color;
+  color                : $toastr-txt-color;
+  background-image     : none !important;
+
+  .toast-close-button:hover,
+  .toast-close-button:focus {
+    color                : $toastr-txt-color !important;
+    -webkit-text-shadow  : 0 1px 0 $toastr-border-color !important;
+    text-shadow          : 0 1px 0 $toastr-border-color !important;
+  }
+}
+
+//for each instance of $toastr-classes-list
+@mixin build-toastrs($list) {
+    @each $category in $list {
+    $class: nth($category, 1);
+    $color-primary: nth($category, 2); 
+    $color-secondary: nth($category, 3);
+      > #{$class} {
+        @include create-toastr($color-primary, $color-secondary); 
+      }
+    }
+
+}
+
+
+//OVERWRITE DEFAULT TOASTR VALUES
+
+#toast-container {
+  .toast {
+    padding: 15px;
+    width: 350px;
+    border-radius: $border-radius-base;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.3);
+    &:hover {
+      box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.45);
+      opacity: 1;
+      cursor: pointer;
+    }
+    .toast-close-button {
+    position: relative;
+    right: -0.3em;
+    top: -0.3em;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    color: $pb-gray;
+    -webkit-text-shadow  : 0 1px 0 $pb-gray !important;
+    text-shadow          : 0 1px 0 $pb-gray !important;
+    opacity: .8;
+      &:hover, &:focus {
+        opacity: .9;
+      }
+    }
+    .toast-message {
+      font-size: $font-size-base;
+
+      label {
+        color: $link-color;
+      }
+
+      a {
+        color: $link-color;
+        text-decoration: underline;
+        &:hover {
+          color: $link-color-hover;
+        }
+      }
+    }
+    .toast-title {
+      @extend .toast-message;
+    }
+  }
+
+  @include build-toastrs($toastr-list); 
+
+}
+
+
+/*Pull in Animations*/
+.toast {
+
+  &.ng-enter {
+    @extend .flipInX;
+    opacity: 1 !important;
+
+    &.ng-enter-active {
+      opacity: 1;
+    }
+  }
+
+  &.ng-leave {
+    opacity: 1;
+
+    &.ng-leave-active {
+      @extend .flyOut;
+      opacity: 1 !important;
+    }
+  }
+}
+
+@keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+
+  }
+}
+
+
+@keyframes flyin {
+
+  0% {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+
+  60% {
+    transform: translate3d(0, 0, 0);
+
+  }
+
+  100% {
+    transform: scale(1) translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+//used in the extends
+
+.flipInX {
+  backface-visibility: visible !important;
+  animation: flipInX .65s linear forwards;
+}
+.flyOut {
+  animation: flyin .3s ease reverse forwards;
+}
+
