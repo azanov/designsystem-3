@@ -73,22 +73,31 @@
         }
       }
     })
+
     .state('elements.popovers', {
       url: '/popovers',
       templateUrl: 'modules/elements/templates/elements.popovers.html'
     })
+
     .state('elements.progress', {
       url: '/progress',
       templateUrl: 'modules/elements/templates/elements.progress.html',
       controller: 'ProgressCtrl as pc'
     })
+
     .state('elements.tables', {
       url: '/tables',
       templateUrl: 'modules/elements/templates/elements.tables.html',
       controller: 'TablesCtrl as tc',
       resolve: {
-        peopleResolve: function(PeopleFactory) {
-          return PeopleFactory.get();
+        peopleResolve: function($log, MockDataFactory) {
+          //return PeopleFactory.get();
+
+          return MockDataFactory.query({filename: 'people'}, function(response) {
+            $log.debug(response);
+            return response;
+          });
+
         }
       }
     })

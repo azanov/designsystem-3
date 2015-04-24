@@ -1,5 +1,4 @@
-{
-  "data" : [
+[
     {
         "firstName" : "Malcolm",
         "lastName" : "Reynolds",
@@ -37,4 +36,3 @@
       "isChecked" : true
     }
   ]
-}

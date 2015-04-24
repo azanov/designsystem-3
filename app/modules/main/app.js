@@ -5,6 +5,7 @@
   angular.module('app', [
     'ngCookies',
     'ngAnimate',
+    'ngResource',
     'ngSanitize',
     'ui.router',
     'angular-loading-bar',
@@ -22,9 +23,14 @@
     'pb.signin'
   ]);
 
-  //debugging
+  //configure debugging
   angular.module('app').config(function($logProvider, config) {
     $logProvider.debugEnabled(config.debug);
+  });
+
+  //configure production mode
+  angular.module('app').config(function($compileProvider, config) {
+    $compileProvider.debugInfoEnabled(config.debug);
   });
 
   // UI ROUTER CONFIG
