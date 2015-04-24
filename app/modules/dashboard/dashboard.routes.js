@@ -16,9 +16,7 @@
           $translatePartialLoader.addPart('/modules/dashboard/i18n');
         },
         NavigationResolve: function($log, MockDataFactory) {
-          return MockDataFactory.get({filename: 'navigation'}, function(response) {
-            return response;
-          });
+          return MockDataFactory.query({filename: 'navigation'});
         }
       },
       data: {

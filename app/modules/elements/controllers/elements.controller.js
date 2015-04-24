@@ -5,8 +5,8 @@
   angular.module('pb.elements').controller('ElementsController', function($log, NavigationResolve) {
 
     var _this = this;
-    _this.leftNav = NavigationResolve.nav[1];
-
+    
+    _this.leftNav = NavigationResolve[1];
 
   });
 

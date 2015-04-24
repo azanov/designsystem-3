@@ -6,7 +6,7 @@
 
     var _this = this;
 
-    _this.navdata = NavigationResolve.nav;
+    _this.navdata = NavigationResolve;
 
   });
 

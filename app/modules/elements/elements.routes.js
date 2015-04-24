@@ -14,13 +14,8 @@
         translate: function($translatePartialLoader) {
           $translatePartialLoader.addPart('/modules/elements/i18n');
         },
-        navigation: function(navigation) {
-          return navigation.getSubNav('Elements');
-        },
         NavigationResolve: function($log, MockDataFactory) {
-          return MockDataFactory.get({filename: 'navigation'}, function(response) {
-            return response;
-          });
+          return MockDataFactory.query({filename: 'navigation'});
         }
       },
       data: {
