@@ -5,6 +5,7 @@
   angular.module('app', [
     'ngCookies',
     'ngAnimate',
+    'ngResource',
     'ngSanitize',
     'ui.router',
     'angular-loading-bar',
@@ -22,9 +23,14 @@
     'pb.signin'
   ]);
 
-  //debugging
+  //configure debugging
   angular.module('app').config(function($logProvider, config) {
     $logProvider.debugEnabled(config.debug);
+  });
+
+  //configure production mode
+  angular.module('app').config(function($compileProvider, config) {
+    $compileProvider.debugInfoEnabled(config.debug);
   });
 
   // UI ROUTER CONFIG
@@ -444,6 +450,20 @@
 
   'use strict';
 
+  angular.module('app').factory('MockDataFactory', function($resource) {
+
+    return $resource('core/data/:filename.json', {
+      filename: '@filename'
+    });
+
+  });
+
+})();
+
+(function() {
+
+  'use strict';
+
   angular.module('app').factory('PeopleFactory', function($http) {
 
     var PeopleFactory = {};
@@ -688,22 +708,31 @@
         }
       }
     })
+
     .state('elements.popovers', {
       url: '/popovers',
       templateUrl: 'modules/elements/templates/elements.popovers.html'
     })
+
     .state('elements.progress', {
       url: '/progress',
       templateUrl: 'modules/elements/templates/elements.progress.html',
       controller: 'ProgressCtrl as pc'
     })
+
     .state('elements.tables', {
       url: '/tables',
       templateUrl: 'modules/elements/templates/elements.tables.html',
       controller: 'TablesCtrl as tc',
       resolve: {
-        peopleResolve: function(PeopleFactory) {
-          return PeopleFactory.get();
+        peopleResolve: function($log, MockDataFactory) {
+          //return PeopleFactory.get();
+
+          return MockDataFactory.query({filename: 'people'}, function(response) {
+            $log.debug(response);
+            return response;
+          });
+
         }
       }
     })
@@ -1310,9 +1339,12 @@
 
   'use strict';
 
-  angular.module('pb.elements').controller('TablesCtrl', function($scope, $log, peopleResolve) {
+  angular.module('pb.elements').controller('TablesCtrl', function($log, peopleResolve) {
+
     var _this = this;
-    _this.people = peopleResolve.data.data;
+
+    _this.people = peopleResolve;
+
   });
 
 })();
