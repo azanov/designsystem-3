@@ -37,7 +37,7 @@
         },
         MillerResolve: function($log, MockDataFactory) {
           return MockDataFactory.get({filename: 'millercolumn'}, function(response) {
-            return response;
+            return response.versionInfos;
           });
         }
       }
