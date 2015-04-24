@@ -5,12 +5,12 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-1">
+    <div class="col-md-2">
       <div class="list-group left-nav">
         <a class="list-group-item" ng-repeat="e in ec.leftNav.children" ui-sref-active="active" ui-sref="{{::e.value}}" href="">{{::e.label}}</a>
       </div>
     </div>
-    <div class="col-md-10 col-md-offset-1">
+    <div class="col-md-9 col-md-offset-1">
       <div ui-view></div>
     </div>
   </div>

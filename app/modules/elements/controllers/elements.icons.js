@@ -2,11 +2,11 @@
 
   'use strict';
 
-  angular.module('pb.elements').controller('IconsCtrl', function($log, faIconsResolve) {
+  angular.module('pb.elements').controller('IconsController', function($log, IconsResolve) {
 
     var _this = this;
 
-    _this.faIcons = faIconsResolve.data.icons;
+    _this.faIcons = IconsResolve;
 
     _this.pbIcons =  [
       'addressbook',

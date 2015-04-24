@@ -44,11 +44,13 @@
         }
       }
     })
+
     .state('elements.colorusage', {
       url: '/colorusage',
       templateUrl: 'modules/elements/templates/elements.colorusage.html',
       controller: 'ColorsController'
     })
+    
     .state('elements.colorcharts', {
       url: '/colorcharts',
       templateUrl: 'modules/elements/templates/elements.colorcharts.html',
@@ -62,10 +64,12 @@
     .state('elements.icons', {
       url: '/icons',
       templateUrl: 'modules/elements/templates/elements.icons.html',
-      controller: 'IconsCtrl as ic',
+      controller: 'IconsController as icons',
       resolve: {
-        faIconsResolve: function(FontawesomeFactory) {
-          return FontawesomeFactory.get();
+        IconsResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'fontawesome'}, function(response) {
+            return response;
+          });
         }
       }
     })

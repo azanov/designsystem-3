@@ -7,7 +7,7 @@
   <div class="col-md-12">
     <h4 class="sh">PB Icons</h4>
     <ul class="block-grid-6 glyphicons">
-      <li ng-repeat="i in ic.pbIcons"><i class="pbfont fa-fw fa-2x pb-{{::i}}"></i>
+      <li ng-repeat="i in icons.pbIcons"><i class="pbfont fa-fw fa-2x pb-{{::i}}"></i>
         <br>pb-{{::i}}</li>
     </ul>
   </div>
@@ -72,7 +72,7 @@
   <div class="col-md-12">
     <h4 class="sh">Font Awesome</h4>
     <ul class="block-grid-6">
-      <li ng-repeat="i in ic.faIcons | limitTo:24" class="text-center"><i class="fa fa-2x fa-{{::i.id}}"></i>
+      <li ng-repeat="i in icons.faIcons | limitTo:24" class="text-center"><i class="fa fa-2x fa-{{::i.id}}"></i>
         <br>fa-{{::i.id}}</li>
     </ul>
     <div class="callout callout-info">Included in Design System via link to CDN. Please see <a href="http://fontawesome.io/icons/" target="_blank">fontawesome.io/icons/</a> for all latest icons.</div>
