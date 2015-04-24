@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.elements').controller('AlertsCtrl', function($log) {
+  angular.module('pb.elements').controller('AlertsController', function($log) {
 
     var _this = this;
 

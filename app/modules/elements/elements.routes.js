@@ -9,7 +9,7 @@
       url: '/elements',
       abstract: true,
       templateUrl: 'modules/elements/templates/elements.html',
-      controller: 'ElementsCtrl as ec',
+      controller: 'ElementsController as elements',
       resolve: {
         translate: function($translatePartialLoader) {
           $translatePartialLoader.addPart('/modules/elements/i18n');
@@ -26,7 +26,7 @@
     .state('elements.alerts', {
       url: '/alerts',
       templateUrl: 'modules/elements/templates/elements.alerts.html',
-      controller: 'AlertsCtrl as ac'
+      controller: 'AlertsController as alerts'
     })
     .state('elements.buttons', {
       url: '/buttons',
@@ -50,7 +50,7 @@
       templateUrl: 'modules/elements/templates/elements.colorusage.html',
       controller: 'ColorsController'
     })
-    
+
     .state('elements.colorcharts', {
       url: '/colorcharts',
       templateUrl: 'modules/elements/templates/elements.colorcharts.html',
@@ -76,10 +76,12 @@
     .state('elements.inputs', {
       url: '/inputs',
       templateUrl: 'modules/elements/templates/elements.inputs.html',
-      controller: 'InputsCtrl as ic',
+      controller: 'InputsController as inputs',
       resolve: {
-        countriesList: function(countries) {
-          return countries.get();
+        CountriesResolve: function($log, MockDataFactory) {
+          return MockDataFactory.get({filename: 'countries'}, function(response) {
+            return response;
+          });
         }
       }
     })
@@ -92,13 +94,13 @@
     .state('elements.progress', {
       url: '/progress',
       templateUrl: 'modules/elements/templates/elements.progress.html',
-      controller: 'ProgressCtrl as pc'
+      controller: 'ProgressController as progress'
     })
 
     .state('elements.tables', {
       url: '/tables',
       templateUrl: 'modules/elements/templates/elements.tables.html',
-      controller: 'TablesCtrl as tc',
+      controller: 'TablesController as tables',
       resolve: {
         peopleResolve: function($log, MockDataFactory) {
           return MockDataFactory.query({filename: 'people'}, function(response) {

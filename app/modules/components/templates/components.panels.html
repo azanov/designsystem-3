@@ -59,7 +59,7 @@
   <div class="col-md-4 first-column">
     <div class="panel panel-default">
       <div class="list-group">
-        <a href="" class="list-group-item" ng-class="{active: $index === pc.millercolumn.dataSelected}" ng-click="pc.getSublevel1($index)" ng-repeat="d in pc.millercolumn.data">
+        <a href="" class="list-group-item" ng-class="{active: $index === panels.millercolumn.dataSelected}" ng-click="panels.getSublevel1($index)" ng-repeat="d in panels.millercolumn.data">
             {{d.name}} <i class="pull-right fa fa-angle-right fa-lg"></i>
           </a>
       </div>
@@ -69,7 +69,7 @@
   <div class="col-md-3 inner-column">
     <div class="panel panel-default">
       <div class="list-group">
-        <a href="" class="list-group-item" ng-class="{active: $index === pc.millercolumn.level1Selected && l.versionInfos.length > 0}" ng-click="pc.getSublevel2($index)" ng-repeat="l in pc.millercolumn.level1">
+        <a href="" class="list-group-item" ng-class="{active: $index === panels.millercolumn.level1Selected && l.versionInfos.length > 0}" ng-click="panels.getSublevel2($index)" ng-repeat="l in panels.millercolumn.level1">
             {{l.name}}
             <i class="pull-right fa fa-fw fa-angle-right fa-lg"></i> <span class="badge" >{{l.versionInfos.length}}</span></a>
         </a>
@@ -80,7 +80,7 @@
   <div class="col-md-5 last-column">
     <div class="panel panel-default">
       <ul class="list-group list-group-details">
-        <li ng-repeat="l in pc.millercolumn.level2" class="list-group-item">
+        <li ng-repeat="l in panels.millercolumn.level2" class="list-group-item">
           <div class="form-horizontal">
             <h4 class="text-primary">{{l.name}}</h4>
             <div ng-show="l.version" class="form-group">
@@ -121,7 +121,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="p in pc.people">
+          <tr ng-repeat="p in panels.people">
             <td>00{{p.id}}</td>
             <td>{{p.firstName}}</td>
             <td>{{p.lastName}}</td>
@@ -156,7 +156,7 @@
       </h4>
   </div>
 </div>
-<section class="row" ng-model="pc.draggable" pb-panel-draggable>
+<section class="row" ng-model="panels.draggable" pb-panel-draggable>
   <!-- assign class "column" to any columns you want included in drag-n-drop -->
   <div class="col-md-3 column">
     <div class="panel panel-default">

@@ -28,13 +28,17 @@
     .state('components.panels', {
       url: '/panels',
       templateUrl: 'modules/components/templates/components.panels.html',
-      controller: 'PanelsCtrl as pc',
+      controller: 'PanelsController as panels',
       resolve: {
-        people: function(PeopleFactory) {
-          return PeopleFactory.get();
+        PeopleResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'people'}, function(response) {
+            return response;
+          });
         },
-        millerColumn: function(millerColumn) {
-          return millerColumn.get();
+        MillerResolve: function($log, MockDataFactory) {
+          return MockDataFactory.get({filename: 'millercolumn'}, function(response) {
+            return response;
+          });
         }
       }
     })
@@ -43,11 +47,7 @@
       templateUrl: 'modules/components/templates/components.tabs.html',
       controller: 'TabsCtrl as tc'
     })
-    .state('components.kendoui', {
-      url: '/kendoui',
-      templateUrl: 'modules/components/templates/components.kendoui.html',
-      controller: 'KendoUICtrl as kc'
-    })
+
     .state('components.uibootstrap', {
       url: '/uibootstrap',
       templateUrl: 'modules/components/templates/components.uibootstrap.html',

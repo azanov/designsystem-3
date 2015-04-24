@@ -2,13 +2,13 @@
 
   'use strict';
 
-  angular.module('pb.elements').controller('InputsCtrl', function($log, countriesList) {
+  angular.module('pb.elements').controller('InputsController', function($log, CountriesResolve) {
 
     var _this = this;
 
     //numeric stepper
     _this.numericStepper = {
-      limit: [0], // no negative numbers
+      limit: [0],
       wheelStep: 1,
       arrowStep: 1
     };
@@ -83,7 +83,7 @@
         searchField: ['name']
       },
       selected: {},
-      countries: countriesList.data.countries
+      countries: CountriesResolve.countries
     };
 
     _this.switchStatus1 = false;
@@ -93,4 +93,4 @@
 
   });
 
-})();
+})()
