@@ -10,10 +10,15 @@
     $stateProvider.state('dashboard', {
       url: '/dashboard',
       templateUrl: 'modules/dashboard/templates/dashboard.html',
-      controller: 'DashboardCtrl as db',
+      controller: 'DashboardCtrl as dash',
       resolve: {
         translate: function($translatePartialLoader) {
           $translatePartialLoader.addPart('/modules/dashboard/i18n');
+        },
+        NavigationResolve: function($log, MockDataFactory) {
+          return MockDataFactory.get({filename: 'navigation'}, function(response) {
+            return response;
+          });
         }
       },
       data: {
