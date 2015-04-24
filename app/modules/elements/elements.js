@@ -35,18 +35,24 @@
     .state('elements.colors', {
       url: '/colors',
       templateUrl: 'modules/elements/templates/elements.colors.html',
-      controller: 'ColorsCtrl'
-
+      controller: 'ColorsController',
+      resolve: {
+        ColorsResolve: function($log, MockDataFactory) {
+          return MockDataFactory.get({filename: 'colors'}, function(response) {
+            return response;
+          });
+        }
+      }
     })
     .state('elements.colorusage', {
       url: '/colorusage',
       templateUrl: 'modules/elements/templates/elements.colorusage.html',
-      controller: 'ColorsCtrl'
+      controller: 'ColorsController'
     })
     .state('elements.colorcharts', {
       url: '/colorcharts',
       templateUrl: 'modules/elements/templates/elements.colorcharts.html',
-      controller: 'ChartColorsCtrl'
+      controller: 'ChartColorsController'
 
     })
     .state('elements.grid', {
@@ -94,7 +100,6 @@
           return MockDataFactory.query({filename: 'people'}, function(response) {
             return response;
           });
-
         }
       }
     })

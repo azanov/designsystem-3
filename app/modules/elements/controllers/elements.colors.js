@@ -2,14 +2,9 @@
 
   'use strict';
 
-  angular.module('pb.elements').controller('ColorsCtrl', function($scope, $log, ColorFactory) {
+  angular.module('pb.elements').controller('ColorsController', function($scope, $log, ColorsResolve) {
 
-    $scope.colorData = {};
-
-    ColorFactory.getColors().then(function(response) {
-      $scope.colorData = response.colors;
-      init();
-    });
+    $scope.colorData = ColorsResolve.colors;
 
     function init() {
       $scope.colors = {
