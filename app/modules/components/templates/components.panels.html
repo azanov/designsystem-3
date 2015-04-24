@@ -59,7 +59,7 @@
   <div class="col-md-4 first-column">
     <div class="panel panel-default">
       <div class="list-group">
-        <a href="" class="list-group-item" ng-class="{active: $index === panels.millercolumn.dataSelected}" ng-click="panels.getSublevel1($index)" ng-repeat="d in panels.millercolumn.data">
+        <a href="" class="list-group-item" ng-class="{active: $index === panels.millercolumn.dataSelected}" ng-click="panels.getSublevel1($index)" ng-repeat="d in panels.millercolumn.data.versionInfos">
             {{d.name}} <i class="pull-right fa fa-angle-right fa-lg"></i>
           </a>
       </div>
