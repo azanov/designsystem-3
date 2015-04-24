@@ -239,3 +239,44 @@ gulp.task('watch', function() {
     });
 
 });
+
+
+// FTP tasks
+// to upload, run "gulp deploy"
+
+var userPass = '';
+
+gulp.task('prompt_password', function() {
+  return gulp.src('build/index.html')
+    .pipe(prompt.prompt({
+      type: 'password',
+      name: 'passwordInput',
+      message: 'Please enter your password'
+    }, function(res) {
+      userPass = res.passwordInput;
+    }));
+});
+
+gulp.task('deploy', ['prompt_password'], function() {
+  var conn = ftp.create({
+    host: '10.50.8.173',
+    user: 'ST016LO',
+    password: userPass,
+    parallel: 10,
+    log: gutil.log
+  });
+  var globs = [
+    'build/**'
+  ];
+
+  // using base = '.' will transfer everything to /public_html correctly
+  // turn off buffering in gulp.src for best performance
+  return gulp.src(globs, {
+      base: 'build',
+      buffer: false
+    })
+
+    //.pipe(conn.newer('/public_html')) // only upload newer files
+    .pipe(conn.dest('/design_system_staging'));
+
+});
