@@ -16,6 +16,11 @@
         },
         navigation: function(navigation) {
           return navigation.getSubNav('Elements');
+        },
+        NavigationResolve: function($log, MockDataFactory) {
+          return MockDataFactory.get({filename: 'navigation'}, function(response) {
+            return response;
+          });
         }
       },
       data: {
