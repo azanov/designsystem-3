@@ -68,5 +68,5 @@
     "validateLineBreaks": "LF",
     "validateQuoteMarks": "'",
     "validateIndentation": 2,
-    "maximumLineLength": 80
+    "maximumLineLength": null
 }

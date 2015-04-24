@@ -5,6 +5,7 @@
   angular.module('app', [
     'ngCookies',
     'ngAnimate',
+    'ngResource',
     'ngSanitize',
     'ui.router',
     'angular-loading-bar',
