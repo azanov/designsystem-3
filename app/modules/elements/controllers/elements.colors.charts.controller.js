@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.elements').controller('ChartColorsController', function($scope, $log, ColorFactory) {
+  angular.module('pb.elements').controller('ChartColorsController', function($scope, $log) {
 
     $scope.charts = {
       gray: {
