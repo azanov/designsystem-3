@@ -26,7 +26,6 @@
           keyboard: false,
           backdrop: 'static'
         }).result.then(function(fullname) {
-          console.log('fullname: ' + fullname);
           $scope.fullname = fullname;
         });
       },

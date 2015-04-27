@@ -11,8 +11,6 @@
     };
 
     $scope.save = function() {
-      console.log($scope);
-      console.log($scope.form.fullname.$modelValue);
       $modalInstance.close($scope.form.fullname.$modelValue);
     };
 

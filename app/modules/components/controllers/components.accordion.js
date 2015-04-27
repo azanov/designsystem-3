@@ -1,9 +1,16 @@
 (function() {
 
-  angular.module('pb.components').controller('AccordionCtrl', function($log) {
+  'use strict';
 
-    var _this = this;
+  (function() {
 
-  });
+    angular.module('pb.components').controller('AccordionCtrl', function($log) {
+
+      var _this = this;
+
+    });
+
+  })();
+
 
 })();
