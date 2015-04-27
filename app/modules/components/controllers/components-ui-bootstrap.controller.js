@@ -2,18 +2,20 @@
 
   'use strict';
 
-  angular.module('pb.components').controller('UIBootstrapCtrl', function($log, $scope, $modal, $timeout, $window) {
+  angular.module('pb.components').controller('UiBootstrapCtrl', function($log, $modal, $timeout, $window) {
 
-    $scope.modals = {
+    var _this = this;
+
+    _this.modals = {
       simple: function() {
         $modal.open({
-          templateUrl: 'modules/components/templates/bootstrap-ui/modals/simple.html',
+          templateUrl: 'modules/components/modals/components-simple.html',
           controller: 'BootstrapUiSimpleModalCtrl'
         });
       },
       modal: function() {
         $modal.open({
-          templateUrl: 'modules/components/templates/bootstrap-ui/modals/modal.html',
+          templateUrl: 'modules/components/modals/components-modal.html',
           controller: 'BootstrapUiModalCtrl',
           keyboard: false,
           backdrop: 'static'
@@ -21,18 +23,18 @@
       },
       prompt: function() {
         $modal.open({
-          templateUrl: 'modules/components/templates/bootstrap-ui/modals/prompt.html',
+          templateUrl: 'modules/components/modals/components-prompt.html',
           controller: 'BootstrapUiPromptModalCtrl',
           keyboard: false,
           backdrop: 'static'
         }).result.then(function(fullname) {
-          $scope.fullname = fullname;
+          _this.fullname = fullname;
         });
       },
       draggable: function() {
         $modal.open({
-          windowTemplateUrl: 'modules/components/templates/bootstrap-ui/modals/draggable-window-template.html',
-          templateUrl: 'modules/components/templates/bootstrap-ui/modals/draggable.html',
+          windowTemplateUrl: 'modules/components/modals/components-draggable-template.html',
+          templateUrl: 'modules/components/modals/components-draggable.html',
           controller: 'BootstrapUiDraggableModalCtrl',
           keyboard: false,
           backdrop: 'static'
@@ -40,7 +42,7 @@
       }
     };
 
-    $scope.calendar = {
+    _this.calendar = {
       format: 'MMMM dd, yyyy',
       options: {
         formatYear: 'yyyy',
@@ -51,17 +53,17 @@
       open: function($event) {
         $event.preventDefault();
         $event.stopPropagation();
-        $scope.calendar.opened = true;
+        _this.calendar.opened = true;
       }
     };
 
-    $scope.time = {
+    _this.time = {
       menuClick: function(event) {
         event.preventDefault();
       }
     };
 
-    $scope.tabs = {
+    _this.tabs = {
       tabset01: [{
         title: 'Dynamic Title 1',
         content: 'Dynamic content 1'

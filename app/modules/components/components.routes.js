@@ -2,9 +2,8 @@
 
   'use strict';
 
-  angular.module('pb.components', ['ui.router']);
-
   angular.module('pb.components').config(function($stateProvider) {
+
     $stateProvider.state('components', {
       url: '/components',
       abstract: true,
@@ -20,20 +19,20 @@
         access: 'private'
       }
     })
+
     .state('components.accordion', {
       url: '/accordion',
-      templateUrl: 'modules/components/templates/components.accordion.html',
+      templateUrl: 'modules/components/templates/components-accordion.html',
       controller: 'AccordionCtrl as accordion'
     })
+
     .state('components.panels', {
       url: '/panels',
-      templateUrl: 'modules/components/templates/components.panels.html',
+      templateUrl: 'modules/components/templates/components-panels.html',
       controller: 'PanelsController as panels',
       resolve: {
         PeopleResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'people'}, function(response) {
-            return response;
-          });
+          return MockDataFactory.query({filename: 'people'});
         },
         MillerResolve: function($log, MockDataFactory) {
           return MockDataFactory.get({filename: 'millercolumn'}, function(response) {
@@ -42,16 +41,17 @@
         }
       }
     })
+
     .state('components.tabs', {
       url: '/tabs',
-      templateUrl: 'modules/components/templates/components.tabs.html',
+      templateUrl: 'modules/components/templates/components-tabs.html',
       controller: 'TabsCtrl as tabs'
     })
 
     .state('components.uibootstrap', {
       url: '/uibootstrap',
-      templateUrl: 'modules/components/templates/components.uibootstrap.html',
-      controller: 'UIBootstrapCtrl'
+      templateUrl: 'modules/components/templates/components-ui-bootstrap.html',
+      controller: 'UiBootstrapCtrl as uibootstrap'
     });
 
   });
