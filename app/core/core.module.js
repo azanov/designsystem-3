@@ -14,8 +14,7 @@
     'selectize-ng',
     'toggle-switch',
     'ui.bootstrap',
-    'ui-rangeSlider',
-    'chart.js'
+    'ui-rangeSlider'
   ]);
 
 })();
