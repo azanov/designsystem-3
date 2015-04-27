@@ -3,6 +3,7 @@
 All Design System contributions must adhere to the following coding standards and guidelines.
 
 - [Module Template](#module-template)
+- [Modules](#modules)
 - [Routing](#routing)
 - [Factories](#factories)
 - [Controllers](#controllers)
@@ -24,7 +25,7 @@ Use the `/docs/module_template` folder as a starting point to quickly add new mo
 
 <br>
 
-##Modules
+##<a href="#modules"></a>Modules
 
 ###File Naming
 `example.module.js`
