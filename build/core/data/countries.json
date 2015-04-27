@@ -1,5 +1,4 @@
-{
-  "countries": [{
+[{
     "name": "Afghanistan",
     "code": "AF"
   }, {
@@ -729,4 +728,3 @@
     "name": "Zimbabwe",
     "code": "ZW"
   }]
-}

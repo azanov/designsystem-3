@@ -1,5 +1,4 @@
-{
-  "icons": [{
+ [{
       "name": "Search",
       "id": "search",
       "unicode": "f002",
@@ -2825,4 +2824,3 @@
       ]
     }
   ]
-}

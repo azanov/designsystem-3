@@ -244,9 +244,10 @@ gulp.task('watch', function() {
 // FTP tasks
 // to upload, run "gulp deploy"
 
+var userName = '';
 var userPass = '';
 
-gulp.task('prompt_password', function() {
+gulp.task('prompt_password', ['prompt_username'], function() {
   return gulp.src('build/index.html')
     .pipe(prompt.prompt({
       type: 'password',
@@ -257,10 +258,21 @@ gulp.task('prompt_password', function() {
     }));
 });
 
+gulp.task('prompt_username', function() {
+  return gulp.src('build/index.html')
+    .pipe(prompt.prompt({
+      type: 'text',
+      name: 'usernameInput',
+      message: 'Please enter your username'
+    }, function(res) {
+      userName = res.usernameInput;
+    }));
+});
+
 gulp.task('deploy', ['prompt_password'], function() {
   var conn = ftp.create({
     host: '10.50.8.173',
-    user: 'ST016LO',
+    user: userName,
     password: userPass,
     parallel: 10,
     log: gutil.log

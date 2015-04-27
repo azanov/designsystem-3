@@ -3,19 +3,8 @@
   'use strict';
 
   angular.module('app', [
-    'ngCookies',
-    'ngAnimate',
-    'ngResource',
-    'ngSanitize',
-    'ui.router',
-    'angular-loading-bar',
-    'pascalprecht.translate',
-    'tmh.dynamicLocale',
-    'selectize-ng',
-    'toggle-switch',
-    'ui.bootstrap',
-    'ui-rangeSlider',
-    'chart.js',
+    //third party modules are in /core/core.module.js
+    'pb.core',
     'pb.dashboard',
     'pb.components',
     'pb.elements',
@@ -98,15 +87,11 @@
 
   'use strict';
 
-  angular.module('app').controller('HeaderCtrl', function($log, navigation) {
+  angular.module('app').controller('HeaderCtrl', function($log, MockDataFactory) {
 
     var _this = this;
-    _this.nav = {};
 
-    navigation.get().then(function(response) {
-      //$log.debug(response);
-      _this.nav = response.data.nav;
-    });
+    _this.nav = MockDataFactory.query({filename: 'navigation'});
 
   });
 
@@ -138,6 +123,28 @@
       controllerAs: ''
     };
   });
+
+})();
+
+(function() {
+
+  'use strict';
+
+  angular.module('pb.core', [
+    'ngCookies',
+    'ngAnimate',
+    'ngResource',
+    'ngSanitize',
+    'ui.router',
+    'angular-loading-bar',
+    'pascalprecht.translate',
+    'tmh.dynamicLocale',
+    'selectize-ng',
+    'toggle-switch',
+    'ui.bootstrap',
+    'ui-rangeSlider',
+    'chart.js'
+  ]);
 
 })();
 
@@ -464,133 +471,6 @@
 
   'use strict';
 
-  angular.module('app').factory('PeopleFactory', function($http) {
-
-    var PeopleFactory = {};
-
-    PeopleFactory.get = function() {
-      return $http.get('core/data/people.json');
-    };
-
-    return PeopleFactory;
-
-  });
-
-})();
-
-(function() {
-
-  'use strict';
-
-  angular.module('app').factory('navigation', function($log, $http) {
-
-    var navigation = {};
-
-    navigation.get = function() {
-      return $http.get('core/data/navigation.json');
-    };
-
-    navigation.getSubNav = function(subnav) {
-      return navigation.get().then(function(response) {
-        var sub = {};
-        angular.forEach(response.data.nav, function(v, k) {
-          if (angular.lowercase(v.label) === angular.lowercase(subnav)) {
-            sub = v;
-          }
-        });
-
-        return sub;
-
-      });
-    };
-
-    return navigation;
-  });
-
-})();
-
-(function() {
-
-  'use strict';
-
-  angular.module('app').factory('millerColumn', function($http) {
-
-    var millerColumn = {};
-
-    millerColumn.get = function() {
-      return $http.get('core/data/miller_column.json');
-    };
-
-    return millerColumn;
-
-  });
-
-})();
-
-(function() {
-
-  'use strict';
-
-  angular.module('app').factory('countries', function($http) {
-
-    var countries = {};
-
-    countries.get = function() {
-      return $http.get('core/data/countries.json');
-    };
-
-    return countries;
-
-  });
-
-})();
-
-(function() {
-
-  'use strict';
-
-  angular.module('app').factory('ColorFactory', function($http) {
-
-    var colorData;
-
-    return {
-      getColors: function() {
-        if (!colorData) {
-          colorData = $http.get('core/data/colors.json').then(function(response) {
-            return response.data;
-          });
-        }
-
-        return colorData;
-      }
-    };
-
-  });
-
-})();
-
-(function() {
-
-  'use strict';
-
-  angular.module('app').factory('FontawesomeFactory', function($http) {
-
-    var FontawesomeFactory = {};
-
-    FontawesomeFactory.get = function() {
-      return $http.get('core/data/fontawesome.json');
-    };
-
-    return FontawesomeFactory;
-
-  });
-
-})();
-
-(function() {
-
-  'use strict';
-
   angular.module('pb.dashboard', [
     'ui.router'
   ]);
@@ -599,10 +479,13 @@
     $stateProvider.state('dashboard', {
       url: '/dashboard',
       templateUrl: 'modules/dashboard/templates/dashboard.html',
-      controller: 'DashboardCtrl as db',
+      controller: 'DashboardCtrl as dash',
       resolve: {
         translate: function($translatePartialLoader) {
           $translatePartialLoader.addPart('/modules/dashboard/i18n');
+        },
+        NavigationResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'navigation'});
         }
       },
       data: {
@@ -619,15 +502,11 @@
 
   'use strict';
 
-  angular.module('pb.dashboard').controller('DashboardCtrl', function($log, navigation) {
+  angular.module('pb.dashboard').controller('DashboardCtrl', function($log, NavigationResolve) {
 
     var _this = this;
-    _this.navdata = {};
 
-    navigation.get().then(function(response) {
-      //$log.debug(response);
-      _this.navdata = response.data.nav;
-    });
+    _this.navdata = NavigationResolve;
 
   });
 
@@ -639,18 +518,24 @@
 
   angular.module('pb.elements', ['ui.router']);
 
+})();
+
+(function() {
+
+  'use strict';
+
   angular.module('pb.elements').config(function($stateProvider) {
     $stateProvider.state('elements', {
       url: '/elements',
       abstract: true,
       templateUrl: 'modules/elements/templates/elements.html',
-      controller: 'ElementsCtrl as ec',
+      controller: 'ElementsController as elements',
       resolve: {
         translate: function($translatePartialLoader) {
           $translatePartialLoader.addPart('/modules/elements/i18n');
         },
-        navigation: function(navigation) {
-          return navigation.getSubNav('Elements');
+        NavigationResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'navigation'});
         }
       },
       data: {
@@ -658,87 +543,98 @@
         access: 'private'
       }
     })
+
     .state('elements.alerts', {
       url: '/alerts',
-      templateUrl: 'modules/elements/templates/elements.alerts.html',
-      controller: 'AlertsCtrl as ac'
+      templateUrl: 'modules/elements/templates/elements-alerts.html',
+      controller: 'AlertsController as alerts'
     })
+
     .state('elements.buttons', {
       url: '/buttons',
-      templateUrl: 'modules/elements/templates/elements.buttons.html'
+      templateUrl: 'modules/elements/templates/elements-buttons.html'
     })
+
     .state('elements.colors', {
       url: '/colors',
-      templateUrl: 'modules/elements/templates/elements.colors.html',
-      controller: 'ColorsCtrl'
-
-    })
-    .state('elements.colorusage', {
-      url: '/colorusage',
-      templateUrl: 'modules/elements/templates/elements.colorusage.html',
-      controller: 'ColorsCtrl'
-    })
-    .state('elements.colorcharts', {
-      url: '/colorcharts',
-      templateUrl: 'modules/elements/templates/elements.colorcharts.html',
-      controller: 'ChartColorsCtrl'
-
-    })
-    .state('elements.grid', {
-      url: '/grid',
-      templateUrl: 'modules/elements/templates/elements.grid.html'
-    })
-    .state('elements.icons', {
-      url: '/icons',
-      templateUrl: 'modules/elements/templates/elements.icons.html',
-      controller: 'IconsCtrl as ic',
+      templateUrl: 'modules/elements/templates/elements-colors.html',
+      controller: 'ColorsController as colors',
       resolve: {
-        faIconsResolve: function(FontawesomeFactory) {
-          return FontawesomeFactory.get();
+        ColorsResolve: function($log, MockDataFactory) {
+          return MockDataFactory.get({filename: 'colors'});
         }
       }
     })
+
+    .state('elements.colorusage', {
+      url: '/colorusage',
+      templateUrl: 'modules/elements/templates/elements-colors-usage.html',
+      controller: 'ColorUsageController as usage'
+    })
+
+    .state('elements.colorcharts', {
+      url: '/colorcharts',
+      templateUrl: 'modules/elements/templates/elements-colors-charts.html',
+      controller: 'ChartColorsController as charts',
+      resolve: {
+        ColorsResolve: function($log, MockDataFactory) {
+          return MockDataFactory.get({filename: 'colors'});
+        }
+      }
+    })
+
+    .state('elements.grid', {
+      url: '/grid',
+      templateUrl: 'modules/elements/templates/elements-grid.html'
+    })
+
+    .state('elements.icons', {
+      url: '/icons',
+      templateUrl: 'modules/elements/templates/elements-icons.html',
+      controller: 'IconsController as icons',
+      resolve: {
+        IconsResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'fontawesome'});
+        }
+      }
+    })
+
     .state('elements.inputs', {
       url: '/inputs',
-      templateUrl: 'modules/elements/templates/elements.inputs.html',
-      controller: 'InputsCtrl as ic',
+      templateUrl: 'modules/elements/templates/elements-inputs.html',
+      controller: 'InputsController as inputs',
       resolve: {
-        countriesList: function(countries) {
-          return countries.get();
+        CountriesResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'countries'});
         }
       }
     })
 
     .state('elements.popovers', {
       url: '/popovers',
-      templateUrl: 'modules/elements/templates/elements.popovers.html'
+      templateUrl: 'modules/elements/templates/elements-popovers.html'
     })
 
     .state('elements.progress', {
       url: '/progress',
-      templateUrl: 'modules/elements/templates/elements.progress.html',
-      controller: 'ProgressCtrl as pc'
+      templateUrl: 'modules/elements/templates/elements-progress.html',
+      controller: 'ProgressController as progress'
     })
 
     .state('elements.tables', {
       url: '/tables',
-      templateUrl: 'modules/elements/templates/elements.tables.html',
-      controller: 'TablesCtrl as tc',
+      templateUrl: 'modules/elements/templates/elements-tables.html',
+      controller: 'TablesController as tables',
       resolve: {
-        peopleResolve: function($log, MockDataFactory) {
-          //return PeopleFactory.get();
-
-          return MockDataFactory.query({filename: 'people'}, function(response) {
-            $log.debug(response);
-            return response;
-          });
-
+        PeopleResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'people'});
         }
       }
     })
+    
     .state('elements.typography', {
       url: '/typography',
-      templateUrl: 'modules/elements/templates/elements.typography.html'
+      templateUrl: 'modules/elements/templates/elements-typography.html'
     });
   });
 
@@ -748,10 +644,11 @@
 
   'use strict';
 
-  angular.module('pb.elements').controller('ElementsCtrl', function($log, navigation) {
+  angular.module('pb.elements').controller('ElementsController', function($log, NavigationResolve) {
 
     var _this = this;
-    _this.leftNav = navigation;
+    
+    _this.leftNav = NavigationResolve[1];
 
   });
 
@@ -761,72 +658,46 @@
 
   'use strict';
 
-  angular.module('pb.elements').controller('ColorsCtrl', function($scope, $log, ColorFactory) {
+  angular.module('pb.elements').controller('ColorsController', function($log, ColorsResolve) {
 
-    $scope.colorData = {};
+    var _this = this;
 
-    ColorFactory.getColors().then(function(response) {
-      $scope.colorData = response.colors;
-      init();
-    });
+    _this.colorData = ColorsResolve.colors;
 
-    function init() {
-      $scope.colors = {
-        blues: {
-          $blue1: $scope.colorData.blues[0].hex,
-          $blue2: $scope.colorData.blues[1].hex,
-          $blue3: $scope.colorData.blues[2].hex,
-          $blue4: $scope.colorData.blues[3].hex,
-          $blue5: $scope.colorData.blues[4].hex,
-          $blue6: $scope.colorData.blues[5].hex,
-          all: function() {
-            return [this.$blue1, this.$blue2, this.$blue3, this.$blue4, this.$blue5, this.$blue6];
-          }
-        },
-        grays: {
-          $gray1: $scope.colorData.chartgrays[0].hex,
-          $gray2: $scope.colorData.chartgrays[1].hex,
-          $gray3: $scope.colorData.chartgrays[2].hex,
-          $gray4: $scope.colorData.chartgrays[3].hex,
-          $gray5: $scope.colorData.chartgrays[4].hex,
-          $gray6: $scope.colorData.chartgrays[5].hex,
-          all: function() {
-            return [this.$gray1, this.$gray2, this.$gray3, this.$gray4, this.$gray5, this.$gray6];
-          }
-        },
-        charts: {
-          $green: $scope.colorData.charts[0].hex,
-          $blue: $scope.colorData.charts[1].hex,
-          $purple: $scope.colorData.charts[2].hex,
-          $yellow: $scope.colorData.charts[3].hex,
-          $orange: $scope.colorData.charts[4].hex,
-          $red: $scope.colorData.charts[5].hex,
-          all: function() {
-            return [this.$green, this.$blue, this.$purple, this.$yellow, this.$orange, this.$red];
-          }
+    _this.colors = {
+      blues: {
+        $blue1: _this.colorData.blues[0].hex,
+        $blue2: _this.colorData.blues[1].hex,
+        $blue3: _this.colorData.blues[2].hex,
+        $blue4: _this.colorData.blues[3].hex,
+        $blue5: _this.colorData.blues[4].hex,
+        $blue6: _this.colorData.blues[5].hex,
+        all: function() {
+          return [this.$blue1, this.$blue2, this.$blue3, this.$blue4, this.$blue5, this.$blue6];
         }
-      };
-
-    }
-
-    //generate easypiechart
-    $scope.easypiechart = function(size, barColor, lineWidth, percent) {
-      var config = {
-        options: {
-          animate: {
-            enabled: false
-          },
-          size: size,
-          barColor: barColor,
-          scaleColor: false,
-          lineWidth: lineWidth,
-          lineCap: 'circle',
-          trackColor: '#f2f2f2'
-        },
-        percent: percent
-      };
-
-      return config;
+      },
+      grays: {
+        $gray1: _this.colorData.chartgrays[0].hex,
+        $gray2: _this.colorData.chartgrays[1].hex,
+        $gray3: _this.colorData.chartgrays[2].hex,
+        $gray4: _this.colorData.chartgrays[3].hex,
+        $gray5: _this.colorData.chartgrays[4].hex,
+        $gray6: _this.colorData.chartgrays[5].hex,
+        all: function() {
+          return [this.$gray1, this.$gray2, this.$gray3, this.$gray4, this.$gray5, this.$gray6];
+        }
+      },
+      charts: {
+        $green: _this.colorData.charts[0].hex,
+        $blue: _this.colorData.charts[1].hex,
+        $purple: _this.colorData.charts[2].hex,
+        $yellow: _this.colorData.charts[3].hex,
+        $orange: _this.colorData.charts[4].hex,
+        $red: _this.colorData.charts[5].hex,
+        all: function() {
+          return [this.$green, this.$blue, this.$purple, this.$yellow, this.$orange, this.$red];
+        }
+      }
     };
 
   });
@@ -837,9 +708,61 @@
 
   'use strict';
 
-  angular.module('pb.elements').controller('ChartColorsCtrl', function($scope, $log, ColorFactory) {
+  angular.module('pb.elements').controller('ColorUsageController', function($log) {
 
-    $scope.charts = {
+    var _this = this;
+
+  });
+
+})();
+
+(function() {
+
+  'use strict';
+
+  angular.module('pb.elements').controller('ChartColorsController', function($log, ColorsResolve) {
+
+    var _this = this;
+
+    _this.colorData = ColorsResolve.colors;
+
+    _this.colors = {
+      blues: {
+        $blue1: _this.colorData.blues[0].hex,
+        $blue2: _this.colorData.blues[1].hex,
+        $blue3: _this.colorData.blues[2].hex,
+        $blue4: _this.colorData.blues[3].hex,
+        $blue5: _this.colorData.blues[4].hex,
+        $blue6: _this.colorData.blues[5].hex,
+        all: function() {
+          return [this.$blue1, this.$blue2, this.$blue3, this.$blue4, this.$blue5, this.$blue6];
+        }
+      },
+      grays: {
+        $gray1: _this.colorData.chartgrays[0].hex,
+        $gray2: _this.colorData.chartgrays[1].hex,
+        $gray3: _this.colorData.chartgrays[2].hex,
+        $gray4: _this.colorData.chartgrays[3].hex,
+        $gray5: _this.colorData.chartgrays[4].hex,
+        $gray6: _this.colorData.chartgrays[5].hex,
+        all: function() {
+          return [this.$gray1, this.$gray2, this.$gray3, this.$gray4, this.$gray5, this.$gray6];
+        }
+      },
+      charts: {
+        $green: _this.colorData.charts[0].hex,
+        $blue: _this.colorData.charts[1].hex,
+        $purple: _this.colorData.charts[2].hex,
+        $yellow: _this.colorData.charts[3].hex,
+        $orange: _this.colorData.charts[4].hex,
+        $red: _this.colorData.charts[5].hex,
+        all: function() {
+          return [this.$green, this.$blue, this.$purple, this.$yellow, this.$orange, this.$red];
+        }
+      }
+    };
+
+    _this.charts = {
       gray: {
         sixColor: {
           data: [50, 45, 40, 35, 30, 25],
@@ -950,178 +873,6 @@
       }
     };
 
-    $scope.colorData = {};
-
-    ColorFactory.getColors().then(function(response) {
-      $scope.colorData = response.colors;
-      //init();
-    });
-
-    // function init() {
-    //     // convert colors from json to named variables
-    //     $scope.colors = {
-    //       blues: {
-    //         $blue1: $scope.colorData.blues[0].hex,
-    //         $blue2: $scope.colorData.blues[1].hex,
-    //         $blue3: $scope.colorData.blues[2].hex,
-    //         $blue4: $scope.colorData.blues[3].hex,
-    //         $blue5: $scope.colorData.blues[4].hex,
-    //         $blue6: $scope.colorData.blues[5].hex,
-    //         all: function() {
-    //           return [this.$blue1, this.$blue2, this.$blue3, this.$blue4, this.$blue5, this.$blue6];
-    //         }
-    //       },
-    //       grays: {
-    //         $gray1: $scope.colorData.chartgrays[0].hex,
-    //         $gray2: $scope.colorData.chartgrays[1].hex,
-    //         $gray3: $scope.colorData.chartgrays[2].hex,
-    //         $gray4: $scope.colorData.chartgrays[3].hex,
-    //         $gray5: $scope.colorData.chartgrays[4].hex,
-    //         $gray6: $scope.colorData.chartgrays[5].hex,
-    //         all: function() {
-    //           return [this.$gray1, this.$gray2, this.$gray3, this.$gray4, this.$gray5, this.$gray6];
-    //         }
-    //       },
-    //       charts: {
-    //         $green: $scope.colorData.charts[0].hex,
-    //         $blue: $scope.colorData.charts[1].hex,
-    //         $purple: $scope.colorData.charts[2].hex,
-    //         $yellow: $scope.colorData.charts[3].hex,
-    //         $orange: $scope.colorData.charts[4].hex,
-    //         $red: $scope.colorData.charts[5].hex,
-    //         all: function() {
-    //           return [this.$green, this.$blue, this.$purple, this.$yellow, this.$orange, this.$red];
-    //         }
-    //       }
-    //     };
-    //
-    //   } //end init
-    //
-    // // functions that create the charts
-    //
-    // //generate easypiechart
-    // $scope.easypiechart = function(size, barColor, lineWidth, percent) {
-    //   var config = {
-    //     options: {
-    //       animate: {
-    //         enabled: false
-    //       },
-    //       size: size,
-    //       barColor: barColor,
-    //       scaleColor: false,
-    //       lineWidth: lineWidth,
-    //       lineCap: 'circle',
-    //       trackColor: '#f2f2f2'
-    //     },
-    //     percent: percent
-    //   };
-    //
-    //   return config;
-    // };
-    //
-    // //generate flot donut chart
-    // $scope.donut = function(data, colors, innerRadius) {
-    //   var config = {
-    //     data: data,
-    //     options: {
-    //       colors: colors,
-    //       series: {
-    //         pie: {
-    //           innerRadius: 0.6,
-    //           show: true,
-    //           stroke: {
-    //             width: 0
-    //           }
-    //         }
-    //       }
-    //     }
-    //   };
-    //
-    //   return config;
-    // };
-    //
-    // // generate flot pie chart
-    // $scope.pie = function(data, colors, strokeWidth, strokeColor) {
-    //   var config = {
-    //     data: data,
-    //     options: {
-    //       colors: colors,
-    //       series: {
-    //         pie: {
-    //           show: true,
-    //           stroke: {
-    //             width: (strokeWidth) ? strokeWidth : 0,
-    //             color: (strokeColor) ? strokeColor : '#fff'
-    //           }
-    //         }
-    //       }
-    //     }
-    //   };
-    //
-    //   return config;
-    // };
-    //
-    // // generate sparkline bar chart
-    // $scope.bar = function(data, height, colors, barWidth, barSpacing) {
-    //   var config = {
-    //     options: {
-    //       type: 'bar',
-    //       height: height,
-    //       colorMap: colors,
-    //       barWidth: barWidth,
-    //       barSpacing: barSpacing,
-    //       chartRangeMin: 0,
-    //       chartRangeMax: 100,
-    //       disableHighlight: true,
-    //       disableTooltips: true
-    //     },
-    //     data: data
-    //   };
-    //
-    //   return config;
-    // };
-    //
-    // // define and actually call the charts
-    // $scope.colorCharts = {
-    //   grayscale: {
-    //     donut: $scope.donut([30, 20, 20, 13, 10, 7], $scope.colors.grays.all()),
-    //     pie: $scope.pie([33, 33, 33], [$scope.colors.grays.$gray1, $scope.colors.grays.$gray4, $scope.colors.grays.$gray5]),
-    //     bar: $scope.bar([100, 80, 60, 50, 40, 30], '110px', $scope.colors.grays.all(), 27, 6)
-    //   },
-    //   blue: {
-    //     donut: $scope.donut([30, 20, 20, 13, 10, 7], $scope.colors.blues.all()),
-    //     pie: $scope.pie([33, 33, 33], [$scope.colors.blues.$blue1, $scope.colors.blues.$blue4, $scope.colors.blues.$blue5]),
-    //     bar: $scope.bar([100, 80, 60, 50, 40, 30], '110px', $scope.colors.blues.all(), 27, 6)
-    //   }
-    // };
-    //
-    // $scope.donutsVaried = {
-    //   donut01: $scope.donut([30, 20, 20, 13, 10, 7], $scope.colors.grays.all()),
-    //   donut02: $scope.donut([30, 20, 20, 13, 10, 7], $scope.colors.blues.all()),
-    //   donut03: $scope.donut([30, 20, 20, 13, 10, 7], [$scope.colors.blues.$blue1, $scope.colors.charts.$orange, $scope.colors.blues.$blue3, $scope.colors.blues.$blue4, $scope.colors.blues.$blue5, $scope.colors.blues.$blue6])
-    // };
-    // $scope.radial_01 = $scope.easypiechart(100, $scope.colors.blues.$blue1, 20, 63);
-    // $scope.radial_02 = $scope.easypiechart(100, $scope.colors.blues.$blue6, 20, 37);
-    // $scope.radial_03 = $scope.easypiechart(100, $scope.colors.blues.$blue4, 20, 90);
-    //
-    // $scope.percentage_01 = $scope.easypiechart(100, $scope.colors.charts.$green, 20, 90);
-    // $scope.percentage_02 = $scope.easypiechart(100, $scope.colors.charts.$blue, 20, 75);
-    // $scope.percentage_03 = $scope.easypiechart(100, $scope.colors.charts.$purple, 20, 63);
-    // $scope.percentage_04 = $scope.easypiechart(100, $scope.colors.charts.$yellow, 20, 50);
-    // $scope.percentage_05 = $scope.easypiechart(100, $scope.colors.charts.$orange, 20, 37);
-    // $scope.percentage_06 = $scope.easypiechart(100, $scope.colors.charts.$red, 20, 10);
-    //
-    // $scope.donut_chart = $scope.donut([30, 20, 20, 13, 10, 7], $scope.colors.charts.all());
-    // $scope.pie_chart = $scope.pie([25, 25, 25, 12, 8, 5], $scope.colors.charts.all(), 1);
-    //
-    // $scope.tri_pie_01 = $scope.pie([33, 33, 33], [$scope.colors.charts.$green, $scope.colors.charts.$purple, $scope.colors.charts.$orange]);
-    // $scope.tri_pie_02 = $scope.pie([33, 33, 33], [$scope.colors.charts.$blue, $scope.colors.charts.$yellow, $scope.colors.charts.$red]);
-    // $scope.tri_pie_03 = $scope.pie([33, 33, 33], [$scope.colors.charts.$green, $scope.colors.charts.$blue, $scope.colors.charts.$purple]);
-    // $scope.tri_pie_04 = $scope.pie([33, 33, 33], [$scope.colors.charts.$yellow, $scope.colors.charts.$orange, $scope.colors.charts.$red]);
-    // $scope.tri_pie_05 = $scope.pie([33, 33, 33], [$scope.colors.charts.$green, $scope.colors.charts.$yellow, $scope.colors.charts.$red]);
-    // $scope.tri_pie_06 = $scope.pie([33, 33, 33], [$scope.colors.blues.$blue1, $scope.colors.blues.$blue3, $scope.colors.blues.$blue6]);
-    //
-    // $scope.bar_chart_01 = $scope.bar([100, 80, 60, 50, 40, 30], '110px', $scope.colors.charts.all(), 27, 6);
 
   });
 
@@ -1131,7 +882,7 @@
 
   'use strict';
 
-  angular.module('pb.elements').controller('AlertsCtrl', function($log) {
+  angular.module('pb.elements').controller('AlertsController', function($log) {
 
     var _this = this;
 
@@ -1151,11 +902,11 @@
 
   'use strict';
 
-  angular.module('pb.elements').controller('IconsCtrl', function($log, faIconsResolve) {
+  angular.module('pb.elements').controller('IconsController', function($log, IconsResolve) {
 
     var _this = this;
 
-    _this.faIcons = faIconsResolve.data.icons;
+    _this.faIcons = IconsResolve;
 
     _this.pbIcons =  [
       'addressbook',
@@ -1195,13 +946,13 @@
 
   'use strict';
 
-  angular.module('pb.elements').controller('InputsCtrl', function($log, countriesList) {
+  angular.module('pb.elements').controller('InputsController', function($log, CountriesResolve) {
 
     var _this = this;
 
     //numeric stepper
     _this.numericStepper = {
-      limit: [0], // no negative numbers
+      limit: [0],
       wheelStep: 1,
       arrowStep: 1
     };
@@ -1276,7 +1027,7 @@
         searchField: ['name']
       },
       selected: {},
-      countries: countriesList.data.countries
+      countries: CountriesResolve
     };
 
     _this.switchStatus1 = false;
@@ -1286,13 +1037,13 @@
 
   });
 
-})();
+})()
 
 (function() {
 
   'use strict';
 
-  angular.module('pb.elements').controller('ProgressCtrl', function($log, $timeout, cfpLoadingBar) {
+  angular.module('pb.elements').controller('ProgressController', function($log, $timeout, cfpLoadingBar) {
 
     var _this = this;
 
@@ -1339,11 +1090,11 @@
 
   'use strict';
 
-  angular.module('pb.elements').controller('TablesCtrl', function($log, peopleResolve) {
+  angular.module('pb.elements').controller('TablesController', function($log, PeopleResolve) {
 
     var _this = this;
 
-    _this.people = peopleResolve;
+    _this.people = PeopleResolve;
 
   });
 
@@ -1360,7 +1111,7 @@
       url: '/components',
       abstract: true,
       templateUrl: 'modules/components/templates/components.html',
-      controller: 'ComponentsCtrl as cc',
+      controller: 'ComponentsCtrl as components',
       resolve: {
         translate: function($translatePartialLoader) {
           $translatePartialLoader.addPart('/modules/components/i18n');
@@ -1374,31 +1125,31 @@
     .state('components.accordion', {
       url: '/accordion',
       templateUrl: 'modules/components/templates/components.accordion.html',
-      controller: 'AccordionCtrl as ac'
+      controller: 'AccordionCtrl as accordion'
     })
     .state('components.panels', {
       url: '/panels',
       templateUrl: 'modules/components/templates/components.panels.html',
-      controller: 'PanelsCtrl as pc',
+      controller: 'PanelsController as panels',
       resolve: {
-        people: function(PeopleFactory) {
-          return PeopleFactory.get();
+        PeopleResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'people'}, function(response) {
+            return response;
+          });
         },
-        millerColumn: function(millerColumn) {
-          return millerColumn.get();
+        MillerResolve: function($log, MockDataFactory) {
+          return MockDataFactory.get({filename: 'millercolumn'}, function(response) {
+            return response.versionInfos;
+          });
         }
       }
     })
     .state('components.tabs', {
       url: '/tabs',
       templateUrl: 'modules/components/templates/components.tabs.html',
-      controller: 'TabsCtrl as tc'
+      controller: 'TabsCtrl as tabs'
     })
-    .state('components.kendoui', {
-      url: '/kendoui',
-      templateUrl: 'modules/components/templates/components.kendoui.html',
-      controller: 'KendoUICtrl as kc'
-    })
+
     .state('components.uibootstrap', {
       url: '/uibootstrap',
       templateUrl: 'modules/components/templates/components.uibootstrap.html',
@@ -1423,11 +1174,18 @@
 
 (function() {
 
-  angular.module('pb.components').controller('AccordionCtrl', function($log) {
+  'use strict';
 
-    var _this = this;
+  (function() {
 
-  });
+    angular.module('pb.components').controller('AccordionCtrl', function($log) {
+
+      var _this = this;
+
+    });
+
+  })();
+
 
 })();
 
@@ -1435,24 +1193,25 @@
 
   'use strict';
 
-  angular.module('pb.components').controller('PanelsCtrl', function($log, people, millerColumn) {
+  angular.module('pb.components').controller('PanelsController', function($log, PeopleResolve, MillerResolve) {
 
     var _this = this;
 
-    _this.people = people.data.data;
+    _this.people = PeopleResolve;
 
     _this.millercolumn = {
-        data: millerColumn.data.versionInfos,
+        data: MillerResolve,
         level1: null,
         level2: null
       };
 
     _this.getSublevel1 = function(index) {
-      _this.millercolumn.level1 = _this.millercolumn.data[index].versionInfos;
+      _this.millercolumn.level1 = _this.millercolumn.data.versionInfos[index].versionInfos;
       _this.millercolumn.dataSelected = index;
       _this.millercolumn.level2 = null;
       _this.millercolumn.level1Selected = null;
-      $log.log(_this.millercolumn.level1);
+
+      //$log.log(_this.millercolumn.level1);
     };
 
     _this.getSublevel2 = function(index) {
@@ -1488,16 +1247,6 @@
 
   'use strict';
 
-  angular.module('pb.components').controller('KendoUICtrl', function($log) {
-
-  });
-
-})();
-
-(function() {
-
-  'use strict';
-
   angular.module('pb.components').controller('UIBootstrapCtrl', function($log, $scope, $modal, $timeout, $window) {
 
     $scope.modals = {
@@ -1522,7 +1271,6 @@
           keyboard: false,
           backdrop: 'static'
         }).result.then(function(fullname) {
-          console.log('fullname: ' + fullname);
           $scope.fullname = fullname;
         });
       },
@@ -1633,8 +1381,6 @@
     };
 
     $scope.save = function() {
-      console.log($scope);
-      console.log($scope.form.fullname.$modelValue);
       $modalInstance.close($scope.form.fullname.$modelValue);
     };
 
