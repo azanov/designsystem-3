@@ -261,7 +261,7 @@ gulp.task('prompt_password', ['prompt_username'], function() {
 gulp.task('prompt_username', function() {
   return gulp.src('build/index.html')
     .pipe(prompt.prompt({
-      type: 'text',
+      type: 'input',
       name: 'usernameInput',
       message: 'Please enter your username'
     }, function(res) {
