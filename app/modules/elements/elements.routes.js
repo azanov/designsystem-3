@@ -2,8 +2,6 @@
 
   'use strict';
 
-  angular.module('pb.elements', ['ui.router']);
-
   angular.module('pb.elements').config(function($stateProvider) {
     $stateProvider.state('elements', {
       url: '/elements',
@@ -23,95 +21,98 @@
         access: 'private'
       }
     })
+
     .state('elements.alerts', {
       url: '/alerts',
-      templateUrl: 'modules/elements/templates/elements.alerts.html',
+      templateUrl: 'modules/elements/templates/elements-alerts.html',
       controller: 'AlertsController as alerts'
     })
+
     .state('elements.buttons', {
       url: '/buttons',
-      templateUrl: 'modules/elements/templates/elements.buttons.html'
+      templateUrl: 'modules/elements/templates/elements-buttons.html'
     })
+
     .state('elements.colors', {
       url: '/colors',
-      templateUrl: 'modules/elements/templates/elements.colors.html',
-      controller: 'ColorsController',
+      templateUrl: 'modules/elements/templates/elements-colors.html',
+      controller: 'ColorsController as colors',
       resolve: {
         ColorsResolve: function($log, MockDataFactory) {
-          return MockDataFactory.get({filename: 'colors'}, function(response) {
-            return response;
-          });
+          return MockDataFactory.get({filename: 'colors'});
         }
       }
     })
 
     .state('elements.colorusage', {
       url: '/colorusage',
-      templateUrl: 'modules/elements/templates/elements.colorusage.html',
-      controller: 'ColorsController'
+      templateUrl: 'modules/elements/templates/elements-colors-usage.html',
+      controller: 'ColorUsageController as usage'
     })
 
     .state('elements.colorcharts', {
       url: '/colorcharts',
-      templateUrl: 'modules/elements/templates/elements.colorcharts.html',
-      controller: 'ChartColorsController'
-
-    })
-    .state('elements.grid', {
-      url: '/grid',
-      templateUrl: 'modules/elements/templates/elements.grid.html'
-    })
-    .state('elements.icons', {
-      url: '/icons',
-      templateUrl: 'modules/elements/templates/elements.icons.html',
-      controller: 'IconsController as icons',
+      templateUrl: 'modules/elements/templates/elements-colors-charts.html',
+      controller: 'ChartColorsController as charts',
       resolve: {
-        IconsResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'fontawesome'}, function(response) {
-            return response;
-          });
+        ColorsResolve: function($log, MockDataFactory) {
+          return MockDataFactory.get({filename: 'colors'});
         }
       }
     })
+
+    .state('elements.grid', {
+      url: '/grid',
+      templateUrl: 'modules/elements/templates/elements-grid.html'
+    })
+
+    .state('elements.icons', {
+      url: '/icons',
+      templateUrl: 'modules/elements/templates/elements-icons.html',
+      controller: 'IconsController as icons',
+      resolve: {
+        IconsResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'fontawesome'});
+        }
+      }
+    })
+
     .state('elements.inputs', {
       url: '/inputs',
-      templateUrl: 'modules/elements/templates/elements.inputs.html',
+      templateUrl: 'modules/elements/templates/elements-inputs.html',
       controller: 'InputsController as inputs',
       resolve: {
         CountriesResolve: function($log, MockDataFactory) {
-          return MockDataFactory.get({filename: 'countries'}, function(response) {
-            return response;
-          });
+          return MockDataFactory.query({filename: 'countries'});
         }
       }
     })
 
     .state('elements.popovers', {
       url: '/popovers',
-      templateUrl: 'modules/elements/templates/elements.popovers.html'
+      templateUrl: 'modules/elements/templates/elements-popovers.html'
     })
 
     .state('elements.progress', {
       url: '/progress',
-      templateUrl: 'modules/elements/templates/elements.progress.html',
+      templateUrl: 'modules/elements/templates/elements-progress.html',
       controller: 'ProgressController as progress'
     })
 
     .state('elements.tables', {
       url: '/tables',
-      templateUrl: 'modules/elements/templates/elements.tables.html',
+      templateUrl: 'modules/elements/templates/elements-tables.html',
       controller: 'TablesController as tables',
       resolve: {
-        peopleResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'people'}, function(response) {
-            return response;
-          });
+        PeopleResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'people'});
         }
       }
     })
+    
     .state('elements.typography', {
       url: '/typography',
-      templateUrl: 'modules/elements/templates/elements.typography.html'
+      templateUrl: 'modules/elements/templates/elements-typography.html'
     });
   });
 

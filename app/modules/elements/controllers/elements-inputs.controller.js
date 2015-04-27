@@ -83,7 +83,7 @@
         searchField: ['name']
       },
       selected: {},
-      countries: CountriesResolve.countries
+      countries: CountriesResolve
     };
 
     _this.switchStatus1 = false;

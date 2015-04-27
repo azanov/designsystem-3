@@ -4,24 +4,24 @@
 
   <div class="row">
     <div class="col-xs-4">
-      <canvas style="width: 100px; height: 100px;" class="chart chart-doughnut" data="charts.gray.sixColor.data" colours="charts.gray.sixColor.colors" options="charts.gray.sixColor.options" labels="charts.gray.sixColor.labels"></canvas>
+      <canvas style="width: 100px; height: 100px;" class="chart chart-doughnut" data="charts.charts.gray.sixColor.data" colours="charts.charts.gray.sixColor.colors" options="charts.charts.gray.sixColor.options" labels="charts.charts.gray.sixColor.labels"></canvas>
     </div>
 
     <div class="col-xs-2">
-      <ul class="list-unstyled color-blocks" ng-repeat="c in colorData.chartgrays">
+      <ul class="list-unstyled color-blocks" ng-repeat="color in charts.colorData.chartgrays">
         <li>
-          <span class="gray{{$index+1}}"></span> {{c.hex}}</li>
+          <span class="gray{{$index+1}}"></span> {{color.hex}}</li>
       </ul>
     </div>
 
     <div class="col-xs-4">
-      <canvas style="width: 100px; height: 100px;" class="chart chart-doughnut" data="charts.blue.sixColor.data" colours="charts.blue.sixColor.colors" options="charts.blue.sixColor.options" labels="charts.blue.sixColor.labels"></canvas>
+      <canvas style="width: 100px; height: 100px;" class="chart chart-doughnut" data="charts.charts.blue.sixColor.data" colours="charts.charts.blue.sixColor.colors" options="charts.charts.blue.sixColor.options" labels="charts.charts.blue.sixColor.labels"></canvas>
     </div>
 
     <div class="col-xs-2">
-      <ul class="list-unstyled color-blocks" ng-repeat="c in colorData.blues">
+      <ul class="list-unstyled color-blocks" ng-repeat="color in charts.colorData.blues">
         <li>
-          <span class="blue{{$index+1}}"></span> {{c.hex}}</li>
+          <span class="blue{{$index+1}}"></span> {{color.hex}}</li>
       </ul>
     </div>
   </div>
@@ -31,20 +31,20 @@
     <div class="col-xs-3 col-xs-offset-1">
       <canvas style="width: 100px; height: 100px;"
         class="chart chart-bar"
-        data="charts.gray.sixColor.barData"
-        labels="charts.gray.sixColor.barLabels"
-        options="charts.gray.sixColor.options"
-        colours="charts.gray.sixColor.colors">
+        data="charts.charts.gray.sixColor.barData"
+        labels="charts.charts.gray.sixColor.barLabels"
+        options="charts.charts.gray.sixColor.options"
+        colours="charts.charts.gray.sixColor.colors">
       </canvas>
     </div>
 
     <div class="col-xs-3 col-xs-offset-3">
       <canvas style="width: 100px; height: 100px;"
         class="chart chart-bar"
-        data="charts.blue.sixColor.barData"
-        labels="charts.blue.sixColor.barLabels"
-        options="charts.blue.sixColor.options"
-        colours="charts.blue.sixColor.colors">
+        data="charts.charts.blue.sixColor.barData"
+        labels="charts.charts.blue.sixColor.barLabels"
+        options="charts.charts.blue.sixColor.options"
+        colours="charts.charts.blue.sixColor.colors">
       </canvas>
     </div>
 
@@ -53,15 +53,15 @@
 
   <div class="row spacer-top-lg">
     <div class="col-xs-2">
-      <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.gray.threeColor.data" colours="charts.gray.threeColor.colors" options="charts.gray.threeColor.options" labels="charts.gray.threeColor.labels"></canvas>
+      <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.charts.gray.threeColor.data" colours="charts.charts.gray.threeColor.colors" options="charts.charts.gray.threeColor.options" labels="charts.charts.gray.threeColor.labels"></canvas>
     </div>
 
     <div class="col-xs-2">
-      <canvas style="width: 100px; height: 100px;" class="chart chart-doughnut" data="charts.blue.threeColor.data" colours="charts.blue.threeColor.colors" options="charts.blue.threeColor.options" labels="charts.blue.threeColor.labels"></canvas>
+      <canvas style="width: 100px; height: 100px;" class="chart chart-doughnut" data="charts.charts.blue.threeColor.data" colours="charts.charts.blue.threeColor.colors" options="charts.charts.blue.threeColor.options" labels="charts.charts.blue.threeColor.labels"></canvas>
     </div>
 
     <div class="col-xs-2">
-      <canvas style="width: 100px; height: 100px;" class="chart chart-doughnut" data="charts.blue.sixColor.data" colours="charts.blue.sixColor.colorsAccent" options="charts.blue.sixColor.options" labels="charts.blue.sixColor.labels"></canvas>
+      <canvas style="width: 100px; height: 100px;" class="chart chart-doughnut" data="charts.charts.blue.sixColor.data" colours="charts.charts.blue.sixColor.colorsAccent" options="charts.charts.blue.sixColor.options" labels="charts.charts.blue.sixColor.labels"></canvas>
     </div>
 
   </div>
@@ -86,10 +86,10 @@
         <p>Color Order 2: Bar Graph</p>
         <canvas style="width: 100px; height: 100px;"
           class="chart chart-bar"
-          data="charts.multi.sixColor.barData"
-          labels="charts.multi.sixColor.barLabels"
-          options="charts.multi.sixColor.options"
-          colours="charts.multi.sixColor.colors">
+          data="charts.charts.multi.sixColor.barData"
+          labels="charts.charts.multi.sixColor.barLabels"
+          options="charts.charts.multi.sixColor.options"
+          colours="charts.charts.multi.sixColor.colors">
         </canvas>
       </div>
     </div>
@@ -171,34 +171,34 @@
         <div class="row">
           <div class="col-md-4 col-xs-4 text-center">
             <p>Every Other 1</p>
-            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.multi.threeColor.data" colours="charts.multi.threeColor.colors.other1" options="charts.multi.threeColor.options" labels="charts.multi.threeColor.labels"></canvas>
+            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.charts.multi.threeColor.data" colours="charts.charts.multi.threeColor.colors.other1" options="charts.charts.multi.threeColor.options" labels="charts.charts.multi.threeColor.labels"></canvas>
           </div>
 
           <div class="col-md-4 col-xs-4 text-center">
             <p>Every Other 2</p>
-            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.multi.threeColor.data" colours="charts.multi.threeColor.colors.other2" options="charts.multi.threeColor.options" labels="charts.multi.threeColor.labels"></canvas>
+            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.charts.multi.threeColor.data" colours="charts.charts.multi.threeColor.colors.other2" options="charts.charts.multi.threeColor.options" labels="charts.charts.multi.threeColor.labels"></canvas>
           </div>
 
           <div class="col-md-4 col-xs-4 text-center">
             <p>First Three</p>
-            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.multi.threeColor.data" colours="charts.multi.threeColor.colors.first3" options="charts.multi.threeColor.options" labels="charts.multi.threeColor.labels"></canvas>
+            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.charts.multi.threeColor.data" colours="charts.charts.multi.threeColor.colors.first3" options="charts.charts.multi.threeColor.options" labels="charts.charts.multi.threeColor.labels"></canvas>
           </div>
         </div>
 
         <div class="row spacer-top-xl">
           <div class="col-md-4 col-xs-6 text-center">
             <p>Last Three</p>
-            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.multi.threeColor.data" colours="charts.multi.threeColor.colors.last3" options="charts.multi.threeColor.options" labels="charts.multi.threeColor.labels"></canvas>
+            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.charts.multi.threeColor.data" colours="charts.charts.multi.threeColor.colors.last3" options="charts.charts.multi.threeColor.options" labels="charts.charts.multi.threeColor.labels"></canvas>
           </div>
 
           <div class="col-md-4 col-xs-6 text-center">
             <p>Traffic Light</p>
-            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.multi.threeColor.data" colours="charts.multi.threeColor.colors.traffic" options="charts.multi.threeColor.options" labels="charts.multi.threeColor.labels"></canvas>
+            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.charts.multi.threeColor.data" colours="charts.charts.multi.threeColor.colors.traffic" options="charts.charts.multi.threeColor.options" labels="charts.charts.multi.threeColor.labels"></canvas>
           </div>
 
           <div class="col-md-4 col-xs-6 text-center">
             <p>Monochrome</p>
-            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.multi.threeColor.data" colours="charts.multi.threeColor.colors.mono" options="charts.multi.threeColor.options" labels="charts.multi.threeColor.labels"></canvas>
+            <canvas style="width: 100px; height: 100px;" class="chart chart-pie" data="charts.charts.multi.threeColor.data" colours="charts.charts.multi.threeColor.colors.mono" options="charts.charts.multi.threeColor.options" labels="charts.charts.multi.threeColor.labels"></canvas>
           </div>
         </div>
 
