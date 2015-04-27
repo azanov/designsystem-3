@@ -2,9 +2,8 @@
 
   'use strict';
 
-  angular.module('pb.signin', ['ui.router']);
-
   angular.module('pb.signin').config(function($stateProvider) {
+
     $stateProvider.state('signin', {
       url: '/signin',
       abstract: false,
@@ -16,6 +15,7 @@
         bodyclass: 'signin'
       }
     });
+    
   });
 
 })();

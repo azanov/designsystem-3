@@ -50,10 +50,10 @@
     <link rel="icon" type="image/png" href="assets/images/favicon/favicon_195.png" sizes="195x195">
     <link rel="icon" type="image/png" href="assets/images/favicon/favicon_228.png" sizes="228x228">
 
-    <!-- Load Bootstrap RTL theme -->
-    <link ng-if="rtl == 'rtl'" href="https://rawgit.com/morteza/bootstrap-rtl/v3.2.0-rc6/dist/css/bootstrap-rtl.css" rel="stylesheet" />
+    <!-- Load Bootstrap RTL theme from CDNJS -->
+    <link rel="stylesheet" ng-if="rtl == 'rtl'" href="http://cdn.rawgit.com/morteza/bootstrap-rtl/master/dist/cdnjs/3.3.1/css/bootstrap-rtl.min.css" />
+    
   </head>
-
 
   <body ng-controller="AppCtrl as app" dir="{{rtl}}" class="{{$state.current.data.bodyclass}}">
 
@@ -159,7 +159,8 @@
     <script src="modules/settings/controllers/settings.js"></script>
     <script src="modules/settings/services/settings.language.js"></script>
 
-    <script src="modules/signin/signin.js"></script>
+    <script src="modules/signin/signin.module.js"></script>
+    <script src="modules/signin/signin.routes.js"></script>
     <script src="modules/signin/controllers/signin.controller.js"></script>
     <!-- endbuild  -->
 
