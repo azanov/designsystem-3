@@ -10,6 +10,7 @@ All Design System contributions must adhere to the following coding standards an
 - [ControllerAs](#controlleras)
 - [Directives](#directives)
 - [Templates](#templates)
+- [ngRepeat](#ng-repeat)
 - [Code Formatting](#code-formatting)
 - [Sass](#sass)
 
@@ -191,6 +192,25 @@ Use `data-` on Angular or custom attributes for HTML5 validation.
 
 <!-- Directive example -->
 `<div data-property="example" data-pb-example>...</div>`
+```
+
+<br>
+
+##<a href="#ng-repeat"></a>ngRepeat
+```
+<div ng-repeat="example in examples">
+  <p>{{::example.name}}</p>
+</div>
+```
+
+**Do not use shortcut or abbreviations for ng-repeat syntax:**
+```javascript
+/*
+Don't do this
+*/
+<div ng-repeat="e in examples">
+  <p>{{::e.name}}</p>
+</div>
 ```
 
 <br>
