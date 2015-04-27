@@ -1,23 +1,20 @@
-<div class="row">
+<section class="row">
   <div class="col-md-12">
-    <!-- breadcrumb -->
-    <ol class="breadcrumb">
-      <li><a href="#/">Home</a></li>
-      <li class="active">UI Bootstrap</li>
-    </ol>
     <h1 class="page-header">UI Bootstrap <span class="more-info"><a href="http://angular-ui.github.io/bootstrap" target="_blank">More Info <i class="fa fa-external-link"></i></a></span></h1>
     <div class="callout callout-info">
       <p>UI Bootstrap (<a href="http://angular-ui.github.io/bootstrap/" target="_blank">more info</a>) is a set of native AngularJS directives based on Bootstrap's markup and CSS. This page demonstrates several of those components adapted to the look and feel of the Design System. All of these items also exist in the Design System as "plain" Bootstrap/Angular, and those are recommended over these.</p>
       <p>The angular-ui bootstrap components require the <code>design_system_bootstrap_ui.css</code> stylesheet to be included in your project.
         <br>See <code>index.html</code> code comments for details. </p>
       <p>Due to limitations in the bootstrap-ui directives and templates, additional classes may be required on components for proper styling
-        <br>using <code>ng-class</code>. Some variations of components may not be available and are noted in the examples below.</p>
+        <br>using <code>ng-class</code>.</p>
     </div>
   </div>
 </div>
+
+
 <!-- MODAL -->
 <section class="row">
-  <div class="col-xs-12">
+  <div class="col-md-6">
     <h4>Dialogs</h4>
     <button class="btn btn-default" ng-click="modals.simple()">Simplest dialog box</button>
     <button class="btn btn-default" ng-click="modals.modal()">Modal dialog</button>
@@ -25,12 +22,12 @@
     <button class="btn btn-default" ng-click="modals.draggable()">Draggable modal</button>
     <p class="alert alert-info" ng-show="fullname" style="margin-top: 20px; margin-bottom: 20px;">Thanks for the feedback <strong>{{fullname}}</strong>!</p>
   </div>
-</section>
+
+
 <!-- DATE PICKER -->
-<section class="row">
-  <div class="col-xs-12">
+  <div class="col-md-6">
     <h4>Date picker</h4>
-    <div class="input-group col-xs-4">
+    <div class="input-group col-md-4">
       <input type="text" class="form-control" datepicker-popup="{{calendar.format}}" ng-model="dt" is-open="calendar.opened" datepicker-options="{{calendar.options}}" close-text="Close" show-button-bar="false" ng-click="calendar.open($event)" />
       <span class="input-group-btn">
          <button type="button" class="btn btn-default" ng-click="calendar.open($event)"><i class="fa fa-calendar"></i></button>
@@ -38,29 +35,16 @@
     </div>
   </div>
 </section>
-<!-- TIMEPICKER -->
-<section class="row">
-  <div class="col-xs-12">
-    <h4>Time picker</h4>
-    <div class="input-group col-xs-3">
-      <input type="text" class="form-control" value="{{mytime | date:'shortTime' }}" readonly />
-      <span class="input-group-btn" dropdown>
-         <button type="button" class="btn btn-default dropdown-toggle"><i class="fa fa-clock-o"></i></button>
-         <div class="dropdown-menu dropdown-menu-right" ng-click="time.menuClick($event)">
-           <div ng-model="mytime" show-meridian="true" timepicker></div>
-         </div>
-       </span>
-    </div>
-  </div>
-</section>
+
+
 <!-- TABS -->
 <section class="row">
-  <div class="col-xs-12">
+  <div class="col-md-12">
     <h4>Tabs</h4>
     <section class="row">
-      <div class="col-xs-6">
+      <div class="col-md-6">
         <tabset>
-          <tab heading="Static title">Static content</tab>
+          <tab heading="Static title">Static content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit voluptate accusantium esse quod aspernatur tempore voluptatum perspiciatis dolor atque amet consequuntur, incidunt suscipit, necessitatibus magnam.</tab>
           <tab ng-repeat="tab in tabs.tabset01" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
             {{tab.content}}
           </tab>
@@ -72,9 +56,9 @@
           </tab>
         </tabset>
       </div>
-      <div class="col-xs-6">
+      <div class="col-md-6">
         <tabset ng-class="'tab-content-bordered'">
-          <tab heading="Static title">Static content</tab>
+          <tab heading="Static title">Static content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque illum corrupti explicabo ut dolorum veniam, quidem? Optio mollitia itaque, fuga asperiores maxime obcaecati, ut doloribus maiores eos inventore recusandae veritatis earum. Sunt earum aperiam, eius laborum praesentium exercitationem id excepturi velit omnis neque recusandae impedit!</tab>
           <tab ng-repeat="tab in tabs.tabset02" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
             {{tab.content}}
           </tab>
@@ -87,15 +71,57 @@
         </tabset>
       </div>
     </section>
-    <div class="row">
-      <div class="col-xs-6">
-        <div class="callout callout-danger">
-          <p>"Vertical tabs" are not supported in UI Bootstrap. See <a href="/#/tabs">here</a>.</p>
+
+    <section class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-12">
+            <h4>Justified Tabs</h4>
+          </div>
         </div>
+        <tabset justified="true">
+          <tab heading="Static title">Static content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, non. Libero iure earum, dolorem similique nesciunt adipisci quo mollitia sapiente.</tab>
+          <tab ng-repeat="tab in tabs.tabset03" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+            {{tab.content}}
+          </tab>
+          <tab ng-click="tabs.alert($event)">
+            <tab-heading>
+              <i class="glyphicon glyphicon-bell"></i> Alert!
+            </tab-heading>
+            I've got an HTML heading, and a select callback. Pretty cool!
+          </tab>
+        </tabset>
       </div>
-      <div class="col-xs-6">
+      <div class="col-md-6">
+
+      </div>
+    </section>
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Pill Tabs</h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <tabset vertical="true" type="pills">
+          <tab heading="Static title">Static content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit perferendis iste laboriosam veniam quo itaque, voluptatem culpa dignissimos id dolore totam magnam nobis officia fugit aliquam, possimus delectus sunt reprehenderit, aliquid a tempore. Itaque odio eius magni maiores, laborum repellendus.</tab>
+          <tab ng-repeat="tab in tabs.tabset03" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+            {{tab.content}}
+          </tab>
+          <tab ng-click="tabs.alert($event)">
+            <tab-heading>
+              <i class="glyphicon glyphicon-bell"></i> Alert!
+            </tab-heading>
+            I've got an HTML heading, and a select callback. Pretty cool!
+          </tab>
+        </tabset>
+      </div>
+      <div class="col-md-6 col-md-offset-2">
         <tabset type="pills">
-          <tab heading="Static title">Static content</tab>
+          <tab heading="Static title">Static content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium quae autem officia odio aspernatur excepturi enim, maiores praesentium dignissimos laborum voluptatibus, quaerat, quos modi at! Dolores ducimus possimus repudiandae aliquam quisquam natus omnis commodi, sit asperiores quam voluptate qui deleniti, iure voluptates similique laboriosam, ratione quae non odio. Iusto, consequatur?</tab>
           <tab ng-repeat="tab in tabs.tabset03" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
             {{tab.content}}
           </tab>
@@ -110,4 +136,3 @@
     </div>
   </div>
 </section>
-<!-- /container -->

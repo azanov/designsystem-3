@@ -9,7 +9,7 @@
       url: '/components',
       abstract: true,
       templateUrl: 'modules/components/templates/components.html',
-      controller: 'ComponentsCtrl as cc',
+      controller: 'ComponentsCtrl as components',
       resolve: {
         translate: function($translatePartialLoader) {
           $translatePartialLoader.addPart('/modules/components/i18n');
@@ -23,7 +23,7 @@
     .state('components.accordion', {
       url: '/accordion',
       templateUrl: 'modules/components/templates/components.accordion.html',
-      controller: 'AccordionCtrl as ac'
+      controller: 'AccordionCtrl as accordion'
     })
     .state('components.panels', {
       url: '/panels',
@@ -45,7 +45,7 @@
     .state('components.tabs', {
       url: '/tabs',
       templateUrl: 'modules/components/templates/components.tabs.html',
-      controller: 'TabsCtrl as tc'
+      controller: 'TabsCtrl as tabs'
     })
 
     .state('components.uibootstrap', {
