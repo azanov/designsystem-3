@@ -3,6 +3,13 @@
 All Design System contributions must adhere to the following coding standards and guidelines.
 
 - [Module Template](#module-template)
+- [Routing](#routing)
+- [Factories](#factories)
+- [Controllers](#controllers)
+- [ControllerAs](#controlleras)
+- [Directives](#directives)
+- [Templates](#templates)
+- [Code Formatting](#code-formatting)
 - [Sass](#sass)
 
 <br>
@@ -41,7 +48,7 @@ Modules should not contain routing configuration.
 
 <br>
 
-##Routing
+##<a href="#routing"></a>Routing
 
 ###File Naming
 `example.routes.js`
@@ -79,7 +86,7 @@ Routes should not contain non-routing code.
 
 <br>
 
-##Factories
+##<a href="#factories"></a>Factories
 
 ###File Naming
 `example.factory.js` or `multiple-word-example.factory.js`
@@ -103,7 +110,7 @@ Routes should not contain non-routing code.
 
 <br>
 
-##Controllers
+##<a href="#controllers"></a>Controllers
 
 ###File Naming
 `example.controller.js` or `multiple-word-example.controller.js`
@@ -129,7 +136,7 @@ Routes should not contain non-routing code.
 
 <br>
 
-##ControllerAs
+##<a href="#controlleras"></a>ControllerAs
 ```
 ExampleController as example
 ```
@@ -144,7 +151,7 @@ ExampleController as ec
 
 <br>
 
-##Directives
+##<a href="#directives"></a>Directives
 
 ###File Naming
 `pb-example.directive.js` or `multiple-word-example.directive.js`
@@ -169,7 +176,7 @@ ExampleController as ec
 
 <br>
 
-##Templates
+##<a href="#templates"></a>Templates
 
 ###File Naming
 `example.html` or `multiple-word-example.html`
@@ -187,7 +194,7 @@ Use `data-` on Angular or custom attributes for HTML5 validation.
 
 <br>
 
-##Code formatting/hinting/editorconfig/beautify
+##<a href="#code-formatting"></a>Code formatting/hinting/editorconfig/beautify
 - tools and links here
 
 <br>
