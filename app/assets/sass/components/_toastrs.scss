@@ -1,31 +1,20 @@
 
 //{ REQUIREMENTS: Design Systems variables.scss }
-
-$pb-cyan-200: pbcolor(pbcyan, 200);
-$pb-cyan-500: pbcolor(pbcyan, 500);
-
-$pb-green-400: pbcolor(pbgreen, 400);
-$pb-green-800: pbcolor(pbgreen, 800);
-
-$pb-orange-300: pbcolor(pborange, 300);
-$pb-orange-600: pbcolor(pborange, 600);
-
-$pb-purple-300: pbcolor(pbpurple, 300);
-$pb-purple-600: pbcolor(pbpurple, 600);
+//
 
 //List that pairs toastr classes with colors
-$toastr-list: ".toast-info"     $pb-cyan-200    $pb-cyan-500,
-              ".toast-success"  $pb-green-400   $pb-green-800, 
-              ".toast-warning"  $pb-orange-300  $pb-orange-600, 
-              ".toast-error"    $brand-danger   $state-danger-text, 
-              ".toast-custom"   $pb-purple-300  $pb-purple-600;
+$toastr-list: ".toast-info"     $state-info-bg  $state-info-border $state-info-text,
+              ".toast-success"  $state-success-bg   $state-success-border $state-success-text,
+              ".toast-warning"  $state-warning-bg   $state-warning-border $state-warning-text,
+              ".toast-error"    $state-danger-bg   $state-danger-border $state-danger-text,
+              ".toast-custom"   pbcolor(pbpurple, 300)  pbcolor(pbpurple, 600) pbcolor(pbpurple, 800);
 
 //mixin that creates a single toastr instance
-@mixin create-toastr($color-primary, $color-secondary) {
+@mixin create-toastr($bg, $border, $text) {
   //create tints & shades for color
-  $toastr-bg-color     : $color-primary;
-  $toastr-txt-color    : $pb-gray;
-  $toastr-border-color : $color-secondary;
+  $toastr-bg-color     : $bg;
+  $toastr-txt-color    : $text;
+  $toastr-border-color : $border;
 
   //use colors to style toaster
   background-color     : $toastr-bg-color;
@@ -36,7 +25,6 @@ $toastr-list: ".toast-info"     $pb-cyan-200    $pb-cyan-500,
   .toast-close-button:hover,
   .toast-close-button:focus {
     color                : $toastr-txt-color !important;
-    -webkit-text-shadow  : 0 1px 0 $toastr-border-color !important;
     text-shadow          : 0 1px 0 $toastr-border-color !important;
   }
 }
@@ -45,10 +33,11 @@ $toastr-list: ".toast-info"     $pb-cyan-200    $pb-cyan-500,
 @mixin build-toastrs($list) {
     @each $category in $list {
     $class: nth($category, 1);
-    $color-primary: nth($category, 2); 
-    $color-secondary: nth($category, 3);
+    $bg: nth($category, 2);
+    $border: nth($category, 3);
+    $text: nth($category, 4);
       > #{$class} {
-        @include create-toastr($color-primary, $color-secondary); 
+        @include create-toastr($bg, $border, $text);
       }
     }
 
@@ -105,7 +94,7 @@ $toastr-list: ".toast-info"     $pb-cyan-200    $pb-cyan-500,
     }
   }
 
-  @include build-toastrs($toastr-list); 
+  @include build-toastrs($toastr-list);
 
 }
 
@@ -195,4 +184,3 @@ $toastr-list: ".toast-info"     $pb-cyan-200    $pb-cyan-500,
 .flyOut {
   animation: flyin .3s ease reverse forwards;
 }
-
