@@ -31,11 +31,11 @@ $toastr-list: ".toast-info"     $state-info-bg  $state-info-border $state-info-t
 
 //for each instance of $toastr-classes-list
 @mixin build-toastrs($list) {
-    @each $category in $list {
-    $class: nth($category, 1);
-    $bg: nth($category, 2);
-    $border: nth($category, 3);
-    $text: nth($category, 4);
+    @each $item in $list {
+    $class: nth($item, 1);
+    $bg: nth($item, 2);
+    $border: nth($item, 3);
+    $text: nth($item, 4);
       > #{$class} {
         @include create-toastr($bg, $border, $text);
       }
