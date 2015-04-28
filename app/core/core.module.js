@@ -13,10 +13,10 @@
     'tmh.dynamicLocale',
     'selectize-ng',
     'toggle-switch',
+    'toastr',
     'ui.bootstrap',
-    'ui-rangeSlider'
-    'chart.js',
-    'toastr'
-  ]);
+    'ui-rangeSlider',
+    'chart.js'
+    ]);
 
 })();
