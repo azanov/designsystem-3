@@ -19,6 +19,25 @@
   background-color: $brand-secondary;
 }
 
+// for angular-loading-bar
+
+#loading-bar .bar {
+  background: pbcolor(pbmediumblue);
+  height: 2px;
+}
+
+#loading-bar-spinner .spinner-icon {
+  border-top-color:  pbcolor(pbmediumblue);
+  border-left-color: pbcolor(pbmediumblue);
+}
+
+/* Fancy blur effect */
+#loading-bar .peg {
+  box-shadow: pbcolor(pbmediumblue) 1px 0 6px 1px;
+}
+
+
+
 
 // Variations
 // -------------------------
