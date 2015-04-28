@@ -3,6 +3,7 @@
   'use strict';
 
   angular.module('app', [
+
     //third party modules are in /core/core.module.js
     'pb.core',
     'pb.dashboard',
@@ -56,5 +57,7 @@
     });
 
   });
+
+
 
 })();

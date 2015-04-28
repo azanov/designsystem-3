@@ -15,7 +15,8 @@
     'toggle-switch',
     'ui.bootstrap',
     'ui-rangeSlider',
-    'chart.js'
+    'chart.js',
+    'toastr'
   ]);
 
 })();
