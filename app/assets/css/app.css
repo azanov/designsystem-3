@@ -636,8 +636,8 @@ div.accordion-group .panel.active .panel-title:before { content: '\25B8'; -webki
 
 #footer, footer { margin-top: 40px; color: #4e4e4e; font-size: 12px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; border-top: 1px solid #0072b8; }
 #footer a, footer a { color: #4e4e4e; }
-#footer.footer-thin .row, footer.footer-thin .row { padding: 10px 0; }
-#footer.footer-thin .social, footer.footer-thin .social { margin-bottom: 0; }
+#footer .footer-thin .row, footer .footer-thin .row { padding: 10px 0; }
+#footer .footer-thin .social, footer .footer-thin .social { margin-bottom: 0; }
 #footer .row, footer .row { padding: 40px 0; }
 #footer ul.social .fa-stack-2x, footer ul.social .fa-stack-2x { font-size: 2.4em; margin-top: -3px; }
 #footer ul.social .fa-stack-1x, footer ul.social .fa-stack-1x { font-size: 1.2em; }

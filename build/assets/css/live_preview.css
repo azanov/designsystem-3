@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v1.5.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Wed Apr 29 2015 09:46:10 GMT-0400 (EDT) 
+ * Wed Apr 29 2015 11:06:55 GMT-0400 (EDT) 
  */
 /* -- THIS FILE CONTAINS STYLES FOR THE LIVE PREVIEW SITE ONLY!                         */
 /* -- THESE STYLES ARE NOT MEANT TO BE USED ON PROJECTS, ONLY USE THE DESIGN_SYSTEM.CSS */
@@ -621,7 +621,7 @@ cite { font-style: normal; }
 .hero .hero-menu > li ul li a { color: #fff; }
 .hero .hero-menu .dropdown-header, .hero .hero-menu .divider, .hero .hero-menu .optional { display: none; }
 
-.home #footer { margin-top: 0; }
+.home #footer, .home footer { margin-top: 0; }
 
 .chord-display { margin-bottom: 20px; }
 
