@@ -8,14 +8,14 @@
       url: '/signin',
       abstract: false,
       templateUrl: 'modules/signin/templates/signin.html',
-      controller: 'SigninCtrl as signin',
+      controller: 'SigninController as signin',
       data: {
         pageTitle: 'Sign In',
         access: 'public',
         bodyclass: 'signin'
       }
     });
-    
+
   });
 
 })();

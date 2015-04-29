@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.settings').controller('SettingsCtrl', function($log, $scope, languages, $filter, languageFactory) {
+  angular.module('pb.settings').controller('SettingsController', function($log, $scope, languages, $filter, languageFactory) {
 
     var _this = this;
 

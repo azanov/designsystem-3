@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.components').controller('BootstrapUiDraggableModalCtrl', function($scope, $modalInstance) {
+  angular.module('pb.components').controller('BootstrapUiDraggableModalController', function($scope, $modalInstance) {
 
     $scope.close = function() {
       $modalInstance.close();

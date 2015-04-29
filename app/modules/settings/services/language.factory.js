@@ -4,13 +4,13 @@
 
   angular.module('pb.settings').factory('languageFactory', function($log, $translateLocalStorage, $rootScope, $translate, tmhDynamicLocale, $http) {
 
-    var lang = {};
+    var language = {};
 
-    lang.get = function() {
+    language.get = function() {
       return $http.get('/core/config/languages.json');
     };
 
-    lang.getStored = function() {
+    language.getStored = function() {
 
       var code = $translateLocalStorage.get('NG_TRANSLATE_LANG_KEY'),
         codeArray = code.split('-'),
@@ -25,7 +25,7 @@
       return obj;
     };
 
-    lang.change = function(country, language, rtl) {
+    language.change = function(country, language, rtl) {
 
       var code = language + '-' + country;
 
@@ -35,7 +35,7 @@
       tmhDynamicLocale.set(code.toLowerCase());
     };
 
-    return lang;
+    return language;
 
   });
 

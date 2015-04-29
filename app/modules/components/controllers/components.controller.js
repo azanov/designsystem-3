@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.components').controller('ComponentsCtrl', function($log) {
+  angular.module('pb.components').controller('ComponentsController', function($log) {
 
     var _this = this;
 

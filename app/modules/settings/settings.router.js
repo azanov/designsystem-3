@@ -6,7 +6,7 @@
     $stateProvider.state('settings', {
       url: '/settings',
       templateUrl: 'modules/settings/templates/settings.html',
-      controller: 'SettingsCtrl as settings',
+      controller: 'SettingsController as settings',
       resolve: {
         translate: function($translatePartialLoader) {
           $translatePartialLoader.addPart('/modules/settings/i18n');

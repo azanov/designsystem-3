@@ -14,7 +14,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li ng-class="{'dropdown':(n.children.length)}" ng-repeat="n in hc.nav"><a href="" data-target="{{n.value}}" data-toggle="{{n.toggle}}">{{n.label}} <i class="fa fa-angle-down"></i></a>
+          <li ng-class="{'dropdown':(n.children.length)}" ng-repeat="n in header.nav"><a href="" data-target="{{n.value}}" data-toggle="{{n.toggle}}">{{n.label}} <i class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu" role="menu">
               <li ng-repeat="p in n.children" ng-class="{'dropdown-header': p.header, 'divider': p.divider}" ng-switch on="p.type">
                 <span ng-switch-when="header">{{p.label}}</span>

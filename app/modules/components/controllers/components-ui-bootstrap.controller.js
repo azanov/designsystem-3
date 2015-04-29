@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.components').controller('UiBootstrapCtrl', function($log, $modal, $timeout, $window) {
+  angular.module('pb.components').controller('UiBootstrapController', function($log, $modal, $timeout, $window) {
 
     var _this = this;
 
@@ -10,13 +10,13 @@
       simple: function() {
         $modal.open({
           templateUrl: 'modules/components/modals/components-simple.html',
-          controller: 'BootstrapUiSimpleModalCtrl'
+          controller: 'BootstrapUiSimpleModalController'
         });
       },
       modal: function() {
         $modal.open({
           templateUrl: 'modules/components/modals/components-modal.html',
-          controller: 'BootstrapUiModalCtrl',
+          controller: 'BootstrapUiModalController',
           keyboard: false,
           backdrop: 'static'
         });
@@ -24,7 +24,7 @@
       prompt: function() {
         $modal.open({
           templateUrl: 'modules/components/modals/components-prompt.html',
-          controller: 'BootstrapUiPromptModalCtrl',
+          controller: 'BootstrapUiPromptModalController',
           keyboard: false,
           backdrop: 'static'
         }).result.then(function(fullname) {
@@ -35,7 +35,7 @@
         $modal.open({
           windowTemplateUrl: 'modules/components/modals/components-draggable-template.html',
           templateUrl: 'modules/components/modals/components-draggable.html',
-          controller: 'BootstrapUiDraggableModalCtrl',
+          controller: 'BootstrapUiDraggableModalController',
           keyboard: false,
           backdrop: 'static'
         });

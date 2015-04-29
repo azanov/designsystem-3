@@ -6,7 +6,7 @@
     return {
       restrict: 'EA',
       templateUrl: 'modules/main/templates/header.html',
-      controller: 'HeaderCtrl as hc'
+      controller: 'HeaderController as header'
     };
   });
 

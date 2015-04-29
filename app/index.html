@@ -56,7 +56,7 @@
 
   </head>
 
-  <body ng-controller="AppCtrl as app" dir="{{rtl}}" class="{{$state.current.data.bodyclass}}">
+  <body ng-controller="AppController as app" dir="{{rtl}}" class="{{$state.current.data.bodyclass}}">
 
 
     <!-- header  -->
@@ -108,26 +108,27 @@
 
 
     <!-- build:appjs js/app.js -->
-    <script src="modules/main/app.js"></script>
+    <script src="modules/main/app.module.js"></script>
     <script src="modules/main/app-config.js"></script>
     <script src="modules/main/controllers/app.controller.js"></script>
     <script src="modules/main/controllers/header.controller.js"></script>
-    <script src="modules/main/directives/header.js"></script>
-    <script src="modules/main/directives/footer.js"></script>
+    <script src="modules/main/directives/header.directive.js"></script>
+    <script src="modules/main/directives/footer.directive.js"></script>
 
     <script src="core/core.module.js"></script>
-    <script src="core/directives/pb-fixed-navbar.js"></script>
-    <script src="core/directives/pb-panel-collapsible.js"></script>
-    <script src="core/directives/pb-panel-draggable.js"></script>
-    <script src="core/directives/pb-transitory-alert.js"></script>
-    <script src="core/directives/pb-accordion.js"></script>
-    <script src="core/directives/pb-numeric-stepper.js"></script>
-    <script src="core/directives/pb-datetimepicker.js"></script>
-    <script src="core/directives/pb-bootstrap-popover.js"></script>
-    <script src="core/directives/pb-button-progress.js"></script>
-    <script src="core/directives/pb-modal-draggable.js"></script>
+    <script src="core/directives/pb-fixed-navbar.directive.js"></script>
+    <script src="core/directives/pb-panel-collapsible.directive.js"></script>
+    <script src="core/directives/pb-panel-draggable.directive.js"></script>
+    <script src="core/directives/pb-transitory-alert.directive.js"></script>
+    <script src="core/directives/pb-accordion.directive.js"></script>
+    <script src="core/directives/pb-numeric-stepper.directive.js"></script>
+    <script src="core/directives/pb-datetimepicker.directive.js"></script>
+    <script src="core/directives/pb-bootstrap-popover.directive.js"></script>
+    <script src="core/directives/pb-button-progress.directive.js"></script>
+    <script src="core/directives/pb-modal-draggable.directive.js"></script>
     <script src="core/services/mock-data.factory.js"></script>
 
+    <script src="modules/dashboard/dashboard.module.js"></script>
     <script src="modules/dashboard/dashboard.routes.js"></script>
     <script src="modules/dashboard/controllers/dashboard.controller.js"></script>
 
@@ -155,11 +156,11 @@
     <script src="modules/components/modals/components-prompt.controller.js"></script>
     <script src="modules/components/modals/components-simple.controller.js"></script>
 
-    <script src="modules/settings/settings.js"></script>
+    <script src="modules/settings/settings.module.js"></script>
     <script src="modules/settings/settings.router.js"></script>
-    <script src="modules/settings/controllers/settings.js"></script>
-    <script src="modules/settings/services/settings.language.js"></script>
-    
+    <script src="modules/settings/controllers/settings.controller.js"></script>
+    <script src="modules/settings/services/language.factory.js"></script>
+
     <script src="modules/signin/signin.module.js"></script>
     <script src="modules/signin/signin.routes.js"></script>
     <script src="modules/signin/controllers/signin.controller.js"></script>

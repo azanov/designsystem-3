@@ -8,7 +8,7 @@
       url: '/components',
       abstract: true,
       templateUrl: 'modules/components/templates/components.html',
-      controller: 'ComponentsCtrl as components',
+      controller: 'ComponentsController as components',
       resolve: {
         translate: function($translatePartialLoader) {
           $translatePartialLoader.addPart('/modules/components/i18n');
@@ -23,7 +23,7 @@
     .state('components.accordion', {
       url: '/accordion',
       templateUrl: 'modules/components/templates/components-accordion.html',
-      controller: 'AccordionCtrl as accordion'
+      controller: 'AccordionController as accordion'
     })
 
     .state('components.panels', {
@@ -45,13 +45,13 @@
     .state('components.tabs', {
       url: '/tabs',
       templateUrl: 'modules/components/templates/components-tabs.html',
-      controller: 'TabsCtrl as tabs'
+      controller: 'TabsController as tabs'
     })
 
     .state('components.uibootstrap', {
       url: '/uibootstrap',
       templateUrl: 'modules/components/templates/components-ui-bootstrap.html',
-      controller: 'UiBootstrapCtrl as uibootstrap'
+      controller: 'UiBootstrapController as uibootstrap'
     });
 
   });
