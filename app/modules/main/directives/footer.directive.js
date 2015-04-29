@@ -4,7 +4,7 @@
 
   angular.module('app').directive('footer', function() {
     return {
-      restrict: 'EA',
+      restrict: 'E',
       templateUrl: 'modules/main/templates/footer.html',
       controller: '',
       controllerAs: ''
