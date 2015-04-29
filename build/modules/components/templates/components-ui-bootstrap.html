@@ -2,11 +2,7 @@
   <div class="col-md-12">
     <h1 class="page-header">UI Bootstrap <span class="more-info"><a href="http://angular-ui.github.io/bootstrap" target="_blank">More Info <i class="fa fa-external-link"></i></a></span></h1>
     <div class="callout callout-info">
-      <p>UI Bootstrap (<a href="http://angular-ui.github.io/bootstrap/" target="_blank">more info</a>) is a set of native AngularJS directives based on Bootstrap's markup and CSS. This page demonstrates several of those components adapted to the look and feel of the Design System. All of these items also exist in the Design System as "plain" Bootstrap/Angular, and those are recommended over these.</p>
-      <p>The angular-ui bootstrap components require the <code>design_system_bootstrap_ui.css</code> stylesheet to be included in your project.
-        <br>See <code>index.html</code> code comments for details. </p>
-      <p>Due to limitations in the bootstrap-ui directives and templates, additional classes may be required on components for proper styling
-        <br>using <code>ng-class</code>.</p>
+      <p>UI Bootstrap (<a href="http://angular-ui.github.io/bootstrap/" target="_blank">more info</a>) is a set of native AngularJS directives based on Bootstrap's markup and CSS. This page demonstrates several of those components adapted to the look and feel of the Design System. All of these items also exist in the Design System as "plain" Bootstrap.</p>
     </div>
   </div>
 </div>
@@ -16,10 +12,10 @@
 <section class="row">
   <div class="col-md-6">
     <h4>Dialogs</h4>
-    <button class="btn btn-default" ng-click="modals.simple()">Simplest dialog box</button>
-    <button class="btn btn-default" ng-click="modals.modal()">Modal dialog</button>
-    <button class="btn btn-default" ng-click="modals.prompt()">Prompt</button>
-    <button class="btn btn-default" ng-click="modals.draggable()">Draggable modal</button>
+    <button class="btn btn-default" ng-click="uibootstrap.modals.simple()">Simplest dialog box</button>
+    <button class="btn btn-default" ng-click="uibootstrap.modals.modal()">Modal dialog</button>
+    <button class="btn btn-default" ng-click="uibootstrap.modals.prompt()">Prompt</button>
+    <button class="btn btn-default" ng-click="uibootstrap.modals.draggable()">Draggable modal</button>
     <p class="alert alert-info" ng-show="fullname" style="margin-top: 20px; margin-bottom: 20px;">Thanks for the feedback <strong>{{fullname}}</strong>!</p>
   </div>
 
@@ -28,9 +24,9 @@
   <div class="col-md-6">
     <h4>Date picker</h4>
     <div class="input-group col-md-4">
-      <input type="text" class="form-control" datepicker-popup="{{calendar.format}}" ng-model="dt" is-open="calendar.opened" datepicker-options="{{calendar.options}}" close-text="Close" show-button-bar="false" ng-click="calendar.open($event)" />
+      <input type="text" class="form-control" datepicker-popup="{{uibootstrap.calendar.format}}" ng-model="dt" is-open="uibootstrap.calendar.opened" datepicker-options="{{uibootstrap.calendar.options}}" close-text="Close" show-button-bar="false" ng-click="uibootstrap.calendar.open($event)" />
       <span class="input-group-btn">
-         <button type="button" class="btn btn-default" ng-click="calendar.open($event)"><i class="fa fa-calendar"></i></button>
+         <button type="button" class="btn btn-default" ng-click="uibootstrap.calendar.open($event)"><i class="fa fa-calendar"></i></button>
        </span>
     </div>
   </div>

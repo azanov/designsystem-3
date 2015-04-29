@@ -59,39 +59,42 @@
   <div class="col-md-4 first-column">
     <div class="panel panel-default">
       <div class="list-group">
-        <a href="" class="list-group-item" ng-class="{active: $index === panels.millercolumn.dataSelected}" ng-click="panels.getSublevel1($index)" ng-repeat="d in panels.millercolumn.data.versionInfos">
-            {{d.name}} <i class="pull-right fa fa-angle-right fa-lg"></i>
+        <a href="" class="list-group-item" ng-class="{active: $index === panels.millercolumn.dataSelected}" ng-click="panels.getSublevel1($index)" ng-repeat="topLevel in panels.millercolumn.data.versionInfos">
+            {{::topLevel.name}} <i class="pull-right fa fa-angle-right fa-lg"></i>
           </a>
       </div>
     </div>
   </div>
+
   <!-- level1 -->
   <div class="col-md-3 inner-column">
     <div class="panel panel-default">
       <div class="list-group">
-        <a href="" class="list-group-item" ng-class="{active: $index === panels.millercolumn.level1Selected && l.versionInfos.length > 0}" ng-click="panels.getSublevel2($index)" ng-repeat="l in panels.millercolumn.level1">
-            {{l.name}}
-            <i class="pull-right fa fa-fw fa-angle-right fa-lg"></i> <span class="badge" >{{l.versionInfos.length}}</span></a>
+        <a href="" class="list-group-item" ng-class="{active: $index === panels.millercolumn.level1Selected && level1.versionInfos.length > 0}" ng-click="panels.getSublevel2($index)" ng-repeat="level1 in panels.millercolumn.level1">
+            {{::level1.name}}
+            <i class="pull-right fa fa-fw fa-angle-right fa-lg"></i> <span class="badge" >{{::level1.versionInfos.length}}</span></a>
         </a>
       </div>
     </div>
   </div>
+
   <!-- level 2 -->
   <div class="col-md-5 last-column">
     <div class="panel panel-default">
       <ul class="list-group list-group-details">
-        <li ng-repeat="l in panels.millercolumn.level2" class="list-group-item">
+        <li ng-repeat="level2 in panels.millercolumn.level2" class="list-group-item">
           <div class="form-horizontal">
-            <h4 class="text-primary">{{l.name}}</h4>
-            <div ng-show="l.version" class="form-group">
+            <h4 class="text-primary">{{::level2.name}}</h4>
+            <div ng-show="level2.version" class="form-group">
               <label class="col-md-4 control-label"><strong>Version</strong></label>
-              <p class="col-md-8 form-control-static">{{l.version}}</p>
+              <p class="col-md-8 form-control-static">{{::level2.version}}</p>
             </div>
+
             <!-- attributes -->
-            <div ng-repeat="a in l.attributes">
+            <div ng-repeat="attribute in level2.attributes">
               <div class="form-group">
-                <label class="col-md-4 control-label"><strong>{{a.label}}</strong></label>
-                <p class="col-md-8 form-control-static">{{a.value}}</p>
+                <label class="col-md-4 control-label"><strong>{{::attribute.label}}</strong></label>
+                <p class="col-md-8 form-control-static">{{::attribute.value}}</p>
               </div>
             </div>
           </div>
@@ -100,6 +103,8 @@
     </div>
   </div>
 </section>
+
+
 <div class="row">
   <div class="col-md-12">
     <h4>Panel with tables and list groups</h4>
@@ -121,11 +126,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="p in panels.people">
-            <td>00{{p.id}}</td>
-            <td>{{p.firstName}}</td>
-            <td>{{p.lastName}}</td>
-            <td><a href="">{{p.userName}}</a></td>
+          <tr ng-repeat="person in panels.people">
+            <td>00{{::person.id}}</td>
+            <td>{{::person.firstName}}</td>
+            <td>{{::person.lastName}}</td>
+            <td><a href="">{{::person.userName}}</a></td>
           </tr>
         </tbody>
       </table>

@@ -76,7 +76,7 @@ gulp.task('sass-nomaps', function() {
 });
 
 //usemin
-gulp.task('usemin', [], function() {
+gulp.task('usemin', function() {
   gulp.src('./app/index.html')
     .pipe(usemin({
       css: [minifyCss(), 'concat'],
@@ -87,7 +87,7 @@ gulp.task('usemin', [], function() {
         mangle: true
       })],
       appjs: [
-        replace("'debug': true", "'debug': false"),
+        replace('debug: true', 'debug: false'),
         ngAnnotate({
           remove: true,
           add: true,
@@ -166,7 +166,7 @@ gulp.task('copy:fonts', [], function() {
 //copy images
 gulp.task('copy:images', [], function() {
   gulp.src([
-      './app/assets/images/*'
+      './app/assets/images/**/*'
     ])
     .pipe(gulp.dest('./build/assets/images'));
 });
@@ -199,6 +199,15 @@ gulp.task('browser-sync', function() {
 
 // run this to open project in browser and watch for changes in CSS
 gulp.task('default', ['sass', 'browser-sync', 'watch']);
+
+// run from the build folder
+gulp.task('serve-build', [], function() {
+  browsersync({
+    server: {
+      baseDir: './build'
+    }
+  });
+});
 
 // gulp.task('build', ['clean'],function() {
 //  gulp.run(['sass-nomaps','usemin','scripts','assets']);
