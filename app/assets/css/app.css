@@ -659,8 +659,8 @@ div.accordion-group .panel.active .panel-title:before { content: '\25B8'; -webki
 
 @media (max-width: 767px) { .xs-text-left { text-align: left; }
   .xs-text-right { text-align: right; }
-  .footer { padding: 20px 0; }
-  .footer .social { text-align: left; padding-top: 20px; } }
+  .footer, footer { padding: 20px 0; }
+  .footer .social, footer .social { text-align: left; padding-top: 20px; } }
 body.fixed-header { padding-top: 40px; }
 body.fixed-header .navbar > .container-fluid { padding: 0 40px; }
 

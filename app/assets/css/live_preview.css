@@ -615,7 +615,7 @@ cite { font-style: normal; }
 .hero .hero-menu > li ul li a { color: #fff; }
 .hero .hero-menu .dropdown-header, .hero .hero-menu .divider, .hero .hero-menu .optional { display: none; }
 
-.home #footer { margin-top: 0; }
+.home #footer, .home footer { margin-top: 0; }
 
 .chord-display { margin-bottom: 20px; }
 
