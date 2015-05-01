@@ -73,6 +73,20 @@
       "value": "signin"
     }]
   }, {
+    "label": "Graphs",
+    "value": "",
+    "toggle": "dropdown",
+    "children": [{
+      "label": "Lib1",
+      "value": "graphs.lib1"
+    }, {
+      "label": "Lib2",
+      "value": "graphs.lib2"
+    }, {
+      "label": "Lib3",
+      "value": "graphs.lib3"
+    }]
+  }, {
     "label": "Localization",
     "value": "",
     "toggle": "dropdown",

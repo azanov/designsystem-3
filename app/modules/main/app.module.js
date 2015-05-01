@@ -11,6 +11,7 @@
     'pb.elements',
     'pb.settings',
     'pb.signin',
+    'pb.ds.graphs',
     'pb.ds.localization',
     'pb.ds.brand',
     'pb.ds.helpers'
