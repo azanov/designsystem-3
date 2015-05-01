@@ -73,6 +73,14 @@
       "value": "signin"
     }]
   }, {
+    "label": "Localization",
+    "value": "",
+    "toggle": "dropdown",
+    "children": [{
+      "label": "Localization",
+      "value": "localization"
+    }]
+  }, {
     "label": "Brand",
     "value": "",
     "toggle": "dropdown",
