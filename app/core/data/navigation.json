@@ -72,6 +72,31 @@
       "label": "Sign-in",
       "value": "signin"
     }]
+  }, {
+    "label": "Brand",
+    "value": "",
+    "toggle": "dropdown",
+    "children": [{
+      "label": "Color",
+      "value": "brand.color"
+    }, {
+      "label": "Logo",
+      "value": "brand.logo"
+    }, {
+      "label": "Font",
+      "value": "brand.font"
+    }, {
+      "label": "Typography",
+      "value": "brand.typography"
+    }]
+  }, {
+    "label": "Helpers",
+    "value": "helpers",
+    "toggle": "dropdown",
+    "children": [{
+      "label": "Helpers",
+      "value": "helpers"
+    }]
   }
 
 ]
