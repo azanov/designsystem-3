@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.signin').controller('SigninController', function($log) {
+  angular.module('pb.ds.pages').controller('SignInController', function($log) {
 
     var _this = this;
 
