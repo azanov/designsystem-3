@@ -93,6 +93,24 @@
       "value": "notification.headermessage"
     }]
   }, {
+    "label": "Tables",
+    "value": "",
+    "toggle": "dropdown",
+    "children": [{
+      "label": "Simple",
+      "value": "tables.simple"
+    }, {
+      "label": "Datatable",
+      "value": "tables.datatable"
+    }, {
+      "label": "Advanced 1",
+      "value": "tables.advanced1"
+    }, {
+      "label": "Faceted Search",
+      "value": "tables.facetedsearch"
+    }]
+  }
+  , {
     "label": "Graphs",
     "value": "",
     "toggle": "dropdown",

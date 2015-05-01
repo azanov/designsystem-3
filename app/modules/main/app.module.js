@@ -11,6 +11,7 @@
     'pb.elements',
     'pb.settings',
     'pb.signin',
+    'pb.ds.tables',
     'pb.ds.notification',
     'pb.ds.graphs',
     'pb.ds.localization',
