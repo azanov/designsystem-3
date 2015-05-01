@@ -1,12 +1,16 @@
 /* -- THIS FILE CONTAINS STYLES FOR THE LIVE PREVIEW SITE ONLY!                         */
 /* -- THESE STYLES ARE NOT MEANT TO BE USED ON PROJECTS, ONLY USE THE DESIGN_SYSTEM.CSS */
-
-@import "settings/settings";
+@import "settings/variables/_variables.scss";
+@import "settings/variables/_colormap.scss";
+@import "settings/mixins/_mixins.scss";
+@import "settings/mixins/_colors.scss";
+@import "settings/mixins/_typography.scss";
 
 .clearfix {
   zoom: 1;
 
-  &:before, &:after {
+  &:before,
+  &:after {
     display: table;
     content: '';
   }
@@ -15,7 +19,6 @@
     clear: both;
   }
 }
-
 // Bootstrap UI
 .nav,
 .pagination,
@@ -47,7 +50,6 @@
     background-size: 105%;
   }
 }
-
 
 .hero {
   height: 640px;
@@ -122,43 +124,10 @@
   }
 }
 
-.home #footer, .home footer {
+.home #footer,
+.home footer {
   margin-top: 0;
 }
-
-.chord-display {
-  margin-bottom: 20px;
-}
-
-//* These are only for the purposes of displaying the chord colors in the SVGs *//
-//** * Chord Color Mixin * * @access public * * @requires {List} $colors - Space Deliminated list of Colors * */
-
-@mixin chord-color($colors) {
-  $i: 0;
-
-  @each $color in $colors {
-    $i: $i + 1;
-
-    .color#{$i} {
-      color: $color;
-      fill: $color;
-    }
-  }
-}
-
-//** * Chord1 */
-#chord1 {
-  @include chord-color($pb-medium-blue $pb-purple $pb-gray $pb-blue $pb-green $pb-gray-200);
-}
-
-#chord2 {
-  @include chord-color($pb-dark-orange $pb-medium-blue $pb-gray $pb-blue $pb-yellow $pb-gray-200);
-}
-
-#chord3 {
-  @include chord-color($pb-dark-green $pb-medium-blue $pb-gray $pb-blue $pb-magenta $pb-gray-200);
-}
-
 // spacing and page layout mods for the design system pages
 section.row {
   margin-bottom: 60px;
@@ -169,22 +138,23 @@ section.row {
 }
 
 h4,
-h1 {
+h1,
+h3,
+legend {
   margin-bottom: 20px;
-
   .more-info {
     float: right;
-    font-size: 12px;
-    color: $link-color;
+    font-size: 14px;
     font-weight: normal;
-    padding-top: 7px;
+    margin-top: 10px;
 
     a {
-      color: inherit;
+      color: $link-color;
       font-weight: normal;
     }
   }
 }
+
 
 h6.sh {
   clear: both;
@@ -205,115 +175,102 @@ hr {
   border-top: 3px solid $input-border;
   border-radius: 0;
 }
-
 //* Charting Demos */
-.piechart {
-  position: relative;
-  display: inline-block;
-
-  span {
-    font-size: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding-top: 35%;
-    text-align: center;
-  }
-}
-
-.sparkline {
-  .chart {
-    display: inline-block;
-    float: left;
-  }
-
-  .caption {
-    display: inline-block;
-    float: left;
-    margin-left: 10px;
-  }
-
-  h6 {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  h2 {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-}
-
-legend .more-info,
-h3 .more-info,
-h1 .more-info {
-  font-size: 14px;
-  line-height: 1;
-  float: right;
-  margin-top: 10px;
-}
-
+// .piechart {
+//   position: relative;
+//   display: inline-block;
+//
+//   span {
+//     font-size: 20px;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     display: block;
+//     width: 100%;
+//     height: 100%;
+//     padding-top: 35%;
+//     text-align: center;
+//   }
+// }
+//
+// .sparkline {
+//   .chart {
+//     display: inline-block;
+//     float: left;
+//   }
+//
+//   .caption {
+//     display: inline-block;
+//     float: left;
+//     margin-left: 10px;
+//   }
+//
+//   h6 {
+//     margin-top: 0;
+//     margin-bottom: 0;
+//   }
+//
+//   h2 {
+//     margin-top: 0;
+//     margin-bottom: 0;
+//   }
+// }
 //* the tab that pops out of the  Live Preview */
 $tab-color: #333;
-
-.settings {
-  position: fixed;
-  z-index: 2000;
-  top: 60px;
-  right: -150px;
-  width: 185px;
-  height: 100px;
-  transition: all .3s;
-
-  &.activate {
-    right: 0;
-    width: 185px;
-  }
-
-  .settings-tab {
-    float: left;
-    width: 35px;
-    padding: 5px;
-    text-align: center;
-    color: #fff;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    background: $tab-color;
-    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.3);
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    &:active {
-      background: #71a6b9;
-    }
-  }
-
-  .settings-form {
-    float: right;
-    width: 150px;
-    height: 125px;
-    padding: 0 10px 10px 15px;
-    color: #fff;
-    border-bottom-left-radius: 5px;
-    background-color: $tab-color;
-    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.3);
-
-    label {
-      font-size: 12px !important;
-      color: #fff;
-    }
-  }
-}
+// .settings {
+//   position: fixed;
+//   z-index: 2000;
+//   top: 60px;
+//   right: -150px;
+//   width: 185px;
+//   height: 100px;
+//   transition: all .3s;
+//
+//   &.activate {
+//     right: 0;
+//     width: 185px;
+//   }
+//
+//   .settings-tab {
+//     float: left;
+//     width: 35px;
+//     padding: 5px;
+//     text-align: center;
+//     color: #fff;
+//     border-top-left-radius: 5px;
+//     border-bottom-left-radius: 5px;
+//     background: $tab-color;
+//     box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.3);
+//
+//     &:hover {
+//       cursor: pointer;
+//     }
+//
+//     &:active {
+//       background: #71a6b9;
+//     }
+//   }
+//
+//   .settings-form {
+//     float: right;
+//     width: 150px;
+//     height: 125px;
+//     padding: 0 10px 10px 15px;
+//     color: #fff;
+//     border-bottom-left-radius: 5px;
+//     background-color: $tab-color;
+//     box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.3);
+//
+//     label {
+//       font-size: 12px !important;
+//       color: #fff;
+//     }
+//   }
+// }
 
 p[class^='bg'] {
   padding: 10px;
 }
-
 //* Color swatches */
 .row-left-border {
   border-left: 1px solid $pb-gray-300;
@@ -355,7 +312,6 @@ p[class^='bg'] {
     }
   }
 }
-
 // march 2015, changes swatches for main colors into lists of tints
 ul.swatches {
   margin: 10px 0 30px;
@@ -371,7 +327,7 @@ ul.swatches {
     span {
       display: inline-block;
       float: left;
-      opacity: .4;
+      opacity: 0.4;
     }
 
     &:first-child {
@@ -386,7 +342,6 @@ ul.swatches {
     }
   }
 }
-
 //* color charts */
 .color-chart-nested {
   position: relative;
@@ -433,19 +388,20 @@ ul.swatches {
 
 .glyphicons {
   li {
-    font-size: .8em;
+    font-size: 0.8em;
     margin-bottom: 20px;
     text-align: center;
 
-    .glyphicon, .pbfont {
+    .glyphicon,
+    .pbfont {
       //font-size: 2em;
-
     }
   }
 }
 
 .text-center {
-  .pie, .donut {
+  .pie,
+  .donut {
     width: 100px;
     margin: 0 auto 20px;
   }
@@ -454,7 +410,6 @@ ul.swatches {
 .clearRow {
   clear: left;
 }
-
 //
 // //* color swatch backgrounds */
 .brand-primary {
@@ -500,7 +455,6 @@ ul.swatches {
 .chart-red {
   background-color: $chart-red;
 }
-
 //
 .blue1 {
   background-color: $blue1;
@@ -549,7 +503,6 @@ ul.swatches {
 .gray6 {
   background-color: $pb-gray-50;
 }
-
 //* panels page */
 .list-group-details {
   .form-group {
@@ -563,7 +516,7 @@ ul.swatches {
 
     strong {
       font-weight: normal;
-      padding-right: .3em;
+      padding-right: 0.3em;
       color: $pb-gray;
       background-color: #fff;
     }
@@ -580,16 +533,17 @@ ul.swatches {
   .form-control-static {
     padding-top: 2px;
     padding-bottom: 2px;
-    padding-left: .3em;
+    padding-left: 0.3em;
     word-wrap: break-word;
     background-color: #fff;
   }
 }
 
 .view-animate {
-  transition: all .3s;
+  transition: all 0.3s;
 
-  &.ng-enter, &.ng-leave {
+  &.ng-enter,
+  &.ng-leave {
     opacity: 1;
   }
 
@@ -600,7 +554,6 @@ ul.swatches {
     opacity: 0;
   }
 }
-
 //* experimental block grid code, will not work in IE8
 // used to display icons on icons page
 [class*="block-grid-"] {
@@ -613,7 +566,7 @@ ul.swatches {
     display: block;
     height: auto;
     float: left;
-    padding: 0 .55556rem 1.11111rem;
+    padding: 0 0.55556rem 1.11111rem;
   }
 }
 
@@ -633,3 +586,35 @@ ul.swatches {
 .small-block-grid-3 > li:nth-of-type(3n+1) {
   clear: both;
 }
+// These are only for the purposes of displaying the chord colors in the SVGs *//
+// * Chord Color Mixin * * @access public * * @requires {List} $colors - Space Deliminated list of Colors * */
+
+@mixin chord-color($colors) {
+  $i: 0;
+
+  @each $color in $colors {
+    $i: $i + 1;
+
+    .color#{$i} {
+      color: $color;
+      fill: $color;
+    }
+  }
+}
+
+.chord-display {
+  margin-bottom: 20px;
+}
+// we are no longer using SVGs for chord display, so I have commented this out
+//** * Chord1 */
+// #chord1 {
+//   @include chord-color($pb-medium-blue $pb-purple $pb-gray $pb-blue $pb-green $pb-gray-200);
+// }
+//
+// #chord2 {
+//   @include chord-color($pb-dark-orange $pb-medium-blue $pb-gray $pb-blue $pb-yellow $pb-gray-200);
+// }
+//
+// #chord3 {
+//   @include chord-color($pb-dark-green $pb-medium-blue $pb-gray $pb-blue $pb-magenta $pb-gray-200);
+// }

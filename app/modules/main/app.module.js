@@ -10,7 +10,7 @@
     'pb.components',
     'pb.elements',
     'pb.settings',
-    'pb.signin'
+    'pb.ds.pages'
   ]);
 
   //configure debugging
