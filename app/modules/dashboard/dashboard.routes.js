@@ -18,7 +18,7 @@
       data: {
         pageTitle: 'Dashboard',
         access: 'public',
-        bodyclass: 'home'
+        bodyClass: 'home'
       }
     });
   });

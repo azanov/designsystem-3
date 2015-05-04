@@ -8,6 +8,8 @@
 
     _this.nav = MockDataFactory.query({filename: 'navigation'});
 
+    _this.predicate = 'label';
+
   });
 
 })();
