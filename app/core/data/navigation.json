@@ -70,7 +70,25 @@
     "toggle": "dropdown",
     "children": [{
       "label": "Sign-in",
-      "value": "signin"
+      "value": "pages.signin"
+    },  {
+      "label": "Registration",
+      "value": "pages.registration"
+    }, {
+      "label": "Forgot Password",
+      "value": "pages.forgotpassword"
+    }, {
+      "label": "Welcome",
+      "value": "pages.welcome"
+    }, {
+      "label": "Under Maintenance",
+      "value": "pages.undermaintenance"
+    }, {
+      "label": "404",
+      "value": "pages.404"
+    }, {
+      "label": "500",
+      "value": "pages.500"
     }]
   }, {
     "label": "Notifications",
@@ -109,8 +127,7 @@
       "label": "Faceted Search",
       "value": "tables.facetedsearch"
     }]
-  }
-  , {
+  }, {
     "label": "Graphs",
     "value": "",
     "toggle": "dropdown",
