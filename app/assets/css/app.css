@@ -446,6 +446,8 @@ h1, h1 a, h2, h2 a, h3, h3 a { font-family: "PrecisionSans_W_Lt", "Helveticia Ne
 
 h4, h4 a, h5, h5 a, h6, h6 a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: bold; color: #4e4e4e; }
 
+h1.main-title { margin-top: 60px; }
+
 p.lead, p.lede { font-size: 16px; }
 
 .media-heading { font-weight: normal !important; }
