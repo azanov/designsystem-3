@@ -10,7 +10,7 @@
     'pb.components',
     'pb.elements',
     'pb.settings',
-    'pb.ds.pages'
+    'pb.ds.pages',
     'pb.ds.tables',
     'pb.ds.notification',
     'pb.ds.graphs',

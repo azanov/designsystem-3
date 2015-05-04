@@ -12,6 +12,16 @@
         access: 'public',
         bodyclass: 'signin'
       }
+    })
+    .state('forgotpassword', {
+      url: '/forgotpassword',
+      templateURL: 'modules/pages/templates/forgotpassword.html',
+      controller: 'ForgotPasswordController as forgot',
+      data: {
+        pageTitle: 'Forgot Password',
+        access: 'public',
+        bodyclass: 'signin'
+      }
     });
   });
 
