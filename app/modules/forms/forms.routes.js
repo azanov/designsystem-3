@@ -80,12 +80,12 @@
       }
     })
     .state('forms.inlinehelp', {
-      templateUrl: 'modules/forms/templates/forms-inlnehelp.html',
+      templateUrl: 'modules/forms/templates/forms-inlne-help.html',
       controller: 'HelpController as help',
       data: {
         pageTitle: 'Help',
         access: 'public',
-        bodyClass: 'help'
+        bodyClass: 'forms help'
       }
     });
 
