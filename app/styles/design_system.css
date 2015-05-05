@@ -876,8 +876,6 @@ select[disabled] { color: #9b9b9b !important; }
 .input-group.input-group-lg .selectize-control .selectize-input .has-items { padding: 10px 16px; }
 .input-group.input-group-sm .selectize-control .selectize-input { padding: 5px 10px; line-height: 1; font-size: 11px; border-radius: 2px; }
 
-.selectize-control.single .selectize-input { border-color: #9b9b9b; }
-
 .stepper-wrap { font: 11px Arial, sans-serif; position: relative; display: inline-block; }
 .stepper-wrap input { text-align: right; border-top-right-radius: 0; border-bottom-right-radius: 0; }
 
