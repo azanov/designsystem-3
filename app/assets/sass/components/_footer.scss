@@ -8,20 +8,45 @@ footer {
   font-family: $font-family-sans-serif;
   border-top: 1px solid $brand-secondary;
   z-index: 10;
+
+  //flexbox footer
+  .fb-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 10px 20px;
+    @include bp(screen-xs) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      >div {
+        padding: 5px 0;
+      }
+      .copyright {
+        font-size: 11px;
+      }
+    }
+  }
+  // reset lists in footer to have no annoying margin
+  ul {
+    margin: 0;
+  }
+
   a {
     color: $pb-gray;
   }
-  .footer-thin {
-    .row {
-      padding: 10px 0;
-    }
-    .social {
-      margin-bottom: 0;
-    }
-  }
-  .row {
-    padding: 40px 0;
-  }
+  // .footer-thin {
+  //   .row {
+  //     padding: 10px 0;
+  //   }
+  //   .social {
+  //     margin-bottom: 0;
+  //   }
+  // }
+  // .row {
+  //   padding: 40px 0;
+  // }
   ul.social {
     .fa-stack-2x {
       font-size: 2.4em;
@@ -31,9 +56,9 @@ footer {
       font-size: 1.2em;
     }
     li {
-      padding-right: 2px;
+      padding-right: 1px;
       &:first-child {
-        padding-right: 10px;
+        padding-right: 7px;
         display: inline-block;
       }
       &:last-child {
@@ -58,12 +83,13 @@ footer {
     }
   }
 }
+
 .pb-footer-logo {
   &:before {
     width: 112px;
     height: 24px;
     vertical-align: -7px;
-    margin-right: 20px;
+    margin-right: 10px;
     display: inline-block;
   }
   &.gradient:before {
@@ -83,11 +109,11 @@ footer {
   .xs-text-right {
     text-align: right;
   }
-  .footer, footer {
-    padding: 20px 0;
-    .social {
-      text-align: left;
-      padding-top: 20px;
-    }
-  }
+  // .footer, footer {
+  //   padding: 20px 0;
+  //   .social {
+  //     text-align: left;
+  //     padding-top: 20px;
+  //   }
+  // }
 }
