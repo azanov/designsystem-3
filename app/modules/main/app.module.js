@@ -16,7 +16,8 @@
     'pb.ds.graphs',
     'pb.ds.localization',
     'pb.ds.brand',
-    'pb.ds.helpers'
+    'pb.ds.helpers',
+    'pb.ds.forms'
   ]);
 
   //configure debugging
