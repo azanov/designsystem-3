@@ -9,9 +9,6 @@
       templateUrl: 'modules/elements/templates/elements.html',
       controller: 'ElementsController as elements',
       resolve: {
-        translate: function($translatePartialLoader) {
-          $translatePartialLoader.addPart('/modules/elements/i18n');
-        },
         NavigationResolve: function($log, MockDataFactory) {
           return MockDataFactory.query({filename: 'navigation'});
         }
@@ -109,7 +106,7 @@
         }
       }
     })
-    
+
     .state('elements.typography', {
       url: '/typography',
       templateUrl: 'modules/elements/templates/elements-typography.html'

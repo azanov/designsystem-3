@@ -9,11 +9,6 @@
       abstract: true,
       templateUrl: 'modules/components/templates/components.html',
       controller: 'ComponentsController as components',
-      resolve: {
-        translate: function($translatePartialLoader) {
-          $translatePartialLoader.addPart('/modules/components/i18n');
-        }
-      },
       data: {
         pageTitle: 'Components',
         access: 'private'

@@ -8,9 +8,6 @@
       templateUrl: 'modules/dashboard/templates/dashboard.html',
       controller: 'DashboardController as dash',
       resolve: {
-        translate: function($translatePartialLoader) {
-          $translatePartialLoader.addPart('/modules/dashboard/i18n');
-        },
         NavigationResolve: function($log, MockDataFactory) {
           return MockDataFactory.query({filename: 'navigation'});
         }

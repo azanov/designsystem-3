@@ -15,7 +15,7 @@
       var code = $translateLocalStorage.get('NG_TRANSLATE_LANG_KEY'),
         codeArray = code.split('-'),
         language = codeArray[0],
-        country = codeArray[1],
+        country = codeArray[1].toLowerCase(),
         obj = {
           code: code,
           language: language,
@@ -32,7 +32,7 @@
       $rootScope.rtl = (rtl) ? 'rtl' : 'ltr';
 
       $translate.use(code);
-      tmhDynamicLocale.set(code.toLowerCase());
+      tmhDynamicLocale.set(code);
     };
 
     return language;
