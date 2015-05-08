@@ -560,13 +560,28 @@ p[class^='bg'] { padding: 10px; }
 
 .row-left-border { border-left: 1px solid #9b9b9b; }
 
-.color-swatches { margin-bottom: 20px; }
 .color-swatches .color-swatch-container { margin-bottom: 30px; }
 .color-swatches .color-swatch { display: block; width: 100%; height: 72px; margin-bottom: 5px; }
 .color-swatches .color-swatch[class*='alert'] { border-right-width: 16px; border-right-style: solid; }
 .color-swatches .color-swatch.color-swatch-small { display: inline-block; width: 33px; height: 33px; }
 .color-swatches p { font-size: 16px; color: #4e4e4e; }
 .color-swatches p small { font-size: 12px; line-height: 1.2; }
+
+.PrecisionSans_W_LtIt { font-family: "PrecisionSans_W_LtIt", Arial, Helvetica, sans-serif; }
+
+.PrecisionSans_W_LtIt { font-family: "PrecisionSans_W_LtIt", Arial, Helvetica, sans-serif; }
+
+.PrecisionSans_W_Rg { font-family: "PrecisionSans_W_Rg", Arial, Helvetica, sans-serif; }
+
+.PrecisionSans_W_RgIt { font-family: "PrecisionSans_W_RgIt", Arial, Helvetica, sans-serif; }
+
+.PrecisionSans_W_Bd { font-family: "PrecisionSans_W_Bd", Arial, Helvetica, sans-serif; }
+
+.PrecisionSans_W_BdIt { font-family: "PrecisionSans_W_BdIt", Arial, Helvetica, sans-serif; }
+
+.PrecisionSans_W_Md { font-family: "PrecisionSans_W_Md", Arial, Helvetica, sans-serif; }
+
+.PrecisionSans_W_MdIt { font-family: "PrecisionSans_W_MdIt", Arial, Helvetica, sans-serif; }
 
 ul.swatches { margin: 10px 0 30px; padding-left: 0; }
 ul.swatches li.color-swatch { height: 30px; margin-bottom: 0; text-align: right; padding: 5px 10px; color: #000; }
