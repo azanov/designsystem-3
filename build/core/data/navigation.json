@@ -70,7 +70,109 @@
     "toggle": "dropdown",
     "children": [{
       "label": "Sign-in",
-      "value": "signin"
+      "value": "pages.signin"
+    },  {
+      "label": "Registration",
+      "value": "pages.registration"
+    }, {
+      "label": "Forgot Password",
+      "value": "pages.forgotpassword"
+    }, {
+      "label": "Welcome",
+      "value": "pages.welcome"
+    }, {
+      "label": "Under Maintenance",
+      "value": "pages.undermaintenance"
+    }, {
+      "label": "404",
+      "value": "pages.404"
+    }, {
+      "label": "500",
+      "value": "pages.500"
+    }]
+  }, {
+    "label": "Notifications",
+    "value": "",
+    "toggle": "dropdown",
+    "children": [{
+      "label": "Toastr",
+      "value": "notification.toastr"
+    }, {
+      "label": "Spinners",
+      "value": "notification.spinners"
+    }, {
+      "label": "Loading Bar",
+      "value": "notification.loadingbar"
+    }, {
+      "label": "Alerts",
+      "value": "notification.alerts"
+    }, {
+      "label": "Header Message",
+      "value": "notification.headermessage"
+    }]
+  }, {
+    "label": "Tables",
+    "value": "",
+    "toggle": "dropdown",
+    "children": [{
+      "label": "Simple",
+      "value": "tables.simple"
+    }, {
+      "label": "Datatable",
+      "value": "tables.datatable"
+    }, {
+      "label": "Advanced 1",
+      "value": "tables.advanced1"
+    }, {
+      "label": "Faceted Search",
+      "value": "tables.facetedsearch"
+    }]
+  }, {
+    "label": "Graphs",
+    "value": "",
+    "toggle": "dropdown",
+    "children": [{
+      "label": "Lib1",
+      "value": "graphs.lib1"
+    }, {
+      "label": "Lib2",
+      "value": "graphs.lib2"
+    }, {
+      "label": "Lib3",
+      "value": "graphs.lib3"
+    }]
+  }, {
+    "label": "Localization",
+    "value": "",
+    "toggle": "dropdown",
+    "children": [{
+      "label": "Localization",
+      "value": "localization"
+    }]
+  }, {
+    "label": "Brand",
+    "value": "",
+    "toggle": "dropdown",
+    "children": [{
+      "label": "Color",
+      "value": "brand.color"
+    }, {
+      "label": "Logo",
+      "value": "brand.logo"
+    }, {
+      "label": "Font",
+      "value": "brand.font"
+    }, {
+      "label": "Typography",
+      "value": "brand.typography"
+    }]
+  }, {
+    "label": "Helpers",
+    "value": "helpers",
+    "toggle": "dropdown",
+    "children": [{
+      "label": "Helpers",
+      "value": "helpers"
     }]
   }
 
