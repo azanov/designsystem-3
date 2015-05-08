@@ -8,26 +8,11 @@
     <div class="col-md-12">
       <div>
         <h4>Dynamic</h4>
-        <div class="form-group">
-          <label>Popup Text:</label>
-          <input type="text" ng-model="dynamicPopover.content" class="form-control">
-        </div>
-        <div class="form-group">
-          <label>Popup Title:</label>
-          <input type="text" ng-model="dynamicPopover.title" class="form-control">
-        </div>
-        <div class="form-group">
-          <label>Popup Template:</label>
-          <input type="text" ng-model="dynamicPopover.templateUrl" class="form-control">
-        </div>
-        <button popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" class="btn btn-default">Dynamic Popover</button>
-        <button popover-template="dynamicPopover.templateUrl" popover-title="{{dynamicPopover.title}}" class="btn btn-default">Popover With Template</button>
+
+        <button popover-template="dynamicPopover.templateUrl" popover-title="Hello World" class="btn btn-default">Popover With Template</button>
+
         <script type="text/ng-template" id="myPopoverTemplate.html">
-          <div>{{dynamicPopover.content}}</div>
-          <div class="form-group">
-            <label>Popup Title:</label>
-            <input type="text" ng-model="dynamicPopover.title" class="form-control">
-          </div>
+          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt provident tempora officia.</div>
         </script>
         <hr />
         <h4>Positional</h4>
