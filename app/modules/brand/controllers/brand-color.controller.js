@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.elements').controller('ColorsController', function($log, ColorsResolve) {
+  angular.module('pb.ds.elements').controller('ColorsController', function($log, ColorsResolve) {
 
     var _this = this;
 

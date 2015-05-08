@@ -2,6 +2,6 @@
 
   'use strict';
 
-  angular.module('pb.elements', ['ui.router']);
+  angular.module('pb.ds.elements', ['ui.router']);
 
 })();

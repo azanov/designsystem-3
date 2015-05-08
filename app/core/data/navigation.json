@@ -2,13 +2,7 @@
     "label": "Components",
     "value": "#",
     "toggle": "dropdown",
-    "children": [{
-      "label": "Accordion",
-      "value": "components.accordion"
-    }, {
-      "label": "Panels",
-      "value": "components.panels"
-    }, {
+    "children": [ {
       "label": "Tabs",
       "value": "components.tabs"
     }, {
@@ -23,19 +17,16 @@
       "value": "components.uibootstrap"
     }]
   }, {
-    "label": "Elements",
+    "label": "UI Elements",
     "value": "",
     "toggle": "dropdown",
     "children": [{
-      "label": "Alerts",
-      "value": "elements.alerts"
-    }, {
       "label": "Buttons",
       "value": "elements.buttons"
-    }, {
-      "label": "Color Usage",
-      "value": "elements.colorusage"
-    }, {
+    },{
+      "label": "Accordion",
+      "value": "elements.accordion"
+    },  {
       "label": "Color Charts",
       "value": "elements.colorcharts"
     }, {
@@ -48,6 +39,9 @@
       "label": "Inputs",
       "value": "elements.inputs"
     }, {
+      "label": "Panels",
+      "value": "elements.panels"
+    },{
       "label": "Popovers",
       "value": "elements.popovers",
       "className": "popovers"

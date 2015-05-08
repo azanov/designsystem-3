@@ -8,7 +8,7 @@
     'pb.core',
     'pb.dashboard',
     'pb.components',
-    'pb.elements',
+    'pb.ds.elements',
     'pb.settings',
     'pb.ds.pages',
     'pb.ds.tables',

@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.components').controller('PanelsController', function($log, PeopleResolve, MillerResolve) {
+  angular.module('pb.ds.elements').controller('PanelsController', function($log, PeopleResolve, MillerResolve) {
 
     var _this = this;
 

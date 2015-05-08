@@ -15,27 +15,9 @@
       }
     })
 
-    .state('components.accordion', {
-      url: '/accordion',
-      templateUrl: 'modules/components/templates/components-accordion.html',
-      controller: 'AccordionController as accordion'
-    })
 
-    .state('components.panels', {
-      url: '/panels',
-      templateUrl: 'modules/components/templates/components-panels.html',
-      controller: 'PanelsController as panels',
-      resolve: {
-        PeopleResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'people'});
-        },
-        MillerResolve: function($log, MockDataFactory) {
-          return MockDataFactory.get({filename: 'millercolumn'}, function(response) {
-            return response.versionInfos;
-          });
-        }
-      }
-    })
+
+
 
     .state('components.tabs', {
       url: '/tabs',

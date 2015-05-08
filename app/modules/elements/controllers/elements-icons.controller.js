@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.elements').controller('IconsController', function($log, IconsResolve) {
+  angular.module('pb.ds.elements').controller('IconsController', function($log, IconsResolve) {
 
     var _this = this;
 

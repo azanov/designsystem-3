@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.elements').controller('InputsController', function($log, CountriesResolve) {
+  angular.module('pb.ds.elements').controller('InputsController', function($log, CountriesResolve) {
 
     var _this = this;
 

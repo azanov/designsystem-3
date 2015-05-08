@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.elements').config(function($stateProvider) {
+  angular.module('pb.ds.elements').config(function($stateProvider) {
     $stateProvider.state('elements', {
       url: '/elements',
       abstract: true,
@@ -22,6 +22,12 @@
     .state('elements.buttons', {
       url: '/buttons',
       templateUrl: 'modules/elements/templates/elements-buttons.html'
+    })
+
+    .state('elements.accordion', {
+      url: '/accordion',
+      templateUrl: 'modules/elements/templates/elements-accordion.html',
+      controller: 'AccordionController as accordion'
     })
 
     .state('elements.colorcharts', {
@@ -58,6 +64,22 @@
       resolve: {
         CountriesResolve: function($log, MockDataFactory) {
           return MockDataFactory.query({filename: 'countries'});
+        }
+      }
+    })
+
+    .state('elements.panels', {
+      url: '/elements/panels',
+      templateUrl: 'modules/elements/templates/elements-panels.html',
+      controller: 'PanelsController as panels',
+      resolve: {
+        PeopleResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'people'});
+        },
+        MillerResolve: function($log, MockDataFactory) {
+          return MockDataFactory.get({filename: 'millercolumn'}, function(response) {
+            return response.versionInfos;
+          });
         }
       }
     })
