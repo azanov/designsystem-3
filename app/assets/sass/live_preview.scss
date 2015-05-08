@@ -103,9 +103,8 @@
   .hero-menu {
     padding-left: 0;
     list-style-type: none;
-    column-count: 2;
-    column-gap: 40px;
     $accent: lighten($brand-primary, 35%);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, .5);
 
     > li {
       @extend %ps-regular;
@@ -128,10 +127,11 @@
         margin-top: 5px;
         padding-left: 0;
         list-style-type: none;
-        column-count: 3;
+        column-count: 4;
         break-inside: avoid;
         li {
           line-height: 1.35;
+          @extend %ps-light;
           a {
             color: #fff;
           }
@@ -194,101 +194,11 @@ hr {
 
 .grid-sample .panel {
   border: 0;
-  border-top: 3px solid $input-border;
+  border: 1px solid #eee;
+  border-top: 6px solid #eee;
   border-radius: 0;
 }
-//* Charting Demos */
-// .piechart {
-//   position: relative;
-//   display: inline-block;
-//
-//   span {
-//     font-size: 20px;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     display: block;
-//     width: 100%;
-//     height: 100%;
-//     padding-top: 35%;
-//     text-align: center;
-//   }
-// }
-//
-// .sparkline {
-//   .chart {
-//     display: inline-block;
-//     float: left;
-//   }
-//
-//   .caption {
-//     display: inline-block;
-//     float: left;
-//     margin-left: 10px;
-//   }
-//
-//   h6 {
-//     margin-top: 0;
-//     margin-bottom: 0;
-//   }
-//
-//   h2 {
-//     margin-top: 0;
-//     margin-bottom: 0;
-//   }
-// }
-//* the tab that pops out of the  Live Preview */
-$tab-color: #333;
-// .settings {
-//   position: fixed;
-//   z-index: 2000;
-//   top: 60px;
-//   right: -150px;
-//   width: 185px;
-//   height: 100px;
-//   transition: all .3s;
-//
-//   &.activate {
-//     right: 0;
-//     width: 185px;
-//   }
-//
-//   .settings-tab {
-//     float: left;
-//     width: 35px;
-//     padding: 5px;
-//     text-align: center;
-//     color: #fff;
-//     border-top-left-radius: 5px;
-//     border-bottom-left-radius: 5px;
-//     background: $tab-color;
-//     box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.3);
-//
-//     &:hover {
-//       cursor: pointer;
-//     }
-//
-//     &:active {
-//       background: #71a6b9;
-//     }
-//   }
-//
-//   .settings-form {
-//     float: right;
-//     width: 150px;
-//     height: 125px;
-//     padding: 0 10px 10px 15px;
-//     color: #fff;
-//     border-bottom-left-radius: 5px;
-//     background-color: $tab-color;
-//     box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.3);
-//
-//     label {
-//       font-size: 12px !important;
-//       color: #fff;
-//     }
-//   }
-// }
+
 
 p[class^='bg'] {
   padding: 10px;

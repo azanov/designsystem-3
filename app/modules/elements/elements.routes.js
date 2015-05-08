@@ -86,7 +86,8 @@
 
     .state('elements.popovers', {
       url: '/elements/popovers',
-      templateUrl: 'modules/elements/templates/elements-popovers.html'
+      templateUrl: 'modules/elements/templates/elements-popovers.html',
+      controller: 'BootstrapUiPopoverController as pop'
     })
 
     .state('elements.progress', {
@@ -96,11 +97,11 @@
     })
 
 
-      .state('elements.tabs', {
-        url: '/elements/tabs',
-        templateUrl: 'modules/elements/templates/elements-tabs.html',
-        controller: 'TabsController as tabs'
-      });
+    .state('elements.tabs', {
+      url: '/elements/tabs',
+      templateUrl: 'modules/elements/templates/elements-tabs.html',
+      controller: 'TabsController as tabs'
+    });
 
 
 
