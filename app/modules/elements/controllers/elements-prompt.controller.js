@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.components').controller('BootstrapUiPromptModalController', function($scope, $modalInstance) {
+  angular.module('pb.ds.elements').controller('BootstrapUiPromptModalController', function($scope, $modalInstance) {
 
     $scope.fullname = '';
 

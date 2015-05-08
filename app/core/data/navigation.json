@@ -1,22 +1,4 @@
 [{
-    "label": "Components",
-    "value": "#",
-    "toggle": "dropdown",
-    "children": [ {
-      "label": "Tabs",
-      "value": "components.tabs"
-    }, {
-      "type": "divider",
-      "divider": true
-    }, {
-      "label": "Other Directives",
-      "type": "header",
-      "header": true
-    }, {
-      "label": "UI Bootstrap",
-      "value": "components.uibootstrap"
-    }]
-  }, {
     "label": "UI Elements",
     "value": "",
     "toggle": "dropdown",

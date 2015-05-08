@@ -2,20 +2,20 @@
 
   'use strict';
 
-  angular.module('pb.components').controller('UiBootstrapController', function($log, $modal, $timeout, $window) {
+  angular.module('pb.ds.elements').controller('UiBootstrapController', function($log, $modal, $timeout, $window) {
 
     var _this = this;
 
     _this.modals = {
       simple: function() {
         $modal.open({
-          templateUrl: 'modules/components/modals/components-simple.html',
+          templateUrl: 'modules/components/modals/elements-simple.html',
           controller: 'BootstrapUiSimpleModalController'
         });
       },
       modal: function() {
         $modal.open({
-          templateUrl: 'modules/components/modals/components-modal.html',
+          templateUrl: 'modules/elements/modals/elements-modal.html',
           controller: 'BootstrapUiModalController',
           keyboard: false,
           backdrop: 'static'
@@ -23,7 +23,7 @@
       },
       prompt: function() {
         $modal.open({
-          templateUrl: 'modules/components/modals/components-prompt.html',
+          templateUrl: 'modules/elements/modals/elements-prompt.html',
           controller: 'BootstrapUiPromptModalController',
           keyboard: false,
           backdrop: 'static'
@@ -33,8 +33,8 @@
       },
       draggable: function() {
         $modal.open({
-          windowTemplateUrl: 'modules/components/modals/components-draggable-template.html',
-          templateUrl: 'modules/components/modals/components-draggable.html',
+          windowTemplateUrl: 'modules/elements/modals/elements-draggable-template.html',
+          templateUrl: 'modules/elements/modals/elements-draggable.html',
           controller: 'BootstrapUiDraggableModalController',
           keyboard: false,
           backdrop: 'static'

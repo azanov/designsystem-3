@@ -19,12 +19,6 @@
 
 
 
-    .state('components.tabs', {
-      url: '/tabs',
-      templateUrl: 'modules/components/templates/components-tabs.html',
-      controller: 'TabsController as tabs'
-    })
-
     .state('components.uibootstrap', {
       url: '/uibootstrap',
       templateUrl: 'modules/components/templates/components-ui-bootstrap.html',
