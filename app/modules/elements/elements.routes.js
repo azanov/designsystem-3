@@ -19,12 +19,6 @@
       }
     })
 
-    .state('elements.alerts', {
-      url: '/alerts',
-      templateUrl: 'modules/elements/templates/elements-alerts.html',
-      controller: 'ElementsAlertsController as alerts'
-    })
-
     .state('elements.buttons', {
       url: '/buttons',
       templateUrl: 'modules/elements/templates/elements-buttons.html'
