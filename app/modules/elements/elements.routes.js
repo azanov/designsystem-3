@@ -30,23 +30,6 @@
       templateUrl: 'modules/elements/templates/elements-buttons.html'
     })
 
-    .state('elements.colors', {
-      url: '/colors',
-      templateUrl: 'modules/elements/templates/elements-colors.html',
-      controller: 'ColorsController as colors',
-      resolve: {
-        ColorsResolve: function($log, MockDataFactory) {
-          return MockDataFactory.get({filename: 'colors'});
-        }
-      }
-    })
-
-    .state('elements.colorusage', {
-      url: '/colorusage',
-      templateUrl: 'modules/elements/templates/elements-colors-usage.html',
-      controller: 'ColorUsageController as usage'
-    })
-
     .state('elements.colorcharts', {
       url: '/colorcharts',
       templateUrl: 'modules/elements/templates/elements-colors-charts.html',
@@ -94,23 +77,10 @@
       url: '/progress',
       templateUrl: 'modules/elements/templates/elements-progress.html',
       controller: 'ProgressController as progress'
-    })
-
-    .state('elements.tables', {
-      url: '/tables',
-      templateUrl: 'modules/elements/templates/elements-tables.html',
-      controller: 'TablesController as tables',
-      resolve: {
-        PeopleResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'people'});
-        }
-      }
-    })
-
-    .state('elements.typography', {
-      url: '/typography',
-      templateUrl: 'modules/elements/templates/elements-typography.html'
     });
+
+
+
   });
 
 })();

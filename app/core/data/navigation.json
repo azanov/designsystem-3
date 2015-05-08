@@ -33,9 +33,6 @@
       "label": "Buttons",
       "value": "elements.buttons"
     }, {
-      "label": "Colors",
-      "value": "elements.colors"
-    }, {
       "label": "Color Usage",
       "value": "elements.colorusage"
     }, {
@@ -57,12 +54,6 @@
     }, {
       "label": "Progress",
       "value": "elements.progress"
-    }, {
-      "label": "Tables",
-      "value": "elements.tables"
-    }, {
-      "label": "Typography",
-      "value": "elements.typography"
     }]
   }, {
     "label": "Pages",
