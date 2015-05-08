@@ -22,7 +22,7 @@
     .state('elements.alerts', {
       url: '/alerts',
       templateUrl: 'modules/elements/templates/elements-alerts.html',
-      controller: 'AlertsController as alerts'
+      controller: 'ElementsAlertsController as alerts'
     })
 
     .state('elements.buttons', {

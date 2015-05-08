@@ -18,7 +18,12 @@
     .state('brand.color', {
       url: '/color',
       templateUrl: 'modules/brand/templates/brand-color.html',
-      controller: 'ColorController as color'
+      controller: 'ColorsController as colors',
+      resolve: {
+        ColorsResolve: function($log, MockDataFactory) {
+          return MockDataFactory.get({filename: 'colors'});
+        }
+      }
     })
 
     .state('brand.typography', {
