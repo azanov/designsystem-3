@@ -62,7 +62,7 @@
       </span>
     </div>
     <div class="col-md-6">
-      <h3>Toastr alerts</h3>
+      <h3>Toastr alerts <span class="more-info"><a href="http://foxandxss.github.io/angular-toastr/" target="_blank">More info <i class="fa fa-external-link"></i></a></span></h3>
       <button class="btn btn-info" ng-click="alerts.toast.info()">Info</button>
       <button class="btn btn-success" ng-click="alerts.toast.success()">Success</button>
       <button class="btn btn-warning" ng-click="alerts.toast.warning()">Warning</button>
@@ -73,15 +73,20 @@
 
 
   <div class="row spacer-top-lg">
-    <div class="col-md-10">
-      <h3>Modal Dialogs</h3>
+    <div class="col-md-6">
+      <h3>Modal Dialogs <span class="more-info"><a href="http://angular-ui.github.io/bootstrap/#/modal" target="_blank">More info <i class="fa fa-external-link"></i></a></span></h3>
 
 
       <!-- Buttons to trigger modals -->
-      <button class="btn btn-default" data-toggle="modal" data-target="#modal-01">Simplest dialog box</button>&nbsp;
+      <!-- <button class="btn btn-default" data-toggle="modal" data-target="#modal-01">Simplest dialog box</button>&nbsp;
       <button class="btn btn-default" data-toggle="modal" data-target="#modal-02">Modal dialog</button>
       <button class="btn btn-default" data-toggle="modal" data-target="#modal-03">Prompt</button>
-      <button class="btn btn-default" data-toggle="modal" data-target="#modal-04">Draggable modal</button>
+      <button class="btn btn-default" data-toggle="modal" data-target="#modal-04">Draggable modal</button> -->
+
+      <button class="btn btn-default" ng-click="alerts.modals.simple()">Simplest dialog box</button>&nbsp;
+      <button class="btn btn-default" ng-click="alerts.modals.modal()">Modal dialog</button>
+      <button class="btn btn-default" ng-click="alerts.modals.prompt()">Prompt</button>
+      <button class="btn btn-default" ng-click="alerts.modals.draggable()">Draggable modal</button>
 
     </div>
   </div>
@@ -166,104 +171,5 @@
 
 
 
-  <!-- MODAL 01 -->
-  <div id="modal-01" class="modal fade">
-    <div class="modal-dialog">
-
-      <div class="modal-content">
-
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title" id="myModalLabel">Simple dialog box</h4>
-        </div>
-
-        <div class="modal-body">
-          For basic information. Can be closed with close X, ESC key, or clicking on background.
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-
-  <!-- MODAL 02 -->
-  <div id="modal-02" class="modal fade" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog">
-
-      <div class="modal-content">
-
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title" id="myModalLabel">Modal dialog</h4>
-        </div>
-
-        <div class="modal-body">
-          Modal, can only be closed by button or close box.
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-
-
-  <!-- MODAL 03 -->
-  <div id="modal-03" class="modal fade" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog">
-
-      <div class="modal-content">
-
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title" id="myModalLabel">Name required</h4>
-        </div>
-
-        <div class="modal-body">
-          <div class="form-group">
-            <label>Please enter your name:</label>
-            <input type="text" name="fullname" id="fullname" class="form-control">
-          </div>
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-
-
-  <!-- MODAL 04 -->
-  <div id="modal-04" class="modal fade" pb-modal-draggable>
-    <div class="modal-dialog">
-
-      <div class="modal-content">
-
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title" id="myModalLabel">Movable dialog</h4>
-        </div>
-
-        <div class="modal-body">
-          Drag on dialog title to move your dialog if it is obscuring something.
-        </div>
-
-      </div>
-
-    </div>
-  </div>
 
 </div>
