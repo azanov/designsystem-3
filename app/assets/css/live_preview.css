@@ -516,6 +516,8 @@ cite { font-style: normal; }
 .debug.green { border-color: #008000; }
 .debug.pink { border-color: #ffc0b0; }
 
+.button-demo-row > div { margin-right: 20px; }
+
 @-webkit-keyframes kbrns { 0% { background-position: 0 -3em; background-size: 120%; }
   100% { background-position: -1em 0; background-size: 105%; } }
 
