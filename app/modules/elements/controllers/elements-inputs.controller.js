@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.ds.elements').controller('InputsController', function($log, CountriesResolve) {
+  angular.module('pb.ds.elements').controller('InputsController', function($log, CountriesResolve, PeopleResolve) {
 
     var _this = this;
 
@@ -23,7 +23,11 @@
       pickDate: false
     };
 
-    // add phone number
+    _this.samplePeople = PeopleResolve;
+
+
+
+    // controls the "add another row" functionality
     _this.choices1 = [{ id: 'choice1'}];
     _this.choices2 = [{ id: 'choice1', num: '222-555-3456' }];
     _this.choices3 = [{ id: 'choice1'}];

@@ -7,70 +7,68 @@
 
     <div class="row">
       <div class="col-md-5">
-        <!-- left col -->
-    <fieldset>
-      <legend>This page is divided by fieldsets. This text is a legend.</legend>
-      <p class="help-block">Fieldsets are for groupings of form elements.
-        <br> The section title, or Legend, has a gray rule under it.</p>
-      <div class="form-group">
-        <label>Text input</label>
-        <input class="form-control" type="text" name="text1" placeholder="Placeholder text in supported browsers" />
+          <fieldset>
+            <legend>This page is divided by fieldsets. This text is a legend.</legend>
+            <p class="help-block">Fieldsets are for groupings of form elements.
+              <br> The section title, or Legend, has a gray rule under it.</p>
+            <div class="form-group">
+              <label>Text input</label>
+              <input class="form-control" type="text" name="text1" placeholder="Placeholder text in supported browsers" />
+            </div>
+            <div class="form-group">
+              <label>Text input disabled</label>
+              <input class="form-control" type="text" name="text1" disabled="disabled" />
+            </div>
+            <div class="form-group has-error">
+              <label>Text field with error</label>
+              <input class="form-control" placeholder="Text field" type="text">
+              <span class="help-block text-error">Please enter a valid name.</span>
+            </div>
+            <div class="form-group">
+              <label>Textarea</label>
+              <textarea class="form-control" type="textarea" name="textarea1" placeholder="Placeholder text in supported browsers"></textarea>
+              <span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Add another field (max set in controller)</label>
+              <div data-ng-repeat="choice in inputs.choices1" class="repeated-field" ng-class="{'last':$last}">
+                <input type="text" name="phone" class="form-control input-sm" value="212-555-6789">
+              </div>
+              <span class="help-text"><a ng-show="inputs.showAddChoice(inputs.choice,inputs.choices1)" href="" ng-click="inputs.addNewChoice(inputs.choices1)">Add another phone field</a></span>
+            </div>
+          </fieldset>
       </div>
-      <div class="form-group">
-        <label>Text input disabled</label>
-        <input class="form-control" type="text" name="text1" disabled="disabled" />
-      </div>
-      <div class="form-group has-error">
-        <label>Text field with error</label>
-        <input class="form-control" placeholder="Text field" type="text">
-        <span class="help-block text-error">Please enter a valid name.</span>
-      </div>
-      <div class="form-group">
-        <label>Textarea</label>
-        <textarea class="form-control" type="textarea" name="textarea1" placeholder="Placeholder text in supported browsers"></textarea>
-        <span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
-      </div>
-      <div class="form-group">
-        <label for="phone">Add another field (max set in controller)</label>
-        <div data-ng-repeat="choice in inputs.choices1" class="repeated-field" ng-class="{'last':$last}">
-          <input type="text" name="phone" class="form-control input-sm" value="212-555-6789">
-        </div>
-        <span class="help-text"><a ng-show="inputs.showAddChoice(inputs.choice,inputs.choices1)" href="" ng-click="inputs.addNewChoice(inputs.choices1)">Add another phone field</a></span>
-      </div>
-    </fieldset>
-
-    </div>
 
 
-  <div class="col-md-5 col-md-offset-1">
-    <fieldset>
-      <legend>Column sizing</legend>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="form-group">
-            <label>Text input</label>
-            <input type="text" class="form-control">
+      <div class="col-md-5 col-md-offset-1">
+      <fieldset>
+        <legend>Column sizing</legend>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label>Text input</label>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <label>Text input</label>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="form-group">
+              <label>Text input</label>
+              <input type="text" class="form-control">
+            </div>
           </div>
         </div>
-        <div class="col-md-2">
-          <div class="form-group">
-            <label>Text input</label>
-            <input type="text" class="form-control">
+        <div class="row">
+          <div class="col-md-12">
+            <span class="help-block">Wrap inputs in grid columns, or any custom parent element, to easily enforce desired widths.</span>
           </div>
         </div>
-        <div class="col-md-7">
-          <div class="form-group">
-            <label>Text input</label>
-            <input type="text" class="form-control">
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <span class="help-block">Wrap inputs in grid columns, or any custom parent element, to easily enforce desired widths.</span>
-        </div>
-      </div>
-    </fieldset>
+      </fieldset>
 
     <div class="row">
       <div class="col-md-12">
@@ -81,7 +79,7 @@
         </div>
       </div>
       <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-5">
             <div class="form-group">
               <label>Date</label>
               <div class="input-group" ng-model="inputs.datetimepicker1" pb-datetimepicker>
@@ -90,7 +88,7 @@
               </div>
             </div>
           </div>
-          <div class="row col-md-6">
+          <div class="col-md-5 col-md-offset-1">
             <div class="form-group">
               <label>Time</label>
               <div class="input-group" ng-model="inputs.datetimepicker2" pb-datetimepicker>
@@ -122,7 +120,7 @@
     <fieldset>
       <legend>Input field sizes</legend>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-5">
           <h4>Text inputs</h4>
           <input class="form-control input-lg" type="text" placeholder=".input-lg">
           <br>
@@ -130,7 +128,7 @@
           <br>
           <input class="form-control input-sm" type="text" placeholder=".input-sm">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-5 col-md-offset-1">
           <h4>Select menus</h4>
           <select name="" id="" class="form-control input-lg"><option value="">Select input-lg</option></select>
           <br>
@@ -174,16 +172,14 @@
         <span class="more-info"><a href="http://jumplink.github.io/angular-toggle-switch/" target="_blank">Angular info <i class="fa fa-external-link"></i></a></span>
       </legend>
       <div class="form-group switches row">
-        <div class="col-md-3">
+        <div class="col-md-2">
           <div toggle-switch model="inputs.switchStatus1"></div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
           <div toggle-switch model="inputs.switchStatus2" is-disabled="disabled"></div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
           <div toggle-switch model="inputs.switchStatus3"></div>
-        </div>
-        <div class="col-md-3">
         </div>
       </div>
     </fieldset>
@@ -440,9 +436,9 @@
         <div class="col-md-6">
           <label>Multiple select with checkboxes</label>
           <div class="checkboxList form-control">
-            <div class="ms-checkboxitem" ng-repeat="person in peopleData">
+            <div class="ms-checkboxitem" ng-repeat="person in inputs.samplePeople">
               <label>
-                <input type="checkbox" ng-model="person.isChecked">&nbsp;<span>{{person.firstName}} {{person.lastName}}</span>
+                <input type="checkbox" ng-model="person.isChecked">&nbsp;<span>{{person.first_name}} {{person.last_name}}</span>
               </label>
             </div>
           </div>
