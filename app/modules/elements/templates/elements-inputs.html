@@ -9,11 +9,11 @@
       <div class="col-md-5">
           <fieldset>
             <legend>This page is divided by fieldsets. This text is a legend.</legend>
-            <p class="help-block">Fieldsets are for groupings of form elements.
-              <br> The section title, or Legend, has a gray rule under it.</p>
+            <p class="help-block">Fieldsets are for groupings of form elements. Section titles (Legends) have a gray rule below.</p>
             <div class="form-group">
               <label>Text input</label>
               <input class="form-control" type="text" name="text1" placeholder="Placeholder text in supported browsers" />
+              <span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
             </div>
             <div class="form-group">
               <label>Text input disabled</label>
@@ -27,7 +27,6 @@
             <div class="form-group">
               <label>Textarea</label>
               <textarea class="form-control" type="textarea" name="textarea1" placeholder="Placeholder text in supported browsers"></textarea>
-              <span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
             </div>
             <div class="form-group">
               <label for="phone">Add another field (max set in controller)</label>
@@ -337,8 +336,7 @@
                   </li>
                 </ul>
               </div>
-              <!-- /btn-group -->
-              <input class="form-control" type="text">
+              <input class="form-control" type="text" placeholder="Product name">
             </div>
           </div>
         </div>
@@ -348,7 +346,7 @@
           <div class="form-group">
             <label for="">Text field appended with button</label>
             <div class="input-group">
-              <input class="form-control" placeholder="User Name" type="text">
+              <input class="form-control" placeholder="Search" type="text">
               <span class="input-group-btn">
                 <button class="btn btn-primary"><i class="fa fa-search"></i></button>
               </span>
@@ -360,7 +358,6 @@
       <div class="row">
         <div class="col-md-3">
           <label>Custom prepended checkbox control</label>
-
           <div class="input-group" pb-checkable-input-group>
             <span class="input-group-addon">
               <input type="checkbox" ng-model="checkable.checked">
@@ -372,16 +369,15 @@
       </div>
     </fieldset>
 
-
     <fieldset>
       <legend>Miscellaneous controls</legend>
       <div class="row">
-        <div class="form-group">
-          <div class="form-group col-md-6">
-            <label>File upload</label>
-            <input class="form-control" type="file" name="file1">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label>File upload</label>
+              <input class="form-control" type="file" name="file1">
+            </div>
           </div>
-        </div>
       </div>
     </fieldset>
 
@@ -389,14 +385,21 @@
     <fieldset>
       <legend>Multiple-select</legend>
       <div class="row">
-        <div class="form-group col-md-4">
-          <label>Multiple select</label>
-          <select multiple class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople"></select>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label>Multiple select</label>
+            <select multiple class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople"></select>
+          </div>
         </div>
-        <div class="form-group col-md-4">
-          <label>Multiple select (disabled)</label>
-          <select multiple ng-disabled="true" class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople"></select>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label>Multiple select (disabled)</label>
+            <select multiple ng-disabled="true" class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople"></select>
+          </div>
         </div>
+
         <div class="col-md-4">
           <label>Multiple select with checkboxes</label>
           <div class="checkboxList form-control">
@@ -407,6 +410,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </fieldset>
 
