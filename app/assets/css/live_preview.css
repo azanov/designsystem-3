@@ -545,7 +545,6 @@ section.row { margin-bottom: 60px; }
 
 .page-header { margin-top: 60px; }
 
-h4, h1, h3, legend { margin-bottom: 20px; }
 h4 .more-info, h1 .more-info, h3 .more-info, legend .more-info { font-size: 14px; font-weight: normal; margin-top: 10px; margin-left: 30px; display: inline-block; text-transform: lowercase; }
 h4 .more-info a, h1 .more-info a, h3 .more-info a, legend .more-info a { color: #0072b8; font-weight: normal; }
 

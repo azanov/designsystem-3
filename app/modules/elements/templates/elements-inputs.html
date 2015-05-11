@@ -1,13 +1,13 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      <h1 class="main-title">Input</h1>
+      <h1 class="main-title">Form Inputs</h1>
     </div>
   </div>
 
-<div class="row">
-  <div class="col-md-5">
-    <!-- left col -->
+    <div class="row">
+      <div class="col-md-5">
+        <!-- left col -->
     <fieldset>
       <legend>This page is divided by fieldsets. This text is a legend.</legend>
       <p class="help-block">Fieldsets are for groupings of form elements.
@@ -30,8 +30,18 @@
         <textarea class="form-control" type="textarea" name="textarea1" placeholder="Placeholder text in supported browsers"></textarea>
         <span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
       </div>
+      <div class="form-group">
+        <label for="phone">Add another field (max set in controller)</label>
+        <div data-ng-repeat="choice in inputs.choices1" class="repeated-field" ng-class="{'last':$last}">
+          <input type="text" name="phone" class="form-control input-sm" value="212-555-6789">
+        </div>
+        <span class="help-text"><a ng-show="inputs.showAddChoice(inputs.choice,inputs.choices1)" href="" ng-click="inputs.addNewChoice(inputs.choices1)">Add another phone field</a></span>
+      </div>
     </fieldset>
-  </div>
+
+    </div>
+
+
   <div class="col-md-5 col-md-offset-1">
     <fieldset>
       <legend>Column sizing</legend>
@@ -159,6 +169,27 @@
 
 
     <fieldset>
+      <legend>
+        Switches
+        <span class="more-info"><a href="http://jumplink.github.io/angular-toggle-switch/" target="_blank">Angular info <i class="fa fa-external-link"></i></a></span>
+      </legend>
+      <div class="form-group switches row">
+        <div class="col-md-3">
+          <div toggle-switch model="inputs.switchStatus1"></div>
+        </div>
+        <div class="col-md-3">
+          <div toggle-switch model="inputs.switchStatus2" is-disabled="disabled"></div>
+        </div>
+        <div class="col-md-3">
+          <div toggle-switch model="inputs.switchStatus3"></div>
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
+    </fieldset>
+
+
+    <fieldset>
       <legend>Checkboxes</legend>
       <div class="row">
         <div class="col-md-6">
@@ -200,7 +231,6 @@
           </div>
         </div>
       </div>
-
     </fieldset>
 
 
@@ -421,48 +451,17 @@
     </fieldset>
 
 
+    <fieldset>
+      <legend>Submit and cancel buttons</legend>
+      <div class="form-group">
+        <input type="submit" value="Submit" class="btn btn-primary">&nbsp;
+        <input type="reset" class="btn btn-link" value="Cancel">
+      </div>
+    </fieldset>
 
 
-                <fieldset>
-                  <legend>
-                    Switches
-                    <span class="more-info">
-                      <a href="http://jumplink.github.io/angular-toggle-switch/" target="_blank">Angular info <i class="fa fa-external-link"></i></a>
-                    </span>
-                  </legend>
-                  <div class="form-group switches row">
-                    <div class="col-md-3">
-                      <div toggle-switch model="inputs.switchStatus1"></div>
-                    </div>
-                    <div class="col-md-3">
-                      <div toggle-switch model="inputs.switchStatus2" is-disabled="disabled"></div>
-                    </div>
-                    <div class="col-md-3">
-                      <div toggle-switch model="inputs.switchStatus3"></div>
-                    </div>
-                    <div class="col-md-3">
-
-                    </div>
-                  </div>
-
-
-
-
-                </fieldset>
-
-
-
-
-                <fieldset>
-                  <legend>Submit and cancel buttons</legend>
-                  <div class="form-group">
-                    <input type="submit" value="Submit" class="btn btn-primary">&nbsp;
-                    <input type="reset" class="btn btn-link" value="Cancel">
-                  </div>
-                </fieldset>
-
-              </div>
-            </div>
+    </div>
+  </div>
 </div>
 
 

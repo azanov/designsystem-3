@@ -58,3 +58,10 @@ fieldset[disabled] .form-control.timepicker {
   background-color: #fff;
   border-color: $input-border;
 }
+
+.repeated-field  {
+  margin-bottom: 20px;
+  &.last {
+    margin-bottom: 3px;
+  }
+}

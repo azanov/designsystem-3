@@ -23,6 +23,29 @@
       pickDate: false
     };
 
+    // add phone number
+    _this.choices1 = [{ id: 'choice1'}];
+    _this.choices2 = [{ id: 'choice1', num: '222-555-3456' }];
+    _this.choices3 = [{ id: 'choice1'}];
+    _this.choices4 = [{ id: 'choice1', num: '222-555-3456' }];
+
+    _this.maxChoices = 3;
+
+    _this.addNewChoice = function(arr) {
+      var newItemNo = arr.length + 1;
+      arr.push({
+       'id': 'choice' + newItemNo
+      });
+    };
+
+    _this.showAddChoice = function(choice, arr) {
+      return arr.length !== _this.maxChoices;
+    };
+
+
+
+
+
     //selectize
     _this.peopleSelect = {
       options: {
