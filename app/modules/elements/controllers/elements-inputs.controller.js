@@ -86,6 +86,19 @@
       countries: CountriesResolve
     };
 
+    _this.multiCountrySelect = {
+      options: {
+        valueField: 'code',
+        labelField: 'name',
+        searchField: ['name'],
+        plugins: ['remove_button']
+      },
+      selected: {},
+      countries: CountriesResolve
+    };
+
+
+    // SWITCHES
     _this.switchStatus1 = false;
     _this.switchStatus2 = false;
     _this.switchStatus3 = true;

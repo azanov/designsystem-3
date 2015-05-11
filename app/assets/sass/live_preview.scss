@@ -166,11 +166,13 @@ h3,
 legend {
   margin-bottom: 20px;
   .more-info {
-    //float: right;
+    @extend %ps-light;
     font-size: 14px;
     font-weight: normal;
     margin-top: 10px;
-
+    margin-left: 30px;
+    display: inline-block;
+    text-transform: lowercase;
     a {
       color: $link-color;
       font-weight: normal;

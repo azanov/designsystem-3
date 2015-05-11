@@ -68,69 +68,181 @@
           <legend>Date &amp; time picker
             <a href="http://eonasdan.github.io/bootstrap-datetimepicker/" target="_blank"><span class="more-info">More info <i class="fa fa-external-link"></i></span></a>
           </legend>
-          <div class="form-group">
-            <label>Date</label>
-            <div class="input-group" ng-model="inputs.datetimepicker1" pb-datetimepicker>
-              <input class="form-control" type="text" placeholder="MM/DD/YYYY">
-              <span class="input-group-btn"><button class="btn btn-default"><span class="fa fa-calendar"></span></button></span>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Date</label>
+              <div class="input-group" ng-model="inputs.datetimepicker1" pb-datetimepicker>
+                <input class="form-control" type="text" placeholder="MM/DD/YYYY">
+                <span class="input-group-btn"><button class="btn btn-default"><span class="fa fa-calendar"></span></button></span>
+              </div>
             </div>
           </div>
-
-          <div class="form-group">
-            <label>Time</label>
-            <div class="input-group" ng-model="inputs.datetimepicker2" pb-datetimepicker>
-              <input class="form-control" type="text">
-              <span class="input-group-btn"><button class="btn btn-default"><span class="fa fa-clock-o"></span></button></span>
+          <div class="row col-md-6">
+            <div class="form-group">
+              <label>Time</label>
+              <div class="input-group" ng-model="inputs.datetimepicker2" pb-datetimepicker>
+                <input class="form-control" type="text">
+                <span class="input-group-btn"><button class="btn btn-default"><span class="fa fa-clock-o"></span></button></span>
+              </div>
             </div>
           </div>
-
+        </div>
         </fieldset>
-      </div>
+
+        <fieldset>
+          <legend>Numeric stepper
+            <span class="more-info"><a href="https://github.com/xFlatlinex/Numeric-Stepper" target="_blank">More info <i class="fa fa-external-link"></i></a></span>
+          </legend>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="text" class="form-control" value="10" options="numericStepper" pb-numeric-stepper>
+              </div>
+            </div>
+            <div class="col-md-6"></div>
+          </div>
+        </fieldset>
     </div>
     </div>
-    </div>
 
-
-
-
-
-
-<div class="row">
-
-
-      <div class="row">
-        <div class="col-md-6">
-
-        </div>
-        <div class="col-md-6">
-
-        </div>
-      </div>
-
-    </fieldset>
 
     <fieldset>
-      <legend>Numeric stepper
-        <span class="more-info"><a href="https://github.com/xFlatlinex/Numeric-Stepper" target="_blank">More info <i class="fa fa-external-link"></i></a></span>
+      <legend>Input field sizes</legend>
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Text inputs</h4>
+          <input class="form-control input-lg" type="text" placeholder=".input-lg">
+          <br>
+          <input class="form-control" type="text" placeholder="Default input">
+          <br>
+          <input class="form-control input-sm" type="text" placeholder=".input-sm">
+        </div>
+        <div class="col-md-6">
+          <h4>Select menus</h4>
+          <select name="" id="" class="form-control input-lg"><option value="">Select input-lg</option></select>
+          <br>
+          <select name="" id="" class="form-control"><option value="">Select normal</option></select>
+          <br>
+          <select name="" id="" class="form-control input-sm"><option value="">Select input-sm</option></select>
+        </div>
+      </div>
+    </fieldset>
 
+
+    <fieldset>
+      <legend>Selectize select menu
+        <span class="more-info">
+          <a href="http://brianreavis.github.io/selectize.js/" target="_blank">Basic info <i class="fa fa-external-link"></i></a>
+          <a href="https://github.com/kbanman/selectize-ng" target="_blank">Angular info <i class="fa fa-external-link"></i></a>
+        </span>
       </legend>
+        <div class="row">
+          <div class="form-group col-md-4">
+            <label>Single-select</label>
+            <select type="text" selectize="inputs.countrySelect.options" options="inputs.countrySelect.countries" ng-model="inputs.countrySelect.selected" /></select>
+          </div>
 
+          <div class="form-group col-md-4">
+            <label>Multi-select with tokens</label>
+            <input type="text" selectize="inputs.multiCountrySelect.options" options="inputs.countrySelect.countries" ng-model="inputs.multiCountrySelect.selected" />
+          </div>
+
+          <div class="form-group col-md-4">
+            <label>Custom menu items</label>
+            <select selectize="inputs.peopleSelect.options" options="inputs.peopleSelect.people" ng-model="inputs.peopleSelect.selected"></select>
+          </div>
+        </div>
+    </fieldset>
+
+
+    <fieldset>
+      <legend>Checkboxes</legend>
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <input type="text" class="form-control" value="10" options="numericStepper" pb-numeric-stepper>
+            <label>Checkbox default</label>
+            <div class="checkbox">
+              <label for="cb1">
+                <input type="checkbox" id="cb1" value="" checked="checked">Lorem ipsum dolor sit amet.
+              </label>
+            </div>
+
+            <div class="checkbox">
+              <label for="cb2">
+                <input type="checkbox" id="cb2" value="">Lorem ipsum dolor sit amet, consectetur adipisicing.
+              </label>
+            </div>
+
+            <div class="checkbox">
+              <label for="cb3">
+                <input type="checkbox" id="cb3" value="">Lorem ipsum dolor sit amet, consectetur.
+              </label>
+            </div>
           </div>
         </div>
         <div class="col-md-6">
+          <div class="form-group">
+            <div>
+              <label>Checkbox inline</label>
+            </div>
+            <label for="cb4" class="checkbox-inline">
+              <input type="checkbox" id="cb4" value="" checked="checked">Lorem
+            </label>
+            <label for="cb5" class="checkbox-inline">
+              <input type="checkbox" id="cb5" value="">Ipsum
+            </label>
+            <label for="cb6" class="checkbox-inline">
+              <input type="checkbox" id="cb6" value="">Dolor
+            </label>
+          </div>
+        </div>
+      </div>
+
+    </fieldset>
 
 
+    <fieldset>
+      <legend>Radio buttons</legend>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Radio default</label>
+            <div class="radio">
+              <label for="rb1">
+                <input type="radio" name="group1" id="rb1" value="">Lorem ipsum dolor sit amet.</label>
+            </div>
+            <div class="radio">
+              <label for="rb2">
+                <input type="radio" name="group1" id="rb2" value="">Lorem ipsum dolor sit amet, consectetur adipisicing.</label>
+            </div>
+            <div class="radio">
+              <label for="rb3">
+                <input type="radio" name="group1" id="rb3" value="">Lorem ipsum dolor sit amet, consectetur.</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <div>
+              <label>Radio inline</label>
+            </div>
+            <label for="rb4" class="radio-inline">
+              <input type="radio" id="rb4" name="group2" value="">Lorem</label>
+            <label for="rb5" class="radio-inline">
+              <input type="radio" id="rb5" name="group2" value="">Ipsum</label>
+            <label for="rb6" class="radio-inline">
+              <input type="radio" id="rb6" name="group2" value="">Dolor</label>
+          </div>
         </div>
       </div>
     </fieldset>
 
 
     <fieldset>
-      <legend>Specialized text fields</legend>
+      <legend>Input groups</legend>
 
       <div class="row">
         <div class="form-group col-md-6">
@@ -253,277 +365,62 @@
     </fieldset>
 
 
-
-    <fieldset>
-      <legend>Input field sizes</legend>
-
-      <input class="form-control input-lg" type="text" placeholder=".input-lg">
-      <br>
-      <input class="form-control" type="text" placeholder="Default input">
-      <br>
-      <input class="form-control input-sm" type="text" placeholder=".input-sm">
-
-    </fieldset>
-
     <fieldset>
       <legend>Miscellaneous controls</legend>
       <div class="row">
-        <div class="form-group col-md-6">
-          <label for="">Password (with "show" toggle)</label>
-          <div class="input-group">
-            <input id="pwd" class="form-control" placeholder="Enter Password" type="text" />
-            <span class="input-group-btn">
-              <button class="btn btn-default" pb-reveal-password password="'pwd'" hide-label="'Hide'"><span>Hide</span>
-              </button>
-            </span>
+        <div class="form-group">
+          <div class="form-group col-md-6">
+            <label>File upload</label>
+            <input class="form-control" type="file" name="file1">
           </div>
-        </div>
-
-        <div class="form-group col-md-6">
-          <label>File upload</label>
-          <input class="form-control" type="file" name="file1">
         </div>
       </div>
     </fieldset>
 
-    <!-- right column -->
-
-    <div class="row">
-      <div class="form-group col-md-6">
-        <label>Select</label>
-        <select class="form-control">
-          <option value="0">Option 1</option>
-          <option value="0">Option 2</option>
-          <option value="0">Option 3</option>
-          <option value="0">Option 4</option>
-          <option value="0">Option 5</option>
-          <option value="0">Option 6</option>
-          <option value="0">Option 7</option>
-        </select>
-      </div>
-      <div class="form-group col-md-6">
-        <label>Select (disabled)</label>
-        <select class="form-control" disabled="disabled">
-          <option value="0">Option 1</option>
-          <option value="0">Option 2</option>
-          <option value="0">Option 3</option>
-          <option value="0">Option 4</option>
-          <option value="0">Option 5</option>
-          <option value="0">Option 6</option>
-          <option value="0">Option 7</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-6">
-        <label>Select, large</label>
-        <select class="form-control input-lg">
-          <option value="0">Option 1</option>
-          <option value="0">Option 2</option>
-          <option value="0">Option 3</option>
-          <option value="0">Option 4</option>
-          <option value="0">Option 5</option>
-          <option value="0">Option 6</option>
-          <option value="0">Option 7</option>
-        </select>
-      </div>
-      <div class="col-md-6">
-        <label>Select, small</label>
-        <select class="form-control input-sm">
-          <option value="0">Option 1</option>
-          <option value="0">Option 2</option>
-          <option value="0">Option 3</option>
-          <option value="0">Option 4</option>
-          <option value="0">Option 5</option>
-          <option value="0">Option 6</option>
-          <option value="0">Option 7</option>
-        </select>
-      </div>
-    </div>
-
-    <hr>
-
-
-
-    <div class="row">
-      <div class="form-group col-md-6">
-        <label>Multiple select</label>
-        <select multiple class="form-control">
-          <option value="0">Option 1</option>
-          <option value="0">Option 2</option>
-          <option value="0">Option 3</option>
-          <option value="0">Option 4</option>
-          <option value="0">Option 5</option>
-          <option value="0">Option 6</option>
-          <option value="0">Option 7</option>
-        </select>
-      </div>
-      <div class="form-group col-md-6">
-        <label>Multiple select (disabled)</label>
-        <select multiple class="form-control" disabled="disabled">
-          <option value="0">Option 1</option>
-          <option value="0">Option 2</option>
-          <option value="0">Option 3</option>
-          <option value="0">Option 4</option>
-          <option value="0">Option 5</option>
-          <option value="0">Option 6</option>
-          <option value="0">Option 7</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-6">
-        <label>Multiple select with checkboxes</label>
-        <div class="checkboxList form-control">
-          <div class="ms-checkboxitem" ng-repeat="person in peopleData">
-            <label>
-              <input type="checkbox" ng-model="person.isChecked">&nbsp;<span>{{person.firstName}} {{person.lastName}}</span>
-            </label>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
 
     <fieldset>
-      <legend>Selectize select menu
-        <span class="more-info">
-          <a href="http://brianreavis.github.io/selectize.js/" target="_blank">Basic info <i class="fa fa-external-link"></i></a>
-          <a href="https://github.com/kbanman/selectize-ng" target="_blank">Angular info <i class="fa fa-external-link"></i></a>
-        </span>
-      </legend>
-
-      <div xxx-ng-controller="SelectizeCtrl">
-
-        <div class="row">
-
-          <div class="form-group col-md-4">
-            <label>People</label>
-            <select selectize="inputs.peopleSelect.options" options="inputs.peopleSelect.people" ng-model="inputs.peopleSelect.selected"></select>
-          </div>
-
-          <div class="form-group col-md-4">
-            <label>Countries</label>
-            <input type="text" selectize="inputs.countrySelect.options" options="inputs.countrySelect.countries" ng-model="inputs.countrySelect.selected" />
-          </div>
-
-          <div class="form-group col-md-4">
-            <label>Countries</label>
-            <div class="input-group">
-              <span class="input-group-addon">@</span>
-              <input type="text" selectize="inputs.countrySelect.options" options="inputs.countrySelect.countries" ng-model="inputs.countrySelect.selected" />
-            </div>
-          </div>
-
-        </div>
-
-        <div class="row">
-
-
-
-          <div class="form-group col-md-4 ">
-            <label>Small Size</label>
-            <div class="input-group input-group-sm">
-              <input type="text" selectize="inputs.countrySelect.options" options="inputs.countrySelect.countries" ng-model="inputs.countrySelect.selected" />
-              <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-            </div>
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </fieldset>
-
-
-
-    <fieldset>
-      <legend>Checkboxes</legend>
-
-
-      <div class="row">
-
-        <div class="col-md-6">
-          <div class="form-group">
-            <label>Checkbox default</label>
-            <div class="checkbox">
-              <label for="cb1">
-                <input type="checkbox" id="cb1" value="" checked="checked">Lorem ipsum dolor sit amet.
-              </label>
-            </div>
-
-            <div class="checkbox">
-              <label for="cb2">
-                <input type="checkbox" id="cb2" value="">Lorem ipsum dolor sit amet, consectetur adipisicing.
-              </label>
-            </div>
-
-            <div class="checkbox">
-              <label for="cb3">
-                <input type="checkbox" id="cb3" value="">Lorem ipsum dolor sit amet, consectetur.
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="form-group">
-            <div>
-              <label>Checkbox inline</label>
-            </div>
-            <label for="cb4" class="checkbox-inline">
-              <input type="checkbox" id="cb4" value="" checked="checked">Lorem
-            </label>
-            <label for="cb5" class="checkbox-inline">
-              <input type="checkbox" id="cb5" value="">Ipsum
-            </label>
-            <label for="cb6" class="checkbox-inline">
-              <input type="checkbox" id="cb6" value="">Dolor
-            </label>
-          </div>
-        </div>
-
-      </div>
-
-    </fieldset>
-
-    <fieldset>
-      <legend>Radio buttons</legend>
+      <legend>Multiple-select</legend>
       <div class="row">
         <div class="form-group col-md-6">
-          <label>Radio default</label>
-          <div class="radio">
-            <label for="rb1">
-              <input type="radio" name="group1" id="rb1" value="">Lorem ipsum dolor sit amet.</label>
+          <label>Multiple select</label>
+          <select multiple class="form-control">
+            <option value="0">Option 1</option>
+            <option value="0">Option 2</option>
+            <option value="0">Option 3</option>
+            <option value="0">Option 4</option>
+            <option value="0">Option 5</option>
+            <option value="0">Option 6</option>
+            <option value="0">Option 7</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label>Multiple select (disabled)</label>
+          <select multiple class="form-control" disabled="disabled">
+            <option value="0">Option 1</option>
+            <option value="0">Option 2</option>
+            <option value="0">Option 3</option>
+            <option value="0">Option 4</option>
+            <option value="0">Option 5</option>
+            <option value="0">Option 6</option>
+            <option value="0">Option 7</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label>Multiple select with checkboxes</label>
+          <div class="checkboxList form-control">
+            <div class="ms-checkboxitem" ng-repeat="person in peopleData">
+              <label>
+                <input type="checkbox" ng-model="person.isChecked">&nbsp;<span>{{person.firstName}} {{person.lastName}}</span>
+              </label>
             </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
 
-            <div class="radio">
-              <label for="rb2">
-                <input type="radio" name="group1" id="rb2" value="">Lorem ipsum dolor sit amet, consectetur adipisicing.</label>
-              </div>
 
-              <div class="radio">
-                <label for="rb3">
-                  <input type="radio" name="group1" id="rb3" value="">Lorem ipsum dolor sit amet, consectetur.</label>
-                </div>
-              </div>
-              <div class="form-group col-md-6">
-                <div>
-                  <label>Radio inline</label>
-                </div>
-                <label for="rb4" class="radio-inline">
-                  <input type="radio" id="rb4" name="group2" value="">Lorem</label>
-                  <label for="rb5" class="radio-inline">
-                    <input type="radio" id="rb5" name="group2" value="">Ipsum</label>
-                    <label for="rb6" class="radio-inline">
-                      <input type="radio" id="rb6" name="group2" value="">Dolor</label>
-                    </div>
-                  </div>
-                </fieldset>
 
 
                 <fieldset>
@@ -567,3 +464,18 @@
               </div>
             </div>
 </div>
+
+
+
+
+
+<!-- <div class="form-group">
+<label for="">Password (with "show" toggle)</label>
+<div class="input-group">
+  <input id="pwd" class="form-control" placeholder="Enter Password" type="text" />
+  <span class="input-group-btn">
+    <button class="btn btn-default" pb-reveal-password password="'pwd'" hide-label="'Hide'"><span>Hide</span>
+    </button>
+  </span>
+</div>
+</div> -->
