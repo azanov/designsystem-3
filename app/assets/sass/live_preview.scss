@@ -14,7 +14,7 @@
     display: table;
     content: '';
   }
-
+  
   &:after {
     clear: both;
   }
@@ -42,7 +42,6 @@
 .button-demo-row > div {
   margin-right: 20px;
 }
-
 // ken burns panning effect
 @keyframes kbrns {
   0% {
@@ -204,7 +203,6 @@ hr {
   border-radius: 0;
 }
 
-
 p[class^='bg'] {
   padding: 10px;
 }
@@ -248,7 +246,6 @@ p[class^='bg'] {
     }
   }
 }
-
 $fonts: ('PrecisionSans_W_LtIt', 'PrecisionSans_W_LtIt', 'PrecisionSans_W_Rg', 'PrecisionSans_W_RgIt', 'PrecisionSans_W_Bd', 'PrecisionSans_W_BdIt', 'PrecisionSans_W_Md', 'PrecisionSans_W_MdIt');
 
 @each $font in $fonts {
@@ -256,8 +253,6 @@ $fonts: ('PrecisionSans_W_LtIt', 'PrecisionSans_W_LtIt', 'PrecisionSans_W_Rg', '
     font-family: $font, Arial, Helvetica, sans-serif;
   }
 }
-
-
 // march 2015, changes swatches for main colors into lists of tints
 ul.swatches {
   margin: 10px 0 30px;
