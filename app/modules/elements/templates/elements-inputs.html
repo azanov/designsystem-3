@@ -130,11 +130,17 @@
         </div>
         <div class="col-md-5 col-md-offset-1">
           <h4>Select menus</h4>
-          <select name="" id="" class="form-control input-lg"><option value="">Select input-lg</option></select>
+          <select class="form-control input-lg" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+            <option value="">Large Size</option>
+          </select>
           <br>
-          <select name="" id="" class="form-control"><option value="">Select normal</option></select>
+          <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+            <option value="">Normal Size</option>
+          </select>
           <br>
-          <select name="" id="" class="form-control input-sm"><option value="">Select input-sm</option></select>
+          <select class="form-control input-sm" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+            <option value="">Small Size</option>
+          </select>
         </div>
       </div>
     </fieldset>
@@ -188,7 +194,7 @@
     <fieldset>
       <legend>Checkboxes</legend>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-3">
           <div class="form-group">
             <label>Checkbox default</label>
             <div class="checkbox">
@@ -210,7 +216,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-3 col-md-offset-1">
           <div class="form-group">
             <div>
               <label>Checkbox inline</label>
@@ -233,7 +239,7 @@
     <fieldset>
       <legend>Radio buttons</legend>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-3">
           <div class="form-group">
             <label>Radio default</label>
             <div class="radio">
@@ -250,7 +256,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-3 col-md-offset-1">
           <div class="form-group">
             <div>
               <label>Radio inline</label>
@@ -268,114 +274,92 @@
 
 
     <fieldset>
-      <legend>Input groups</legend>
-
+      <legend>Input groups <span class="more-info"><a href="http://getbootstrap.com/components/#input-groups">learn more <i class="fa fa-external-link"></i></a></span></legend>
       <div class="row">
-        <div class="form-group col-md-6">
-          <label for="">Text field prepended</label>
-          <div class="input-group">
-            <span class="input-group-addon">
-              <i class="fa fa-search"></i>
-            </span>
-            <input class="form-control" placeholder="Search" type="text">
-          </div>
-        </div>
-
-        <div class="form-group col-md-6">
-          <label for="">Text field appended</label>
-          <div class="input-group">
-            <input class="form-control" placeholder="User Name" type="text">
-            <span class="input-group-addon">
-              <i class="fa fa-user"></i>
-            </span>
-          </div>
-
+        <div class="col-md-12">
+          <p class="help-text">Icons, buttons, and simple menus can be prepended and/or appended to text fields.</p>
         </div>
       </div>
 
-      <!-- large fields  -->
       <div class="row">
-
-        <div class="form-group col-md-6">
-          <label for="">Text field prepended, large</label>
-          <div class="input-group input-group-lg">
-            <span class="input-group-addon">@</span>
-            <input type="text" class="form-control" placeholder="Username">
-          </div>
-        </div>
-
-        <div class="form-group col-md-6">
-          <label for="">Text field appended, large</label>
-          <div class="input-group input-group-lg">
-            <input class="form-control" placeholder="User Name" type="text">
-            <span class="input-group-addon">
-              <i class="fa fa-user"></i>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <!-- small fields  -->
-      <div class="row">
-
-        <div class="form-group col-md-6">
-          <label for="">Text field prepended, small</label>
-          <div class="input-group input-group-sm">
-            <span class="input-group-addon">@</span>
-            <input type="text" class="form-control" placeholder="Username">
-          </div>
-        </div>
-
-        <div class="form-group col-md-6">
-          <label for="">Text field appended, small</label>
-          <div class="input-group input-group-sm">
-            <input class="form-control" placeholder="User Name" type="text">
-            <span class="input-group-addon">
-              <i class="fa fa-user"></i>
-            </span>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="row">
-        <div class="form-group col-md-6">
-          <label for="">Text field prepended with menu</label>
-          <div class="input-group">
-            <div class="input-group-btn">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a>
-                </li>
-                <li><a href="#">Another action</a>
-                </li>
-                <li><a href="#">Something else here</a>
-                </li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a>
-                </li>
-              </ul>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label for="">Text field prepended</label>
+            <div class="input-group">
+              <span class="input-group-addon">@</span>
+              <input class="form-control" placeholder="Username" type="text">
             </div>
-            <!-- /btn-group -->
-            <input class="form-control" type="text">
           </div>
         </div>
-        <div class="form-group col-md-6">
-          <label for="">Text field appended with button</label>
-          <div class="input-group">
-            <input class="form-control" placeholder="User Name" type="text">
-            <span class="input-group-btn">
-              <button class="btn btn-default">Go</button>
-            </span>
+        <div class="col-md-3 col-md-offset-1">
+          <div class="form-group">
+            <label for="">Text field appended</label>
+            <div class="input-group">
+              <input class="form-control" placeholder="Text to filter by" type="text">
+              <span class="input-group-addon"><i class="fa fa-filter"></i></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-md-offset-1">
+          <div class="form-group">
+            <label for="">Text field  with both</label>
+            <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input class="form-control" placeholder="Amount" type="text">
+              <span class="input-group-addon">.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="row">
+
+        <div class="col-md-3">
+          <div class="form-group">
+            <label for="">Text field prepended with menu</label>
+            <div class="input-group">
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a>
+                  </li>
+                  <li><a href="#">Another action</a>
+                  </li>
+                  <li><a href="#">Something else here</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- /btn-group -->
+              <input class="form-control" type="text">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-3 col-md-offset-1">
+          <div class="form-group">
+            <label for="">Text field appended with button</label>
+            <div class="input-group">
+              <input class="form-control" placeholder="User Name" type="text">
+              <span class="input-group-btn">
+                <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-lg-6">
-          <label>Prepended checkbox</label>
+        <div class="col-md-3">
+          <label>Custom prepended checkbox control</label>
 
           <div class="input-group" pb-checkable-input-group>
             <span class="input-group-addon">
@@ -384,10 +368,8 @@
             <input type="text" class="form-control" ng-disabled="!checkable.checked" ng-model="checkable.value">
           </div>
         </div>
-        <!-- /.col-lg-6 -->
 
       </div>
-      <!-- /.row -->
     </fieldset>
 
 
@@ -407,38 +389,20 @@
     <fieldset>
       <legend>Multiple-select</legend>
       <div class="row">
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
           <label>Multiple select</label>
-          <select multiple class="form-control">
-            <option value="0">Option 1</option>
-            <option value="0">Option 2</option>
-            <option value="0">Option 3</option>
-            <option value="0">Option 4</option>
-            <option value="0">Option 5</option>
-            <option value="0">Option 6</option>
-            <option value="0">Option 7</option>
-          </select>
+          <select multiple class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople"></select>
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
           <label>Multiple select (disabled)</label>
-          <select multiple class="form-control" disabled="disabled">
-            <option value="0">Option 1</option>
-            <option value="0">Option 2</option>
-            <option value="0">Option 3</option>
-            <option value="0">Option 4</option>
-            <option value="0">Option 5</option>
-            <option value="0">Option 6</option>
-            <option value="0">Option 7</option>
-          </select>
+          <select multiple ng-disabled="true" class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople"></select>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
           <label>Multiple select with checkboxes</label>
           <div class="checkboxList form-control">
             <div class="ms-checkboxitem" ng-repeat="person in inputs.samplePeople">
               <label>
-                <input type="checkbox" ng-model="person.isChecked">&nbsp;<span>{{person.first_name}} {{person.last_name}}</span>
+                <input type="checkbox" ng-model="person.isChecked">&nbsp;<span>{{person.full_name}}</span>
               </label>
             </div>
           </div>

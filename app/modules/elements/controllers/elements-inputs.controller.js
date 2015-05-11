@@ -38,7 +38,7 @@
     _this.addNewChoice = function(arr) {
       var newItemNo = arr.length + 1;
       arr.push({
-       'id': 'choice' + newItemNo
+        id: 'choice' + newItemNo
       });
     };
 

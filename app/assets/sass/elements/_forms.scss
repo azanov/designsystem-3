@@ -3,7 +3,7 @@
 .checkboxList {
   overflow-y: scroll;
   width: 100%;
-  height: 100px;
+  height: 83px;
   label {
     margin-bottom: 0;
     color: $pb-gray;
@@ -42,7 +42,6 @@ select[disabled] {
     border-color: $brand-danger;
   }
 }
-
 // date and time picker
 .form-control[disabled].datepicker,
 .form-control[readonly].datepicker,
@@ -55,11 +54,11 @@ fieldset[disabled] .form-control.timepicker {
 }
 
 .input-group-addon {
-  background-color: #fff;
+  background-color: $pb-gray-50;
   border-color: $input-border;
 }
 
-.repeated-field  {
+.repeated-field {
   margin-bottom: 20px;
   &.last {
     margin-bottom: 3px;

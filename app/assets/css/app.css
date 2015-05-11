@@ -1006,7 +1006,7 @@ th.currency { text-align: center; }
 
 .icon-addon input:disabled + .glyphicon, .icon-addon select:disabled + .glyphicon, .icon-addon input:disabled + .fa, .icon-addon select:disabled + .fa { color: #c0c0c0; }
 
-.checkboxList { overflow-y: scroll; width: 100%; height: 100px; }
+.checkboxList { overflow-y: scroll; width: 100%; height: 83px; }
 .checkboxList label { margin-bottom: 0; color: #4e4e4e; }
 .checkboxList .ms-checkboxitem { margin-bottom: 2px; }
 
@@ -1026,7 +1026,7 @@ select[disabled] { color: #9b9b9b !important; }
 
 .form-control[disabled].datepicker, .form-control[readonly].datepicker, fieldset[disabled] .form-control.datepicker, .form-control[disabled].timepicker, .form-control[readonly].timepicker, fieldset[disabled] .form-control.timepicker { cursor: pointer; background-color: #fff; }
 
-.input-group-addon { background-color: #fff; border-color: #9b9b9b; }
+.input-group-addon { background-color: #f0f0f0; border-color: #9b9b9b; }
 
 .repeated-field { margin-bottom: 20px; }
 .repeated-field.last { margin-bottom: 3px; }
