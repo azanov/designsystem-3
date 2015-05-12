@@ -14,7 +14,7 @@
     display: table;
     content: '';
   }
-  
+
   &:after {
     clear: both;
   }
@@ -27,21 +27,10 @@
   cursor: pointer;
 }
 
-.debug {
-  border: 1px solid #f00;
-
-  &.green {
-    border-color: #008000;
-  }
-
-  &.pink {
-    border-color: #ffc0b0;
-  }
-}
-
 .button-demo-row > div {
   margin-right: 20px;
 }
+
 // ken burns panning effect
 @keyframes kbrns {
   0% {

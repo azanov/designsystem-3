@@ -512,10 +512,6 @@ cite { font-style: normal; }
 
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
-.debug { border: 1px solid #f00; }
-.debug.green { border-color: #008000; }
-.debug.pink { border-color: #ffc0b0; }
-
 .button-demo-row > div { margin-right: 20px; }
 
 @-webkit-keyframes kbrns { 0% { background-position: 0 -3em; background-size: 120%; }
