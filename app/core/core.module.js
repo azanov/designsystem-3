@@ -17,7 +17,8 @@
     'toastr',
     'ui.bootstrap',
     'ui-rangeSlider',
-    'chart.js'
+    'chart.js',
+    'stpa.morris'
     ]);
 
 })();

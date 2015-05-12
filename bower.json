@@ -33,7 +33,8 @@
     "angular-rangeslider": "~0.0.13",
     "angular-chart.js": "0.6.0",
     "Chart.js": "~1.0.2",
-    "angular-toastr": "~1.3.0"
+    "angular-toastr": "~1.3.0",
+    "angular-morris-chart": "~1.0.2"
   },
   "devDependencies": {},
   "resolutions": {
