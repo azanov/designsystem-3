@@ -1,44 +1,14 @@
 [{
-    "label": "Components",
-    "value": "#",
-    "toggle": "dropdown",
-    "children": [{
-      "label": "Accordion",
-      "value": "components.accordion"
-    }, {
-      "label": "Panels",
-      "value": "components.panels"
-    }, {
-      "label": "Tabs",
-      "value": "components.tabs"
-    }, {
-      "type": "divider",
-      "divider": true
-    }, {
-      "label": "Other Directives",
-      "type": "header",
-      "header": true
-    }, {
-      "label": "UI Bootstrap",
-      "value": "components.uibootstrap"
-    }]
-  }, {
-    "label": "Elements",
+    "label": "UI Elements",
     "value": "",
     "toggle": "dropdown",
     "children": [{
-      "label": "Alerts",
-      "value": "elements.alerts"
-    }, {
       "label": "Buttons",
       "value": "elements.buttons"
-    }, {
-      "label": "Colors",
-      "value": "elements.colors"
-    }, {
-      "label": "Color Usage",
-      "value": "elements.colorusage"
-    }, {
+    },{
+      "label": "Accordion",
+      "value": "elements.accordion"
+    },  {
       "label": "Color Charts",
       "value": "elements.colorcharts"
     }, {
@@ -51,18 +21,15 @@
       "label": "Inputs",
       "value": "elements.inputs"
     }, {
+      "label": "Panels",
+      "value": "elements.panels"
+    },{
       "label": "Popovers",
       "value": "elements.popovers",
       "className": "popovers"
     }, {
       "label": "Progress",
       "value": "elements.progress"
-    }, {
-      "label": "Tables",
-      "value": "elements.tables"
-    }, {
-      "label": "Typography",
-      "value": "elements.typography"
     }]
   }, {
     "label": "Pages",
@@ -94,10 +61,7 @@
     "label": "Notifications",
     "value": "",
     "toggle": "dropdown",
-    "children": [{
-      "label": "Toastr",
-      "value": "notification.toastr"
-    }, {
+    "children": [ {
       "label": "Spinners",
       "value": "notification.spinners"
     }, {

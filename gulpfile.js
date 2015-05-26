@@ -181,9 +181,6 @@ gulp.task('copy:core-config', [], function() {
 
 
 
-
-
-
 gulp.task('clean', function(cb) {
   del(['build/**/*'], cb);
 });
@@ -291,6 +288,7 @@ gulp.task('deploy', ['prompt_password'], function() {
   ];
 
   // using base = '.' will transfer everything to /public_html correctly
+  // otherwise choose the folder whose contents should be the site root
   // turn off buffering in gulp.src for best performance
   return gulp.src(globs, {
       base: 'build',

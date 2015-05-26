@@ -1,8 +1,8 @@
 @mixin clearfix{
-  zoom:1;
+  zoom: 1;
       &:before, &:after {
-        content:'';
-        display:table;
+        content: '';
+        display: table;
     }
     &:after {
         clear: both;
@@ -11,10 +11,10 @@
 
 @mixin bp($point) {
 
- $screen-xs: "(max-width: 767px)";
- $screen-sm: "(min-width: 768px)";
- $screen-md: "(min-width: 992px)";
- $screen-lg: "(min-width: 1200px)";
+ $screen-xs: '(max-width: 767px)';
+ $screen-sm: '(min-width: 768px)';
+ $screen-md: '(min-width: 992px)';
+ $screen-lg: '(min-width: 1200px)';
 
  @if $point == screen-xs {
      @media #{$screen-xs} { @content; }
@@ -46,9 +46,7 @@
 
 // Box sizing
 @mixin box-sizing($boxmodel) {
-  -webkit-box-sizing: $boxmodel;
-     -moz-box-sizing: $boxmodel;
-          box-sizing: $boxmodel;
+  box-sizing: $boxmodel;
 }
 $grid-column-padding: 15px;
 
@@ -79,12 +77,10 @@ $grid-column-padding: 15px;
 
 @mixin triangle-closed {
   content          : '\25B8'; // triangle right
-  -webkit-transform: rotate(0deg);
   transform        : rotate(0deg);
 }
 @mixin triangle-opened {
   content          : '\25B8'; // triangle right
-  -webkit-transform: rotate(90deg);
   transform        : rotate(90deg);
 }
 
@@ -110,7 +106,7 @@ $grid-column-padding: 15px;
 // and disabled options for all buttons
 
 
-// solid "primary" buttons
+// solid 'primary' buttons
 @mixin button-variant($color, $background, $border) {
   color: $color;
   background-color: $background;
@@ -122,7 +118,7 @@ $grid-column-padding: 15px;
   &:active,
   &.active,
   .open > &.dropdown-toggle {
-               color: darken($color, 10%);;
+               color: darken($color, 10%);
     background-color: darken($background, 10%);
         border-color: darken($border, 12%);
   }

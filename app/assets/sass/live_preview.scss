@@ -1,10 +1,11 @@
 /* -- THIS FILE CONTAINS STYLES FOR THE LIVE PREVIEW SITE ONLY!                         */
 /* -- THESE STYLES ARE NOT MEANT TO BE USED ON PROJECTS, ONLY USE THE DESIGN_SYSTEM.CSS */
-@import "settings/variables/_variables.scss";
-@import "settings/variables/_colormap.scss";
-@import "settings/mixins/_mixins.scss";
-@import "settings/mixins/_colors.scss";
-@import "settings/mixins/_typography.scss";
+
+@import 'settings/variables/variables';
+@import 'settings/variables/colormap';
+@import 'settings/mixins/mixins';
+@import 'settings/mixins/colors';
+@import 'settings/mixins/typography';
 
 .clearfix {
   zoom: 1;
@@ -53,7 +54,6 @@
   flex: 1;
   .home & {
     background-color: #254d9d;
-    background: -webkit-linear-gradient(-45deg, #4cc6f3 0%, #32b1e5 10%, #254d9d 53%, #bc278d 100%);
     background: linear-gradient(135deg, #4cc6f3 0%, #32b1e5 10%, #254d9d 53%, #bc278d 100%);
     background-size: cover;
     background-repeat: no-repeat;
@@ -62,7 +62,7 @@
 
 .hero {
   //height: 640px;
-  // background-image: url("../images/livepreview_keyboard.jpg");
+  // background-image: url('../images/livepreview_keyboard.jpg');
   // background-size: cover;
   // background-position: -1em 0;
   // background-size: 105%;
@@ -122,8 +122,8 @@
         column-count: 4;
         break-inside: avoid;
         li {
-          line-height: 1.35;
           @extend %ps-light;
+          line-height: 1.35;
           a {
             color: #fff;
           }
@@ -186,9 +186,8 @@ hr {
 }
 
 .grid-sample .panel {
-  border: 0;
   border: 1px solid #eee;
-  border-top: 6px solid #eee;
+  border-top-width: 6px;
   border-radius: 0;
 }
 
@@ -307,7 +306,7 @@ ul.swatches {
 .fpo-grad {
   padding: 10px;
   // background-image: linear-gradient(#ddd, #666);
-  background-image: url("../images/livepreview_keyboard.jpg");
+  background-image: url('../images/livepreview_keyboard.jpg');
   background-position: center center;
   background-size: fit;
 
@@ -486,7 +485,7 @@ ul.swatches {
 }
 //* experimental block grid code, will not work in IE8
 // used to display icons on icons page
-[class*="block-grid-"] {
+[class*='block-grid-'] {
   @include clearfix;
   display: block;
   padding: 0;

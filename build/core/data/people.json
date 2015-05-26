@@ -34,5 +34,15 @@
       "image" : "avatar100_f01.jpg",
       "address" : "1500 Southwest 10th Avenue<br/>Topeka, KS 66606<br/>(785) 354-6000",
       "isChecked" : true
+    },
+    {
+      "firstName" : "Jayne",
+      "lastName" : "Cobb",
+      "gross_sales" : "¥76,330,989.00",
+      "type" : "trophy",
+      "image" : "avatar100_f01.jpg",
+      "address" : "1500 Southwest 10th Avenue<br/>Topeka, KS 66606<br/>(785) 354-6000",
+      "isChecked" : true
     }
+
   ]

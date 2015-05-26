@@ -32,7 +32,7 @@ $pb-gray-500:    $pb-gray; // aliased for completeness
 
 
 
-//NOTE: switched to a manual method of "chord" concept as map-get causing issues with color functions
+//NOTE: switched to a manual method of 'chord' concept as map-get causing issues with color functions
 
 //Color chords (only one active so far)
 // $chord1: (color1:$pb-purple, color2: $pb-medium-blue, color3:  $pb-gray, color4: $pb-green, color5: $pb-gray-200);
@@ -125,7 +125,7 @@ $font-size-h6:            14px;
 
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base: 1.428571429; // 20/14
-//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+//** Computed 'line-height' (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 $line-height-computed: floor(($font-size-base * $line-height-base)); // ~20px
 
 
@@ -134,11 +134,11 @@ $line-height-computed: floor(($font-size-base * $line-height-base)); // ~20px
 //-- our custom font in pbfont.scss
 //
 //** Load fonts from this directory.
-$icon-font-path:          "../fonts/";
+$icon-font-path:          '../fonts/';
 //** File name for all font files.
-$icon-font-name:          "glyphicons-halflings-regular";
+$icon-font-name:          'glyphicons-halflings-regular';
 //** Element ID within SVG icon file.
-$icon-font-svg-id:        "glyphicons_halflingsregular";
+$icon-font-svg-id:        'glyphicons_halflingsregular';
 
 
 //== Components
@@ -579,7 +579,7 @@ $popover-arrow-color:                 $popover-bg;
 //** Popover outer arrow width
 $popover-arrow-outer-width:           ($popover-arrow-width + 1);
 //** Popover outer arrow color
-$popover-arrow-outer-color:           fade_in($popover-border-color, .05);
+$popover-arrow-outer-color:           $popover-border-color;
 //** Popover outer arrow fallback color
 $popover-arrow-outer-fallback-color:  darken($popover-fallback-border-color, 20%);
 
@@ -728,7 +728,7 @@ $breadcrumb-color:              #ccc;
 //** Text color of current page in the breadcrumb
 $breadcrumb-active-color:       $pb-gray-200;
 //** Textual separator for between breadcrumb elements
-$breadcrumb-separator:          "/";
+$breadcrumb-separator:          '/';
 
 
 

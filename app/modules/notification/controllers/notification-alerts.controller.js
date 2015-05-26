@@ -22,7 +22,7 @@
         toastr.success('I am completely operational, and all my circuits are functioning perfectly.');
       },
       info:  function() {
-        toastr.info('The 9000 series is the most reliable computer ever madeelements.');
+        toastr.info('The 9000 series is the most reliable computer ever made.');
       },
       warning:  function() {
         toastr.warning('Just what do you think you\'re doing, Dave?');

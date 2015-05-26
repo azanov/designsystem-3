@@ -2,7 +2,7 @@
   "countries": [
     {
       "name": "Australia",
-      "value": "AU",
+      "value": "au",
       "languages": [
         {
           "name": "English",
@@ -12,7 +12,7 @@
     },
     {
       "name": "Brasil",
-      "value": "BR",
+      "value": "br",
       "languages": [
         {
           "name": "Português",
@@ -22,7 +22,7 @@
     },
     {
       "name": "Canada",
-      "value": "CA",
+      "value": "ca",
       "languages": [
         {
           "name": "English",
@@ -36,7 +36,7 @@
     },
     {
       "name": "France",
-      "value": "FR",
+      "value": "fr",
       "languages": [
         {
           "name": "Français",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Deutschland",
-      "value": "DE",
+      "value": "de",
       "languages": [
         {
           "name": "Deutsch",
@@ -56,7 +56,7 @@
     },
     {
       "name": "भारत",
-      "value": "IN",
+      "value": "in",
       "languages": [
         {
           "name": "English",
@@ -95,7 +95,7 @@
     },
     {
       "name": "מְדִינַת יִשְׂרָאֵל",
-      "value": "IL",
+      "value": "il",
       "languages": [
         {
           "name": "עִבְרִית",
@@ -106,7 +106,7 @@
     },
     {
       "name": "Italia",
-      "value": "IT",
+      "value": "it",
       "languages": [
         {
           "name": "Italiano",
@@ -116,7 +116,7 @@
     },
     {
       "name": "日本",
-      "value": "JP",
+      "value": "jp",
       "languages": [
         {
           "name": "日本語",
@@ -126,7 +126,7 @@
     },
     {
       "name": "Norge",
-      "value": "NO",
+      "value": "no",
       "languages": [
         {
           "name": "Bokmål",
@@ -140,7 +140,7 @@
     },
     {
       "name": "Polska",
-      "value": "PL",
+      "value": "pl",
       "languages": [
         {
           "name": "Polski",
@@ -150,7 +150,7 @@
     },
     {
       "name": "Российская Федерация",
-      "value": "RU",
+      "value": "ru",
       "languages": [
         {
           "name": "Русский",
@@ -160,7 +160,7 @@
     },
     {
       "name": "Sverige",
-      "value": "SE",
+      "value": "se",
       "languages": [
         {
           "name": "Svenska",
@@ -170,7 +170,7 @@
     },
     {
       "name": "United States",
-      "value": "US",
+      "value": "us",
       "languages": [
         {
           "name": "English",
@@ -184,7 +184,7 @@
     },
     {
       "name": "United Kingdom",
-      "value": "GB",
+      "value": "gb",
       "languages": [
         {
           "name": "English",
