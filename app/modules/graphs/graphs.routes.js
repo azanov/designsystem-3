@@ -15,10 +15,10 @@
       }
     })
 
-    .state('graphs.lib1', {
-      url: '/lib1',
-      templateUrl: 'modules/graphs/templates/graphs-lib1.html',
-      controller: 'Lib1Controller as lib1'
+    .state('graphs.morris', {
+      url: '/morris',
+      templateUrl: 'modules/graphs/templates/graphs-morris.html',
+      controller: 'MorrisController as morris'
     })
 
     .state('graphs.lib2', {

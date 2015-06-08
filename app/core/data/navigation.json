@@ -96,8 +96,8 @@
     "value": "",
     "toggle": "dropdown",
     "children": [{
-      "label": "Lib1",
-      "value": "graphs.lib1"
+      "label": "Morris",
+      "value": "graphs.morris"
     }, {
       "label": "Lib2",
       "value": "graphs.lib2"
