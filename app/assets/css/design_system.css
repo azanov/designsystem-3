@@ -978,7 +978,7 @@ th.currency { text-align: center; }
 
 .btn-group-borderless .btn { border: 0; }
 
-.btn.disabled, .btn[disabled], fieldset[disabled] .btn { pointer-events: none; cursor: not-allowed; filter: alpha(opacity=35); box-shadow: none; opacity: 0.35; }
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn { pointer-events: none; cursor: not-allowed; box-shadow: none; opacity: 0.35; }
 
 .btn-group-justified { display: table; width: 100%; table-layout: fixed; border-collapse: separate; }
 .btn-group-justified > .btn, .btn-group-justified > .btn-group { float: none; display: table-cell; width: 1%; }
@@ -988,8 +988,8 @@ th.currency { text-align: center; }
 
 .btn-response { display: inline-block; margin-left: 10px; }
 
-.close { transition: color 0.5s; opacity: 1.0; filter: alpha(opacity=1); }
-.close:hover { opacity: 1.0; filter: alpha(opacity=1); }
+.close { transition: color 0.5s; opacity: 1; filter: alpha(opacity=1); }
+.close:hover { opacity: 1; filter: alpha(opacity=1); }
 
 .bootstrap-datetimepicker-widget td.active, .bootstrap-datetimepicker-widget td.active:hover { background-color: #a03f9b; }
 
