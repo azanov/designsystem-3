@@ -230,7 +230,7 @@ gulp.task('watch', function() {
 
   // Watch .scss files
   gulp.watch(
-    ['app/assets/sass/**/*.scss'], ['sass']);
+    ['app/assets/sass/**/*.scss', 'app/modules/**/*.scss'], ['sass']);
 
   gulp.watch(
     [

@@ -1,0 +1,48 @@
+.toolbar {
+
+  .btn-link {
+    text-decoration: none;
+
+    &.dropdown-toggle {
+      border-color: transparent;
+      color: $pb-gray;
+
+      &:hover {
+        background-color: transparent;
+      }
+
+    }
+  }
+
+  .dropdown-toggle {
+    color: $pb-gray;
+    border-color: $pb-gray-300;
+
+    &:hover {
+      color: $pb-gray;
+      background-color: $pb-gray-50;
+    }
+
+  }
+  .input-group-btn {
+    &.open {
+      color: #fff;
+
+      .dropdown-toggle {
+        color: #fff;
+      }
+
+    }
+  }
+}
+
+.table {
+
+  .table-details {
+
+    td {
+      background-color: $pb-gray-50;
+    }
+
+  }
+}
