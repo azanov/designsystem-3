@@ -1322,7 +1322,7 @@ input.cmn-toggle-round-flat:checked + label:after { margin-left: 50px; backgroun
 @media (max-width: 767px) { .signin .signin-footer .logo { text-align: center; }
   .signin .signin-footer .nav { text-align: center; padding-top: 10px; } }
 
-.toolbar .btn-link { text-decoration: none; }
+.toolbar .btn-link { text-decoration: none; color: #4e4e4e; }
 .toolbar .btn-link.dropdown-toggle { border-color: transparent; color: #4e4e4e; }
 .toolbar .btn-link.dropdown-toggle:hover { background-color: transparent; }
 .toolbar .dropdown-toggle { color: #4e4e4e; border-color: #9b9b9b; }
