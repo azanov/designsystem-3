@@ -3,7 +3,7 @@
 
 // Settings
 // ========================================
-@import "settings/settings";
+@import 'settings/settings';
 
 // Vendor
 // ========================================
@@ -17,7 +17,7 @@
 
 // Components
 // ========================================
-@import "components/list-group";
+@import 'components/list-group';
 @import 'components/accordion';
 @import 'components/breadcrumbs';
 @import 'components/footer';
@@ -53,5 +53,5 @@
 // Modules
 // ========================================
 
-@import "../../modules/pages/sass/_signin.scss";
-@import "../../modules/tables/sass/_datatables.scss";
+@import '../../modules/pages/sass/signin';
+@import '../../modules/tables/sass/datatables';
