@@ -7,9 +7,9 @@
 
 
 
-    <div class="row toolbar spacer-top-lg spacer-bottom-lg">
+    <div class="row toolbar spacer-top-md spacer-bottom-md">
 
-      <div class="col-md-6">
+      <div class="col-md-3">
         <div class="btn-group">
           <button type="button" class="btn btn-default">
             <i class="fa fa-fw fa-plus"></i>
@@ -23,7 +23,7 @@
         </div>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-9">
 
           <form class="form-inline pull-right">
 
@@ -116,13 +116,22 @@
 
       <div class="col-md-12">
 
-    <table class="table">
+    <table class="table table-hover">
       <thead>
         <tr>
           <th>&nbsp;</th>
           <th><input type="checkbox"></th>
-          <th>Header <i class="fa fa-fw fa-sort-desc"></i></th>
-          <th>Header</th>
+          <th>&nbsp;</th>
+          <th>
+            <a href="" ng-click="datatable.sort('first_name')">Header
+              <i class="fa fa-fw" ng-if="datatable.sortType === 'first_name'" ng-class="{'fa-sort-desc': !datatable.sortReverse, 'fa-sort-asc': datatable.sortReverse}"></i>
+            </a>
+          </th>
+          <th>
+            <a href="" ng-click="datatable.sort('last_name')">Header
+              <i class="fa fa-fw" ng-if="datatable.sortType === 'last_name'" ng-class="{'fa-sort-desc': !datatable.sortReverse, 'fa-sort-asc': datatable.sortReverse}"></i>
+            </a>
+          </th>
           <th>Header</th>
           <th>Header</th>
           <th>Header</th>
@@ -131,9 +140,14 @@
       </thead>
 
       <tbody>
-        <tr ng-repeat="item in datatable.data">
-          <td><a href=""><i class="fa fa-fw fa-angle-right"></i></a></td>
+        <tr ng-repeat-start="item in datatable.data | orderBy:datatable.sortType:datatable.sortReverse">
+          <td>
+            <a href="" ng-init="item.showDetails = false" ng-click="item.showDetails = !item.showDetails">
+              <i class="fa fa-fw fa-angle-right fa-transition" ng-class="{'fa-rotate-90': item.showDetails}"></i>
+            </a>
+          </td>
           <td><input type="checkbox"></td>
+          <td><i class="fa fa-fw fa-user"></i></td>
           <td>{{item.first_name}}</td>
           <td>{{item.last_name}}</td>
           <td><a href="">{{item.email}}</a></td>
@@ -155,9 +169,12 @@
             </div>
           </td>
         </tr>
-        <tr class="table-details">
-          <td colspan="8">
-            <div style="height: 100px;">
+        <tr class="table-details" ng-repeat-end="item in datatable.data">
+          <td colspan="9">
+            <div collapse="!item.showDetails">
+              <div class="table-details-content">
+                <h1>Sample details {{$index}} here. {{item.first_name}}</h1>
+              </div>
             </div>
           </td>
         </tr>
