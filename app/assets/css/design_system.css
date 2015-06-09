@@ -1329,6 +1329,9 @@ input.cmn-toggle-round-flat:checked + label:after { margin-left: 50px; backgroun
 .toolbar .dropdown-toggle:hover { color: #4e4e4e; background-color: #f0f0f0; }
 .toolbar .input-group-btn.open { color: #fff; }
 .toolbar .input-group-btn.open .dropdown-toggle { color: #fff; }
+.toolbar .search { border-top-right-radius: 5px !important; border-bottom-right-radius: 5px !important; padding-right: 25px; }
+.toolbar .search:not(:valid) ~ .search-clear { opacity: 0; transition: all .3s ease-in-out; }
+.toolbar .search-clear { position: absolute; padding-right: 3px; padding-left: 0; right: 0; z-index: 10; color: #4e4e4e; opacity: 1; transition: all .3s ease-in-out; }
 
 .table .table-details td { background-color: #f0f0f0; }
 

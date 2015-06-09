@@ -34,6 +34,30 @@
 
     }
   }
+
+  .search {
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    padding-right: 25px;
+
+      &:not(:valid) ~ .search-clear {
+        opacity: 0;
+        transition: all .3s ease-in-out;
+      }
+    }
+
+  .search-clear {
+    position: absolute;
+    padding-right: 3px;
+    padding-left: 0;
+    right: 0;
+    z-index: 10;
+    color: $pb-gray;
+    opacity: 1;
+    transition: all .3s ease-in-out;
+  }
+
+
 }
 
 .table {
