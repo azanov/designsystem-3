@@ -16,9 +16,12 @@
     'toggle-switch',
     'toastr',
     'ui.bootstrap',
+    'ui.utils',
     'ui-rangeSlider',
     'chart.js',
-    'stpa.morris'
+    'stpa.morris',
+    'daterangepicker',
+    'angularMoment'
     ]);
 
 })();
