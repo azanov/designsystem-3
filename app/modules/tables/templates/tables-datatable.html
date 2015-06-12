@@ -14,10 +14,10 @@
         <button type="button" class="btn btn-default">
           <i class="fa fa-fw fa-plus"></i>
         </button>
-        <button type="button" class="btn btn-default">
+        <button ng-if="datatable.table.selectedRows.length" type="button" class="btn btn-default">
           <i class="fa fa-fw fa-trash-o"></i>
         </button>
-        <button type="button" class="btn btn-default">
+        <button ng-if="datatable.table.selectedRows.length === 1" type="button" class="btn btn-default">
           <i class="fa fa-fw fa-pencil"></i>
         </button>
       </div>
