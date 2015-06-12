@@ -63,6 +63,14 @@
 
 .table {
 
+  &.table-datatable {
+
+    thead tr th a {
+      color: #A03F9B;
+      text-decoration: none;
+    }
+  }
+
   .table-details {
 
     td {
