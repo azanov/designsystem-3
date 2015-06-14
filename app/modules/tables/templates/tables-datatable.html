@@ -102,25 +102,28 @@
             <th><input type="checkbox" ng-model="datatable.table.allRowsSelected" ng-click="datatable.table.selectAllRows()" ng-checked="datatable.table.selectAllFilteredRows()" /></th>
             <th>&nbsp;</th>
             <th>
-              <a href="" ng-click="datatable.table.sort.change('first_name')">Header
+              <a href="" ng-click="datatable.table.sort.change('first_name')">First Name
                 <i class="fa fa-fw fa-sort text-muted" ng-if="datatable.table.sort.type !== 'first_name'"></i>
                 <i class="fa fa-fw fa-sort" ng-if="datatable.table.sort.type === 'first_name'" ng-class="{'fa-sort-desc': !datatable.table.sort.reverse, 'fa-sort-asc': datatable.table.sort.reverse}"></i>
               </a>
             </th>
             <th>
-              <a href="" ng-click="datatable.table.sort.change('last_name')">Header
+              <a href="" ng-click="datatable.table.sort.change('last_name')">Last Name
                 <i class="fa fa-fw fa-sort text-muted" ng-if="datatable.table.sort.type !== 'last_name'"></i>
                 <i class="fa fa-fw" ng-if="datatable.table.sort.type === 'last_name'" ng-class="{'fa-sort-desc': !datatable.table.sort.reverse, 'fa-sort-asc': datatable.table.sort.reverse}"></i>
               </a>
             </th>
-            <th>Header</th>
-            <th>Header</th>
-            <th>Header</th>
+            <th>Email</th>
+            <th>Country</th>
+            <th>IP Address</th>
             <th>&nbsp;</th>
           </tr>
         </thead>
 
         <tbody>
+          <tr ng-if="!datatable.table.dataFiltered.length">
+            <td colspan="9" class="text-center">There are no results.</td>
+          </tr>
           <tr ng-repeat-start="item in datatable.table.dataFiltered = (datatable.table.data | orderBy:datatable.table.sort.type:datatable.table.sort.reverse | filter: datatable.table.search )">
             <td>
               <a href="" ng-init="item.showDetails = false" ng-click="item.showDetails = !item.showDetails">
