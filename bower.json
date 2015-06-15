@@ -37,7 +37,8 @@
     "angular-toastr": "1.4.1",
     "angular-morris-chart": "1.0.2",
     "angular-daterangepicker": "0.1.15",
-    "angular-ui-utils": "bower"
+    "angular-ui-utils": "bower",
+    "angular-utils-pagination": "0.8.2"
   },
   "devDependencies": {},
   "resolutions": {

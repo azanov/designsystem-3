@@ -21,7 +21,8 @@
     'chart.js',
     'stpa.morris',
     'daterangepicker',
-    'angularMoment'
+    'angularMoment',
+    'angularUtils.directives.dirPagination'
     ]);
 
 })();

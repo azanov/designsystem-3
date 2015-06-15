@@ -98,7 +98,6 @@
         <thead>
           <tr>
             <th>&nbsp;</th>
-            <!-- <th><input type="checkbox"></th> -->
             <th><input type="checkbox" ng-model="datatable.table.allRowsSelected" ng-click="datatable.table.selectAllRows()" ng-checked="datatable.table.selectAllFilteredRows()" /></th>
             <th>&nbsp;</th>
             <th>
@@ -124,7 +123,7 @@
           <tr ng-if="!datatable.table.dataFiltered.length">
             <td colspan="9" class="text-center">There are no results.</td>
           </tr>
-          <tr ng-repeat-start="item in datatable.table.dataFiltered = (datatable.table.data | orderBy:datatable.table.sort.type:datatable.table.sort.reverse | filter: datatable.table.search )">
+          <tr dir-paginate-start="item in datatable.table.dataFiltered = (datatable.table.data | orderBy:datatable.table.sort.type:datatable.table.sort.reverse | filter: datatable.table.search | itemsPerPage: datatable.table.paging.size )">
             <td>
               <a href="" ng-init="item.showDetails = false" ng-click="item.showDetails = !item.showDetails">
                 <i class="fa fa-fw fa-angle-right fa-transition" ng-class="{'fa-rotate-90': item.showDetails}"></i>
@@ -153,7 +152,7 @@
               </div>
             </td>
           </tr>
-          <tr class="table-details" ng-repeat-end="item in datatable.table.data">
+          <tr class="table-details" dir-paginate-end="item in datatable.table.data">
             <td colspan="9">
               <div collapse="!item.showDetails">
                 <div class="table-details-content">
@@ -164,6 +163,22 @@
           </tr>
         </tbody>
       </table>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-4">
+      <form class="form-inline">
+        <select class="form-control" ng-model="datatable.table.paging.size" ng-options="size as size for size in datatable.table.paging.sizes"></select>
+      </form>
+    </div>
+
+    <div class="col-md-8 text-right">
+
+      <div dir-pagination-controls boundary-links="true" template-url="modules/tables/templates/tables-datatable-dirPaginate.html"></div>
 
     </div>
 

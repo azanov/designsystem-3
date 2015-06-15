@@ -18,6 +18,10 @@
           _this.table.sort.reverse = !_this.table.sort.reverse;
         }
       },
+      paging: {
+        size: 5,
+        sizes: [5, 10, 20, 25, 50]
+      },
       search: {
 
       },
