@@ -114,7 +114,6 @@
             </th>
             <th>Email</th>
             <th>Country</th>
-            <th>IP Address</th>
             <th>Created</th>
             <th>Groups</th>
             <th>&nbsp;</th>
@@ -137,10 +136,13 @@
             <td>{{item.last_name}}</td>
             <td><a href="">{{item.email}}</a></td>
             <td>{{item.country}}</td>
-            <td>{{item.ip_address}}</td>
             <td>{{item.date.created | date:'MM/dd/yyyy'}}</td>
             <td>
-              <span ng-repeat="group in item.groups track by $index">{{group}}<span ng-if="!$last">, </span></span>
+              <span ng-repeat="group in (item.groups | orderBy: group | limitTo: item.limit || datatable.table.groups.min) track by $index">{{group}}<span ng-if="!$last">, </span></span>
+              <div>
+                <a class="small" href="" ng-if="item.groups.length > datatable.table.groups.min" ng-show="!item.limit" ng-click="item.limit = datatable.table.groups.max">Show all</a>
+                <a class="small" href="" ng-show="item.limit" ng-click="item.limit = undefined">Show less</a>
+              </div>
             </td>
             <td>
               <div class="dropdown pull-right">
@@ -148,18 +150,14 @@
                   <i class="fa fa-fw fa-gear"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                  <li class="dropdown-header">Dropdown header</li>
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
+                  <li><a href="">Edit</a></li>
+                  <li><a href="">Delete</a></li>
                 </ul>
               </div>
             </td>
           </tr>
           <tr class="table-details" dir-paginate-end="item in datatable.table.data">
-            <td colspan="11">
+            <td colspan="10">
               <div collapse="!item.showDetails">
                 <div class="table-details-content">
                   <h1>Sample details {{$index}} here. {{item.first_name}}</h1>

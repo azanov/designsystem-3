@@ -22,6 +22,10 @@
         size: 10,
         sizes: [10, 25, 50, 100]
       },
+      groups: {
+        min: 10,
+        max: 'Infinity'
+      },
       search: {
 
       },
@@ -85,6 +89,9 @@
 
   });
 
+
+  //TODO: this filter hasndles the daterange and should be moved to the core/filters
+  //NOTE: may want to change filter name, this handles a single date in the object
   angular.module('pb.ds.tables').filter('daterange', function($log, moment) {
     return function(items, start, end) {
       //$log.debug('FROM:', moment(start).unix(), 'TO:', moment(end).unix());
