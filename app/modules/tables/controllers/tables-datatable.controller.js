@@ -9,7 +9,7 @@
 
 
     _this.table = {
-      data: MockDataFactory.query({filename: 'people_10'}),
+      data: MockDataFactory.query({filename: 'ds_users'}),
       sort: {
         type: 'first_name',
         reverse: false,
@@ -19,8 +19,8 @@
         }
       },
       paging: {
-        size: 5,
-        sizes: [5, 10, 20, 25, 50]
+        size: 10,
+        sizes: [10, 25, 50, 100]
       },
       search: {
 
@@ -66,8 +66,8 @@
       },
       daterangepicker: {
         date: {
-          startDate: moment(),
-          endDate: moment()
+          startDate: moment().startOf('month'),
+          endDate: moment().endOf('month')
         },
         options: {
           singleDatePicker: false,
@@ -83,6 +83,29 @@
       }
     };
 
+  });
+
+  angular.module('pb.ds.tables').filter('daterange', function($log, moment) {
+    return function(items, start, end) {
+      //$log.debug('FROM:', moment(start).unix(), 'TO:', moment(end).unix());
+
+      var dateStart = moment(start).unix();
+      var dateEnd = moment(end).unix();
+
+      var result = [];
+
+      angular.forEach(items, function(value, index) {
+        //$log.debug(value, index);
+        var itemDate = moment(value.date.created).unix();
+
+        if (itemDate > dateStart && itemDate < dateEnd) {
+          result.push(value);
+        }
+      });
+
+      return result;
+
+    };
   });
 
 })();

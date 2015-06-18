@@ -41,7 +41,7 @@
               <a ng-click="datatable.table.search.country = ''">Show all</a>
             </li>
             <li class="divider"></li>
-            <li ng-repeat="item in datatable.table.data | unique: 'country'">
+            <li ng-repeat="item in datatable.table.data | unique: 'country' | orderBy:'country'">
               <a ng-click="datatable.table.search.country = item.country">{{item.country}}</a>
             </li>
           </ul>
@@ -115,6 +115,8 @@
             <th>Email</th>
             <th>Country</th>
             <th>IP Address</th>
+            <th>Created</th>
+            <th>Groups</th>
             <th>&nbsp;</th>
           </tr>
         </thead>
@@ -123,7 +125,7 @@
           <tr ng-if="!datatable.table.dataFiltered.length">
             <td colspan="9" class="text-center">There are no results.</td>
           </tr>
-          <tr dir-paginate-start="item in datatable.table.dataFiltered = (datatable.table.data | orderBy:datatable.table.sort.type:datatable.table.sort.reverse | filter: datatable.table.search | itemsPerPage: datatable.table.paging.size )">
+          <tr dir-paginate-start="item in datatable.table.dataFiltered = (datatable.table.data | orderBy:datatable.table.sort.type:datatable.table.sort.reverse | filter: datatable.table.search | daterange:datatable.table.daterangepicker.date.startDate:datatable.table.daterangepicker.date.endDate | itemsPerPage: datatable.table.paging.size )">
             <td>
               <a href="" ng-init="item.showDetails = false" ng-click="item.showDetails = !item.showDetails">
                 <i class="fa fa-fw fa-angle-right fa-transition" ng-class="{'fa-rotate-90': item.showDetails}"></i>
@@ -136,6 +138,10 @@
             <td><a href="">{{item.email}}</a></td>
             <td>{{item.country}}</td>
             <td>{{item.ip_address}}</td>
+            <td>{{item.date.created | date:'MM/dd/yyyy'}}</td>
+            <td>
+              <span ng-repeat="group in item.groups track by $index">{{group}}<span ng-if="!$last">, </span></span>
+            </td>
             <td>
               <div class="dropdown pull-right">
                 <a class="dropdown-toggle" data-toggle="dropdown">
@@ -153,7 +159,7 @@
             </td>
           </tr>
           <tr class="table-details" dir-paginate-end="item in datatable.table.data">
-            <td colspan="9">
+            <td colspan="11">
               <div collapse="!item.showDetails">
                 <div class="table-details-content">
                   <h1>Sample details {{$index}} here. {{item.first_name}}</h1>
@@ -168,7 +174,7 @@
 
   </div>
 
-  <div class="row">
+  <div class="row spacer-top-lg">
 
     <div class="col-md-4">
       <form class="form-inline">
