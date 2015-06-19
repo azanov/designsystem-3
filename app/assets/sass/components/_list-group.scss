@@ -1,5 +1,5 @@
 a.list-group-item {
-  @extend %ps-regular;
+  font-family: $font-family-ps-regular;
   font-size: 16px;
   border: 0;
   border-radius: 0;
@@ -27,4 +27,3 @@ a.list-group-item {
     }
   }
 }
-

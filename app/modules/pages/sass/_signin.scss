@@ -9,8 +9,7 @@
     bottom: 0;
     right: 0;
     background-color: #254d9d;
-    background: -webkit-linear-gradient(-45deg, #4cc6f3 0%, #32b1e5 10%, #254d9d 53%, #bc278d 100%);
-    background: linear-gradient(135deg, #4cc6f3 0%, #32b1e5 10%, #254d9d 53%, #bc278d 100%);
+    background: linear-gradient(135deg, #4cc6f3 0%, #32b1e5 10%, $pb-blue 53%, $pb-magenta 100%);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -27,20 +26,20 @@
     }
   }
   .prod-name {
-    @extend %ps-bold;
+    font-family: $font-family-ps-bold;
     font-size: 24px;
-    color: $brand-secondary;
+    color: $pb-blue;
     padding-bottom: 20px;
     margin-bottom: 20px;
-    border-bottom: 1px solid $brand-secondary;
+    border-bottom: 1px solid $pb-blue;
   }
   .title {
-    @extend %ps-light;
+    font-family: $font-family-ps-light;
     font-size: 32px;
-    color: $brand-primary;
+    color: $pb-magenta;
   }
   .signin-footer {
-    color: tint($brand-primary, 50%);
+    color: tint($pb-magenta, 50%);
     margin-top: 20px;
     a {
       color: inherit;

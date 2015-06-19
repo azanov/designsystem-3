@@ -1,5 +1,3 @@
-/* -- THIS FILE CONTAINS STYLES FOR THE LIVE PREVIEW SITE ONLY!                         */
-/* -- THESE STYLES ARE NOT MEANT TO BE USED ON PROJECTS, ONLY USE THE DESIGN_SYSTEM.CSS */
 .bg-pbcyan-50 { background-color: #e5f5fc; }
 
 .bg-pbcyan-100 { background-color: #ccebf9; }
@@ -409,16 +407,6 @@
 @font-face { font-family: 'PrecisionSans_W_Md'; font-weight: '500'; font-style: 'normal'; src: url("../fonts/PrecisionSans_W_Md.eot"); src: url("../fonts/PrecisionSans_W_Md.eot?#iefix") format("embedded-opentype"), url("../fonts/PrecisionSans_W_Md.woff") format("woff"), url("../fonts/PrecisionSans_W_Md.ttf") format("truetype"), url("../fonts/PrecisionSans_W_Md.svg#PrecisionSans_W_Md") format("svg"); }
 @font-face { font-family: 'PrecisionSans_W_MdIt'; font-weight: '500'; font-style: 'italic'; src: url("../fonts/PrecisionSans_W_MdIt.eot"); src: url("../fonts/PrecisionSans_W_MdIt.eot?#iefix") format("embedded-opentype"), url("../fonts/PrecisionSans_W_MdIt.woff") format("woff"), url("../fonts/PrecisionSans_W_MdIt.ttf") format("truetype"), url("../fonts/PrecisionSans_W_MdIt.svg#PrecisionSans_W_MdIt") format("svg"); }
 @font-face { font-family: 'pbfont'; font-weight: normal; font-style: normal; src: url("../fonts/pbfont.eot"); src: url("../fonts/pbfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pbfont.woff") format("woff"), url("../fonts/pbfont.ttf") format("truetype"), url("../fonts/pbfont.svg#pbfont") format("svg"); }
-.ps-light, .hero .hero-unit h1, .hero .hero-unit h2, .hero .hero-menu > li ul li, h4 .more-info, h1 .more-info, h3 .more-info, legend .more-info { font-family: 'PrecisionSans_W_Lt', Arial, sans-serif; font-weight: 300; font-style: normal; }
-
-.ps-light.italic, .ps-light em, .ps-light i { font-family: 'PrecisionSans_W_LtIt', Arial, sans-serif; font-weight: 300; font-style: normal; }
-
-p.lead, p.lede, .btn, .nav-tabs > li > a, .nav-pills > li > a, .panel-heading, #header .navbar .navbar-brand.brand-text, #header .navbar .container .navbar-brand.brand-text, header .navbar .navbar-brand.brand-text, header .navbar .container .navbar-brand.brand-text, .nav.navbar-nav, .hero .hero-menu > li { font-family: 'PrecisionSans_W_Rg', Arial, sans-serif; font-weight: 400; font-style: normal; }
-
-.ps-light b, .ps-light strong { font-family: 'PrecisionSans_W_Md', Arial, sans-serif; font-weight: 500; font-style: normal; }
-
-.media-heading { font-family: 'PrecisionSans_W_Bd', Arial, sans-serif; font-weight: normal; font-style: normal; }
-
 .serif, .serif p { font-family: Georgia, Times, "Times New Roman", serif; }
 
 .sans, .sans p { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
@@ -432,25 +420,25 @@ a:hover { color: tint(#0072b8, 20%); }
 a.read-more { font-size: 12px; white-space: nowrap; }
 a.read-more:after { content: '\2026'; }
 
-h1 { font-size: 32px; }
+h1, .h1 { font-size: 36px; font-weight: normal; font-family: 'PrecisionSans_W_Lt', Arial, sans-serif; color: #cf0989; }
 
-h2 { font-size: 28px; }
+h2 { font-size: 20px; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-weight: normal; color: #3e53a4; }
 
-h3 { font-size: 24px; }
+h3 { font-size: 16px; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-weight: normal; color: #3e53a4; }
 
-h4 { font-size: 18px; }
+h4 { font-size: 16px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: bold; color: #4e4e4e; }
 
-h5 { font-size: 16px; }
+h5 { font-size: 14px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: bold; color: #4e4e4e; }
 
-h6 { font-size: 14px; }
+h6 { font-size: 12px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: bold; color: #4e4e4e; }
 
-h1, h1 a, h2, h2 a, h3, h3 a { font-family: "PrecisionSans_W_Lt", "Helveticia Neue", Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.1; -webkit-font-variant-ligatures: common-ligatures; font-variant-ligatures: common-ligatures; color: #a03f9b; }
+.ps-light { font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; font-weight: normal; font-style: normal; }
+.ps-light.italic, .ps-light em, .ps-light i { font-family: "PrecisionSans_W_LtIt", "Helvetica Neue", Arial, sans-serif; }
+.ps-light b, .ps-light strong { font-family: "PrecisionSans_W_Md", "Helvetica Neue", Arial, sans-serif; }
 
-h4, h4 a, h5, h5 a, h6, h6 a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: bold; color: #4e4e4e; }
+p.lead, p.lede { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-size: 16px; }
 
-p.lead, p.lede { font-size: 16px; }
-
-.media-heading { font-weight: normal; }
+.media-heading { font-family: "PrecisionSans_W_Bd", "Helvetica Neue", Arial, sans-serif; font-weight: normal; }
 
 body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; color: #4e4e4e; }
 body .has-error { color: #c00; }
@@ -468,17 +456,22 @@ ul, ol { margin-top: 0; margin-bottom: 10px; margin-left: 0; padding-left: 1.5em
 
 .btn:focus { outline: none !important; }
 
+.btn { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
 .fa-active { color: #a03f9b; }
+
+.nav-tabs > li > a, .nav-pills > li > a { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; }
 
 .help-block { color: #717171; }
 
 label { font-size: 14px; font-weight: normal; color: #4e4e4e; }
 
+.panel-heading { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; }
 .panel-heading td, .panel-heading th { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-#header .navbar .navbar-brand.brand-text, #header .navbar .container .navbar-brand.brand-text, header .navbar .navbar-brand.brand-text, header .navbar .container .navbar-brand.brand-text { font-weight: 400 !important; }
+#header .navbar .navbar-brand.brand-text, #header .navbar .container .navbar-brand.brand-text, header .navbar .navbar-brand.brand-text, header .navbar .container .navbar-brand.brand-text { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-weight: normal; }
 
-.nav.navbar-nav { font-size: 16px; }
+.nav.navbar-nav { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-weight: normal; font-size: 16px; }
 
 .checkboxList span, a.list-group-item { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; }
 
@@ -486,7 +479,7 @@ small, .small { font-size: 85%; }
 
 cite { font-style: normal; }
 
-.text-large { font-size: 18px; }
+.text-large { font-size: 16px; }
 
 .text-small { font-size: 12px; }
 
@@ -536,15 +529,15 @@ cite { font-style: normal; }
 .home .site-content { background-color: #254d9d; background: linear-gradient(135deg, #4cc6f3 0%, #32b1e5 10%, #254d9d 53%, #bc278d 100%); background-size: cover; background-repeat: no-repeat; }
 
 .hero .hero-unit { margin-top: 50px; color: #fff; border-top: 2px solid #fff; }
-.hero .hero-unit h1 { font-size: 36px; padding-top: 10px; color: #fff; }
-.hero .hero-unit h2 { font-size: 18px; padding-bottom: 10px; line-height: 1.3; color: #fff; }
+.hero .hero-unit h1 { font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; font-size: 36px; padding-top: 10px; color: #fff; }
+.hero .hero-unit h2 { font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; font-size: 18px; padding-bottom: 10px; line-height: 1.3; color: #fff; }
 .hero .hero-menu { padding-left: 0; list-style-type: none; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); }
-.hero .hero-menu > li { font-size: 18px; margin-top: 10px; padding-top: 5px; border-top: 1px solid #e0b1de; }
+.hero .hero-menu > li { @font-family : $font-family-ps-light; font-size: 18px; margin-top: 10px; padding-top: 5px; border-top: 1px solid #e0b1de; }
 .hero .hero-menu > li:first-child { margin-top: 0; }
 .hero .hero-menu > li a { color: #e0b1de; }
 .hero .hero-menu > li a:hover { text-decoration: none; }
 .hero .hero-menu > li ul { margin-top: 5px; padding-left: 0; list-style-type: none; -webkit-column-count: 4; -moz-column-count: 4; column-count: 4; -webkit-column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid; }
-.hero .hero-menu > li ul li { line-height: 1.35; }
+.hero .hero-menu > li ul li { font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; line-height: 1.35; }
 .hero .hero-menu > li ul li a { color: #fff; }
 .hero .hero-menu .dropdown-header, .hero .hero-menu .divider, .hero .hero-menu .optional { display: none; }
 
@@ -554,7 +547,7 @@ section.row { margin-bottom: 60px; }
 
 .page-header { margin-top: 60px; }
 
-h4 .more-info, h1 .more-info, h3 .more-info, legend .more-info { font-size: 14px; font-weight: normal; margin-top: 10px; margin-left: 30px; display: inline-block; text-transform: lowercase; }
+h4 .more-info, h1 .more-info, h3 .more-info, legend .more-info { font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-weight: normal; margin-top: 10px; margin-left: 30px; display: inline-block; text-transform: lowercase; }
 h4 .more-info a, h1 .more-info a, h3 .more-info a, legend .more-info a { color: #0072b8; font-weight: normal; }
 
 h6.sh { clear: both; margin-top: 40px; }
@@ -685,6 +678,4 @@ ul.swatches li.color-swatch:nth-child(n+6) { color: #fff; }
 
 .chord-display { margin-bottom: 20px; }
 
-
-
-/*# sourceMappingURL=maps/live_preview.css.map */
+/*# sourceMappingURL=live_preview.css.map */
