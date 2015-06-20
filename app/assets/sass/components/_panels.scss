@@ -6,7 +6,7 @@
   &.panel-default {
     border-color: $nav-tabs-border-color;
     .panel-heading {
-      background-color: tint($brand-secondary, 10%);;
+      background-color: tint($pb-blue-300, 10%);;
       border-bottom-color: $nav-tabs-border-color;
     }
   }
@@ -15,7 +15,7 @@
   font-weight: 700;
 }
 .panel-footer {
-  background-color: $pb-gray-50;
+  background-color: $pb-gray-200;
   border-top-color: $nav-tabs-border-color;
 }
 

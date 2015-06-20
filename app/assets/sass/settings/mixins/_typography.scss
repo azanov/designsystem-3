@@ -64,7 +64,7 @@ a {
   color: $link-color;
 
   &:hover {
-    color: $link-color-hover;
+    color: $link-hover;
   }
 
   &.read-more {
@@ -234,7 +234,7 @@ ol {
 }
 
 .fa-active {
-  color: $brand-primary;
+  color: $pb-magenta;
 }
 
 .nav-tabs > li > a,
@@ -243,13 +243,13 @@ ol {
 }
 
 .help-block {
-  color: $pb-gray-400;
+  color: $pb-gray-300;
 }
 
 label {
   font-size: 14px;
   font-weight: normal;
-  color: $pb-gray;
+  color: $pb-gray-500;
 }
 
 .panel-heading {

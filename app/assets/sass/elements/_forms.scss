@@ -6,7 +6,7 @@
   height: 83px;
   label {
     margin-bottom: 0;
-    color: $pb-gray;
+    color: $pb-gray-500;
   }
   .ms-checkboxitem {
     margin-bottom: 2px;
@@ -22,7 +22,7 @@
 fieldset {
   margin-top: 40px;
   legend {
-    color: $pb-gray;
+    color: $pb-gray-500;
   }
 }
 .form-control {
@@ -54,7 +54,7 @@ fieldset[disabled] .form-control.timepicker {
 }
 
 .input-group-addon {
-  background-color: $pb-gray-50;
+  background-color: $pb-gray-200;
   border-color: $input-border;
 }
 

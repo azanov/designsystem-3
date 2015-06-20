@@ -19,7 +19,6 @@
 }
 
 .onoffswitch-inner {
-  -webkit-transition: margin .3s ease-in 0s;
   transition: margin .3s ease-in 0s;
   display: block;
   margin-left: -100%;
@@ -43,24 +42,23 @@
 }
 
 .onoffswitch-inner:before {
-  background-color: $brand-secondary;
+  background-color: $pb-blue;
   color: #fff;
   content: '';
   padding-left: 10px;
 }
 
 .onoffswitch-inner:after {
-  background-color: $pb-gray-50;
-  color: $pb-gray;
+  background-color: $pb-gray-200;
+  color: $pb-gray-500;
   content: '';
   padding-right: 10px;
   text-align: right;
 }
 
 .onoffswitch-switch {
-  -webkit-transition: all .3s ease-in 0s;
   transition        : all .3s ease-in 0s;
-   background-color: $pb-gray-50;
+   background-color: $pb-gray-200;
   border            : 1px solid $input-border;
   border-radius     : 5px;
   bottom            : 0;

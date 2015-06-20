@@ -1,23 +1,22 @@
 //*/ Buttons */
 // --------------------------------------------------
 
-//*/ $button-primary-color is set in _variables.scss
 
 .btn-primary {
-  @include button-variant(#fff, $button-primary-color, $button-primary-color);
+  @include button-variant(#fff, $button-primary, $button-primary);
 }
 
 .btn-default {
-  @include button-variant($button-primary-color, transparent, $button-primary-color);
+  @include button-variant($button-primary, transparent, $button-primary);
 }
 
 .btn-group .btn-default,
 .btn-group-vertical .btn-default {
-  @include tertiary-button-variant($button-tertiary-color, #fff, $pb-gray-300);
+  @include button-variant($button-primary, transparent, $button-primary);
 }
 
 .btn-group-borderless .btn-default {
-  @include tertiary-button-variant($button-tertiary-color, #fff, $pb-gray-300);
+  @include button-variant($button-primary, transparent, $button-primary);
 }
 
 .btn-default-ko {
@@ -47,7 +46,7 @@
 // Make a button look and behave like a link
 .btn-link,
 .btn-cancel {
-  color: $button-primary-color;
+  color: $button-primary;
   font-weight: normal;
   border-radius: 0;
   &,
@@ -59,21 +58,24 @@
   }
   &,
   &:hover,
+  &.hover,
   &:focus,
   &:active {
     border-color: transparent;
   }
   &:hover,
+  &.hover,
   &:focus {
-    color: $button-primary-color !important;
+    color: $button-primary;
     text-decoration: underline;
     background-color: transparent;
   }
   &[disabled],
   fieldset[disabled] & {
     &:hover,
+    &.hover,
     &:focus {
-      color: $button-primary-color;
+      color: $button-primary;
       text-decoration: none;
     }
   }
@@ -97,8 +99,8 @@
 // i give up, bootstrap, here you go
 .open>.dropdown-toggle.btn-default {
   color: #fff;
-  background-color: $button-tertiary-color;
-  border-color: $button-tertiary-color;
+  background-color: $pb-blue-300;
+  border-color: $pb-blue;
   box-shadow: none;
 }
 // just to remove the BS inset shadows
@@ -112,7 +114,7 @@
 .dropdown-menu>li>a:hover {
   color: $text-color;
   text-decoration: none;
-  background-color: $pb-gray-100;
+  background-color: $pb-gray-200;
 }
 // font awesome icon size overrides in button groups
 .btn-group {
