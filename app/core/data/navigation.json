@@ -118,6 +118,9 @@
     "value": "",
     "toggle": "dropdown",
     "children": [{
+      "label": "Style Guide",
+      "value": "brand.styleguide"
+    },{
       "label": "Color",
       "value": "brand.color"
     }, {

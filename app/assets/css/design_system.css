@@ -957,7 +957,7 @@ th.currency { text-align: center; }
 .btn-link:hover, .btn-link:focus, .btn-cancel:hover, .btn-cancel:focus { color: #0072b8 !important; text-decoration: underline; background-color: transparent; }
 .btn-link[disabled]:hover, .btn-link[disabled]:focus, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:focus, .btn-cancel[disabled]:hover, .btn-cancel[disabled]:focus, fieldset[disabled] .btn-cancel:hover, fieldset[disabled] .btn-cancel:focus { color: #0072b8; text-decoration: none; }
 
-.btn-lg { padding: 10px 16px; font-size: 16px; line-height: 1.3333333; border-radius: 4px; }
+.btn-lg { padding: 10px 16px; font-size: 16px; line-height: 1.33333; border-radius: 4px; }
 
 .btn-sm { padding: 5px 10px; font-size: 12px; line-height: 1.5; border-radius: 2px; }
 
@@ -1139,7 +1139,7 @@ select[disabled] { color: #9b9b9b !important; }
   .MessageBoxMiddle { left: 0; padding: 3px; position: relative; width: 100%; }
   .MessageBoxContainer { background-color: #232323; color: #fff; position: relative; top: 25%; width: 100%; } }
 .animated { -moz-animation-duration: 1s; -moz-animation-fill-mode: both; -o-animation-duration: 1s; -o-animation-fill-mode: both; -webkit-animation-duration: 1s; -webkit-animation-fill-mode: both; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
-.animated.fast { -webkit-animation-duration: 0.4s; animation-duration: 0.4s; }
+.animated.fast { -ms-animation-duration: 0.4s; -webkit-animation-duration: 0.4s; animation-duration: 0.4s; }
 
 @-webkit-keyframes fadeIn { 0% { opacity: 0; }
   100% { opacity: 1; } }
@@ -1335,4 +1335,6 @@ input.cmn-toggle-round-flat:checked + label:after { margin-left: 50px; backgroun
 
 .fa-transition { transition: all .2s ease; }
 
-/*# sourceMappingURL=design_system.css.map */
+
+
+/*# sourceMappingURL=maps/design_system.css.map */
