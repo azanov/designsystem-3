@@ -1,4 +1,41 @@
 //* -- FORMS -- */
+::-webkit-input-placeholder {
+  font-family: $font-family-sans-serif;
+  color: #9b9b9b;
+}
+
+::-moz-placeholder {
+  font-family: $font-family-sans-serif;
+  color: #9b9b9b;
+}
+
+:-ms-input-placeholder {
+  font-family: $font-family-sans-serif;
+  color: #9b9b9b;
+}
+
+.checkbox-enhanced {
+input[type="checkbox"] {
+  display: none;
+}
+
+#foo:checked,
+input[type="checkbox"] + label::before {
+    content: url('../images/check-box-inactive.png');
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+input[type="checkbox"]:checked + label::before {
+    content: url('..//images/check-box-active.png');
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+}
+}
+
+
 
 .checkboxList {
   overflow-y: scroll;

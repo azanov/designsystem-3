@@ -3,14 +3,14 @@
 
 // $fg, $bg, $border, $disabled-fg, $disabled-bg, $hover-fg:$fg, $hover-bg:$bg
 .btn-primary {
-  @include button-variant(#fff, $button-primary, $button-primary, $pb-gray-300, $pb-gray-200, #fff, $pb-blue-700);
+  @include button-variant(#fff, $button-primary, $button-primary, $pb-gray-500, $pb-gray-200, #fff, $pb-blue-700);
 }
 
 .btn-default,
 .btn-cancel, .btn-link,
 .btn-group .btn-default,
 .btn-group-vertical .btn-default {
-  @include button-variant($button-primary, transparent, $button-primary, $pb-gray-300, $pb-gray-200, $button-primary, #d9dced);
+  @include button-variant($button-primary, transparent, $button-primary, $pb-gray-500, $pb-gray-200, $button-primary, #d9dced);
 }
 
 .btn-group-borderless .btn-default {
