@@ -1,88 +1,47 @@
 //*/ Buttons */
 // --------------------------------------------------
 
-
+// $fg, $bg, $border, $disabled-fg, $disabled-bg, $hover-fg:$fg, $hover-bg:$bg
 .btn-primary {
-  @include button-variant(#fff, $button-primary, $button-primary);
+  @include button-variant(#fff, $button-primary, $button-primary, $pb-gray-300, $pb-gray-200, #fff, $pb-blue-700);
 }
 
-.btn-default {
-  @include button-variant($button-primary, transparent, $button-primary);
-}
-
+.btn-default,
+.btn-cancel, .btn-link,
 .btn-group .btn-default,
 .btn-group-vertical .btn-default {
-  @include button-variant($button-primary, transparent, $button-primary);
+  @include button-variant($button-primary, transparent, $button-primary, $pb-gray-300, $pb-gray-200, $button-primary, #d9dced);
 }
 
 .btn-group-borderless .btn-default {
-  @include button-variant($button-primary, transparent, $button-primary);
+  @include button-variant($button-primary, transparent, $button-primary, $button-primary, $pb-blue-300, $pb-gray-300, $pb-gray-200);
 }
 
 .btn-default-ko {
-  @include button-variant(#fff, transparent, #fff);
+  @include button-variant(#fff, transparent, #fff, $pb-gray-300, $pb-gray-200);
 }
 
 .btn-success {
-  @include button-variant(#fff, $brand-success, $brand-success);
+  @include button-variant(#fff, $brand-success, $brand-success, $pb-gray-300, $pb-gray-200);
 }
 
 .btn-info {
-  @include button-variant(#fff, $brand-info, $brand-info);
+  @include button-variant(#fff, $brand-info, $brand-info, $pb-gray-300, $pb-gray-200);
 }
 
 .btn-warning {
-  @include button-variant(#fff, $brand-warning, $brand-warning);
+  @include button-variant(#fff, $brand-warning, $brand-warning, $pb-gray-300, $pb-gray-200);
 }
 
 .btn-danger {
-  @include button-variant(#fff, $brand-danger, $brand-danger);
+  @include button-variant(#fff, $brand-danger, $brand-danger, $pb-gray-300, $pb-gray-200);
 }
 
 .btn {
   font-size: 14px;
 }
 
-// Make a button look and behave like a link
-.btn-link,
-.btn-cancel {
-  color: $button-primary;
-  font-weight: normal;
-  border-radius: 0;
-  &,
-  &:active,
-  &.active,
-  &[disabled],
-  fieldset[disabled] & {
-    background-color: transparent;
-  }
-  &,
-  &:hover,
-  &.hover,
-  &:focus,
-  &:active {
-    border-color: transparent;
-  }
-  &:hover,
-  &.hover,
-  &:focus {
-    color: $button-primary;
-    text-decoration: underline;
-    background-color: transparent;
-  }
-  &[disabled],
-  fieldset[disabled] & {
-    &:hover,
-    &.hover,
-    &:focus {
-      color: $button-primary;
-      text-decoration: none;
-    }
-  }
-}
-// .btn-link:focus, .btn-link:hover {
-//   color: #bc56b7 !important;
-// }
+
 // -- sizing definitions
 .btn-lg {
   // line-height: ensure even-numbered height of button next to large input
