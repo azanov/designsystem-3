@@ -14,27 +14,71 @@
   color: #9b9b9b;
 }
 
-.checkbox-enhanced {
-input[type="checkbox"] {
-  display: none;
-}
 
-#foo:checked,
-input[type="checkbox"] + label::before {
+.checkbox-enhanced {
+  input[type="checkbox"] {
+    display: none;
+  }
+  .checkbox-inline {
+    padding-left: 0;
+  }
+
+  label {
+    padding-left: 0;
+  }
+
+
+  #foo:checked,
+  input[type="checkbox"] + label::before {
     content: url('../images/check-box-inactive.png');
     margin-right: 10px;
     vertical-align: middle;
     display: inline-block;
-}
+  }
 
-input[type="checkbox"]:checked + label::before {
+
+  input[type="checkbox"]:checked + label::before {
     content: url('..//images/check-box-active.png');
     margin-right: 10px;
     vertical-align: middle;
     display: inline-block;
-}
+  }
+
 }
 
+.radio-enhanced {
+  input[type="radio"] {
+    display: none;
+  }
+
+  .radio-inline {
+    padding-left: 0;
+  }
+
+  label {
+    padding-left: 0;
+  }
+
+
+
+
+  #foo:checked,
+  input[type="radio"] + label::before {
+    content: url('../images/radio-off.png');
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+
+  input[type="radio"]:checked + label::before {
+    content: url('..//images/radio-on.png');
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+}
 
 
 .checkboxList {
@@ -45,40 +89,54 @@ input[type="checkbox"]:checked + label::before {
     margin-bottom: 0;
     color: $pb-gray-500;
   }
-  .ms-checkboxitem {
+
+.ms-checkboxitem {
     margin-bottom: 2px;
   }
+
 }
+
 .help-block.text-error {
   display: none;
   .has-error & {
     display: block;
     color: $brand-danger;
   }
+
 }
+
 fieldset {
   margin-top: 40px;
   legend {
     color: $pb-gray-500;
   }
+
 }
+
 .form-control {
   border: 1px solid $input-border;
   box-shadow: none;
 }
+
 select[disabled] {
   color: lighten($text-color, 30%) !important;
 }
+
 .widget-header {
   h3 {
     font-family: $font-family-sans-serif;
   }
+
 }
+
 .has-error {
   .form-control {
     border-color: $brand-danger;
   }
+
 }
+
+
 // date and time picker
 .form-control[disabled].datepicker,
 .form-control[readonly].datepicker,
@@ -90,14 +148,17 @@ fieldset[disabled] .form-control.timepicker {
   background-color: #fff;
 }
 
+
 .input-group-addon {
   background-color: $pb-gray-200;
   border-color: $input-border;
 }
+
 
 .repeated-field {
   margin-bottom: 20px;
   &.last {
     margin-bottom: 3px;
   }
+
 }
