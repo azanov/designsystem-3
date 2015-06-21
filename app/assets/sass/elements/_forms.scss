@@ -19,7 +19,8 @@
   input[type="checkbox"] {
     display: none;
   }
-  .checkbox-inline {
+
+  &.checkbox-inline {
     padding-left: 0;
   }
 
@@ -30,7 +31,7 @@
 
   #foo:checked,
   input[type="checkbox"] + label::before {
-    content: url('../images/check-box-inactive.png');
+    content: url('../images/check-box-inactive.svg');
     margin-right: 10px;
     vertical-align: middle;
     display: inline-block;
@@ -38,7 +39,7 @@
 
 
   input[type="checkbox"]:checked + label::before {
-    content: url('..//images/check-box-active.png');
+    content: url('..//images/check-box-active.svg');
     margin-right: 10px;
     vertical-align: middle;
     display: inline-block;
@@ -51,7 +52,7 @@
     display: none;
   }
 
-  .radio-inline {
+  &.radio-inline {
     padding-left: 0;
   }
 
@@ -64,7 +65,7 @@
 
   #foo:checked,
   input[type="radio"] + label::before {
-    content: url('../images/radio-off.png');
+    content: url('../images/radio-off.svg');
     margin-right: 10px;
     vertical-align: middle;
     display: inline-block;
@@ -72,7 +73,7 @@
 
 
   input[type="radio"]:checked + label::before {
-    content: url('..//images/radio-on.png');
+    content: url('..//images/radio-on.svg');
     margin-right: 10px;
     vertical-align: middle;
     display: inline-block;

@@ -606,16 +606,16 @@ th.currency { text-align: center; }
 :-ms-input-placeholder { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: #9b9b9b; }
 
 .checkbox-enhanced input[type="checkbox"] { display: none; }
-.checkbox-enhanced .checkbox-inline { padding-left: 0; }
+.checkbox-enhanced.checkbox-inline { padding-left: 0; }
 .checkbox-enhanced label { padding-left: 0; }
-.checkbox-enhanced #foo:checked, .checkbox-enhanced input[type="checkbox"] + label::before { content: url("../images/check-box-inactive.png"); margin-right: 10px; vertical-align: middle; display: inline-block; }
-.checkbox-enhanced input[type="checkbox"]:checked + label::before { content: url("..//images/check-box-active.png"); margin-right: 10px; vertical-align: middle; display: inline-block; }
+.checkbox-enhanced #foo:checked, .checkbox-enhanced input[type="checkbox"] + label::before { content: url("../images/check-box-inactive.svg"); margin-right: 10px; vertical-align: middle; display: inline-block; }
+.checkbox-enhanced input[type="checkbox"]:checked + label::before { content: url("..//images/check-box-active.svg"); margin-right: 10px; vertical-align: middle; display: inline-block; }
 
 .radio-enhanced input[type="radio"] { display: none; }
-.radio-enhanced .radio-inline { padding-left: 0; }
+.radio-enhanced.radio-inline { padding-left: 0; }
 .radio-enhanced label { padding-left: 0; }
-.radio-enhanced #foo:checked, .radio-enhanced input[type="radio"] + label::before { content: url("../images/radio-off.png"); margin-right: 10px; vertical-align: middle; display: inline-block; }
-.radio-enhanced input[type="radio"]:checked + label::before { content: url("..//images/radio-on.png"); margin-right: 10px; vertical-align: middle; display: inline-block; }
+.radio-enhanced #foo:checked, .radio-enhanced input[type="radio"] + label::before { content: url("../images/radio-off.svg"); margin-right: 10px; vertical-align: middle; display: inline-block; }
+.radio-enhanced input[type="radio"]:checked + label::before { content: url("..//images/radio-on.svg"); margin-right: 10px; vertical-align: middle; display: inline-block; }
 
 .checkboxList { overflow-y: scroll; width: 100%; height: 83px; }
 .checkboxList label { margin-bottom: 0; color: #4e4e4e; }
