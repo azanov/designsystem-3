@@ -110,7 +110,7 @@ cite { font-style: normal; }
 
 .text-danger { color: #c00; }
 
-.styleguide header, .styleguide footer { display: none; }
+.styleguide footer { display: none; }
 .styleguide section { margin-top: 50px; }
 
 .clearfix { zoom: 1; }
