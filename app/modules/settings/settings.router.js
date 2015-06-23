@@ -9,7 +9,7 @@
       controller: 'SettingsController as settings',
       resolve: {
         translate: function($translatePartialLoader) {
-          $translatePartialLoader.addPart('/modules/settings/i18n');
+          $translatePartialLoader.addPart('modules/settings/i18n');
         },
         languages: function(languageFactory) {
           return languageFactory.get();
