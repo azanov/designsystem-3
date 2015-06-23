@@ -9,6 +9,7 @@
     'ngResource',
     'ngSanitize',
     'ui.router',
+    'headroom',
     'angular-loading-bar',
     'pascalprecht.translate',
     'tmh.dynamicLocale',

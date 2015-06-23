@@ -38,7 +38,8 @@
     "angular-morris-chart": "1.0.2",
     "angular-daterangepicker": "0.1.15",
     "angular-ui-utils": "bower",
-    "angular-utils-pagination": "0.8.2"
+    "angular-utils-pagination": "0.8.2",
+    "headroom.js": "0.7.0"
   },
   "devDependencies": {},
   "resolutions": {

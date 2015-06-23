@@ -29,6 +29,13 @@
     $compileProvider.debugInfoEnabled(config.debug);
   });
 
+  //ui-bootstrap tooltip
+  angular.module('app').config(function($tooltipProvider) {
+    $tooltipProvider.options({
+      appendToBody: true
+    });
+  });
+
   // UI ROUTER CONFIG
   angular.module('app').config(function($stateProvider) {
     $stateProvider.state('otherwise', {

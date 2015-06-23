@@ -44,4 +44,23 @@
 
   </div>
 
+  <div class="row spacer-top-xl">
+
+    <div class="col-xs-12">
+
+      <div class="form-group">
+        <label>Header Type</label>
+        <select class="form-control" ng-model="app.header" ng-options="type as type for type in settings.header.types"></select>
+      </div>
+
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="app.footer"> Show footer
+        </label>
+      </div>
+
+    </div>
+
+  </div>
+
 </div>

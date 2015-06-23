@@ -7,7 +7,7 @@
     var language = {};
 
     language.get = function() {
-      return $http.get('/core/config/languages.json');
+      return $http.get('core/config/languages.json');
     };
 
     language.getStored = function() {

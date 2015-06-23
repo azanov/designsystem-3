@@ -150,7 +150,7 @@ gulp.task('copy:json-core-data', [], function() {
 //copy localization json
 gulp.task('copy:json-i18n-data', [], function() {
   gulp.src([
-    './app/modules/**/i18n/**/*.json'
+    './app/modules/**/i18n/**/*.js'
     ])
     .pipe(gulp.dest('./build/modules'));
 });
