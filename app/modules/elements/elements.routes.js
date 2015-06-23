@@ -36,7 +36,9 @@
       controller: 'ChartColorsController as charts',
       resolve: {
         ColorsResolve: function($log, MockDataFactory) {
-          return MockDataFactory.get({filename: 'colors'});
+          return MockDataFactory.get({filename: 'colors'}).$promise.then(function(response) {
+            return response;
+          });
         }
       }
     })
