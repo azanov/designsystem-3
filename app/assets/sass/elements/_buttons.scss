@@ -37,12 +37,13 @@
   @include button-variant(#fff, $brand-danger, $brand-danger, $pb-gray-300, $pb-gray-200);
 }
 
-.btn {
-  font-size: 14px;
-}
 
 
 // -- sizing definitions
+.btn {
+  // line-height: ensure even-numbered height of button next to input
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-base);
+}
 .btn-lg {
   // line-height: ensure even-numbered height of button next to large input
   @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
@@ -97,6 +98,8 @@
     border: 0;
   }
 }
+
+
 .btn.disabled,
 .btn[disabled],
 fieldset[disabled] .btn {
