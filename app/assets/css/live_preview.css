@@ -204,7 +204,7 @@ ul.swatches li.color-swatch:nth-child(n+6) { color: #fff; }
 
 .donut-varied-padded { margin-right: 25px; margin-left: 25px; }
 
-.fpo-grad { padding: 10px; background-image: url("../images/livepreview_keyboard.jpg"); background-position: center center; background-size: fit; }
+.fpo-grad { padding: 10px; background-position: center center; background-size: fit; }
 .fpo-grad p.help-text { color: #fff; }
 
 .glyphicons li { font-size: 0.8em; margin-bottom: 20px; text-align: center; }
