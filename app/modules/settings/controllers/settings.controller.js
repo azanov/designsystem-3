@@ -6,6 +6,11 @@
 
     var _this = this;
 
+    //TODO: finalize the options for the header menu (animated is probably the wrong name to use)
+    _this.header = {
+      types: ['normal', 'animated', 'fixed', 'hamburger']
+    };
+
     // languages from resolve in ui-router $state config
     _this.languages = languages.data.countries;
 

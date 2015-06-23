@@ -7,6 +7,9 @@
     var _this = this;
     $rootScope.$state = $state;
 
+    _this.header = 'animated';
+    _this.footer = false;
+
   });
 
 })();

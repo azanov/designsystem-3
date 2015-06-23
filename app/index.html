@@ -61,14 +61,19 @@
   <body ng-controller="AppController as app" dir="{{rtl}}" class="site {{$state.current.data.bodyClass}}">
 
 
-    <!-- header  -->
-    <header></header>
+    <!-- header -->
+    <span ng-switch="app.header">
+      <header ng-switch-when="animated" headroom class="headroom" tolerance="5" offset="40" classes="{'initial':'animated','pinned':'slideInDown','unpinned':'slideOutUp','top':'headroom-top','notTop':'headroom-not-top'}"></header>
+      <header ng-switch-when="fixed" headroom class="headroom" tolerance="5" offset="40" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}"></header>
+      <header ng-switch-when="normal"></header>
+    </span>
+
 
     <!-- content -->
     <div ui-view="" class="view-animate site-content"></div>
 
     <!-- FOOTER -->
-    <footer></footer>
+    <footer ng-if="app.footer"></footer>
 
 
 
@@ -94,6 +99,8 @@
     <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
     <script src="bower_components/moment/min/moment.min.js"></script>
     <script src="bower_components/angular-moment/angular-moment.js"></script>
+    <script src="bower_components/headroom.js/dist/headroom.js"></script>
+    <script src="bower_components/headroom.js/dist/angular.headroom.js"></script>
     <script src="bower_components/Numeric-Stepper/stepper/jquery.stepper.js"></script>
     <script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
     <script src="bower_components/selectize/dist/js/standalone/selectize.js"></script>
