@@ -11,13 +11,13 @@
 
     <div class="col-md-3">
       <div class="btn-group">
-        <button type="button" class="btn btn-default">
+        <button type="button" class="btn btn-default" tooltip="Add&nbsp;user">
           <i class="fa fa-fw fa-plus"></i>
         </button>
-        <button ng-if="datatable.table.selectedRows.length" type="button" class="btn btn-default">
+        <button ng-if="datatable.table.selectedRows.length" type="button" class="btn btn-default" tooltip="Delete">
           <i class="fa fa-fw fa-trash-o"></i>
         </button>
-        <button ng-if="datatable.table.selectedRows.length === 1" type="button" class="btn btn-default">
+        <button ng-if="datatable.table.selectedRows.length === 1" type="button" class="btn btn-default" tooltip="Edit">
           <i class="fa fa-fw fa-pencil"></i>
         </button>
       </div>
@@ -124,25 +124,27 @@
           <tr ng-if="!datatable.table.dataFiltered.length">
             <td colspan="9" class="text-center">There are no results.</td>
           </tr>
-          <tr dir-paginate-start="item in datatable.table.dataFiltered = (datatable.table.data | orderBy:datatable.table.sort.type:datatable.table.sort.reverse | filter: datatable.table.search | daterange:datatable.table.daterangepicker.date.startDate:datatable.table.daterangepicker.date.endDate | itemsPerPage: datatable.table.paging.size )">
+          <tr dir-paginate-start="item in datatable.table.dataFiltered = (datatable.table.data | orderBy:datatable.table.sort.type:datatable.table.sort.reverse | filter: datatable.table.search | daterange:datatable.table.daterangepicker.date.startDate:datatable.table.daterangepicker.date.endDate | itemsPerPage: datatable.table.paging.size )" ng-class="{'row-open': item.showDetails}">
             <td>
               <a href="" ng-init="item.showDetails = false" ng-click="item.showDetails = !item.showDetails">
                 <i class="fa fa-fw fa-angle-right fa-transition" ng-class="{'fa-rotate-90': item.showDetails}"></i>
               </a>
             </td>
             <td><input type="checkbox" ng-model="item.selected" ng-click="datatable.table.selectRow(item)"></td>
-            <td><i class="fa fa-fw fa-user"></i></td>
+            <td><i class="fa fa-fw" ng-class="{'fa-user': item.userType === 'user', 'fa-user-secret': item.userType === 'admin'}"></i></td>
             <td>{{item.first_name}}</td>
             <td>{{item.last_name}}</td>
             <td><a href="">{{item.email}}</a></td>
             <td>{{item.country}}</td>
             <td>{{item.date.created | date:'MM/dd/yyyy'}}</td>
             <td>
-              <span ng-repeat="group in (item.groups | orderBy: group | limitTo: item.limit || datatable.table.groups.min) track by $index">{{group}}<span ng-if="!$last">, </span></span>
-              <div>
+              <span ng-repeat="group in (item.groups | orderBy: group | limitTo: item.limit || datatable.table.groups.min) track by $index">
+                {{group}}<span ng-if="!$last">, </span>
+              </span>
+              <span>
                 <a class="small" href="" ng-if="item.groups.length > datatable.table.groups.min" ng-show="!item.limit" ng-click="item.limit = datatable.table.groups.max">Show all</a>
                 <a class="small" href="" ng-show="item.limit" ng-click="item.limit = undefined">Show less</a>
-              </div>
+              </span>
             </td>
             <td>
               <div class="dropdown pull-right">

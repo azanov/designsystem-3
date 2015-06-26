@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v1.5.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Mon Jun 22 2015 09:56:40 GMT-0400 (EDT) 
+ * Thu Jun 25 2015 16:10:05 GMT-0400 (EDT) 
  */
 @font-face { font-family: 'PrecisionSans_W_Rg'; font-weight: '400'; font-style: 'normal'; src: url("../fonts/PrecisionSans_W_Rg.eot"); src: url("../fonts/PrecisionSans_W_Rg.eot?#iefix") format("embedded-opentype"), url("../fonts/PrecisionSans_W_Rg.woff") format("woff"), url("../fonts/PrecisionSans_W_Rg.ttf") format("truetype"), url("../fonts/PrecisionSans_W_Rg.svg#PrecisionSans_W_Rg") format("svg"); }
 @font-face { font-family: 'PrecisionSans_W_Bd'; font-weight: '700'; font-style: 'normal'; src: url("../fonts/PrecisionSans_W_Bd.eot"); src: url("../fonts/PrecisionSans_W_Bd.eot?#iefix") format("embedded-opentype"), url("../fonts/PrecisionSans_W_Bd.woff") format("woff"), url("../fonts/PrecisionSans_W_Bd.ttf") format("truetype"), url("../fonts/PrecisionSans_W_Bd.svg#PrecisionSans_W_Bd") format("svg"); }
@@ -116,7 +116,7 @@ cite { font-style: normal; }
 
 .text-danger { color: #c00; }
 
-.styleguide header, .styleguide footer { display: none; }
+.styleguide footer { display: none; }
 .styleguide section { margin-top: 50px; }
 
 .clearfix { zoom: 1; }
@@ -210,7 +210,7 @@ ul.swatches li.color-swatch:nth-child(n+6) { color: #fff; }
 
 .donut-varied-padded { margin-right: 25px; margin-left: 25px; }
 
-.fpo-grad { padding: 10px; background-image: url("../images/livepreview_keyboard.jpg"); background-position: center center; background-size: fit; }
+.fpo-grad { padding: 10px; background-position: center center; background-size: fit; }
 .fpo-grad p.help-text { color: #fff; }
 
 .glyphicons li { font-size: 0.8em; margin-bottom: 20px; text-align: center; }
