@@ -6,9 +6,7 @@ body {
     >.container-fluid {
       padding: 0 40px;
     }
-
   }
-
 }
 
 
@@ -21,27 +19,13 @@ header {
       padding-left: 0;
     }
 
-
     // fixed navbar has a shadow that appears when scrolled via jQuery
     &.navbar-fixed-top {
       transition: box-shadow 0.3s;
       &.shadow {
         box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
       }
-
     }
-
-
-
-  // &.header-stacked {
-  //   .nav.navbar-nav {
-  //     margin-left: -15px;
-  //     > li > a {
-  //       padding-top: 0;
-  //     }
-  //
-  //   }
-
 
     .activity {
       .badge {
@@ -52,6 +36,11 @@ header {
 
   }
 
+}
+
+
+@mixin navbar-divider($side: 'right') {
+  border-#{$side}: 1px solid hsla(0, 0%, 100%, .3);
 }
 
 
@@ -84,8 +73,12 @@ header {
 
 
   .navbar-nav {
+    &:not(.navbar-right) {
+      @include navbar-divider;
+    }
+
     > li > a {
-      color: rgba(255, 255, 255, .6);
+      color: rgba(255, 255, 255, .75);
       text-transform: uppercase;
       font-size: 12px;
       font-family: $font-family-ps-bold;
@@ -99,10 +92,17 @@ header {
         color: $navbar-inverse-link-active-color;
       }
     }
+    .nav-link {
+      @include navbar-divider;
+    }
+    .nav-link-first {
+      @include navbar-divider('left');
+    }
   }
 
 
   .navbar-brand {
+    @include navbar-divider;
     float: left;
     padding: $navbar-padding-vertical $navbar-padding-horizontal;
     font-size: 24px;
@@ -111,18 +111,17 @@ header {
     height: $navbar-height;
     font-family: $font-family-ps-bold;
 
-    &:hover,
-    &:focus {
-      text-decoration: none;
+    &:hover {
+      color: #fff;
     }
-
-
     > img {
       display: block;
     }
-
-a {
+    a {
       color: inherit;
+      &:hover {
+        color: inherit;
+      }
     }
 
 
@@ -135,6 +134,8 @@ a {
     }
 
   }
+
+
 
 
   .open a {

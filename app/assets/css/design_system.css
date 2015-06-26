@@ -199,7 +199,6 @@ cite { font-style: normal; }
 .site { display: -webkit-flex; display: -ms-flexbox; display: flex; min-height: 100vh; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
 
 .site-content { -webkit-flex: 1; -ms-flex: 1; flex: 1; }
-.home .site-content { background-color: #254d9d; background: linear-gradient(135deg, #4cc6f3 0%, #32b1e5 10%, #254d9d 53%, #bc278d 100%); background-size: cover; background-repeat: no-repeat; }
 
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
@@ -290,12 +289,16 @@ body .navbar > .container-fluid { padding: 0 40px; }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus { color: white; }
 .navbar-default .navbar-toggle { border-color: #fff; background-color: rgba(62, 83, 164, 0.5); border-radius: 0; }
 .navbar-default .navbar-toggle .icon-bar { background-color: #fff; }
-.navbar-default .navbar-nav > li > a { color: rgba(255, 255, 255, 0.6); text-transform: uppercase; font-size: 12px; font-family: "PrecisionSans_W_Bd", "Helvetica Neue", Arial, sans-serif; font-weight: normal; }
+.navbar-default .navbar-nav:not(.navbar-right) { border-right: 1px solid rgba(255, 255, 255, 0.3); }
+.navbar-default .navbar-nav > li > a { color: rgba(255, 255, 255, 0.75); text-transform: uppercase; font-size: 12px; font-family: "PrecisionSans_W_Bd", "Helvetica Neue", Arial, sans-serif; font-weight: normal; }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus { background-color: rgba(62, 83, 164, 0.5); color: #fff; }
-.navbar-default .navbar-brand { float: left; padding: 15px 15px; font-size: 24px; line-height: 20px; color: #fff; height: 50px; font-family: "PrecisionSans_W_Bd", "Helvetica Neue", Arial, sans-serif; }
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus { text-decoration: none; }
+.navbar-default .navbar-nav .nav-link { border-right: 1px solid rgba(255, 255, 255, 0.3); }
+.navbar-default .navbar-nav .nav-link-first { border-left: 1px solid rgba(255, 255, 255, 0.3); }
+.navbar-default .navbar-brand { border-right: 1px solid rgba(255, 255, 255, 0.3); float: left; padding: 15px 15px; font-size: 24px; line-height: 20px; color: #fff; height: 50px; font-family: "PrecisionSans_W_Bd", "Helvetica Neue", Arial, sans-serif; }
+.navbar-default .navbar-brand:hover { color: #fff; }
 .navbar-default .navbar-brand > img { display: block; }
 .navbar-default .navbar-brand a { color: inherit; }
+.navbar-default .navbar-brand a:hover { color: inherit; }
 @media (min-width: 768px) { .navbar > .container .navbar-default .navbar-brand, .navbar > .container-fluid .navbar-default .navbar-brand { margin-left: -15px; } }
 .navbar-default .open a { background-color: transparent; color: #3e53a4; }
 .navbar-default .open a:hover { background-color: #3e53a4; color: #fff; }
