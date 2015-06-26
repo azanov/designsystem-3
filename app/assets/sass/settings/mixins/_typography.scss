@@ -236,6 +236,9 @@ ol {
 .fa-active {
   color: $pb-magenta;
 }
+.fa-lg {
+  font-size: 1.5em;
+}
 
 .nav-tabs > li > a,
 .nav-pills > li > a {
@@ -247,7 +250,7 @@ ol {
 }
 
 label {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: normal;
   color: $pb-gray-500;
 }

@@ -31,7 +31,6 @@
     </div>
   </div>
 
-
   <div class="row spacer-top-xl">
     <div class="col-md-12">
       <h4>SECONDARY BUTTONS</h4>
@@ -62,104 +61,130 @@
       <h4>CHECKBOXES AND RADIOS</h4>
     </div>
   </div>
-<div class="row">
-  <div class="col-md-3">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae neque repellat iure, error.
-    </p>
-    <div class="checkbox checkbox-enhanced">
-      <input id="check1" type="checkbox">
-      <label for="check1">Checkbox</label>
+  <div class="row">
+    <div class="col-md-3">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae neque repellat iure, error.
+      </p>
+      <div class="checkbox checkbox-enhanced">
+        <input id="check1" type="checkbox">
+        <label for="check1">Checkbox</label>
+      </div>
+      <div class="checkbox checkbox-enhanced">
+        <input id="check2" name="check" type="checkbox" value="check2">
+        <label for="check2">Checkbox
+        </label>
+      </div>
     </div>
-    <div class="checkbox checkbox-enhanced">
-      <input id="check2" name="check" type="checkbox" value="check2">
-      <label for="check2">Checkbox
-      </label>
-    </div>
-  </div>
-  <div class="col-md-3">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae neque repellat iure, error.
-    </p>
-    <div class="checkbox-inline checkbox-enhanced">
-      <input id="inlineCheckbox1" type="checkbox" value="option1">
-      <label for="inlineCheckbox1">Check me out</label>
+    <div class="col-md-3">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae neque repellat iure, error.
+      </p>
+      <div class="checkbox-inline checkbox-enhanced">
+        <input id="inlineCheckbox1" type="checkbox" value="option1">
+        <label for="inlineCheckbox1">Check me out</label>
+      </div>
+
+      <div class="checkbox-inline checkbox-enhanced">
+        <input id="inlineCheckbox2" type="checkbox" value="option1">
+        <label for="inlineCheckbox2">We're inline</label>
+      </div>
     </div>
 
-    <div class="checkbox-inline checkbox-enhanced">
-      <input id="inlineCheckbox2" type="checkbox" value="option1">
-      <label for="inlineCheckbox2">We're inline</label>
+    <div class="col-md-3">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae neque repellat iure, error.
+      </p>
+      <div class="radio radio-enhanced">
+        <input id="radio1" name="radioOptions" type="radio">
+        <label for="radio1">radio</label>
+      </div>
+      <div class="radio radio-enhanced">
+        <input id="radio2" name="radioOptions" type="radio">
+        <label for="radio2">radio
+        </label>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae neque repellat iure, error.
+      </p>
+      <div class="radio-inline radio-enhanced">
+        <input id="inlineradio1" name="inlineRadioOptions" type="radio" value="option1">
+        <label for="inlineradio1">Check me out</label>
+      </div>
+
+      <div class="radio-inline radio-enhanced">
+        <input id="inlineradio2" name="inlineRadioOptions" type="radio" value="option1">
+        <label for="inlineradio2">We're inline</label>
+      </div>
     </div>
   </div>
 
-  <div class="col-md-3">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae neque repellat iure, error.
-    </p>
-    <div class="radio radio-enhanced">
-      <input id="radio1" type="radio" name="radioOptions">
-      <label for="radio1">radio</label>
-    </div>
-    <div class="radio radio-enhanced">
-      <input id="radio2"  type="radio" name="radioOptions">
-      <label for="radio2">radio
-      </label>
+  <div class="row spacer-top-xl">
+    <div class="col-md-12">
+      <h4>SELECT MENUS</h4>
     </div>
   </div>
-  <div class="col-md-3">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae neque repellat iure, error.
-    </p>
-    <div class="radio-inline radio-enhanced">
-      <input id="inlineradio1" type="radio" value="option1" name="inlineRadioOptions">
-      <label for="inlineradio1">Check me out</label>
-    </div>
 
-    <div class="radio-inline radio-enhanced">
-      <input id="inlineradio2" type="radio" value="option1" name="inlineRadioOptions">
-      <label for="inlineradio2">We're inline</label>
-    </div>
-  </div>
-</div>
-
-<div class="row spacer-top-xl">
-  <div class="col-md-12">
-    <h4>SELECT MENUS</h4>
-  </div>
-</div>
-
-<div class="row">
+  <div class="row">
     <div class="col-md-3">
       <div class="form-group enhanced">
-        <select class="form-control">
+        <label for="flavors">Choice of flavor</label>
+        <select class="form-control" disabled="disabled" name="flavors">
+          <option class="placeholder" selected value="">Please select</option>
           <option>Chocolate</option>
           <option>Vanilla</option>
           <option>Strawberry</option>
         </select>
       </div>
     </div>
-    <div class="col-md-3"></div>
-    <div class="col-md-3"></div>
-    <div class="col-md-3"></div>
-  </div>
-
-
-<div class="row spacer-top-xl">
-  <div class="col-md-12">
-    <h4>TEXT INPUTS</h4>
-  </div>
-</div>
-
-<div class="row">
     <div class="col-md-3">
       <div class="form-group enhanced">
-       <input type="text" class="form-control" placeholder="Fill out this field" disabled="disabled">
+        <label for="flavors">Choice of flavor</label>
+        <select class="form-control" name="flavors">
+          <option disabled selected value="">Please select</option>
+          <option>Chocolate</option>
+          <option>Vanilla</option>
+          <option>Strawberry</option>
+        </select>
       </div>
     </div>
-    <div class="col-md-3"><input type="text" class="form-control" placeholder="Fill out this field"></div>
-    <div class="col-md-3"><input type="text" class="form-control focus" value="Focused and typing"></div>
-    <div class="col-md-3"></div>
+    <div class="col-md-3"/><div class="col-md-3"/>
   </div>
+  <div class="row spacer-top-xl">
+    <div class="col-md-12">
 
+      <h4>
+        TEXT INPUTS
+      </h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
 
+      <div class="form-group enhanced">
+        <label>
+          First Name
+        </label><input class="form-control" disabled="disabled" placeholder="Fill out this field" type="text"></div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group enhanced">
+        <label>
+          First Name
+        </label><input class="form-control" placeholder="Fill out this field" type="text"></div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group enhanced">
+        <label>
+          First Name
+        </label><input class="form-control focus" type="text" value="Focused and typing"></div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group enhanced">
+        <label>
+          First Name
+        </label><input class="form-control" type="text" value="Default view"></div>
+    </div>
+  </div>
 </div>
