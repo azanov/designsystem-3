@@ -633,7 +633,7 @@ th.currency { text-align: center; }
 fieldset { margin-top: 40px; }
 fieldset legend { color: #4e4e4e; }
 
-.form-control:focus, .form-control.focus, .item-button:hover, .item-button.hover { border-color: #3e53a4; border-width: 2px; outline: 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); }
+.form-control:focus, .form-control.focus, .logo-button-usps:hover, .logo-button-usps.hover, .item-selector-button:hover, .item-selector-button.hover { border-color: #3e53a4; border-width: 2px; outline: 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); }
 
 .form-control { display: block; width: 100%; -webkit-appearance: none; -moz-appearance: none; height: 42px; padding: 10px 12px; font-size: 14px; line-height: 1.428571429; color: #3e53a4; background-color: #fff; background-image: none; border: 1px solid #cecece; border-radius: 0; transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
 .form-control:focus { outline: none; }
@@ -654,10 +654,26 @@ select { background: #fff url("../images/droparrow.png") right center no-repeat 
 .repeated-field { margin-bottom: 20px; }
 .repeated-field.last { margin-bottom: 3px; }
 
-.item-button { position: relative; cursor: pointer; border: 1px solid #cecece; padding: 15px; border-radius: 0; color: #000; width: 160px; height: 120px; background: #fff url("../images/logo-usps.png") center center no-repeat; transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
-.item-button:active, .item-button.active { border-width: 2px; border-color: #314183; }
-.item-button.disabled { background-image: url("../images/logo-usps-disabled.png"); cursor: not-allowed; }
-.item-button.disabled:hover { border: 1px solid #cecece; box-shadow: none; }
+.logo-button-usps { position: relative; cursor: pointer; border: 1px solid #cecece; padding: 15px; border-radius: 0; color: #000; width: 160px; height: 120px; background: #fff url("../images/logo-usps.png") center center no-repeat; transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
+.logo-button-usps:active, .logo-button-usps.active { border-width: 2px; border-color: #3e53a4; }
+.logo-button-usps.disabled { background-image: url("../images/logo-usps-disabled.png"); cursor: not-allowed; }
+.logo-button-usps.disabled:hover { border: 1px solid #cecece; box-shadow: none; }
+
+.item-selector-button { position: relative; text-align: center; cursor: pointer; border: 1px solid #cecece; padding: 15px; border-radius: 0; color: #000; width: 160px; height: 120px; transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
+.item-selector-button .title { color: #3e53a4; font-size: 12px; margin: 0; padding-top: -3px; font-family: "PrecisionSans_W_Md", "Helvetica Neue", Arial, sans-serif; }
+.item-selector-button .divider { height: 1px; width: 20px; background-color: #cecece; margin: 4px auto 10px; }
+.item-selector-button .image { background: #fff url("../images/box.png") center center no-repeat; width: 64px; height: 57px; margin: 4px auto; }
+.item-selector-button:hover, .item-selector-button.hover { padding: 14px; }
+.item-selector-button:active, .item-selector-button.active { border-width: 2px; border-color: #3e53a4; background-color: #3e53a4; }
+.item-selector-button:active .title, .item-selector-button.active .title { color: #fff; }
+.item-selector-button:active .divider, .item-selector-button.active .divider { background-color: #fff; }
+.item-selector-button:active .image, .item-selector-button.active .image { background-color: #3e53a4; }
+.item-selector-button:active:hover, .item-selector-button.active:hover { padding: 15px; }
+.item-selector-button.disabled { cursor: not-allowed; }
+.item-selector-button.disabled .title { color: #c3c3c3; }
+.item-selector-button.disabled .image { background-image: url("../images/box-disabled.png"); }
+.item-selector-button.disabled:hover { padding: 15px; border: 1px solid #cecece; box-shadow: none; }
+.item-selector-button .arrowed:after { content: ""; position: absolute; bottom: -15px; left: 50px; border-width: 15px 15px 0; border-style: solid; border-color: #f3961c transparent; }
 
 .ngrs-range-slider { box-shadow: none; border: 0; background-color: pbcolor(pbgray, 50); }
 .ngrs-range-slider .ngrs-join { position: absolute; z-index: 1; top: 50%; left: 0; right: 100%; height: 14px; margin: -7px 0 0; background-color: pbcolor(pbmediumblue); background-image: none; }
