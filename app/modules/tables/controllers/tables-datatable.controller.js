@@ -23,7 +23,7 @@
         sizes: [10, 25, 50, 100]
       },
       groups: {
-        min: 10,
+        min: 5,
         max: 'Infinity'
       },
       search: {
@@ -75,6 +75,7 @@
         },
         options: {
           singleDatePicker: false,
+          opens: 'center',
           ranges: {
             Today: [moment(), moment()],
             Yesterday: [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
@@ -82,7 +83,32 @@
             'Last 30 Days': [moment().subtract(29, 'days'), moment()],
             'This Month': [moment().startOf('month'), moment().endOf('month')],
             'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+          },
+          eventHandlers: {
+            'apply.daterangepicker': function(ev, picker) {
+              _this.table.daterangepicker.displayDate(picker.startDate, picker.endDate);
+            }
           }
+        },
+        displayDate: function(start, end) {
+
+          var startDate = start || _this.table.daterangepicker.date.startDate;
+          var endDate = end || _this.table.daterangepicker.date.endDate;
+
+          var dateDiff = endDate.diff(startDate, 'days');
+          var result = '';
+
+          if (dateDiff === 0) {
+            result = 'Today ' + moment(startDate).format('MM/DD/YYYY');
+          }
+          else if (dateDiff === 7) {
+            result = 'Last 7 days';
+          }
+          else {
+            result = 'From ' + moment(startDate).format('MM/DD/YYYY') + ' to ' + moment(endDate).format('MM/DD/YYYY');
+          }
+
+          return result;
         }
       }
     };
