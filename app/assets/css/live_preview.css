@@ -13,7 +13,7 @@
 
 code, .code { font-family: "Source Code Pro", Menlo, Consolas, Monaco, "Courier New", monospace; }
 
-hr { margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #9b9b9b; }
+hr { margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #c0c0c0; }
 
 a { color: #3e53a4; }
 a:hover { color: #324184; }
@@ -275,6 +275,4 @@ ul.swatches li.color-swatch:nth-child(n+6) { color: #fff; }
 
 .chord-display { margin-bottom: 20px; }
 
-
-
-/*# sourceMappingURL=maps/live_preview.css.map */
+/*# sourceMappingURL=live_preview.css.map */

@@ -16,7 +16,42 @@
 }
 
 
-.checkbox-enhanced {
+
+
+.checkboxList {
+  overflow-y: scroll;
+  width: 100%;
+  height: 83px;
+
+  label {
+    margin-bottom: 0;
+    color: $pb-gray-500;
+  }
+  .ms-checkboxitem {
+    margin-bottom: 2px;
+  }
+}
+
+
+.help-block.text-error {
+  display: none;
+  .has-error & {
+    display: block;
+    color: $brand-danger;
+  }
+}
+
+
+fieldset {
+  margin-top: 40px;
+  legend {
+    color: $pb-gray-500;
+  }
+}
+
+
+.checkbox-enhanced,
+.checkbox-enhanced-sm {
 
   &.checkbox-inline {
     padding-left: 0;
@@ -31,30 +66,44 @@
   input[type="checkbox"] {
     display: none;
     + label::before {
-      content: url("../images/check-box-inactive.svg");
+      content: url("../images/check-box-inactive.png");
       margin-right: 8px;
       vertical-align: middle;
       display: inline-block;
-      width: 26px;
-      height: 26px;
     }
-
   }
 
-
   input[type="checkbox"]:checked + label::before {
-    content: url("..//images/check-box-active.svg");
+    content: url("../images/check-box-active.png");
     margin-right: 8px;
     vertical-align: middle;
     display: inline-block;
-    width: 26px;
-    height: 26px;
   }
+
+  &.disabled {
+    input[type="checkbox"] + label::before {
+      opacity: .5;
+    }
+  }
+
+
+
+
 
 }
 
+.checkbox-enhanced-sm {
+  input[type="checkbox"]+ label::before {
+    content: url("../images/check-box-inactive@0.75x.png");
+  }
+  input[type="checkbox"]:checked + label::before {
+    content: url("../images/check-box-active@0.75x.png");
+  }
+}
 
-.radio-enhanced {
+
+.radio-enhanced,
+.radio-enhanced-sm {
 
   &.radio-inline {
     padding-left: 0;
@@ -69,7 +118,7 @@
   input[type="radio"] {
     display: none;
     + label::before {
-      content: url("../images/radio-off.svg");
+      content: url("../images/radio-off.png");
       margin-right: 8px;
       vertical-align: middle;
       display: inline-block;
@@ -81,7 +130,7 @@
 
 
   input[type="radio"]:checked + label::before {
-    content: url("..//images/radio-on.svg");
+    content: url("../images/radio-on.png");
     margin-right: 8px;
     vertical-align: middle;
     display: inline-block;
@@ -89,43 +138,29 @@
     height: 26px;
   }
 
-}
-
-
-.checkboxList {
-  overflow-y: scroll;
-  width: 100%;
-  height: 83px;
-  label {
-    margin-bottom: 0;
-    color: $pb-gray-500;
-  }
-
-
-  .ms-checkboxitem {
-    margin-bottom: 2px;
+  &.disabled {
+    input[type="radio"] + label::before {
+      opacity: .5;
+    }
   }
 
 }
 
 
-.help-block.text-error {
-  display: none;
-  .has-error & {
-    display: block;
-    color: $brand-danger;
-  }
 
+
+.radio-enhanced-sm {
+  input[type="radio"]+ label::before {
+    content: url("../images/radio-off@0.75x.png");
+    margin-right: 3px;
+  }
+  input[type="radio"]:checked + label::before {
+    content: url("../images/radio-on@0.75x.png");
+    margin-right: 3px;
+  }
 }
 
 
-fieldset {
-  margin-top: 40px;
-  legend {
-    color: $pb-gray-500;
-  }
-
-}
 
 
 %fancy-focus {

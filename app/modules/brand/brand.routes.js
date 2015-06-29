@@ -25,7 +25,7 @@
         }
       },
       data: {
-        pageTitle: 'Brand - Colors',
+        pageTitle: 'Brand - Style Guide',
         bodyClass: 'styleguide'
       }
     })
