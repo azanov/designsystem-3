@@ -198,6 +198,7 @@ fieldset {
 
 
 select {
+  // scss-lint:disable ImportantRule
   background: #fff url("../images/droparrow.png") right center no-repeat !important;
 }
 
@@ -286,10 +287,53 @@ fieldset[disabled] .form-control.timepicker {
 
 }
 
-
+// declare actual buttons here
+// include logo name and see above for naming structure
 .logo-button-usps {
   @include logo-button('usps');
 }
+
+
+
+@mixin arrow-inside($color: #fff, $left: 65px) {
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+
+    // value = - border-top-width - border-bottom-width */
+    left: $left+3;
+
+    //controls horizontal position */
+    border-width: 12px 12px 0;
+
+    //vary these values to change the angle of the vertex */
+    border-style: solid;
+    border-color: $color transparent;
+  }
+
+}
+
+@mixin arrow-outside($color: $pb-blue, $left: 65px) {
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+
+    // value = - border-top-width - border-bottom-width */
+    left: $left;
+
+    //controls horizontal position */
+    border-width: 15px 15px 0;
+
+    //vary these values to change the angle of the vertex */
+    border-style: solid;
+    border-color: $color transparent;
+  }
+
+}
+
+
 
 
 // for the item buttons
@@ -332,6 +376,9 @@ fieldset[disabled] .form-control.timepicker {
   &.hover {
     padding: 14px;
     @extend %fancy-focus;
+    @include arrow-inside;
+    @include arrow-outside;
+
   }
 
 
@@ -340,6 +387,8 @@ fieldset[disabled] .form-control.timepicker {
     border-width: 2px;
     border-color: $pb-blue;
     background-color: $pb-blue;
+    @include arrow-outside;
+
     .title {
       color: #fff;
     }
@@ -351,10 +400,8 @@ fieldset[disabled] .form-control.timepicker {
     }
     &:hover {
       padding: 15px;
-      
     }
   }
-
 
   &.disabled {
     cursor: not-allowed;
@@ -373,25 +420,4 @@ fieldset[disabled] .form-control.timepicker {
       box-shadow: none;
     }
   }
-
-
-  .arrowed {
-    &:after {
-      content: "";
-      position: absolute;
-      bottom: -15px;
-
-      // value = - border-top-width - border-bottom-width */
-      left: 50px;
-
-      //controls horizontal position */
-      border-width: 15px 15px 0;
-
-      //vary these values to change the angle of the vertex */
-      border-style: solid;
-      border-color: #f3961c transparent;
-    }
-
-  }
-
 }
