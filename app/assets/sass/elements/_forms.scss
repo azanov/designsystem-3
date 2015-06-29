@@ -339,18 +339,12 @@ fieldset[disabled] .form-control.timepicker {
     content: "";
     position: absolute;
     bottom: -12px;
-
-    // value = - border-top-width - border-bottom-width */
     left: $left+3;
-
-    //controls horizontal position */
     border-width: 12px 12px 0;
-
-    //vary these values to change the angle of the vertex */
     border-style: solid;
     border-color: $color transparent;
+    transition-delay: 0.3s;
   }
-
 }
 
 @mixin arrow-outside($color: $pb-blue, $left: 65px) {
@@ -358,18 +352,12 @@ fieldset[disabled] .form-control.timepicker {
     content: "";
     position: absolute;
     bottom: -15px;
-
-    // value = - border-top-width - border-bottom-width */
     left: $left;
-
-    //controls horizontal position */
     border-width: 15px 15px 0;
-
-    //vary these values to change the angle of the vertex */
     border-style: solid;
     border-color: $color transparent;
+    transition-delay: 0.3s;
   }
-
 }
 
 
