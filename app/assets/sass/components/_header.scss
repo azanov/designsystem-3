@@ -21,7 +21,7 @@ header {
 
     // fixed navbar has a shadow that appears when scrolled via jQuery
     &.navbar-fixed-top {
-      transition: box-shadow 0.3s;
+      transition: box-shadow 0.1s;
       &.shadow {
         box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
       }
@@ -73,9 +73,15 @@ header {
 
 
   .navbar-nav {
-    &:not(.navbar-right) {
-      @include navbar-divider;
-    }
+    // &:not(.navbar-right) {
+    //   @include navbar-divider;
+    // }
+
+    .divider-vertical {
+      height: 30px;
+      margin: 10px 5px;
+      border-left: 1px solid hsla(0, 255, 100%, .5);
+      }
 
     > li > a {
       color: rgba(255, 255, 255, .75);
@@ -92,17 +98,17 @@ header {
         color: $navbar-inverse-link-active-color;
       }
     }
-    .nav-link {
-      @include navbar-divider;
-    }
-    .nav-link-first {
-      @include navbar-divider('left');
-    }
+    // .nav-link {
+    //   @include navbar-divider;
+    // }
+    // .nav-link-first {
+    //   @include navbar-divider('left');
+    // }
   }
 
 
   .navbar-brand {
-    @include navbar-divider;
+    // @include navbar-divider;
     float: left;
     padding: $navbar-padding-vertical $navbar-padding-horizontal;
     font-size: 24px;

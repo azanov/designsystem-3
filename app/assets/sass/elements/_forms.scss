@@ -15,22 +15,25 @@
   color: #c1c1c1;
 }
 
-
-
-
-.checkboxList {
-  overflow-y: scroll;
-  width: 100%;
-  height: 83px;
-
-  label {
-    margin-bottom: 0;
-    color: $pb-gray-500;
-  }
-  .ms-checkboxitem {
-    margin-bottom: 2px;
-  }
+label {
+  font-weight: normal;
 }
+
+
+
+// .checkboxList {
+//   overflow-y: scroll;
+//   width: 100%;
+//   height: 83px;
+//
+//   label {
+//     margin-bottom: 0;
+//     color: $pb-gray-500;
+//   }
+//   .ms-checkboxitem {
+//     margin-bottom: 2px;
+//   }
+// }
 
 
 .help-block.text-error {
@@ -93,6 +96,7 @@ fieldset {
 }
 
 .checkbox-enhanced-sm {
+  label { font-size: 13px; }
   input[type="checkbox"]+ label::before {
     content: url("../images/check-box-inactive@0.75x.png");
   }
@@ -382,7 +386,7 @@ fieldset[disabled] .form-control.timepicker {
   color: #000;
   width: 160px;
   height: 120px;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: all ease-in-out 0.1s, box-shadow ease-in-out 0.1s;
 
   .title {
     color: $pb-blue;
@@ -435,11 +439,15 @@ fieldset[disabled] .form-control.timepicker {
     }
     &:hover {
       padding: 15px;
+      box-shadow: none;
+      @include arrow-inside($pb-blue);
     }
   }
 
   &.disabled {
+    pointer-events: none;
     cursor: not-allowed;
+
     .title {
       color: #c3c3c3;
     }

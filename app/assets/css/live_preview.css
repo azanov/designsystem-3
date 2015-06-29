@@ -66,8 +66,6 @@ ul, ol { margin-top: 0; margin-bottom: 10px; margin-left: 0; padding-left: 1.5em
 
 .help-block { color: #9b9b9b; }
 
-label { font-size: 12px; font-weight: normal; color: #4e4e4e; }
-
 .panel-heading { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; }
 .panel-heading td, .panel-heading th { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
@@ -275,4 +273,6 @@ ul.swatches li.color-swatch:nth-child(n+6) { color: #fff; }
 
 .chord-display { margin-bottom: 20px; }
 
-/*# sourceMappingURL=live_preview.css.map */
+
+
+/*# sourceMappingURL=maps/live_preview.css.map */
