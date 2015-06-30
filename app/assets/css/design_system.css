@@ -1330,6 +1330,7 @@ input.cmn-toggle-round-flat:checked + label:after { margin-left: 50px; backgroun
 .toolbar .btn-link { text-decoration: none; color: #4e4e4e; }
 .toolbar .btn-link.dropdown-toggle { border-color: transparent; color: #4e4e4e; }
 .toolbar .btn-link.dropdown-toggle:hover { background-color: transparent; }
+.toolbar .btn-default { color: #4e4e4e; border-color: #9b9b9b; }
 .toolbar .dropdown-toggle { color: #4e4e4e; border-color: #9b9b9b; }
 .toolbar .dropdown-toggle:hover { color: #4e4e4e; background-color: #f0f0f0; }
 .toolbar .input-group-btn.open { color: #fff; }
@@ -1343,6 +1344,9 @@ input.cmn-toggle-round-flat:checked + label:after { margin-left: 50px; backgroun
 .table .table-details .table-details-content { padding: 10px; }
 
 .fa-transition { transition: all .2s ease; }
+
+.preview-example { background-color: #fff; position: relative; padding: 40px 9px 9px 9px; border: 1px solid #e3e3e3; border-radius: 3px; margin: 20px 0; }
+.preview-example:before { content: 'Example'; position: absolute; top: 0; left: 0; padding: 3px 7px; text-transform: uppercase; background-color: #f5f5f5; border: 1px solid #e3e3e3; border-top: none; border-left: none; letter-spacing: .1em; font-size: .8em; }
 
 
 

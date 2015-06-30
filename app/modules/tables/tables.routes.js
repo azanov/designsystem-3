@@ -12,11 +12,6 @@
         pageTitle: 'Tables',
         access: 'public',
         bodyClass: 'tables'
-      },
-      resolve: {
-        PeopleResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'people'});
-        }
       }
     })
 
@@ -37,15 +32,30 @@
       templateUrl: 'modules/tables/templates/tables-datatable-overview.html'
     })
 
-    .state('tables.datatable.actionsfilters', {
-      url: '/datatable/actions_filters',
-      templateUrl: 'modules/tables/templates/tables-datatable-actions-filters.html',
+    .state('tables.datatable.toolbar', {
+      url: '/datatable/toolbar',
+      templateUrl: 'modules/tables/templates/tables-datatable-toolbar.html'
     })
 
-    .state('tables.datatable.kitchensink', {
-      url: '/datatable/kitchensink',
-      templateUrl: 'modules/tables/templates/tables-datatable-kitchensink.html',
-      controller: 'TablesDatatableController as datatable'
+    .state('tables.datatable.tabbed', {
+      url: '/datatable/tabbed',
+      templateUrl: 'modules/tables/templates/tables-datatable-tabbed.html'
+    })
+
+    .state('tables.datatable.data', {
+      url: '/datatable/data',
+      templateUrl: 'modules/tables/templates/tables-datatable-data.html'
+    })
+
+    .state('tables.datatable.paging', {
+      url: '/datatable/paging',
+      templateUrl: 'modules/tables/templates/tables-datatable-paging.html',
+      controller: 'TablesDatatableController as datatable',
+      resolve: {
+        PeopleResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'people'});
+        }
+      }
     })
 
     .state('tables.advanced1', {
