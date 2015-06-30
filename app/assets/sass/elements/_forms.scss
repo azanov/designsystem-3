@@ -343,7 +343,7 @@ fieldset[disabled] .form-control.timepicker {
     border-width: 12px 12px 0;
     border-style: solid;
     border-color: $color transparent;
-    transition-delay: 0.3s;
+
   }
 }
 
@@ -356,10 +356,9 @@ fieldset[disabled] .form-control.timepicker {
     border-width: 15px 15px 0;
     border-style: solid;
     border-color: $color transparent;
-    transition-delay: 0.3s;
+
   }
 }
-
 
 
 
@@ -375,6 +374,8 @@ fieldset[disabled] .form-control.timepicker {
   width: 160px;
   height: 120px;
   transition: all ease-in-out 0.1s, box-shadow ease-in-out 0.1s;
+
+
 
   .title {
     color: $pb-blue;

@@ -6,37 +6,72 @@
   </div>
 
 
-  <div class="row">
-    <div class="col-md-12">
-      <h4 class="section-head">Main Colors</h4>
-      <div class="row color-swatches">
-        <div class="col-md-2 col-xs-12 color-swatch-container" ng-repeat="color in colors.colorData.main" ng-class="{clearRow: $index==5}">
-          <div class="color-swatch" style="background-color:{{::color.hex}}"></div>
-          {{::color.name}}
-          <br> {{::color.hex}}
-          <br>
-          <small>{{::color.varname}}</small>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="section-head">Primary</h4>
+        <div class="row color-swatches">
+          <div class="col-md-2 col-xs-12" ng-repeat="color in colors.colorData.primary">
+            {{::color.name}}
+            <br>
+            <small>{{::color.varname}}</small>
+            <ul class="swatches">
+              <li ng-repeat="hex in color.hex " class="color-swatch" style="background-color:{{::hex.color}};">
+                <span>{{::hex.tint}}</span>{{::hex.color}}
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-xs-12" ng-repeat="color in colors.colorData.neutrals">
+            {{::color.name}}
+            <br>
+            <small>{{::color.varname}}</small>
+            <ul class="swatches">
+              <li ng-repeat="hex in color.hex " class="color-swatch" style="background-color:{{::hex.color}};">
+                <span>{{::hex.tint}}</span>{{::hex.color}}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col-md-12">
-      <h4 class="section-head">Main Grays</h4>
-      <div class="row color-swatches">
-        <div class="col-md-2 col-xs-12 color-swatch-container" ng-repeat="color in colors.colorData.grays" ng-class="{clearRow: $index==5}">
-          <div class="color-swatch" style="background-color:{{::color.hex}}"></div>
-          {{::color.name}}
-          <br> {{::color.hex}}
-          <br>
-          <small>{{::color.varname}}</small>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="section-head">Secondary</h4>
+        <div class="row color-swatches">
+          <div class="col-md-2 col-xs-12" ng-repeat="color in colors.colorData.secondary">
+            {{::color.name}}
+            <br>
+            <small>{{::color.varname}}</small>
+            <ul class="swatches">
+              <li ng-repeat="hex in color.hex " class="color-swatch " style="background-color:{{::hex.color}};">
+                <span>{{::hex.tint}}</span>{{::hex.color}}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
 
+    <!-- <div class="row">
+      <div class="col-md-12">
+        <h4 class="section-head">Neutrals</h4>
+        <div class="row color-swatches">
+          <div class="col-md-2 col-xs-12" ng-repeat="color in colors.colorData.neutrals">
+            {{::color.name}}
+            <br>
+            <small>{{::color.varname}}</small>
+            <ul class="swatches">
+              <li ng-repeat="hex in color.hex " class="color-swatch" style="background-color:{{::hex.color}};">
+                <span>{{::hex.tint}}</span>{{::hex.color}}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> -->
 
 
     <div class="row">
