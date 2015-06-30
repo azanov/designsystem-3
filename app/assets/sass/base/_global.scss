@@ -12,11 +12,5 @@
 }
 .site-content {
   flex: 1;
-  .home & {
-    background-color: #254d9d;
-    background: -webkit-linear-gradient(-45deg, #4cc6f3 0%, #32b1e5 10%, #254d9d 53%, #bc278d 100%);
-    background: linear-gradient(135deg, #4cc6f3 0%, #32b1e5 10%, #254d9d 53%, #bc278d 100%);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+
 }

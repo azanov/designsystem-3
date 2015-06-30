@@ -106,18 +106,13 @@
       "value": "graphs.lib3"
     }]
   }, {
-    "label": "Localization",
-    "value": "",
-    "toggle": "dropdown",
-    "children": [{
-      "label": "Localization",
-      "value": "localization"
-    }]
-  }, {
     "label": "Brand",
     "value": "",
     "toggle": "dropdown",
     "children": [{
+      "label": "Style Guide",
+      "value": "brand.styleguide"
+    },{
       "label": "Color",
       "value": "brand.color"
     }, {

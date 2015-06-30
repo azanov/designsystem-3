@@ -1,87 +1,49 @@
 //*/ Buttons */
 // --------------------------------------------------
 
-//*/ $button-primary-color is set in _variables.scss
-
+// $fg, $bg, $border, $disabled-fg, $disabled-bg, $hover-fg:$fg, $hover-bg:$bg
 .btn-primary {
-  @include button-variant(#fff, $button-primary-color, $button-primary-color);
+  @include button-variant(#fff, $button-primary, $button-primary, $pb-gray-500, $pb-gray-200, #fff, $pb-blue-700);
 }
 
-.btn-default {
-  @include button-variant($button-primary-color, transparent, $button-primary-color);
-}
-
+.btn-default,
+.btn-cancel, .btn-link,
 .btn-group .btn-default,
 .btn-group-vertical .btn-default {
-  @include tertiary-button-variant($button-tertiary-color, #fff, $pb-gray-300);
+  @include button-variant($button-primary, transparent, $button-primary, $pb-gray-500, $pb-gray-200, $button-primary, #d9dced);
 }
 
 .btn-group-borderless .btn-default {
-  @include tertiary-button-variant($button-tertiary-color, #fff, $pb-gray-300);
+  @include button-variant($button-primary, transparent, $button-primary, $button-primary, $pb-blue-300, $pb-gray-300, $pb-gray-200);
 }
 
 .btn-default-ko {
-  @include button-variant(#fff, transparent, #fff);
+  @include button-variant(#fff, transparent, #fff, $pb-gray-300, $pb-gray-200);
 }
 
 .btn-success {
-  @include button-variant(#fff, $brand-success, $brand-success);
+  @include button-variant(#fff, $brand-success, $brand-success, $pb-gray-300, $pb-gray-200);
 }
 
 .btn-info {
-  @include button-variant(#fff, $brand-info, $brand-info);
+  @include button-variant(#fff, $brand-info, $brand-info, $pb-gray-300, $pb-gray-200);
 }
 
 .btn-warning {
-  @include button-variant(#fff, $brand-warning, $brand-warning);
+  @include button-variant(#fff, $brand-warning, $brand-warning, $pb-gray-300, $pb-gray-200);
 }
 
 .btn-danger {
-  @include button-variant(#fff, $brand-danger, $brand-danger);
+  @include button-variant(#fff, $brand-danger, $brand-danger, $pb-gray-300, $pb-gray-200);
 }
 
-.btn {
-  font-size: 14px;
-}
 
-// Make a button look and behave like a link
-.btn-link,
-.btn-cancel {
-  color: $button-primary-color;
-  font-weight: normal;
-  border-radius: 0;
-  &,
-  &:active,
-  &.active,
-  &[disabled],
-  fieldset[disabled] & {
-    background-color: transparent;
-  }
-  &,
-  &:hover,
-  &:focus,
-  &:active {
-    border-color: transparent;
-  }
-  &:hover,
-  &:focus {
-    color: $button-primary-color !important;
-    text-decoration: underline;
-    background-color: transparent;
-  }
-  &[disabled],
-  fieldset[disabled] & {
-    &:hover,
-    &:focus {
-      color: $button-primary-color;
-      text-decoration: none;
-    }
-  }
-}
-// .btn-link:focus, .btn-link:hover {
-//   color: #bc56b7 !important;
-// }
+
 // -- sizing definitions
+.btn {
+  // line-height: ensure even-numbered height of button next to input
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-base);
+}
 .btn-lg {
   // line-height: ensure even-numbered height of button next to large input
   @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
@@ -97,8 +59,8 @@
 // i give up, bootstrap, here you go
 .open>.dropdown-toggle.btn-default {
   color: #fff;
-  background-color: $button-tertiary-color;
-  border-color: $button-tertiary-color;
+  background-color: $pb-blue-300;
+  border-color: $pb-blue;
   box-shadow: none;
 }
 // just to remove the BS inset shadows
@@ -112,7 +74,7 @@
 .dropdown-menu>li>a:hover {
   color: $text-color;
   text-decoration: none;
-  background-color: $pb-gray-100;
+  background-color: $pb-gray-200;
 }
 // font awesome icon size overrides in button groups
 .btn-group {
@@ -136,6 +98,8 @@
     border: 0;
   }
 }
+
+
 .btn.disabled,
 .btn[disabled],
 fieldset[disabled] .btn {

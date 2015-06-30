@@ -1,46 +1,55 @@
 /*jshint strict:false */
 /*jshint node:true */
 
-var gulp       = require('gulp'),
-  usemin       = require('gulp-usemin'),
-  sass         = require('gulp-ruby-sass'),
+var gulp = require('gulp'),
+  usemin = require('gulp-usemin'),
+  sass = require('gulp-ruby-sass'),
   autoprefixer = require('gulp-autoprefixer'),
-  minifyCss    = require('gulp-minify-css'),
-  minifyHtml   = require('gulp-minify-html'),
-  jshint       = require('gulp-jshint'),
-  uglify       = require('gulp-uglify'),
-  imagemin     = require('gulp-imagemin'),
-  rename       = require('gulp-rename'),
-  concat       = require('gulp-concat'),
-  notify       = require('gulp-notify'),
-  cache        = require('gulp-cache'),
-  connect      = require('gulp-connect'),
-  browsersync  = require('browser-sync'),
-  reload       = browsersync.reload,
-  rev          = require('gulp-rev'),
-  sourcemaps   = require('gulp-sourcemaps'),
-  filter       = require('gulp-filter'),
-  plumber      = require('gulp-plumber'),
-  del          = require('del'),
-  gutil        = require('gulp-util'),
-  printfiles   = require('gulp-print'),
-  prompt       = require('gulp-prompt'),
-  ftp          = require('vinyl-ftp'),
-  runSequence  = require('run-sequence'),
-  header       = require('gulp-header'),
-  replace      = require('gulp-replace'),
-  ngAnnotate   = require('gulp-ng-annotate');
+  minifyCss = require('gulp-minify-css'),
+  minifyHtml = require('gulp-minify-html'),
+  jshint = require('gulp-jshint'),
+  uglify = require('gulp-uglify'),
+  imagemin = require('gulp-imagemin'),
+  rename = require('gulp-rename'),
+  concat = require('gulp-concat'),
+  notify = require('gulp-notify'),
+  cache = require('gulp-cache'),
+  connect = require('gulp-connect'),
+  browsersync = require('browser-sync'),
+  reload = browsersync.reload,
+  rev = require('gulp-rev'),
+  sourcemaps = require('gulp-sourcemaps'),
+  filter = require('gulp-filter'),
+  plumber = require('gulp-plumber'),
+  del = require('del'),
+  gutil = require('gulp-util'),
+  printfiles = require('gulp-print'),
+  prompt = require('gulp-prompt'),
+  ftp = require('vinyl-ftp'),
+  runSequence = require('run-sequence'),
+  header = require('gulp-header'),
+  replace = require('gulp-replace'),
+  ngAnnotate = require('gulp-ng-annotate');
 
+var today = new Date();
+var pkg = require('./package.json');
+var banner = ['/**',
+  ' * <%= pkg.name %> - <%= pkg.description %>',
+  ' * @version v<%= pkg.version %>',
+  ' * @link <%= pkg.homepage %>',
+  ' * ' + today + ' ',
+  ' */',
+  ''
+].join('\n');
 
 // clean dist folder
 gulp.task('clean:dist', function(cb) {
   return del(['./build'], cb);
 });
 
-
 //styles
 gulp.task('sass', function() {
-  return sass('app/assets/sass/', {
+  sass('app/assets/sass/', {
       sourcemap: true,
       style: 'compact'
     })
@@ -68,11 +77,8 @@ gulp.task('sass-nomaps', function() {
     .pipe(autoprefixer({
       browsers: ['last 2 versions']
     }))
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
-    .pipe(gulp.dest('build/assets/css'))
-    .pipe(filter('**/*.css'));
+    .pipe(header(banner, { pkg: pkg }))
+    .pipe(gulp.dest('build/assets/css'));
 });
 
 //usemin
@@ -100,19 +106,6 @@ gulp.task('usemin', function() {
     }))
     .pipe(gulp.dest('./build'));
 });
-
-
-var today = new Date();
-var pkg = require('./package.json');
-var banner = ['/**',
-  ' * <%= pkg.name %> - <%= pkg.description %>',
-  ' * @version v<%= pkg.version %>',
-  ' * @link <%= pkg.homepage %>',
-  ' * ' + today + ' ',
-  ' */',
-  ''
-].join('\n');
-
 
 //copy modules
 gulp.task('copy:modules', [], function() {
@@ -150,7 +143,7 @@ gulp.task('copy:json-core-data', [], function() {
 //copy localization json
 gulp.task('copy:json-i18n-data', [], function() {
   gulp.src([
-    './app/modules/**/i18n/**/*.js'
+      './app/modules/**/i18n/**/*.js'
     ])
     .pipe(gulp.dest('./build/modules'));
 });
@@ -178,8 +171,6 @@ gulp.task('copy:core-config', [], function() {
     ])
     .pipe(gulp.dest('build/core/config'));
 });
-
-
 
 gulp.task('clean', function(cb) {
   del(['build/**/*'], cb);
@@ -246,7 +237,6 @@ gulp.task('watch', function() {
 
 });
 
-
 // FTP tasks
 // to upload, run "gulp deploy"
 
@@ -291,11 +281,11 @@ gulp.task('deploy', ['prompt_password'], function() {
   // otherwise choose the folder whose contents should be the site root
   // turn off buffering in gulp.src for best performance
   return gulp.src(globs, {
-      base: 'build',
-      buffer: false
-    })
+    base: 'build',
+    buffer: false
+  })
 
-    //.pipe(conn.newer('/public_html')) // only upload newer files
-    .pipe(conn.dest('/design_system_staging'));
+  //.pipe(conn.newer('/public_html')) // only upload newer files
+  .pipe(conn.dest('/design_system_staging'));
 
 });

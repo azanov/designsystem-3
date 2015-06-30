@@ -6,7 +6,7 @@ footer {
   background-color: #fff;
   font-size: 12px;
   font-family: $font-family-sans-serif;
-  border-top: 1px solid $brand-secondary;
+  border-top: 1px solid $pb-magenta;
   z-index: 10;
 
   //flexbox footer
@@ -34,7 +34,7 @@ footer {
   }
 
   a {
-    color: $pb-gray;
+    color: $pb-gray-500;
   }
   // .footer-thin {
   //   .row {
@@ -65,7 +65,7 @@ footer {
         padding-right: 0;
       }
       a {
-        color: $pb-gray;
+        color: $pb-gray-500;
         -webkit-transition: 0.2s all;
         transition: 0.2s all;
         &:hover {

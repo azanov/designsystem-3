@@ -18,7 +18,7 @@
     &.active {
       > a,
       > a:focus {
-        color: $brand-secondary;
+        color: $pb-blue;
         border-color: $nav-tabs-border-color $nav-tabs-border-color transparent;
       }
     }
@@ -36,7 +36,7 @@
       &.active {
         > a,
         > a:focus {
-          color: $brand-secondary;
+          color: $pb-blue;
           border-color: $nav-tabs-border-color transparent $nav-tabs-border-color $nav-tabs-border-color;
         }
       }
@@ -64,5 +64,5 @@
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  background-color: $brand-secondary;
+  background-color: $pb-blue;
 }

@@ -3,11 +3,11 @@
 //
 
 //List that pairs toastr classes with colors
-$toastr-list: ".toast-info"     $state-info-bg  $state-info-border $state-info-text,
-              ".toast-success"  $state-success-bg   $state-success-border $state-success-text,
-              ".toast-warning"  $state-warning-bg   $state-warning-border $state-warning-text,
-              ".toast-error"    $state-danger-bg   $state-danger-border $state-danger-text,
-              ".toast-custom"   pbcolor(pbpurple, 300)  pbcolor(pbpurple, 600) pbcolor(pbpurple, 800);
+$toastr-list: '.toast-info'     $state-info-bg  $state-info-border $state-info-text,
+              '.toast-success'  $state-success-bg   $state-success-border $state-success-text,
+              '.toast-warning'  $state-warning-bg   $state-warning-border $state-warning-text,
+              '.toast-error'    $state-danger-bg   $state-danger-border $state-danger-text,
+              '.toast-custom'   pbcolor(pbpurple, 300)  pbcolor(pbpurple, 600) pbcolor(pbpurple, 800);
 
 //mixin that creates a single toastr instance
 @mixin create-toastr($bg, $border, $text) {
@@ -66,9 +66,8 @@ $toastr-list: ".toast-info"     $state-info-bg  $state-info-border $state-info-t
     float: right;
     font-size: 20px;
     font-weight: bold;
-    color: $pb-gray;
-    -webkit-text-shadow  : 0 1px 0 $pb-gray !important;
-    text-shadow          : 0 1px 0 $pb-gray !important;
+    color: $pb-gray-500;
+    text-shadow: 0 1px 0 $pb-gray-500!important;
     opacity: .8;
       &:hover, &:focus {
         opacity: .9;
@@ -85,7 +84,7 @@ $toastr-list: ".toast-info"     $state-info-bg  $state-info-border $state-info-t
         color: $link-color;
         text-decoration: underline;
         &:hover {
-          color: $link-color-hover;
+          color: $link-hover;
         }
       }
     }

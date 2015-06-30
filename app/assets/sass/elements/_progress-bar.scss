@@ -4,7 +4,7 @@
     fill: $brand-success;
   }
   .dot {
-    fill: $pb-gray;
+    fill: $pb-gray-500;
   }
 }
 
@@ -16,24 +16,24 @@
 }
 
 .progress-bar {
-  background-color: $brand-secondary;
+  background-color: $pb-blue;
 }
 
 // for angular-loading-bar
 
 #loading-bar .bar {
-  background: pbcolor(pbmediumblue);
+  background: pbcolor($pb-blue);
   height: 2px;
 }
 
 #loading-bar-spinner .spinner-icon {
-  border-top-color:  pbcolor(pbmediumblue);
-  border-left-color: pbcolor(pbmediumblue);
+  border-top-color:  pbcolor($pb-blue);
+  border-left-color: pbcolor($pb-blue);
 }
 
 /* Fancy blur effect */
 #loading-bar .peg {
-  box-shadow: pbcolor(pbmediumblue) 1px 0 6px 1px;
+  box-shadow: pbcolor($pb-blue) 1px 0 6px 1px;
 }
 
 

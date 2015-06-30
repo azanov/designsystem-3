@@ -15,6 +15,21 @@
       }
     })
 
+    .state('brand.styleguide', {
+      url: '/styleguide',
+      templateUrl: 'modules/brand/templates/brand-styleguide.html',
+      controller: 'StyleGuideController as style',
+      resolve: {
+        ColorsResolve: function($log, MockDataFactory) {
+          return MockDataFactory.get({filename: 'colors'});
+        }
+      },
+      data: {
+        pageTitle: 'Brand - Style Guide',
+        bodyClass: 'styleguide'
+      }
+    })
+
     .state('brand.color', {
       url: '/color',
       templateUrl: 'modules/brand/templates/brand-color.html',

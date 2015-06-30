@@ -1,17 +1,41 @@
 //* -- FORMS -- */
-
-.checkboxList {
-  overflow-y: scroll;
-  width: 100%;
-  height: 83px;
-  label {
-    margin-bottom: 0;
-    color: $pb-gray;
-  }
-  .ms-checkboxitem {
-    margin-bottom: 2px;
-  }
+// scss-lint:disable VendorPrefixes
+::-webkit-input-placeholder {
+  font-family: $font-family-sans-serif;
+  color: #c1c1c1;
 }
+
+::-moz-placeholder {
+  font-family: $font-family-sans-serif;
+  color: #c1c1c1;
+}
+
+:-ms-input-placeholder {
+  font-family: $font-family-sans-serif;
+  color: #c1c1c1;
+}
+
+label {
+  font-weight: normal;
+}
+
+
+
+// .checkboxList {
+//   overflow-y: scroll;
+//   width: 100%;
+//   height: 83px;
+//
+//   label {
+//     margin-bottom: 0;
+//     color: $pb-gray-500;
+//   }
+//   .ms-checkboxitem {
+//     margin-bottom: 2px;
+//   }
+// }
+
+
 .help-block.text-error {
   display: none;
   .has-error & {
@@ -19,29 +43,221 @@
     color: $brand-danger;
   }
 }
+
+
 fieldset {
   margin-top: 40px;
   legend {
-    color: $pb-gray;
+    color: $pb-gray-500;
   }
 }
+
+
+.checkbox-enhanced,
+.checkbox-enhanced-sm {
+
+  &.checkbox-inline {
+    padding-left: 0;
+  }
+
+
+  label {
+    padding-left: 0;
+  }
+
+
+  input[type="checkbox"] {
+    display: none;
+    + label::before {
+      content: url("../images/check-box-inactive.png");
+      margin-right: 8px;
+      vertical-align: middle;
+      display: inline-block;
+    }
+  }
+
+  input[type="checkbox"]:checked + label::before {
+    content: url("../images/check-box-active.png");
+    margin-right: 8px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  &.disabled {
+    input[type="checkbox"] + label::before {
+      opacity: .5;
+    }
+  }
+
+
+
+
+
+}
+
+.checkbox-enhanced-sm {
+  label { font-size: 13px; }
+  input[type="checkbox"]+ label::before {
+    content: url("../images/check-box-inactive@0.75x.png");
+  }
+  input[type="checkbox"]:checked + label::before {
+    content: url("../images/check-box-active@0.75x.png");
+  }
+}
+
+
+.radio-enhanced,
+.radio-enhanced-sm {
+
+  &.radio-inline {
+    padding-left: 0;
+  }
+
+
+  label {
+    padding-left: 0;
+  }
+
+
+  input[type="radio"] {
+    display: none;
+    + label::before {
+      content: url("../images/radio-off.png");
+      margin-right: 8px;
+      vertical-align: middle;
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+    }
+
+  }
+
+
+  input[type="radio"]:checked + label::before {
+    content: url("../images/radio-on.png");
+    margin-right: 8px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+  }
+
+  &.disabled {
+    input[type="radio"] + label::before {
+      opacity: .5;
+    }
+  }
+
+}
+
+
+
+
+.radio-enhanced-sm {
+  input[type="radio"]+ label::before {
+    content: url("../images/radio-off@0.75x.png");
+    margin-right: 3px;
+  }
+  input[type="radio"]:checked + label::before {
+    content: url("../images/radio-on@0.75x.png");
+    margin-right: 3px;
+  }
+}
+
+
+
+
+%fancy-focus {
+  border-color: $pb-blue;
+  border-width: 2px;
+  outline: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
+}
+
+
 .form-control {
+  display: block;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  padding: $padding-base-vertical $padding-base-horizontal;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $input-color;
+  background-color: $input-bg;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid $input-border;
-  box-shadow: none;
+  border-radius: 0; //can't use input-border-radius since buttons use that and buttons DO have radius.
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+
+  // trying to remove focus ring on FFx
+  &:focus {
+    outline: none;
+  }
+
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  //@include form-control-focus;
+  &:focus,
+  &.focus {
+    @extend %fancy-focus;
+  }
+
+
+  // Placeholder
+  //@include placeholder;
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    background-color: $input-bg-disabled;
+    color: #c1c1c1;
+    opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+  }
+
+
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+  }
+
+
+  // [converter] extracted textarea& to textarea.form-control
 }
-select[disabled] {
-  color: lighten($text-color, 30%) !important;
+
+
+select {
+  // scss-lint:disable ImportantRule
+  background: #fff url("../images/droparrow.png") right center no-repeat !important;
 }
+
+
 .widget-header {
   h3 {
     font-family: $font-family-sans-serif;
   }
+
 }
+
+
 .has-error {
   .form-control {
     border-color: $brand-danger;
   }
+
 }
+
+
 // date and time picker
 .form-control[disabled].datepicker,
 .form-control[readonly].datepicker,
@@ -53,14 +269,187 @@ fieldset[disabled] .form-control.timepicker {
   background-color: #fff;
 }
 
+
 .input-group-addon {
-  background-color: $pb-gray-50;
+  background-color: $pb-gray-200;
   border-color: $input-border;
 }
+
 
 .repeated-field {
   margin-bottom: 20px;
   &.last {
     margin-bottom: 3px;
+  }
+
+}
+
+
+// for the item buttons
+@mixin logo-button($logo, $w:160px, $h:120px) {
+  position: relative;
+  cursor: pointer;
+  border: 1px solid $input-border;
+  padding: 15px;
+  border-radius: 0;
+  color: #000;
+  width: 160px;
+  height: 120px;
+  background: #fff url("../images/logo-#{$logo}.png") center center no-repeat;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  &:hover,
+  &.hover {
+    @extend %fancy-focus;
+  }
+
+
+  &:active,
+  &.active {
+    border-width: 2px;
+    border-color: $pb-blue;
+  }
+
+
+  &.disabled {
+    background-image: url("../images/logo-#{$logo}-disabled.png");
+    cursor: not-allowed;
+
+    // @include hidpi(1.5) {
+    //   background-image: url('../images/logo-usps-disabled@2x.png');
+    // }
+    &:hover {
+      border: 1px solid $input-border;
+      box-shadow: none;
+    }
+
+  }
+
+}
+
+// declare actual buttons here
+// include logo name and see above for naming structure
+.logo-button-usps {
+  @include logo-button('usps');
+}
+
+
+
+@mixin arrow-inside($color: #fff, $left: 65px) {
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: $left+3;
+    border-width: 12px 12px 0;
+    border-style: solid;
+    border-color: $color transparent;
+
+  }
+}
+
+@mixin arrow-outside($color: $pb-blue, $left: 65px) {
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: $left;
+    border-width: 15px 15px 0;
+    border-style: solid;
+    border-color: $color transparent;
+
+  }
+}
+
+
+
+// for the item buttons
+.item-selector-button {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid $input-border;
+  padding: 15px;
+  border-radius: 0;
+  color: #000;
+  width: 160px;
+  height: 120px;
+  transition: all ease-in-out 0.1s, box-shadow ease-in-out 0.1s;
+
+
+
+  .title {
+    color: $pb-blue;
+    font-size: 12px;
+    margin: 0;
+    padding-top: -3px;
+    font-family: $font-family-ps-medium;
+  }
+
+.divider {
+    height: 1px;
+    width: 20px;
+    background-color: $input-border;
+    margin: 4px auto 10px;
+  }
+
+.image {
+    background: #fff url("../images/box.png") center center no-repeat;
+    width: 64px;
+    height: 57px;
+    margin: 4px auto;
+  }
+
+
+  &:hover,
+  &.hover {
+    padding: 14px;
+    @extend %fancy-focus;
+    @include arrow-inside;
+    @include arrow-outside;
+
+  }
+
+
+  &:active,
+  &.active {
+    border-width: 2px;
+    border-color: $pb-blue;
+    background-color: $pb-blue;
+    @include arrow-outside;
+
+    .title {
+      color: #fff;
+    }
+    .divider {
+      background-color: #fff;
+    }
+    .image {
+      background-color: $pb-blue;
+    }
+    &:hover {
+      padding: 15px;
+      box-shadow: none;
+      @include arrow-inside($pb-blue);
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+
+    .title {
+      color: #c3c3c3;
+    }
+    .image {
+      background-image: url("../images/box-disabled.png");
+    }
+    // @include hidpi(1.5) {
+    //   background-image: url('../images/logo-usps-disabled@2x.png');
+    // }
+    &:hover {
+      padding: 15px;
+      border: 1px solid $input-border;
+      box-shadow: none;
+    }
   }
 }
