@@ -1,0 +1,301 @@
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="main-title">Data</h1>
+
+      <div class="alert alert-info">
+        See the <a href="" ui-sref="tables.datatable.paging">Paging</a> section to see the following items in action.
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- -->
+  <div class="row spacer-top-md spacer-bottom-md">
+
+    <div class="col-md-12">
+
+      <h5>Column sorting</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, purus quis viverra accumsan, eros ex porta nisl, ut rutrum neque sem in massa. Nunc vehicula enim nec tristique vehicula. Sed cursus purus quis sem tempus, gravida ornare leo ornare.</p>
+
+      <div class="preview-example">
+
+          <table class="table table-datatable">
+            <thead>
+              <tr>
+                <th><a href="">Date <i class="fa fa-fw fa-sort text-muted"></i></a></th>
+                <th><a href="">Recipient <i class="fa fa-fw fa-sort text-muted"></i></a></th>
+                <th><a href="">Carrier <i class="fa fa-fw fa-sort-desc"></i></a></th>
+                <th><a href="">Shipping Info <i class="fa fa-fw fa-sort text-muted"></i></a></th>
+                <th>Tracking #</th>
+                <th>Status</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Date</td>
+                <td>Recipient</td>
+                <td>Carrier</td>
+                <td>Shipping Info</td>
+                <td>Tracking #</td>
+                <td>Status</td>
+                <td>Amount</td>
+              </tr>
+              <tr><td colspan="8">&#8230;</td></tr>
+            </tbody>
+          </table>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- -->
+  <div class="row spacer-top-md spacer-bottom-md">
+
+    <div class="col-md-12">
+
+      <h5>Row details</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, purus quis viverra accumsan, eros ex porta nisl, ut rutrum neque sem in massa. Nunc vehicula enim nec tristique vehicula. Sed cursus purus quis sem tempus, gravida ornare leo ornare.</p>
+
+      <div class="preview-example">
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Date</th>
+                <th>Recipient</th>
+                <th>Carrier</th>
+                <th>Shipping Info</th>
+                <th>Tracking #</th>
+                <th>Status</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="" ng-init="tables.showDetails = true" ng-click="tables.showDetails = !tables.showDetails">
+                    <i class="fa fa-fw fa-angle-right fa-transition" ng-class="{'fa-rotate-90': tables.showDetails}"></i>
+                  </a>
+                </td>
+                <td>Date</td>
+                <td>Recipient</td>
+                <td>Carrier</td>
+                <td>Shipping Info</td>
+                <td>Tracking #</td>
+                <td>Status</td>
+                <td>Amount</td>
+              </tr>
+              <tr class="table-details">
+                <td colspan="8">
+                  <div collapse="!tables.showDetails">
+                  <div class="table-details-content">
+
+                    <table class="table no-margin-bottom">
+                      <tbody>
+                        <tr>
+                          <td>
+                            Address line 1<br>
+                            Address Line 2<br>
+                            Address Line 3<br>
+                            City, State, ZIP
+                          </td>
+                          <td>
+                            Address line 1<br>
+                            Address Line 2<br>
+                            Address Line 3<br>
+                            City, State, ZIP
+                          </td>
+                          <td>
+                            Address line 1<br>
+                            Address Line 2<br>
+                            Address Line 3<br>
+                            City, State, ZIP
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  </div>
+              </td>
+              </tr>
+              <tr><td colspan="8">&#8230;</td></tr>
+            </tbody>
+          </table>
+
+
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  <!-- -->
+  <div class="row spacer-top-md spacer-bottom-md">
+
+    <div class="col-md-12">
+
+      <h5>Row Actions</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, purus quis viverra accumsan, eros ex porta nisl, ut rutrum neque sem in massa. Nunc vehicula enim nec tristique vehicula. Sed cursus purus quis sem tempus, gravida ornare leo ornare.</p>
+
+      <div class="preview-example">
+
+          <table class="table table-datatable">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Recipient</th>
+                <th>Carrier</th>
+                <th>Shipping Info</th>
+                <th>Tracking #</th>
+                <th>Status</th>
+                <th>Amount</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Date</td>
+                <td>Recipient</td>
+                <td>Carrier</td>
+                <td>Shipping Info</td>
+                <td>Tracking #</td>
+                <td>Status</td>
+                <td>Amount</td>
+                <td>
+                  <div class="dropdown pull-right">
+                    <a class="dropdown-toggle" data-toggle="dropdown">
+                      <i class="fa fa-fw fa-gear"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                      <li><a href="">Edit</a></li>
+                      <li><a href="">Delete</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr><td colspan="8">&#8230;</td></tr>
+            </tbody>
+          </table>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  <!-- -->
+  <div class="row spacer-top-md spacer-bottom-md">
+
+    <div class="col-md-12">
+
+      <h5>Row Links</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, purus quis viverra accumsan, eros ex porta nisl, ut rutrum neque sem in massa. Nunc vehicula enim nec tristique vehicula. Sed cursus purus quis sem tempus, gravida ornare leo ornare.</p>
+
+      <div class="preview-example">
+
+          <table class="table table-datatable">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Recipient</th>
+                <th>Carrier</th>
+                <th>Shipping Info</th>
+                <th>Tracking #</th>
+                <th>Status</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Date</td>
+                <td><a href="">Recipient</a></td>
+                <td>Carrier</td>
+                <td>Shipping Info</td>
+                <td><a href="">Tracking #</a></td>
+                <td>Status</td>
+                <td>Amount</td>
+              </tr>
+              <tr><td colspan="8">&#8230;</td></tr>
+            </tbody>
+          </table>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- -->
+  <div class="row spacer-top-md spacer-bottom-md">
+
+    <div class="col-md-12">
+
+      <h5>Row Multiple Selection</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, purus quis viverra accumsan, eros ex porta nisl, ut rutrum neque sem in massa. Nunc vehicula enim nec tristique vehicula. Sed cursus purus quis sem tempus, gravida ornare leo ornare.</p>
+      <p>See the <a ui-sref="tables.datatable.paging">Paging</a> section for complete interaction, including toolbar action disclosure.</p>
+
+      <div class="preview-example">
+
+          <table class="table table-datatable">
+            <thead>
+              <tr>
+                <th><input type="checkbox"></th>
+                <th>Date</th>
+                <th>Recipient</th>
+                <th>Carrier</th>
+                <th>Shipping Info</th>
+                <th>Tracking #</th>
+                <th>Status</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>Date</td>
+                <td>Recipient</td>
+                <td>Carrier</td>
+                <td>Shipping Info</td>
+                <td>Tracking #</td>
+                <td>Status</td>
+                <td>Amount</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>Date</td>
+                <td>Recipient</td>
+                <td>Carrier</td>
+                <td>Shipping Info</td>
+                <td>Tracking #</td>
+                <td>Status</td>
+                <td>Amount</td>
+              </tr>
+              <tr><td colspan="8">&#8230;</td></tr>
+            </tbody>
+          </table>
+
+      </div>
+
+    </div>
+
+  </div>
