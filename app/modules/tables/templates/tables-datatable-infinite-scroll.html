@@ -45,7 +45,7 @@
             </li>
             <li class="divider"></li>
             <li ng-repeat="item in datatable.table.data | unique: 'country' | orderBy:'country'">
-              <a ng-click="datatable.table.search.country = item.country">{{item.country}}</a>
+              <a ng-click="datatable.table.searchCountry(item)">{{item.country}}</a>
             </li>
           </ul>
         </div>
@@ -57,7 +57,7 @@
               <i class="fa fa-fw fa-search"></i>
           </div>
 
-            <input class="form-control search" type="text" placeholder="Search" ng-model="datatable.table.search.$" required>
+            <input class="form-control search" type="text" placeholder="Search" ng-model="datatable.table.search.$" ng-model-options="{debounce: 300}" required>
             <button class="btn btn-link search-clear" type="reset" ng-click="datatable.table.searchClear()"><i class="fa fa-fw fa-times-circle"></i></button>
         </div>
 
@@ -70,7 +70,7 @@
 
   <div class="row">
 
-    <div class="col-md-12" infinite-scroll="datatable.myPagingFunction()">
+    <div class="col-md-12" infinite-scroll="datatable.myPagingFunction()" infinite-scroll-distance="0" infinite-scroll-disabled="datatable.disabled" infinite-scroll-listen-for-event="list:reset">
 
       <table class="table table-datatable table-hover">
         <thead>
@@ -99,10 +99,10 @@
         </thead>
 
         <tbody>
-          <tr ng-if="!datatable.table.dataFiltered.length">
+          <tr ng-show="!datatable.table.dataFiltered.length">
             <td colspan="9" class="text-center">There are no results.</td>
           </tr>
-          <tr ng-repeat-start="item in datatable.table.dataFiltered = (datatable.table.data | orderBy:datatable.table.sort.type:datatable.table.sort.reverse | filter: datatable.table.search | daterange:datatable.table.daterangepicker.date.startDate:datatable.table.daterangepicker.date.endDate )" ng-class="{'row-open': item.showDetails}">
+          <tr ng-repeat-start="item in datatable.table.dataFiltered = (datatable.table.data | orderBy:datatable.table.sort.type:datatable.table.sort.reverse | filter: datatable.table.search | daterange:datatable.table.daterangepicker.date.startDate:datatable.table.daterangepicker.date.endDate | limitTo: datatable.table.limit )" ng-class="{'row-open': item.showDetails}">
             <td>
               <a href="" ng-init="item.showDetails = false" ng-click="item.showDetails = !item.showDetails">
                 <i class="fa fa-fw fa-angle-right fa-transition" ng-class="{'fa-rotate-90': item.showDetails}"></i>
@@ -144,6 +144,9 @@
                 </div>
               </div>
             </td>
+          </tr>
+          <tr ng-show="datatable.disabled">
+            <td colspan="9" class="text-center">Loading...</td>
           </tr>
         </tbody>
       </table>

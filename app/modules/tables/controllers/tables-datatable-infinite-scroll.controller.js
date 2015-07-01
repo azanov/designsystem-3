@@ -3,20 +3,37 @@
   'use strict';
 
   angular.module('pb.ds.tables').controller('TablesDatatableInfiniteScrollController',
-  function($log, MockDataFactory, moment) {
+  function($log, MockDataFactory, moment, $scope, $timeout) {
 
     var _this = this;
 
+    _this.disabled = false;
     _this.myPagingFunction = function() {
-      $log.debug('paging');
+      if (_this.disabled) {
+        return;
+      }
+
+      _this.disabled = true;
+      _this.table.limit = _this.table.limit + 10;
+      _this.disabled = false;
+    };
+    _this.reset = function() {
+
+      $scope.$emit('list:reset');
+      _this.filteredData = null;
+      _this.table.limit = 25;
+
     };
 
     _this.table = {
+      limit: 25,
       data: MockDataFactory.query({filename: 'ds_users'}),
+      filteredData: [],
       sort: {
         type: 'first_name',
         reverse: false,
         change: function(key) {
+          _this.reset();
           _this.table.sort.type = key;
           _this.table.sort.reverse = !_this.table.sort.reverse;
         }
@@ -28,8 +45,13 @@
       search: {
 
       },
+      searchCountry: function(item) {
+        _this.table.search.country = item.country;
+        _this.reset();
+      },
       searchClear: function() {
         _this.table.search.$ = '';
+        _this.reset();
       },
       selectedRows: [],
       selectRow: function(data) {
@@ -69,7 +91,7 @@
       },
       daterangepicker: {
         date: {
-          startDate: moment().startOf('month'),
+          startDate: moment().startOf('year'),
           endDate: moment().endOf('month')
         },
         options: {
@@ -83,6 +105,7 @@
           },
           eventHandlers: {
             'apply.daterangepicker': function(ev, picker) {
+              _this.reset();
               _this.table.daterangepicker.displayDate(picker.startDate, picker.endDate);
             }
           }

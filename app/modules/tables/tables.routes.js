@@ -23,8 +23,7 @@
 
     .state('tables.datatable', {
       url: '/datatable',
-      templateUrl: 'modules/tables/templates/tables-datatable.html',
-      controller: 'TablesDatatableController as datatable'
+      templateUrl: 'modules/tables/templates/tables-datatable.html'
     })
 
     .state('tables.datatable.overview', {
