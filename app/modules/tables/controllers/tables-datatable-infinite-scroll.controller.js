@@ -19,8 +19,14 @@
           }
 
           _this.table.infinite.disabled = true;
-          _this.table.limit = _this.table.limit + 10;
-          _this.table.infinite.disabled = false;
+
+          //simulate a delay when loading more data
+          $timeout(function() {
+            _this.table.limit = _this.table.limit + 10;
+            _this.table.infinite.disabled = false;
+          }, 2000);
+
+
         },
         reset: function() {
           $scope.$emit('list:reset');
