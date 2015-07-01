@@ -10,10 +10,15 @@
     _this.table = {
       limit: 25,
       data: MockDataFactory.query({filename: 'ds_users'}),
-      filteredData: [],
       infinite: {
         disabled: false,
         load: function() {
+
+          if (_this.table.limit > _this.table.dataFiltered.length) {
+            _this.table.infinite.disabled = false;
+            return;
+          }
+
           if (_this.table.infinite.disabled) {
             return;
           }
@@ -25,7 +30,6 @@
             _this.table.limit = _this.table.limit + 10;
             _this.table.infinite.disabled = false;
           }, 2000);
-
 
         },
         reset: function() {
