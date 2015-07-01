@@ -19,6 +19,8 @@
     $translateProvider.preferredLanguage('en-us');
     $translateProvider.fallbackLanguage('en-us');
     $translateProvider.useLocalStorage();
+
+    $translateProvider.useSanitizeValueStrategy('sanitize');
   });
 
   // DYNAMIC LOCALE CONFIG
