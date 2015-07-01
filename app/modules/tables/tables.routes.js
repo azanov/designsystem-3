@@ -23,8 +23,7 @@
 
     .state('tables.datatable', {
       url: '/datatable',
-      templateUrl: 'modules/tables/templates/tables-datatable.html',
-      controller: 'TablesDatatableController as datatable'
+      templateUrl: 'modules/tables/templates/tables-datatable.html'
     })
 
     .state('tables.datatable.overview', {
@@ -51,6 +50,17 @@
       url: '/datatable/paging',
       templateUrl: 'modules/tables/templates/tables-datatable-paging.html',
       controller: 'TablesDatatableController as datatable',
+      resolve: {
+        PeopleResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'people'});
+        }
+      }
+    })
+
+    .state('tables.datatable.infiniteScroll', {
+      url: '/datatable/infiniteScroll',
+      templateUrl: 'modules/tables/templates/tables-datatable-infinite-scroll.html',
+      controller: 'TablesDatatableInfiniteScrollController as datatable',
       resolve: {
         PeopleResolve: function($log, MockDataFactory) {
           return MockDataFactory.query({filename: 'people'});
