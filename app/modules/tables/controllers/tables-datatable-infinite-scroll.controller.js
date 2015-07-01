@@ -7,33 +7,32 @@
 
     var _this = this;
 
-    _this.disabled = false;
-    _this.myPagingFunction = function() {
-      if (_this.disabled) {
-        return;
-      }
-
-      _this.disabled = true;
-      _this.table.limit = _this.table.limit + 10;
-      _this.disabled = false;
-    };
-    _this.reset = function() {
-
-      $scope.$emit('list:reset');
-      _this.filteredData = null;
-      _this.table.limit = 25;
-
-    };
-
     _this.table = {
       limit: 25,
       data: MockDataFactory.query({filename: 'ds_users'}),
       filteredData: [],
+      infinite: {
+        disabled: false,
+        load: function() {
+          if (_this.table.infinite.disabled) {
+            return;
+          }
+
+          _this.table.infinite.disabled = true;
+          _this.table.limit = _this.table.limit + 10;
+          _this.table.infinite.disabled = false;
+        },
+        reset: function() {
+          $scope.$emit('list:reset');
+          _this.table.dataFiltered = null;
+          _this.table.limit = 25;
+        }
+      },
       sort: {
         type: 'first_name',
         reverse: false,
         change: function(key) {
-          _this.reset();
+          _this.table.infinite.reset();
           _this.table.sort.type = key;
           _this.table.sort.reverse = !_this.table.sort.reverse;
         }
@@ -47,11 +46,14 @@
       },
       searchCountry: function(item) {
         _this.table.search.country = item.country;
-        _this.reset();
+        _this.table.infinite.reset();
       },
       searchClear: function() {
         _this.table.search.$ = '';
-        _this.reset();
+        _this.table.infinite.reset();
+      },
+      searchChange: function() {
+        _this.table.infinite.reset();
       },
       selectedRows: [],
       selectRow: function(data) {
@@ -105,7 +107,7 @@
           },
           eventHandlers: {
             'apply.daterangepicker': function(ev, picker) {
-              _this.reset();
+              _this.table.infinite.reset();
               _this.table.daterangepicker.displayDate(picker.startDate, picker.endDate);
             }
           }
