@@ -57,7 +57,7 @@
               <i class="fa fa-fw fa-search"></i>
           </div>
 
-            <input class="form-control search" type="text" placeholder="Search" ng-model="datatable.table.search.$" required>
+            <input class="form-control search" type="text" placeholder="Search" ng-model="datatable.table.search.$" ng-model-options="{debounce: 300}" required>
             <button class="btn btn-link search-clear" type="reset" ng-click="datatable.table.searchClear()"><i class="fa fa-fw fa-times-circle"></i></button>
         </div>
 
