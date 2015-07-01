@@ -1,4 +1,3 @@
-/// <reference path="../../typings/angularjs/angular.d.ts"/>
 (function() {
 
   'use strict';
@@ -23,7 +22,8 @@
     'stpa.morris',
     'daterangepicker',
     'angularMoment',
-    'angularUtils.directives.dirPagination'
-    ]);
+    'angularUtils.directives.dirPagination',
+    'infinite-scroll'
+  ]);
 
 })();

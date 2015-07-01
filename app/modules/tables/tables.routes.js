@@ -58,6 +58,17 @@
       }
     })
 
+    .state('tables.datatable.infiniteScroll', {
+      url: '/datatable/infiniteScroll',
+      templateUrl: 'modules/tables/templates/tables-datatable-infinite-scroll.html',
+      controller: 'TablesDatatableInfiniteScrollController as datatable',
+      resolve: {
+        PeopleResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'people'});
+        }
+      }
+    })
+
     .state('tables.advanced1', {
       url: '/advanced1',
       templateUrl: 'modules/tables/templates/tables-advanced1.html',

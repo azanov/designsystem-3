@@ -39,7 +39,8 @@
     "angular-daterangepicker": "0.1.15",
     "angular-ui-utils": "bower",
     "angular-utils-pagination": "0.8.2",
-    "headroom.js": "0.7.0"
+    "headroom.js": "0.7.0",
+    "ngInfiniteScroll": "1.2.1"
   },
   "devDependencies": {},
   "resolutions": {

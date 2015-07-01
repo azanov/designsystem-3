@@ -1,0 +1,141 @@
+(function() {
+
+  'use strict';
+
+  angular.module('pb.ds.tables').controller('TablesDatatableInfiniteScrollController',
+  function($log, MockDataFactory, moment) {
+
+    var _this = this;
+
+    _this.myPagingFunction = function() {
+      $log.debug('paging');
+    };
+
+    _this.table = {
+      data: MockDataFactory.query({filename: 'ds_users'}),
+      sort: {
+        type: 'first_name',
+        reverse: false,
+        change: function(key) {
+          _this.table.sort.type = key;
+          _this.table.sort.reverse = !_this.table.sort.reverse;
+        }
+      },
+      groups: {
+        min: 5,
+        max: 'Infinity'
+      },
+      search: {
+
+      },
+      searchClear: function() {
+        _this.table.search.$ = '';
+      },
+      selectedRows: [],
+      selectRow: function(data) {
+        if (_this.table.selectedRows.indexOf(data.id) === -1) {
+          _this.table.selectedRows.push(data.id);
+        }
+        else {
+          _this.table.selectedRows.splice(_this.table.selectedRows.indexOf(data.id), 1);
+          _this.table.allRowsSelected = false;
+        }
+      },
+      selectAllRows: function() {
+        var checked = !_this.table.selectAllFilteredRows();
+
+        _this.table.selectedRows = [];
+
+        angular.forEach(_this.table.dataFiltered, function(value, key) {
+          value.selected = checked;
+
+          if (checked) {
+            _this.table.selectedRows.push(value.id);
+          }
+
+        });
+
+      },
+      selectAllFilteredRows: function() {
+        var selected = 0;
+
+        angular.forEach(_this.table.dataFiltered, function(value, key) {
+          if (value.selected) {
+            selected++;
+          }
+        });
+
+        return (selected !== 0 && selected === _this.table.dataFiltered.length);
+      },
+      daterangepicker: {
+        date: {
+          startDate: moment().startOf('month'),
+          endDate: moment().endOf('month')
+        },
+        options: {
+          singleDatePicker: false,
+          opens: 'center',
+          ranges: {
+            Today: [moment(), moment()],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Month to date': [moment().startOf('month'), moment()],
+            'Year to date': [moment().startOf('year'), moment()]
+          },
+          eventHandlers: {
+            'apply.daterangepicker': function(ev, picker) {
+              _this.table.daterangepicker.displayDate(picker.startDate, picker.endDate);
+            }
+          }
+        },
+        displayDate: function(start, end) {
+
+          var startDate = start || _this.table.daterangepicker.date.startDate;
+          var endDate = end || _this.table.daterangepicker.date.endDate;
+
+          var dateDiff = endDate.diff(startDate, 'days');
+          var result = '';
+
+          if (dateDiff === 0) {
+            result = 'Today ' + moment(startDate).format('MM/DD/YYYY');
+          }
+          else if (dateDiff === 6) {
+            result = 'Last 7 days';
+          }
+          else {
+            result = 'From ' + moment(startDate).format('MM/DD/YYYY') + ' to ' + moment(endDate).format('MM/DD/YYYY');
+          }
+
+          return result;
+        }
+      }
+    };
+
+  });
+
+
+  //TODO: this filter hasndles the daterange and should be moved to the core/filters
+  //NOTE: may want to change filter name, this handles a single date in the object
+  angular.module('pb.ds.tables').filter('daterange', function($log, moment) {
+    return function(items, start, end) {
+      //$log.debug('FROM:', moment(start).unix(), 'TO:', moment(end).unix());
+
+      var dateStart = moment(start).unix();
+      var dateEnd = moment(end).unix();
+
+      var result = [];
+
+      angular.forEach(items, function(value, index) {
+        //$log.debug(value, index);
+        var itemDate = moment(value.date.created).unix();
+
+        if (itemDate > dateStart && itemDate < dateEnd) {
+          result.push(value);
+        }
+      });
+
+      return result;
+
+    };
+  });
+
+})();
