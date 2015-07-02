@@ -21,7 +21,6 @@
 // table transitions for hovers
 .table> tbody > tr > td,
 .table > tbody > tr > th {
-  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
 .table-clickable {
@@ -51,14 +50,13 @@ th.centered {
 .table>tfoot>tr>th,
 .table thead th {
   font-family: $font-family-sans-serif;
-  font-weight: normal;
-  color: $brand-primary;
-  border-bottom-color: $brand-primary;
+  font-weight: bold;
+  color: $text-color;
+  border-bottom-color: $text-color;
   border-bottom-width: 1px;
 }
 .table > tbody > tr > td,
 .table > tbody > tr > th {
-  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
 td.currency {

@@ -18,7 +18,12 @@
     .state('tables.simple', {
       url: '/lib1',
       templateUrl: 'modules/tables/templates/tables-simple.html',
-      controller: 'TablesSimpleController as simple'
+      controller: 'TablesSimpleController as simple',
+      resolve: {
+        PeopleResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'people'});
+        }
+      }
     })
 
     .state('tables.datatable', {

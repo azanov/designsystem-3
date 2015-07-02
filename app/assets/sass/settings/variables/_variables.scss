@@ -52,6 +52,8 @@ $background-color:       $body-bg;
 // text color on `<body>`.
 $text-color:             $pb-gray-500;
 
+$pb-disabled-text:       #c1c1c1;
+
 
 
 
@@ -141,7 +143,7 @@ $table-condensed-extra-cell-padding: 2px;
 //** Default background color used for all tables.
 $table-bg: #fff;
 //** Background color used for `.table-striped`.
-$table-bg-accent: $pb-gray-200;
+$table-bg-accent: $pb-gray-50;
 //** Border color for table and cell borders.
 $table-border-color: $pb-gray-300;
 //** Background color used for `.table-hover`.
