@@ -8,6 +8,7 @@
     var _this = this;
 
     _this.table = {
+      limitDefault: 25,
       limit: 25,
       data: MockDataFactory.query({filename: 'ds_users'}),
       infinite: {
@@ -35,7 +36,7 @@
         reset: function() {
           $scope.$emit('list:reset');
           _this.table.dataFiltered = null;
-          _this.table.limit = 25;
+          _this.table.limit = _this.table.limitDefault;
         }
       },
       sort: {
