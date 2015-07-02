@@ -43,7 +43,8 @@
 
     .state('tables.datatable.data', {
       url: '/datatable/data',
-      templateUrl: 'modules/tables/templates/tables-datatable-data.html'
+      templateUrl: 'modules/tables/templates/tables-datatable-data.html',
+      controller: 'TablesDataController as data'
     })
 
     .state('tables.datatable.paging', {
