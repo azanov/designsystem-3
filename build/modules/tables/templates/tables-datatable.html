@@ -1,194 +1,40 @@
+
 <div class="container-fluid">
 
   <div class="row">
     <div class="col-md-12">
-      <h1 class="main-title">Data table</h1>
+      <h1 class="main-title">Data tables</h1>
       </div>
   </div>
 
+<div class="row spacer-top-lg">
+<div class="col-md-2">
+  <div class="list-group">
+  <a href="" class="list-group-item" ui-sref="tables.datatable.overview" ui-sref-active="active">
+    Overview
+  </a>
+  <a href="" class="list-group-item" ui-sref="tables.datatable.toolbar" ui-sref-active="active">
+    Toolbar
+  </a>
+  <a href="" class="list-group-item" ui-sref="tables.datatable.tabbed" ui-sref-active="active">
+    Tabbed
+  </a>
+  <a href="" class="list-group-item" ui-sref="tables.datatable.data" ui-sref-active="active">
+    Data
+  </a>
+  <a href="" class="list-group-item" ui-sref="tables.datatable.paging" ui-sref-active="active" >
+    Paging
+  </a>
+  <a href="" class="list-group-item" ui-sref="tables.datatable.infiniteScroll" ui-sref-active="active" >
+    Infinite Scroll
+  </a>
+</div>
+</div>
 
-  <div class="row toolbar spacer-top-md spacer-bottom-md">
+<div class="col-md-10">
+  <div ui-view=""></div>
+</div>
 
-    <div class="col-md-3">
-      <div class="btn-group">
-        <button type="button" class="btn btn-default" tooltip="Add&nbsp;user">
-          <i class="fa fa-fw fa-plus"></i>
-        </button>
-        <button ng-if="datatable.table.selectedRows.length" type="button" class="btn btn-default" tooltip="Delete">
-          <i class="fa fa-fw fa-trash-o"></i>
-        </button>
-        <button ng-if="datatable.table.selectedRows.length === 1" type="button" class="btn btn-default" tooltip="Edit">
-          <i class="fa fa-fw fa-pencil"></i>
-        </button>
-      </div>
-    </div>
-
-    <div class="col-md-9">
-
-      <form class="form-inline pull-right">
-
-        <a href="" date-range-picker class="btn btn-link date-picker" type="text" ng-model="datatable.table.daterangepicker.date" options="datatable.table.daterangepicker.options">
-          <i class="fa fa-fw fa-calendar"></i> {{datatable.table.daterangepicker.date.startDate | amDateFormat: 'MM/DD/YY'}} to {{datatable.table.daterangepicker.date.endDate | amDateFormat: 'MM/DD/YY'}} <i class="fa fa-angle-down"></i>
-        </a>
-
-        <div class="form-group dropdown">
-          <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-            {{datatable.table.search.country || 'All countries'}} <i class="fa fa-angle-down"></i>
-          </button>
-          <ul class="dropdown-menu" role="menu">
-            <li class="dropdown-header">Country filter</li>
-            <li>
-              <a ng-click="datatable.table.search.country = ''">Show all</a>
-            </li>
-            <li class="divider"></li>
-            <li ng-repeat="item in datatable.table.data | unique: 'country' | orderBy:'country'">
-              <a ng-click="datatable.table.search.country = item.country">{{item.country}}</a>
-            </li>
-          </ul>
-        </div>
-
-
-        <div class="input-group">
-
-          <div class="input-group-btn">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-fw fa-search"></i> <i class="fa fa-angle-down"></i>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li class="dropdown-header">Dropdown header</li>
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </div>
-
-            <input class="form-control search" type="text" placeholder="Search" ng-model="datatable.table.search.$" required>
-            <button class="btn btn-link search-clear" type="reset" ng-click="datatable.table.searchClear()"><i class="fa fa-fw fa-times-circle"></i></button>
-        </div>
-
-
-        <div class="form-group dropdown">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-            <i class="fa fa-fw fa-align-left"></i> <i class="fa fa-angle-down"></i>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-right" role="menu">
-            <li class="dropdown-header">Dropdown header</li>
-            <li><a href="#"><i class="fa fa-fw fa-align-right"></i> Action</a></li>
-            <li><a href="#"><i class="fa fa-fw fa-beer"></i> Another action</a></li>
-            <li><a href="#"><i class="fa fa-fw fa-globe"></i> Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#"><i class="fa fa-fw fa-sort-alpha-desc"></i> Separated link</a></li>
-          </ul>
-        </div>
-
-      </form>
-
-    </div>
-
-  </div>
-
-
-  <div class="row">
-
-    <div class="col-md-12">
-
-      <table class="table table-datatable table-hover">
-        <thead>
-          <tr>
-            <th>&nbsp;</th>
-            <th><input type="checkbox" ng-model="datatable.table.allRowsSelected" ng-click="datatable.table.selectAllRows()" ng-checked="datatable.table.selectAllFilteredRows()" /></th>
-            <th>&nbsp;</th>
-            <th>
-              <a href="" ng-click="datatable.table.sort.change('first_name')">First Name
-                <i class="fa fa-fw fa-sort text-muted" ng-if="datatable.table.sort.type !== 'first_name'"></i>
-                <i class="fa fa-fw fa-sort" ng-if="datatable.table.sort.type === 'first_name'" ng-class="{'fa-sort-desc': !datatable.table.sort.reverse, 'fa-sort-asc': datatable.table.sort.reverse}"></i>
-              </a>
-            </th>
-            <th>
-              <a href="" ng-click="datatable.table.sort.change('last_name')">Last Name
-                <i class="fa fa-fw fa-sort text-muted" ng-if="datatable.table.sort.type !== 'last_name'"></i>
-                <i class="fa fa-fw" ng-if="datatable.table.sort.type === 'last_name'" ng-class="{'fa-sort-desc': !datatable.table.sort.reverse, 'fa-sort-asc': datatable.table.sort.reverse}"></i>
-              </a>
-            </th>
-            <th>Email</th>
-            <th>Country</th>
-            <th>Created</th>
-            <th>Groups</th>
-            <th>&nbsp;</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr ng-if="!datatable.table.dataFiltered.length">
-            <td colspan="9" class="text-center">There are no results.</td>
-          </tr>
-          <tr dir-paginate-start="item in datatable.table.dataFiltered = (datatable.table.data | orderBy:datatable.table.sort.type:datatable.table.sort.reverse | filter: datatable.table.search | daterange:datatable.table.daterangepicker.date.startDate:datatable.table.daterangepicker.date.endDate | itemsPerPage: datatable.table.paging.size )" ng-class="{'row-open': item.showDetails}">
-            <td>
-              <a href="" ng-init="item.showDetails = false" ng-click="item.showDetails = !item.showDetails">
-                <i class="fa fa-fw fa-angle-right fa-transition" ng-class="{'fa-rotate-90': item.showDetails}"></i>
-              </a>
-            </td>
-            <td><input type="checkbox" ng-model="item.selected" ng-click="datatable.table.selectRow(item)"></td>
-            <td><i class="fa fa-fw" ng-class="{'fa-user': item.userType === 'user', 'fa-user-secret': item.userType === 'admin'}"></i></td>
-            <td>{{item.first_name}}</td>
-            <td>{{item.last_name}}</td>
-            <td><a href="">{{item.email}}</a></td>
-            <td>{{item.country}}</td>
-            <td>{{item.date.created | date:'MM/dd/yyyy'}}</td>
-            <td>
-              <span ng-repeat="group in (item.groups | orderBy: group | limitTo: item.limit || datatable.table.groups.min) track by $index">
-                {{group}}<span ng-if="!$last">, </span>
-              </span>
-              <span>
-                <a class="small" href="" ng-if="item.groups.length > datatable.table.groups.min" ng-show="!item.limit" ng-click="item.limit = datatable.table.groups.max">Show all</a>
-                <a class="small" href="" ng-show="item.limit" ng-click="item.limit = undefined">Show less</a>
-              </span>
-            </td>
-            <td>
-              <div class="dropdown pull-right">
-                <a class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-fw fa-gear"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                  <li><a href="">Edit</a></li>
-                  <li><a href="">Delete</a></li>
-                </ul>
-              </div>
-            </td>
-          </tr>
-          <tr class="table-details" dir-paginate-end="item in datatable.table.data">
-            <td colspan="10">
-              <div collapse="!item.showDetails">
-                <div class="table-details-content">
-                  <h1>Sample details {{$index}} here. {{item.first_name}}</h1>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-    </div>
-
-  </div>
-
-  <div class="row spacer-top-lg">
-
-    <div class="col-md-4">
-      <form class="form-inline">
-        Showing <select class="form-control" ng-model="datatable.table.paging.size" ng-options="size as size for size in datatable.table.paging.sizes"></select> per page
-      </form>
-    </div>
-
-    <div class="col-md-8 text-right">
-
-      <div dir-pagination-controls boundary-links="true" template-url="modules/tables/templates/tables-datatable-dirPaginate.html"></div>
-
-    </div>
-
-  </div>
-
+</div>
 
 </div>

@@ -5,7 +5,16 @@
     padding: $padding-small-vertical $padding-small-horizontal;
     font-family: $font-family-ps-regular;
     line-height: 1.5;
+    height: 30px;
     font-size: 12px;
+  }
+
+  select {
+    padding: $padding-small-vertical $padding-small-horizontal;
+    font-family: $font-family-ps-regular;
+    line-height: 1.5;
+    font-size: 12px;
+    height: 30px;
   }
 
 

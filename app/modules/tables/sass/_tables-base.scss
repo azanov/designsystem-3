@@ -54,6 +54,9 @@ th.centered {
   color: $text-color;
   border-bottom-color: $text-color;
   border-bottom-width: 1px;
+  a {
+    color: inherit;
+  }
 }
 .table > tbody > tr > td,
 .table > tbody > tr > th {
@@ -64,4 +67,36 @@ td.currency {
 }
 th.currency {
   text-align: center;
+}
+
+
+
+.table {
+
+  // &.table-datatable {
+  //
+  //   thead tr th a {
+  //     color: #a03f9b;
+  //     text-decoration: none;
+  //     white-space: nowrap;
+  //   }
+  //
+  // }
+
+
+  .table-details {
+
+    td {
+      padding: 0;
+      background-color: $pb-gray-50;
+      border-top-width: 0;
+    }
+
+
+    .table-details-content {
+      padding: 10px;
+    }
+
+  }
+
 }

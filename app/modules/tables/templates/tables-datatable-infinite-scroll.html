@@ -4,9 +4,9 @@
     <div class="col-md-12">
       <h1 class="main-title">Infinite Scroll Example
         <small class="pull-right">
-          <a class="badge" href="http://binarymuse.github.io/ngInfiniteScroll/index.html" target="blank"><i class="fa fa-plug"></i> ngInfiniteScroll v1.2.1</a>
-          <a class="badge" href="https://github.com/fragaria/angular-daterangepicker" target="blank"><i class="fa fa-plug"></i> daterangepicker v0.1.15</a>
-          <a class="badge" href="https://github.com/angular-ui/bootstrap/tree/0.12.1" target="blank"><i class="fa fa-plug"></i> ui-bootstrap v0.12.1</a>
+          <a class="badge badge-link" href="http://binarymuse.github.io/ngInfiniteScroll/index.html" target="blank"><i class="fa fa-plug"></i> ngInfiniteScroll v1.2.1</a>
+          <a class="badge badge-link" href="https://github.com/fragaria/angular-daterangepicker" target="blank"><i class="fa fa-plug"></i> daterangepicker v0.1.15</a>
+          <a class="badge badge-link" href="https://github.com/angular-ui/bootstrap/tree/0.12.1" target="blank"><i class="fa fa-plug"></i> ui-bootstrap v0.12.1</a>
         </small>
       </h1>
 
@@ -116,7 +116,7 @@
           <tr ng-repeat-start="item in datatable.table.dataFiltered = (datatable.table.data | orderBy:datatable.table.sort.type:datatable.table.sort.reverse | filter: datatable.table.search | daterange:datatable.table.daterangepicker.date.startDate:datatable.table.daterangepicker.date.endDate | limitTo: datatable.table.limit )" ng-class="{'row-open': item.showDetails}">
             <td>
               <a href="" ng-init="item.showDetails = false" ng-click="item.showDetails = !item.showDetails">
-                <i class="fa fa-fw fa-angle-right fa-transition" ng-class="{'fa-rotate-90': item.showDetails}"></i>
+                <i class="fa fa-fw fa-chevron-right fa-transition" ng-class="{'fa-rotate-90': item.showDetails}"></i>
               </a>
             </td>
             <td><input type="checkbox" ng-model="item.selected" ng-click="datatable.table.selectRow(item)"></td>
@@ -160,7 +160,7 @@
       </table>
 
       <div class="text-center spacer-bottom-lg" ng-show="datatable.table.infinite.disabled">
-        <span class="badge" style="padding: 10px; font-size: 1em;"><i class="fa fa-refresh fa-spin"></i> Loading...</span>
+        <span class="badge badge-link" style="padding: 10px; font-size: 1em;"><i class="fa fa-refresh fa-spin"></i> Loading...</span>
       </div>
 
     </div>

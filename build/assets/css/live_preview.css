@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v1.5.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Mon Jun 29 2015 15:18:16 GMT-0400 (EDT) 
+ * Thu Jul 02 2015 13:20:04 GMT-0400 (EDT) 
  */
 @font-face { font-family: 'PrecisionSans_W_Rg'; font-weight: '400'; font-style: 'normal'; src: url("../fonts/PrecisionSans_W_Rg.eot"); src: url("../fonts/PrecisionSans_W_Rg.eot?#iefix") format("embedded-opentype"), url("../fonts/PrecisionSans_W_Rg.woff") format("woff"), url("../fonts/PrecisionSans_W_Rg.ttf") format("truetype"), url("../fonts/PrecisionSans_W_Rg.svg#PrecisionSans_W_Rg") format("svg"); }
 @font-face { font-family: 'PrecisionSans_W_Bd'; font-weight: '700'; font-style: 'normal'; src: url("../fonts/PrecisionSans_W_Bd.eot"); src: url("../fonts/PrecisionSans_W_Bd.eot?#iefix") format("embedded-opentype"), url("../fonts/PrecisionSans_W_Bd.woff") format("woff"), url("../fonts/PrecisionSans_W_Bd.ttf") format("truetype"), url("../fonts/PrecisionSans_W_Bd.svg#PrecisionSans_W_Bd") format("svg"); }
@@ -68,6 +68,8 @@ ul, ol { margin-top: 0; margin-bottom: 10px; margin-left: 0; padding-left: 1.5em
 
 .fa-lg { font-size: 1.5em; }
 
+.fa-transition { transition: all .2s ease; }
+
 .nav-tabs > li > a, .nav-pills > li > a { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; }
 
 .help-block { color: #9b9b9b; }
@@ -118,6 +120,9 @@ cite { font-style: normal; }
 
 .styleguide footer { display: none; }
 .styleguide section { margin-top: 50px; }
+
+.preview-example { background-color: #fff; position: relative; padding: 40px 9px 9px; border: 1px solid #e3e3e3; border-radius: 3px; margin: 20px 0; }
+.preview-example:before { content: 'Example'; position: absolute; top: 0; left: 0; padding: 3px 7px; text-transform: uppercase; background-color: #f5f5f5; border: 1px solid #e3e3e3; border-top: 0; border-left: 0; letter-spacing: .1em; font-size: .8em; }
 
 .clearfix { zoom: 1; }
 .clearfix:before, .clearfix:after { display: table; content: ''; }
