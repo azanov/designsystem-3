@@ -1,4 +1,4 @@
-//  --------- HEADER ----------- /
+/*  --------- HEADER 2.0 ----------- */
 // class needs to be set with JS
 body {
   padding-top: 50px;
@@ -200,10 +200,6 @@ header {
   right: 0;
   z-index: 1000;
   margin-top: 0;
-
-  &.animated {
-    animation-duration: .5s;
-  }
 
   &.headroom-not-top {
     box-shadow: 0 0 10px rgba(0, 0, 0, .4);
