@@ -21,6 +21,7 @@ label {
 
 
 
+
 // .checkboxList {
 //   overflow-y: scroll;
 //   width: 100%;
@@ -228,16 +229,33 @@ fieldset {
   fieldset[disabled] & {
     cursor: $cursor-disabled;
   }
-
-
-  // [converter] extracted textarea& to textarea.form-control
 }
 
 
 select {
   // scss-lint:disable ImportantRule
-  background: #fff url("../images/droparrow.png") right center no-repeat !important;
+  background: #fff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAAAXNSR0IArs4c6QAAAORJREFUOBFjYBgFwyAEGJubm90YGRnZifDLpZqamofo6liYmJgcgAZUokug8T/++vVLDU0MzGV6//596////59ik4SJ/fv3rwEIXsH4yDRTT0/PV6ABpciCyGyg3LU/f/5MQRZDZjPCOK2trYeAXrGF8WE00ACX6urqvTA+Os0EE/j7928ukP0XxgfRQM1r8WkGqYEbUFdXdxGoYSZIEAq+A/nFMA4uGm4ASMHv379rgdRbqOIObNEGlYNTKAYAQ/odMMRrgLIPgNHWBVeFh8GCLgcM8VksLCzngIb9QJcb5dMoBABjyVkxAsbTcgAAAABJRU5ErkJggg==") right center no-repeat !important;
 }
+
+.input-sm, select.input-sm {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.input-lg, select.input-lg {
+  line-height: 1.42857;
+}
+
+
+
+
+
+
+
+
+
 
 
 .widget-header {
@@ -279,7 +297,10 @@ fieldset[disabled] .form-control.timepicker {
   &.last {
     margin-bottom: 3px;
   }
-
+}
+.add-another-link {
+  font-size: 12px;
+  text-decoration: underline;
 }
 
 

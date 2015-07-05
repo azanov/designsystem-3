@@ -1,5 +1,18 @@
+
+// NOTE: also a copy of this selector in forms.scss
+%fancy-focus {
+  border-color: $pb-blue;
+  border-width: 1px;
+  outline: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
+}
+
 .selectize-input {
-  border-color: $pb-gray-300;
+  border-color: $input-border;
+  border-radius: 0;
+  &.focus {
+    @extend %fancy-focus;
+  }
 }
 
 
@@ -7,7 +20,7 @@
   .selectize-control {
     .selectize-input {
       overflow: initial;
-      border-color: $pb-gray-300;
+      border-color: $input-border;
       @include flat-right;
     }
 
@@ -42,13 +55,17 @@
         padding: $padding-small-vertical $padding-small-horizontal;
         line-height: 1;
         font-size: $font-size-xsmall;
-        border-radius: $border-radius-small;
+        border-radius: 0;
       }
     }
   }
 }
 .selectize-control.single .selectize-input  {
-  border-color: $pb-gray-300;
+  border-color: $input-border;
+  border-radius: 0;
+  &.focus {
+    @extend %fancy-focus;
+  }
 }
 
 

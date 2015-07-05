@@ -72,9 +72,9 @@
 }
 .dropdown-menu>li>a:focus,
 .dropdown-menu>li>a:hover {
-  color: $text-color;
+  color: #fff;
   text-decoration: none;
-  background-color: $pb-gray-200;
+  background-color: $pb-blue;
 }
 // font awesome icon size overrides in button groups
 .btn-group {

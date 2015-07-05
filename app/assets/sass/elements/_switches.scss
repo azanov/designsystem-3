@@ -1,5 +1,18 @@
+// ============================================================
+// Angular Toggle Switch
+// ============================================================
 
-//* TODO:  Need IE8 fallback */
+.ats-switch span.switch-left {
+  color: #fff;
+  background: #pb-blue;
+}
+.ats-switch .switch-left {
+  background: #pb-blue ;
+
+}
+
+
+
 // ============================================================
 // COMMON
 // ============================================================
@@ -12,9 +25,7 @@
     position: relative;
     cursor: pointer;
     outline: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+
     user-select: none;
   }
 }
@@ -34,10 +45,8 @@ input.cmn-toggle-round-flat + label {
   padding: 2px;
   width: $radius *2;
   height: $radius;
-  background-color: #dddddd;
-  -o-border-radius: $radius;
+  background-color: $pb-gray-50;
   border-radius: $radius;
-  -webkit-transition: background .4s;
   transition: background .4s;
 }
 input.cmn-toggle-round-flat + label:before, input.cmn-toggle-round-flat + label:after {
@@ -51,9 +60,7 @@ input.cmn-toggle-round-flat + label:before {
   bottom: 2px;
   right: 2px;
   background-color: #fff;
-  -o-border-radius: $radius;
   border-radius: $radius;
-  -webkit-transition: background .4s;
   transition: background .4s;
 }
 input.cmn-toggle-round-flat + label:after {
@@ -61,16 +68,14 @@ input.cmn-toggle-round-flat + label:after {
   left: 4px;
   bottom: 4px;
   width: $radius - $inset;
-  background-color: #dddddd;
-  -o-border-radius: $radius - $inset;
+  background-color: $pb-gray-50;
   border-radius: $radius - $inset;
-  -webkit-transition: margin .4s, background .4s;
   transition: margin .4s, background .4s;
 }
 input.cmn-toggle-round-flat:checked + label {
-  background-color: $brand-primary;
+  background-color: $pb-blue;
 }
 input.cmn-toggle-round-flat:checked + label:after {
   margin-left: $radius;
-  background-color: $brand-primary;
+  background-color: $pb-blue;
 }

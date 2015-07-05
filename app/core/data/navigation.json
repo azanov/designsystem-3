@@ -8,9 +8,6 @@
     },{
       "label": "Accordion",
       "value": "elements.accordion"
-    },  {
-      "label": "Color Charts",
-      "value": "elements.colorcharts"
     }, {
       "label": "Grid",
       "value": "elements.grid"
@@ -124,6 +121,9 @@
     }, {
       "label": "Typography",
       "value": "brand.typography"
+    },  {
+      "label": "Chart Colors",
+      "value": "elements.colorcharts"
     }]
   }, {
     "label": "Helpers",
