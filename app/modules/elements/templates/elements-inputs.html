@@ -182,7 +182,7 @@
     <div class="row">
       <div class="form-group col-md-4">
         <label>
-          Single-select</label><select ng-model="inputs.countrySelect.selected" options="inputs.countrySelect.countries" selectize="inputs.countrySelect.options" type="text"/>
+          Single-select</label><select ng-model="inputs.countrySelect.selected" options="inputs.countrySelect.countries" selectize="inputs.countrySelect.options" type="text">
       </select>
     </div>
     <div class="form-group col-md-4">
@@ -215,6 +215,40 @@
     </div>
   </div>
 </fieldset>
+
+<fieldset>
+  <legend>Enhanced Checkboxes</legend>
+  <div class="row">
+
+  <div class="col-md-3">
+    <div class="checkbox checkbox-enhanced-sm">
+      <input id="check4" type="checkbox" checked>
+      <label for="check4">Checkbox</label>
+    </div>
+    <div class="checkbox checkbox-enhanced-sm">
+      <input id="check5" name="check" type="checkbox">
+      <label for="check5">Checkbox
+      </label>
+    </div>
+    <div class="checkbox checkbox-enhanced-sm disabled">
+      <input id="check6" name="check" type="checkbox" disabled>
+      <label for="check6">Checkbox (disabled)
+      </label>
+    </div>
+  </div>
+
+  <div class="col-md-3  col-md-offset-1">
+    <div class="checkbox-inline checkbox-enhanced-sm">
+      <input id="inlineCheckbox3" type="checkbox" value="option1">
+      <label for="inlineCheckbox3">Check me out</label>
+    </div>
+    <div class="checkbox-inline checkbox-enhanced-sm">
+      <input id="inlineCheckbox4" type="checkbox" value="option1">
+      <label for="inlineCheckbox4">We're inline</label>
+    </div>
+  </div>  </div>
+</fieldset>
+
 <fieldset>
   <legend>
     Checkboxes
@@ -259,6 +293,40 @@
         </label>
         <label class="checkbox-inline" for="cb6">
           <input id="cb6" type="checkbox" value="">Dolor</label>
+      </div>
+    </div>
+  </div>
+</fieldset>
+
+<fieldset>
+  <legend>Enahanced radio buttons</legend>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="radio radio-enhanced-sm">
+        <input id="radio3" name="radioOptions" type="radio" checked>
+        <label for="radio3">Radio</label>
+      </div>
+      <div class="radio radio-enhanced-sm">
+        <input id="radio4" name="radioOptions" type="radio">
+        <label for="radio4">Radio
+        </label>
+      </div>
+      <div class="radio radio-enhanced-sm disabled">
+        <input id="radio5" name="radioOptions" type="radio" disabled>
+        <label for="radio5">Radio (disabled)
+        </label>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-md-offset-1">
+      <div class="radio-inline radio-enhanced-sm">
+        <input id="inlineradio3" name="inlineRadioOptions" type="radio" value="option1">
+        <label for="inlineradio3">Check me out</label>
+      </div>
+
+      <div class="radio-inline radio-enhanced-sm">
+        <input id="inlineradio4" name="inlineRadioOptions" type="radio" value="option1">
+        <label for="inlineradio4">We're inline</label>
       </div>
     </div>
   </div>
@@ -436,17 +504,13 @@
   </div>
   <div class="col-md-4">
     <div class="form-group">
-      <label>
-        Multiple select (disabled)
-      </label>
+      <label>Multiple select (disabled)</label>
 
-      <select class="form-control" multiple ng-disabled="true" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople"/>
+      <select class="form-control" multiple ng-disabled="true" ng-model="selectedPerson2" ng-options="person.full_name for person in inputs.samplePeople"/>
     </div>
   </div>
   <div class="col-md-4">
-    <label>
-
-      Multiple select with checkboxes
+    <label>Multiple select with checkboxes
     </label>
     <div class="checkboxList form-control">
       <div class="ms-checkboxitem" ng-repeat="person in inputs.samplePeople">
@@ -463,10 +527,7 @@
 </div>
 </fieldset>
 <fieldset>
-<legend>
-
-  Submit and cancel buttons
-</legend>
+<legend>Submit and cancel buttons</legend>
 <div class="form-group"><input class="btn btn-primary" type="submit" value="Submit">
   &nbsp;
   <input class="btn btn-link" type="reset" value="Cancel">
@@ -475,13 +536,3 @@
 </div>
 </div>
 </div>
-<!-- <div class="form-group">
-<label for="">Password (with "show" toggle)</label>
-<div class="input-group">
-  <input id="pwd" class="form-control" placeholder="Enter Password" type="text" />
-  <span class="input-group-btn">
-    <button class="btn btn-default" pb-reveal-password password="'pwd'" hide-label="'Hide'"><span>Hide</span>
-    </button>
-  </span>
-</div>
-</div> -->

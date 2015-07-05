@@ -237,6 +237,10 @@ select {
   background: #fff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAAAXNSR0IArs4c6QAAAORJREFUOBFjYBgFwyAEGJubm90YGRnZifDLpZqamofo6liYmJgcgAZUokug8T/++vVLDU0MzGV6//596////59ik4SJ/fv3rwEIXsH4yDRTT0/PV6ABpciCyGyg3LU/f/5MQRZDZjPCOK2trYeAXrGF8WE00ACX6urqvTA+Os0EE/j7928ukP0XxgfRQM1r8WkGqYEbUFdXdxGoYSZIEAq+A/nFMA4uGm4ASMHv379rgdRbqOIObNEGlYNTKAYAQ/odMMRrgLIPgNHWBVeFh8GCLgcM8VksLCzngIb9QJcb5dMoBABjyVkxAsbTcgAAAABJRU5ErkJggg==") right center no-repeat !important;
 }
 
+select[multiple], select[size] {
+  background-image: none !important;
+}
+
 .input-sm, select.input-sm {
   height: 30px;
   padding: 5px 10px;
