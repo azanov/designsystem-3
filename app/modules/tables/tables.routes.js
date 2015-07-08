@@ -77,7 +77,12 @@
     .state('tables.datatablesnet', {
       url: '/datatablesnet',
       templateUrl: 'modules/tables/templates/tables-datatables.net.html',
-      controller: 'TablesDatatablesNetController as datatablesnet'
+      controller: 'TablesDatatablesNetController as datatablesnet',
+      resolve: {
+        PeopleResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'ds_users'});
+        }
+      }
     })
 
     .state('tables.advanced1', {

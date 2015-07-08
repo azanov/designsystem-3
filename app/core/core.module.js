@@ -24,7 +24,8 @@
     'angularMoment',
     'angularUtils.directives.dirPagination',
     'infinite-scroll',
-    'datatables'
+    'datatables',
+    'datatables.bootstrap'
   ]);
 
 })();
