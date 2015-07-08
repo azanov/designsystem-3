@@ -23,7 +23,8 @@
     'daterangepicker',
     'angularMoment',
     'angularUtils.directives.dirPagination',
-    'infinite-scroll'
+    'infinite-scroll',
+    'datatables'
   ]);
 
 })();
