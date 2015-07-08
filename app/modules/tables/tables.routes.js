@@ -74,6 +74,12 @@
       }
     })
 
+    .state('tables.datatablesnet', {
+      url: '/datatablesnet',
+      templateUrl: 'modules/tables/templates/tables-datatables.net.html',
+      controller: 'TablesDatatablesNetController as datatablesnet'
+    })
+
     .state('tables.advanced1', {
       url: '/advanced1',
       templateUrl: 'modules/tables/templates/tables-advanced1.html',
