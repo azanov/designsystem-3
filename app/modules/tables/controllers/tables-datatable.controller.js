@@ -68,7 +68,7 @@
 
         return (selected !== 0 && selected === _this.table.dataFiltered.length);
       },
-      daterangepicker: {
+      dateangepicker: {
         date: {
           startDate: moment().startOf('month'),
           endDate: moment().endOf('month')
@@ -114,7 +114,7 @@
   });
 
 
-  //TODO: this filter hasndles the daterange and should be moved to the core/filters
+  //TODO: this filter handles the daterange and should be moved to the core/filters
   //NOTE: may want to change filter name, this handles a single date in the object
   angular.module('pb.ds.tables').filter('daterange', function($log, moment) {
     return function(items, start, end) {
