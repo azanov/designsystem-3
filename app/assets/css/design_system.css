@@ -972,6 +972,7 @@ input.cmn-toggle-round-flat:checked + label:after { margin-left: 50px; backgroun
 @media (max-width: 767px) { .signin .signin-footer .logo { text-align: center; }
   .signin .signin-footer .nav { text-align: center; padding-top: 10px; } }
 
+/* TABLES */
 .table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th { background-color: #E5F5FC; }
 
 .table-hover > tbody > tr:active > td, .table-hover > tbody > tr:active > th, .table-hover > tbody > tr.active > td, .table-hover > tbody > tr.active > th { background-color: #CCEBF9; }
@@ -996,8 +997,13 @@ td.currency { text-align: right; }
 
 th.currency { text-align: center; }
 
+.table .table-row-selected td { background-color: red; }
 .table .table-details td { padding: 0; background-color: #f0f0f0; border-top-width: 0; }
 .table .table-details .table-details-content { padding: 10px; }
+
+.status.status-success { color: green; }
+.status.status-error { color: red; }
+.status.status-warning { color: yellow; }
 
 .daterangepicker.dropdown-menu { max-width: none; z-index: 3000; }
 

@@ -49,24 +49,38 @@
 
                 <form class="form-inline pull-right">
 
-                  <a href="" date-range-picker class="btn btn-link date-picker" type="text" ng-model="datatable.table.daterangepicker.date" options="datatable.table.daterangepicker.options">
-                    <i class="fa fa-fw fa-calendar"></i> {{datatable.table.daterangepicker.date.startDate | amDateFormat: 'MM/DD/YY'}} to {{datatable.table.daterangepicker.date.endDate | amDateFormat: 'MM/DD/YY'}} <i class="fa fa-angle-down"></i>
-                  </a>
-
                   <div class="form-group dropdown">
                     <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                      <i class="fa fa-fw fa-filter"></i>All shipments <i class="fa fa-angle-down"></i>
+                      <i class="fa fa-fw fa-filter"></i>Filter One <i class="fa fa-angle-down"></i>
                     </button>
                     <ul class="dropdown-menu" role="menu">
                       <li class="dropdown-header">Show:</li>
                       <li>
-                        <a>All shipments</a>
-                        <a>Insured shipments</a>
-                        <a>Refund eligible</a>
-                        <a>By carriers</a>
-                        <a>By users</a>
-                        <a>By user groups</a>
-                        <a>By cost accounts</a>
+                        <a>Show all</a>
+                        <a>Example link</a>
+                        <a>Example link</a>
+                        <a>Example link</a>
+                        <a>Example link</a>
+                        <a>Example link</a>
+                        <a>Example link</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="form-group dropdown">
+                    <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                      <i class="fa fa-fw fa-filter"></i>Filter Two <i class="fa fa-angle-down"></i>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li class="dropdown-header">Show:</li>
+                      <li>
+                        <a>Show all</a>
+                        <a>Example link</a>
+                        <a>Example link</a>
+                        <a>Example link</a>
+                        <a>Example link</a>
+                        <a>Example link</a>
+                        <a>Example link</a>
                       </li>
                     </ul>
                   </div>
@@ -130,12 +144,195 @@
 
           </tab>
 
+
+
+          <!-- POSTAGE -->
           <tab>
             <tab-heading>Postage</tab-heading>
+
+            <div class="row toolbar spacer-top-md spacer-bottom-md">
+
+              <div class="col-md-3">
+
+                <div class="btn-group">
+                  <button class="btn btn-link" type="button">
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+
+                <button class="btn btn-link " type="button">
+                  <i class="fa fa-database"></i>
+                </button>
+
+                <button class="btn btn-link " type="button">
+                  <i class="fa fa-trash-o"></i>
+                </button>
+
+                <button class="btn btn-link " type="button">
+                  <i class="fa fa-pencil"></i>
+                </button>
+
+              </div>
+
+              <div class="col-md-9">
+
+                <form class="form-inline pull-right">
+
+                  <div class="form-group dropdown">
+                    <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                      <i class="fa fa-fw fa-filter"></i>Filter One <i class="fa fa-angle-down"></i>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li class="dropdown-header">Show:</li>
+                      <li>
+                        <a>Show all</a>
+                        <a>Example link</a>
+                        <a>Example link</a>
+                        <a>Example link</a>
+                        <a>Example link</a>
+                        <a>Example link</a>
+                        <a>Example link</a>
+                      </li>
+                    </ul>
+                  </div>
+
+
+                  <div class="input-group">
+
+                    <div class="input-group-addon">
+                        <i class="fa fa-fw fa-search"></i>
+                    </div>
+
+                    <input class="form-control search" type="text" placeholder="Search" required>
+                    <button class="btn btn-link search-clear" type="reset" ng-click="datatable.table.searchClear()"><i class="fa fa-fw fa-times-circle"></i></button>
+
+                  </div>
+
+                </form>
+
+              </div>
+
+            </div>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Recipient</th>
+                  <th>Carrier</th>
+                  <th>Status</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Date</td>
+                  <td>Recipient</td>
+                  <td>Carrier</td>
+                  <td>Status</td>
+                  <td>Amount</td>
+                </tr>
+                <tr><td colspan="8">&#8230;</td></tr>
+                <tr><td colspan="8">&#8230;</td></tr>
+              </tbody>
+            </table>
+
           </tab>
 
           <tab>
             <tab-heading>Refunds</tab-heading>
+
+            <div class="row toolbar spacer-top-md spacer-bottom-md">
+
+              <div class="col-md-3">
+
+                <div class="btn-group">
+                  <button class="btn btn-link" type="button">
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+
+                <button class="btn btn-link " type="button">
+                  <i class="fa fa-trash-o"></i>
+                </button>
+
+                <button class="btn btn-link " type="button">
+                  <i class="fa fa-pencil"></i>
+                </button>
+
+              </div>
+
+              <div class="col-md-9">
+
+                <form class="form-inline pull-right">
+
+                  <div class="form-group dropdown">
+                    <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                      <i class="fa fa-fw fa-filter"></i>Filter One <i class="fa fa-angle-down"></i>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li class="dropdown-header">Show:</li>
+                      <li>
+                        <a>Show all</a>
+                        <a>Example link</a>
+                        <a>Example link</a>
+                        <a>Example link</a>
+                        <a>Example link</a>
+                        <a>Example link</a>
+                        <a>Example link</a>
+                      </li>
+                    </ul>
+                  </div>
+
+
+                  <div class="input-group">
+
+                    <div class="input-group-addon">
+                        <i class="fa fa-fw fa-search"></i>
+                    </div>
+
+                    <input class="form-control search" type="text" placeholder="Search" required>
+                    <button class="btn btn-link search-clear" type="reset" ng-click="datatable.table.searchClear()"><i class="fa fa-fw fa-times-circle"></i></button>
+
+                  </div>
+
+                  <button class="btn btn-link " type="button">
+                    <i class="fa fa-refresh"></i>
+                  </button>
+
+                </form>
+
+              </div>
+
+            </div>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Recipient</th>
+                  <th>Carrier</th>
+                  <th>Shipping Info</th>
+                  <th>Tracking #</th>
+                  <th>Refund&nbsp;Status</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Date</td>
+                  <td>Recipient</td>
+                  <td>Carrier</td>
+                  <td>Shipping Info</td>
+                  <td>Tracking #</td>
+                  <td>Refund Status</td>
+                  <td>Amount</td>
+                </tr>
+                <tr><td colspan="8">&#8230;</td></tr>
+                <tr><td colspan="8">&#8230;</td></tr>
+              </tbody>
+            </table>
+
           </tab>
         </tabset>
 

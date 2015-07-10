@@ -1,4 +1,4 @@
-//* TABLES */
+/* TABLES */
 
 
 // for some reason, bootstrap will not do this with the variables.
@@ -83,6 +83,11 @@ th.currency {
   //
   // }
 
+  .table-row-selected {
+    td {
+      background-color: red;
+    }
+  }
 
   .table-details {
 
@@ -99,4 +104,16 @@ th.currency {
 
   }
 
+}
+
+.status {
+  &.status-success {
+    color: green;
+  }
+  &.status-error {
+    color: red;
+  }
+  &.status-warning {
+    color: yellow;
+  }
 }
