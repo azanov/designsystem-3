@@ -58,7 +58,7 @@
       controller: 'TablesDatatableController as datatable',
       resolve: {
         PeopleResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'people'});
+          return MockDataFactory.query({filename: 'ds_users'});
         }
       }
     })
@@ -69,7 +69,7 @@
       controller: 'TablesDatatableInfiniteScrollController as datatable',
       resolve: {
         PeopleResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'people'});
+          return MockDataFactory.query({filename: 'ds_users'});
         }
       }
     })
