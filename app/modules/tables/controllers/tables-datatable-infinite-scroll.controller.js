@@ -3,14 +3,14 @@
   'use strict';
 
   angular.module('pb.ds.tables').controller('TablesDatatableInfiniteScrollController',
-  function($log, MockDataFactory, moment, $scope, $timeout) {
+  function($log, PeopleResolve, moment, $scope, $timeout) {
 
     var _this = this;
 
     _this.table = {
       limitDefault: 25,
       limit: 25,
-      data: MockDataFactory.query({filename: 'ds_users'}),
+      data: PeopleResolve,
       infinite: {
         disabled: false,
         load: function() {

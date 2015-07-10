@@ -3,13 +3,13 @@
   'use strict';
 
   angular.module('pb.ds.tables').controller('TablesDatatableController',
-  function($log, MockDataFactory, moment) {
+  function($log, PeopleResolve, moment) {
 
     var _this = this;
 
 
     _this.table = {
-      data: MockDataFactory.query({filename: 'ds_users'}),
+      data: PeopleResolve,
       sort: {
         type: 'first_name',
         reverse: false,
