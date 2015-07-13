@@ -111,29 +111,26 @@
           <tr ng-if="!datatable.table.dataFiltered.length">
             <td colspan="9" class="text-center">There are no results.</td>
           </tr>
-          <tr ng-click="datatable.table.selectRow(item, $event)"
-              dir-paginate-start="item in datatable.table.dataFiltered = (datatable.table.data | orderBy:datatable.table.sort.type:datatable.table.sort.reverse | filter: datatable.table.search | daterange:datatable.table.daterangepicker.date.startDate:datatable.table.daterangepicker.date.endDate | itemsPerPage: datatable.table.paging.size )"
-              ng-class="{'row-open': item.showDetails, 'table-row-selected': item.selected}">
-
-            <td><input type="checkbox" ng-model="item.selected" ng-click="datatable.table.selectRow(item, $event)"></td>
+          <tr ng-click="datatable.table.selectRow(item, $event)"  dir-paginate-start="item in datatable.table.dataFiltered = (datatable.table.data | orderBy:datatable.table.sort.type:datatable.table.sort.reverse | filter: datatable.table.search | daterange:datatable.table.daterangepicker.date.startDate:datatable.table.daterangepicker.date.endDate | itemsPerPage: datatable.table.paging.size )" ng-class="{'row-open': item.showDetails}">
+            <td><input type="checkbox" ng-model="item.selected" ng-click="datatable.table.selectRow(item)"></td>
             <td>
-              <a href="" ng-init="item.showDetails = false" ng-click="datatable.table.showDetails(item, $event)">
+              <a href="" ng-init="item.showDetails = false" ng-click="item.showDetails = !item.showDetails">
                 <i class="fa fa-fw fa-angle-right fa-transition" ng-class="{'fa-rotate-90': item.showDetails}"></i>
               </a>
             </td>
-            <td>{{::item.first_name}}</td>
-            <td>{{::item.last_name}}</td>
-            <td><a href="#" ng-click="datatable.table.selectEmail(item, $event)">{{::item.email}}</a></td>
-            <td><span class="text-nowrap">{{::item.country}}</span></td>
-            <td>{{::item.date.created | date:'MM/dd/yyyy'}}</td>
+            <td>{{item.first_name}}</td>
+            <td>{{item.last_name}}</td>
+            <td><a href="">{{item.email}}</a></td>
+            <td><span class="text-nowrap">{{item.country}}</span></td>
+            <td>{{item.date.created | date:'MM/dd/yyyy'}}</td>
             <td><i class="fa fa-fw" ng-class="{'fa-user': item.userType === 'user', 'fa-user-secret': item.userType === 'admin'}"></i></td>
             <td>
               <span ng-repeat="group in (item.groups | orderBy: group | limitTo: item.limit || datatable.table.groups.min) track by $index">
-                {{::group}}<span ng-if="!$last">, </span>
+                {{group}}<span ng-if="!$last">, </span>
               </span>
               <div>
-                <a class="small" href="" ng-if="item.groups.length > datatable.table.groups.min" ng-show="!item.limit" ng-click="datatable.table.showMore(item, true, $event)">Show more</a>
-                <a class="small" href="" ng-show="item.limit" ng-click="datatable.table.showMore(item, false, $event)">Show less</a>
+                <a class="small" href="" ng-if="item.groups.length > datatable.table.groups.min" ng-show="!item.limit" ng-click="item.limit = datatable.table.groups.max">Show more</a>
+                <a class="small" href="" ng-show="item.limit" ng-click="item.limit = undefined">Show less</a>
               </div>
             </td>
           </tr>
@@ -141,49 +138,7 @@
             <td colspan="10">
               <div collapse="!item.showDetails">
                 <div class="table-details-content">
-
-                  <div class="row">
-
-                    <div class="col-md-3">
-
-                      <dl class="condensed">
-                        <dt>Phone Numbers</dt>
-                        <dd>Work: {{::item.phone.work}}</dd>
-                        <dd>Cell: {{::item.phone.cell}}</dd>
-                      </dl>
-
-                    </div>
-
-                    <div class="col-md-3">
-
-                      <dl class="condensed">
-                        <dt>Address</dt>
-                        <dd>{{::item.address.street}}</dd>
-                        <dd>{{::item.address.city}}, {{::item.address.state}} {{::item.address.postalCode}}</dd>
-                      </dl>
-
-                    </div>
-
-                    <div class="col-md-2">
-
-                      <dl class="condensed">
-                        <dt>IP Address</dt>
-                        <dd>{{::item.ip_address}}</dd>
-                      </dl>
-
-                    </div>
-
-                    <div class="col-md-3">
-
-                      <dl class="condensed">
-                        <dt>Website</dt>
-                        <dd>{{::item.url}}</dd>
-                      </dl>
-
-                    </div>
-
-                  </div>
-
+                  <h1>Sample details {{$index}} here. {{item.first_name}}</h1>
                 </div>
               </div>
             </td>
