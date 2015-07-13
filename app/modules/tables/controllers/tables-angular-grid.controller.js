@@ -7,20 +7,21 @@
     var _this = this;
 
     var columnDefs = [
-      {headerName: "", field: "", checkboxSelection: true},
-      {headerName: "First Name", field: "first_name"},
-      {headerName: "Last Name", field: "last_name"}
+      {headerName: "Make", field: "make"},
+      {headerName: "Model", field: "model"},
+      {headerName: "Price", field: "price"}
+    ];
+
+    var rowData = [
+      {make: "Toyota", model: "Celica", price: 35000},
+      {make: "Ford", model: "Mondeo", price: 32000},
+      {make: "Porsche", model: "Boxter", price: 72000}
     ];
 
     _this.gridOptions = {
       columnDefs: columnDefs,
-      rowData: PeopleResolve,
-      dontUseScrolls: true, // because so little data, no need to use scroll bars
-      rowSelection: 'multiple',
-      enableColResize: true,
-      enableSorting: true,
-      enableFilter: true,
-      colWidth: 200
+      rowData: rowData,
+      dontUseScrolls: true // because so little data, no need to use scroll bars
     };
 
 
