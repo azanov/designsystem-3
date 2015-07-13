@@ -4,14 +4,14 @@
 // for some reason, bootstrap will not do this with the variables.
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
-  background-color: #E5F5FC;
+  background-color: #ECEEF6;
 }
 .table-hover > tbody > tr:active > td,
 .table-hover > tbody > tr:active > th,
 .table-hover > tbody > tr.active > td,
 .table-hover > tbody > tr.active > th,
  {
-  background-color: #CCEBF9;
+  background-color: #B2BADB;
 }
 
 
@@ -73,23 +73,9 @@ th.currency {
 
 .table {
 
-  // &.table-datatable {
-  //
-  //   thead tr th a {
-  //     color: #a03f9b;
-  //     text-decoration: none;
-  //     white-space: nowrap;
-  //   }
-  //
-  // }
-
-  .table-row-expander {
-    font-size: .8em;
-  }
-
   .table-row-selected {
     td {
-      background-color: red;
+      background-color: #D8DDED;
     }
   }
 
@@ -101,15 +87,25 @@ th.currency {
       border-top-width: 0;
     }
 
-
     .table-details-content {
       padding: 10px;
     }
 
   }
 
+  &.table-border-bottom {
+    tr:last-child {
+      td {
+        //TODO: get the correct color variable
+        border-bottom: 1px solid #ddd;
+      }
+    }
+  }
+
 }
 
+
+// used for example table status, move to Live preview sass
 .status {
   &.status-success {
     color: green;
@@ -120,4 +116,9 @@ th.currency {
   &.status-warning {
     color: yellow;
   }
+}
+
+//TODO: helper class to add no wrap, move to helper classes and add to page
+.nowrap {
+  white-space: nowrap;
 }
