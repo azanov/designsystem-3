@@ -33,13 +33,17 @@
         _this.table.search.$ = '';
       },
       selectedRows: [],
-      selectRow: function(data) {
+      selectRow: function(data, $event) {
+        $event.stopPropagation();
+
         if (_this.table.selectedRows.indexOf(data.id) === -1) {
           _this.table.selectedRows.push(data.id);
+          data.selected = true;
         }
         else {
           _this.table.selectedRows.splice(_this.table.selectedRows.indexOf(data.id), 1);
           _this.table.allRowsSelected = false;
+          data.selected = false;
         }
       },
       selectAllRows: function() {

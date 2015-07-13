@@ -27,14 +27,6 @@
         </button>
       </div>
 
-      <div class="btn-group">
-        <button ng-if="datatable.table.selectedRows.length" type="button" class="btn btn-default" tooltip="Delete">
-          <i class="fa fa-fw fa-trash-o"></i>
-        </button>
-        <button ng-if="datatable.table.selectedRows.length === 1" type="button" class="btn btn-default" tooltip="Edit">
-          <i class="fa fa-fw fa-pencil"></i>
-        </button>
-      </div>
     </div>
 
     <div class="col-md-9">
@@ -86,17 +78,15 @@
       <table class="table table-datatable table-hover">
         <thead>
           <tr>
-            <th><input type="checkbox" ng-model="datatable.table.allRowsSelected" ng-click="datatable.table.selectAllRows()" ng-checked="datatable.table.selectAllFilteredRows()" /></th>
             <th>&nbsp;</th>
-            <th>Type</th>
             <th>
-              <a href="" ng-click="datatable.table.sort.change('first_name')">First Name
+              <a href="" class="nowrap" ng-click="datatable.table.sort.change('first_name')">First Name
                 <i class="fa fa-fw fa-sort text-muted" ng-if="datatable.table.sort.type !== 'first_name'"></i>
                 <i class="fa fa-fw fa-sort" ng-if="datatable.table.sort.type === 'first_name'" ng-class="{'fa-sort-desc': !datatable.table.sort.reverse, 'fa-sort-asc': datatable.table.sort.reverse}"></i>
               </a>
             </th>
             <th>
-              <a href="" ng-click="datatable.table.sort.change('last_name')">Last Name
+              <a href="" class="nowrap" ng-click="datatable.table.sort.change('last_name')">Last Name
                 <i class="fa fa-fw fa-sort text-muted" ng-if="datatable.table.sort.type !== 'last_name'"></i>
                 <i class="fa fa-fw" ng-if="datatable.table.sort.type === 'last_name'" ng-class="{'fa-sort-desc': !datatable.table.sort.reverse, 'fa-sort-asc': datatable.table.sort.reverse}"></i>
               </a>
@@ -104,7 +94,8 @@
             <th>Email</th>
             <th>Country</th>
             <th>Created</th>
-            <th>Groups</th>
+            <th>Type</th>
+            <th style="width: 300px;">Groups</th>
             <th>&nbsp;</th>
           </tr>
         </thead>
@@ -114,18 +105,17 @@
             <td colspan="9" class="text-center">There are no results.</td>
           </tr>
           <tr ng-repeat-start="item in datatable.table.dataFiltered = (datatable.table.data | orderBy:datatable.table.sort.type:datatable.table.sort.reverse | filter: datatable.table.search | daterange:datatable.table.daterangepicker.date.startDate:datatable.table.daterangepicker.date.endDate | limitTo: datatable.table.limit )" ng-class="{'row-open': item.showDetails}">
-            <td><input type="checkbox" ng-model="item.selected" ng-click="datatable.table.selectRow(item)"></td>
             <td>
               <a href="" ng-init="item.showDetails = false" ng-click="item.showDetails = !item.showDetails">
-                <i class="fa fa-fw fa-chevron-right fa-transition" ng-class="{'fa-rotate-90': item.showDetails}"></i>
+                <i class="fa fa-fw fa-angle-right fa-transition" ng-class="{'fa-rotate-90': item.showDetails}"></i>
               </a>
             </td>
-            <td><i class="fa fa-fw" ng-class="{'fa-user': item.userType === 'user', 'fa-user-secret': item.userType === 'admin'}"></i></td>
             <td>{{item.first_name}}</td>
             <td>{{item.last_name}}</td>
             <td><a href="">{{item.email}}</a></td>
             <td><span class="text-nowrap">{{item.country}}</span></td>
             <td>{{item.date.created | date:'MM/dd/yyyy'}}</td>
+            <td><i class="fa fa-fw" ng-class="{'fa-user': item.userType === 'user', 'fa-user-secret': item.userType === 'admin'}"></i></td>
             <td>
               <span ng-repeat="group in (item.groups | orderBy: group | limitTo: item.limit || datatable.table.groups.min) track by $index">
                 {{group}}<span ng-if="!$last">, </span>
@@ -137,8 +127,8 @@
             </td>
             <td>
               <div class="dropdown pull-right">
-                <a class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-fw fa-caret-square-o-down"></i>
+                <a href="" class="dropdown-toggle nowrap" data-toggle="dropdown">
+                  Action <i class="fa fa-fw fa-angle-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right" role="menu">
                   <li><a href="">Edit</a></li>
