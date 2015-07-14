@@ -26,6 +26,26 @@
         min: 5,
         max: 'Infinity'
       },
+      showDetails: function(item, event) {
+        event.stopPropagation();
+        item.showDetails = !item.showDetails;
+      },
+      selectEmail: function(item, event) {
+        event.preventDefault();
+        event.stopPropagation();
+      },
+      showMore: function(item, bool, event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (bool) {
+          item.limit = _this.table.groups.max;
+          return;
+        }
+        else {
+          item.limit = undefined;
+        }
+      },
       search: {
 
       },
