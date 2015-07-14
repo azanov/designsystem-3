@@ -1,0 +1,97 @@
+<div class="row">
+  <div class="col-md-8">
+    <h2>How to write localization-friendly strings</h2>
+
+    <h3>String separation</h3>
+
+    <p>DO NOT mix translatable strings and non-translatable strings in the same file.</p>
+    <ul>
+      <li>If you include a translatable string in the resource file to be translated, it will be translated. Non-translatable strings must be kept in a separate file and not sent for localization. Example: SELECT is used in a SQL statement and should not be translated, so it should be kept in a separate non-translatable resource file.</li>
+      <li>If a non-translatable term appears in a translatable string, please include the term in a glossary and mark it as “Non translatable”.
+        <blockquote class="small">
+          <b>Example:</b>
+          Enterprise Manager is a product name and should not be translated. It should be listed in a glossary as “non-translatable term”. However, Enterprise Manager will show up as part of the translatable string.
+        </blockquote>
+      </li>
+    </ul>
+
+    <h3>Use of Upper Case</h3>
+
+    <p>DON’T use all upper cases if words need to be translated</p>
+    <ul>
+    <li>DATE FORMAT will not be translated unless it’s a heading</li>
+    <li>Date Format will be translated</li>
+    <li>DateFormat will not translated: never use CamelCase for terms that need to be translated. They will be left untranslated by default by any translator</li>
+  </ul>
+
+  <h3>Nouns vs. Verbs</h3>
+  <p>
+    Be clear whether you mean Noun or Verb. Some strings can be ambiguous.  For example, View File can be interpreted as Noun or Verb.  If you mean this to be a verb, please say “View the file” instead.  Also, it is a good idea to leave a comment if possible.
+  </p>
+
+  <h3>Concatenated Words</h3>
+  <p>DON’T concatenate words if they need to be translated. Concatenated words are always considered as non-translatable by default by translators.</p>
+  <ul>
+    <li>DateFormat will not be translated.</li>
+    <li>Date_Format will not be translated.</li>
+    <li>Date.Format will not be translated.</li>
+    <li>Date Format will be translated.</li>
+  </ul>
+
+  <h3>Concatenated Sentences</h3>
+  <p>
+    Many translators have spent sleepless nights trying to decipher what a creative developer is attempting to convey to the user. There are at least as many different ways to create strings of text as there are developers.
+  </p>
+  <p>Strings must be easy for localizers to comprehend. Requirements include: </p>
+  <ul>
+    <li>No string concatenation at runtime.</li>
+    <li>When variables are necessary, use unique names.</li>
+    <li>Do not compound several variables.</li>
+    <li>Keep sentences in a single string.</li>
+
+  </ul>
+  <p>Microsoft has a detailed <a href="http://msdn.microsoft.com/en-us/goglobal/bb688118.aspx">discussion</a> of the above requirements.</p>
+
+  <blockquote class="small">
+    <b>Example:</b>
+    <p>
+      <code>char szString[] = "I saw a "; char szFinalString[cbMaxSz]= szString + szObject + "?"; </code>
+    </p>
+  </blockquote>
+
+  <p>
+    The translator sees in the resource file is "I saw a " and has no idea what follows “a”. In some languages nouns have gender: for instance, in German nouns can be masculine, feminine, or neuter, which has an influence on the sentence’s syntax and grammar. Which means the translator must make a choice, which will not fit all possible cases.
+  </p>
+
+  <img alt="" class="img-responsive figure" src="modules/globalization/assets/images/friendly.png">
+
+  <h3>Sorting Order</h3>
+
+  <p>
+    Each language has its own sort order and the order is often very different from English. Your code must support all required sorting orders and behave appropriately when strings are compared.
+  </p>
+
+  <img alt="" class="img-responsive figure" src="modules/globalization/assets/images/sortingorder.png">
+
+  <h3>Line/Word Breaking</h3>
+
+<p>Often sentences will have to wrap in mid-word if they are too long to fit in the provided space. In English and other Latin-based languages it is easy to find natural break-points between syllables using some basic parsing techniques. For non-Latin languages the natural breaks are not so easy to determine. Plus some languages use a character other than the standard period ‘.’ for an end-of-sentence designator (ex. Japanese – ‘。’). Some languages do not even have spaces between words.  This makes parsing for natural line-breaks even trickier. </p>
+
+<p>The code must be aware of line and word breaking rules for all required languages.  It cannot conveniently base line–breaking and word–wrapping algorithms on a space character or on standard hyphenation rules. When multilingual text is to be parsed or displayed, special attention should be paid. Latin script follows some straightforward rules such as breaking a line at a space, tab, or hyphen. Word breaking is based on grammatical analysis and on word matching in dictionaries during text processing at run time. </p>
+
+<img alt="" class="img-responsive figure" src="modules/globalization/assets/images/linebreaking.png">
+
+
+<h3>Capitalization, Uppercasing and Lowercasing</h3>
+
+<p>Some languages do not have a one–to–one mapping between their uppercase and lowercase characters. Most non–Latin scripts do not even use the concept of lowercase and uppercase, as in the case of Chinese, Japanese, and Korean; Arabic, Farsi, Hebrew and Thai. The program must consider handling of linguistic nuances of capitalization, uppercasing and lowercasing. Characters should be handled correctly regardless of keystrokes associated with them.</p>
+<p>Also, there are a number of uppercase letters with accents (É, Ý, Ñ, Ð, Ø, Å, …). You must ensure your product supports correct display. </p>
+
+<img alt="" class="img-responsive figure" src="modules/globalization/assets/images/capitalization.png">
+
+
+
+
+
+  </div>
+</div>

@@ -127,6 +127,8 @@ cite { font-style: normal; }
 .list-expanded li { margin-right: 50px; }
 .list-expanded li:last-child { margin-right: 0; }
 
+blockquote.small { font-size: inherit; margin-top: 10px; }
+
 .button-demo-row > div { margin-right: 20px; }
 
 .figure { margin: 20px 0 30px; }

@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-8">
+    <h2>How to write localization-friendly strings</h2>
+
+    <p>In order for localization to be carried out efficiently, developers must design UI so that localization is straightforward and localized content does not break the look and feel of the program.</p>
+
+    <ul>
+      <li>Unicode! Your displayable text. Your file formats. Your database. Your everything. If it moves, it is Unicode. If it doesn't, it is still Unicode.</li>
+      <li>Stick to the industry standards. Don’t create a special file format.</li>
+      <li>DON’T re-use resource IDs.  Delete the old ID and create a new one.</li>
+      <li>Do not hardcode anything related to text or locale related info.</li>
+      <li>Leave enough space (minimum of 30 percent additional room) for text expansion in any control or group of controls. </li>
+      <li>Text should dynamically wrap if it is going to be truncated.</li>
+      <li>Avoid UI Controls within sentences.</li>
+      <li>Avoid Hidden or Overlapped UI Controls.</li>
+      <li>Avoid placing button text into a string variable.</li>
+      <li>Beware of Gender-Specific Roles and Ethnic Stereotypes in Other Cultures.</li>
+      <li>Avoid Religious References, Political Symbols and Text In Graphics.</li>
+      <li>Do not be vague what you are referring to in the labels. </li>
+    </ul>
+
+<p>Many localizers are not programmers and might delete important details, such as closing quotation marks or semicolons, or they might translate programming keywords as well as strings. Then developers or localization engineers must take time to clean up these files so that they will compile correctly. Localizers use Translation Memory software to reuse already translated items from the previous project. Translation Memory software only supports industry standard file formats. In addition, hard-coded strings are difficult to find because they do not show up until the software is localized.</p>
+<p>The two items should be broken out into a separate file. One should contain the translatable items and the other should contain the non-translatable dialog items. We will use the English file as a base and create each target language file.</p>
+
+
+<img alt="" class="img-responsive figure" src="modules/globalization/assets/images/ui.png">
+
+
+  </div>
+</div>
