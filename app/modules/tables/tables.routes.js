@@ -33,7 +33,8 @@
 
     .state('tables.datatable.overview', {
       url: '/datatable/overview',
-      templateUrl: 'modules/tables/templates/tables-datatable-overview.html'
+      templateUrl: 'modules/tables/templates/tables-datatable-overview.html',
+      controller: 'TablesOverviewController as overview'
     })
 
     .state('tables.datatable.toolbar', {
