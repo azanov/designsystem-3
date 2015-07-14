@@ -13,7 +13,7 @@
     'pb.ds.tables',
     'pb.ds.notification',
     'pb.ds.graphs',
-    'pb.ds.localization',
+    'pb.ds.globalization',
     'pb.ds.brand',
     'pb.ds.helpers',
     'pb.ds.forms'
