@@ -115,7 +115,7 @@
               dir-paginate-start="item in datatable.table.dataFiltered = (datatable.table.data | orderBy:datatable.table.sort.type:datatable.table.sort.reverse | filter: datatable.table.search | daterange:datatable.table.daterangepicker.date.startDate:datatable.table.daterangepicker.date.endDate | itemsPerPage: datatable.table.paging.size )"
               ng-class="{'row-open': item.showDetails, 'table-row-selected': item.selected}">
 
-            <td><input type="checkbox" ng-model="item.selected" ng-click="datatable.table.selectRow(item)"></td>
+            <td><input type="checkbox" ng-model="item.selected" ng-click="datatable.table.selectRow(item, $event)"></td>
             <td>
               <a href="" ng-init="item.showDetails = false" ng-click="datatable.table.showDetails(item, $event)">
                 <i class="fa fa-fw fa-angle-right fa-transition" ng-class="{'fa-rotate-90': item.showDetails}"></i>
