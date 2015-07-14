@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v1.5.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Mon Jul 06 2015 14:20:01 GMT-0400 (EDT) 
+ * Tue Jul 14 2015 16:19:11 GMT-0400 (EDT) 
  */
 @font-face { font-family: 'PrecisionSans_W_Rg'; font-weight: '400'; font-style: 'normal'; src: url("../fonts/PrecisionSans_W_Rg.eot"); src: url("../fonts/PrecisionSans_W_Rg.eot?#iefix") format("embedded-opentype"), url("../fonts/PrecisionSans_W_Rg.woff") format("woff"), url("../fonts/PrecisionSans_W_Rg.ttf") format("truetype"), url("../fonts/PrecisionSans_W_Rg.svg#PrecisionSans_W_Rg") format("svg"); }
 @font-face { font-family: 'PrecisionSans_W_Bd'; font-weight: '700'; font-style: 'normal'; src: url("../fonts/PrecisionSans_W_Bd.eot"); src: url("../fonts/PrecisionSans_W_Bd.eot?#iefix") format("embedded-opentype"), url("../fonts/PrecisionSans_W_Bd.woff") format("woff"), url("../fonts/PrecisionSans_W_Bd.ttf") format("truetype"), url("../fonts/PrecisionSans_W_Bd.svg#PrecisionSans_W_Bd") format("svg"); }
@@ -133,7 +133,11 @@ cite { font-style: normal; }
 .list-expanded li { margin-right: 50px; }
 .list-expanded li:last-child { margin-right: 0; }
 
+blockquote.small { font-size: inherit; margin-top: 10px; }
+
 .button-demo-row > div { margin-right: 20px; }
+
+.figure { margin: 20px 0 30px; }
 
 @-webkit-keyframes kbrns { 0% { background-position: 0 -3em; background-size: 120%; }
   100% { background-position: -1em 0; background-size: 105%; } }
