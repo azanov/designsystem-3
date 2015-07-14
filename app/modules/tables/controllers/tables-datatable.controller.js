@@ -68,7 +68,7 @@
 
         return (selected !== 0 && selected === _this.table.dataFiltered.length);
       },
-      dateangepicker: {
+      daterangepicker: {
         date: {
           startDate: moment().startOf('month'),
           endDate: moment().endOf('month')

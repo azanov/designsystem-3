@@ -87,6 +87,9 @@
     }, {
       "label": "Faceted Search",
       "value": "tables.facetedsearch"
+    }, {
+      "label": "Datatable.net",
+      "value": "tables.datatablesnet"
     }]
   }, {
     "label": "Graphs",

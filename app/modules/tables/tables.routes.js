@@ -74,6 +74,17 @@
       }
     })
 
+    .state('tables.datatablesnet', {
+      url: '/datatablesnet',
+      templateUrl: 'modules/tables/templates/tables-datatables.net.html',
+      controller: 'TablesDatatablesNetController as datatablesnet',
+      resolve: {
+        PeopleResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'ds_users'});
+        }
+      }
+    })
+
     .state('tables.advanced1', {
       url: '/advanced1',
       templateUrl: 'modules/tables/templates/tables-advanced1.html',
