@@ -129,6 +129,8 @@ cite { font-style: normal; }
 
 .button-demo-row > div { margin-right: 20px; }
 
+.figure { margin: 20px 0 30px; }
+
 @-webkit-keyframes kbrns { 0% { background-position: 0 -3em; background-size: 120%; }
   100% { background-position: -1em 0; background-size: 105%; } }
 
