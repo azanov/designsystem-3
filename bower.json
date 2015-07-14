@@ -43,7 +43,8 @@
     "ngInfiniteScroll": "1.2.1",
     "datatables": "1.10.7",
     "angular-datatables": "0.4.3",
-    "ag-grid": "1.11.1"
+    "ag-grid": "1.11.1",
+    "angular-xeditable": "0.1.9"
   },
   "devDependencies": {},
   "resolutions": {

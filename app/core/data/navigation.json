@@ -82,9 +82,6 @@
       "label": "Datatable",
       "value": "tables.datatable.overview"
     }, {
-      "label": "Advanced 1",
-      "value": "tables.advanced1"
-    }, {
       "label": "Faceted Search",
       "value": "tables.facetedsearch"
     }, {

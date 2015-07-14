@@ -97,12 +97,6 @@
       }
     })
 
-    .state('tables.advanced1', {
-      url: '/advanced1',
-      templateUrl: 'modules/tables/templates/tables-advanced1.html',
-      controller: 'TablesAdvanced1Controller as advanced1'
-    })
-
     .state('tables.facetedsearch', {
       url: '/facetedsearch',
       templateUrl: 'modules/tables/templates/tables-faceted-search.html',
