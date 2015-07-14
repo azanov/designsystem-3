@@ -129,10 +129,13 @@
       "value": "elements.colorcharts"
     }]
   }, {
-    "label": "Helpers",
-    "value": "helpers",
+    "label": "Other",
+    "value": "other",
     "toggle": "dropdown",
     "children": [{
+      "label": "Globalization",
+      "value": "globalization.overview"
+    }, {
       "label": "Helpers",
       "value": "helpers"
     }]
