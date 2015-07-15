@@ -1001,9 +1001,9 @@ th.currency { text-align: center; }
 .table .table-details .table-details-content { padding: 10px; }
 .table.table-border-bottom tr:last-child td { border-bottom: 1px solid #ddd; }
 
-.status.status-success { color: green; }
-.status.status-error { color: red; }
-.status.status-warning { color: yellow; }
+.status.status-success { color: #3e53a4; }
+.status.status-error { color: #c00; }
+.status.status-warning { color: #f0ad4e; }
 
 .nowrap { white-space: nowrap; }
 

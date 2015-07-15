@@ -34,6 +34,21 @@
       item.selected = !item.selected;
     };
 
+    _this.xeditable = {
+      data: [
+        {
+          first_name: 'John',
+          last_name: 'Smth',
+          carrier: 'USPS'
+        },
+        {
+          first_name: 'Susie',
+          last_name: 'Queue'
+        }
+      ],
+      carriers: ['USPS', 'FedEx']
+    };
+
   });
 
 })();

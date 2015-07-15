@@ -12,7 +12,7 @@
   </div>
 
 
-  <!-- -->
+  <!-- COLUMN SORTING -->
   <div class="row spacer-top-md spacer-bottom-md">
 
     <div class="col-md-12">
@@ -56,7 +56,7 @@
 
 
 
-  <!-- -->
+  <!-- ROW DETAILS -->
   <div class="row spacer-top-md spacer-bottom-md">
 
     <div class="col-md-12">
@@ -143,7 +143,7 @@
 
 
 
-  <!-- -->
+  <!-- ROW MULTIPLE SELECTION -->
   <div class="row spacer-top-md spacer-bottom-md">
 
     <div class="col-md-12">
@@ -200,8 +200,7 @@
 
 
 
-
-  <!-- -->
+  <!-- ROW DETAILS & MULTIPLE SELECTION-->
   <div class="row spacer-top-md spacer-bottom-md">
 
     <div class="col-md-12">
@@ -286,12 +285,7 @@
 
 
 
-
-
-
-
-
-  <!-- -->
+  <!-- ROW ACTIONS -->
   <div class="row spacer-top-md spacer-bottom-md">
 
     <div class="col-md-12">
@@ -347,8 +341,7 @@
 
 
 
-
-  <!-- -->
+  <!-- ROW LINKS -->
   <div class="row spacer-top-md spacer-bottom-md">
 
     <div class="col-md-12">
@@ -392,14 +385,17 @@
 
 
 
-
-  <!-- -->
+  <!-- ROW SELECTION CLICK -->
   <div class="row spacer-top-md spacer-bottom-md">
 
     <div class="col-md-12">
 
       <h5>Row Selection (click)</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, purus quis viverra accumsan, eros ex porta nisl, ut rutrum neque sem in massa. Nunc vehicula enim nec tristique vehicula. Sed cursus purus quis sem tempus, gravida ornare leo ornare.</p>
+
+      <div class="alert alert-info">
+        Best practice is is to only use row click to select a row. No other actions should be triggered by a row click.
+      </div>
 
       <div class="preview-example">
 
@@ -439,7 +435,7 @@
 
 
 
-  <!-- -->
+  <!-- ROW ICONS -->
   <div class="row spacer-top-md spacer-bottom-md">
 
     <div class="col-md-12">
@@ -452,7 +448,7 @@
         <table class="table table-datatable">
           <thead>
             <tr>
-              <th></th>
+              <th>Type</th>
               <th>Date</th>
               <th>Recipient</th>
               <th>Carrier</th>
@@ -495,7 +491,7 @@
 
 
 
-  <!-- -->
+  <!-- ROW STATUS ICONS -->
   <div class="row spacer-top-md spacer-bottom-md">
 
     <div class="col-md-12">
@@ -503,6 +499,7 @@
       <h5>Row Status Icons</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, purus quis viverra accumsan, eros ex porta nisl, ut rutrum neque sem in massa. Nunc vehicula enim nec tristique vehicula. Sed cursus purus quis sem tempus, gravida ornare leo ornare.</p>
 
+      <!-- colored icons-->
       <div class="preview-example">
 
         <table class="table table-datatable">
@@ -524,7 +521,7 @@
               <td>Carrier</td>
               <td>Shipping Info</td>
               <td>Tracking #</td>
-              <td><i class="fa fa-fw fa-circle status status-error"></i></td>
+              <td><i class="fa fa-fw fa-times-circle status status-error"></i></td>
               <td>Amount</td>
             </tr>
             <tr>
@@ -533,7 +530,7 @@
               <td>Carrier</td>
               <td>Shipping Info</td>
               <td>Tracking #</td>
-              <td><i class="fa fa-fw fa-circle status status-success"></i></td>
+              <td><i class="fa fa-fw fa-info-circle status status-success"></i></td>
               <td>Amount</td>
             </tr>
             <tr>
@@ -542,8 +539,120 @@
               <td>Carrier</td>
               <td>Shipping Info</td>
               <td>Tracking #</td>
-              <td><i class="fa fa-fw fa-circle status status-warning"></i></td>
+              <td><i class="fa fa-fw fa-exclamation-triangle status status-warning"></i></td>
               <td>Amount</td>
+            </tr>
+            <tr><td colspan="8">&#8230;</td></tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <!-- text color icons-->
+      <div class="preview-example">
+
+        <table class="table table-datatable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Recipient</th>
+              <th>Carrier</th>
+              <th>Shipping Info</th>
+              <th>Tracking #</th>
+              <th>Status</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Date</td>
+              <td>Recipient</td>
+              <td>Carrier</td>
+              <td>Shipping Info</td>
+              <td>Tracking #</td>
+              <td><i class="fa fa-fw fa-check"></i></td>
+              <td>Amount</td>
+            </tr>
+            <tr>
+              <td>Date</td>
+              <td>Recipient</td>
+              <td>Carrier</td>
+              <td>Shipping Info</td>
+              <td>Tracking #</td>
+              <td><i class="fa fa-fw fa-times"></i></td>
+              <td>Amount</td>
+            </tr>
+            <tr>
+              <td>Date</td>
+              <td>Recipient</td>
+              <td>Carrier</td>
+              <td>Shipping Info</td>
+              <td>Tracking #</td>
+              <td><i class="fa fa-fw fa-clock-o"></i></td>
+              <td>Amount</td>
+            </tr>
+            <tr><td colspan="8">&#8230;</td></tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <!-- with notification icons -->
+      <div class="preview-example">
+
+        <table class="table table-datatable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Recipient</th>
+              <th>Carrier</th>
+              <th>Shipping Info</th>
+              <th>Tracking #</th>
+              <th>Trigger</th>
+              <th>Amount</th>
+              <th>Notification</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Date</td>
+              <td>Recipient</td>
+              <td>Carrier</td>
+              <td>Shipping Info</td>
+              <td>Tracking #</td>
+              <td><i class="fa fa-fw fa-clock-o"></i></td>
+              <td>Amount</td>
+              <td><i class="fa fa-bell-o"></i></td>
+            </tr>
+            <tr>
+              <td>Date</td>
+              <td>Recipient</td>
+              <td>Carrier</td>
+              <td>Shipping Info</td>
+              <td>Tracking #</td>
+              <td><i class="fa fa-fw fa-refresh"></i></td>
+              <td>Amount</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>Date</td>
+              <td>Recipient</td>
+              <td>Carrier</td>
+              <td>Shipping Info</td>
+              <td>Tracking #</td>
+              <td><i class="fa fa-fw fa-clock-o text-muted"></i></td>
+              <td>Amount</td>
+              <td><i class="fa fa-bell-o"></i></td>
+            </tr>
+            <tr>
+              <td>Date</td>
+              <td>Recipient</td>
+              <td>Carrier</td>
+              <td>Shipping Info</td>
+              <td>Tracking #</td>
+              <td><i class="fa fa-fw fa-folder-o"></i></td>
+              <td>Amount</td>
+              <td><i class="fa fa-bell-o"></i></td>
             </tr>
             <tr><td colspan="8">&#8230;</td></tr>
           </tbody>
@@ -565,6 +674,7 @@
       <h5>Row Progress Bars</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, purus quis viverra accumsan, eros ex porta nisl, ut rutrum neque sem in massa. Nunc vehicula enim nec tristique vehicula. Sed cursus purus quis sem tempus, gravida ornare leo ornare.</p>
 
+      <!-- progress bars -->
       <div class="preview-example">
 
         <table class="table table-datatable">
@@ -616,6 +726,89 @@
 
       </div>
 
+      <!-- color/stacked progress bars -->
+      <div class="preview-example">
+
+        <table class="table table-datatable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Recipient</th>
+              <th>Carrier</th>
+              <th>Shipping Info</th>
+              <th>Tracking #</th>
+              <th style="min-width: 200px;">Status</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Date</td>
+              <td>Recipient</td>
+              <td>Carrier</td>
+              <td>Shipping Info</td>
+              <td>Tracking #</td>
+              <td>
+                <div class="progress no-margins">
+                  <div class="progress-bar progress-bar-success" style="width: 100%;"></div>
+                </div>
+              </td>
+              <td>Amount</td>
+            </tr>
+            <tr>
+              <td>Date</td>
+              <td>Recipient</td>
+              <td>Carrier</td>
+              <td>Shipping Info</td>
+              <td>Tracking #</td>
+              <td>
+                <div class="progress no-margins">
+                  <div class="progress-bar progress-bar-warning" style="width: 100%;"></div>
+                </div>
+              </td>
+              <td>Amount</td>
+            </tr>
+            <tr>
+              <td>Date</td>
+              <td>Recipient</td>
+              <td>Carrier</td>
+              <td>Shipping Info</td>
+              <td>Tracking #</td>
+              <td>
+                <div class="progress no-margins">
+                  <div class="progress-bar" style="width: 0%;"></div>
+                </div>
+              </td>
+              <td>Amount</td>
+            </tr>
+            <tr>
+              <td>Date</td>
+              <td>Recipient</td>
+              <td>Carrier</td>
+              <td>Shipping Info</td>
+              <td>Tracking #</td>
+              <td>
+                <div class="progress no-margins">
+                  <div class="progress-bar progress-bar-success" style="width: 35%" tooltip="35%">
+                    <span class="sr-only">35% Complete</span>
+                  </div>
+                  <div class="progress-bar progress-bar-warning" style="width: 20%" tooltip="20%">
+                    <span class="sr-only">20% Complete</span>
+                  </div>
+                  <div class="progress-bar progress-bar-danger" style="width: 10%" tooltip="10%">
+                    <span class="sr-only">10% Complete</span>
+                  </div>
+                </div>
+              </td>
+              <td>Amount</td>
+            </tr>
+            <tr><td colspan="8">&#8230;</td></tr>
+          </tbody>
+        </table>
+
+      </div>
+
+
     </div>
 
   </div>
@@ -629,18 +822,22 @@
 
       <h5>Inline Edit
         <small class="pull-right">
-          <a class="badge badge-link" href="" target="blank"><i class="fa fa-plug"></i> angular-XEDITABLE??? v0.X.X</a>
+          <a class="badge badge-link" href="http://vitalets.github.io/angular-xeditable/#" target="blank"><i class="fa fa-plug"></i> angular-xeditable v0.1.9</a>
         </small>
       </h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, purus quis viverra accumsan, eros ex porta nisl, ut rutrum neque sem in massa. Nunc vehicula enim nec tristique vehicula. Sed cursus purus quis sem tempus, gravida ornare leo ornare.</p>
+
+      <div class="alert alert-danger">
+        Not all control types are supported. Please refer to the <a href="http://vitalets.github.io/angular-xeditable/#" target="blank">angular-xeditable</a> documentation for more information.
+      </div>
 
       <div class="preview-example">
 
         <table class="table table-datatable">
           <thead>
             <tr>
-              <th>Date</th>
-              <th>Recipient</th>
+              <th>First Name</th>
+              <th>Last Name</th>
               <th>Carrier</th>
               <th>Shipping Info</th>
               <th>Tracking #</th>
@@ -648,23 +845,18 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Date</td>
-              <td>Recipient</td>
-              <td>Carrier</td>
+            <tr ng-repeat="item in data.xeditable.data">
+              <td><span editable-text="item.first_name">{{item.first_name}}</span></td>
+              <td><span editable-text="item.last_name">{{item.last_name}}</span></td>
+              <td>
+                <span editable-select="item.carrier" e-ng-options="s as s for s in data.xeditable.carriers">
+                  {{item.carrier || 'none'}}
+                </span>
+              </td>
               <td>Shipping Info</td>
               <td>Tracking #</td>
               <td>Amount</td>
             </tr>
-            <tr>
-              <td>Date</td>
-              <td>Recipient</td>
-              <td>Carrier</td>
-              <td>Shipping Info</td>
-              <td>Tracking #</td>
-              <td>Amount</td>
-            </tr>
-            <tr><td colspan="8">&#8230;</td></tr>
           </tbody>
         </table>
 

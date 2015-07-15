@@ -108,13 +108,13 @@ th.currency {
 // used for example table status, move to Live preview sass
 .status {
   &.status-success {
-    color: green;
+    color: $brand-primary;
   }
   &.status-error {
-    color: red;
+    color: $brand-danger;
   }
   &.status-warning {
-    color: yellow;
+    color: $brand-warning;
   }
 }
 
