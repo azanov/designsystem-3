@@ -3,14 +3,14 @@
   'use strict';
 
   angular.module('pb.ds.tables').controller('TablesDatatableInfiniteScrollController',
-  function($log, MockDataFactory, moment, $scope, $timeout) {
+  function($log, PeopleResolve, moment, $scope, $timeout) {
 
     var _this = this;
 
     _this.table = {
       limitDefault: 25,
       limit: 25,
-      data: MockDataFactory.query({filename: 'ds_users'}),
+      data: PeopleResolve,
       infinite: {
         disabled: false,
         load: function() {
@@ -65,42 +65,6 @@
       },
       searchChange: function() {
         _this.table.infinite.reset();
-      },
-      selectedRows: [],
-      selectRow: function(data) {
-        if (_this.table.selectedRows.indexOf(data.id) === -1) {
-          _this.table.selectedRows.push(data.id);
-        }
-        else {
-          _this.table.selectedRows.splice(_this.table.selectedRows.indexOf(data.id), 1);
-          _this.table.allRowsSelected = false;
-        }
-      },
-      selectAllRows: function() {
-        var checked = !_this.table.selectAllFilteredRows();
-
-        _this.table.selectedRows = [];
-
-        angular.forEach(_this.table.dataFiltered, function(value, key) {
-          value.selected = checked;
-
-          if (checked) {
-            _this.table.selectedRows.push(value.id);
-          }
-
-        });
-
-      },
-      selectAllFilteredRows: function() {
-        var selected = 0;
-
-        angular.forEach(_this.table.dataFiltered, function(value, key) {
-          if (value.selected) {
-            selected++;
-          }
-        });
-
-        return (selected !== 0 && selected === _this.table.dataFiltered.length);
       },
       daterangepicker: {
         date: {

@@ -3,13 +3,13 @@
   'use strict';
 
   angular.module('pb.ds.tables').controller('TablesDatatableController',
-  function($log, MockDataFactory, moment) {
+  function($log, PeopleResolve, moment) {
 
     var _this = this;
 
 
     _this.table = {
-      data: MockDataFactory.query({filename: 'ds_users'}),
+      data: PeopleResolve,
       sort: {
         type: 'first_name',
         reverse: false,
@@ -26,6 +26,26 @@
         min: 5,
         max: 'Infinity'
       },
+      showDetails: function(item, event) {
+        event.stopPropagation();
+        item.showDetails = !item.showDetails;
+      },
+      selectEmail: function(item, event) {
+        event.preventDefault();
+        event.stopPropagation();
+      },
+      showMore: function(item, bool, event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (bool) {
+          item.limit = _this.table.groups.max;
+          return;
+        }
+        else {
+          item.limit = undefined;
+        }
+      },
       search: {
 
       },
@@ -33,13 +53,17 @@
         _this.table.search.$ = '';
       },
       selectedRows: [],
-      selectRow: function(data) {
+      selectRow: function(data, $event) {
+        $event.stopPropagation();
+
         if (_this.table.selectedRows.indexOf(data.id) === -1) {
           _this.table.selectedRows.push(data.id);
+          data.selected = true;
         }
         else {
           _this.table.selectedRows.splice(_this.table.selectedRows.indexOf(data.id), 1);
           _this.table.allRowsSelected = false;
+          data.selected = false;
         }
       },
       selectAllRows: function() {

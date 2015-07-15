@@ -25,7 +25,9 @@
     'angularUtils.directives.dirPagination',
     'infinite-scroll',
     'datatables',
-    'datatables.bootstrap'
+    'datatables.bootstrap',
+    'angularGrid',
+    'xeditable'
   ]);
 
 })();

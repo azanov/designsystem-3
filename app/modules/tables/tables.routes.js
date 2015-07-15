@@ -33,7 +33,8 @@
 
     .state('tables.datatable.overview', {
       url: '/datatable/overview',
-      templateUrl: 'modules/tables/templates/tables-datatable-overview.html'
+      templateUrl: 'modules/tables/templates/tables-datatable-overview.html',
+      controller: 'TablesOverviewController as overview'
     })
 
     .state('tables.datatable.toolbar', {
@@ -58,7 +59,7 @@
       controller: 'TablesDatatableController as datatable',
       resolve: {
         PeopleResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'people'});
+          return MockDataFactory.query({filename: 'ds_users'});
         }
       }
     })
@@ -69,7 +70,7 @@
       controller: 'TablesDatatableInfiniteScrollController as datatable',
       resolve: {
         PeopleResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'people'});
+          return MockDataFactory.query({filename: 'ds_users'});
         }
       }
     })
@@ -85,10 +86,15 @@
       }
     })
 
-    .state('tables.advanced1', {
-      url: '/advanced1',
-      templateUrl: 'modules/tables/templates/tables-advanced1.html',
-      controller: 'TablesAdvanced1Controller as advanced1'
+    .state('tables.angulargrid', {
+      url: '/angulargrid',
+      templateUrl: 'modules/tables/templates/tables-angular-grid.html',
+      controller: 'TablesAngularGridController as angulargrid',
+      resolve: {
+        PeopleResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'ds_users'});
+        }
+      }
     })
 
     .state('tables.facetedsearch', {
