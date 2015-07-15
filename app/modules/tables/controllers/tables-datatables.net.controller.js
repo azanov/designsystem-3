@@ -6,7 +6,6 @@
 
     var _this = this;
 
-
     //datatable model
     _this.datatable = {
       titleHtml: '<input type="checkbox" ng-model="datatablesnet.datatable.selectAll" ng-click="datatablesnet.datatable.toggleAll(datatablesnet.datatable.selectAll, datatablesnet.datatable.selected)">',
@@ -43,7 +42,7 @@
     _this.dtOptions = DTOptionsBuilder
     .fromFnPromise(PeopleResolve.$promise)
     .withPaginationType('full_numbers')
-    .withDOM('<"row"<"col-md-6 table-buttons"><"col-md-6"f>>t<"row"<"col-md-5"i><"col-md-2 text-center"l><"col-md-5"p>>')
+    .withDOM('<"row toolbar spacer-bottom-md"<"col-md-6 table-buttons"T><"col-md-6"f>>t<"row"<"col-md-5"i><"col-md-2 text-center"l><"col-md-5"p>>')
     .withOption('language', {
       search: 'Search',
       lengthMenu: '_MENU_ per page',
@@ -66,15 +65,59 @@
       // Recompiling so we can bind Angular directive to the DT
       $compile(angular.element(row).contents())($scope);
     })
-    .withOption('order', [[2, 'asc']])
+    .withOption('order', [[2, 'asc']]) //column 1 (the ID) is hidden
     .withBootstrap()
     .withBootstrapOptions({
       pagination: {
         classes: {
           ul: 'pagination pagination-sm test'
         }
+      },
+      TableTools: {
+        classes: {
+          //container: 'btn-group',
+          buttons: {
+            normal: 'btn btn-sm btn-default'
+          }
+        }
       }
-    });
+    })
+    .withTableTools('')
+    .withTableToolsButtons([
+      {
+        sExtends: 'text',
+        sButtonText: '<i class="fa fa-fw fa-plus"></i>',
+        fnClick: function(nButton, oConfig, oFlash) {
+          $window.alert('Handle adding a new record.');
+        }
+      },
+      {
+        sExtends: 'text',
+        sButtonText: '<i class="fa fa-fw fa-trash-o"></i>',
+        fnClick: function(nButton, oConfig, oFlash) {
+          var selected = [];
+
+          angular.forEach(_this.datatable.selected, function(value, key, obj) {
+            if (value) {
+              selected.push(key);
+            }
+          });
+
+          $window.alert('Handle delete of rows: ' + selected.join(','));
+        },
+        fnSelect: function(nButton, oConfig, nRow) {
+          $log.debug(nRow);
+
+          if (nRow.length === 1) {
+            angular.element(nButton).removeClass('hidden');
+          }
+          else {
+            angular.element(nButton).addClass('hidden');
+          }
+
+        }
+      }
+    ]);
 
     //COLUMNS
     _this.dtColumns = [

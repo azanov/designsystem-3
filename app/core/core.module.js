@@ -26,6 +26,7 @@
     'infinite-scroll',
     'datatables',
     'datatables.bootstrap',
+    'datatables.tabletools',
     'angularGrid',
     'xeditable'
   ]);
