@@ -31,6 +31,13 @@
     letter-spacing: .1em;
     font-size: .8em;
   }
+
+  &.preview-example-live {
+    &:before {
+      font-family: 'FontAwesome';
+      content: '\f0e7   Live example';
+    }
+  }
 }
 
 .clearfix {
