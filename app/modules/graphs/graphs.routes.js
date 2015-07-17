@@ -21,10 +21,10 @@
       controller: 'MorrisController as morris'
     })
 
-    .state('graphs.lib2', {
-      url: '/lib2',
-      templateUrl: 'modules/graphs/templates/graphs-lib2.html',
-      controller: 'Lib2Controller as lib2'
+    .state('graphs.c3', {
+      url: '/c3',
+      templateUrl: 'modules/graphs/templates/graphs-c3.html',
+      controller: 'C3Controller as c3'
     })
 
     .state('graphs.lib3', {
