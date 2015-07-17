@@ -99,8 +99,8 @@
       "label": "Morris",
       "value": "graphs.morris"
     }, {
-      "label": "Lib2",
-      "value": "graphs.lib2"
+      "label": "C3",
+      "value": "graphs.c3"
     }, {
       "label": "Lib3",
       "value": "graphs.lib3"
