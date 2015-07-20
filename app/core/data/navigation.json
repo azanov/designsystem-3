@@ -102,8 +102,8 @@
       "label": "C3",
       "value": "graphs.c3"
     }, {
-      "label": "Lib3",
-      "value": "graphs.lib3"
+      "label": "Chart.js",
+      "value": "graphs.chartjs"
     }]
   }, {
     "label": "Brand",

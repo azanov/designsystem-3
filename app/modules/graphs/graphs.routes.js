@@ -27,10 +27,10 @@
       controller: 'C3Controller as c3'
     })
 
-    .state('graphs.lib3', {
-      url: '/lib3',
-      templateUrl: 'modules/graphs/templates/graphs-lib3.html',
-      controller: 'Lib3Controller as lib3'
+    .state('graphs.chartjs', {
+      url: '/chartjs',
+      templateUrl: 'modules/graphs/templates/graphs-chartjs.html',
+      controller: 'ChartjsController as chartjs'
     });
 
   });
