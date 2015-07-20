@@ -27,7 +27,6 @@
     'datatables',
     'datatables.bootstrap',
     'datatables.tabletools',
-    'angularGrid',
     'xeditable',
     'angularChart'
   ]);
