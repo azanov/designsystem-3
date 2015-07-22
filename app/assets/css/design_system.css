@@ -346,7 +346,7 @@ body .navbar > .container-fluid { padding: 0 40px; }
 
 .panel { box-shadow: none; }
 .panel.panel-default { border-color: #c0c0c0; }
-.panel.panel-default .panel-heading { background-color: #f3f5fa; border-bottom-color: #c0c0c0; }
+.panel.panel-default .panel-heading { background-color: #f3f4f9; border-bottom-color: #c0c0c0; }
 
 .panel-title { font-weight: 700; }
 
@@ -1150,6 +1150,8 @@ th.currency { text-align: center; }
 .dataTables_wrapper .dataTable thead tr th.sorting_desc { white-space: nowrap; }
 .dataTables_wrapper .dataTable thead tr th.sorting_desc:after { font-family: FontAwesome; content: '\f0de'; display: inline-block; padding-left: 10px; color: #9b9b9b; }
 .dataTables_wrapper .dataTable thead tr th.sorting_desc:before { content: ''; padding: 0; }
+
+.c3-chart-arc path { stroke: transparent; }
 
 
 
