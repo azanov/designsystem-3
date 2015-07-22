@@ -5,7 +5,7 @@
     "children": [{
       "label": "Buttons",
       "value": "elements.buttons"
-    },{
+    }, {
       "label": "Accordion",
       "value": "elements.accordion"
     }, {
@@ -20,7 +20,7 @@
     }, {
       "label": "Panels",
       "value": "elements.panels"
-    },{
+    }, {
       "label": "Popovers",
       "value": "elements.popovers",
       "className": "popovers"
@@ -35,7 +35,7 @@
     "children": [{
       "label": "Sign-in",
       "value": "pages.signin"
-    },  {
+    }, {
       "label": "Registration",
       "value": "pages.registration"
     }, {
@@ -58,7 +58,7 @@
     "label": "Notifications",
     "value": "",
     "toggle": "dropdown",
-    "children": [ {
+    "children": [{
       "label": "Spinners",
       "value": "notification.spinners"
     }, {
@@ -96,9 +96,6 @@
     "value": "",
     "toggle": "dropdown",
     "children": [{
-      "label": "Morris",
-      "value": "graphs.morris"
-    }, {
       "label": "C3",
       "value": "graphs.c3"
     }, {
@@ -112,7 +109,7 @@
     "children": [{
       "label": "Style Guide",
       "value": "brand.styleguide"
-    },{
+    }, {
       "label": "Color",
       "value": "brand.color"
     }, {
@@ -124,7 +121,7 @@
     }, {
       "label": "Typography",
       "value": "brand.typography"
-    },  {
+    }, {
       "label": "Chart Colors",
       "value": "elements.colorcharts"
     }]
