@@ -1,3 +1,185 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="main-title">Helpers</h1>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, purus quis viverra accumsan, eros ex porta nisl, ut rutrum neque sem in massa. Phasellus mattis lacus a est blandit, at lobortis velit egestas. Nulla lobortis accumsan justo, et fermentum nisi sollicitudin et. Quisque commodo id quam id euismod. Nam vel massa egestas, molestie justo hendrerit, aliquam orci. Integer et lorem nec nunc egestas iaculis id a augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc vehicula enim nec tristique vehicula. Sed cursus purus quis sem tempus, gravida ornare leo ornare.</p>
 
 
-<div ui-view></div>
+    </div>
+  </div>
+
+
+  <!-- SPACERS -->
+  <h4 class="spacer-top-xl">Spacers</h4>
+
+  <p>Use <code>spacer-*</code> classes to add margin above or below any element (typically used on a row). Note that the spacers have media queries and will automatically resize based on screen dimensions.</p>
+
+  <div class="preview-example">
+
+    <div class="row">
+
+      <div class="col-md-3">
+
+        <div class="form-group">
+          <label>Top spacer</label>
+          <select class="form-control input-sm" ng-model="helpers.spacers.top.selected" ng-options="spacer as spacer for spacer in helpers.spacers.top.values"></select>
+        </div>
+
+        <div class="form-group">
+          <label>Bottom spacer</label>
+          <select class="form-control input-sm" ng-model="helpers.spacers.bottom.selected" ng-options="spacer as spacer for spacer in helpers.spacers.bottom.values"></select>
+        </div>
+
+      </div>
+
+      <div class="col-md-8 col-md-offset-1">
+        <div class="row">
+            <div class="col-sm-12">Some content here.</div>
+        </div>
+
+        <div class="row" ng-class="[helpers.spacers.top.selected, helpers.spacers.bottom.selected]">
+            <div class="col-sm-12">
+              This row has <code>{{helpers.spacers.top.selected}}</code> and <code>{{helpers.spacers.bottom.selected}}</code>.
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">Some content here.</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<div class="preview-code" hljs language="xml">
+<div class="row spacer-top-sm spacer-bottom-sm"></div>
+<div class="row spacer-top-md spacer-bottom-md"></div>
+<div class="row spacer-top-lg spacer-bottom-lg"></div>
+<div class="row spacer-top-xl spacer-bottom-xl"></div>
+</div>
+
+
+
+  <!-- NOMARGIN -->
+  <h4 class="spacer-top-xl">No Margins</h4>
+
+  <p>Use the <code>.no-margin</code>, <code>.no-margin-top</code> and <code>.no-margin-bottom</code> classes to remove margins from an element.</p>
+
+  <div class="preview-example">
+
+    <p>I have a bottom margin by default</p>
+    <p class="no-margin-bottom">I have bottom margin removed using the <code>.no-margin-bottom</code> class</p>
+    <p>I have a bottom margin by default</p>
+
+  </div>
+
+<div class="preview-code" hljs language="xml">
+<p class="no-margins">...</p>
+<p class="no-margin-top">...</p>
+<p class="no-margin-bottom">...</p>
+</div>
+
+
+  <!-- NOWRAP -->
+  <h4 class="spacer-top-xl">No Wrap</h4>
+
+  <p>Prevent text elements from wrapping by adding the <code>.nowrap</code>, class to an element. This is particulary useful in tables with headers that have spaces.</p>
+
+  <div class="preview-example">
+
+    <table class="table" style="width: 300px;">
+
+      <thead>
+        <tr>
+          <th>Header</th>
+          <th>Really long header</th>
+          <th class="nowrap">Really long header with .nowrap</th>
+          <th>Header</th>
+          <th>Header</th>
+          <th>Header</th>
+          <th>Header</th>
+          <th>Header</th>
+          <th>Header</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat="row in [1,2,3]">
+          <td colspan="9">...</td>
+        </tr>
+      </tbody>
+
+    </table>
+
+  </div>
+
+<div class="preview-code" hljs language="xml">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Header</th>
+      <th>Really long header</th>
+      <th class="nowrap">Really long header with .nowrap</th>
+      <th>Header</th>
+      <th>Header</th>
+      <th>Header</th>
+      <th>Header</th>
+      <th>Header</th>
+      <th>Header</th>
+    </tr>
+  </thead>
+</table>
+</div>
+
+
+
+  <!-- FA TRANSITION -->
+  <h4 class="spacer-top-xl">FontAwesome Transition</h4>
+
+  <p>Easily add CSS transitions to FontAwesome icons when adding modifier classes, such as <code>.fa-rotate-90</code></p>
+
+  <div class="preview-example">
+
+    <div class="row">
+
+      <div class="col-md-4">
+        <h2>
+          <a href="" ng-init="helpers.icon1.rotate = false" ng-click="helpers.icon1.rotate = !helpers.icon1.rotate">
+            <i class="fa fa-fw fa-icon fa-angle-right fa-lg fa-transition" ng-class="{'fa-rotate-90': helpers.icon1.rotate}"></i> Click me and I will rotate
+          </a>
+        </h2>
+      </div>
+
+      <div class="col-md-4">
+        <h2>
+          <a href="" ng-init="helpers.icon2.rotate = false" ng-click="helpers.icon2.rotate = !helpers.icon2.rotate">
+            <i class="fa fa-fw fa-icon fa-arrow-down fa-lg fa-transition" ng-class="{'fa-rotate-90': helpers.icon2.rotate}"></i> Click me and I will rotate
+          </a>
+        </h2>
+      </div>
+
+      <div class="col-md-4">
+        <h2>
+          <a href="" ng-init="helpers.icon3.rotate = false" ng-click="helpers.icon3.rotate = !helpers.icon3.rotate">
+            <i class="fa fa-fw fa-icon fa-bars fa-lg fa-transition" ng-class="{'fa-rotate-90': helpers.icon3.rotate}"></i> Click me and I will rotate
+          </a>
+        </h2>
+      </div>
+
+    </div>
+
+  </div>
+
+<div class="preview-code" hljs language="xml">
+<div>
+  <a href="" ng-click="someClickHandler()">
+    <i class="fa fa-fw fa-icon fa-angle-right fa-transition" ng-class="{'fa-rotate-90': some.model.boolean}"></i> Click me and I will rotate
+  </a>
+</div>
+</div>
+
+</div>

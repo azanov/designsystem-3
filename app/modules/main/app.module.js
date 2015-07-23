@@ -47,6 +47,16 @@
     });
   });
 
+  // highlight.js configuration
+  angular.module('app').config(function (hljsServiceProvider) {
+    hljsServiceProvider.setOptions({
+      languages: ['html', 'css', 'js', 'xml', 'json']
+    });
+  });
+
+
+
+
   angular.module('app').run(function($rootScope, $state, $stateParams, $log) {
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
