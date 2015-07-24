@@ -86,17 +86,6 @@
       }
     })
 
-    .state('tables.angulargrid', {
-      url: '/angulargrid',
-      templateUrl: 'modules/tables/templates/tables-angular-grid.html',
-      controller: 'TablesAngularGridController as angulargrid',
-      resolve: {
-        PeopleResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'ds_users'});
-        }
-      }
-    })
-
     .state('tables.facetedsearch', {
       url: '/facetedsearch',
       templateUrl: 'modules/tables/templates/tables-faceted-search.html',

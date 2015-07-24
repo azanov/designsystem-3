@@ -87,9 +87,6 @@
     }, {
       "label": "Datatable.net",
       "value": "tables.datatablesnet"
-    }, {
-      "label": "Angular Grid",
-      "value": "tables.angulargrid"
     }]
   }, {
     "label": "Graphs",
