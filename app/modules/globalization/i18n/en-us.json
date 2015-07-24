@@ -1,0 +1,24 @@
+{
+  "GLOBALIZATION": {
+    "TITLE": "Sample Title",
+    "BUTTONS": {
+      "TITLE": "Buttons",
+      "SIGNIN": "Sign in",
+      "SIGNOUT": "Sign out",
+      "SAVE": "Save",
+      "CANCEL": "Cancel",
+      "EDIT": "Edit",
+      "DELETE": "Delete"
+    },
+    "DROPDOWN": {
+      "EDIT": "Edit",
+      "RENAME": "Rename",
+      "DUPLICATE": "Duplicate",
+      "COPY": "Copy",
+      "DELETE": "Delete"
+    },
+    "CONTROLLER": {
+      "EXAMPLE": "This is an example of translation within a controller."
+    }
+  }
+}

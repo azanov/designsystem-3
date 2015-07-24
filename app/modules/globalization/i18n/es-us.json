@@ -1,0 +1,24 @@
+{
+  "GLOBALIZATION": {
+    "TITLE": "Título de la muestra",
+    "BUTTONS": {
+      "TITLE": "Botones",
+      "SIGNIN": "Registrarse",
+      "SIGNOUT": "Desconectar",
+      "SAVE": "Guardar",
+      "CANCEL": "Cancelar",
+      "EDIT": "Editar",
+      "DELETE": "Borrar"
+    },
+    "DROPDOWN": {
+      "EDIT": "Editar",
+      "RENAME": "Rename",
+      "DUPLICATE": "Duplicar",
+      "COPY": "Copia",
+      "DELETE": "Borrar"
+    },
+    "CONTROLLER": {
+      "EXAMPLE": "Este es un ejemplo de la traducción dentro de un controlador."
+    }
+  }
+}

@@ -60,7 +60,15 @@
       .state('globalization.angulartranslate', {
         url: '/angulartranslate',
         templateUrl: 'modules/globalization/templates/globalization-angular-translate.html',
-        controller: 'AngularTranslateController as translate'
+        controller: 'AngularTranslateController as translate',
+        resolve: {
+          translate: function($translatePartialLoader) {
+            $translatePartialLoader.addPart('modules/globalization/i18n');
+          },
+          languages: function(languageFactory) {
+            return languageFactory.get();
+          }
+        }
       });
 
   });

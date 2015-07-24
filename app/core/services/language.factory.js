@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.settings').factory('languageFactory', function($log, $translateLocalStorage, $rootScope, $translate, tmhDynamicLocale, $http) {
+  angular.module('app').factory('languageFactory', function($log, $translateLocalStorage, $rootScope, $translate, tmhDynamicLocale, $http) {
 
     var language = {};
 
@@ -31,8 +31,8 @@
 
       $rootScope.rtl = (rtl) ? 'rtl' : 'ltr';
 
-      $translate.use(code);
-      tmhDynamicLocale.set(code);
+      $translate.use(code.toLowerCase());
+      tmhDynamicLocale.set(code.toLowerCase());
     };
 
     return language;

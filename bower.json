@@ -15,7 +15,7 @@
     "angular-translate-loader-partial": "2.7.2",
     "angular-translate-storage-cookie": "2.7.2",
     "angular-translate-storage-local": "2.7.2",
-    "angular-dynamic-locale": "0.1.21",
+    "angular-dynamic-locale": "0.1.27",
     "angular-loading-bar": "0.6.0",
     "Numeric-Stepper": "*",
     "eonasdan-bootstrap-datetimepicker": "3.1.3",
