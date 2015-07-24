@@ -11,14 +11,46 @@
       "DELETE": "Borrar"
     },
     "DROPDOWN": {
+      "TITLE": "Botones desplegables",
       "EDIT": "Editar",
       "RENAME": "Rename",
       "DUPLICATE": "Duplicar",
       "COPY": "Copia",
       "DELETE": "Borrar"
     },
+    "INPUTS": {
+      "TITLE": "Entradas",
+      "CHECKBOX": {
+        "ONE": "Selección casilla uno",
+        "TWO": "Casilla de verificación de selección de dos"
+      },
+      "RADIO": {
+        "ONE": "Botón de opción de selección de un",
+        "TWO": "Botón de opción de selección de dos"
+      },
+      "TEXT": {
+        "LABEL": "Nombre",
+        "PLACEHOLDER": "(opcional)"
+      },
+      "SELECT": {
+        "LABEL": "Género",
+        "MALE": "Masculino",
+        "FEMALE": "Femenino"
+      }
+    },
     "CONTROLLER": {
+      "TITLE": "Ejemplo controller",
       "EXAMPLE": "Este es un ejemplo de la traducción dentro de un controlador."
+    },
+    "FORMATS": {
+      "NUMBER": "Formatos de número",
+      "DATE": "Formatos de fecha",
+      "TIME": {
+        "TITLE": "Formatos tiempo",
+        "TIMESHORT": "Tiempo corto",
+        "TIMEMEDIUM": "Medio tiempo"
+      },
+      "CURRENCY": "Moneda"
     }
   }
 }

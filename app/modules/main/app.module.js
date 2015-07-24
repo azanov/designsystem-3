@@ -88,6 +88,7 @@
 
   angular.module('app').run(function($rootScope, $state, $stateParams, $log, $translate) {
 
+
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
       $log.debug(
         'To State:', toState,

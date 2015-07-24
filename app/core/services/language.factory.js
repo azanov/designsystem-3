@@ -12,15 +12,27 @@
 
     language.getStored = function() {
 
-      var code = $translateLocalStorage.get('NG_TRANSLATE_LANG_KEY'),
-        codeArray = code.split('-'),
-        language = codeArray[0],
-        country = codeArray[1].toLowerCase(),
-        obj = {
-          code: code,
-          language: language,
-          country: country
-        };
+      var code = $translateLocalStorage.get('NG_TRANSLATE_LANG_KEY');
+
+      var codeArray = code.split('-');
+
+      var language, country, obj;
+
+      //handle languages that have an additional identifier, such as Panjabi: pa-guru-in
+      if (codeArray.length > 2) {
+        language = codeArray[0] + '-' + codeArray[1];
+        country = codeArray[2].toLowerCase()
+      }
+      else {
+        language = codeArray[0];
+        country = codeArray[1].toLowerCase();
+      }
+
+      obj = {
+        code: code,
+        language: language,
+        country: country
+      };
 
       return obj;
     };

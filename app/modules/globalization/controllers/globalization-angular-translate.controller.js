@@ -14,6 +14,14 @@
     // languages from resolve in ui-router $state config
     _this.languages = languages.data.countries;
 
+    _this.genders = {
+      data: [
+        {code: 'M', name: 'GLOBALIZATION.INPUTS.SELECT.MALE'},
+        {code: 'F', name: 'GLOBALIZATION.INPUTS.SELECT.FEMALE'}
+      ],
+      selected: 'M'
+    };
+
     ///////
 
     _this.init = function() {

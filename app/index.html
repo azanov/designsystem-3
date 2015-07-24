@@ -63,7 +63,7 @@
     <link rel="icon" type="image/png" href="assets/images/favicon/favicon_228.png" sizes="228x228">
 
     <!-- Load Bootstrap RTL theme from CDNJS -->
-    <link rel="stylesheet" ng-if="app.rtl == 'rtl'" href="https://cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4-rc1/dist/css/bootstrap-rtl.min.css" />
+    <link rel="stylesheet" ng-init="rtl = 'ltr'" ng-if="rtl === 'rtl'" href="https://cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4-rc1/dist/css/bootstrap-rtl.min.css" />
 
   </head>
 

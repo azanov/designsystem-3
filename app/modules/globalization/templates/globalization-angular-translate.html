@@ -5,6 +5,7 @@
         <a class="badge badge-link" href="http://angular-translate.github.io/" target="blank"><i class="fa fa-plug"></i> angular translate v2.7.2</a>
         <a class="badge badge-link" href="http://lgalfaso.github.io/angular-dynamic-locale/" target="blank"><i class="fa fa-plug"></i> angular dynamic locale v0.1.27</a>
         <a class="badge badge-link" href="https://code.angularjs.org/1.3.15/docs/guide/i18n" target="blank"><i class="fa fa-plug"></i> angular-i18n v1.3.15</a>
+        <a class="badge badge-link" href="https://github.com/morteza/bootstrap-rtl/tree/v3.3.4-rc1" target="blank"><i class="fa fa-plug"></i> bootstrap-rtl v3.3.4-rc1</a>
       </small>
     </h1>
 
@@ -32,7 +33,7 @@
 
           <h1 translate="GLOBALIZATION.TITLE"></h1>
 
-          <h4>Buttons</h4>
+          <h4 class="spacer-top-md" translate="GLOBALIZATION.BUTTONS.TITLE"></h4>
 
           <div class="row">
 
@@ -53,7 +54,7 @@
 
           </div>
 
-          <h4>Dropdown Buttons</h4>
+          <h4 class="spacer-top-md"  translate="GLOBALIZATION.DROPDOWN.TITLE"></h4>
 
           <div class="row">
 
@@ -75,38 +76,68 @@
           </div>
 
 
-          <h4>Inputs</h4>
-          <ul>
-            <li>radios</li>
-            <li>checkboxes</li>
-            <li>text</li>
-            <li>select menu</li>
-            <li>select menu</li>
-          </ul>
+          <h4 class="spacer-top-md" translate="GLOBALIZATION.INPUTS.TITLE"></h4>
 
-          <h4>Controller Example</h4>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="">
+              <span translate="GLOBALIZATION.INPUTS.CHECKBOX.ONE"></span>
+            </label>
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="">
+              <span translate="GLOBALIZATION.INPUTS.CHECKBOX.TWO"></span>
+            </label>
+          </div>
+
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadio" value="">
+              <span translate="GLOBALIZATION.INPUTS.RADIO.ONE"></span>
+            </label>
+          </div>
+
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadio" value="">
+              <span translate="GLOBALIZATION.INPUTS.RADIO.TWO"></span>
+            </label>
+          </div>
+
+          <div class="form-group spacer-top-md">
+            <label translate="GLOBALIZATION.INPUTS.TEXT.LABEL"></label>
+            <input class="form-control" type="text" placeholder="{{'GLOBALIZATION.INPUTS.TEXT.PLACEHOLDER' | translate}}">
+          </div>
+
+          <div class="form-group spacer-top-md">
+            <label translate="GLOBALIZATION.INPUTS.SELECT.LABEL"></label>
+            <select class="form-control" ng-model="translate.genders.selected" ng-options="gender.code as gender.name | translate for gender in translate.genders.data"></select>
+          </div>
+
+
+          <h4 class="spacer-top-md" translate="GLOBALIZATION.CONTROLLER.TITLE"></h4>
           <p>{{translate.controllerExample}}</p>
 
-          <h4>Bootstrap Dropdowns</h4>
-
-          <h4>Number Formats</h4>
+          <h4 class="spacer-top-md" translate="GLOBALIZATION.FORMATS.NUMBER"></h4>
           <p>{{1234567890 | number}}</p>
           <p>{{-12992992 | number}}</p>
 
-          <h4>Date Formats</h4>
+          <h4 class="spacer-top-md" translate="GLOBALIZATION.FORMATS.DATE"></h4>
           <p>{{0 | date:'fullDate'}}</p>
 
-          <h4>Time Formats</h4>
+          <h4 class="spacer-top-md" translate="GLOBALIZATION.FORMATS.TIME.TITLE"></h4>
           <p>
-            <label>Time short</label>
+            <label translate="GLOBALIZATION.FORMATS.TIME.TIMESHORT"></label>
             <br/> {{1288323623006 | date:'shortTime':'UTC'}}
           </p>
           <p>
-            <label>Time medium</label>
+            <label translate="GLOBALIZATION.FORMATS.TIME.TIMEMEDIUM"></label>
             <br/> {{1288323623006 | date:'mediumTime':'UTC'}}
           </p>
 
-          <h4>Currency</h4>
+          <h4 class="spacer-top-md" translate="GLOBALIZATION.FORMATS.CURRENCY"></h4>
           <p>{{1000000 | currency}}</p>
           <p>{{-1000 | currency}}</p>
 
