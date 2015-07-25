@@ -37,7 +37,8 @@
         value: code.language
       })[0];
 
-      languageFactory.change(_this.selectedCountry.value, _this.selectedLanguage.value, _this.selectedLanguage.rtl);
+      _this.changeLang();
+      //languageFactory.change(_this.selectedCountry.value, _this.selectedLanguage.value, _this.selectedLanguage.rtl);
 
       // watch the selected country to set the selected language
       $scope.$watch('translate.selectedCountry', function(newVal, oldVal) {
