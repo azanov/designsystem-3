@@ -138,10 +138,53 @@
             </td>
           </tr>
           <tr class="table-details" ng-repeat-end="item in datatable.table.data">
-            <td colspan="10">
+            <td></td>
+            <td colspan="8">
               <div collapse="!item.showDetails">
                 <div class="table-details-content">
-                  <h1>Sample details {{$index}} here. {{item.first_name}}</h1>
+
+                  <div class="row">
+
+                    <div class="col-md-3">
+
+                      <dl class="condensed">
+                        <dt>Phone Numbers</dt>
+                        <dd>Work: {{::item.phone.work}}</dd>
+                        <dd>Cell: {{::item.phone.cell}}</dd>
+                      </dl>
+
+                    </div>
+
+                    <div class="col-md-3">
+
+                      <dl class="condensed">
+                        <dt>Address</dt>
+                        <dd>{{::item.address.street}}</dd>
+                        <dd>{{::item.address.city}}, {{::item.address.state}} {{::item.address.postalCode}}</dd>
+                      </dl>
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                      <dl class="condensed">
+                        <dt>IP Address</dt>
+                        <dd>{{::item.ip_address}}</dd>
+                      </dl>
+
+                    </div>
+
+                    <div class="col-md-3">
+
+                      <dl class="condensed">
+                        <dt>Website</dt>
+                        <dd>{{::item.url}}</dd>
+                      </dl>
+
+                    </div>
+
+                  </div>
+
                 </div>
               </div>
             </td>
