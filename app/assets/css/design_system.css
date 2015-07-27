@@ -229,10 +229,10 @@ table[timepicker] tbody tr td input { padding: 0; }
 .tab-content-bordered .tab-content { border: 1px solid #c0c0c0; border-top: 0; border-radius: 0 0 4px 4px; }
 
 a.list-group-item { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-size: 16px; border: 0; border-radius: 0; transition: background-color .3s, color .2s; }
-a.list-group-item:hover { color: #324184; background-color: #c0c0c0; }
+a.list-group-item:hover { color: #324184; background-color: #f0f0f0; }
 a.list-group-item:first-child { border-top-left-radius: 0; border-top-right-radius: 0; }
-a.list-group-item.active { background-color: #c0c0c0; border-color: #c0c0c0; color: #3e53a4; }
-a.list-group-item.active:hover, a.list-group-item.active:focus { background-color: #c0c0c0; border-color: #c0c0c0; color: #324184; }
+a.list-group-item.active { background-color: #f0f0f0; border-color: #f0f0f0; color: #3e53a4; }
+a.list-group-item.active:hover, a.list-group-item.active:focus { background-color: #f0f0f0; border-color: #f0f0f0; color: #324184; }
 a.list-group-item.active .badge { color: #fff; background-color: #3e53a4; }
 
 div.accordion-group .panel-body { padding: 15px; }
@@ -356,7 +356,7 @@ body .navbar > .container-fluid { padding: 0 40px; }
 
 .panel { box-shadow: none; }
 .panel.panel-default { border-color: #c0c0c0; }
-.panel.panel-default .panel-heading { background-color: #f3f4f9; border-bottom-color: #c0c0c0; }
+.panel.panel-default .panel-heading { background-color: #f3f5fa; border-bottom-color: #c0c0c0; }
 
 .panel-title { font-weight: 700; }
 
@@ -981,8 +981,7 @@ input.cmn-toggle-round-flat:checked + label:after { margin-left: 50px; backgroun
 @media (max-width: 767px) { .signin .signin-footer .logo { text-align: center; }
   .signin .signin-footer .nav { text-align: center; padding-top: 10px; } }
 
-/* TABLES */
-.table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th { background-color: #ECEEF6; }
+.table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th { background-color: #d8dded; }
 
 .table-hover > tbody > tr:active > td, .table-hover > tbody > tr:active > th, .table-hover > tbody > tr.active > td, .table-hover > tbody > tr.active > th { background-color: #B2BADB; }
 
@@ -1006,8 +1005,9 @@ td.currency { text-align: right; }
 
 th.currency { text-align: center; }
 
-.table .table-row-selected td { background-color: #D8DDED; }
+.table .table-row-selected td { background-color: #c5cbe4; }
 .table .table-details td { padding: 0; background-color: #f0f0f0; border-top-width: 0; }
+.table .table-details > td { background: linear-gradient(to bottom, #cbcbcb -5%, #f0f0f0 6%, #f0f0f0 100%); }
 .table .table-details .table-details-content { padding: 10px; }
 .table.table-border-bottom tr:last-child td { border-bottom: 1px solid #ddd; }
 

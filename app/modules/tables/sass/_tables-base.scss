@@ -1,10 +1,10 @@
-/* TABLES */
+//* TABLES */
 
 
 // for some reason, bootstrap will not do this with the variables.
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
-  background-color: #ECEEF6;
+  background-color: #d8dded;
 }
 .table-hover > tbody > tr:active > td,
 .table-hover > tbody > tr:active > th,
@@ -75,7 +75,7 @@ th.currency {
 
   .table-row-selected {
     td {
-      background-color: #D8DDED;
+      background-color: #c5cbe4;
     }
   }
 
@@ -83,9 +83,16 @@ th.currency {
 
     td {
       padding: 0;
-      background-color: $pb-gray-50;
+     background-color: $pb-gray-50;
       border-top-width: 0;
+
     }
+
+    >td {
+      background: linear-gradient(to bottom, rgba(203, 203, 203, 1) -5%, rgba(240, 240, 240, 1) 6%, rgba(240, 240, 240, 1) 100%);
+
+    }
+
 
     .table-details-content {
       padding: 10px;
