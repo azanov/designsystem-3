@@ -7,6 +7,7 @@
     'ngAnimate',
     'ngResource',
     'ngSanitize',
+    'hljs',
     'ui.router',
     'headroom',
     'angular-loading-bar',

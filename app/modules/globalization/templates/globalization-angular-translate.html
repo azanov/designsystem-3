@@ -1,0 +1,151 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="main-title">Angular Translate
+      <small class="pull-right">
+        <a class="badge badge-link" href="http://angular-translate.github.io/" target="blank"><i class="fa fa-plug"></i> angular translate v2.7.2</a>
+        <a class="badge badge-link" href="http://lgalfaso.github.io/angular-dynamic-locale/" target="blank"><i class="fa fa-plug"></i> angular dynamic locale v0.1.27</a>
+        <a class="badge badge-link" href="https://code.angularjs.org/1.3.15/docs/guide/i18n" target="blank"><i class="fa fa-plug"></i> angular-i18n v1.3.15</a>
+        <a class="badge badge-link" href="https://github.com/morteza/bootstrap-rtl/tree/v3.3.4-rc1" target="blank"><i class="fa fa-plug"></i> bootstrap-rtl v3.3.4-rc1</a>
+      </small>
+    </h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, purus quis viverra accumsan, eros ex porta nisl, ut rutrum neque sem in massa. Phasellus mattis lacus a est blandit, at lobortis velit egestas. Nulla lobortis accumsan justo, et fermentum nisi sollicitudin et. Quisque commodo id quam id euismod. Nam vel massa egestas, molestie justo hendrerit, aliquam orci. Integer et lorem nec nunc egestas iaculis id a augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc vehicula enim nec tristique vehicula. Sed cursus purus quis sem tempus, gravida ornare leo ornare.</p>
+
+    <div class="preview-example">
+
+      <div class="row spacer-top-md">
+
+        <div class="col-md-3">
+
+          <div class="form-group">
+            <label>Select country</label>
+            <select ng-options="c.name for c in translate.languages" ng-model="translate.selectedCountry" class="form-control"></select>
+          </div>
+
+          <div class="form-group" ng-show="translate.selectedCountry.languages.length > 1">
+            <label>Select language</label>
+            <select ng-options="l.name for l in translate.selectedCountry.languages" ng-change="translate.changeLang()" ng-model="translate.selectedLanguage" class="form-control"></select>
+          </div>
+
+        </div>
+
+        <div class="col-md-8 col-md-offset-1">
+
+          <h1 translate="GLOBALIZATION.TITLE"></h1>
+
+          <h4 class="spacer-top-md" translate="GLOBALIZATION.BUTTONS.TITLE"></h4>
+
+          <div class="row">
+
+            <div class="col-xs-12">
+              <button class="btn btn-primary" translate="GLOBALIZATION.BUTTONS.SIGNIN"></button>
+              <button class="btn btn-default" translate="GLOBALIZATION.BUTTONS.SIGNOUT"></button>
+              <button class="btn btn-primary" translate="GLOBALIZATION.BUTTONS.SAVE"></button>
+              <button class="btn btn-primary" translate="GLOBALIZATION.BUTTONS.CANCEL"></button>
+              <button class="btn btn-primary" translate="GLOBALIZATION.BUTTONS.EDIT"></button>
+              <button class="btn btn-primary" translate="GLOBALIZATION.BUTTONS.DELETE"></button>
+            </div>
+
+            <div class="col-xs-12 spacer-top-sm">
+              <button class="btn btn-primary"><i class="fa fa-fw fa-save"></i> <span translate="GLOBALIZATION.BUTTONS.SAVE"></span></button>
+              <button class="btn btn-primary"><i class="fa fa-fw fa-pencil"></i> <span translate="GLOBALIZATION.BUTTONS.EDIT"></span></button>
+              <button class="btn btn-primary"><i class="fa fa-fw fa-trash-o"></i> <span translate="GLOBALIZATION.BUTTONS.DELETE"></span></button>
+            </div>
+
+          </div>
+
+          <h4 class="spacer-top-md"  translate="GLOBALIZATION.DROPDOWN.TITLE"></h4>
+
+          <div class="row">
+
+            <div class="col-xs-12">
+              <div class="btn-group">
+                <button class="btn btn-default btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                  <span translate="GLOBALIZATION.DROPDOWN.EDIT"></span> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="" translate="GLOBALIZATION.DROPDOWN.RENAME">Rename</a></li>
+                  <li><a href="" translate="GLOBALIZATION.DROPDOWN.DUPLICATE">Duplicate</a></li>
+                  <li><a href="" translate="GLOBALIZATION.DROPDOWN.COPY">Copy</a></li>
+                  <li class="divider"></li>
+                  <li><a href="" translate="GLOBALIZATION.DROPDOWN.DELETE">Delete</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+
+          <h4 class="spacer-top-md" translate="GLOBALIZATION.INPUTS.TITLE"></h4>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="">
+              <span translate="GLOBALIZATION.INPUTS.CHECKBOX.ONE"></span>
+            </label>
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="">
+              <span translate="GLOBALIZATION.INPUTS.CHECKBOX.TWO"></span>
+            </label>
+          </div>
+
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadio" value="">
+              <span translate="GLOBALIZATION.INPUTS.RADIO.ONE"></span>
+            </label>
+          </div>
+
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadio" value="">
+              <span translate="GLOBALIZATION.INPUTS.RADIO.TWO"></span>
+            </label>
+          </div>
+
+          <div class="form-group spacer-top-md">
+            <label translate="GLOBALIZATION.INPUTS.TEXT.LABEL"></label>
+            <input class="form-control" type="text" placeholder="{{'GLOBALIZATION.INPUTS.TEXT.PLACEHOLDER' | translate}}">
+          </div>
+
+          <div class="form-group spacer-top-md">
+            <label translate="GLOBALIZATION.INPUTS.SELECT.LABEL"></label>
+            <select class="form-control" ng-model="translate.genders.selected" ng-options="gender.code as gender.name | translate for gender in translate.genders.data"></select>
+          </div>
+
+
+          <h4 class="spacer-top-md" translate="GLOBALIZATION.CONTROLLER.TITLE"></h4>
+          <p>{{translate.controllerExample}}</p>
+
+          <h4 class="spacer-top-md" translate="GLOBALIZATION.FORMATS.NUMBER"></h4>
+          <p>{{1234567890 | number}}</p>
+          <p>{{-12992992 | number}}</p>
+
+          <h4 class="spacer-top-md" translate="GLOBALIZATION.FORMATS.DATE"></h4>
+          <p>{{0 | date:'fullDate'}}</p>
+
+          <h4 class="spacer-top-md" translate="GLOBALIZATION.FORMATS.TIME.TITLE"></h4>
+          <p>
+            <label translate="GLOBALIZATION.FORMATS.TIME.TIMESHORT"></label>
+            <br/> {{1288323623006 | date:'shortTime':'UTC'}}
+          </p>
+          <p>
+            <label translate="GLOBALIZATION.FORMATS.TIME.TIMEMEDIUM"></label>
+            <br/> {{1288323623006 | date:'mediumTime':'UTC'}}
+          </p>
+
+          <h4 class="spacer-top-md" translate="GLOBALIZATION.FORMATS.CURRENCY"></h4>
+          <p>{{1000000 | currency}}</p>
+          <p>{{-1000 | currency}}</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

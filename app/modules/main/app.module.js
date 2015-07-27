@@ -47,7 +47,47 @@
     });
   });
 
-  angular.module('app').run(function($rootScope, $state, $stateParams, $log) {
+  // highlight.js configuration
+  angular.module('app').config(function(hljsServiceProvider) {
+    hljsServiceProvider.setOptions({
+      languages: ['html', 'css', 'js', 'xml', 'json']
+    });
+  });
+
+
+  // TRANSLATE CONFIG
+  angular.module('app').config(function($translateProvider, $translatePartialLoaderProvider) {
+
+    $translateProvider.useLoaderCache(true);
+
+    $translateProvider.useLoader('$translatePartialLoader', {
+      urlTemplate: '{part}/{lang}.json'
+    });
+
+    //additional parts loaded in module controllers
+    //$translatePartialLoaderProvider.addPart('modules/i18n');
+
+    $translateProvider.preferredLanguage('en-us');
+    $translateProvider.fallbackLanguage('en-us');
+    $translateProvider.useLocalStorage();
+
+    $translateProvider.useSanitizeValueStrategy('escapeParameters');
+  });
+
+  // DYNAMIC LOCALE CONFIG
+  angular.module('app').config(function(tmhDynamicLocaleProvider) {
+    tmhDynamicLocaleProvider.useCookieStorage('NG_TRANSLATE_LANG_KEY');
+
+    //gulp copies the i18n locale files from bower_components to modules/i18n
+    tmhDynamicLocaleProvider.localeLocationPattern('modules/i18n/angular-i18n/angular-locale_{{locale}}.js');
+
+  });
+
+
+
+
+  angular.module('app').run(function($rootScope, $state, $stateParams, $log, $translate) {
+
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
       $log.debug(
@@ -67,6 +107,11 @@
 
     $rootScope.$on('$stateNotFound', function(unfoundState) {
       $log.debug('$stateNotFound: ', unfoundState);
+    });
+
+    //refresh as parts are added in controllers
+    $rootScope.$on('$translatePartialLoaderStructureChanged', function() {
+      $translate.refresh();
     });
 
   });

@@ -10,6 +10,8 @@
     _this.header = 'animated';
     _this.footer = false;
 
+    _this.rtl = 'ltr';
+
   });
 
 })();

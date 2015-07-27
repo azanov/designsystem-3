@@ -38,6 +38,24 @@
       content: '\f0e7   Live example';
     }
   }
+
+  +.preview-code {
+    margin-top: -25px;
+    margin-bottom: 20px;
+
+    pre {
+      border-color: #e3e3e3;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      margin: 0;
+      padding: 10px 10px;
+
+      code {
+        background: transparent;
+      }
+    }
+
+  }
 }
 
 .clearfix {

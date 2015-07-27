@@ -1,0 +1,56 @@
+{
+  "GLOBALIZATION": {
+    "TITLE": "Sample Title",
+    "BUTTONS": {
+      "TITLE": "Buttons",
+      "SIGNIN": "Sign in",
+      "SIGNOUT": "Sign out",
+      "SAVE": "Save",
+      "CANCEL": "Cancel",
+      "EDIT": "Edit",
+      "DELETE": "Delete"
+    },
+    "DROPDOWN": {
+      "TITLE": "Dropdown Buttons",
+      "EDIT": "Edit",
+      "RENAME": "Rename",
+      "DUPLICATE": "Duplicate",
+      "COPY": "Copy",
+      "DELETE": "Delete"
+    },
+    "INPUTS": {
+      "TITLE": "Inputs",
+      "CHECKBOX": {
+        "ONE": "Checkbox selection one",
+        "TWO": "Checkbox selection two"
+      },
+      "RADIO": {
+        "ONE": "Radio button selection one",
+        "TWO": "Radio button selection two"
+      },
+      "TEXT": {
+        "LABEL": "First name",
+        "PLACEHOLDER": "(optional)"
+      },
+      "SELECT": {
+        "LABEL": "Gender",
+        "MALE": "Male",
+        "FEMALE": "Female"
+      }
+    },
+    "CONTROLLER": {
+      "TITLE": "Controller example",
+      "EXAMPLE": "This is an example of translation within a controller."
+    },
+    "FORMATS": {
+      "NUMBER": "Number formats",
+      "DATE": "Date formats",
+      "TIME": {
+        "TITLE": "Time formats",
+        "TIMESHORT": "Time short",
+        "TIMEMEDIUM": "Time medium"
+      },
+      "CURRENCY": "Currency"
+    }
+  }
+}
