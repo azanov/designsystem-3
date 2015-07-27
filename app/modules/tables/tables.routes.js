@@ -89,7 +89,12 @@
     .state('tables.facetedsearch', {
       url: '/facetedsearch',
       templateUrl: 'modules/tables/templates/tables-faceted-search.html',
-      controller: 'TablesFacetedSearchController as faceted'
+      controller: 'TablesFacetedSearchController as faceted',
+      resolve: {
+        PeopleResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'ds_users'});
+        }
+      }
     });
 
   });
