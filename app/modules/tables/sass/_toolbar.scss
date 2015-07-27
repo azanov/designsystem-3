@@ -43,7 +43,7 @@
   .input-group {
     .form-control {
       padding: $padding-small-vertical $padding-small-horizontal;
-      border-left: none;
+      border-left: 0;
       height: 30px;
       line-height: 1.5;
       font-size: 12px;
@@ -61,20 +61,14 @@
     padding: $padding-small-vertical $padding-small-horizontal;
     color: $pb-gray-200;
   }
-
-
-
   .input-group-btn {
     &.open {
       color: #fff;
-
       .dropdown-toggle {
         color: #fff;
       }
     }
   }
-
-
   .search-clear {
     position: absolute;
     padding-right: 3px;
@@ -88,9 +82,7 @@
     .btn {
       border: 0;
     }
-
   }
-
   .dropdown-menu>li>a {
       font-family: $font-family-ps-regular;
       color: $pb-blue;
@@ -104,10 +96,8 @@
         text-decoration: none;
       }
   }
-
   .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
     background-color: $pb-blue;
     color: #fff;
   }
-
 }

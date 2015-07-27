@@ -171,24 +171,34 @@ cite { font-style: normal; }
 .pb-line:before { content: "\e615"; }
 
 .spacer-top-xs { margin-top: 10px; }
+@media only screen and (max-device-width: 480px) { .spacer-top-xs { margin-top: 7.5px; } }
 
 .spacer-top-sm { margin-top: 20px; }
+@media only screen and (max-device-width: 480px) { .spacer-top-sm { margin-top: 15px; } }
 
 .spacer-top-md { margin-top: 30px; }
+@media only screen and (max-device-width: 480px) { .spacer-top-md { margin-top: 22.5px; } }
 
 .spacer-top-lg { margin-top: 40px; }
+@media only screen and (max-device-width: 480px) { .spacer-top-lg { margin-top: 30px; } }
 
 .spacer-top-xl { margin-top: 50px; }
+@media only screen and (max-device-width: 480px) { .spacer-top-xl { margin-top: 37.5px; } }
 
 .spacer-bottom-xs { margin-bottom: 10px; }
+@media only screen and (max-device-width: 480px) { .spacer-bottom-xs { margin-bottom: 7.5px; } }
 
 .spacer-bottom-sm { margin-bottom: 20px; }
+@media only screen and (max-device-width: 480px) { .spacer-bottom-sm { margin-bottom: 15px; } }
 
 .spacer-bottom-md { margin-bottom: 30px; }
+@media only screen and (max-device-width: 480px) { .spacer-bottom-md { margin-bottom: 22.5px; } }
 
 .spacer-bottom-lg { margin-bottom: 40px; }
+@media only screen and (max-device-width: 480px) { .spacer-bottom-lg { margin-bottom: 30px; } }
 
 .spacer-bottom-xl { margin-bottom: 50px; }
+@media only screen and (max-device-width: 480px) { .spacer-bottom-xl { margin-bottom: 37.5px; } }
 
 .no-margin-top { margin-top: 0; }
 
@@ -1108,7 +1118,7 @@ th.currency { text-align: center; }
 .toolbar .btn-default, .toolbar .btn-cancel, .toolbar .btn-link, .toolbar .btn-group .btn-default, .toolbar .btn-group-vertical .btn-default, .toolbar .dropdown-toggle { color: #3e53a4; background-color: transparent; border-color: #cecece; }
 .toolbar .btn-default:hover, .toolbar .btn-cancel:hover, .toolbar .btn-link:hover, .toolbar .btn-group .btn-default:hover, .toolbar .btn-group-vertical .btn-default:hover, .toolbar .dropdown-toggle:hover { background-color: #d9dced; border-color: #d9dced; }
 .toolbar .btn-link:focus, .toolbar .btn-link:hover { text-decoration: none; }
-.toolbar .input-group .form-control { padding: 5px 10px; border-left: none; height: 30px; line-height: 1.5; font-size: 12px; }
+.toolbar .input-group .form-control { padding: 5px 10px; border-left: 0; height: 30px; line-height: 1.5; font-size: 12px; }
 .toolbar .input-group .form-control.search { padding-right: 25px; }
 .toolbar .input-group .form-control.search:not(:valid) ~ .search-clear { opacity: 0; transition: all 0.3s ease-in-out; }
 .toolbar .input-group-addon { padding: 5px 10px; color: #c0c0c0; }

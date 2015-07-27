@@ -3,11 +3,27 @@ $spacers: (xs: 10px,sm: 20px, md: 30px, lg: 40px, xl: 50px);
 $directions: (top, bottom);
 // usage "spacer-top-sm"
 
+// @each $direction in $directions {
+//   @each $spacer, $amt in $spacers {
+//       .spacer-#{$direction}-#{$spacer} {
+//           margin-#{$direction}: $amt;
+//           @include bp($screen-xs) {
+//              margin-#{$direction}: ($amt * .75);
+//            }
+//       }
+//   }
+// }
+
+// added smartphone MQ, reduced each spacer size to 75%.
 @each $direction in $directions {
-  @each $spacer, $amt in $spacers {
-      .spacer-#{$direction}-#{$spacer} {
-          margin-#{$direction}: $amt;
+  @each $spacer,
+  $amt in $spacers {
+    .spacer-#{$direction}-#{$spacer} {
+      margin-#{$direction}: $amt;
+      @media only screen and (max-device-width: 480px) {
+        margin-#{$direction}: 0.75 * $amt;
       }
+    }
   }
 }
 
