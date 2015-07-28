@@ -13,11 +13,9 @@
 
       <p>Filters</p>
 
-      <p>Refined by <a class="pull-right" href="">Clear</a></p>
+      <p>Refined by <a class="pull-right" href="" ng-click="faceted.clear()" ng-show="faceted.facetList.length">Clear</a></p>
       <ul class="list-unstyled">
-        <li><a class="badge" href="">Filter</a></li>
-        <li><a class="badge" href="">Filter</a></li>
-        <li><a class="badge" href="">Filter</a></li>
+        <li ng-repeat="item in faceted.facetList"><a class="badge" href="">{{item}}</a></li>
       </ul>
 
       <div>Countries <a class="pull-right" href="" ng-click="faceted.show = !faceted.show"><i class="fa fa-lg fa-angle-right fa-transition" ng-class="{'fa-rotate-90': faceted.show === true}"></i></a></div>
@@ -36,7 +34,7 @@
       <div collapse="!facetedGroups.show" class="collapse" style="height: auto;">
         <div class="checkbox" ng-repeat="item in faceted.groups">
           <label>
-            <input type="checkbox" ng-model="faceted.table.search.group[item]"> {{item}} (<span>{{item | count:'groups':faceted.table.data}}</span>)
+            <input type="checkbox" ng-model="faceted.table.search.group[item]" ng-click="faceted.checked(faceted.table.search.group[item], item)"> {{item}} (<span>{{item | count:'groups':faceted.table.data}}</span>)
           </label>
         </div>
       </div>
@@ -46,7 +44,7 @@
       <div collapse="!facetedType.show" class="collapse" style="height: auto;">
         <div class="checkbox" ng-repeat="item in faceted.table.data | unique: 'userType' | orderBy: 'userType'">
           <label>
-            <input type="checkbox" ng-model="faceted.table.search.userType[item.userType]"> {{item.userType}} (<span>{{item.userType | count:'userType':faceted.table.data}}</span>)
+            <input type="checkbox" ng-model="faceted.table.search.userType[item.userType]" ng-click="faceted.checked(faceted.table.search.userType[item.userType], item.userType)"> {{item.userType}} (<span>{{item.userType | count:'userType':faceted.table.data}}</span>)
           </label>
         </div>
       </div>
