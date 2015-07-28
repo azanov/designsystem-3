@@ -10,6 +10,7 @@
     _this.groups = ['Hartford', 'Noida', 'Pune', 'San Diego', 'Stamford', 'Austin', 'Dallas', 'Chatham'];
 
     _this.facetList = [];
+
     _this.checked = function(value, item) {
       $log.debug(value, item);
       if (value) {
@@ -19,6 +20,23 @@
         var index = _this.facetList.indexOf(item);
         _this.facetList.splice(index, 1);
       }
+    };
+
+    _this.clear = function() {
+      _this.facetList = [];
+
+      angular.forEach(_this.table.search, function(value, key, obj) {
+        $log.debug(value, key, obj);
+
+        var parent = value;
+
+        angular.forEach(parent, function(value, key, obj) {
+          parent[key] = false;
+          $log.debug(value, key, obj);
+        });
+
+      });
+
     };
 
     _this.table = {
