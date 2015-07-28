@@ -9,6 +9,17 @@
 
     _this.groups = ['Hartford', 'Noida', 'Pune', 'San Diego', 'Stamford', 'Austin', 'Dallas', 'Chatham'];
 
+    _this.facetList = [];
+    _this.checked = function(value, item) {
+      $log.debug(value, item);
+      if (value) {
+        _this.facetList.push(item);
+      }
+      else {
+        var index = _this.facetList.indexOf(item);
+        _this.facetList.splice(index, 1);
+      }
+    };
 
     _this.table = {
       data: PeopleResolve,

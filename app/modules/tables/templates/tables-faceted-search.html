@@ -25,7 +25,7 @@
       <div collapse="!faceted.show" class="collapse" style="height: auto;">
         <div class="checkbox" ng-repeat="item in faceted.table.data | unique: 'country' | orderBy: 'country'">
           <label>
-            <input type="checkbox" ng-model="faceted.table.search.country[item.country]"> {{item.country}} (<span>{{item.country | count:'country':faceted.table.data}}</span>)
+            <input type="checkbox" ng-model="faceted.table.search.country[item.country]" ng-click="faceted.checked(faceted.table.search.country[item.country], item.country)"> {{item.country}} (<span>{{item.country | count:'country':faceted.table.data}}</span>)
           </label>
         </div>
       </div>
@@ -52,6 +52,7 @@
       </div>
 
       <pre>{{faceted.table.search | json}}</pre>
+      <pre>{{faceted.facetList | json}}</pre>
 
     </div>
 
