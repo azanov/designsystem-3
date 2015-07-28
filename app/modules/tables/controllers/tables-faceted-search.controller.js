@@ -49,21 +49,29 @@
         _this.table.search.$ = '';
       },
       filter: function(item) {
-        //$log.debug(item);
+        var result = false;
 
-        var results = true;
+        var countries = [];
 
-        //country
         angular.forEach(_this.table.search.country, function(value, key, obj) {
-
-          if (value && item.country !== key) {
-            //$log.debug(item.country, value, key);
-            results = false;
+          if (value) {
+            countries.push(key);
           }
-
         });
 
-        return results;
+        //country
+        if (countries.length > 0) {
+          angular.forEach(countries, function(value, index, obj) {
+            if (item.country === value) {
+              result = true;
+            }
+          });
+        }
+        else {
+          result = true;
+        }
+
+        return result;
 
       }
     };
@@ -74,8 +82,6 @@
 
   angular.module('pb.ds.tables').filter('count', function($log) {
     return function(input, key, obj) {
-
-      //$log.debug(input, key, obj);
 
       var count = 0;
 
@@ -91,48 +97,17 @@
 
   angular.module('pb.ds.tables').filter('faceted', function($log) {
     return function(input, search) {
-
-      $log.debug(search);
-
-      if (search === {}) {
-        console.log('empty');
-      }
+      //$log.debug(input, search);
 
       var output = [];
 
-      angular.forEach(input, function(item) {
-
-        if (search === {}) {
-          console.log('empty');
+      angular.forEach(input, function(value, key, obj) {
+        if (this.country && this.country[value.country] === true) {
+          output.push(value);
         }
+      }, search);
 
-      });
-
-      //$log.debug(input, search);
-      // var search = {
-      //   country: {
-      //     'Australia': true,
-      //     'France': true
-      //   },
-      //   groups: {
-      //     'Admin': true
-      //   }
-      // }
-
-
-      // angular.forEach(search, function (value, key, obj) {
-      //   $log.debug(value, key, obj);
-      //
-      //   if (value) {
-      //
-      //     angular.forEach(value, function(value, key, obj) {
-      //       $log.debug("SUB", value, key, obj);
-      //
-      //     });
-      //
-      //   }
-      //
-      // });
+      return output;
 
     };
   });
