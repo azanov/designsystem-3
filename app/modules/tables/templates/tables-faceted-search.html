@@ -30,6 +30,27 @@
         </div>
       </div>
 
+
+      <div>Groups <a class="pull-right" href="" ng-click="facetedGroups.show = !facetedGroups.show"><i class="fa fa-lg fa-angle-right fa-transition" ng-class="{'fa-rotate-90': facetedGroups.show === true}"></i></a></div>
+
+      <div collapse="!facetedGroups.show" class="collapse" style="height: auto;">
+        <div class="checkbox" ng-repeat="item in faceted.groups">
+          <label>
+            <input type="checkbox" ng-model="faceted.table.search.group[item]"> {{item}} (<span>{{item | count:'groups':faceted.table.data}}</span>)
+          </label>
+        </div>
+      </div>
+
+      <div>User type <a class="pull-right" href="" ng-click="facetedType.show = !facetedType.show"><i class="fa fa-lg fa-angle-right fa-transition" ng-class="{'fa-rotate-90': facetedType.show === true}"></i></a></div>
+
+      <div collapse="!facetedType.show" class="collapse" style="height: auto;">
+        <div class="checkbox" ng-repeat="item in faceted.table.data | unique: 'userType' | orderBy: 'userType'">
+          <label>
+            <input type="checkbox" ng-model="faceted.table.search.userType[item.userType]"> {{item.userType}} (<span>{{item.userType | count:'userType':faceted.table.data}}</span>)
+          </label>
+        </div>
+      </div>
+
       <pre>{{faceted.table.search | json}}</pre>
 
     </div>

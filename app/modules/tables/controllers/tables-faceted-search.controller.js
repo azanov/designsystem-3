@@ -7,6 +7,8 @@
 
     var _this = this;
 
+    _this.groups = ['Hartford', 'Noida', 'Pune', 'San Diego', 'Stamford', 'Austin', 'Dallas', 'Chatham'];
+
 
     _this.table = {
       data: PeopleResolve,
@@ -49,8 +51,9 @@
         _this.table.search.$ = '';
       },
       filter: function(item) {
-        var result = false;
+        var result = true;
 
+        //store the selected countries
         var countries = [];
 
         angular.forEach(_this.table.search.country, function(value, key, obj) {
@@ -59,16 +62,51 @@
           }
         });
 
-        //country
+        //loop through each selected country
         if (countries.length > 0) {
           angular.forEach(countries, function(value, index, obj) {
-            if (item.country === value) {
-              result = true;
+            if (item.country !== value) {
+              result = false;
             }
           });
         }
-        else {
-          result = true;
+
+
+        //store the selected groups
+        var groups = [];
+
+        angular.forEach(_this.table.search.group, function(value, key, obj) {
+          if (value) {
+            groups.push(key);
+          }
+        });
+
+        //loop through each selected
+        if (groups.length > 0) {
+          angular.forEach(groups, function(value, index, obj) {
+            if (item.groups.indexOf(value) === -1) {
+              result = false;
+            }
+          });
+        }
+
+
+        //store the selected userTypes
+        var userTypes = [];
+
+        angular.forEach(_this.table.search.userType, function(value, key, obj) {
+          if (value) {
+            userTypes.push(key);
+          }
+        });
+
+        //loop through each selected
+        if (userTypes.length > 0) {
+          angular.forEach(userTypes, function(value, index, obj) {
+            if (item.userType.indexOf(value) === -1) {
+              result = false;
+            }
+          });
         }
 
         return result;
