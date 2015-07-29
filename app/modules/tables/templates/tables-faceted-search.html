@@ -34,9 +34,9 @@
       <div><a style="display: block;" href="" ng-click="facetedGroups.show = !facetedGroups.show">Groups <i class="fa fa-lg fa-angle-right fa-transition pull-right" ng-class="{'fa-rotate-90': !facetedGroups.show}"></i></a></div>
 
       <div collapse="facetedGroups.show" class="collapse" style="height: auto;">
-        <div class="checkbox" ng-repeat="item in faceted.groups">
+        <div class="checkbox" ng-repeat="item in faceted.groups | orderBy: 'toString()'">
           <label>
-            <input type="checkbox" ng-model="faceted.table.search.group[item]" ng-click="faceted.checked(faceted.table.search.group[item], item)"> {{item}} (<span>{{item | countGroups:'groups':faceted.table.data}}</span>)
+            <input type="checkbox" ng-model="faceted.table.search.group[item]" ng-click="faceted.checked(faceted.table.search.group[item], item)"> {{item}} (<span>{{item | countGroups:'groups':faceted.table.dataFiltered}}</span>)
           </label>
         </div>
       </div>
@@ -46,7 +46,7 @@
       <div collapse="!facetedType.show" class="collapse" style="height: auto;">
         <div class="checkbox" ng-repeat="item in faceted.table.data | unique: 'userType' | orderBy: 'userType'">
           <label>
-            <input type="checkbox" ng-model="faceted.table.search.userType[item.userType]" ng-click="faceted.checked(faceted.table.search.userType[item.userType], item.userType)"> {{item.userType}} (<span>{{item.userType | count:'userType':faceted.table.data}}</span>)
+            <input type="checkbox" ng-model="faceted.table.search.userType[item.userType]" ng-click="faceted.checked(faceted.table.search.userType[item.userType], item.userType)"> {{item.userType}} (<span>{{item.userType | count:'userType':faceted.table.dataFiltered}}</span>)
           </label>
         </div>
       </div>
@@ -121,7 +121,7 @@
                 <td colspan="9" class="text-center">There are no results.</td>
               </tr>
               <tr ng-click="faceted.table.selectRow(item, $event)"
-                  dir-paginate="item in faceted.table.dataFiltered = (faceted.table.data | orderBy:faceted.table.sort.type:faceted.table.sort.reverse | filter: faceted.table.filter | filter: faceted.table.searchtext | itemsPerPage: faceted.table.paging.size )"
+                  dir-paginate="item in faceted.table.dataFiltered = (faceted.table.data | orderBy:faceted.table.sort.type:faceted.table.sort.reverse | filter: faceted.table.filter | filter: faceted.table.searchtext) | itemsPerPage: faceted.table.paging.size "
                   ng-class="{'table-row-selected': item.selected}">
 
                 <td>{{::item.first_name}}</td>

@@ -7,18 +7,13 @@
 
     var _this = this;
 
-    _this.groups = ['Hartford', 'Noida', 'Pune', 'San Diego', 'Stamford', 'Austin', 'Dallas', 'Chatham'];
-
-    _this.countries = [];
+    _this.groups = ['Root', 'Contributors', 'Danbury', 'Shelton', 'Stamford', 'Troy', 'Noida', 'Pune', 'Austin', 'Lanham', 'Boulder', 'Watford', 'Paris', 'Sydney', 'Dallas', 'San Diego', 'Toronto', 'Chatham', 'Kyiv', 'Hartford'];
 
     _this.facetList = [];
 
-    _this.selected = function(item) {
-      $log.debug(item);
-    };
+    _this.totalFiltered = [];
 
     _this.checked = function(value, item) {
-      $log.debug(value, item);
       if (value) {
         _this.facetList.push(item);
       }
@@ -32,16 +27,12 @@
       _this.facetList = [];
 
       angular.forEach(_this.table.search, function(value, key, obj) {
-        $log.debug(value, key, obj);
-
         var parent = value;
 
         angular.forEach(parent, function(value, key, obj) {
           if (parent[key]) {
             parent[key] = false;
           }
-
-          $log.debug(value, key, obj);
         });
 
         _this.table.search.country = '';
@@ -55,9 +46,6 @@
 
       if (selected) {
         _this.facetList.push(_this.table.search.country);
-      }
-      else {
-
       }
 
     };
@@ -148,23 +136,6 @@
       filter: function(item) {
         var result = true;
 
-        // //store the selected countries
-        // var countries = [];
-        //
-        // angular.forEach(_this.table.search.country, function(value, key, obj) {
-        //   if (value) {
-        //     countries.push(key);
-        //   }
-        // });
-        //
-        // //loop through each selected country
-        // if (countries.length > 0) {
-        //   angular.forEach(countries, function(value, index, obj) {
-        //     if (item.country !== value) {
-        //       result = false;
-        //     }
-        //   });
-        // }
 
         if (_this.table.search.country && _this.table.search.country !== '') {
           if (item.country !== _this.table.search.country) {
@@ -203,8 +174,9 @@
 
         //loop through each selected
         if (userTypes.length > 0) {
+
           angular.forEach(userTypes, function(value, index, obj) {
-            if (item.userType.indexOf(value) === -1) {
+            if (item.userType !== value) {
               result = false;
             }
           });
@@ -263,22 +235,5 @@
       return count;
     };
   });
-
-  // angular.module('pb.ds.tables').filter('faceted', function($log) {
-  //   return function(input, search) {
-  //     //$log.debug(input, search);
-  //
-  //     var output = [];
-  //
-  //     angular.forEach(input, function(value, key, obj) {
-  //       if (this.country && this.country[value.country] === true) {
-  //         output.push(value);
-  //       }
-  //     }, search);
-  //
-  //     return output;
-  //
-  //   };
-  // });
 
 })();
