@@ -3,7 +3,7 @@
   'use strict';
 
   angular.module('pb.ds.tables').controller('TablesFacetedSearchController',
-  function($log, $filter, PeopleResolve, moment) {
+  function($log, $filter, $scope, PeopleResolve) {
 
     var _this = this;
 
@@ -37,7 +37,10 @@
         var parent = value;
 
         angular.forEach(parent, function(value, key, obj) {
-          parent[key] = false;
+          if (parent[key]) {
+            parent[key] = false;
+          }
+
           $log.debug(value, key, obj);
         });
 
@@ -46,6 +49,50 @@
       });
 
     };
+
+    _this.selectChange = function() {
+      var selected = _this.table.search.country;
+
+      if (selected) {
+        _this.facetList.push(_this.table.search.country);
+      }
+      else {
+
+      }
+
+    };
+
+
+
+
+    _this.clearBadge = function(item, event) {
+      event.stopPropagation();
+      event.preventDefault();
+
+      var itemIndex = _this.facetList.indexOf(item);
+      _this.facetList.splice(itemIndex, 1);
+
+      if (_this.table.search.country === item) {
+        _this.table.search.country = '';
+        return;
+      }
+
+      angular.forEach(_this.table.search, function(value, key, obj) {
+        var parent = value;
+
+        angular.forEach(parent, function(value, key, obj) {
+          if (key === item) {
+            parent[item] = false;
+          }
+        });
+
+      });
+
+
+
+    };
+
+
 
     _this.table = {
       data: PeopleResolve,
@@ -168,6 +215,21 @@
       }
     };
 
+
+
+    $scope.$watch('faceted.table.search.country', function(newVal, oldVal) {
+      $log.debug(newVal, oldVal);
+
+      if (newVal !== oldVal) {
+        var index = _this.facetList.indexOf(oldVal);
+
+        if (index !== -1) {
+          _this.facetList.splice(index, 1);
+        }
+
+      }
+
+    });
 
   });
 
