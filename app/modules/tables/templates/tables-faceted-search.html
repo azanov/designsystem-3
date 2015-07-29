@@ -21,11 +21,6 @@
       <div><a style="display: block;" href="" ng-click="faceted.show = !faceted.show">Countries <i class="fa fa-lg fa-angle-right fa-transition pull-right" ng-class="{'fa-rotate-90': !faceted.show}"></i></a></div>
 
       <div collapse="faceted.show" class="collapse" style="height: auto;">
-        <!-- <div class="checkbox" ng-repeat="item in faceted.table.data | unique: 'country' | orderBy: 'country'">
-          <label>
-            <input type="checkbox" ng-model="faceted.table.search.country[item.country]" ng-click="faceted.checked(faceted.table.search.country[item.country], item.country)"> {{item.country}} (<span>{{item.country | count:'country':faceted.table.data}}</span>)
-          </label>
-        </div> -->
 
         <div class="form-group">
           <select class="form-control input-sm" ng-change="faceted.selectChange()" ng-model="faceted.table.search.country" ng-options="item.country as item.country for item in faceted.table.data | unique: 'country' | orderBy: 'country'">
@@ -41,7 +36,7 @@
       <div collapse="facetedGroups.show" class="collapse" style="height: auto;">
         <div class="checkbox" ng-repeat="item in faceted.groups">
           <label>
-            <input type="checkbox" ng-model="faceted.table.search.group[item]" ng-click="faceted.checked(faceted.table.search.group[item], item)"> {{item}} (<span>{{item | count:'groups':faceted.table.data}}</span>)
+            <input type="checkbox" ng-model="faceted.table.search.group[item]" ng-click="faceted.checked(faceted.table.search.group[item], item)"> {{item}} (<span>{{item | countGroups:'groups':faceted.table.data}}</span>)
           </label>
         </div>
       </div>
@@ -55,9 +50,6 @@
           </label>
         </div>
       </div>
-
-      <pre>{{faceted.table.search | json}}</pre>
-      <pre>{{faceted.facetList | json}}</pre>
 
     </div>
 

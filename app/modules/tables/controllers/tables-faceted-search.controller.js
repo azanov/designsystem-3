@@ -249,21 +249,36 @@
     };
   });
 
-  angular.module('pb.ds.tables').filter('faceted', function($log) {
-    return function(input, search) {
-      //$log.debug(input, search);
+  angular.module('pb.ds.tables').filter('countGroups', function($log) {
+    return function(input, key, obj) {
 
-      var output = [];
+      var count = 0;
 
-      angular.forEach(input, function(value, key, obj) {
-        if (this.country && this.country[value.country] === true) {
-          output.push(value);
+      angular.forEach(obj, function(value, index, obj) {
+        if (value[key].indexOf(input) !== -1) {
+          count++;
         }
-      }, search);
+      });
 
-      return output;
-
+      return count;
     };
   });
+
+  // angular.module('pb.ds.tables').filter('faceted', function($log) {
+  //   return function(input, search) {
+  //     //$log.debug(input, search);
+  //
+  //     var output = [];
+  //
+  //     angular.forEach(input, function(value, key, obj) {
+  //       if (this.country && this.country[value.country] === true) {
+  //         output.push(value);
+  //       }
+  //     }, search);
+  //
+  //     return output;
+  //
+  //   };
+  // });
 
 })();
