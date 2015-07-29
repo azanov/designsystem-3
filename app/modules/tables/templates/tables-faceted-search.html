@@ -72,16 +72,19 @@
 
             <div class="form-group dropdown">
               <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-fw fa-filter"></i> {{faceted.table.search.country || 'All countries'}} <i class="fa fa-angle-down"></i>
+                <i class="fa fa-fw fa-filter"></i> {{faceted.table.sort.selected}} <i class="fa fa-angle-down"></i>
               </button>
               <ul class="dropdown-menu" role="menu">
-                <li class="dropdown-header">Country filter</li>
-                <li>
-                  <a ng-click="faceted.table.search.country = ''">Show all</a>
+                <li ng-repeat="item in faceted.table.sort.data">
+                  <a href="" ng-click="faceted.table.sort.change(item)">
+                    <i class="fa fa-fw" ng-class="{'fa-check': faceted.table.sort.type === item.value}"></i> {{item.label}}
+                  </a>
                 </li>
                 <li class="divider"></li>
-                <li ng-repeat="item in faceted.table.data | unique: 'country' | orderBy:'country'">
-                  <a ng-click="faceted.table.search.country = item.country">{{item.country}}</a>
+                <li>
+                  <a href="" ng-model="faceted.table.sort.reverse" ng-click="faceted.table.sort.reverse = !faceted.table.sort.reverse">
+                    <i class="fa fa-fw" ng-class="{'fa-check':faceted.table.sort.reverse}"></i> Reverse
+                  </a>
                 </li>
               </ul>
             </div>

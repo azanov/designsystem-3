@@ -51,11 +51,22 @@
     _this.table = {
       data: PeopleResolve,
       sort: {
+        data: [
+          {
+            label: 'First name',
+            value: 'first_name'
+          },
+          {
+            label: 'Last name',
+            value: 'last_name'
+          }
+        ],
+        selected: 'First name',
         type: 'first_name',
         reverse: false,
-        change: function(key) {
-          _this.table.sort.type = key;
-          _this.table.sort.reverse = !_this.table.sort.reverse;
+        change: function(item) {
+          _this.table.sort.type = item.value;
+          _this.table.sort.selected = item.label;
         }
       },
       paging: {
