@@ -11,12 +11,11 @@
 
     _this.countries = [];
 
-    // PeopleResolve.$promise.then(function(response) {
-    //   $log.debug(response);
-    //   $filter.filter('unique')('country')
-    // });
-
     _this.facetList = [];
+
+    _this.selected = function(item) {
+      $log.debug(item);
+    };
 
     _this.checked = function(value, item) {
       $log.debug(value, item);
@@ -97,7 +96,7 @@
 
       },
       searchClear: function() {
-        _this.table.search.$ = '';
+        _this.table.searchtext.$ = '';
       },
       filter: function(item) {
         var result = true;

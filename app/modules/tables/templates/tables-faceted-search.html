@@ -96,7 +96,7 @@
                   <i class="fa fa-fw fa-search"></i>
               </div>
 
-                <input class="form-control search" type="text" placeholder="Search" ng-model="faceted.table.search.$" ng-model-options="{debounce: 300}" required>
+                <input class="form-control search" type="text" placeholder="Search" ng-model="faceted.table.searchtext.$" ng-model-options="{debounce: 300}" required>
                 <button class="btn btn-link search-clear" type="reset" ng-click="faceted.table.searchClear()"><i class="fa fa-fw fa-times-circle"></i></button>
             </div>
 
@@ -129,7 +129,7 @@
                 <td colspan="9" class="text-center">There are no results.</td>
               </tr>
               <tr ng-click="faceted.table.selectRow(item, $event)"
-                  dir-paginate="item in faceted.table.dataFiltered = (faceted.table.data | orderBy:faceted.table.sort.type:faceted.table.sort.reverse | filter: faceted.table.filter | itemsPerPage: faceted.table.paging.size )"
+                  dir-paginate="item in faceted.table.dataFiltered = (faceted.table.data | orderBy:faceted.table.sort.type:faceted.table.sort.reverse | filter: faceted.table.filter | filter: faceted.table.searchtext | itemsPerPage: faceted.table.paging.size )"
                   ng-class="{'table-row-selected': item.selected}">
 
                 <td>{{::item.first_name}}</td>
