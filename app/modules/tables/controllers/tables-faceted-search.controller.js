@@ -3,11 +3,18 @@
   'use strict';
 
   angular.module('pb.ds.tables').controller('TablesFacetedSearchController',
-  function($log, PeopleResolve, moment) {
+  function($log, $filter, PeopleResolve, moment) {
 
     var _this = this;
 
     _this.groups = ['Hartford', 'Noida', 'Pune', 'San Diego', 'Stamford', 'Austin', 'Dallas', 'Chatham'];
+
+    _this.countries = [];
+
+    // PeopleResolve.$promise.then(function(response) {
+    //   $log.debug(response);
+    //   $filter.filter('unique')('country')
+    // });
 
     _this.facetList = [];
 
@@ -34,6 +41,8 @@
           parent[key] = false;
           $log.debug(value, key, obj);
         });
+
+        _this.table.search.country = '';
 
       });
 
@@ -82,22 +91,28 @@
       filter: function(item) {
         var result = true;
 
-        //store the selected countries
-        var countries = [];
+        // //store the selected countries
+        // var countries = [];
+        //
+        // angular.forEach(_this.table.search.country, function(value, key, obj) {
+        //   if (value) {
+        //     countries.push(key);
+        //   }
+        // });
+        //
+        // //loop through each selected country
+        // if (countries.length > 0) {
+        //   angular.forEach(countries, function(value, index, obj) {
+        //     if (item.country !== value) {
+        //       result = false;
+        //     }
+        //   });
+        // }
 
-        angular.forEach(_this.table.search.country, function(value, key, obj) {
-          if (value) {
-            countries.push(key);
+        if (_this.table.search.country && _this.table.search.country !== '') {
+          if (item.country !== _this.table.search.country) {
+            result = false;
           }
-        });
-
-        //loop through each selected country
-        if (countries.length > 0) {
-          angular.forEach(countries, function(value, index, obj) {
-            if (item.country !== value) {
-              result = false;
-            }
-          });
         }
 
 

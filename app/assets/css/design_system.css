@@ -356,7 +356,7 @@ body .navbar > .container-fluid { padding: 0 40px; }
 
 .panel { box-shadow: none; }
 .panel.panel-default { border-color: #c0c0c0; }
-.panel.panel-default .panel-heading { background-color: #f3f5fa; border-bottom-color: #c0c0c0; }
+.panel.panel-default .panel-heading { background-color: #f3f4f9; border-bottom-color: #c0c0c0; }
 
 .panel-title { font-weight: 700; }
 
