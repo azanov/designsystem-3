@@ -26,7 +26,7 @@
           </li>
 
           <li class="list-group-item">
-            <div><a style="display: block;" href="" ng-click="faceted.show = !faceted.show">Countries <i class="fa fa-lg fa-angle-right fa-transition pull-right" ng-class="{'fa-rotate-90': !faceted.show}"></i></a></div>
+            <div><a style="display: block;" href="" ng-click="faceted.show = !faceted.show">Countries <i class="fa fa-lg fa-angle-right transition-all pull-right" ng-class="{'fa-rotate-90': !faceted.show}"></i></a></div>
 
             <div collapse="faceted.show" class="collapse" style="height: auto;">
 
@@ -40,7 +40,7 @@
           </li>
 
           <li class="list-group-item">
-            <div><a style="display: block;" href="" ng-click="facetedGroups.show = !facetedGroups.show">Groups <i class="fa fa-lg fa-angle-right fa-transition pull-right" ng-class="{'fa-rotate-90': !facetedGroups.show}"></i></a></div>
+            <div><a style="display: block;" href="" ng-click="facetedGroups.show = !facetedGroups.show">Groups <i class="fa fa-lg fa-angle-right transition-all pull-right" ng-class="{'fa-rotate-90': !facetedGroups.show}"></i></a></div>
 
             <div collapse="facetedGroups.show" class="collapse" style="height: auto;">
               <div class="checkbox" ng-repeat="item in faceted.groups | orderBy: 'toString()'">
@@ -52,7 +52,7 @@
           </li>
 
           <li class="list-group-item">
-            <div><a style="display: block;" href="" ng-click="facetedType.show = !facetedType.show">User type <i class="fa fa-lg fa-angle-right fa-transition pull-right" ng-class="{'fa-rotate-90': facetedType.show}"></i></a></div>
+            <div><a style="display: block;" href="" ng-click="facetedType.show = !facetedType.show">User type <i class="fa fa-lg fa-angle-right transition-all pull-right" ng-class="{'fa-rotate-90': facetedType.show}"></i></a></div>
 
             <div collapse="!facetedType.show" class="collapse" style="height: auto;">
               <div class="checkbox" ng-repeat="item in faceted.table.data | unique: 'userType' | orderBy: 'userType'">

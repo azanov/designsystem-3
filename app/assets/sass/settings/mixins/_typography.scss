@@ -242,8 +242,8 @@ ol {
   font-size: 1.5em;
 }
 
-.fa-transition {
-  transition: all .2s ease;
+.transition-all {
+  transition: all .2s ease-in-out;
 }
 
 .nav-tabs > li > a,

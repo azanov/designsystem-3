@@ -86,10 +86,10 @@
 
 
 
-  <!-- FA TRANSITION -->
-  <h4 class="spacer-top-xl">FontAwesome Transition</h4>
+  <!-- TRANSITION ALL -->
+  <h4 class="spacer-top-xl">Transition all</h4>
 
-  <p>Easily add CSS transitions to FontAwesome icons when adding modifier classes, such as <code>.fa-rotate-90</code></p>
+  <p>Easily add CSS transitions by adding <code>.transition-all</code>. When adding modifier classes, such as <code>.fa-rotate-90</code> in Font Awesome to an icon, the element will animate all property changes.</p>
 
   <div class="preview-example">
 
@@ -98,7 +98,7 @@
       <div class="col-md-4">
         <h2>
           <a href="" ng-init="helpers.icon1.rotate = false" ng-click="helpers.icon1.rotate = !helpers.icon1.rotate">
-            <i class="fa fa-fw fa-icon fa-angle-right fa-lg fa-transition" ng-class="{'fa-rotate-90': helpers.icon1.rotate}"></i> Click me and I will rotate
+            <i class="fa fa-fw fa-icon fa-angle-right fa-lg transition-all" ng-class="{'fa-rotate-90': helpers.icon1.rotate}"></i> Click me and I will rotate
           </a>
         </h2>
       </div>
@@ -106,7 +106,7 @@
       <div class="col-md-4">
         <h2>
           <a href="" ng-init="helpers.icon2.rotate = false" ng-click="helpers.icon2.rotate = !helpers.icon2.rotate">
-            <i class="fa fa-fw fa-icon fa-arrow-down fa-lg fa-transition" ng-class="{'fa-rotate-90': helpers.icon2.rotate}"></i> Click me and I will rotate
+            <i class="fa fa-fw fa-icon fa-arrow-down fa-lg transition-all" ng-class="{'fa-rotate-90': helpers.icon2.rotate}"></i> Click me and I will rotate
           </a>
         </h2>
       </div>
@@ -114,7 +114,7 @@
       <div class="col-md-4">
         <h2>
           <a href="" ng-init="helpers.icon3.rotate = false" ng-click="helpers.icon3.rotate = !helpers.icon3.rotate">
-            <i class="fa fa-fw fa-icon fa-bars fa-lg fa-transition" ng-class="{'fa-rotate-90': helpers.icon3.rotate}"></i> Click me and I will rotate
+            <i class="fa fa-fw fa-icon fa-bars fa-lg transition-all" ng-class="{'fa-rotate-90': helpers.icon3.rotate}"></i> Click me and I will rotate
           </a>
         </h2>
       </div>
@@ -126,7 +126,7 @@
 <div class="preview-code" hljs language="xml">
 <div>
   <a href="" ng-click="someClickHandler()">
-    <i class="fa fa-fw fa-icon fa-angle-right fa-transition" ng-class="{'fa-rotate-90': some.model.boolean}"></i> Click me and I will rotate
+    <i class="fa fa-fw fa-icon fa-angle-right transition-all" ng-class="{'fa-rotate-90': some.model.boolean}"></i> Click me and I will rotate
   </a>
 </div>
 </div>
