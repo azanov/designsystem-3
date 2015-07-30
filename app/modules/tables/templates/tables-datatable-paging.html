@@ -112,7 +112,7 @@
             <td colspan="9" class="text-center">There are no results.</td>
           </tr>
           <tr ng-click="datatable.table.selectRow(item, $event)"
-              dir-paginate-start="item in datatable.table.dataFiltered = (datatable.table.data | orderBy:datatable.table.sort.type:datatable.table.sort.reverse | filter: datatable.table.search | daterange:datatable.table.daterangepicker.date.startDate:datatable.table.daterangepicker.date.endDate | itemsPerPage: datatable.table.paging.size )"
+              dir-paginate-start="item in datatable.table.dataFiltered = (datatable.table.data | orderBy:datatable.table.sort.type:datatable.table.sort.reverse | filter: datatable.table.search | daterange:datatable.table.daterangepicker.date.startDate:datatable.table.daterangepicker.date.endDate) | itemsPerPage: datatable.table.paging.size"
               ng-class="{'row-open': item.showDetails, 'table-row-selected': item.selected}">
 
             <td><input type="checkbox" ng-model="item.selected" ng-click="datatable.table.selectRow(item, $event)"></td>
