@@ -131,7 +131,7 @@
       DTColumnBuilder.newColumn('email').withTitle('Email').renderWith(function(data, type, full, meta) {
         return '<a href="">' + data + '</a>';
       }),
-      DTColumnBuilder.newColumn('country').withTitle('Country').withClass('nowrap'),
+      DTColumnBuilder.newColumn('country').withTitle('Country').withClass('text-nowrap'),
       DTColumnBuilder.newColumn('date.created').withTitle('Created').withOption('sType', 'date').renderWith(function(data, type, full) {
         return moment(data).format('MM/DD/YYYY');
       }),
@@ -142,7 +142,7 @@
 
         var html = '';
         html += '<div class="dropdown pull-right">';
-        html += '<a href="" class="dropdown-toggle nowrap" data-toggle="dropdown">';
+        html += '<a href="" class="dropdown-toggle text-nowrap" data-toggle="dropdown">';
         html += 'Actions <i class="fa fa-fw fa-angle-down"></i>';
         html += '</a>';
         html += '<ul class="dropdown-menu dropdown-menu-right" role="menu">';

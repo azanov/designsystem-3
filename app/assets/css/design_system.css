@@ -1015,8 +1015,6 @@ th.currency { text-align: center; }
 .status.status-error { color: #c00; }
 .status.status-warning { color: #f0ad4e; }
 
-.nowrap { white-space: nowrap; }
-
 .daterangepicker.dropdown-menu { max-width: none; z-index: 3000; }
 
 .daterangepicker.opensleft .ranges, .daterangepicker.opensleft .calendar { float: left; margin: 4px; }
