@@ -1,0 +1,57 @@
+{
+  "GLOBALIZATION": {
+    "TITLE": "プロファイル",
+    "BUTTONS": {
+      "SAVE": "保存",
+      "CANCEL": "停止",
+      "EDIT": "編集",
+      "DELETE": "削除"
+    },
+    "DROPDOWN": {
+      "SYSTEM": "システム",
+      "LICENSINGEXPIRATION": "ライセンスと有効期限",
+      "VERSION": "バージョン",
+      "SECURITY": "セキュリティ",
+      "LOGS": "ログ",
+      "MAILSERVER": "メール サーバー"
+    },
+    "INPUTS": {
+      "CHECKBOX": {
+        "ONE": "レポートをジョブ履歴に保存",
+        "TWO": "レポートをファイルに保存"
+      },
+      "RADIO": {
+        "ONE": "ジョブの終了につながる形式に誤りのあるレコード数",
+        "TWO": "形式に誤りのあるレコードによってジョブを終了しない"
+      },
+      "TEXT": {
+        "LABEL": "電子メール",
+        "PLACEHOLDER": "電子メールを入力"
+      },
+      "SELECT": {
+        "LABEL": "システムのデフォルト ログ レベル",
+        "OPTION1": "無効",
+        "OPTION2": "致命的",
+        "OPTION3": "エラー",
+        "OPTION4": "警告",
+        "OPTION5": "情報",
+        "OPTION6": "デバッグ",
+        "OPTION7": "トレース"
+      }
+    },
+    "CONTROLLER": {
+      "TITLE": "Controller example with $translate service",
+      "EXAMPLE": "これらの設定を使用して、形式に誤りのあるレコードを処理するためのデフォルト動作を設定します. "
+    },
+    "FORMATS": {
+      "NUMBER": "Number formats",
+      "DATE": "Date formats",
+      "TIME": {
+        "TITLE": "Time formats",
+        "TIMESHORT": "Short",
+        "TIMEMEDIUM": "Medium"
+      },
+      "CURRENCY": "Currency formats"
+    }
+  }
+}
