@@ -15,26 +15,10 @@
   color: #c1c1c1;
 }
 
+
 label {
   font-weight: normal;
 }
-
-
-
-
-// .checkboxList {
-//   overflow-y: scroll;
-//   width: 100%;
-//   height: 83px;
-//
-//   label {
-//     margin-bottom: 0;
-//     color: $pb-gray-500;
-//   }
-//   .ms-checkboxitem {
-//     margin-bottom: 2px;
-//   }
-// }
 
 
 .help-block.text-error {
@@ -53,21 +37,16 @@ fieldset {
   }
 }
 
-// checkboxes -------
 
+//****** CHECKBOXES *********************************
 .checkbox-enhanced,
 .checkbox-enhanced-sm {
-
   &.checkbox-inline {
     padding-left: 0;
   }
-
-
   label {
     padding-left: 0;
   }
-
-
   input[type="checkbox"] {
     display: none;
     + label::before {
@@ -77,34 +56,36 @@ fieldset {
       display: inline-block;
     }
   }
-
   input[type="checkbox"]:checked + label::before {
     content: url("../images/check-box-active.png");
     margin-right: 8px;
     vertical-align: middle;
     display: inline-block;
   }
-
   &.disabled {
     input[type="checkbox"] + label::before {
-      opacity: .5;
+      opacity: 0.5;
     }
   }
 }
 
+
 .checkbox-enhanced-sm {
-  label { font-size: 13px; }
-  input[type="checkbox"]+ label::before {
+  label {
+    font-size: 13px;
+  }
+
+input[type="checkbox"]+ label::before {
     content: url("../images/check-box-inactive@0.75x.png");
   }
-  input[type="checkbox"]:checked + label::before {
+
+input[type="checkbox"]:checked + label::before {
     content: url("../images/check-box-active@0.75x.png");
   }
 }
 
 
-// radios -------
-
+//**** RADIOS ****************************
 .radio-enhanced,
 .radio-enhanced-sm {
 
@@ -112,11 +93,9 @@ fieldset {
     padding-left: 0;
   }
 
-
   label {
     padding-left: 0;
   }
-
 
   input[type="radio"] {
     display: none;
@@ -128,10 +107,7 @@ fieldset {
       width: 26px;
       height: 26px;
     }
-
   }
-
-
   input[type="radio"]:checked + label::before {
     content: url("../images/radio-on.png");
     margin-right: 8px;
@@ -140,18 +116,12 @@ fieldset {
     width: 26px;
     height: 26px;
   }
-
   &.disabled {
     input[type="radio"] + label::before {
-      opacity: .5;
+      opacity: 0.5;
     }
   }
-
 }
-
-
-
-
 .radio-enhanced-sm {
   input[type="radio"]+ label::before {
     content: url("../images/radio-off@0.75x.png");
@@ -164,8 +134,7 @@ fieldset {
 }
 
 
-
-
+// extend this in fields where you want the 2.0 focus treatment
 %fancy-focus {
   border-color: $pb-blue;
   border-width: 1px;
@@ -195,13 +164,12 @@ fieldset {
     outline: none;
   }
 
-
   &::-moz-focus-inner {
     border: 0;
   }
 
 
-  // Customize the `:focus` state to imitate native WebKit styles.
+  // Customize the `:focus` state to use the FA "fancy focus" defined above.
   //@include form-control-focus;
   &:focus,
   &.focus {
@@ -231,43 +199,44 @@ fieldset {
   }
 }
 
+//****  INPUT GROUPS ***************************
+.input-group-addon {
+  background-color: transparent;
+  border-color: $input-border;
+}
+
+
 
 select {
+
   // scss-lint:disable ImportantRule
   background: #fff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAAAXNSR0IArs4c6QAAAORJREFUOBFjYBgFwyAEGJubm90YGRnZifDLpZqamofo6liYmJgcgAZUokug8T/++vVLDU0MzGV6//596////59ik4SJ/fv3rwEIXsH4yDRTT0/PV6ABpciCyGyg3LU/f/5MQRZDZjPCOK2trYeAXrGF8WE00ACX6urqvTA+Os0EE/j7928ukP0XxgfRQM1r8WkGqYEbUFdXdxGoYSZIEAq+A/nFMA4uGm4ASMHv379rgdRbqOIObNEGlYNTKAYAQ/odMMRrgLIPgNHWBVeFh8GCLgcM8VksLCzngIb9QJcb5dMoBABjyVkxAsbTcgAAAABJRU5ErkJggg==") right center no-repeat !important;
-  &[multiple], &[size] {
+  &[multiple],
+  &[size] {
     background-image: none !important;
   }
 }
 
 
-
-.input-sm, select.input-sm {
+.input-sm,
+select.input-sm {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
 }
 
-.input-lg, select.input-lg {
+
+.input-lg,
+select.input-lg {
   line-height: 1.42857;
 }
-
-
-
-
-
-
-
-
-
 
 
 .widget-header {
   h3 {
     font-family: $font-family-sans-serif;
   }
-
 }
 
 
@@ -275,7 +244,6 @@ select {
   .form-control {
     border-color: $brand-danger;
   }
-
 }
 
 
@@ -291,10 +259,7 @@ fieldset[disabled] .form-control.timepicker {
 }
 
 
-.input-group-addon {
-  background-color: transparent;
-  border-color: $input-border;
-}
+
 
 
 .repeated-field {
@@ -303,6 +268,7 @@ fieldset[disabled] .form-control.timepicker {
     margin-bottom: 3px;
   }
 }
+
 .add-another-link {
   font-size: 12px;
   text-decoration: underline;
@@ -345,17 +311,15 @@ fieldset[disabled] .form-control.timepicker {
       border: 1px solid $input-border;
       box-shadow: none;
     }
-
   }
-
 }
+
 
 // declare actual buttons here
 // include logo name and see above for naming structure
 .logo-button-usps {
   @include logo-button('usps');
 }
-
 
 
 @mixin arrow-inside($color: #fff, $left: 65px) {
@@ -367,9 +331,9 @@ fieldset[disabled] .form-control.timepicker {
     border-width: 12px 12px 0;
     border-style: solid;
     border-color: $color transparent;
-
   }
 }
+
 
 @mixin arrow-outside($color: $pb-blue, $left: 65px) {
   &:before {
@@ -380,10 +344,8 @@ fieldset[disabled] .form-control.timepicker {
     border-width: 15px 15px 0;
     border-style: solid;
     border-color: $color transparent;
-
   }
 }
-
 
 
 // for the item buttons
@@ -399,8 +361,6 @@ fieldset[disabled] .form-control.timepicker {
   height: 120px;
   transition: all ease-in-out 0.1s, box-shadow ease-in-out 0.1s;
 
-
-
   .title {
     color: $pb-blue;
     font-size: 12px;
@@ -409,14 +369,16 @@ fieldset[disabled] .form-control.timepicker {
     font-family: $font-family-ps-medium;
   }
 
-.divider {
+
+  .divider {
     height: 1px;
     width: 20px;
     background-color: $input-border;
     margin: 4px auto 10px;
   }
 
-.image {
+
+  .image {
     background: #fff url("../images/box.png") center center no-repeat;
     width: 64px;
     height: 57px;
@@ -430,7 +392,6 @@ fieldset[disabled] .form-control.timepicker {
     @extend %fancy-focus;
     @include arrow-inside;
     @include arrow-outside;
-
   }
 
 
@@ -444,18 +405,22 @@ fieldset[disabled] .form-control.timepicker {
     .title {
       color: #fff;
     }
-    .divider {
+
+.divider {
       background-color: #fff;
     }
-    .image {
+
+.image {
       background-color: $pb-blue;
     }
-    &:hover {
+
+&:hover {
       padding: 15px;
       box-shadow: none;
       @include arrow-inside($pb-blue);
     }
   }
+
 
   &.disabled {
     pointer-events: none;
@@ -464,9 +429,12 @@ fieldset[disabled] .form-control.timepicker {
     .title {
       color: #c3c3c3;
     }
-    .image {
+
+.image {
       background-image: url("../images/box-disabled.png");
     }
+
+
     // @include hidpi(1.5) {
     //   background-image: url('../images/logo-usps-disabled@2x.png');
     // }
