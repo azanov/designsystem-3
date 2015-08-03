@@ -2,35 +2,34 @@
 /*jshint node:true */
 
 var gulp = require('gulp'),
-  autoprefixer = require('autoprefixer-core'),
-  browsersync = require('browser-sync'),
-  cache = require('gulp-cache'),
-  concat = require('gulp-concat'),
-  connect = require('gulp-connect'),
-  del = require('del'),
-  filter = require('gulp-filter'),
-  ftp = require('vinyl-ftp'),
-  gutil = require('gulp-util'),
-  header = require('gulp-header'),
-  imagemin = require('gulp-imagemin'),
-  jshint = require('gulp-jshint'),
+  usemin = require('gulp-usemin'),
+  sass = require('gulp-ruby-sass'),
+  autoprefixer = require('gulp-autoprefixer'),
   minifyCss = require('gulp-minify-css'),
   minifyHtml = require('gulp-minify-html'),
-  ngAnnotate = require('gulp-ng-annotate'),
+  jshint = require('gulp-jshint'),
+  uglify = require('gulp-uglify'),
+  imagemin = require('gulp-imagemin'),
+  rename = require('gulp-rename'),
+  concat = require('gulp-concat'),
   notify = require('gulp-notify'),
+  cache = require('gulp-cache'),
+  connect = require('gulp-connect'),
+  browsersync = require('browser-sync'),
+  reload = browsersync.reload,
+  rev = require('gulp-rev'),
+  sourcemaps = require('gulp-sourcemaps'),
+  filter = require('gulp-filter'),
   plumber = require('gulp-plumber'),
-  postcss = require('gulp-postcss'),
+  del = require('del'),
+  gutil = require('gulp-util'),
   printfiles = require('gulp-print'),
   prompt = require('gulp-prompt'),
-  reload = browsersync.reload,
-  rename = require('gulp-rename'),
-  replace = require('gulp-replace'),
-  rev = require('gulp-rev'),
+  ftp = require('vinyl-ftp'),
   runSequence = require('run-sequence'),
-  sass = require('gulp-ruby-sass'),
-  sourcemaps = require('gulp-sourcemaps'),
-  uglify = require('gulp-uglify'),
-  usemin = require('gulp-usemin');
+  header = require('gulp-header'),
+  replace = require('gulp-replace'),
+  ngAnnotate = require('gulp-ng-annotate');
 
 var today = new Date();
 var pkg = require('./package.json');
@@ -48,37 +47,26 @@ gulp.task('clean:dist', function(cb) {
   return del(['./build'], cb);
 });
 
-
-// first process the sass files into one css file
+//styles
 gulp.task('sass', function() {
-  return sass('./app/assets/sass')
-    .on('error', function(err) {
-      console.error('Error!', err.message);
+  sass('app/assets/sass/', {
+      sourcemap: true,
+      style: 'compact'
     })
-    .pipe(gulp.dest('./app/assets/css'))
+    .pipe(plumber())
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions']
+    }))
+    .pipe(sourcemaps.write('maps', {
+      includeContent: false,
+      sourceRoot: '/source'
+    }))
+    .pipe(gulp.dest('app/assets/css'))
+    .pipe(filter('**/*.css'))
     .pipe(reload({
       stream: true
     }));
 });
-
-// now take that one css file, autoprefix, create maps, and overwrite
-gulp.task('autoprefixer', function() {
-  return gulp.src('./app/assets/css/*.css')
-    .pipe(sourcemaps.init())
-    .pipe(postcss([autoprefixer({
-      browsers: ['last 2 versions']
-    })]))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./app/assets/css'));
-});
-
-gulp.task('styles', function() {
-  runSequence('sass', 'autoprefixer');
-});
-
-
-
-
 
 gulp.task('sass-nomaps', function() {
   return sass('app/assets/sass/', {
@@ -199,7 +187,7 @@ gulp.task('browser-sync', function() {
 });
 
 // run this to open project in browser and watch for changes in CSS
-gulp.task('default', ['styles', 'browser-sync', 'watch']);
+gulp.task('default', ['sass', 'browser-sync', 'watch']);
 
 // run from the build folder
 gulp.task('serve-build', [], function() {
@@ -210,9 +198,12 @@ gulp.task('serve-build', [], function() {
   });
 });
 
+// gulp.task('build', ['clean'],function() {
+//  gulp.run(['sass-nomaps','usemin','scripts','assets']);
+// });
 
 //build
-gulp.task('build', ['clean:dist', 'styles'], function() {
+gulp.task('build', ['clean:dist', 'sass-nomaps'], function() {
   runSequence(
     'usemin',
     'copy:modules',
@@ -231,7 +222,7 @@ gulp.task('watch', function() {
 
   // Watch .scss files
   gulp.watch(
-    ['app/assets/sass/**/*.scss', 'app/modules/**/*.scss'], ['styles']);
+    ['app/assets/sass/**/*.scss', 'app/modules/**/*.scss'], ['sass']);
 
   gulp.watch(
     [
@@ -247,8 +238,6 @@ gulp.task('watch', function() {
 
 });
 
-
-// ------------------------------------------------------------
 // FTP tasks
 // to upload, run "gulp deploy"
 
