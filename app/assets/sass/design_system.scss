@@ -17,33 +17,32 @@
 
 // Components
 // ========================================
-@import 'components/list-group';
-@import 'components/accordion';
-@import 'components/breadcrumbs';
-@import 'components/footer';
-@import 'components/header';
-@import 'components/left-nav';
-@import 'components/media-object';
-@import 'components/panels';
-@import 'components/tabs';
-@import 'components/tree-menu';
-@import 'components/toastrs';
-
+@import 'elements/accordion';
 @import 'elements/badges';
+@import 'elements/breadcrumbs';
 @import 'elements/buttons';
 @import 'elements/date-picker';
+@import 'elements/footer';
 @import 'elements/form-icons';
 @import 'elements/forms';
+@import 'elements/header';
+@import 'elements/left-nav';
+@import 'elements/list-group';
+@import 'elements/media-object';
 @import 'elements/ngrs-range-slider';
 @import 'elements/notifications';
 @import 'elements/onoff';
+@import 'elements/panels';
 @import 'elements/popover';
+@import 'elements/progress-bar';
 @import 'elements/selectize';
 @import 'elements/stepper';
 @import 'elements/switches';
+@import 'elements/tabs';
+@import 'elements/toastrs';
 @import 'elements/toggle-switch';
+@import 'elements/tree-menu';
 @import 'elements/wizard';
-@import 'elements/progress-bar';
 // @import 'button-groups';
 
 
