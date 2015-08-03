@@ -6,7 +6,6 @@
 @import 'settings/mixins/mixins';
 // @import 'settings/mixins/colors';
 @import 'settings/mixins/typography';
-@import 'styleguide';
 
 
 .preview-example {
@@ -45,10 +44,10 @@
 
     pre {
       border-color: #e3e3e3;
-      border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
       margin: 0;
-      padding: 10px 10px;
+      padding: 10px;
 
       code {
         background: transparent;
@@ -114,8 +113,10 @@ blockquote.small {
   }
 }
 
-.hero {
 
+
+.hero {
+  // scss-lint:disable SelectorDepth
   .hero-unit {
     margin-top: 50px;
     color: $text-color;
@@ -542,25 +543,41 @@ ul.swatches {
 .small-block-grid-3 > li:nth-of-type(3n+1) {
   clear: both;
 }
-// These are only for the purposes of displaying the chord colors in the SVGs *//
-// * Chord Color Mixin * * @access public * * @requires {List} $colors - Space Deliminated list of Colors * */
 
-@mixin chord-color($colors) {
-  $i: 0;
-
-  @each $color in $colors {
-    $i: $i + 1;
-
-    .color#{$i} {
-      color: $color;
-      fill: $color;
-    }
+// fa's styleguide page, a one-off
+.styleguide {
+  footer {
+    display: none;
+  }
+  section {
+    margin-top: 50px;
   }
 }
+
 
 .chord-display {
   margin-bottom: 20px;
 }
+
+
+
+// These are only for the purposes of displaying the chord colors in the SVGs *//
+// * Chord Color Mixin * * @access public * * @requires {List} $colors - Space Deliminated list of Colors * */
+
+// @mixin chord-color($colors) {
+//   $i: 0;
+//
+//   @each $color in $colors {
+//     $i: $i + 1;
+//
+//     .color#{$i} {
+//       color: $color;
+//       fill: $color;
+//     }
+//   }
+// }
+
+
 // we are no longer using SVGs for chord display, so I have commented this out
 //** * Chord1 */
 // #chord1 {
