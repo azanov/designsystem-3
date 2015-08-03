@@ -1119,6 +1119,7 @@ th.currency { text-align: center; }
 .toolbar .input-group .form-control { padding: 5px 10px; border-left: 0; height: 30px; line-height: 1.5; font-size: 12px; }
 .toolbar .input-group .form-control.search { padding-right: 25px; }
 .toolbar .input-group .form-control.search:not(:valid) ~ .search-clear { opacity: 0; transition: all 0.3s ease-in-out; }
+.toolbar .input-group .form-control.search:focus, .toolbar .input-group .form-control.search.focus { border-left: 1px solid #3e53a4; }
 .toolbar .input-group-addon { padding: 5px 10px; color: #c0c0c0; }
 .toolbar .input-group-btn.open { color: #fff; }
 .toolbar .input-group-btn.open .dropdown-toggle { color: #fff; }

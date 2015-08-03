@@ -55,6 +55,7 @@
         }
         &:focus, &.focus {
           @extend %fancy-focus;
+          border-left: 1px solid $pb-blue;
         }
       }
 
