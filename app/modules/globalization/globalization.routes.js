@@ -17,44 +17,17 @@
 
       .state('globalization.overview', {
         url: '/overview',
-        templateUrl: 'modules/globalization/templates/globalization-overview.html',
-        controller: 'GlobalizationController as globalization'
+        templateUrl: 'modules/globalization/templates/globalization-process-overview.html'
       })
 
-      .state('globalization.pseudo', {
-        url: '/pseudolocalization',
-        templateUrl: 'modules/globalization/templates/globalization-pseudolocalization.html',
-        controller: 'GlobalizationController as globalization'
+      .state('globalization.about', {
+        url: '/about',
+        templateUrl: 'modules/globalization/templates/globalization-about.html'
       })
 
-      .state('globalization.preferences', {
-        url: '/preferences',
-        templateUrl: 'modules/globalization/templates/globalization-preferences.html',
-        controller: 'GlobalizationController as globalization'
-      })
-
-      .state('globalization.strings', {
-        url: '/strings',
-        templateUrl: 'modules/globalization/templates/globalization-strings.html',
-        controller: 'GlobalizationController as globalization'
-      })
-
-      .state('globalization.ui', {
-        url: '/uiconsiderations',
-        templateUrl: 'modules/globalization/templates/globalization-uiconsiderations.html',
-        controller: 'GlobalizationController as globalization'
-      })
-
-      .state('globalization.graphics', {
-        url: '/graphics',
-        templateUrl: 'modules/globalization/templates/globalization-graphics.html',
-        controller: 'GlobalizationController as globalization'
-      })
-
-      .state('globalization.bidirectional', {
-        url: '/bidirectional',
-        templateUrl: 'modules/globalization/templates/globalization-bidirectional.html',
-        controller: 'GlobalizationController as globalization'
+      .state('globalization.reference', {
+        url: '/reference',
+        templateUrl: 'modules/globalization/templates/globalization-quick-reference.html'
       })
 
       .state('globalization.angulartranslate', {
