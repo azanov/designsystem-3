@@ -5,7 +5,22 @@
 
     <p>The Design System&rsquo;s guidance on UI, branding, voice and other user-related considerations is meant to be as comprehensive as possible. In some cases, however, our &ldquo;out of the box&rdquo; guidelines may not apply to a specific local or regional scenario. So be aware that certain elements or portions of your code will probably need to be reviewed and customized to meet specific internationalization requirements and user needs. The Globalization Team, as part of the globalization process, can review your product plans to identify these kinds of exceptions.</p>
 
-    <h4>Guidance</h4>
+    <h5>Pseudo localization</h5>
+
+    <p>Pseudo localization is one of the services that the Globalization Team can provide early on in your development process. Here&rsquo;s how it works:</p>
+
+    <ol>
+      <li><strong>You provide code for evaluation.</strong> When you have some product code that contains UI-related content that will need localizing (such as text strings, buttons, errors, etc.), you send it to the Globalization Team.</li>
+      <li><strong>We &ldquo;test translate&rdquo; your code.</strong> The team will run some translation tests, generating target localized files and importing them into the build. This helps us assess your strings to see how well your product supports localization and if it can properly display your target languages.</li>
+      <li><strong>We help you address any issues we found.</strong> The team will work with your QA testers and developers to review and remedy any issues we find in your strings or files.</li>
+    </ol>
+
+    <p>Since pseudo localization is such a critical piece of your product&rsquo;s internationalization process, be sure to:</p>
+
+    <ul>
+      <li>Add it as a task to your backlog.</li>
+      <li>Assign it to the Globalization Team as early in development as possible.</li>
+    </ul>
 
     <h5>Strings</h5>
 
@@ -98,7 +113,7 @@
 
       </li>
 
-      <li>Watch your accents. Many languages include uppercase characters with accents (<code>É</code>, <code>Ý</code>, <code>Ñ</code>, <code>Ð</code>, <code>Ø</code>, <code>Å</code>, etc.). As part of localization you&rsquo;ll need to ensure that your product displays those correctly.</li>
+      <li><strong>Watch your accents.</strong> Many languages include uppercase characters with accents (<code>É</code>, <code>Ý</code>, <code>Ñ</code>, <code>Ð</code>, <code>Ø</code>, <code>Å</code>, etc.). As part of localization you&rsquo;ll need to ensure that your product displays those correctly.</li>
     </ul>
 
     <h6>Concatenation</h6>
@@ -309,25 +324,6 @@
 
       </li>
       <li><strong>Measurements.</strong> If your product displays size, weight, volume or other measurement-related information, chances are good that your non-U.S. audience is among the 95% of the world&rsquo;s population who are using the metric system. You&rsquo;ll probably want to metric for these users, but still offer them the option of using the imperial (U.S.) system.</li>
-    </ul>
-
-    <h4>Tools</h4>
-
-    <h6>Pseudo localization</h6>
-
-    <p>Pseudo localization is one of the services that the Globalization Team can provide early on in your development process. Here&rsquo;s how it works:</p>
-
-    <ol>
-      <li><strong>You provide code for evaluation.</strong> When you have some product code that contains UI-related content that will need localizing (such as text strings, buttons, errors, etc.), you send it to the Globalization Team.</li>
-      <li><strong>We &ldquo;test translate&rdquo; your code.</strong> The team will run some translation tests, generating target localized files and importing them into the build. This helps us assess your strings to see how well your product supports localization and if it can properly display your target languages.</li>
-      <li><strong>We help you address any issues we found.</strong> The team will work with your QA testers and developers to review and remedy any issues we find in your strings or files.</li>
-    </ol>
-
-    <p>Since pseudo localization is such a critical piece of your product&rsquo;s internationalization process, be sure to:</p>
-
-    <ul>
-      <li>Add it as a task to your backlog.</li>
-      <li>Assign it to the Globalization Team as early in development as possible.</li>
     </ul>
 
   </div>
