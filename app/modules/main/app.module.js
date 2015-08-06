@@ -16,7 +16,8 @@
     'pb.ds.globalization',
     'pb.ds.brand',
     'pb.ds.helpers',
-    'pb.ds.forms'
+    'pb.ds.forms',
+    'pb.ds.wordpress'
   ]);
 
   //configure debugging

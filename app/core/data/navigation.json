@@ -132,6 +132,9 @@
     }, {
       "label": "Helpers",
       "value": "helpers"
+    }, {
+      "label": "Wordpress",
+      "value": "wordpress"
     }]
   }
 

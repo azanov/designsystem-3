@@ -1,8 +1,8 @@
 // for vertical spacing, add to elements
 $spacers: (xs: 10px,sm: 20px, md: 30px, lg: 40px, xl: 50px);
 $directions: (top, bottom);
-// usage "spacer-top-sm"
 
+// usage "spacer-top-sm"
 // @each $direction in $directions {
 //   @each $spacer, $amt in $spacers {
 //       .spacer-#{$direction}-#{$spacer} {
@@ -14,10 +14,9 @@ $directions: (top, bottom);
 //   }
 // }
 
-// added smartphone MQ, reduced each spacer size to 75%.
+// added smartphone MQ, reduced each spacer size to 75% for that
 @each $direction in $directions {
-  @each $spacer,
-  $amt in $spacers {
+  @each $spacer, $amt in $spacers {
     .spacer-#{$direction}-#{$spacer} {
       margin-#{$direction}: $amt;
       @media only screen and (max-device-width: 480px) {
@@ -28,13 +27,28 @@ $directions: (top, bottom);
 }
 
 
+// .visually-hidden,
+// .screen-reader {
+//   overflow: hidden;
+//   position: absolute;
+//   width: 1px;
+//   height: 1px;
+//   margin: -1px;
+//   border: 0;
+//   padding: 0;
+//   clip: rect(0 0 0 0);
+// }
+
+
 .no-margin-top {
   margin-top: 0;
 }
 
+
 .no-margin-bottom {
   margin-bottom: 0;
 }
+
 
 .no-margins {
   margin: 0;

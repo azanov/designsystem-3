@@ -737,7 +737,7 @@ a.list-group-item.active .badge { color: #fff; background-color: #3e53a4; }
 
 .panel { box-shadow: none; }
 .panel.panel-default { border-color: #c0c0c0; }
-.panel.panel-default .panel-heading { background-color: #f3f4f9; border-bottom-color: #c0c0c0; }
+.panel.panel-default .panel-heading { background-color: #f3f5fa; border-bottom-color: #c0c0c0; }
 
 .panel-title { font-weight: 700; }
 
