@@ -56,7 +56,7 @@
 
             <div collapse="!facetedType.show" class="collapse" style="height: auto;">
               <div class="checkbox" ng-repeat="item in faceted.table.data | unique: 'userType' | orderBy: 'userType'">
-                <label>
+                <label ng-show="(item.userType | count:'userType':faceted.table.dataFiltered)">
                   <input type="checkbox" ng-model="faceted.table.search.userType[item.userType]" ng-click="faceted.checked(faceted.table.search.userType[item.userType], item.userType)"> {{item.userType}} (<span>{{item.userType | count:'userType':faceted.table.dataFiltered}}</span>)
                 </label>
               </div>
