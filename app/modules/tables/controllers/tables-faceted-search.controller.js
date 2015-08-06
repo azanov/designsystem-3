@@ -7,76 +7,91 @@
 
     var _this = this;
 
-    _this.groups = ['Root', 'Contributors', 'Danbury', 'Shelton', 'Stamford', 'Troy', 'Noida', 'Pune', 'Austin', 'Lanham', 'Boulder', 'Watford', 'Paris', 'Sydney', 'Dallas', 'San Diego', 'Toronto', 'Chatham', 'Kyiv', 'Hartford'];
 
-    _this.facetList = [];
+    //FACET CODE IS FOR DEMO PURPOSES ONLY, APP API SHOULD BE USED TO RETURN RESULTS, COUNTS, ETC.
+    _this.facet = {
+      list: [],
+      groups: [
+        'Root',
+        'Contributors',
+        'Danbury',
+        'Shelton',
+        'Stamford',
+        'Troy',
+        'Noida',
+        'Pune',
+        'Austin',
+        'Lanham',
+        'Boulder',
+        'Watford',
+        'Paris',
+        'Sydney',
+        'Dallas',
+        'San Diego',
+        'Toronto',
+        'Chatham',
+        'Kyiv',
+        'Hartford'
+      ],
+      clear: function() {
+        _this.facet.list = [];
 
-    _this.totalFiltered = [];
+        angular.forEach(_this.table.search, function(value, key, obj) {
+          var parent = value;
 
-    _this.checked = function(value, item) {
-      if (value) {
-        _this.facetList.push(item);
-      }
-      else {
-        var index = _this.facetList.indexOf(item);
-        _this.facetList.splice(index, 1);
-      }
-    };
+          angular.forEach(parent, function(value, key, obj) {
+            if (parent[key]) {
+              parent[key] = false;
+            }
+          });
 
-    _this.clear = function() {
-      _this.facetList = [];
+          _this.table.search.country = '';
 
-      angular.forEach(_this.table.search, function(value, key, obj) {
-        var parent = value;
-
-        angular.forEach(parent, function(value, key, obj) {
-          if (parent[key]) {
-            parent[key] = false;
-          }
         });
 
-        _this.table.search.country = '';
+      },
+      selectChange: function() {
+        var selected = _this.table.search.country;
 
-      });
+        if (selected) {
+          _this.facet.list.push(_this.table.search.country);
+        }
 
-    };
+      },
+      checked: function(value, item) {
+        if (value) {
+          _this.facet.list.push(item);
+        }
+        else {
+          var index = _this.facet.list.indexOf(item);
+          _this.facet.list.splice(index, 1);
+        }
+      },
 
-    _this.selectChange = function() {
-      var selected = _this.table.search.country;
+      clearBadge: function(item, event) {
+        event.stopPropagation();
+        event.preventDefault();
 
-      if (selected) {
-        _this.facetList.push(_this.table.search.country);
-      }
+        var itemIndex = _this.facet.list.indexOf(item);
+        _this.facet.list.splice(itemIndex, 1);
 
-    };
+        if (_this.table.search.country === item) {
+          _this.table.search.country = '';
+          return;
+        }
 
+        angular.forEach(_this.table.search, function(value, key, obj) {
+          var parent = value;
 
+          angular.forEach(parent, function(value, key, obj) {
+            if (key === item) {
+              parent[item] = false;
+            }
+          });
 
-
-    _this.clearBadge = function(item, event) {
-      event.stopPropagation();
-      event.preventDefault();
-
-      var itemIndex = _this.facetList.indexOf(item);
-      _this.facetList.splice(itemIndex, 1);
-
-      if (_this.table.search.country === item) {
-        _this.table.search.country = '';
-        return;
-      }
-
-      angular.forEach(_this.table.search, function(value, key, obj) {
-        var parent = value;
-
-        angular.forEach(parent, function(value, key, obj) {
-          if (key === item) {
-            parent[item] = false;
-          }
         });
 
-      });
-
-
+      }
 
     };
 
@@ -193,10 +208,10 @@
       $log.debug(newVal, oldVal);
 
       if (newVal !== oldVal) {
-        var index = _this.facetList.indexOf(oldVal);
+        var index = _this.facet.list.indexOf(oldVal);
 
         if (index !== -1) {
-          _this.facetList.splice(index, 1);
+          _this.facet.list.splice(index, 1);
         }
 
       }
