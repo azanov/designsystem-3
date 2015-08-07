@@ -1,15 +1,33 @@
 <div class="row">
   <div class="col-md-12">
-    <h1 class="main-title">Angular Translate
+    <h1 class="main-title">Angular Translation
       <small class="pull-right">
-        <a class="badge badge-link" href="http://angular-translate.github.io/" target="blank"><i class="fa fa-plug"></i> angular translate v2.7.2</a>
-        <a class="badge badge-link" href="http://lgalfaso.github.io/angular-dynamic-locale/" target="blank"><i class="fa fa-plug"></i> angular dynamic locale v0.1.27</a>
-        <a class="badge badge-link" href="https://code.angularjs.org/1.3.15/docs/guide/i18n" target="blank"><i class="fa fa-plug"></i> angular-i18n v1.3.15</a>
-        <a class="badge badge-link" href="https://github.com/morteza/bootstrap-rtl/tree/v3.3.4-rc1" target="blank"><i class="fa fa-plug"></i> bootstrap-rtl v3.3.4-rc1</a>
+        <a class="badge badge-link" href="http://angular-translate.github.io/" target="_blank"><i class="fa fa-plug"></i> angular translate v2.7.2</a>
+        <a class="badge badge-link" href="http://lgalfaso.github.io/angular-dynamic-locale/" target="_blank"><i class="fa fa-plug"></i> angular dynamic locale v0.1.27</a>
+        <a class="badge badge-link" href="https://code.angularjs.org/1.3.15/docs/guide/i18n" target="_blank"><i class="fa fa-plug"></i> angular-i18n v1.3.15</a>
+        <!-- <a class="badge badge-link" href="https://github.com/morteza/bootstrap-rtl/tree/v3.3.4-rc1" target="blank"><i class="fa fa-plug"></i> bootstrap-rtl v3.3.4-rc1</a> -->
       </small>
     </h1>
 
     <p>No machine can replace a skilled human translator. But to get an idea of how translating UI copy into different languages and formats looks in the real world, look at how the elements on this page change as you select different countries and languages from the dropdown menus on the left.</p>
+
+
+    <h3>Angular Translate</h3>
+    <p>angular-translate is an AngularJS module that makes development much easier when it comes to i18n and l10n, including lazy loading. It provides components like filters and directives, asynchronous loading of i18n data and much more! angular-translate is very flexible. You can build your own loaders, storages or error handlers and extend angular-translate to your needs!</p>
+
+    <p>The angular-translate <a href="http://angular-translate.github.io/docs/#/guide" target="_blank">Getting Started</a> guide provides detailed information on localizing you application.</p>
+
+    <p>You develop the application in a native language (English, for example) using standard JSON files with keys for each string. An sample of the JSON is shown after the example below. The JSON keys are used in views and controllers, instructing angular-translate which string to display. The Globalization team consumes the native language JSON files in an application called Passolo and provides JSON files for each translated language. As you update your native language file, Passolo is used to track the differences in the files, allowing translators to focus on what has changed, saving time and budget!</p>
+
+    <p>As a best practice, files should be named by langauge and country, all lowercase. For example, en-us.json, fr-fr.json, ja-jp.json or pt-br.json.</p>
+
+    <p>Contact the Globalization Team at <a href="mailto:globalization@pb.com">globalization@pb.com</a> or through the <a href="https://www.yammer.com/pb.com/#/threads/inGroup?type=in_grou&feedId=72211" target="blank">Yammer</a> group for more information.</p>
+
+
+    <h3>Angular i18n &amp; Angular Dynamic Locale</h3>
+    <p>Angular separates number, date and time, and currency formats into different files for each locale. Angular provides filters for date, time and currency that use the loacale information to display the content in the correct format. You can find a list of currently supported locales <a href="https://github.com/angular/angular.js/tree/master/src/ngLocale" target="_blank">here</a> and more information on Angular i18n/l10n <a href="https://code.angularjs.org/1.3.15/docs/guide/i18n" target="_blank">here</a>.</p>
+
+    <p>In order to change the locale dynamically in the view, include the <a href="http://lgalfaso.github.io/angular-dynamic-locale/" target="_blank">angular-dynamic-locale</a> library in your application. This library will allow you to set the locale based on a selection and store or retrieve the locale from a cookie.</p>
 
     <div class="preview-example">
 
@@ -147,6 +165,29 @@
       </div>
 
     </div>
+
+<div class="preview-code" hljs language="json">
+Sample JSON strings:
+
+{
+  "GLOBALIZATION": {
+    "TITLE": "Profile",
+    "BUTTONS": {
+      "SAVE": "Save",
+      "CANCEL": "Cancel",
+      "EDIT": "Edit",
+      "DELETE": "Delete"
+    },
+    "DROPDOWN": {
+      "SYSTEM": "System",
+      "LICENSINGEXPIRATION": "Licensing and expiration",
+      "VERSION": "Version",
+      "SECURITY": "Security",
+      "LOGS": "Logs",
+      "MAILSERVER": "Mail server"
+    }
+  }
+}</div>
 
   </div>
 </div>
