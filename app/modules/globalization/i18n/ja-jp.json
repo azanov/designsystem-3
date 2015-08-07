@@ -3,7 +3,7 @@
     "TITLE": "プロファイル",
     "BUTTONS": {
       "SAVE": "保存",
-      "CANCEL": "停止",
+      "CANCEL": "キャンセル",
       "EDIT": "編集",
       "DELETE": "削除"
     },
@@ -26,7 +26,7 @@
       },
       "TEXT": {
         "LABEL": "電子メール",
-        "PLACEHOLDER": "電子メールを入力"
+        "PLACEHOLDER": "メールアドレスを入力"
       },
       "SELECT": {
         "LABEL": "システムのデフォルト ログ レベル",
@@ -40,18 +40,18 @@
       }
     },
     "CONTROLLER": {
-      "TITLE": "Controller example with $translate service",
-      "EXAMPLE": "これらの設定を使用して、形式に誤りのあるレコードを処理するためのデフォルト動作を設定します. "
+      "TITLE": "$translate service を使用したコントローラーの例",
+      "EXAMPLE": "これらの設定でシステムのデフォルトレポートオプションをセットしてください。"
     },
     "FORMATS": {
-      "NUMBER": "Number formats",
-      "DATE": "Date formats",
+      "NUMBER": "番号の形式",
+      "DATE": "日付の形式",
       "TIME": {
-        "TITLE": "Time formats",
-        "TIMESHORT": "Short",
-        "TIMEMEDIUM": "Medium"
+        "TITLE": "時刻の形式",
+        "TIMESHORT": "短縮",
+        "TIMEMEDIUM": "中間"
       },
-      "CURRENCY": "Currency formats"
+      "CURRENCY": "通貨の形式"
     }
   }
 }

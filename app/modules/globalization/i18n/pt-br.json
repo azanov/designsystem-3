@@ -34,24 +34,24 @@
         "OPTION2": "Fatal",
         "OPTION3": "Erro",
         "OPTION4": "Avisar",
-        "OPTION5": "Info",
+        "OPTION5": "Informações",
         "OPTION6": "Depurar",
         "OPTION7": "Rastrear"
       }
     },
     "CONTROLLER": {
-      "TITLE": "Controller example with $translate service",
+      "TITLE": "Exemplo de controlador com serviço de $translate",
       "EXAMPLE": "Use estas configurações para definir as opções padrão de relatório para seu sistema."
     },
     "FORMATS": {
-      "NUMBER": "Number formats",
-      "DATE": "Date formats",
+      "NUMBER": "Formatos de número",
+      "DATE": "Formatos de data",
       "TIME": {
-        "TITLE": "Time formats",
-        "TIMESHORT": "Short",
-        "TIMEMEDIUM": "Medium"
+        "TITLE": "Formatos de hora",
+        "TIMESHORT": "Curto",
+        "TIMEMEDIUM": "Médio"
       },
-      "CURRENCY": "Currency formats"
+      "CURRENCY": "Formatos de moeda"
     }
   }
 }

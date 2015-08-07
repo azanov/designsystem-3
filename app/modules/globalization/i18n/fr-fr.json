@@ -2,7 +2,7 @@
   "GLOBALIZATION": {
     "TITLE": "Profil",
     "BUTTONS": {
-      "SAVE": "Sauvegarder",
+      "SAVE": "Enregistrer",
       "CANCEL": "Annuler",
       "EDIT": "Éditer",
       "DELETE": "Supprimer"
@@ -17,7 +17,7 @@
     },
     "INPUTS": {
       "CHECKBOX": {
-        "ONE": "Enregistrer les rapports dans l'historique de tâches",
+        "ONE": "Enregistrer les rapports dans l'historique des tâches",
         "TWO": "Enregistrer les rapports dans un fichier"
       },
       "RADIO": {
@@ -26,32 +26,32 @@
       },
       "TEXT": {
         "LABEL": "E-mail",
-        "PLACEHOLDER": "Entrer une adresse électronique"
+        "PLACEHOLDER": "Entrer une adresse e-mail"
       },
       "SELECT": {
         "LABEL": "Niveau de traçabilité par défaut du système",
-        "OPTION1": "Inactif",
-        "OPTION2": "Fatale",
+        "OPTION1": "Désactivé",
+        "OPTION2": "Erreur fatale",
         "OPTION3": "Erreur",
-        "OPTION4": "Avertir",
-        "OPTION5": "Infos",
-        "OPTION6": "Déboguez",
+        "OPTION4": "Avertissement",
+        "OPTION5": "Information",
+        "OPTION6": "Déboguage",
         "OPTION7": "Suivre"
       }
     },
     "CONTROLLER": {
-      "TITLE": "Controller example with $translate service",
+      "TITLE": "Exemple de contrôle avec le service $translate",
       "EXAMPLE": "Utilisez ces paramètres pour définir les options de rapport par défaut pour votre système."
     },
     "FORMATS": {
-      "NUMBER": "Number formats",
-      "DATE": "Date formats",
+      "NUMBER": "Nombres",
+      "DATE": "Dates",
       "TIME": {
-        "TITLE": "Time formats",
-        "TIMESHORT": "Short",
-        "TIMEMEDIUM": "Medium"
+        "TITLE": "Heure",
+        "TIMESHORT": "Court",
+        "TIMEMEDIUM": "Moyen"
       },
-      "CURRENCY": "Currency formats"
+      "CURRENCY": "Devises"
     }
   }
 }
