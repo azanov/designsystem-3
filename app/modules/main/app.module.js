@@ -18,7 +18,8 @@
     'pb.ds.helpers',
     'pb.ds.forms',
     'pb.ds.wordpress',
-    'pb.ds.mobile'
+    'pb.ds.mobile',
+    'pb.ds.writing'
   ]);
 
   //configure debugging

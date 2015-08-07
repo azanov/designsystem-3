@@ -131,6 +131,14 @@
       "value": "mobile"
     }]
   }, {
+    "label": "Product Writing",
+    "value": "writing",
+    "toggle": "dropdown",
+    "children": [{
+      "label": "Product Writing Guide",
+      "value": "writing"
+    }]
+  }, {
     "label": "Other",
     "value": "other",
     "toggle": "dropdown",
