@@ -17,7 +17,8 @@
     'pb.ds.brand',
     'pb.ds.helpers',
     'pb.ds.forms',
-    'pb.ds.wordpress'
+    'pb.ds.wordpress',
+    'pb.ds.mobile'
   ]);
 
   //configure debugging

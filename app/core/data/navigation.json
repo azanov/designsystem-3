@@ -123,6 +123,14 @@
       "value": "elements.colorcharts"
     }]
   }, {
+    "label": "Mobile",
+    "value": "mobile",
+    "toggle": "dropdown",
+    "children": [{
+      "label": "Mobile Guide",
+      "value": "mobile"
+    }]
+  }, {
     "label": "Other",
     "value": "other",
     "toggle": "dropdown",
