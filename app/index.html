@@ -16,7 +16,7 @@
     <script>
       var bowser = bowser;
       //console.log(bowser);
-      if(bowser.msie && bowser.version < 9){
+      if(bowser.msie && bowser.version < ){
         window.location.assign('unsupported.html');
       }
     </script>
@@ -70,20 +70,16 @@
   <body ng-controller="AppController as app" dir="{{app.rtl}}" class="site {{$state.current.data.bodyClass}}">
 
 
+  <div class="site">
     <!-- header -->
-    <span ng-switch="app.header">
-      <header ng-switch-when="animated" headroom class="headroom" tolerance="5" offset="40" classes="{'initial':'animated','pinned':'slideInDown','unpinned':'slideOutUp','top':'headroom-top','notTop':'headroom-not-top'}"></header>
-      <header ng-switch-when="fixed" headroom class="headroom" tolerance="5" offset="40" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}"></header>
-      <header ng-switch-when="normal"></header>
-    </span>
-
+    <header headroom class="headroom" tolerance="5" offset="40" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}"></header>
 
     <!-- content -->
     <div ui-view="" class="view-animate site-content" autoscroll></div>
 
     <!-- FOOTER -->
     <footer ng-if="app.footer"></footer>
-
+  </div>
 
 
     <!-- build:vendorjs js/vendor.js -->

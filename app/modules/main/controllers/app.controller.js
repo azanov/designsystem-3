@@ -7,8 +7,8 @@
     var _this = this;
     $rootScope.$state = $state;
 
-    _this.header = 'animated';
-    _this.footer = false;
+    _this.header = 'fixed';
+    _this.footer = true;
 
     _this.rtl = 'ltr';
 
