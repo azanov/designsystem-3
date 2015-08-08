@@ -120,21 +120,10 @@ cite { font-style: normal; }
 .preview-code pre { border-color: #e3e3e3; border-top-left-radius: 0; border-top-right-radius: 0; margin: 0; padding: 10px; }
 .preview-code pre code { background: transparent; }
 
-.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
-
-.list-expanded li { margin-right: 50px; }
-.list-expanded li:last-child { margin-right: 0; }
-
-blockquote.small { font-size: inherit; margin-top: 10px; }
-
-.button-demo-row > div { margin-right: 20px; }
-
-.figure { margin: 20px 0 30px; }
-
-@-webkit-keyframes kbrns { 0% { background-position: 0 -3em; background-size: 120%; }
+@-webkit-keyframes kenbrns { 0% { background-position: 0 -3em; background-size: 120%; }
   100% { background-position: -1em 0; background-size: 105%; } }
 
-@keyframes kbrns { 0% { background-position: 0 -3em; background-size: 120%; }
+@keyframes kenbrns { 0% { background-position: 0 -3em; background-size: 120%; }
   100% { background-position: -1em 0; background-size: 105%; } }
 .hero .hero-unit { margin-top: 50px; color: #4e4e4e; }
 .hero .hero-unit h2 { font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; font-size: 18px; padding-bottom: 10px; line-height: 1.3; color: #4e4e4e; }
@@ -147,21 +136,8 @@ blockquote.small { font-size: inherit; margin-top: 10px; }
 .hero .hero-menu > li ul li a { color: #4e4e4e; }
 .hero .hero-menu .dropdown-header, .hero .hero-menu .divider, .hero .hero-menu .optional { display: none; }
 
-section.row { margin-bottom: 60px; }
-
-.page-header { margin-top: 60px; }
-
 h4 .more-info, h1 .more-info, h3 .more-info, legend .more-info { font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-weight: normal; margin-top: 10px; margin-left: 30px; display: inline-block; text-transform: lowercase; }
 h4 .more-info a, h1 .more-info a, h3 .more-info a, legend .more-info a { color: #0072b8; font-weight: normal; }
-
-h6.sh { clear: both; margin-top: 40px; }
-h6.sh:first-child { margin-top: 0; }
-
-hr { margin-top: 30px; margin-bottom: 30px; }
-
-.grid-sample .panel { border: 1px solid #eee; border-top-width: 6px; border-radius: 0; }
-
-p[class^='bg'] { padding: 10px; }
 
 .row-left-border { border-left: 1px solid #9b9b9b; }
 
@@ -171,22 +147,6 @@ p[class^='bg'] { padding: 10px; }
 .color-swatches .color-swatch.color-swatch-small { display: inline-block; width: 33px; height: 33px; }
 .color-swatches p { font-size: 16px; color: #4e4e4e; }
 .color-swatches p small { font-size: 12px; line-height: 1.2; }
-
-.PrecisionSans_W_LtIt { font-family: "PrecisionSans_W_LtIt", Arial, Helvetica, sans-serif; }
-
-.PrecisionSans_W_LtIt { font-family: "PrecisionSans_W_LtIt", Arial, Helvetica, sans-serif; }
-
-.PrecisionSans_W_Rg { font-family: "PrecisionSans_W_Rg", Arial, Helvetica, sans-serif; }
-
-.PrecisionSans_W_RgIt { font-family: "PrecisionSans_W_RgIt", Arial, Helvetica, sans-serif; }
-
-.PrecisionSans_W_Bd { font-family: "PrecisionSans_W_Bd", Arial, Helvetica, sans-serif; }
-
-.PrecisionSans_W_BdIt { font-family: "PrecisionSans_W_BdIt", Arial, Helvetica, sans-serif; }
-
-.PrecisionSans_W_Md { font-family: "PrecisionSans_W_Md", Arial, Helvetica, sans-serif; }
-
-.PrecisionSans_W_MdIt { font-family: "PrecisionSans_W_MdIt", Arial, Helvetica, sans-serif; }
 
 ul.swatches { margin: 10px 0 30px; padding-left: 0; }
 ul.swatches li.color-swatch { height: 30px; margin-bottom: 0; text-align: right; padding: 5px 10px; color: #000; }
@@ -278,8 +238,6 @@ ul.swatches li.color-swatch:nth-child(n+6) { color: #fff; }
 
 .styleguide footer { display: none; }
 .styleguide section { margin-top: 50px; }
-
-.chord-display { margin-bottom: 20px; }
 
 
 

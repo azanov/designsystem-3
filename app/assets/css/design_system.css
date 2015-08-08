@@ -512,7 +512,7 @@ select[multiple], select[size] { background-image: none !important; }
 
 .headroom { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; margin-top: 0; }
 .headroom.headroom-not-top { box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
-.headroom.headroom-top { box-shadow: 0 0 0 rgba(0, 0, 0, 0.4); transition: all 0.03s ease-out; }
+.headroom.headroom-top { box-shadow: 0 0 0 rgba(0, 0, 0, 0.4); transition: all .03s ease-out; }
 
 @media (max-width: 767px) { .activity { display: inline-block; } }
 .nav-left { position: absolute; width: 275px; top: 80px; padding: 10px; z-index: 100; transition: width .8s; transition-delay: width .3s; }

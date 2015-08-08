@@ -60,38 +60,8 @@
 
 
 
-// Bootstrap UI
-.nav,
-.pagination,
-.carousel,
-.panel-title a {
-  cursor: pointer;
-}
-
-.list-expanded {
-  li {
-    margin-right: 50px;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-}
-
-blockquote.small {
-  font-size: inherit;
-  margin-top: 10px;
-}
-
-.button-demo-row >div {
-  margin-right: 20px;
-}
-
-.figure {
-  margin: 20px 0 30px;
-}
-
 // ken burns panning effect
-@keyframes kbrns {
+@keyframes kenbrns {
   0% {
     background-position: 0 -3em;
     background-size: 120%;
@@ -165,14 +135,6 @@ blockquote.small {
 }
 
 
-// spacing and page layout mods for the design system pages
-section.row {
-  margin-bottom: 60px;
-}
-
-.page-header {
-  margin-top: 60px;
-}
 
 h4,
 h1,
@@ -193,29 +155,7 @@ legend {
   }
 }
 
-h6.sh {
-  clear: both;
-  margin-top: 40px;
 
-  &:first-child {
-    margin-top: 0;
-  }
-}
-
-hr {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.grid-sample .panel {
-  border: 1px solid #eee;
-  border-top-width: 6px;
-  border-radius: 0;
-}
-
-p[class^='bg'] {
-  padding: 10px;
-}
 //* Color swatches */
 .row-left-border {
   border-left: 1px solid $pb-gray-300;
@@ -255,13 +195,14 @@ p[class^='bg'] {
     }
   }
 }
-$fonts: ('PrecisionSans_W_LtIt', 'PrecisionSans_W_LtIt', 'PrecisionSans_W_Rg', 'PrecisionSans_W_RgIt', 'PrecisionSans_W_Bd', 'PrecisionSans_W_BdIt', 'PrecisionSans_W_Md', 'PrecisionSans_W_MdIt');
+// $fonts: ('PrecisionSans_W_LtIt', 'PrecisionSans_W_LtIt', 'PrecisionSans_W_Rg', 'PrecisionSans_W_RgIt', 'PrecisionSans_W_Bd', 'PrecisionSans_W_BdIt', 'PrecisionSans_W_Md', 'PrecisionSans_W_MdIt');
+//
+// @each $font in $fonts {
+//   .#{$font} {
+//     font-family: $font, Arial, Helvetica, sans-serif;
+//   }
+// }
 
-@each $font in $fonts {
-  .#{$font} {
-    font-family: $font, Arial, Helvetica, sans-serif;
-  }
-}
 // march 2015, changes swatches for main colors into lists of tints
 ul.swatches {
   margin: 10px 0 30px;
@@ -269,7 +210,7 @@ ul.swatches {
 
   li.color-swatch {
     height: 30px;
-    margin-bottom: 0;
+    margin-bottom: 0; 
     text-align: right;
     padding: 5px 10px;
     color: #000;
@@ -539,9 +480,9 @@ ul.swatches {
 }
 
 
-.chord-display {
-  margin-bottom: 20px;
-}
+// .chord-display {
+//   margin-bottom: 20px;
+// }
 
 
 
