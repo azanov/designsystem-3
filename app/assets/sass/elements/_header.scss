@@ -1,47 +1,25 @@
-/*  --------- HEADER 2.0 ----------- */
-// class needs to be set with JS
-body {
-  padding-top: 50px;
-  .navbar {
-    >.container-fluid {
-      padding: 0 40px;
-    }
-  }
-}
 
 
-#header,
-header {
+#header, header {
   background: linear-gradient(90deg, #3e53a4, #872e96, #ce0a89);
   .navbar {
     margin-bottom: 0;
     li.first a {
       padding-left: 0;
     }
-
     // fixed navbar has a shadow that appears when scrolled via jQuery
     &.navbar-fixed-top {
-      transition: box-shadow 0.1s;
+      transition: box-shadow .1s;
       &.shadow {
         box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
       }
     }
-
-    .activity {
-      .badge {
-        top: -20%;
-      }
-
-    }
-
   }
-
 }
 
-
-@mixin navbar-divider($side: 'right') {
-  border-#{$side}: 1px solid hsla(0, 0%, 100%, .3);
-}
+// @mixin navbar-divider($side: 'right') {
+//   border-#{$side}: 1px solid hsla(0, 0%, 100%, .3);
+// }
 
 
 .nav > li > a:hover,
@@ -73,10 +51,6 @@ header {
 
 
   .navbar-nav {
-    // &:not(.navbar-right) {
-    //   @include navbar-divider;
-    // }
-
     .divider-vertical {
       height: 30px;
       margin: 10px 5px;

@@ -208,6 +208,8 @@ cite { font-style: normal; }
 
 .container-fluid { padding-left: 40px; padding-right: 40px; margin-left: auto; margin-right: auto; }
 
+body { padding-top: 100px; }
+
 .site-content { min-height: 82vh; }
 
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
@@ -481,16 +483,11 @@ select[multiple], select[size] { background-image: none !important; }
 .item-selector-button.disabled .image { background-image: url("../images/box-disabled.png"); }
 .item-selector-button.disabled:hover { padding: 15px; border: 1px solid #9b9b9b; box-shadow: none; }
 
-/*  --------- HEADER 2.0 ----------- */
-body { padding-top: 50px; }
-body .navbar > .container-fluid { padding: 0 40px; }
-
 #header, header { background: linear-gradient(90deg, #3e53a4, #872e96, #ce0a89); }
 #header .navbar, header .navbar { margin-bottom: 0; }
 #header .navbar li.first a, header .navbar li.first a { padding-left: 0; }
-#header .navbar.navbar-fixed-top, header .navbar.navbar-fixed-top { transition: box-shadow 0.1s; }
+#header .navbar.navbar-fixed-top, header .navbar.navbar-fixed-top { transition: box-shadow .1s; }
 #header .navbar.navbar-fixed-top.shadow, header .navbar.navbar-fixed-top.shadow { box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); }
-#header .navbar .activity .badge, header .navbar .activity .badge { top: -20%; }
 
 .nav > li > a:hover, .nav > li > a:focus { background-color: #f8f8f8; }
 

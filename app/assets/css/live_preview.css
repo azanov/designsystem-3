@@ -120,10 +120,6 @@ cite { font-style: normal; }
 .preview-code pre { border-color: #e3e3e3; border-top-left-radius: 0; border-top-right-radius: 0; margin: 0; padding: 10px; }
 .preview-code pre code { background: transparent; }
 
-.clearfix { zoom: 1; }
-.clearfix:before, .clearfix:after { display: table; content: ''; }
-.clearfix:after { clear: both; }
-
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
 .list-expanded li { margin-right: 50px; }

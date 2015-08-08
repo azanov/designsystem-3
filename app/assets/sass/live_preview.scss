@@ -38,7 +38,7 @@
     }
   }
 
-  + .preview-code {
+  +.preview-code {
     margin-top: -25px;
     margin-bottom: 20px;
   }
@@ -59,20 +59,12 @@
 }
 
 
-.clearfix {
-  zoom: 1;
 
-  &:before, &:after {
-    display: table;
-    content: '';
-  }
-
-  &:after {
-    clear: both;
-  }
-}
 // Bootstrap UI
-.nav, .pagination, .carousel, .panel-title a {
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
   cursor: pointer;
 }
 
@@ -90,7 +82,7 @@ blockquote.small {
   margin-top: 10px;
 }
 
-.button-demo-row > div {
+.button-demo-row >div {
   margin-right: 20px;
 }
 
@@ -133,7 +125,7 @@ blockquote.small {
     padding-left: 0;
     list-style-type: none;
 
-    > li {
+    >li {
       font-family: $font-family-ps-medium;
       font-size: 18px;
       margin-top: 10px;
@@ -164,7 +156,9 @@ blockquote.small {
       }
     }
 
-    .dropdown-header, .divider, .optional {
+    .dropdown-header,
+    .divider,
+    .optional {
       display: none;
     }
   }
@@ -180,7 +174,10 @@ section.row {
   margin-top: 60px;
 }
 
-h4, h1, h3, legend {
+h4,
+h1,
+h3,
+legend {
   .more-info {
     font-family: $font-family-ps-light;
     font-size: 14px;
@@ -344,14 +341,16 @@ ul.swatches {
     margin-bottom: 20px;
     text-align: center;
 
-    .glyphicon, .pbfont {
+    .glyphicon,
+    .pbfont {
       //font-size: 2em;
     }
   }
 }
 
 .text-center {
-  .pie, .donut {
+  .pie,
+  .donut {
     width: 100px;
     margin: 0 auto 20px;
   }
@@ -484,11 +483,14 @@ ul.swatches {
 .view-animate {
   transition: all .3s;
 
-  &.ng-enter, &.ng-leave {
+  &.ng-enter,
+  &.ng-leave {
     opacity: 1;
   }
 
-  &.ng-enter, &.ng-leave-active, &.ng-hide {
+  &.ng-enter,
+  &.ng-leave-active,
+  &.ng-hide {
     height: 0;
     opacity: 0;
   }
@@ -501,7 +503,7 @@ ul.swatches {
   padding: 0;
   margin: 0 -.55556rem;
 
-  > li {
+  >li {
     display: block;
     height: auto;
     float: left;
@@ -509,20 +511,20 @@ ul.swatches {
   }
 }
 
-.block-grid-6 > li {
+.block-grid-6 >li {
   width: 16.66666%;
 }
 
-.small-block-grid-3 > li {
+.small-block-grid-3 >li {
   width: 33.33333%;
   list-style: none;
 }
 
-.small-block-grid-3 > li:nth-of-type(1n) {
+.small-block-grid-3 >li:nth-of-type(1n) {
   clear: none;
 }
 
-.small-block-grid-3 > li:nth-of-type(3n+1) {
+.small-block-grid-3 >li:nth-of-type(3n+1) {
   clear: both;
 }
 

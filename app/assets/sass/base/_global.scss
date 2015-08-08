@@ -5,7 +5,20 @@
   margin-right: auto;
 }
 
+
+// to move body down below fixed header
+body {
+  padding-top: 100px;
+  // .navbar {
+  //   >.container-fluid {
+  //     padding: 0 40px;
+  //   }
+  // }
+}
+
+
 // see http://codepen.io/smlombardi/pen/dorMwj
+// not working at the moment
 //
 // .site {
 //   display: flex;
@@ -18,7 +31,7 @@
 //
 // }
 
-
+// using this instead for footer glue
 .site-content {
   min-height: 82vh;
 }
