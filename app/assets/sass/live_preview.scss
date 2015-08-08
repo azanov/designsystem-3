@@ -138,7 +138,7 @@ blockquote.small {
       font-size: 18px;
       margin-top: 10px;
       padding-top: 5px;
-      border-top: 1px solid $pb-gray-200;
+      border-top: 1px solid $pb-bg2;
       &:first-child {
         margin-top: 0;
       }
@@ -443,7 +443,7 @@ ul.swatches {
 }
 
 .gray200 {
-  background-color: $pb-gray-200;
+  background-color: $pb-bg2;
 }
 //* panels page */
 .list-group-details {
@@ -563,13 +563,13 @@ ul.swatches {
 // we are no longer using SVGs for chord display, so I have commented this out
 //** * Chord1 */
 // #chord1 {
-//   @include chord-color($pb-medium-blue $pb-purple $pb-gray-500$pb-blue $pb-green $pb-gray-200);
+//   @include chord-color($pb-medium-blue $pb-purple $pb-gray-500$pb-blue $pb-green $pb-bg2);
 // }
 //
 // #chord2 {
-//   @include chord-color($pb-dark-orange $pb-medium-blue $pb-gray-500$pb-blue $pb-yellow $pb-gray-200);
+//   @include chord-color($pb-dark-orange $pb-medium-blue $pb-gray-500$pb-blue $pb-yellow $pb-bg2);
 // }
 //
 // #chord3 {
-//   @include chord-color($pb-dark-green $pb-medium-blue $pb-gray-500$pb-blue $pb-magenta $pb-gray-200);
+//   @include chord-color($pb-dark-green $pb-medium-blue $pb-gray-500$pb-blue $pb-magenta $pb-bg2);
 // }

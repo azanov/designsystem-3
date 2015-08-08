@@ -64,7 +64,7 @@
 
   .input-group-addon {
     padding: $padding-small-vertical $padding-small-horizontal;
-    color: $pb-gray-200;
+    color: $pb-bg2;
   }
   .input-group-btn {
     &.open {
@@ -82,7 +82,7 @@
     z-index: 10;
     border: 0;
     opacity: 1;
-    color: $pb-gray-200;
+    color: $pb-bg2;
     transition: all 0.3s ease-in-out;
     .btn {
       border: 0;

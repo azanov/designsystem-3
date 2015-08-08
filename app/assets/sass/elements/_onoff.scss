@@ -49,7 +49,7 @@
 }
 
 .onoffswitch-inner:after {
-  background-color: $pb-gray-200;
+  background-color: $pb-bg2;
   color: $pb-gray-500;
   content: '';
   padding-right: 10px;
@@ -58,7 +58,7 @@
 
 .onoffswitch-switch {
   transition        : all .3s ease-in 0s;
-   background-color: $pb-gray-200;
+   background-color: $pb-bg2;
   border            : 1px solid $input-border;
   border-radius     : 5px;
   bottom            : 0;

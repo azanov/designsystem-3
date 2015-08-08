@@ -70,7 +70,7 @@
         }
         .minified & ul {
           position          : absolute;
-          background-color  : $pb-gray-200;
+          background-color  : $pb-bg2;
           min-width         : 150px;
           left              : 30px;
           top               : 13px;
@@ -92,7 +92,7 @@
         width       : 100%;
         &:hover {
           //color: $brand-primary;
-          background: $pb-gray-200;
+          background: $pb-bg2;
         }
       }
     }
