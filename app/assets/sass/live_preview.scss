@@ -38,14 +38,13 @@
     }
   }
 
-  +.preview-code {
+  + .preview-code {
     margin-top: -25px;
     margin-bottom: 20px;
   }
 }
 
 .preview-code {
-
   pre {
     border-color: #e3e3e3;
     border-top-left-radius: 0;
@@ -56,17 +55,14 @@
     code {
       background: transparent;
     }
-    
   }
-
 }
 
 
 .clearfix {
   zoom: 1;
 
-  &:before,
-  &:after {
+  &:before, &:after {
     display: table;
     content: '';
   }
@@ -76,10 +72,7 @@
   }
 }
 // Bootstrap UI
-.nav,
-.pagination,
-.carousel,
-.panel-title a {
+.nav, .pagination, .carousel, .panel-title a {
   cursor: pointer;
 }
 
@@ -129,7 +122,6 @@ blockquote.small {
 
     h2 {
       font-family: $font-family-ps-light;
-
       font-size: 18px;
       padding-bottom: 10px;
       line-height: 1.3;
@@ -151,7 +143,6 @@ blockquote.small {
         margin-top: 0;
       }
       a {
-
         &:hover {
           text-decoration: none;
         }
@@ -173,18 +164,13 @@ blockquote.small {
       }
     }
 
-    .dropdown-header,
-    .divider,
-    .optional {
+    .dropdown-header, .divider, .optional {
       display: none;
     }
   }
 }
 
-.home #footer,
-.home footer {
-  margin-top: 0;
-}
+
 // spacing and page layout mods for the design system pages
 section.row {
   margin-bottom: 60px;
@@ -194,10 +180,7 @@ section.row {
   margin-top: 60px;
 }
 
-h4,
-h1,
-h3,
-legend {
+h4, h1, h3, legend {
   .more-info {
     font-family: $font-family-ps-light;
     font-size: 14px;
@@ -242,7 +225,6 @@ p[class^='bg'] {
 }
 
 .color-swatches {
-
   .color-swatch-container {
     margin-bottom: 30px;
   }
@@ -298,7 +280,7 @@ ul.swatches {
     span {
       display: inline-block;
       float: left;
-      opacity: 0.4;
+      opacity: .4;
     }
 
     &:first-child {
@@ -358,20 +340,18 @@ ul.swatches {
 
 .glyphicons {
   li {
-    font-size: 0.8em;
+    font-size: .8em;
     margin-bottom: 20px;
     text-align: center;
 
-    .glyphicon,
-    .pbfont {
+    .glyphicon, .pbfont {
       //font-size: 2em;
     }
   }
 }
 
 .text-center {
-  .pie,
-  .donut {
+  .pie, .donut {
     width: 100px;
     margin: 0 auto 20px;
   }
@@ -478,7 +458,7 @@ ul.swatches {
 
     strong {
       font-weight: normal;
-      padding-right: 0.3em;
+      padding-right: .3em;
       color: $pb-gray-500;
       background-color: #fff;
     }
@@ -495,23 +475,20 @@ ul.swatches {
   .form-control-static {
     padding-top: 2px;
     padding-bottom: 2px;
-    padding-left: 0.3em;
+    padding-left: .3em;
     word-wrap: break-word;
     background-color: #fff;
   }
 }
 
 .view-animate {
-  transition: all 0.3s;
+  transition: all .3s;
 
-  &.ng-enter,
-  &.ng-leave {
+  &.ng-enter, &.ng-leave {
     opacity: 1;
   }
 
-  &.ng-enter,
-  &.ng-leave-active,
-  &.ng-hide {
+  &.ng-enter, &.ng-leave-active, &.ng-hide {
     height: 0;
     opacity: 0;
   }
@@ -528,7 +505,7 @@ ul.swatches {
     display: block;
     height: auto;
     float: left;
-    padding: 0 0.55556rem 1.11111rem;
+    padding: 0 .55556rem 1.11111rem;
   }
 }
 
