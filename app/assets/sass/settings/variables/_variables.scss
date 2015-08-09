@@ -70,6 +70,7 @@ $brand-danger:           $pb-error-red;
 
 
 
+
 // legacy color names
 // links
 $link-color:             $pb-medium-blue;
@@ -87,9 +88,16 @@ $button-disabled:        #dbdbdb;
 $body-bg:                #fff;
 $background-color:       $body-bg;
 
-// text color on `<body>`
-$text-color:             $pb-gray-500;
+// text color
+$text-color:             $pb-gray-400;
+$text-active-color:      $pb-gray-700;
 $pb-disabled-text:       #c0c0c0;
+
+$header-color:           $pb-gray-700;
+$header-color-alt:       $pb-gray-500;
+$page-header-color:      $pb-magenta;
+$page-header-color-alt:  $pb-gray-700;
+
 
 // CHART COLORS
 $chart-green:            $pb-dark-green;
@@ -488,18 +496,18 @@ $jumbotron-font-size: ceil(($font-size-base * 1.5));
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text: #3c763d !default;
-$state-success-bg: #dff0d8 !default;
-$state-success-border: darken(adjust-hue($state-success-bg, -10), 5%) !default;
-$state-info-text: #31708f !default;
-$state-info-bg: #d9edf7 !default;
-$state-info-border: darken(adjust-hue($state-info-bg, -10), 7%) !default;
-$state-warning-text: #8a6d3b !default;
-$state-warning-bg: #fcf8e3 !default;
-$state-warning-border: darken(adjust-hue($state-warning-bg, -10), 5%) !default;
-$state-danger-text: #a94442 !default;
-$state-danger-bg: #f2dede !default;
-$state-danger-border: darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+$state-success-text: #3c763d;
+$state-success-bg: #dff0d8;
+$state-success-border: darken(adjust-hue($state-success-bg, -10), 5%);
+$state-info-text: #31708f;
+$state-info-bg: #d9edf7;
+$state-info-border: darken(adjust-hue($state-info-bg, -10), 7%);
+$state-warning-text: #8a6d3b;
+$state-warning-bg: #fcf8e3;
+$state-warning-border: darken(adjust-hue($state-warning-bg, -10), 5%);
+$state-danger-text: #a94442;
+$state-danger-bg: #f2dede;
+$state-danger-border: darken(adjust-hue($state-danger-bg, -10), 5%);
 
 
 

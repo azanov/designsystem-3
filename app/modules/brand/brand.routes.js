@@ -49,7 +49,7 @@
       templateUrl: 'modules/brand/templates/brand-typography.html',
       controller: 'TypographyController as type',
       data: {
-        pageTitle: 'Brand - Typogrphy'
+        pageTitle: 'Brand - Typography'
       }
     })
 
