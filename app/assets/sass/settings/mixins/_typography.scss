@@ -307,6 +307,7 @@ ol {
 }
 
 .btn:focus {
+  // scss-lint:disable ImportantRule
   outline: none !important;
 }
 

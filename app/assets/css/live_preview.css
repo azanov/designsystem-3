@@ -249,4 +249,8 @@ ul.swatches li.color-swatch:nth-child(n+6) { color: #fff; }
 .styleguide footer { display: none; }
 .styleguide section { margin-top: 50px; }
 
+.status.status-success { color: #3e53a4; }
+.status.status-error { color: #f32d2d; }
+.status.status-warning { color: #ef8200; }
+
 /*# sourceMappingURL=live_preview.css.map */

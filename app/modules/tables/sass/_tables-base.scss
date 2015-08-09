@@ -2,27 +2,26 @@
 
 
 // for some reason, bootstrap will not do this with the variables.
-.table-hover > tbody > tr:hover > td,
-.table-hover > tbody > tr:hover > th {
-  background-color: #d8dded;
+.table-hover >tbody >tr:hover >td,
+.table-hover >tbody >tr:hover >th {
+  background-color: #f2f4fa;
 }
-.table-hover > tbody > tr:active > td,
-.table-hover > tbody > tr:active > th,
-.table-hover > tbody > tr.active > td,
-.table-hover > tbody > tr.active > th,
- {
-  background-color: #B2BADB;
+.table-hover >tbody >tr:active >td,
+.table-hover >tbody >tr:active >th,
+.table-hover >tbody >tr.active >td,
+.table-hover >tbody >tr.active >th, {
+  background-color: #b2badb;
 }
 
-
-.table-striped>tbody>tr:nth-child(odd) {
+.table-striped >tbody >tr:nth-child(odd) {
   background-color: $table-bg-accent;
 }
 // table transitions for hovers
-.table> tbody > tr > td,
-.table > tbody > tr > th {
-  transition: background-color 0.3s;
+.table >tbody >tr >td,
+.table >tbody >tr >th {
+  transition: background-color .3s;
 }
+
 .table-clickable {
   tr {
     cursor: pointer;
@@ -34,20 +33,20 @@ th.centered {
 }
 .table-condensed-extra {
   font-size: 14px;
-  > thead,
-  > tbody,
-  > tfoot {
-    > tr {
-      > th,
-      > td {
+  >thead,
+  >tbody,
+  >tfoot {
+    >tr {
+      >th,
+      >td {
         padding: $table-condensed-extra-cell-padding;
       }
     }
   }
 }
-.table>thead>tr>th,
-.table>tbody>tr>th,
-.table>tfoot>tr>th,
+.table >thead >tr >th,
+.table >tbody >tr >th,
+.table >tfoot >tr >th,
 .table thead th {
   font-family: $font-family-sans-serif;
   font-weight: bold;
@@ -58,21 +57,8 @@ th.centered {
     color: inherit;
   }
 }
-.table > tbody > tr > td,
-.table > tbody > tr > th {
-  transition: background-color 0.3s;
-}
-td.currency {
-  text-align: right;
-}
-th.currency {
-  text-align: center;
-}
-
-
 
 .table {
-
   .table-row-selected {
     td {
       background-color: #c5cbe4;
@@ -80,24 +66,20 @@ th.currency {
   }
 
   .table-details {
-
     td {
       padding: 0;
-     background-color: $pb-gray-50;
+      background-color: $pb-gray-50;
       border-top-width: 0;
-
     }
 
     >td {
       background: linear-gradient(to bottom, rgba(203, 203, 203, 1) -5%, rgba(240, 240, 240, 1) 6%, rgba(240, 240, 240, 1) 100%);
-
     }
 
 
     .table-details-content {
       padding: 10px;
     }
-
   }
 
   &.table-border-bottom {
@@ -108,19 +90,27 @@ th.currency {
       }
     }
   }
-
 }
 
-
-// used for example table status, move to Live preview sass
-.status {
-  &.status-success {
-    color: $brand-primary;
+.table-bordered {
+  border: 1px solid $table-border-color;
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        border: 1px solid $table-border-color;
+      }
+    }
   }
-  &.status-error {
-    color: $brand-danger;
-  }
-  &.status-warning {
-    color: $brand-warning;
+  > thead > tr {
+    > th,
+    > td {
+      background-color: #f8f8f8;
+      font-family: $font-family-ps-regular;
+      color: $pb-gray-700;
+      font-weight: normal;
+    }
   }
 }

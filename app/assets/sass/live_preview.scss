@@ -210,7 +210,7 @@ ul.swatches {
 
   li.color-swatch {
     height: 30px;
-    margin-bottom: 0; 
+    margin-bottom: 0;
     text-align: right;
     padding: 5px 10px;
     color: #000;
@@ -479,6 +479,19 @@ ul.swatches {
   }
 }
 
+
+// used for example table status, move to Live preview sass
+.status {
+  &.status-success {
+    color: $brand-primary;
+  }
+  &.status-error {
+    color: $brand-danger;
+  }
+  &.status-warning {
+    color: $brand-warning;
+  }
+}
 
 // .chord-display {
 //   margin-bottom: 20px;
