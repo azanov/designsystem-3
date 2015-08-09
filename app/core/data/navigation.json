@@ -110,9 +110,6 @@
       "label": "Color",
       "value": "brand.color"
     }, {
-      "label": "Logo",
-      "value": "brand.logo"
-    }, {
       "label": "Font",
       "value": "brand.font"
     }, {

@@ -29,6 +29,7 @@ h1.alt, .h1.alt { color: #2e2e2e; }
 h2 { font-size: 20px; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-weight: normal; color: #2e2e2e; }
 h2.ko { color: fff; }
 h2.alt { color: #4e4e4e; }
+h2.docs { color: #cf0989; }
 
 h3 { font-size: 16px; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-weight: normal; color: #2e2e2e; }
 h3.ko { color: fff; }
@@ -37,6 +38,7 @@ h3.alt { color: #4e4e4e; }
 h4 { font-size: 14px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: normal; color: #2e2e2e; }
 h4.ko { color: fff; }
 h4.alt { color: #4e4e4e; }
+h4.docs { color: #cf0989; }
 
 h5 { font-size: 14px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: bold; color: #3e53a4; }
 h5.ko { color: fff; }

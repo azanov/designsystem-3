@@ -159,6 +159,9 @@ h2 {
   &.alt {
     color: $header-color-alt;
   }
+  &.docs { // for use in Documentation only!
+    color: $pb-magenta;
+  }
 }
 
 h3 {
@@ -184,6 +187,9 @@ h4 {
   }
   &.alt {
     color: $header-color-alt;
+  }
+  &.docs { // for use in Documentation only!
+    color: $pb-magenta;
   }
 }
 
