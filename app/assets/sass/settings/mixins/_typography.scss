@@ -88,6 +88,17 @@ $headings-color: inherit;
 $btn-font-weight: normal;
 
 
+
+//-------------------------------
+
+$font-size-base: 14px;
+$font-size-large: ceil(($font-size-base * 1.15)); // ~16px
+$font-size-small: ceil(($font-size-base * .85)); // ~12px
+$font-size-xsmall: ceil(($font-size-base * .72)); // ~10px
+
+//----------------------------
+
+
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 
 // easily change something to serif or sans-serif
@@ -95,7 +106,6 @@ $btn-font-weight: normal;
 .serif p {
   font-family: $font-family-serif;
 }
-
 .sans,
 .sans p {
   font-family: $font-family-sans-serif;
@@ -119,17 +129,20 @@ a {
     color: $link-hover;
   }
   &.read-more {
-    font-size: $font-size-base - 2;
-    // 2 px smaller
+    font-size: $font-size-base - 2; // 2 px smaller
     white-space: nowrap;
     &:after {
-      content: '\2026';
-      // ellipsis
+      content: '\2026'; // ellipsis
     }
   }
 }
 
-h1 a,  h2 a, h3 a, h4 a, h5 a, h6 a {
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
   color: inherit;
 }
 
@@ -159,7 +172,8 @@ h2 {
   &.alt {
     color: $header-color-alt;
   }
-  &.docs { // for use in Documentation only!
+  &.docs {
+    // for use in Documentation only!
     color: $pb-magenta;
   }
 }
@@ -188,7 +202,8 @@ h4 {
   &.alt {
     color: $header-color-alt;
   }
-  &.docs { // for use in Documentation only!
+  &.docs {
+    // for use in Documentation only!
     color: $pb-magenta;
   }
 }
@@ -219,15 +234,17 @@ h6 {
   }
 }
 
+.subheader {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: bold;
+  color: $header-color;
+  .alt {
+    color: $header-color-alt;
+  }
+}
 
-//-------------------------------
 
-$font-size-base: 14px;
-$font-size-large: ceil(($font-size-base * 1.15)); // ~16px
-$font-size-small: ceil(($font-size-base * .85)); // ~12px
-$font-size-xsmall: ceil(($font-size-base * .72)); // ~10px
-
-//----------------------------
 
 
 // when you need light text
@@ -272,6 +289,7 @@ body {
     color: $brand-danger;
   }
 }
+
 
 dt {
   margin-top: 10px;
@@ -383,9 +401,15 @@ a.list-group-item {
   font-size: $font-size-large;
 }
 
-.text-small, small,
+small,
+.text-small,
 .small {
   font-size: $font-size-small;
+}
+.doc-note {
+  font-size: $font-size-small;
+  font-style: italic;
+  color: $pb-magenta;
 }
 
 .text-xs {

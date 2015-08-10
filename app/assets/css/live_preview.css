@@ -48,6 +48,9 @@ h6 { font-size: 12px; font-family: "Helvetica Neue", Helvetica, Arial, sans-seri
 h6.ko { color: fff; }
 h6.alt { color: #4e4e4e; }
 
+.subheader { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; color: #2e2e2e; }
+.subheader .alt { color: #4e4e4e; }
+
 .ps-light { font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; font-weight: normal; font-style: normal; }
 .ps-light.italic, .ps-light em, .ps-light i { font-family: "PrecisionSans_W_LtIt", "Helvetica Neue", Arial, sans-serif; }
 .ps-light b, .ps-light strong { font-family: "PrecisionSans_W_Md", "Helvetica Neue", Arial, sans-serif; }
@@ -95,7 +98,9 @@ ul, ol { margin-top: 0; margin-bottom: 10px; margin-left: 0; padding-left: 1.5em
 
 .text-large { font-size: 17px; }
 
-.text-small, small, .small { font-size: 12px; }
+small, .text-small, .small { font-size: 12px; }
+
+.doc-note { font-size: 12px; font-style: italic; color: #cf0989; }
 
 .text-xs { font-size: 11px; }
 
@@ -131,6 +136,9 @@ ul, ol { margin-top: 0; margin-bottom: 10px; margin-left: 0; padding-left: 1.5em
 
 .preview-code pre { border-color: #e3e3e3; border-top-left-radius: 0; border-top-right-radius: 0; margin: 0; padding: 10px; }
 .preview-code pre code { background: transparent; }
+
+.type-samples h1, .type-samples h2, .type-samples h3, .type-samples h4, .type-samples h5, .type-samples h6 { margin: 0; }
+.type-samples tr > td:last-child span { padding: 5px; border-radius: 3px; }
 
 @-webkit-keyframes kenbrns { 0% { background-position: 0 -3em; background-size: 120%; }
   100% { background-position: -1em 0; background-size: 105%; } }
