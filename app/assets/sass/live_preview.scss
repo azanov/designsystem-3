@@ -75,11 +75,28 @@
     }
     li {
       border-radius: 3px;
-      margin-right: 75px;
+      margin: 0 75px 0 0;
+      padding: 5px 10px;
       position: relative;
+      cursor: pointer;
       width: 30px;
       height: 30px;
+      color: transparent;
       border: 1px solid $pb-gray;
+      transition: all .4s ease, color .5s  ease;
+
+      &:hover {
+        color: #fff;
+        width: 80px;
+        &:after {
+          left: 83px;
+        }
+      }
+      &:last-child {
+        &:hover {
+          color: #2e2e2e;
+        }
+      }
       &:after {
         content: attr(tagname);
         font-family: $font-family-monospace;
@@ -93,7 +110,6 @@
     }
   }
 }
-
 
 // ken burns panning effect
 @keyframes kenbrns {

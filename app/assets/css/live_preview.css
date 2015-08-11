@@ -31,7 +31,7 @@ h2.ko { color: fff; }
 h2.alt { color: #4e4e4e; }
 h2.docs { color: #cf0989; }
 
-h3 { font-size: 18px; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-weight: normal; color: #2e2e2e; }
+h3 { font-size: 16px; font-family: "PrecisionSans_W_Bd", "Helvetica Neue", Arial, sans-serif; font-weight: normal; color: #2e2e2e; }
 h3.ko { color: fff; }
 h3.alt { color: #4e4e4e; }
 
@@ -50,6 +50,8 @@ h6.alt { color: #4e4e4e; }
 
 .subheader { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; color: #2e2e2e; }
 .subheader.alt { color: #4e4e4e; }
+
+.caption { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12px; font-weight: normal; color: #4e4e4e; }
 
 .ps-light { font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; font-weight: normal; font-style: normal; }
 .ps-light.italic, .ps-light em, .ps-light i { font-family: "PrecisionSans_W_LtIt", "Helvetica Neue", Arial, sans-serif; }
@@ -140,7 +142,10 @@ small, .text-small, .small { font-size: 12px; }
 .type-samples h1, .type-samples h2, .type-samples h3, .type-samples h4, .type-samples h5, .type-samples h6 { margin: 0; }
 .type-samples tr > td:last-child { font-family: Menlo, Consolas, Monaco, "Courier New", monospace; }
 .type-samples tr > td:last-child ul { margin-left: 15px; }
-.type-samples tr > td:last-child li { border-radius: 3px; margin-right: 75px; position: relative; width: 30px; height: 30px; border: 1px solid #c0c0c0; }
+.type-samples tr > td:last-child li { border-radius: 3px; margin: 0 75px 0 0; padding: 5px 10px; position: relative; cursor: pointer; width: 30px; height: 30px; color: transparent; border: 1px solid #c0c0c0; transition: all .4s ease, color .5s  ease; }
+.type-samples tr > td:last-child li:hover { color: #fff; width: 80px; }
+.type-samples tr > td:last-child li:hover:after { left: 83px; }
+.type-samples tr > td:last-child li:last-child:hover { color: #2e2e2e; }
 .type-samples tr > td:last-child li:after { content: attr(tagname); font-family: Menlo, Consolas, Monaco, "Courier New", monospace; color: #717171; display: block; position: absolute; left: 33px; top: 5px; font-size: 14px; }
 
 @-webkit-keyframes kenbrns { 0% { background-position: 0 -3em; background-size: 120%; }

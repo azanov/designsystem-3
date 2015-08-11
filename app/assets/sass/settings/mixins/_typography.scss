@@ -179,8 +179,8 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
-  font-family: $font-family-ps-regular;
+  font-size: 16px;
+  font-family: $font-family-ps-bold;
   font-weight: normal;
   color: $header-color;
   &.ko {
@@ -242,6 +242,13 @@ h6 {
   &.alt {
     color: $header-color-alt;
   }
+}
+
+.caption {
+  font-family: $font-family-base;
+  font-size: $font-size-small;
+  font-weight: normal;
+  color: $pb-gray-500;
 }
 
 
