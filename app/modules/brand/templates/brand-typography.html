@@ -9,130 +9,98 @@
 
   <div class="row">
     <div class="col-md-12">
-  <table class="table table-bordered type-samples">
-    <thead>
-      <tr>
-        <th>Type of header</th>
-        <th>Use of header</th>
-        <th width="465">Color variation classes: Regular, Alt, Knockout (hover for hex)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><h1>H1 - Precision Sans Light 32</h1></td>
-        <td>
-          Main head
-        </td>
-        <td>
-          <ul class="list-inline">
-            <li class="bg-pb-magenta" tagname="H1">#CF0989</li>
-            <li class="bg-pb-gray-700" tagname="H1.alt">#2E2E2E</li>
-            <li tagname="H1.ko">#FFFFFF</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td><h2>H2 - Precision Sans Regular 20</h2></td>
-        <td>Section Header / Product Title</td>
-        <td>
-          <ul class="list-inline">
-            <li class="bg-pb-gray-700 white" tagname="H2">#2E2E2E</li>
-            <li class="bg-pb-gray-500 white" tagname="H2.alt">#4E4E4E</li>
-            <li tagname="H2.ko">#FFFFFF</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td><h3>H3 - Precision Sans Bold 16</h3></td>
-        <td>Sub Section Header</td>
-        <td>
-          <ul class="list-inline">
-            <li class="bg-pb-gray-700 white" tagname="H3">#2E2E2E</li>
-            <li class="bg-pb-gray-500 white" tagname="h3.alt">#4E4E4E</li>
-            <li tagname="H3.ko">#FFFFFF</li>
-          </ul>
-        </td>
-      </tr>
-      <!-- <tr>
-        <td><h4>H4 - Precision Sans Bold 16</h4></td>
-        <td>Sub Header</td>
-        <td>
-          <ul class="list-inline">
-            <li class="bg-pb-gray-700 white" tagname="H4"></li>
-            <li class="bg-pb-gray-500 white" tagname="H4.alt"></li>
-            <li tagname="H4.ko"></li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td><h5>H5 - Precision Sans Bold 14</h5></td>
-        <td>Item - Active State<br>
-          <span class="doc-note"> Notes: Use product primary color.</span></td>
-        <td>
-          <ul class="list-inline">
-            <li class="bg-pb-blue white" tagname="H5"></li>
-            <li class="bg-pb-gray-500 white" tagname="H5.alt"></li>
-            <li tagname="H5.ko"></li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td><h6>H6 - Helvetica Neue Regular 12</h6></td>
-        <td>Captions</td>
-        <td>
-          <ul class="list-inline">
-            <li class="bg-pb-gray-700 white" tagname="H6"></li>
-            <li class="bg-pb-gray-500 white" tagname="H6.alt"></li>
-            <li tagname="H6.ko"></li>
-          </ul>
-        </td>
-      </tr> -->
-    </tbody>
-  </table>
+
+      <h3>Headers</h3>
+      <table class="table table-bordered type-samples">
+        <thead>
+          <tr>
+            <th>Tag</th>
+            <th>Use of header</th>
+            <th>Color variation classes: Regular, Alt, Knockout</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in type.header">
+            <td class="{{item.extraclass}}">{{item.tag}} &ndash; {{item.font}}</td>
+            <td>{{item.use}}</td>
+            <td>
+              {{item.tag}}{{item.class}}
+              <span class="swatch" style="background-color:{{item.color}}; color:#fff">{{item.color}}</span>,
+              {{item.tag}}{{item.altclass}}
+              <span class="swatch" style="background-color:{{item.altcolor}}; color:#fff">{{item.altcolor}}</span>,
+              {{item.tag}}.ko
+              <span class="swatch" style="background-color:#fff; color:#2e2e2e">#FFFFFF</span>
+            </td>
+
+          </tr>
+
+        </tbody>
+      </table>
 
 
+      <h3>Body Copy</h3>
+      <table class="table table-bordered type-samples">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Font/Size</th>
+            <th>Class</th>
+            <th>Variable name</th>
+            <th>Color</th>
+          </tr>
+        </thead>
+        <tr ng-repeat="item in type.bodyCopy">
+          <td class="{{item.class}}">{{item.desc}}</td>
+          <td>{{item.font}}</td>
+          <td>{{item.class}}</td>
+          <td>{{item.variable}}</td>
+          <td>
+            <span class="swatch" ng-if="item.color != '#FFFFFF'" style="background-color:{{item.color}}; color:#fff">{{item.color}}</span>
+            <span class="swatch" ng-if="item.color == '#FFFFFF'" style="background-color:#fff; color:#2e2e2e">#FFFFFF</span>
+          </td>
+        </tr>
+      </table>
 
+      <h3>Navigation</h3>
+      <table class="table table-bordered type-samples">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Font/Size</th>
+            <th>Color</th>
+          </tr>
+        </thead>
+        <tr ng-repeat="item in type.navigationItems">
+          <td class="psr14">{{item.desc}}</td>
+          <td>Precision Sans Regular 14px</td>
+          <td>
+            <span class="swatch" ng-if="item.color != '#FFFFFF'" style="background-color:{{item.color}}; color:#fff">{{item.color}}</span>
+            <span class="swatch" ng-if="item.color == '#FFFFFF'" style="background-color:#fff; color:#2e2e2e">#FFFFFF</span>
+          </td>
+        </tr>
+      </table>
 
+      <h3>Forms &amp; Inputs</h3>
+      <table class="table table-bordered type-samples">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Font/Size</th>
+            <th>Color</th>
+          </tr>
+        </thead>
+        <tr ng-repeat="item in type.formsInputs">
+          <td class="psr14">{{item.desc}}</td>
+          <td>Precision Sans Regular 14px</td>
+          <td>
+            <span class="swatch" ng-if="item.color != '#FFFFFF'" style="background-color:{{item.color}}; color:#fff">{{item.color}}</span>
+            <span class="swatch" ng-if="item.color == '#FFFFFF'" style="background-color:#fff; color:#2e2e2e">#FFFFFF</span>
+          </td>
+        </tr>
+      </table>
 
-  <table class="table table-bordered type-samples">
-      <thead>
-      <tr>
-        <th>Other typography</th>
-        <th>Class or Color</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>Body text - Helvetica Neue Regular 14</td>
-        <td>
-          <span class="$pb-gray-400">$text-color</span>
-        </td>
-      </tr>
-      <tr>
-        <td><div class="caption">Caption - Hevetica Neue 12</div></td>
-        <td>.caption</td>
-      </tr>
-      <tr>
-        <td><span class="text-large">Large Body text- Helvetica Neue 16</span></td>
-        <td>.text-large</td>
-      </tr>
-      <tr>
-        <td><span class="text-small">Small Body text - Helvetica Neue 12</span></td>
-        <td>.text-small</td>
-      </tr>
-      <tr>
-        <td><span class="text-xs">X- Small Body text: copyrights, mouse type -  Helvetica Neue 10</span></td>
-        <td>.text-xs</td>
-      </tr>
-      <tr>
-        <td><a href="">Hyperlink - underlying font</a></td>
-        <td>$link-color</td>
-      </tr>
-    </tbody>
-  </table>
-</div></div>
-
-
+    </div>
+  </div>
 
   <div class="row">
     <div class="col-md-6">

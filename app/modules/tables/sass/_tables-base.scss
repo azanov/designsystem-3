@@ -22,6 +22,10 @@
   transition: background-color .3s;
 }
 
+.table-fixed {
+  table-layout: fixed;
+}
+
 .table-clickable {
   tr {
     cursor: pointer;
@@ -92,26 +96,38 @@ th.centered {
   }
 }
 
-.table-bordered {
+.table-bordered >tbody >tr >td,
+.table-bordered >tbody >tr >th,
+.table-bordered >tfoot >tr >td,
+.table-bordered >tfoot >tr >th,
+.table-bordered >thead >tr >td,
+.table-bordered >thead >tr >th {
   border: 1px solid $table-border-color;
+}
 
-  > thead,
-  > tbody,
-  > tfoot {
-    > tr {
-      > th,
-      > td {
-        border: 1px solid $table-border-color;
+.table-bordered {
+
+  >tbody,
+  >tfoot {
+    >tr {
+
+      >td {
+        border-right: 1px solid $table-vertical-cell-dividers;
+        &:last-child {
+          border-right: 1px solid $table-border-color;        
+        }
       }
     }
   }
-  > thead > tr {
-    > th,
-    > td {
+  >thead >tr {
+    >th,
+    >td {
       background-color: #f8f8f8;
       font-family: $font-family-ps-regular;
       color: $pb-gray-700;
       font-weight: normal;
+      border-bottom: 1px solid $table-border-color;
     }
   }
+  border: 1px solid $table-border-color;
 }

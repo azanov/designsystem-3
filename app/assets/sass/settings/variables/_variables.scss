@@ -181,7 +181,8 @@ $table-bg: #fff;
 //** Background color used for `.table-striped`.
 $table-bg-accent: $pb-gray-50;
 //** Border color for table and cell borders.
-$table-border-color: #bfbfbf;
+$table-border-color: #C5CBE3;
+$table-vertical-cell-dividers: #EAEDF8;
 //** Background color used for `.table-hover`.
 $table-bg-hover: tint($pb-blue, 10%);
 $table-bg-active: tint($pb-blue, 20%);

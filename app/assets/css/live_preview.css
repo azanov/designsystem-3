@@ -26,14 +26,14 @@ h1, .h1 { font-size: 32px; font-weight: normal; font-family: "PrecisionSans_W_Lt
 h1.ko, .h1.ko { color: #fff; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; }
 h1.alt, .h1.alt { color: #2e2e2e; }
 
-h2 { font-size: 20px; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-weight: normal; color: #2e2e2e; }
-h2.ko { color: fff; }
-h2.alt { color: #4e4e4e; }
-h2.docs { color: #cf0989; }
+h2, .h2 { font-size: 20px; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-weight: normal; color: #2e2e2e; }
+h2.ko, .h2.ko { color: fff; }
+h2.alt, .h2.alt { color: #4e4e4e; }
+h2.docs, .h2.docs { color: #cf0989; }
 
-h3 { font-size: 16px; font-family: "PrecisionSans_W_Bd", "Helvetica Neue", Arial, sans-serif; font-weight: normal; color: #2e2e2e; }
-h3.ko { color: fff; }
-h3.alt { color: #4e4e4e; }
+h3, .h3 { font-size: 18px; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-weight: normal; color: #2e2e2e; }
+h3.ko, .h3.ko { color: fff; }
+h3.alt, .h3.alt { color: #4e4e4e; }
 
 h4 { font-size: 16px; font-family: "PrecisionSans_W_Bd", "Helvetica Neue", Arial, sans-serif; font-weight: normal; color: #2e2e2e; }
 h4.ko { color: fff; }
@@ -50,8 +50,6 @@ h6.alt { color: #4e4e4e; }
 
 .subheader { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; color: #2e2e2e; }
 .subheader.alt { color: #4e4e4e; }
-
-.caption { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12px; font-weight: normal; color: #4e4e4e; }
 
 .ps-light { font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; font-weight: normal; font-style: normal; }
 .ps-light.italic, .ps-light em, .ps-light i { font-family: "PrecisionSans_W_LtIt", "Helvetica Neue", Arial, sans-serif; }
@@ -88,6 +86,8 @@ ul, ol { margin-top: 0; margin-bottom: 10px; margin-left: 0; padding-left: 1.5em
 .nav-tabs > li > a, .nav-pills > li > a { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; }
 
 .help-block { color: #9b9b9b; }
+
+.psr14 { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-weight: normal; font-size: 14px; }
 
 .panel-heading { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; }
 .panel-heading td, .panel-heading th { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
@@ -140,13 +140,9 @@ small, .text-small, .small { font-size: 12px; }
 .preview-code pre code { background: transparent; }
 
 .type-samples h1, .type-samples h2, .type-samples h3, .type-samples h4, .type-samples h5, .type-samples h6 { margin: 0; }
+.type-samples tr > td:first-child { width: 40%; }
 .type-samples tr > td:last-child { font-family: Menlo, Consolas, Monaco, "Courier New", monospace; }
-.type-samples tr > td:last-child ul { margin-left: 15px; }
-.type-samples tr > td:last-child li { border-radius: 3px; margin: 0 75px 0 0; padding: 5px 10px; position: relative; cursor: pointer; width: 30px; height: 30px; color: transparent; border: 1px solid #c0c0c0; transition: all .4s ease, color .5s  ease; }
-.type-samples tr > td:last-child li:hover { color: #fff; width: 80px; }
-.type-samples tr > td:last-child li:hover:after { left: 83px; }
-.type-samples tr > td:last-child li:last-child:hover { color: #2e2e2e; }
-.type-samples tr > td:last-child li:after { content: attr(tagname); font-family: Menlo, Consolas, Monaco, "Courier New", monospace; color: #717171; display: block; position: absolute; left: 33px; top: 5px; font-size: 14px; }
+.type-samples tr > td:last-child .swatch { display: inline-block; min-width: 20px; height: 20px; border: 1px solid #c0c0c0; padding: 2px 5px; font-size: 12px; line-height: 1.2; border-radius: 3px; }
 
 @-webkit-keyframes kenbrns { 0% { background-position: 0 -3em; background-size: 120%; }
   100% { background-position: -1em 0; background-size: 105%; } }

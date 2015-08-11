@@ -21,6 +21,7 @@ var gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'),
   filter = require('gulp-filter'),
   plumber = require('gulp-plumber'),
+  postcss = require('gulp-postcss'),
   del = require('del'),
   gutil = require('gulp-util'),
   printfiles = require('gulp-print'),
@@ -68,6 +69,23 @@ gulp.task('sass', function() {
     }));
 });
 
+// experimental::
+// gulp.task('style', function(done) {
+//   return sass('app/assets/sass/', {
+//       sourcemap: true
+//     })
+//     .on('error', done)
+//     .pipe(postcss([autoprefixer({
+//       browsers: ['last 2 versions']
+//     })]))
+//     .on('error', done)
+//     .pipe(sourcemaps.write('.'))
+//     .pipe(gulp.dest('app/assets/css/'))
+//     .pipe(reload({
+//       stream: true
+//     }));
+// });
+
 gulp.task('sass-nomaps', function() {
   return sass('app/assets/sass/', {
       sourcemap: false,
@@ -77,7 +95,9 @@ gulp.task('sass-nomaps', function() {
     .pipe(autoprefixer({
       browsers: ['last 2 versions']
     }))
-    .pipe(header(banner, { pkg: pkg }))
+    .pipe(header(banner, {
+      pkg: pkg
+    }))
     .pipe(gulp.dest('build/assets/css'));
 });
 
