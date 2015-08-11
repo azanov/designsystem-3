@@ -49,7 +49,7 @@ h6.ko { color: fff; }
 h6.alt { color: #4e4e4e; }
 
 .subheader { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; color: #2e2e2e; }
-.subheader .alt { color: #4e4e4e; }
+.subheader.alt { color: #4e4e4e; }
 
 .ps-light { font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; font-weight: normal; font-style: normal; }
 .ps-light.italic, .ps-light em, .ps-light i { font-family: "PrecisionSans_W_LtIt", "Helvetica Neue", Arial, sans-serif; }
@@ -137,10 +137,11 @@ small, .text-small, .small { font-size: 12px; }
 .preview-code pre { border-color: #e3e3e3; border-top-left-radius: 0; border-top-right-radius: 0; margin: 0; padding: 10px; }
 .preview-code pre code { background: transparent; }
 
-.type-samples { table-layout: fixed; }
 .type-samples h1, .type-samples h2, .type-samples h3, .type-samples h4, .type-samples h5, .type-samples h6 { margin: 0; }
+.type-samples tr > td:last-child { font-family: Menlo, Consolas, Monaco, "Courier New", monospace; }
 .type-samples tr > td:last-child ul { margin-left: 15px; }
-.type-samples tr > td:last-child li, .type-samples tr > td:last-child span { padding: 5px; border-radius: 3px; margin-right: 15px; min-width: 50px; text-align: center; font-family: Menlo, Consolas, Monaco, "Courier New", monospace; border: 1px solid #c0c0c0; display: inline-block; }
+.type-samples tr > td:last-child li { border-radius: 3px; margin-right: 75px; position: relative; width: 30px; height: 30px; border: 1px solid #c0c0c0; }
+.type-samples tr > td:last-child li:after { content: attr(tagname); font-family: Menlo, Consolas, Monaco, "Courier New", monospace; color: #717171; display: block; position: absolute; left: 33px; top: 5px; font-size: 14px; }
 
 @-webkit-keyframes kenbrns { 0% { background-position: 0 -3em; background-size: 120%; }
   100% { background-position: -1em 0; background-size: 105%; } }

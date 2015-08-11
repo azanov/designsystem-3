@@ -239,7 +239,7 @@ h6 {
   font-size: $font-size-base;
   font-weight: bold;
   color: $header-color;
-  .alt {
+  &.alt {
     color: $header-color-alt;
   }
 }

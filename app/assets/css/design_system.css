@@ -49,7 +49,7 @@ h6.ko { color: fff; }
 h6.alt { color: #4e4e4e; }
 
 .subheader { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; color: #2e2e2e; }
-.subheader .alt { color: #4e4e4e; }
+.subheader.alt { color: #4e4e4e; }
 
 .ps-light { font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; font-weight: normal; font-style: normal; }
 .ps-light.italic, .ps-light em, .ps-light i { font-family: "PrecisionSans_W_LtIt", "Helvetica Neue", Arial, sans-serif; }
