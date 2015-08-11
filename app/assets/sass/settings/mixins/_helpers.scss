@@ -54,6 +54,9 @@ $directions: (top, bottom);
   margin: 0;
 }
 
+.header-color {color: $header-color;}
+.header-color-alt {color: $header-color-alt;}
+
 // color classes, first foreground
 .white { color: #fff; }
 .pb-medium-blue-300 { color: $pb-medium-blue-300;}
@@ -98,6 +101,8 @@ $directions: (top, bottom);
 .pb-bg5 { color: $pb-bg5;}
 
 // then background-color
+.bg-header-color {background-color: $header-color;}
+.bg-header-color-alt {background-color: $header-color-alt;}
 .bg-white { background-color: #fff; }
 .bg-pb-medium-blue-300 { background-color: $pb-medium-blue-300;}
 .bg-pb-medium-blue { background-color: $pb-medium-blue;}

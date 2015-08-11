@@ -11,7 +11,7 @@
 
 .sans, .sans p { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-code, .code { font-family: "Source Code Pro", Menlo, Consolas, Monaco, "Courier New", monospace; }
+code, .code { font-family: Menlo, Consolas, Monaco, "Courier New", monospace; }
 
 hr { margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #f8f8f8; }
 
@@ -31,16 +31,16 @@ h2.ko { color: fff; }
 h2.alt { color: #4e4e4e; }
 h2.docs { color: #cf0989; }
 
-h3 { font-size: 16px; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-weight: normal; color: #2e2e2e; }
+h3 { font-size: 18px; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-weight: normal; color: #2e2e2e; }
 h3.ko { color: fff; }
 h3.alt { color: #4e4e4e; }
 
-h4 { font-size: 14px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: normal; color: #2e2e2e; }
+h4 { font-size: 16px; font-family: "PrecisionSans_W_Bd", "Helvetica Neue", Arial, sans-serif; font-weight: normal; color: #2e2e2e; }
 h4.ko { color: fff; }
 h4.alt { color: #4e4e4e; }
 h4.docs { color: #cf0989; }
 
-h5 { font-size: 14px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: bold; color: #3e53a4; }
+h5 { font-size: 14px; font-family: "PrecisionSans_W_Bd", "Helvetica Neue", Arial, sans-serif; font-weight: normal; color: #3e53a4; }
 h5.ko { color: fff; }
 h5.alt { color: #2e2e2e; }
 
@@ -137,8 +137,10 @@ small, .text-small, .small { font-size: 12px; }
 .preview-code pre { border-color: #e3e3e3; border-top-left-radius: 0; border-top-right-radius: 0; margin: 0; padding: 10px; }
 .preview-code pre code { background: transparent; }
 
+.type-samples { table-layout: fixed; }
 .type-samples h1, .type-samples h2, .type-samples h3, .type-samples h4, .type-samples h5, .type-samples h6 { margin: 0; }
-.type-samples tr > td:last-child span { padding: 5px; border-radius: 3px; }
+.type-samples tr > td:last-child ul { margin-left: 15px; }
+.type-samples tr > td:last-child li, .type-samples tr > td:last-child span { padding: 5px; border-radius: 3px; margin-right: 15px; min-width: 50px; text-align: center; font-family: Menlo, Consolas, Monaco, "Courier New", monospace; border: 1px solid #c0c0c0; display: inline-block; }
 
 @-webkit-keyframes kenbrns { 0% { background-position: 0 -3em; background-size: 120%; }
   100% { background-position: -1em 0; background-size: 105%; } }
@@ -263,4 +265,6 @@ ul.swatches li.color-swatch:nth-child(n+6) { color: #fff; }
 .status.status-error { color: #f32d2d; }
 .status.status-warning { color: #ef8200; }
 
-/*# sourceMappingURL=live_preview.css.map */
+
+
+/*# sourceMappingURL=maps/live_preview.css.map */

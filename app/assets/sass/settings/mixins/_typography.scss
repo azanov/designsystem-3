@@ -73,7 +73,7 @@ $icon-font-svg-id: 'glyphicons_halflingsregular';
 $font-family-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family-serif: Georgia, Times, 'Times New Roman', serif;
 $font-family-base: $font-family-sans-serif;
-$font-family-monospace: 'Source Code Pro', Menlo, Consolas, Monaco, 'Courier New', monospace;
+$font-family-monospace: Menlo, Consolas, Monaco, 'Courier New', monospace;
 $font-family-ps-light: 'PrecisionSans_W_Lt', 'Helvetica Neue', Arial, sans-serif;
 $font-family-ps-light-italic: 'PrecisionSans_W_LtIt', 'Helvetica Neue', Arial, sans-serif;
 $font-family-ps-regular: 'PrecisionSans_W_Rg', 'Helvetica Neue', Arial, sans-serif;
@@ -179,7 +179,7 @@ h2 {
 }
 
 h3 {
-  font-size: 16px;
+  font-size: 18px;
   font-family: $font-family-ps-regular;
   font-weight: normal;
   color: $header-color;
@@ -192,8 +192,8 @@ h3 {
 }
 
 h4 {
-  font-size: 14px;
-  font-family: $font-family-sans-serif;
+  font-size: 16px;
+  font-family: $font-family-ps-bold;
   font-weight: normal;
   color: $header-color;
   &.ko {
@@ -210,8 +210,8 @@ h4 {
 
 h5 {
   font-size: 14px;
-  font-family: $font-family-sans-serif;
-  font-weight: bold;
+  font-family: $font-family-ps-bold;
+  font-weight: normal;
   color: $brand-primary;
   &.ko {
     color: fff;
