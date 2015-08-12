@@ -8,7 +8,6 @@
 
 // to move body down below fixed header
 body {
-  padding-top: 100px;
   // .navbar {
   //   >.container-fluid {
   //     padding: 0 40px;
@@ -17,13 +16,6 @@ body {
 }
 
 
-// page headers, bootstrap class modified by FA
-// used on DS guide pages
-.main-header {
-  padding-bottom: 25px;
-  margin-bottom: 80px;
-  border-bottom: 1px solid #e1e1e1;
-}
 
 
 
@@ -44,6 +36,7 @@ body {
 // }
 
 // using this instead for footer glue
-.site-content {
-  min-height: 82vh;
-}
+// .site-content {
+//   margin-top: 0;padding-top: 0;
+//   min-height: 82vh;
+// }

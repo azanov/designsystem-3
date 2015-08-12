@@ -6,6 +6,66 @@
 @import 'settings/mixins/mixins';
 // @import 'settings/mixins/colors';
 @import 'settings/mixins/typography';
+@import 'base/gradients';
+
+
+// for FA documentation pages.
+.doc-hero {
+  @extend %gradient-blue-purple-magenta;
+  height: 300px;
+  border-top: 1px solid rgba(255, 255, 255, .5);
+  margin-top: 50px;
+  margin-bottom: 115px;
+  position: relative;
+  .hero-header {
+    margin-top: 115px;
+    .eyebrow {
+      font-family: $font-family-ps-regular;
+      font-size: 16px;
+      color: rgba(255, 255, 255, .5);
+    }
+    h1 {
+      font-size: 40px;
+      color: #fff;
+      font-family: $font-family-ps-light; //NOTE: global spec for h1.ko is reg not light
+      margin-top: 5px;
+    }
+  }
+  .jump-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, .1);
+    color: rgba(255, 255, 255, 1);
+    font-family: $font-family-ps-regular;
+    font-size: 16px;
+    .jump-menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 20px 0 0;
+      li {
+        float: left;
+        margin-right: 60px;
+        a {
+          color: inherit;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+// page headers, bootstrap class modified by FA
+// used on DS guide pages
+.main-header {
+  padding-bottom: 25px;
+  margin-bottom: 80px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
 
 
 .preview-example {
@@ -68,7 +128,7 @@
   h6 {
     margin: 0;
   }
-  tr>td:first-child {
+  tr >td:first-child {
     width: 40%;
   }
   tr >td:last-child {
@@ -84,7 +144,6 @@
       border-radius: 3px;
     }
   }
-
 }
 
 // ken burns panning effect

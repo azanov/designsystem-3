@@ -89,7 +89,7 @@
 
 
 
-  angular.module('app').run(function($rootScope, $state, $stateParams, $log, $translate) {
+  angular.module('app').run(function($rootScope, $state, $stateParams, $log, $translate, $anchorScroll, $location) {
 
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
@@ -115,6 +115,10 @@
     //refresh as parts are added in controllers
     $rootScope.$on('$translatePartialLoaderStructureChanged', function() {
       $translate.refresh();
+    });
+
+    $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+      if ($location.hash()) {$anchorScroll();}
     });
 
     // scroll to top
