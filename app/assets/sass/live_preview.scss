@@ -303,7 +303,7 @@ ul.swatches {
 
     span {
       display: inline-block;
-      float: left;
+      //float: left;
       opacity: .4;
     }
 
@@ -367,11 +367,6 @@ ul.swatches {
     font-size: .8em;
     margin-bottom: 20px;
     text-align: center;
-
-    .glyphicon,
-    .pbfont {
-      //font-size: 2em;
-    }
   }
 }
 
