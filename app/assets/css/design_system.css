@@ -542,6 +542,8 @@ div.accordion-group .panel.active .panel-title:before { content: '\25B8'; -webki
 
 .bootstrap-datetimepicker-widget td.active, .bootstrap-datetimepicker-widget td.active:hover { background-color: #3e53a4; }
 
+.site-content { min-height: 550px; min-height: calc(100vh - (45px + 40px)); }
+
 #footer, footer { margin-top: 40px; color: #717171; background-color: #fff; font-size: 12px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; z-index: 10; }
 #footer a, footer a { color: #4e4e4e; }
 #footer .fb-footer, footer .fb-footer { display: -webkit-flex; display: -ms-flexbox; display: flex; background-color: #f0f0f0; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-items: baseline; -ms-flex-align: baseline; align-items: baseline; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; padding: 10px 20px; }
@@ -912,7 +914,7 @@ a.list-group-item.active .badge { color: #fff; background-color: #3e53a4; }
 
 .panel { box-shadow: none; }
 .panel.panel-default { border-color: #f8f8f8; }
-.panel.panel-default .panel-heading { background-color: #f3f5fa; border-bottom-color: #f8f8f8; }
+.panel.panel-default .panel-heading { background-color: #f3f4f9; border-bottom-color: #f8f8f8; }
 
 .panel-title { font-weight: 700; }
 

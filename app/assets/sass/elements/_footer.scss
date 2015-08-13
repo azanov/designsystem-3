@@ -1,3 +1,10 @@
+//style footer to always be at bottom of screen
+.site-content {
+  min-height: 550px;  //fallback, just in case
+  min-height: calc(100vh - (45px + 40px)); //45 for nav height, 40 for additional margin
+}
+
+
 #footer, footer {
   margin-top: 40px;
   color: $text-color;

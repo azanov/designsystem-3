@@ -188,7 +188,7 @@ h4 .more-info a, h1 .more-info a, h3 .more-info a, legend .more-info a { color: 
 
 ul.swatches { margin: 10px 0 30px; padding-left: 0; }
 ul.swatches li.color-swatch { height: 30px; margin-bottom: 0; text-align: right; padding: 5px 10px; color: #000; }
-ul.swatches li.color-swatch span { display: inline-block; float: left; opacity: .4; }
+ul.swatches li.color-swatch span { display: inline-block; opacity: .4; }
 ul.swatches li.color-swatch:first-child { height: 75px; font-size: 18px; color: #fff; margin-bottom: 5px; }
 ul.swatches li.color-swatch:nth-child(n+6) { color: #fff; }
 
