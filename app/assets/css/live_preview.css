@@ -143,9 +143,7 @@ small, .text-small, .small { font-size: 12px; }
 .doc-hero .jump-bar .jump-menu li a { color: inherit; }
 .doc-hero .jump-bar .jump-menu li:last-child { margin-right: 0; }
 
-.main-header { padding-bottom: 25px; margin-bottom: 80px; border-bottom: 1px solid #e1e1e1; }
-
-.site-content { margin-top: 110px; }
+.main-header { padding-bottom: 25px; margin-bottom: 80px; }
 
 .preview-example { background-color: #fff; position: relative; padding: 40px 9px 9px; border: 1px solid #e3e3e3; border-radius: 3px; margin: 20px 0; }
 .preview-example:before { content: 'Example'; position: absolute; top: 0; left: 0; padding: 3px 7px; text-transform: uppercase; background-color: #f5f5f5; border: 1px solid #e3e3e3; border-top: 0; border-left: 0; letter-spacing: .1em; font-size: .8em; }
@@ -283,4 +281,6 @@ ul.swatches li.color-swatch:nth-child(n+6) { color: #fff; }
 .status.status-error { color: #f32d2d; }
 .status.status-warning { color: #ef8200; }
 
-/*# sourceMappingURL=live_preview.css.map */
+
+
+/*# sourceMappingURL=maps/live_preview.css.map */
