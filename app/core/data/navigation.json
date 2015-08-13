@@ -1,4 +1,43 @@
 [{
+    "label": "Principles",
+    "value": "",
+    "toggle": "dropdown",
+    "children": [{
+      "label": "Design Philosopy",
+      "value": "principles.designphilosophy"
+      }]
+    },
+
+    {
+      "label": "Brand",
+      "value": "",
+      "toggle": "dropdown",
+      "children": [{
+        "label": "Style Guide",
+        "value": "brand.styleguide"
+      }, {
+        "label": "Brand Personality",
+        "value": "brand.personality"
+      }, {
+        "label": "Tone of Voice",
+        "value": "brand.voice"
+      }]
+    },
+
+    {
+      "label": "Resources",
+      "value": "",
+      "toggle": "dropdown",
+      "children": [{
+        "label": "Tools for Designers",
+        "value": "resources.designers"
+        },{
+        "label": "Tools for Developers",
+        "value": "resources.developers"
+        }]
+    },
+
+    {
     "label": "UI Elements",
     "value": "",
     "toggle": "dropdown",
@@ -28,7 +67,9 @@
       "label": "Progress",
       "value": "elements.progress"
     }]
-  }, {
+  },
+
+  {
     "label": "Pages",
     "value": "",
     "toggle": "dropdown",
@@ -54,7 +95,9 @@
       "label": "500",
       "value": "pages.500"
     }]
-  }, {
+  },
+
+  {
     "label": "Notifications",
     "value": "",
     "toggle": "dropdown",
@@ -71,7 +114,9 @@
       "label": "Header Message",
       "value": "notification.headermessage"
     }]
-  }, {
+  },
+
+  {
     "label": "Tables",
     "value": "",
     "toggle": "dropdown",
@@ -88,7 +133,9 @@
       "label": "Datatable.net",
       "value": "tables.datatablesnet"
     }]
-  }, {
+  },
+
+  {
     "label": "Graphs",
     "value": "",
     "toggle": "dropdown",
@@ -99,27 +146,28 @@
       "label": "Chart.js",
       "value": "graphs.chartjs"
     }]
-  }, {
-    "label": "Brand",
+  },
+
+  {
+    "label": "Foundation",
     "value": "",
     "toggle": "dropdown",
-    "children": [{
-      "label": "Style Guide",
-      "value": "brand.styleguide"
-    }, {
+    "children": [ {
       "label": "Color",
-      "value": "brand.color"
+      "value": "foundation.color"
     }, {
       "label": "Font",
-      "value": "brand.font"
+      "value": "foundation.font"
     }, {
       "label": "Typography",
-      "value": "brand.typography"
+      "value": "foundation.typography"
     }, {
       "label": "Chart Colors",
-      "value": "elements.colorcharts"
+      "value": "foundation.chartcolors"
     }]
-  }, {
+  },
+
+  {
     "label": "Mobile",
     "value": "mobile",
     "toggle": "dropdown",
@@ -127,7 +175,10 @@
       "label": "Mobile Guide",
       "value": "mobile"
     }]
-  },  {
+  },
+
+
+  {
     "label": "Other",
     "value": "other",
     "toggle": "dropdown",

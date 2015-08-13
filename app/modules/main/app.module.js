@@ -7,19 +7,20 @@
     //third party modules are in /core/core.module.js
     'pb.core',
     'pb.dashboard',
+    'pb.ds.brand',
     'pb.ds.elements',
-    'pb.settings',
+    'pb.ds.forms',
+    'pb.ds.foundation',
+    'pb.ds.globalization',
+    'pb.ds.graphs',
+    'pb.ds.helpers',
+    'pb.ds.mobile',
+    'pb.ds.notification',
     'pb.ds.pages',
     'pb.ds.tables',
-    'pb.ds.notification',
-    'pb.ds.graphs',
-    'pb.ds.globalization',
-    'pb.ds.brand',
-    'pb.ds.helpers',
-    'pb.ds.forms',
     'pb.ds.wordpress',
-    'pb.ds.mobile',
-    'pb.ds.writing'
+    'pb.ds.writing',
+    'pb.settings'
   ]);
 
   //configure debugging

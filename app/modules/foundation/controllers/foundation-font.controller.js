@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.ds.brand').controller('FontController', function($log) {
+  angular.module('pb.ds.foundation').controller('FontController', function($log) {
 
     var _this = this;
 

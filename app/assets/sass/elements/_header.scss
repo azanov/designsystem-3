@@ -4,6 +4,7 @@
 header {
   // background: linear-gradient(90deg, #3e53a4, #872e96, #ce0a89);
   @extend %gradient-blue-purple-magenta;
+  border-bottom: 1px solid rgba(255, 255, 255, .5);
   .navbar {
     margin-bottom: 0;
     li.first a {
