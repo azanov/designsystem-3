@@ -9,13 +9,16 @@
 @import 'base/gradients';
 
 
+
+//DOCUMENTATION PAGES
+
+
 // for FA documentation pages.
 .doc-hero {
   @extend %gradient-blue-purple-magenta;
   height: 300px;
 //  border-top: 1px solid rgba(255, 255, 255, .5);
-  margin-top: 50px;
-  margin-bottom: 115px;
+  margin-top: 50px; // height of navbar
   position: relative;
   .hero-header {
     margin-top: 115px;
@@ -65,15 +68,8 @@
   margin-bottom: 80px;
 }
 
-// // once page top is finalized this likly not needed
-// .site-content {
-//   margin-top: 110px;
-// }
-//
 
-
-
-
+// PREVIEW EXAMPLES, AS ON BS.COM
 .preview-example {
   background-color: #fff;
   position: relative;
@@ -152,18 +148,34 @@
   }
 }
 
-// ken burns panning effect
-@keyframes kenbrns {
-  0% {
-    background-position: 0 -3em;
-    background-size: 120%;
-  }
-
-  100% {
-    background-position: -1em 0;
-    background-size: 105%;
-  }
+// DOCS TYPOGRAPHY differs from DS
+.doc-head {
+  margin-top: 80px;
 }
+.doc-lede {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #3a3a3a;
+}
+.doc-sectionhead {
+  font-family: $font-family-ps-regular;
+  color: $header-color;
+  font-size: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $pb-light-gray;
+}
+
+
+
+
+.site-content h1:first-of-type {
+  margin-top: 300px;
+}
+
+
+
+
+
 
 
 

@@ -133,7 +133,7 @@ small, .text-small, .small { font-size: 12px; }
 
 .doc-hero { background: linear-gradient(90deg, #484da2, #872e96, #c90d8b); }
 
-.doc-hero { height: 300px; margin-top: 50px; margin-bottom: 115px; position: relative; }
+.doc-hero { height: 300px; margin-top: 50px; position: relative; }
 .doc-hero .hero-header { margin-top: 115px; }
 .doc-hero .hero-header .eyebrow { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-size: 16px; color: rgba(255, 255, 255, 0.5); }
 .doc-hero .hero-header h1 { font-size: 40px; color: #fff; font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; margin-top: 5px; }
@@ -158,11 +158,14 @@ small, .text-small, .small { font-size: 12px; }
 .type-samples tr > td:last-child { font-family: Menlo, Consolas, Monaco, "Courier New", monospace; }
 .type-samples tr > td:last-child .swatch { display: inline-block; min-width: 20px; height: 20px; border: 1px solid #c0c0c0; padding: 2px 5px; font-size: 12px; line-height: 1.2; border-radius: 3px; }
 
-@-webkit-keyframes kenbrns { 0% { background-position: 0 -3em; background-size: 120%; }
-  100% { background-position: -1em 0; background-size: 105%; } }
+.doc-head { margin-top: 80px; }
 
-@keyframes kenbrns { 0% { background-position: 0 -3em; background-size: 120%; }
-  100% { background-position: -1em 0; background-size: 105%; } }
+.doc-lede { font-size: 16px; line-height: 1.5; color: #3a3a3a; }
+
+.doc-sectionhead { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; color: #2e2e2e; font-size: 20px; padding-bottom: 15px; border-bottom: 1px solid #e1e1e1; }
+
+.site-content h1:first-of-type { margin-top: 300px; }
+
 .hero .hero-unit { margin-top: 50px; color: #717171; }
 .hero .hero-unit h2 { font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; font-size: 18px; padding-bottom: 10px; line-height: 1.3; color: #717171; }
 .hero .hero-menu { padding-left: 0; list-style-type: none; }
