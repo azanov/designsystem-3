@@ -18,6 +18,7 @@
     'pb.ds.notification',
     'pb.ds.pages',
     'pb.ds.principles',
+    'pb.ds.resources',
     'pb.ds.tables',
     'pb.ds.wordpress',
     'pb.ds.writing',
