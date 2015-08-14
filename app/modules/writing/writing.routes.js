@@ -12,7 +12,7 @@
         access: 'public',
         bodyClass: 'writing'
       }
-    })
+    });
 
 
   });

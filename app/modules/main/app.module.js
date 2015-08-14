@@ -17,6 +17,7 @@
     'pb.ds.mobile',
     'pb.ds.notification',
     'pb.ds.pages',
+    'pb.ds.principles',
     'pb.ds.tables',
     'pb.ds.wordpress',
     'pb.ds.writing',
