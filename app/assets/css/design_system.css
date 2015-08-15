@@ -697,7 +697,7 @@ select[multiple], select[size] { background-image: none !important; }
 .navbar-default .dropdown-menu .divider { height: 1px; margin: 9px 20px; overflow: hidden; background-color: #9b9b9b; }
 .navbar-default .dropdown-menu > li > a { padding: 6px 20px; font-weight: normal; line-height: 1.4; color: #717171; font-size: 14px; white-space: nowrap; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-.headroom { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; margin-top: 0; }
+.headroom { position: fixed; top: 0; left: 0; right: 0; z-index: 10; margin-top: 0; }
 .headroom.headroom-not-top { box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
 .headroom.headroom-top { box-shadow: 0 0 0 rgba(0, 0, 0, 0.4); transition: all .03s ease-out; }
 

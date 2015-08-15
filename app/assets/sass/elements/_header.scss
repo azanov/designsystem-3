@@ -4,7 +4,7 @@
 header {
   background: linear-gradient(90deg, #484da2, #872e96, #c90d8b);
 
-//  border-bottom: 1px solid rgba(255, 255, 255, .5);
+  //  border-bottom: 1px solid rgba(255, 255, 255, .5);
   .navbar {
     margin-bottom: 0;
     li.first a {
@@ -165,7 +165,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 10;
   margin-top: 0;
 
   &.headroom-not-top {
@@ -183,9 +183,9 @@ header {
 //NOTE:  it's in live_preview.scss
 //for subheader
 .sub-header.jump-bar {
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-              linear-gradient(90deg, #484da2, #872e96, #c90d8b);
-//  transition: height .3s ease-in-out;
+  background: linear-gradient(90deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)),
+  linear-gradient(90deg, #484da2, #872e96, #c90d8b);
+  //  transition: height .3s ease-in-out;
   // &:before {
   //   content: '';
   //   display: block;
