@@ -5,7 +5,7 @@
 
         <h1>Live Preview</h1>
         <h2>An interactive and growing set of exemplary pages, templates, components and elements for Pitney Bowes software applications.</h2>
-        <ul class="hero-menu">
+<!-- <ul class="hero-menu">
           <li ng-repeat="n in dash.navdata">
             <a data-target="{{n.value}}" data-toggle="{{n.toggle}}">{{n.label}}</a>
             <ul class="sub-menu" role="menu">
@@ -16,7 +16,34 @@
               </li>
             </ul>
           </li>
+        </ul> -->
+
+        <ul>
+          <li ng-repeat="level1 in dash.navdata">
+            <a ui-sref="{{level1.value}}">{{level1.label}}</a>
+
+            <ul>
+              <li ng-repeat="level2 in level1.children">
+                <a ui-sref="{{level2.value}}">{{level2.label}}</a>
+
+                <ul>
+                  <li ng-repeat="level3 in level2.children">
+                    <a ui-sref="{{level3.value}}">{{level3.label}}</a>
+
+                    <ul>
+                      <li ng-repeat="level4 in level3.children">
+                        <a ui-sref="{{level4.value}}">{{level4.label}}</a>
+                      </li>
+                    </ul>
+
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+          </li>
         </ul>
+
       </div>
 
     </div>
