@@ -4,64 +4,134 @@
       <div class="col-md-12">
         <div class="hero-header">
           <div class="eyebrow">Responsive Web</div>
-          <h1>Form Fields</h1>
+          <h1>Type System</h1>
         </div>
       </div>
     </div>
   </div>
-  <div class="jump-bar">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="jump-menu">
-            <li>
-              <a href="">Headers</a>
-            </li>
-            <li>
-              <a href="">Body Copy</a>
-            </li>
-            <li>
-              <a href="">Navigation</a>
-            </li>
-            <li>
-              <a href="">Here</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+
+  <sub-header class="sub-header jump-bar headroom" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}" headroom offset="240" tolerance="5">
+  <li>
+    <a href="">Headers</a>
+  </li>
+  <li>
+    <a href="">Body Copy</a>
+  </li>
+  <li>
+    <a href="">Navigation</a>
+  </li>
+  <li>
+    <a href="">Here</a>
+  </li>
+
+</sub-header>
+
 </div>
 
 <div class="container">
 
 <!-- intro text block is larger, but only 8 cols wide -->
-  <div class="row">
-    <div class="col-md-8">
-      <h1 class="doc-head">Form Fields</h1>
-      <p class="doc-lede">The form field is our most often used input, and thus has a range of states and uses that inform our users. It is our rule that the content within a field is the primary design focus, while the label is secondary.
-      </p>
-    </div>
+<div class="row">
+  <div class="col-md-8">
+    <h1 class="doc-head">Form Fields</h1>
+    <p class="doc-lede">The form field is our most often used input, and thus has a range of states and uses that inform our users. It is our rule that the content within a field is the primary design focus, while the label is secondary.
+    </p>
   </div>
+</div>
 
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Basic Form Fields</h2>
-    </div>
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="doc-sectionhead">Form Field States</h2>
   </div>
+</div>
 
-  <div class="row">
-    <div class="col-md-5">
-      <p>
-        We have three sizes of form fields: small, default and large. The default size should be used for fields in all instances except:</p>
+<div class="row">
+  <div class="col-md-5">
+    <p>Form fields have four primary states, each defined by its form and type coloring:</p>
+    <ul>
+      <li>Default</li>
+      <li>Active</li>
+      <li>Disabled</li>
+    </ul>
+    <p>Which states a user sees depends on whether or not the field is enabled or disabled.</p>
 
-      <ul>
-        <li>With 20+ fields; use only small fields (Example: full page of entry fields)</li>
-        <li>With nine or less fields; use large fields (Example: sign in screens)</li>
-      </ul>
-
+    <b>Enabled</b>
+    <p>Most form fields are enabled by default. An enabled form field’s label and in-field prompt text is shown in slightly darker (“active”) grey, and the field will accept user input. This input text provides feedback by further darkening in response to mouse click or keyboard input that makes the field active.</p>
+    <div class="preview-example">
+      <div class="form-group">
+        <label>Text input</label>
+        <input class="form-control" name="text1" placeholder="Placeholder text in supported browsers" type="text"/>
+      </div>
     </div>
-    <div class="col-md-4 col-md-offset-1">
+
+  </div>
+  <div class="col-md-4 col-md-offset-1">
+    <b>Active (Focused)</b>
+    <p>When the user places a cursor within the field, it is said to be "Active" or "Focused"</p>
+    <div class="preview-example">
+      <div class="form-group">
+        <label>Text input</label>
+        <input class="form-control focus" name="text1" placeholder="Placeholder text in supported browsers" type="text"/>
+      </div>
+    </div>
+
+    <b>Disabled</b>
+    <p>A disabled form field shows a light grey label and input copy and will not accept user input.</p>
+    <div class="preview-example">
+      <div class="form-group">
+        <label>Text input disabled</label>
+        <input class="form-control" disabled="disabled" name="text1" type="text"/>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="doc-sectionhead">Form Field Colors</h2>
+  </div>
+</div>
+
+<!-- row -->
+<div class="row">
+<!-- left -->
+  <div class="col-md-5">
+    <p>We use colors on fields to communicate meaning:
+    </p>
+    <p>Red to alert users to an input issue</p>
+
+    <div class="preview-example">
+      <div class="form-group has-error">
+        <label>Text field with error</label>
+        <input class="form-control" placeholder="Text field" type="text">
+        <span class="help-block text-error">Please enter a valid name.</span>
+      </div>
+    </div>
+
+  </div>
+<!-- right -->
+  <div class="col-md-4 col-md-offset-1"></div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="doc-sectionhead">Text Field Sizes</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-5">
+    <p>
+      We have three sizes of form fields: small, default and large. The default size should be used for fields in all instances except:</p>
+
+    <ul>
+      <li>With 20+ fields; use only small fields (Example: full page of entry fields)</li>
+      <li>With nine or less fields; use large fields (Example: sign in screens)</li>
+    </ul>
+
+  </div>
+  <div class="col-md-4 col-md-offset-1">
+    <div class="preview-example">
       <div class="form-group">
         <label>Large input</label>
         <input class="form-control input-lg" placeholder=".input-lg" type="text">
@@ -76,84 +146,424 @@
       </div>
     </div>
   </div>
+</div>
 
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Text Fields</h2>
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="doc-sectionhead">Optional Form Fields</h2>
+  </div>
+</div>
+<!-- row -->
+<div class="row">
+<!-- left -->
+  <div class="col-md-5">
+    <p>
+      We help users recognize which form fields are optional in two ways:</p>
+    <ul>
+      <li>The in-field prompt text will be labeled Optional, and will be a lighter gray. (When the field becomes active, its text will display as a darker gray.)</li>
+      <li>The label concludes with an asterisk</li>
+    </ul>
+
+  </div>
+<!-- right -->
+  <div class="col-md-4 col-md-offset-1">
+    NOTE: do we really do that?
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="doc-sectionhead">Form Field Help</h2>
+  </div>
+</div>
+<!-- row -->
+<div class="row">
+<!-- left -->
+  <div class="col-md-5">
+    <p>
+      Some fields require some explanation to users so they understand what they’re being asked for. In these cases you can include a small popover next to the label that provides additional context for users.
+    </p>
+    <p>
+      NOTE: INLINE HELP TEXT??
+    </p>
+  </div>
+<!-- right -->
+  <div class="col-md-4 col-md-offset-1">
+    <div class="preview-example">
+      <div class="form-group">
+        <label>Standard input
+          <i class="fa fa-info-circle"></i>
+        </label>
+        <input class="form-control" placeholder="Default input" type="text">
+      </div>
+      <div class="form-group">
+        <label>Standard input</label>
+        <input class="form-control" placeholder="Default input" type="text">
+        <span class="help-block">Enter your full name.</span>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-5">
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="doc-sectionhead">Password fields</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-5">
+    <p>A password strength meter tied to the input field is specifically on registration pages to help users choose a secure, system-OK combination.</p>
+  </div>
+  <div class="col-md-4 col-md-offset-1">
+
+    <h3>Controls TK</h3>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="doc-sectionhead">Writing Form Field Labels</h2>
+  </div>
+</div>
+<!-- row -->
+<div class="row">
+<!-- left -->
+  <div class="col-md-8">
+
+    <p>
+
+      <p>When writing your labels and in-field prompt text, it’s important to stay consistent across your entire product. Here are some basic guidelines for how to write these critical pieces of user interface copy.
+      </p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium doloremque, praesentium sapiente laboriosam dolores ut quasi dicta non architecto, recusandae expedita fugit molestias incidunt repudiandae voluptatem harum nesciunt et totam veritatis repellendus cum corrupti obcaecati placeat iusto minus. Magni, sit.
+        <b>Style</b>
       </p>
+      <ul>
+        <li>Use short, active words and phrases.</li>
+        <li>Structure labels to avoid ambiguity in language.</li>
+        <li>To avoid confusing users, use consistent terminology for a given concept (e.g., “Input Recipient’s Name” vs. “Input Addressee’s Name” vs. “Input Contact’s Name”).</li>
+      </ul>
+      <p>
+        <b>Capitalization</b>
+      </p>
+      <ul>
+        <li>Form field labels use sentence capitalization, except when they include words or phrases that are acronyms or proper nouns (e.g., “RMA number,” “Cost Account,” “ZIP Code”).</li>
+      </ul>
+
+      <p>
+        <b>Punctuation</b>
+      </p>
+      <ul>
+        <li>Form field labels don’t conclude with punctuation, such as periods, colons. ● Don’t phrase your form field labels as questions. Examples Since page layouts can vary, our form elements are designed to be flexible. Here are some examples of different form implementations that show how form layouts can vary.
+      </li>
+    </ul>
+  </p>
+
+</div>
+
+</div>
+
+<div class="row">
+<div class="col-md-8">
+  <h1 class="doc-head">Dropdown (Select) Menus</h1>
+  <p class="doc-lede">The various states of dropdown menus react in the same manner as our base form fields, just with a short list of options available in their active states.
+  </p>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+  <h2 class="doc-sectionhead">Basic system select menus</h2>
+</div>
+</div>
+<div class="row">
+<div class="col-md-5">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eum porro quae cupiditate facere? Nulla unde voluptatibus a, architecto sequi!
+  </p>
+</div>
+<div class="col-md-4 col-md-offset-1">
+  <select class="form-control input-lg" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+    <option value="">
+      Large Size
+    </option>
+  </select><br>
+  <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+    <option value="">Normal Size</option>
+  </select>
+  <br>
+  <select class="form-control input-sm" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+    <option value="">Small Size</option>
+  </select>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+  <h2 class="doc-sectionhead">Advanced select menus
+  </h2>
+</div>
+</div>
+<div class="row">
+<div class="col-md-5">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eum porro quae cupiditate facere? Nulla unde voluptatibus a, architecto sequi!
+  </p>
+  <p class="more-info">
+    <a href="http://brianreavis.github.io/selectize.js/" target="_blank">
+      Basic info
+
+      <i class="fa fa-external-link"/>
+    </a>
+    <a href="https://github.com/kbanman/selectize-ng" target="_blank">
+      Angular info
+      <i class="fa fa-external-link"/></a>
+  </p>
+</div>
+<div class="col-md-4 col-md-offset-1">
+  <div class="form-group">
+    <label>
+      Single-select</label>
+    <select ng-model="inputs.countrySelect.selected" options="inputs.countrySelect.countries" selectize="inputs.countrySelect.options" type="text"></select>
+  </div>
+  <div class="form-group">
+    <label>
+      Multi-select with tokens</label><input ng-model="inputs.multiCountrySelect.selected" options="inputs.countrySelect.countries" selectize="inputs.multiCountrySelect.options" type="text"/>
+  </div>
+  <div class="form-group">
+    <label>
+      Custom menu items
+    </label><select ng-model="inputs.peopleSelect.selected" options="inputs.peopleSelect.people" selectize="inputs.peopleSelect.options"/>
+  </div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-8">
+  <h1 class="doc-head">Inputs</h1>
+  <p class="doc-lede">Our applications handle a diverse range of inputs, therefore we offer a wide range of input devices to match. With each tool, we want to provide a quick easy way for users to enter their necessary data in a simple workflow.
+  </p>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+  <h2 class="doc-sectionhead">Checkboxes, Radio Buttons & Selectors</h2>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-5">
+  <p>
+    For consistency, our design system features a single style of radial button and checkbox that are complementary in design. The active button/box is always in the Pb Medium Blue and the default text is always PB Dark Gray.
+  </p>
+</div>
+<div class="col-md-4 col-md-offset-1">
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="radio radio-enhanced-sm">
+        <input checked id="radio3" name="radioOptions" type="radio">
+        <label for="radio3">Radio</label>
+      </div>
+      <div class="radio radio-enhanced-sm">
+        <input id="radio4" name="radioOptions" type="radio">
+        <label for="radio4">Radio
+        </label>
+      </div>
+      <div class="radio radio-enhanced-sm disabled">
+        <input disabled id="radio5" name="radioOptions" type="radio">
+        <label for="radio5">Radio (disabled)
+        </label>
+      </div>
     </div>
-    <div class="col-md-4 col-md-offset-1">
-      <div class="form-group">
-        <label>Text input</label>
-        <input class="form-control" name="text1" placeholder="Placeholder text in supported browsers" type="text"/>
-        <span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+
+    <div class="col-md-6">
+      <div class="checkbox checkbox-enhanced-sm">
+        <input checked id="check4" type="checkbox">
+        <label for="check4">Checkbox</label>
       </div>
-      <div class="form-group">
-        <label>Text input disabled</label>
-        <input class="form-control" disabled="disabled" name="text1" type="text"/>
+      <div class="checkbox checkbox-enhanced-sm">
+        <input id="check5" name="check" type="checkbox">
+        <label for="check5">Checkbox
+        </label>
       </div>
-      <div class="form-group has-error">
-        <label>Text field with error</label>
-        <input class="form-control" placeholder="Text field" type="text">
-        <span class="help-block text-error">Please enter a valid name.</span>
+      <div class="checkbox checkbox-enhanced-sm disabled">
+        <input disabled id="check6" name="check" type="checkbox">
+        <label for="check6">Checkbox (disabled)
+        </label>
       </div>
-      <div class="form-group">
-        <label>Textarea</label>
-        <textarea class="form-control" name="textarea1" placeholder="Placeholder text in supported browsers" type="textarea"/></div>
-      <div class="form-group">
-        <label for="phone">
-          Add another field (max set in controller)</label>
-        <div class="repeated-field" data-ng-repeat="choice in inputs.choices1" ng-class="{'last':$last}">
-          <input class="form-control" name="phone" type="text" value="212-555-6789">
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="radio">
+        <label for="rd11">
+          <input checked id="rd11" name="radioStandard" type="radio">
+          Radio</label>
+      </div>
+      <div class="radio">
+        <label for="rd22">
+          <input id="rd22" name="radioStandard" type="radio">
+          Radio</label>
+      </div>
+      <div class="radio disabled">
+        <label for="rd33">
+          <input disabled id="rd33" name="radioStandard" type="radio">
+          Radio (disabled)
+        </label>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="checkbox">
+        <label for="c1">
+          <input checked id="c1" type="checkbox">
+          Checkbox</label>
+      </div>
+      <div class="checkbox">
+        <label for="c2">
+          <input id="c2" name="check" type="checkbox">
+          Checkbox
+        </label>
+      </div>
+      <div class="checkbox disabled">
+        <label for="c3">
+          <input disabled id="c3" name="check" type="checkbox">
+          Checkbox (disabled)
+        </label>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!--  -->
+<!--  -->
+<h1 style="margin-top:400px;">BELOW OLD CONTENT IGNORE</h1>
+
+<div class="row">
+
+<div class="col-md-5 col-md-offset-1">
+
+  <fieldset>
+    <legend>
+      Column sizing</legend>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>
+            Text input</label><input class="form-control" type="text">
         </div>
-        <span class="help-text">
-          <a class="add-another-link" href="" ng-click="inputs.addNewChoice(inputs.choices1)" ng-show="inputs.showAddChoice(inputs.choice,inputs.choices1)">Add another phone field</a>
-        </span>
+      </div>
+      <div class="col-md-2">
+        <div class="form-group">
+          <label>
+            Text input</label><input class="form-control" type="text">
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="form-group">
+          <label>
+            Text input</label><input class="form-control" type="text">
+        </div>
       </div>
     </div>
-  </div>
+    <div class="row">
+      <div class="col-md-12">
+        <span class="help-block">
+          Wrap inputs in grid columns, or any custom parent element, to easily enforce desired widths.</span>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset>
 
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Password fields</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <legend>
+          Date &amp; time picker
+          <a href="http://eonasdan.github.io/bootstrap-datetimepicker/" target="_blank">
+            <span class="more-info">More info<i class="fa fa-external-link"/>
+            </span>
+          </a>
+        </legend>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-5">
-      <p>A password strength meter tied to the input field is specifically on registration pages to help users choose a secure, system-OK combination.</p>
+    <div class="row">
+      <div class="col-md-5">
+        <div class="form-group">
+          <label>
+            Date
+          </label>
+          <div class="input-group" ng-model="inputs.datetimepicker1" pb-datetimepicker><input class="form-control" placeholder="MM/DD/YYYY" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-default">
+                <span class="fa fa-calendar"/></button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 col-md-offset-1">
+        <div class="form-group">
+          <label>
+            Time
+          </label>
+          <div class="input-group" ng-model="inputs.datetimepicker2" pb-datetimepicker><input class="form-control" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-default">
+                <span class="fa fa-clock-o"/>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-md-4 col-md-offset-1">
+  </fieldset>
 
-      <h3>Controls TK</h3>
+  <fieldset>
+    <legend>
+      Numeric stepper
+      <span class="more-info">
+        <a href="https://github.com/xFlatlinex/Numeric-Stepper" target="_blank">More info
+          <i class="fa fa-external-link"/></a>
+      </span>
+    </legend>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group"><input class="form-control" options="numericStepper" pb-numeric-stepper type="text" value="10">
+        </div>
+      </div>
+    </div>
 
-    </div>
-  </div>
+  </fieldset>
+</div>
+</div>
+<fieldset>
+<legend>Input field sizes</legend>
+<div class="row">
+  <div class="col-md-5">
 
-  <div class="row">
-    <div class="col-md-8">
-      <h1 class="doc-head">Dropdown (Select) Menus</h1>
-      <p class="doc-lede">The various states of dropdown menus react in the same manner as our base form fields, just with a short list of options available in their active states.
-      </p>
-    </div>
-  </div>
+    <h4>
+      Text inputs</h4>
 
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Basic system select menus</h2>
+    <div class="form-group">
+      <label>Large input</label>
+      <input class="form-control input-lg" placeholder=".input-lg" type="text">
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-5">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eum porro quae cupiditate facere? Nulla unde voluptatibus a, architecto sequi!
-      </p>
+    <div class="form-group">
+      <label>Standard input</label>
+      <input class="form-control" placeholder="Default input" type="text">
     </div>
-    <div class="col-md-4 col-md-offset-1">
+    <div class="form-group">
+      <label>Small input</label>
+      <input class="form-control input-sm" placeholder=".input-sm" type="text">
+    </div>
+
+    <div class="col-md-5 col-md-offset-1">
+      <h4>
+        Select menus
+      </h4>
       <select class="form-control input-lg" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
         <option value="">
           Large Size
@@ -168,505 +578,205 @@
       </select>
     </div>
   </div>
+</div>
+</fieldset>
+<fieldset>
+<legend>
+  Selectize select menu
+  <span class="more-info">
+    <a href="http://brianreavis.github.io/selectize.js/" target="_blank">
+      Basic info
 
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Advanced select menus
-      </h2>
-    </div>
+      <i class="fa fa-external-link"/>
+    </a>
+    <a href="https://github.com/kbanman/selectize-ng" target="_blank">
+      Angular info
+      <i class="fa fa-external-link"/></a>
+  </span>
+</legend>
+<div class="row"></div>
+</fieldset>
+
+<fieldset>
+<legend>Switches
+  <span class="more-info">
+    <a href="http://jumplink.github.io/angular-toggle-switch/" target="_blank">Angular info
+      <i class="fa fa-external-link"/>
+    </a>
+  </span>
+
+</legend>
+<div class="form-group switches row">
+  <div class="col-md-2">
+    <div model="inputs.switchStatus1" toggle-switch/></div>
+  <div class="col-md-2">
+    <div is-disabled="disabled" model="inputs.switchStatus2" toggle-switch/></div>
+  <div class="col-md-2"><div model="inputs.switchStatus3" toggle-switch/>
   </div>
-  <div class="row">
-    <div class="col-md-5">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eum porro quae cupiditate facere? Nulla unde voluptatibus a, architecto sequi!
-      </p>
-      <p class="more-info">
-        <a href="http://brianreavis.github.io/selectize.js/" target="_blank">
-          Basic info
+</div>
+</fieldset>
 
-          <i class="fa fa-external-link"/>
-        </a>
-        <a href="https://github.com/kbanman/selectize-ng" target="_blank">
-          Angular info
-          <i class="fa fa-external-link"/></a>
-      </p>
-    </div>
-    <div class="col-md-4 col-md-offset-1">
-      <div class="form-group">
-        <label>
-          Single-select</label>
-        <select ng-model="inputs.countrySelect.selected" options="inputs.countrySelect.countries" selectize="inputs.countrySelect.options" type="text"></select>
-      </div>
-      <div class="form-group">
-        <label>
-          Multi-select with tokens</label><input ng-model="inputs.multiCountrySelect.selected" options="inputs.countrySelect.countries" selectize="inputs.multiCountrySelect.options" type="text"/>
-      </div>
-      <div class="form-group">
-        <label>
-          Custom menu items
-        </label><select ng-model="inputs.peopleSelect.selected" options="inputs.peopleSelect.people" selectize="inputs.peopleSelect.options"/>
-      </div>
-    </div>
+<fieldset>
+<legend>
+  Input groups
+  <span class="more-info">
+    <a href="http://getbootstrap.com/components/#input-groups">
+      learn more
+      <i class="fa fa-external-link"/></a>
+  </span>
+</legend>
+<div class="row">
+  <div class="col-md-12">
+    <p class="help-text">Icons, buttons, and simple menus can be prepended and/or appended to text fields.</p>
   </div>
-
-  <div class="row">
-    <div class="col-md-8">
-      <h1 class="doc-head">Inputs</h1>
-      <p class="doc-lede">Our applications handle a diverse range of inputs, therefore we offer a wide range of input devices to match. With each tool, we want to provide a quick easy way for users to enter their necessary data in a simple workflow.
-      </p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Checkboxes, Radio Buttons & Selectors</h2>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-5">
-      <p>
-        For consistency, our design system features a single style of radial button and checkbox that are complementary in design. The active button/box is always in the Pb Medium Blue and the default text is always PB Dark Gray.
-      </p>
-    </div>
-    <div class="col-md-4 col-md-offset-1">
-
-      <div class="row">
-        <div class="col-md-6">
-          <div class="radio radio-enhanced-sm">
-            <input checked id="radio3" name="radioOptions" type="radio">
-            <label for="radio3">Radio</label>
-          </div>
-          <div class="radio radio-enhanced-sm">
-            <input id="radio4" name="radioOptions" type="radio">
-            <label for="radio4">Radio
-            </label>
-          </div>
-          <div class="radio radio-enhanced-sm disabled">
-            <input disabled id="radio5" name="radioOptions" type="radio">
-            <label for="radio5">Radio (disabled)
-            </label>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="checkbox checkbox-enhanced-sm">
-            <input checked id="check4" type="checkbox">
-            <label for="check4">Checkbox</label>
-          </div>
-          <div class="checkbox checkbox-enhanced-sm">
-            <input id="check5" name="check" type="checkbox">
-            <label for="check5">Checkbox
-            </label>
-          </div>
-          <div class="checkbox checkbox-enhanced-sm disabled">
-            <input disabled id="check6" name="check" type="checkbox">
-            <label for="check6">Checkbox (disabled)
-            </label>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-          <div class="radio">
-            <label for="rd11">
-              <input checked id="rd11" name="radioStandard" type="radio">
-              Radio</label>
-          </div>
-          <div class="radio">
-            <label for="rd22">
-              <input id="rd22" name="radioStandard" type="radio">
-              Radio</label>
-          </div>
-          <div class="radio disabled">
-            <label for="rd33">
-              <input disabled id="rd33" name="radioStandard" type="radio">
-              Radio (disabled)
-            </label>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="checkbox">
-            <label for="c1">
-              <input checked id="c1" type="checkbox">
-              Checkbox</label>
-          </div>
-          <div class="checkbox">
-            <label for="c2">
-              <input id="c2" name="check" type="checkbox">
-              Checkbox
-            </label>
-          </div>
-          <div class="checkbox disabled">
-            <label for="c3">
-              <input disabled id="c3" name="check" type="checkbox">
-              Checkbox (disabled)
-            </label>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--  -->
-<!--  -->
-  <h1 style="margin-top:400px;">BELOW OLD CONTENT IGNORE</h1>
-
-  <div class="row">
-
-    <div class="col-md-5 col-md-offset-1">
-
-      <fieldset>
-        <legend>
-          Column sizing</legend>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="form-group">
-              <label>
-                Text input</label><input class="form-control" type="text">
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="form-group">
-              <label>
-                Text input</label><input class="form-control" type="text">
-            </div>
-          </div>
-          <div class="col-md-7">
-            <div class="form-group">
-              <label>
-                Text input</label><input class="form-control" type="text">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <span class="help-block">
-              Wrap inputs in grid columns, or any custom parent element, to easily enforce desired widths.</span>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset>
-
-        <div class="row">
-          <div class="col-md-12">
-            <legend>
-              Date &amp; time picker
-              <a href="http://eonasdan.github.io/bootstrap-datetimepicker/" target="_blank">
-                <span class="more-info">More info<i class="fa fa-external-link"/>
-                </span>
-              </a>
-            </legend>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-5">
-            <div class="form-group">
-              <label>
-                Date
-              </label>
-              <div class="input-group" ng-model="inputs.datetimepicker1" pb-datetimepicker><input class="form-control" placeholder="MM/DD/YYYY" type="text">
-                <span class="input-group-btn">
-                  <button class="btn btn-default">
-                    <span class="fa fa-calendar"/></button>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-5 col-md-offset-1">
-            <div class="form-group">
-              <label>
-                Time
-              </label>
-              <div class="input-group" ng-model="inputs.datetimepicker2" pb-datetimepicker><input class="form-control" type="text">
-                <span class="input-group-btn">
-                  <button class="btn btn-default">
-                    <span class="fa fa-clock-o"/>
-                  </button>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </fieldset>
-
-      <fieldset>
-        <legend>
-          Numeric stepper
-          <span class="more-info">
-            <a href="https://github.com/xFlatlinex/Numeric-Stepper" target="_blank">More info
-              <i class="fa fa-external-link"/></a>
-          </span>
-        </legend>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group"><input class="form-control" options="numericStepper" pb-numeric-stepper type="text" value="10">
-            </div>
-          </div>
-        </div>
-
-      </fieldset>
-    </div>
-  </div>
-  <fieldset>
-    <legend>Input field sizes</legend>
-    <div class="row">
-      <div class="col-md-5">
-
-        <h4>
-          Text inputs</h4>
-
-        <div class="form-group">
-          <label>Large input</label>
-          <input class="form-control input-lg" placeholder=".input-lg" type="text">
-        </div>
-        <div class="form-group">
-          <label>Standard input</label>
-          <input class="form-control" placeholder="Default input" type="text">
-        </div>
-        <div class="form-group">
-          <label>Small input</label>
-          <input class="form-control input-sm" placeholder=".input-sm" type="text">
-        </div>
-
-        <div class="col-md-5 col-md-offset-1">
-          <h4>
-            Select menus
-          </h4>
-          <select class="form-control input-lg" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
-            <option value="">
-              Large Size
-            </option>
-          </select><br>
-          <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
-            <option value="">Normal Size</option>
-          </select>
-          <br>
-          <select class="form-control input-sm" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
-            <option value="">Small Size</option>
-          </select>
-        </div>
-      </div>
-    </div>
-  </fieldset>
-  <fieldset>
-    <legend>
-      Selectize select menu
-      <span class="more-info">
-        <a href="http://brianreavis.github.io/selectize.js/" target="_blank">
-          Basic info
-
-          <i class="fa fa-external-link"/>
-        </a>
-        <a href="https://github.com/kbanman/selectize-ng" target="_blank">
-          Angular info
-          <i class="fa fa-external-link"/></a>
-      </span>
-    </legend>
-    <div class="row"></div>
-  </fieldset>
-
-  <fieldset>
-    <legend>Switches
-      <span class="more-info">
-        <a href="http://jumplink.github.io/angular-toggle-switch/" target="_blank">Angular info
-          <i class="fa fa-external-link"/>
-        </a>
-      </span>
-
-    </legend>
-    <div class="form-group switches row">
-      <div class="col-md-2">
-        <div model="inputs.switchStatus1" toggle-switch/></div>
-      <div class="col-md-2">
-        <div is-disabled="disabled" model="inputs.switchStatus2" toggle-switch/></div>
-      <div class="col-md-2"><div model="inputs.switchStatus3" toggle-switch/>
-      </div>
-    </div>
-  </fieldset>
-
-  <fieldset>
-    <legend>
-      Input groups
-      <span class="more-info">
-        <a href="http://getbootstrap.com/components/#input-groups">
-          learn more
-          <i class="fa fa-external-link"/></a>
-      </span>
-    </legend>
-    <div class="row">
-      <div class="col-md-12">
-        <p class="help-text">Icons, buttons, and simple menus can be prepended and/or appended to text fields.</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3">
-        <div class="form-group">
-          <label for="">Text field prepended</label>
-          <div class="input-group">
-            <span class="input-group-addon">
-              @
-            </span><input class="form-control" placeholder="Username" type="text"></div>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-md-offset-1">
-        <div class="form-group">
-          <label for="">
-            Text field appended</label>
-          <div class="input-group">
-            <input class="form-control" placeholder="Text to filter by" type="text">
-            <span class="input-group-addon"><i class="fa fa-filter"/></span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-md-offset-1">
-        <div class="form-group">
-          <label for="">
-            Text field with both</label>
-          <div class="input-group">
-            <span class="input-group-addon">
-              $
-            </span><input class="form-control" placeholder="Amount" type="text">
-            <span class="input-group-addon">.00
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3">
-        <div class="form-group">
-          <label for="">
-            Text field prepended with menu</label>
-          <div class="input-group">
-            <div class="input-group-btn">
-              <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Action<span class="caret"/>
-              </button>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="#">Action</a>
-                </li>
-                <li>
-                  <a href="#">Another action</a>
-                </li>
-                <li>
-                  <a href="#">Something else here</a>
-                </li>
-                <li class="divider"/>
-              <li>
-                <a href="#">Separated link</a>
-              </li>
-            </ul>
-          </div><input class="form-control" placeholder="Product name" type="text">
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3 col-md-offset-1">
-      <div class="form-group">
-        <label for="">
-          Text field appended with button</label>
-        <div class="input-group">
-          <input class="form-control" placeholder="Search" type="text">
-          <span class="input-group-btn">
-            <button class="btn btn-primary"><i class="fa fa-search"/>
-            </button>
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-
-    <div class="col-md-3">
-      <label>
-        Custom prepended checkbox control</label>
-      <div class="input-group" pb-checkable-input-group>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    <div class="form-group">
+      <label for="">Text field prepended</label>
+      <div class="input-group">
         <span class="input-group-addon">
-          <input ng-model="checkable.checked" type="checkbox">
+          @
+        </span><input class="form-control" placeholder="Username" type="text"></div>
+    </div>
+  </div>
+
+  <div class="col-md-3 col-md-offset-1">
+    <div class="form-group">
+      <label for="">
+        Text field appended</label>
+      <div class="input-group">
+        <input class="form-control" placeholder="Text to filter by" type="text">
+        <span class="input-group-addon"><i class="fa fa-filter"/></span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 col-md-offset-1">
+    <div class="form-group">
+      <label for="">
+        Text field with both</label>
+      <div class="input-group">
+        <span class="input-group-addon">
+          $
+        </span><input class="form-control" placeholder="Amount" type="text">
+        <span class="input-group-addon">.00
         </span>
-        <input class="form-control" ng-disabled="!checkable.checked" ng-model="checkable.value" type="text"></div>
-    </div>
-  </div>
-</fieldset>
-<fieldset>
-  <legend>
-    Miscellaneous controls
-  </legend>
-
-  <div class="row">
-    <div class="col-md-3">
-      <div class="form-group">
-        <label>File upload
-        </label>
-        <input class="form-control" name="file1" type="file">
       </div>
     </div>
   </div>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    <div class="form-group">
+      <label for="">
+        Text field prepended with menu</label>
+      <div class="input-group">
+        <div class="input-group-btn">
+          <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Action<span class="caret"/>
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#">Action</a>
+            </li>
+            <li>
+              <a href="#">Another action</a>
+            </li>
+            <li>
+              <a href="#">Something else here</a>
+            </li>
+            <li class="divider"/>
+          <li>
+            <a href="#">Separated link</a>
+          </li>
+        </ul>
+      </div><input class="form-control" placeholder="Product name" type="text">
+    </div>
+  </div>
+</div>
+<div class="col-md-3 col-md-offset-1">
+  <div class="form-group">
+    <label for="">
+      Text field appended with button</label>
+    <div class="input-group">
+      <input class="form-control" placeholder="Search" type="text">
+      <span class="input-group-btn">
+        <button class="btn btn-primary"><i class="fa fa-search"/>
+        </button>
+      </span>
+    </div>
+  </div>
+</div>
+</div>
+<div class="row">
+
+<div class="col-md-3">
+  <label>
+    Custom prepended checkbox control</label>
+  <div class="input-group" pb-checkable-input-group>
+    <span class="input-group-addon">
+      <input ng-model="checkable.checked" type="checkbox">
+    </span>
+    <input class="form-control" ng-disabled="!checkable.checked" ng-model="checkable.value" type="text"></div>
+</div>
+</div>
+</fieldset>
+<fieldset>
+<legend>
+Miscellaneous controls
+</legend>
+
+<div class="row">
+<div class="col-md-3">
+  <div class="form-group">
+    <label>File upload
+    </label>
+    <input class="form-control" name="file1" type="file">
+  </div>
+</div>
+</div>
 </fieldset>
 
 <fieldset>
-  <legend>Multiple-select</legend>
+<legend>Multiple-select</legend>
 
-  <div class="row">
-    <div class="col-md-4">
-      <div class="form-group">
-        <label>
-          Multiple select
-        </label>
-        <select class="form-control" multiple ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople"/></div>
-    </div>
-    <div class="col-md-4">
-      <div class="form-group">
-        <label>Multiple select (disabled)</label>
+<div class="row">
+<div class="col-md-4">
+  <div class="form-group">
+    <label>
+      Multiple select
+    </label>
+    <select class="form-control" multiple ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople"/></div>
+</div>
+<div class="col-md-4">
+  <div class="form-group">
+    <label>Multiple select (disabled)</label>
 
-        <select class="form-control" multiple ng-disabled="true" ng-model="selectedPerson2" ng-options="person.full_name for person in inputs.samplePeople"/>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <label>Multiple select with checkboxes
+    <select class="form-control" multiple ng-disabled="true" ng-model="selectedPerson2" ng-options="person.full_name for person in inputs.samplePeople"/>
+  </div>
+</div>
+<div class="col-md-4">
+  <label>Multiple select with checkboxes
+  </label>
+  <div class="checkboxList form-control">
+    <div class="ms-checkboxitem" ng-repeat="person in inputs.samplePeople">
+      <label>
+        <input ng-model="person.isChecked" type="checkbox">&nbsp;
+        <span>
+          {{person.full_name}}
+
+        </span>
       </label>
-      <div class="checkboxList form-control">
-        <div class="ms-checkboxitem" ng-repeat="person in inputs.samplePeople">
-          <label>
-            <input ng-model="person.isChecked" type="checkbox">&nbsp;
-            <span>
-              {{person.full_name}}
-
-            </span>
-          </label>
-        </div>
-      </div>
     </div>
   </div>
+</div>
+</div>
 </fieldset>
 
 <fieldset>
-  <legend>Submit and cancel buttons</legend>
-  <div class="form-group"><input class="btn btn-primary" type="submit" value="Submit">
-    &nbsp;
-    <input class="btn btn-link" type="reset" value="Cancel">
-  </div>
+<legend>Submit and cancel buttons</legend>
+<div class="form-group"><input class="btn btn-primary" type="submit" value="Submit">
+&nbsp;
+<input class="btn btn-link" type="reset" value="Cancel">
+</div>
 </fieldset>
 </div>
