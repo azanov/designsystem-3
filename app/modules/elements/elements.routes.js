@@ -4,7 +4,7 @@
 
   angular.module('pb.ds.elements').config(function($stateProvider) {
     $stateProvider.state('elements', {
-      url: '/elements',
+      url: '',
       abstract: true,
       templateUrl: 'modules/elements/templates/elements.html',
       controller: 'ElementsController as elements',
@@ -20,18 +20,18 @@
     })
 
     .state('elements.buttons', {
-      url: '/elements/buttons',
+      url: '/buttons',
       templateUrl: 'modules/elements/templates/elements-buttons.html'
     })
 
-    .state('elements.accordion', {
-      url: '/elements/accordion',
-      templateUrl: 'modules/elements/templates/elements-accordion.html',
-      controller: 'AccordionController as accordion'
+    .state('elements.containers', {
+      url: '/containers',
+      templateUrl: 'modules/elements/templates/elements-containers.html',
+      controller: 'ContainersController as containers'
     })
 
     .state('elements.colorcharts', {
-      url: '/elements/colorcharts',
+      url: '/colorcharts',
       templateUrl: 'modules/elements/templates/elements-colors-charts.html',
       controller: 'ChartColorsController as charts',
       resolve: {
@@ -44,12 +44,12 @@
     })
 
     .state('elements.grid', {
-      url: '/elements/grid',
+      url: '/grid',
       templateUrl: 'modules/elements/templates/elements-grid.html'
     })
 
     .state('elements.icons', {
-      url: '/elements/icons',
+      url: '/icons',
       templateUrl: 'modules/elements/templates/elements-icons.html',
       controller: 'IconsController as icons',
       resolve: {
@@ -60,7 +60,7 @@
     })
 
     .state('elements.inputs', {
-      url: '/elements/inputs',
+      url: '/inputs',
       templateUrl: 'modules/elements/templates/elements-inputs.html',
       controller: 'InputsController as inputs',
       resolve: {
@@ -74,7 +74,7 @@
     })
 
     .state('elements.panels', {
-      url: '/elements/panels',
+      url: '/panels',
       templateUrl: 'modules/elements/templates/elements-panels.html',
       controller: 'PanelsController as panels',
       resolve: {
@@ -90,20 +90,20 @@
     })
 
     .state('elements.popovers', {
-      url: '/elements/popovers',
+      url: '/popovers',
       templateUrl: 'modules/elements/templates/elements-popovers.html',
       controller: 'BootstrapUiPopoverController as pop'
     })
 
     .state('elements.progress', {
-      url: '/elements/progress',
+      url: '/progress',
       templateUrl: 'modules/elements/templates/elements-progress.html',
       controller: 'ProgressController as progress'
     })
 
 
     .state('elements.tabs', {
-      url: '/elements/tabs',
+      url: '/tabs',
       templateUrl: 'modules/elements/templates/elements-tabs.html',
       controller: 'TabsController as tabs'
     });

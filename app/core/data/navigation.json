@@ -72,13 +72,10 @@
                 "value": "elements.buttons"
               },
               {
-                "label": "Accordion",
-                "value": "elements.accordion"
+                "label": "Containers",
+                "value": "elements.containers"
               },
-              {
-                "label": "Grid",
-                "value": "elements.grid"
-              },
+    
               {
                 "label": "Icons",
                 "value": "elements.icons"
