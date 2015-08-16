@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.ds.pages').controller('SignInController', function($log) {
+  angular.module('pb.ds.patterns').controller('ForgotPasswordController', function($log) {
 
     var _this = this;
 
