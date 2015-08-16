@@ -173,18 +173,7 @@
   },
   {
     "label": "Resources",
-    "value": "",
-    "toggle": "dropdown",
-    "children": [
-      {
-        "label": "Tools for Designers",
-        "value": "resources.designers"
-      },
-      {
-        "label": "Tools for Developers",
-        "value": "resources.developers"
-      }
-    ]
+    "value": "resources.developers"
   }
 
 ]
