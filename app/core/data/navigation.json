@@ -1,34 +1,10 @@
 [
   {
     "label": "Principles",
-    "value": "",
-    "toggle": "dropdown",
-    "children": [
-      {
-        "label": "Design Philosopy",
-        "value": "principles.designphilosophy"
-      }
-    ]
+    "value": "principles.design"
+
   },
-  {
-    "label": "Brand",
-    "value": "",
-    "toggle": "dropdown",
-    "children": [
-      {
-        "label": "Style Guide",
-        "value": "brand.styleguide"
-      },
-      {
-        "label": "Brand Personality",
-        "value": "brand.personality"
-      },
-      {
-        "label": "Tone of Voice",
-        "value": "brand.voice"
-      }
-    ]
-  },
+
   {
     "label": "Product Framework",
     "value": "",
@@ -193,14 +169,7 @@
   },
   {
     "label": "Globalization",
-    "value": "",
-    "toggle": "dropdown",
-    "children": [
-      {
-        "label": "Globalization",
-        "value": "globalization.overview"
-      }
-    ]
+    "value": "globalization.overview"
   },
   {
     "label": "Resources",
