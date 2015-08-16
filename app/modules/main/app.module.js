@@ -7,7 +7,6 @@
     //third party modules are in /core/core.module.js
     'pb.core',
     'pb.dashboard',
-    'pb.ds.brand',
     'pb.ds.elements',
     'pb.ds.forms',
     'pb.ds.foundation',
