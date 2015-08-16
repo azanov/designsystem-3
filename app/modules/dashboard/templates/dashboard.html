@@ -3,21 +3,6 @@
     <div class="row">
       <div class="col-md-12 hero-unit">
 
-        <h1>Live Preview</h1>
-        <h2>An interactive and growing set of exemplary pages, templates, components and elements for Pitney Bowes software applications.</h2>
-<!-- <ul class="hero-menu">
-          <li ng-repeat="n in dash.navdata">
-            <a data-target="{{n.value}}" data-toggle="{{n.toggle}}">{{n.label}}</a>
-            <ul class="sub-menu" role="menu">
-              <li ng-class="{'dropdown-header': p.header, 'divider': p.divider, 'optional': p.optional}" ng-repeat="p in n.children | orderBy:'label'" ng-switch on="p.type">
-                <span ng-switch-when="header">{{p.label}}</span>
-                <span ng-switch-when="divider"></span>
-                <a href="" ng-switch-default ui-sref="{{p.value}}">{{p.label}}</a>
-              </li>
-            </ul>
-          </li>
-        </ul> -->
-
         <ul>
           <li ng-repeat="level1 in dash.navdata">
             <a ui-sref="{{level1.value}}">{{level1.label}}</a>

@@ -170,31 +170,34 @@
             "children": [
               {
                 "label": "Sign-in",
-                "value": "pages.signin"
-              },
+                "value": "patterns.signin"
+              },  {
+                  "label": "Headers and Footers",
+                  "value": "patterns.headersfooters"
+                },
               {
                 "label": "Registration",
-                "value": "pages.registration"
+                "value": "patterns.registration"
               },
               {
                 "label": "Forgot Password",
-                "value": "pages.forgotpassword"
+                "value": "patterns.forgotpassword"
               },
               {
                 "label": "Welcome",
-                "value": "pages.welcome"
+                "value": "patterns.welcome"
               },
               {
                 "label": "Under Maintenance",
-                "value": "pages.undermaintenance"
+                "value": "patterns.undermaintenance"
               },
               {
                 "label": "404",
-                "value": "pages.404"
+                "value": "patterns.404"
               },
               {
                 "label": "500",
-                "value": "pages.500"
+                "value": "patterns.500"
               }
             ]
           }

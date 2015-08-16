@@ -16,7 +16,7 @@
     'pb.ds.helpers',
     'pb.ds.mobile',
     'pb.ds.notification',
-    'pb.ds.pages',
+    'pb.ds.patterns',
     'pb.ds.principles',
     'pb.ds.resources',
     'pb.ds.tables',
