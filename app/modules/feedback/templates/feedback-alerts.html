@@ -1,68 +1,78 @@
-<div class="container-fluid">
+<div class="container">
   <div class="row">
     <div class="col-md-12">
-      <div class="main-header"><h1>Notification: Alerts</h1></div>
-      </div>
-  </div>
-
-
-  <div class="row">
-      <div class="col-md-12">
-        <h3>Inline alerts</h3>
-        <p>Use inline on page where important info needs to be shown to user.</p>
+      <div class="main-header">
+        <h1>Alerts</h1>
       </div>
     </div>
-    <div class="row">
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Inline alerts</h3>
+      <p>Use inline on page where important info needs to be shown to user.</p>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-md-6">
       <h4>Danger</h4>
       <div class="alert alert-danger">
-        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+        <strong>Oh snap!</strong>
+        Change a few things up and try submitting again.
       </div>
 
       <h4>Warning</h4>
       <div class="alert alert-warning">
-        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+        <strong>Warning!</strong>
+        Better check yourself, you're not looking too good.
       </div>
 
       <h4>Success</h4>
       <div class="alert alert-success">
-        <strong>Excellent!</strong> You've finished the process.
+        <strong>Excellent!</strong>
+        You've finished the process.
       </div>
 
     </div>
     <div class="col-md-6">
 
-
       <h4>Info</h4>
       <div class="alert alert-info">
-        <strong>Note:</strong> There are many help resources available.
+        <strong>Note:</strong>
+        There are many help resources available.
       </div>
 
       <h4>Alert with Link</h4>
       <div class="alert alert-info">
-        <strong>Note:</strong> There are many help resources available. <a href="#" class="alert-link">Click here!</a>
+        <strong>Note:</strong>
+        There are many help resources available.
+        <a class="alert-link" href="#">Click here!</a>
       </div>
 
       <h4>Dismissable Alert</h4>
 
       <div class="alert alert-danger alert-dismissable">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button>
         If you don't want to be nagged, click the close box.
       </div>
     </div>
   </div>
 
-
   <div class="row spacer-top-lg">
     <div class="col-md-6">
       <h3>Transitory alert</h3>
       <span ng-model="alerts.transitoryAlert" pb-transitory-alert>
-        <button class="btn btn-primary"
-        ng-click="setMessage()">Click Me</button>
+        <button class="btn btn-primary" ng-click="setMessage()">Click Me</button>
       </span>
     </div>
     <div class="col-md-6">
-      <h3>Toastr alerts <span class="more-info"><a href="http://foxandxss.github.io/angular-toastr/" target="_blank">More info <i class="fa fa-external-link"></i></a></span></h3>
+      <h3>Toastr alerts
+        <span class="more-info">
+          <a href="http://foxandxss.github.io/angular-toastr/" target="_blank">More info
+            <i class="fa fa-external-link"></i>
+          </a>
+        </span>
+      </h3>
       <button class="btn btn-info" ng-click="alerts.toast.info()">Info</button>
       <button class="btn btn-success" ng-click="alerts.toast.success()">Success</button>
       <button class="btn btn-warning" ng-click="alerts.toast.warning()">Warning</button>
@@ -70,15 +80,18 @@
     </div>
   </div>
 
-
-
   <div class="row spacer-top-lg">
     <div class="col-md-6">
-      <h3>Modal Dialogs <span class="more-info"><a href="http://angular-ui.github.io/bootstrap/#/modal" target="_blank">More info <i class="fa fa-external-link"></i></a></span></h3>
+      <h3>Modal Dialogs
+        <span class="more-info">
+          <a href="http://angular-ui.github.io/bootstrap/#/modal" target="_blank">More info
+            <i class="fa fa-external-link"></i>
+          </a>
+        </span>
+      </h3>
 
-
-      <!-- Buttons to trigger modals -->
-      <!-- <button class="btn btn-default" data-toggle="modal" data-target="#modal-01">Simplest dialog box</button>&nbsp;
+<!-- Buttons to trigger modals -->
+<!-- <button class="btn btn-default" data-toggle="modal" data-target="#modal-01">Simplest dialog box</button>&nbsp;
       <button class="btn btn-default" data-toggle="modal" data-target="#modal-02">Modal dialog</button>
       <button class="btn btn-default" data-toggle="modal" data-target="#modal-03">Prompt</button>
       <button class="btn btn-default" data-toggle="modal" data-target="#modal-04">Draggable modal</button> -->
@@ -90,7 +103,6 @@
 
     </div>
   </div>
-
 
   <div class="row spacer-top-lg">
     <div class="col-md-10">
@@ -106,10 +118,6 @@
     </div>
   </div>
 
-
-
-
-
   <div class="row  spacer-top-lg">
     <div class="col-md-12">
       <h2>Callouts</h2>
@@ -118,44 +126,45 @@
   <div class="row">
     <div class="col-md-6">
 
-
       <h4>Danger</h4>
       <div class="callout callout-danger">
         <h4>Sample Callout</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, quasi, eaque, debitis, voluptatum iure ad corrupti praesentium magnam odit suscipit quam neque consectetur placeat consequatur ducimus sunt? </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, quasi, eaque, debitis, voluptatum iure ad corrupti praesentium magnam odit suscipit quam neque consectetur placeat consequatur ducimus sunt?
+        </p>
       </div>
 
       <h4>Warning</h4>
       <div class="callout callout-warning">
         <h4>Sample Callout</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, quasi, eaque, debitis, voluptatum iure ad corrupti praesentium magnam odit suscipit quam neque consectetur placeat consequatur ducimus sunt? </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, quasi, eaque, debitis, voluptatum iure ad corrupti praesentium magnam odit suscipit quam neque consectetur placeat consequatur ducimus sunt?
+        </p>
       </div>
 
       <h4>Success</h4>
       <div class="callout callout-success">
         <h4>Sample Callout</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, quasi, eaque, debitis, voluptatum iure ad corrupti praesentium magnam odit suscipit quam neque consectetur placeat consequatur ducimus sunt? </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, quasi, eaque, debitis, voluptatum iure ad corrupti praesentium magnam odit suscipit quam neque consectetur placeat consequatur ducimus sunt?
+        </p>
       </div>
 
     </div>
     <div class="col-md-6">
 
-
       <h4>Info</h4>
       <div class="callout callout-info">
         <h4>Sample Callout</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, quasi, eaque, debitis, voluptatum iure ad corrupti praesentium magnam odit suscipit quam neque consectetur placeat consequatur ducimus sunt? </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, quasi, eaque, debitis, voluptatum iure ad corrupti praesentium magnam odit suscipit quam neque consectetur placeat consequatur ducimus sunt?
+        </p>
       </div>
 
       <h4>Blockquote</h4>
       <blockquote>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, quasi, eaque, debitis, voluptatum iure ad corrupti praesentium magnam odit suscipit quam neque consectetur placeat consequatur ducimus sunt? </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, quasi, eaque, debitis, voluptatum iure ad corrupti praesentium magnam odit suscipit quam neque consectetur placeat consequatur ducimus sunt?
+        </p>
       </blockquote>
 
     </div>
   </div>
-
-
 
   <div class="row  spacer-top-lg">
     <div class="col-md-10">
@@ -167,9 +176,5 @@
       <p class="bg-info">Delectus rerum earum dolorem unde. Explicabo dolorum distinctio vel!</p>
     </div>
   </div>
-
-
-
-
 
 </div>

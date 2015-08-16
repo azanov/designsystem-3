@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.ds.elements').controller('ProgressController', function($log, $timeout, cfpLoadingBar) {
+  angular.module('pb.ds.feedback').controller('ProgressController', function($log, $timeout, cfpLoadingBar) {
 
     var _this = this;
 

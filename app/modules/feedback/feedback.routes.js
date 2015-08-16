@@ -21,10 +21,10 @@
       controller: 'ToastrController as toastr'
     })
 
-    .state('feedback.spinners', {
-      url: '/spinners',
-      templateUrl: 'modules/feedback/templates/feedback-spinners.html',
-      controller: 'SpinnersController as spinners'
+    .state('feedback.progress', {
+      url: '/progress',
+      templateUrl: 'modules/feedback/templates/feedback-progress.html',
+      controller: 'ProgressController as progress'
     })
 
     .state('feedback.loadingbar', {
@@ -37,6 +37,12 @@
       url: '/alerts',
       templateUrl: 'modules/feedback/templates/feedback-alerts.html',
       controller: 'AlertsController as alerts'
+    })
+
+    .state('feedback.badges', {
+      url: '/badges',
+      templateUrl: 'modules/feedback/templates/feedback-badges.html',
+      controller: 'BadgesController as badges'
     })
 
     .state('feedback.headermessage', {
