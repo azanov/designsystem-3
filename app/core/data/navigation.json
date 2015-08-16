@@ -49,6 +49,10 @@
                 "value": "foundation.color"
               },
               {
+                "label": "Chart Colors",
+                "value": "foundation.chartcolors"
+              },
+              {
                 "label": "Font",
                 "value": "foundation.font"
               },
@@ -57,9 +61,10 @@
                 "value": "foundation.typography"
               },
               {
-                "label": "Chart Colors",
-                "value": "foundation.chartcolors"
+                "label": "Writing",
+                "value": "foundation.writing"
               }
+
             ]
           },
           {
@@ -75,7 +80,7 @@
                 "label": "Containers",
                 "value": "elements.containers"
               },
-    
+
               {
                 "label": "Icons",
                 "value": "elements.icons"
@@ -122,41 +127,14 @@
               },
               {
                 "label": "Graphs",
-                "value": "",
-                "toggle": "dropdown",
-                "children": [
-                  {
-                    "label": "C3",
-                    "value": "graphs.c3"
-                  },
-                  {
-                    "label": "Chart.js",
-                    "value": "graphs.chartjs"
-                  }
-                ]
+                "value": "graphs.c3 "
+
               },
               {
-                "label": "Notifications",
-                "value": "",
-                "toggle": "dropdown",
-                "children": [
-                  {
-                    "label": "Spinners",
-                    "value": "notification.spinners"
-                  },
-                  {
-                    "label": "Loading Bar",
-                    "value": "notification.loadingbar"
-                  },
-                  {
-                    "label": "Alerts",
-                    "value": "notification.alerts"
-                  },
-                  {
-                    "label": "Header Message",
-                    "value": "notification.headermessage"
-                  }
-                ]
+                "label": "User Feedback",
+                "value": "feedback"
+
+
               }
             ]
           },
@@ -238,24 +216,6 @@
         "value": "resources.developers"
       }
     ]
-  },
-  {
-    "label": "Other",
-    "value": "other",
-    "toggle": "dropdown",
-    "children": [
-      {
-        "label": "Helpers",
-        "value": "helpers"
-      },
-      {
-        "label": "Wordpress",
-        "value": "wordpress"
-      },
-      {
-        "label": "Product Writing Guide",
-        "value": "writing"
-      }
-    ]
   }
+
 ]

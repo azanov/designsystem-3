@@ -15,7 +15,7 @@
     'pb.ds.graphs',
     'pb.ds.helpers',
     'pb.ds.mobile',
-    'pb.ds.notification',
+    'pb.ds.feedback',
     'pb.ds.patterns',
     'pb.ds.principles',
     'pb.ds.resources',

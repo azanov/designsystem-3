@@ -4,7 +4,7 @@
 
   angular.module('pb.ds.graphs').config(function($stateProvider) {
     $stateProvider.state('graphs', {
-      abstract: true,
+      // abstract: true,
       url: '/graphs',
       templateUrl: 'modules/graphs/templates/graphs.html',
       controller: 'GraphsController as graphs',

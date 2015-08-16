@@ -54,12 +54,12 @@
       }
     })
 
-    .state('foundation.logo', {
-      url: '/logo',
-      templateUrl: 'modules/foundation/templates/foundation-logo.html',
-      controller: 'LogoController as logo',
+    .state('foundation.writing', {
+      url: '/writing',
+      templateUrl: 'modules/foundation/templates/foundation-writing.html',
+      controller: 'WritingController as writing',
       data: {
-        pageTitle: 'foundation - Logo'
+        pageTitle: 'Foundation - Writing'
       }
     })
 

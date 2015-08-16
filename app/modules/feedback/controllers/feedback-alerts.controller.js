@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.ds.notification').controller('AlertsController', function($log, toastr, $modal) {
+  angular.module('pb.ds.feedback').controller('AlertsController', function($log, toastr, $modal) {
 
     var _this = this;
 
@@ -33,13 +33,13 @@
     _this.modals = {
       simple: function() {
         $modal.open({
-          templateUrl: 'modules/notification/templates/modals/notification-simple.html',
+          templateUrl: 'modules/feedback/templates/modals/feedback-simple.html',
           controller: 'BootstrapUiSimpleModalController'
         });
       },
       modal: function() {
         $modal.open({
-          templateUrl: 'modules/notification/templates/modals/notification-modal.html',
+          templateUrl: 'modules/feedback/templates/modals/feedback-modal.html',
           controller: 'BootstrapUiModalController',
           keyboard: false,
           backdrop: 'static'
@@ -47,7 +47,7 @@
       },
       prompt: function() {
         $modal.open({
-          templateUrl: 'modules/notification/templates/modals/notification-prompt.html',
+          templateUrl: 'modules/feedback/templates/modals/feedback-prompt.html',
           controller: 'BootstrapUiPromptModalController',
           keyboard: false,
           backdrop: 'static'
@@ -57,8 +57,8 @@
       },
       draggable: function() {
         $modal.open({
-          windowTemplateUrl: 'modules/notification/templates/modals/notification-draggable-template.html',
-          templateUrl: 'modules/notification/templates/modals/notification-draggable.html',
+          windowTemplateUrl: 'modules/feedback/templates/modals/feedback-draggable-template.html',
+          templateUrl: 'modules/feedback/templates/modals/feedback-draggable.html',
           controller: 'BootstrapUiDraggableModalController',
           keyboard: false,
           backdrop: 'static'

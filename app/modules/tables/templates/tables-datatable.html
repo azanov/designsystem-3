@@ -9,36 +9,33 @@
       </div>
     </div>
   </div>
-  <sub-header headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
+  <sub-header class="sub-header jump-bar headroom" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}" headroom offset="240" tolerance="5">
 
-<li>
-  <a href="" ui-sref="tables.datatable.overview" ui-sref-active="active">Overview</a>
-</li>
-<li>
-  <a href="" ui-sref="tables.datatable.toolbar" ui-sref-active="active">Toolbar</a>
-</li>
-<li>
-  <a href="" ui-sref="tables.datatable.data" ui-sref-active="active">Data</a>
-</li>
-<li>
-  <a href="" ui-sref="tables.datatable.paging" ui-sref-active="active" >Paging</a>
-</li>
-<li>
-  <a href="" ui-sref="tables.datatable.infiniteScroll" ui-sref-active="active" >Infinite Scroll</a>
-</li>
-<li>
-  <a href="" ui-sref="tables.datatable.tabbed" ui-sref-active="active">Tabbed</a>
-</li>
+  <li>
+    <a href="" ui-sref-active="active" ui-sref="tables.datatable.overview">Overview</a>
+  </li>
+  <li>
+    <a href="" ui-sref-active="active" ui-sref="tables.datatable.toolbar">Toolbar</a>
+  </li>
+  <li>
+    <a href="" ui-sref-active="active" ui-sref="tables.datatable.data">Data</a>
+  </li>
+  <li>
+    <a href="" ui-sref-active="active" ui-sref="tables.datatable.paging">Paging</a>
+  </li>
+  <li>
+    <a href="" ui-sref-active="active" ui-sref="tables.datatable.infiniteScroll">Infinite Scroll</a>
+  </li>
+  <li>
+    <a href="" ui-sref-active="active" ui-sref="tables.datatable.tabbed">Tabbed</a>
+  </li>
 
-  </sub-header>
+</sub-header>
 </div>
-
-
-
 
 <div class="container">
 
-  <!-- <div class="row">
+<!-- <div class="row">
     <div class="col-md-12">
       <div class="main-header"><h1>Data tables</h1></div>
       </div>
@@ -56,9 +53,9 @@
 </div>
 </div> -->
 
-<div class="col-md-12">
-  <div ui-view=""></div>
-</div>
+  <div class="col-md-12">
+    <div ui-view=""></div>
+  </div>
 
 </div>
 
