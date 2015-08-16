@@ -29,7 +29,7 @@
     "disallowMultipleLineBreaks": null,
     "disallowMultipleVarDecl": null,
     "disallowPaddingNewLinesBeforeLineComments": null,
-    "requirePaddingNewLinesBeforeLineComments": { "allExcept": "firstAfterCurly" },
+    "requirePaddingNewLinesBeforeLineComments": null,
     "requirePaddingNewLinesAfterBlocks": null,
     "requireSpaceBeforeBlockStatements": true,
     "requireParenthesesAroundIIFE": true,
@@ -60,10 +60,7 @@
         "catch",
         "typeof"
     ],
-    "requirePaddingNewLinesBeforeLineComments": {
-        "allExcept": "firstAfterCurly"
-    },
-    "requirePaddingNewLinesAfterBlocks": null,
+
     "safeContextKeyword": "_this",
     "validateLineBreaks": "LF",
     "validateQuoteMarks": "'",
