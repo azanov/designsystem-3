@@ -62,12 +62,12 @@
                 "value": "elements.icons"
               },
               {
-                "label": "Inputs",
-                "value": "elements.inputs"
+                "label": "UI Controls",
+                "value": "elements.uicontrols"
               },
               {
-                "label": "Panels",
-                "value": "elements.panels"
+                "label": "Containers",
+                "value": "elements.containers"
               },
               {
                 "label": "Popovers",
@@ -97,10 +97,7 @@
                   }
                 ]
               },
-              {
-                "label": "Progress",
-                "value": "elements.progress"
-              },
+            
               {
                 "label": "Graphs",
                 "value": "graphs.c3 "

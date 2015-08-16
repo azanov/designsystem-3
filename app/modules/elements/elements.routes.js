@@ -59,9 +59,9 @@
       }
     })
 
-    .state('elements.inputs', {
-      url: '/inputs',
-      templateUrl: 'modules/elements/templates/elements-inputs.html',
+    .state('elements.uicontrols', {
+      url: '/uicontrols',
+      templateUrl: 'modules/elements/templates/elements-uicontrols.html',
       controller: 'InputsController as inputs',
       resolve: {
         PeopleResolve: function($log, MockDataFactory) {
