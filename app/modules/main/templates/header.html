@@ -1,5 +1,5 @@
 
-  <div class="navbar navbar-default" role="navigation">
+  <div class="navbar yamm navbar-default" role="navigation">
     <div class="container-fluid">
 
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -10,15 +10,16 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand brand-text" href="#/">Live Preview</a>
+        <a class="navbar-brand brand-text" href="#/">Design System</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse">
 
-        <ul class="nav navbar-nav">
+        <!-- <ul class="nav navbar-nav">
           <li class="divider-vertical"></li>
-          <li ng-class="{'dropdown':(nav.children.length)}" ng-repeat="nav in header.nav"><a href="" data-target="{{nav.value}}" data-toggle="{{nav.toggle}}">{{nav.label}} <i class="fa fa-angle-down"></i></a>
+          <li ng-class="{'dropdown':(nav.children.length)}" ng-repeat="nav in header.nav">
+            <a href="" data-target="{{nav.value}}" data-toggle="{{nav.toggle}}">{{nav.label}} <i class="fa fa-angle-down" ng-if="nav.children.length"></i></a>
             <ul class="dropdown-menu" role="menu">
               <li ng-repeat="link in nav.children" ng-class="{'dropdown-header': link.header, 'divider': link.divider}" ng-switch on="link.type">
                 <span ng-switch-when="header">{{link.label}}</span>
@@ -27,13 +28,107 @@
               </li>
             </ul>
           </li>
+        </ul> -->
+
+        <ul class="nav navbar-nav">
+          <li class="divider-vertical"></li>
+          <li>
+            <a href="" ui-sref="principles.design">Principles</a>
+          </li>
+          <li class="dropdown yamm-fw">
+            <a href="" class="dropdown-toggle" data-target="" data-toggle="dropdown">Product Framework <i class="fa fa-angle-down"></i></a>
+            <ul class="dropdown-menu">
+              <li>
+                <div class="x-yamm-content container-fluid">
+                  <div class="row">
+                    <div class="col-xs-6">
+
+                      <h3 class="text-center">Responsive Web</h3>
+
+                      <div class="row">
+                        <div class="col-xs-4">
+                          <p class="text-center">Foundation</p>
+                          <ul class="list-unstyled">
+                            <li ng-repeat="item in header.nav[1].children[0].children[0].children">
+                              <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="col-xs-4">
+                          <p class="text-center">Elements</p>
+                          <ul class="list-unstyled">
+                            <li ng-repeat="item in header.nav[1].children[0].children[1].children">
+                              <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-xs-4">
+                          <p class="text-center">Patterns</p>
+                          <ul class="list-unstyled">
+                            <li ng-repeat="item in header.nav[1].children[0].children[2].children">
+                              <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+
+
+
+                    </div>
+
+                    <div class="col-xs-6">
+                      <h3 class="text-center">Mobile</h3>
+
+                      <div class="row">
+                        <div class="col-xs-4">
+                          <p class="text-center">Foundation</p>
+                          <ul class="list-unstyled">
+                            <li ng-repeat="item in header.nav[1].children[1].children[0].children">
+                              <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="col-xs-4">
+                          <p class="text-center">Elements</p>
+                          <ul class="list-unstyled">
+                            <li ng-repeat="item in header.nav[1].children[1].children[1].children">
+                              <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-xs-4">
+                          <p class="text-center">Patterns</p>
+                          <ul class="list-unstyled">
+                            <li ng-repeat="item in header.nav[1].children[1].children[2].children">
+                              <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="" ui-sref="globalization.overview">Globalization</a>
+          </li>
+          <li>
+            <a href="" ui-sref="resources.developers">Resources</a>
+          </li>
         </ul>
 
+
         <ul class="nav navbar-nav navbar-right">
-          <li class="nav-link nav-link-first"><a href=""><i class="fa fa-lg fa-question"></i></a></li>
+          <!-- <li class="nav-link nav-link-first"><a href=""><i class="fa fa-lg fa-question"></i></a></li>
           <li class="nav-link"><a href=""><i class="fa fa-lg fa-cog"></i></a></li>
           <li class="divider-vertical"></li>
-          
+
           <li>
             <a class="dropdown-toggle" data-toggle="dropdown">Arthur Walter</a>
             <ul class="dropdown-menu" role="menu">
@@ -43,7 +138,7 @@
               <li class="divider"></li>
               <li><a href=""><i class="fa fa-sign-out fa-lg"></i>&nbsp;&nbsp;Sign Out</a></li>
             </ul>
-          </li>
+          </li> -->
         </ul>
 
       </div> <!-- /.navbar-collapse -->
