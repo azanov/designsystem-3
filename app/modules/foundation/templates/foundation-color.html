@@ -9,12 +9,22 @@
       </div>
     </div>
   </div>
-  <sub-header headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
-    <li><a href="" ng-click="subheader.linkTo('color-palette')">Color Palette</a></li>
-    <li><a href="" ng-click="subheader.linkTo('example-application')">Example Application</a></li>
-    <li><a href="" ng-click="subheader.linkTo('neutral-palette')">Neutral Palette</a></li>
-    <li><a href="" ng-click="subheader.linkTo('gradients')">Gradients</a></li>
-  </sub-header>
+
+  <div headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
+    <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="list-unstyled list-inline jump-menu">
+          <li><a href="" du-smooth-scroll="color-palette" offset="100">Color Palette</a></li>
+          <li><a href="" du-smooth-scroll="example-application">Example Application</a></li>
+          <li><a href="" du-smooth-scroll="neutral-palette">Neutral Palette</a></li>
+          <li><a href="" du-smooth-scroll="gradients">Gradients</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  
 </div>
 
 
