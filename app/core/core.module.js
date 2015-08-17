@@ -29,7 +29,8 @@
     'datatables.bootstrap',
     'datatables.tabletools',
     'xeditable',
-    'angularChart'
+    'angularChart',
+    'duScroll'
   ]);
 
 })();

@@ -138,8 +138,8 @@ small, .text-small, .small { font-size: 12px; }
 .doc-hero .hero-header .eyebrow { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-size: 16px; color: rgba(255, 255, 255, 0.5); }
 .doc-hero .hero-header h1 { font-size: 40px; color: #fff; font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; margin-top: 5px; }
 .doc-hero .jump-bar { position: absolute; bottom: 0; width: 100%; height: 50px; background-color: rgba(0, 0, 0, 0.1); color: white; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-size: 16px; z-index: 1; }
-.doc-hero .jump-bar .jump-menu { list-style-type: none; margin: 0; padding: 15px 0 0; }
-.doc-hero .jump-bar .jump-menu li { float: left; margin-right: 60px; }
+.doc-hero .jump-bar .jump-menu { padding: 15px 0 0; }
+.doc-hero .jump-bar .jump-menu li { margin-right: 60px; }
 .doc-hero .jump-bar .jump-menu li a { color: inherit; }
 .doc-hero .jump-bar .jump-menu li:last-child { margin-right: 0; }
 

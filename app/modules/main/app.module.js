@@ -24,6 +24,10 @@
     'pb.settings'
   ]);
 
+  //angular scroll configuration
+  angular.module('app').value('duScrollDuration', 750);
+  angular.module('app').value('duScrollOffset', 125);
+
   //configure debugging
   angular.module('app').config(function($logProvider, config) {
     $logProvider.debugEnabled(config.debug);
