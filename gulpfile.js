@@ -105,10 +105,10 @@ gulp.task('sass-nomaps', function() {
 gulp.task('usemin', function() {
   gulp.src('./app/index.html')
     .pipe(usemin({
-      // css: [minifyCss(), 'concat'],
-      // html: [minifyHtml({
-      //   empty: true
-      // })],
+      css: [minifyCss(), 'concat'],
+      html: [minifyHtml({
+        empty: true
+      })],
       vendorjs: [uglify({
         mangle: true
       })],
