@@ -34,7 +34,6 @@
       margin-top: 5px;
     }
   }
-  //TODO: bring code over from _header.scss
   .jump-bar {
     position: absolute;
     bottom: 0;
@@ -63,15 +62,34 @@
   }
 }
 
-// page headers, bootstrap class modified by FA
-// used on DS guide pages
-.main-header {
-  padding-bottom: 25px;
-  margin-bottom: 80px;
+
+//for subheader
+.sub-header.jump-bar {
+  background: linear-gradient(90deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)),
+  linear-gradient(90deg, #484da2, #872e96, #c90d8b);
+
+  // not docked
+  &.headroom-top {
+    // position: relative;
+    height: 50px;
+    top: 250px;
+  }
+
+  //docked
+  &.headroom-not-top {
+    height: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+    top: 50px;
+    position: fixed;
+    ul {
+      padding-top: 15px;
+    }
+
+  }
 }
 
 
-// PREVIEW EXAMPLES, AS ON BS.COM
+// PREVIEW "EXAMPLE" BOXES, AS ON BS.COM
 .preview-example {
   background-color: #fff;
   position: relative;
@@ -168,74 +186,6 @@
 }
 
 
-
-
-
-
-
-
-
-.hero {
-  // scss-lint:disable SelectorDepth
-  .hero-unit {
-    margin-top: 50px;
-    color: $text-color;
-
-
-    h2 {
-      font-family: $font-family-ps-light;
-      font-size: 18px;
-      padding-bottom: 10px;
-      line-height: 1.3;
-      color: $text-color;
-    }
-  }
-
-  .hero-menu {
-    padding-left: 0;
-    list-style-type: none;
-
-    >li {
-      font-family: $font-family-ps-medium;
-      font-size: 18px;
-      margin-top: 10px;
-      padding-top: 5px;
-      border-top: 1px solid $pb-bg2;
-      &:first-child {
-        margin-top: 0;
-      }
-      a {
-        &:hover {
-          text-decoration: none;
-        }
-      }
-
-      ul {
-        margin-top: 5px;
-        padding-left: 0;
-        list-style-type: none;
-        column-count: 4;
-        break-inside: avoid;
-        li {
-          font-family: $font-family-ps-light;
-          line-height: 1.35;
-          a {
-            color: $text-color;
-          }
-        }
-      }
-    }
-
-    .dropdown-header,
-    .divider,
-    .optional {
-      display: none;
-    }
-  }
-}
-
-
-
 h4,
 h1,
 h3,
@@ -255,117 +205,10 @@ legend {
   }
 }
 
-
-//* Color swatches */
-.row-left-border {
-  border-left: 1px solid $pb-gray-300;
-}
-
-.color-swatches {
-  .color-swatch-container {
-    margin-bottom: 30px;
-  }
-
-  .color-swatch {
-    display: block;
-    width: 100%;
-    // set them to use the BS grid
-    height: 72px;
-    margin-bottom: 5px;
-
-    &[class*='alert'] {
-      border-right-width: 16px;
-      border-right-style: solid;
-    }
-
-    &.color-swatch-small {
-      display: inline-block;
-      width: 33px;
-      height: 33px;
-    }
-  }
-
-  p {
-    font-size: 16px;
-    color: $pb-gray-500;
-
-    small {
-      font-size: 12px;
-      line-height: 1.2;
-    }
-  }
-}
-// $fonts: ('PrecisionSans_W_LtIt', 'PrecisionSans_W_LtIt', 'PrecisionSans_W_Rg', 'PrecisionSans_W_RgIt', 'PrecisionSans_W_Bd', 'PrecisionSans_W_BdIt', 'PrecisionSans_W_Md', 'PrecisionSans_W_MdIt');
-//
-// @each $font in $fonts {
-//   .#{$font} {
-//     font-family: $font, Arial, Helvetica, sans-serif;
-//   }
-// }
-
-// march 2015, changes swatches for main colors into lists of tints
-ul.swatches {
-  margin: 10px 0 30px;
-  padding-left: 0;
-
-  li.color-swatch {
-    height: 30px;
-    margin-bottom: 0;
-    text-align: right;
-    padding: 5px 10px;
-    color: #000;
-
-    span {
-      display: inline-block;
-      //float: left;
-      opacity: .4;
-    }
-
-    &:first-child {
-      height: 75px;
-      font-size: 18px;
-      color: #fff;
-      margin-bottom: 5px;
-    }
-
-    &:nth-child(n+6) {
-      color: #fff;
-    }
-  }
-}
-//* color charts */
-.color-chart-nested {
-  position: relative;
-  float: left;
-  margin-right: 30px;
-
-  .pie {
-    position: absolute;
-    top: 86px;
-    left: 86px;
-  }
-}
-
-.color-blocks {
-  li {
-    margin-bottom: 7px;
-
-    span {
-      display: inline-block;
-      width: 35px;
-      height: 35px;
-      margin-right: 15px;
-      vertical-align: middle;
-    }
-  }
-}
-
 .donut-varied-padded {
   margin-right: 25px;
   margin-left: 25px;
 }
-
-
 
 .fpo-grad {
   padding: 10px;
@@ -589,40 +432,3 @@ ul.swatches {
     color: $brand-warning;
   }
 }
-
-// .chord-display {
-//   margin-bottom: 20px;
-// }
-
-
-
-// These are only for the purposes of displaying the chord colors in the SVGs *//
-// * Chord Color Mixin * * @access public * * @requires {List} $colors - Space Deliminated list of Colors * */
-
-// @mixin chord-color($colors) {
-//   $i: 0;
-//
-//   @each $color in $colors {
-//     $i: $i + 1;
-//
-//     .color#{$i} {
-//       color: $color;
-//       fill: $color;
-//     }
-//   }
-// }
-
-
-// we are no longer using SVGs for chord display, so I have commented this out
-//** * Chord1 */
-// #chord1 {
-//   @include chord-color($pb-medium-blue $pb-purple $pb-gray-500$pb-blue $pb-green $pb-bg2);
-// }
-//
-// #chord2 {
-//   @include chord-color($pb-dark-orange $pb-medium-blue $pb-gray-500$pb-blue $pb-yellow $pb-bg2);
-// }
-//
-// #chord3 {
-//   @include chord-color($pb-dark-green $pb-medium-blue $pb-gray-500$pb-blue $pb-magenta $pb-bg2);
-// }
