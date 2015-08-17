@@ -222,17 +222,16 @@ h5 {
   }
 }
 
+// h6 is only used in documentation
 h6 {
   font-size: 12px;
   font-family: $font-family-sans-serif;
   font-weight: normal;
-  color: $header-color;
-  &.ko {
-    color: fff;
-  }
-  &.alt {
-    color: $header-color-alt;
-  }
+  color: $pb-magenta;
+  margin-bottom: 0;
+  margin-top: 14px;
+
+
 }
 
 .subheader {

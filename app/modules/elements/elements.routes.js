@@ -10,7 +10,9 @@
       controller: 'ElementsController as elements',
       resolve: {
         NavigationResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'navigation'});
+          return MockDataFactory.query({
+            filename: 'navigation'
+          });
         }
       },
       data: {
@@ -30,13 +32,30 @@
       controller: 'ContainersController as containers'
     })
 
+    .state('elements.containers.accordions', {
+      views: {
+        accordions: {
+          templateUrl: 'modules/elements/templates/elements-accordions.html',
+          controller: 'ContainersController as containers'
+        },
+        panels: {
+          templateUrl: 'modules/elements/templates/elements-panels.html',
+          controller: 'PanelsController as panels'
+        }
+      }
+
+    })
+
+
     .state('elements.colorcharts', {
       url: '/colorcharts',
       templateUrl: 'modules/elements/templates/elements-colors-charts.html',
       controller: 'ChartColorsController as charts',
       resolve: {
         ColorsResolve: function($log, MockDataFactory) {
-          return MockDataFactory.get({filename: 'colors'}).$promise.then(function(response) {
+          return MockDataFactory.get({
+            filename: 'colors'
+          }).$promise.then(function(response) {
             return response;
           });
         }
@@ -54,7 +73,9 @@
       controller: 'IconsController as icons',
       resolve: {
         IconsResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'fontawesome'});
+          return MockDataFactory.query({
+            filename: 'fontawesome'
+          });
         }
       }
     })
@@ -65,10 +86,14 @@
       controller: 'InputsController as inputs',
       resolve: {
         PeopleResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'people_10'});
+          return MockDataFactory.query({
+            filename: 'people_10'
+          });
         },
         CountriesResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'countries'});
+          return MockDataFactory.query({
+            filename: 'countries'
+          });
         }
       }
     })
@@ -79,10 +104,14 @@
       controller: 'PanelsController as panels',
       resolve: {
         PeopleResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'people'});
+          return MockDataFactory.query({
+            filename: 'people'
+          });
         },
         MillerResolve: function($log, MockDataFactory) {
-          return MockDataFactory.get({filename: 'millercolumn'}, function(response) {
+          return MockDataFactory.get({
+            filename: 'millercolumn'
+          }, function(response) {
             return response.versionInfos;
           });
         }

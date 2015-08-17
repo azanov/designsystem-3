@@ -11,10 +11,10 @@
   </div>
 
   <sub-header class="sub-header jump-bar headroom" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}" headroom offset="240" tolerance="5">
-  <li><a href="">Inputs</a></li>
+  <li><a href="">Input Fields</a></li>
+  <li><a href="">Dropdowns</a></li>
   <li><a href="">Check boxes</a></li>
   <li><a href="">Radio Buttons</a></li>
-  <li><a href="">Dropdowns</a></li>
   <li><a href="">Switches</a></li>
   <li><a href="">Sliders</a></li>
   <li><a href="">Segments</a></li>
@@ -24,12 +24,13 @@
 
 </div>
 
+
 <div class="container">
 
 <!-- intro text block is larger, but only 8 cols wide -->
 <div class="row">
   <div class="col-md-8">
-    <h1 class="doc-head">Form Fields</h1>
+    <h1 class="doc-head">Input Fields</h1>
     <p class="doc-lede">The form field is our most often used input, and thus has a range of states and uses that inform our users. It is our rule that the content within a field is the primary design focus, while the label is secondary.
     </p>
   </div>
@@ -37,7 +38,7 @@
 
 <div class="row">
   <div class="col-md-12">
-    <h2 class="doc-sectionhead">Form Field States</h2>
+    <h2 class="doc-sectionhead">Input Fields</h2>
   </div>
 </div>
 
@@ -52,7 +53,7 @@
     <p>Which states a user sees depends on whether or not the field is enabled or disabled.</p>
 
     <b>Enabled</b>
-    <p>Most form fields are enabled by default. An enabled form field’s label and in-field prompt text is shown in slightly darker (“active”) grey, and the field will accept user input. This input text provides feedback by further darkening in response to mouse click or keyboard input that makes the field active.</p>
+    <p>Most form fields are enabled by default. An enabled form field’s label and in-field prompt text (if any) is shown in slightly darker (“active”) grey, and the field will accept user input. This input text provides feedback by further darkening in response to mouse click or keyboard input that makes the field active.</p>
     <div class="preview-example">
       <div class="form-group">
         <label>Text input</label>
@@ -62,7 +63,9 @@
 
   </div>
   <div class="col-md-4 col-md-offset-1">
+
     <b>Active (Focused)</b>
+
     <p>When the user places a cursor within the field, it is said to be "Active" or "Focused"</p>
     <div class="preview-example">
       <div class="form-group">
@@ -72,6 +75,7 @@
     </div>
 
     <b>Disabled</b>
+
     <p>A disabled form field shows a light grey label and input copy and will not accept user input.</p>
     <div class="preview-example">
       <div class="form-group">
@@ -163,7 +167,7 @@
   </div>
 <!-- right -->
   <div class="col-md-4 col-md-offset-1">
-    NOTE: do we really do that?
+    <div class="post-it">NOTE: do we really do that?</div>
   </div>
 </div>
 
@@ -179,7 +183,7 @@
     <p>
       Some fields require some explanation to users so they understand what they’re being asked for. In these cases you can include a small popover next to the label that provides additional context for users.
     </p>
-    <p>
+    <p class="post-it">
       NOTE: INLINE HELP TEXT??
     </p>
   </div>
@@ -212,7 +216,7 @@
   </div>
   <div class="col-md-4 col-md-offset-1">
 
-    <h3>Controls TK</h3>
+    <div class="post-it">Controls TK</div>
 
   </div>
 </div>
@@ -262,20 +266,51 @@
 <div class="row">
 <div class="col-md-8">
   <h1 class="doc-head">Dropdown (Select) Menus</h1>
-  <p class="doc-lede">The various states of dropdown menus react in the same manner as our base form fields, just with a short list of options available in their active states.
-  </p>
+  <p class="doc-lede">Dropdown menus behave similarly to form fields, using color to indicate their availability for input and provide feedback to users.</p>
 </div>
+</div>
+
+<!-- row -->
+<div class="row">
+  <!-- left -->
+  <div class="col-md-5">
+    Dropdown menus have four primary states, each defined by its form and type coloring:
+      <ul>
+      <li>Default</li>
+      <li>Hover</li>
+      <li>Active</li>
+      <li>Disabled</li>
+      </ul>
+Which states a user sees depends on whether or not the menu is enabled or disabled.
+
+  </div>
+  <!-- right -->
+  <div class="col-md-4 col-md-offset-1">
+    <div class="preview-example">
+      <div class="form-group">
+        <label>Standard input</label>
+        <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+          <option value="">Normal Size</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Disabled input</label>
+        <select class="form-control" disabled ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+          <option value="">Normal Size</option>
+        </select>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="row">
 <div class="col-md-12">
-  <h2 class="doc-sectionhead">Basic system select menus</h2>
+  <h2 class="doc-sectionhead">Sizes of system select menus</h2>
 </div>
 </div>
 <div class="row">
 <div class="col-md-5">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eum porro quae cupiditate facere? Nulla unde voluptatibus a, architecto sequi!
-  </p>
+  <p class="post-it">Need copy</p>
 </div>
 <div class="col-md-4 col-md-offset-1">
   <select class="form-control input-lg" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
@@ -295,14 +330,12 @@
 
 <div class="row">
 <div class="col-md-12">
-  <h2 class="doc-sectionhead">Advanced select menus
-  </h2>
+  <h2 class="doc-sectionhead">Advanced select menus</h2>
 </div>
 </div>
 <div class="row">
 <div class="col-md-5">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eum porro quae cupiditate facere? Nulla unde voluptatibus a, architecto sequi!
-  </p>
+  <p class="post-it">copy needed</p>
   <p class="more-info">
     <a href="http://brianreavis.github.io/selectize.js/" target="_blank">
       Basic info
@@ -332,6 +365,48 @@
 </div>
 </div>
 
+<!-- row -->
+<div class="row">
+  <!-- left -->
+  <div class="col-md-8">
+    <h2 class="doc-sectionhead">Writing Dropdown Menu Labels</h2>
+<p>When writing labels and menu items for dropdowns, it’s important to stay consistent across your entire product. Here are some basic guidelines for how to write these critical pieces of user interface copy.</p>
+
+<b>Style</b>
+<li>Use short, active words and phrases.</li>
+<li>Structure labels to avoid ambiguity in language.</li>
+<li>To avoid confusing users, use consistent terminology for a given concept (e.g., “Input Recipient’s Name” vs. “Input Addressee’s Name” vs. “Input Contact’s Name”).</li>
+
+<b>Capitalization</b>
+<li>Dropdown menu labels use sentence capitalization, except when they include words or phrases that are acronyms or proper nouns, which should be capitalized.</li>
+<li>Dropdown menu items use title capitalization, because they behave like buttons.</li>
+
+<b>Punctuation</b>
+<li>Dropdown labels and items don’t conclude with punctuation, such as periods, colons.</li>
+<li>Don’t phrase your dropdown labels as questions.</li>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="row">
 <div class="col-md-8">
   <h1 class="doc-head">Inputs</h1>
@@ -349,7 +424,7 @@
 <div class="row">
 <div class="col-md-5">
   <p>
-    For consistency, our design system features a single style of radial button and checkbox that are complementary in design. The active button/box is always in the Pb Medium Blue and the default text is always PB Dark Gray.
+    For consistency, our design system features a single style of radio button and checkbox that are complementary in design. The active button/box is always in the PB Medium Blue and the default text is always PB Dark Gray.
   </p>
 </div>
 <div class="col-md-4 col-md-offset-1">
@@ -434,6 +509,14 @@
 
 </div>
 </div>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="doc-sectionhead">Input Fields</h2>
+  </div>
+</div>
+
 
 <!--  -->
 <!--  -->

@@ -12,8 +12,6 @@
 
 //DOCUMENTATION PAGES
 
-
-// for FA documentation pages.
 .doc-hero {
   @extend %gradient-blue-purple-magenta;
   height: 300px;
@@ -240,6 +238,16 @@ legend {
 .clearRow {
   clear: left;
 }
+
+.post-it {
+  font-family: Noteworthy, 'comic sans', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #ffe373;
+  padding: 10px;
+  transform: rotate(-1deg);
+}
+
 //
 // //* color swatch backgrounds */
 .brand-primary {

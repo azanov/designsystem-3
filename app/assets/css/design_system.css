@@ -44,9 +44,7 @@ h5 { font-size: 14px; font-family: "PrecisionSans_W_Bd", "Helvetica Neue", Arial
 h5.ko { color: fff; }
 h5.alt { color: #2e2e2e; }
 
-h6 { font-size: 12px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: normal; color: #2e2e2e; }
-h6.ko { color: fff; }
-h6.alt { color: #4e4e4e; }
+h6 { font-size: 12px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: normal; color: #cf0989; margin-bottom: 0; margin-top: 14px; }
 
 .subheader { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; color: #2e2e2e; }
 .subheader.alt { color: #4e4e4e; }
