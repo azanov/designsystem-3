@@ -16,20 +16,6 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse">
 
-        <!-- <ul class="nav navbar-nav">
-          <li class="divider-vertical"></li>
-          <li ng-class="{'dropdown':(nav.children.length)}" ng-repeat="nav in header.nav">
-            <a href="" data-target="{{nav.value}}" data-toggle="{{nav.toggle}}">{{nav.label}} <i class="fa fa-angle-down" ng-if="nav.children.length"></i></a>
-            <ul class="dropdown-menu" role="menu">
-              <li ng-repeat="link in nav.children" ng-class="{'dropdown-header': link.header, 'divider': link.divider}" ng-switch on="link.type">
-                <span ng-switch-when="header">{{link.label}}</span>
-                <span ng-switch-when="divider"></span>
-                <a ui-sref="{{link.value}}" href="" ng-switch-default>{{link.label}}</a>
-              </li>
-            </ul>
-          </li>
-        </ul> -->
-
         <ul class="nav navbar-nav">
           <li class="divider-vertical"></li>
           <li>
@@ -50,9 +36,18 @@
                           <p class="text-center">{{category.label}}</p>
 
                           <ul class="list-unstyled">
-                            <li ng-repeat="item in category.children">
+
+                            <!-- if no sub items-->
+                            <li ng-if="!item.children" ng-repeat="item in category.children">
                               <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
                             </li>
+
+                            <!-- if sub items -->
+                            <span ng-if="item.children" ng-repeat="item in category.children">
+                              <li ng-repeat="item in item.children">
+                                <a href="" ui-sref="{{item.value}}" >{{item.label}}</a>
+                              </li>
+                            </span>
                           </ul>
 
                         </div>
