@@ -34,7 +34,7 @@
 
                       <div class="row">
                         <div class="col-xs-4" ng-repeat="category in header.nav[1].children[0].children">
-                          <p class="category-label">{{category.label}}</p>
+                          <p class="section-head">{{category.label}}</p>
 
                           <ul class="list-unstyled menu-items">
 
@@ -74,6 +74,38 @@
           <li>
             <a href="" ui-sref="resources.page">Resources</a>
           </li>
+          <!-- end "real" menus -->
+
+          <li class="dropdown">
+             <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown  <i class="fa fa-angle-down"></i></a>
+             <ul class="dropdown-menu">
+               <li><a href="">Action</a></li>
+               <li><a href="">Another action</a></li>
+               <li><a href="">Something else here</a></li>
+               <li><a href="">Yet another link</a></li>
+             </ul>
+         </li>
+
+         <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown  <i class="fa fa-angle-down"></i></a>
+            <ul class="dropdown-menu">
+              <li class="section-head">Section Header</li>
+              <li><a href="">Action</a></li>
+              <li><a href="">Another action</a></li>
+              <li><a href="">Something else here</a></li>
+              <li class="section-head">Section Header</li>
+              <li><a href="">Action</a></li>
+              <li><a href="">Another action</a></li>
+              <li><a href="">Something else here</a></li>
+            </ul>
+        </li>
+
+
+
+
+
+
+
         </ul>
 
 
