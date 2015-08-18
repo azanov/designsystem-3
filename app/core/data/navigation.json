@@ -1,7 +1,7 @@
 [
   {
     "label": "Principles",
-    "value": "principles.design"
+    "value": "principles.page"
 
   },
 
@@ -97,7 +97,7 @@
                   }
                 ]
               },
-            
+
               {
                 "label": "Graphs",
                 "value": "graphs.c3 "
@@ -166,7 +166,7 @@
   },
   {
     "label": "Globalization",
-    "value": "globalization.overview"
+    "value": "globalization.page"
   },
   {
     "label": "Resources",

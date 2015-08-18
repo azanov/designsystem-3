@@ -9,13 +9,22 @@
       </div>
     </div>
   </div>
-  <sub-header headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
-    <li><a href="" ui-sref="resources.developers">Resources for Developers</a></li>
-    <li><a href="" ui-sref="resources.designers">Resources for Designers</a></li>
-  </sub-header>
+
+  <div headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-unstyled list-inline jump-menu">
+            <li><a href="" du-smooth-scroll="developers" offset="100">Developers</a></li>
+            <li><a href="" du-smooth-scroll="designers">Designers</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
 
-
-<ui-view></ui-view>
+<div id="developers" ui-view="developers"></div>
+<div id="designers" ui-view="designers"></div>

@@ -15,34 +15,33 @@
         }
       })
 
-      .state('globalization.overview', {
-        url: '/overview',
-        templateUrl: 'modules/globalization/templates/globalization-process-overview.html'
-      })
-
-      .state('globalization.about', {
-        url: '/about',
-        templateUrl: 'modules/globalization/templates/globalization-about.html'
-      })
-
-      .state('globalization.reference', {
-        url: '/reference',
-        templateUrl: 'modules/globalization/templates/globalization-quick-reference.html'
-      })
-
-      .state('globalization.angulartranslate', {
-        url: '/angulartranslate',
-        templateUrl: 'modules/globalization/templates/globalization-angular-translate.html',
-        controller: 'AngularTranslateController as translate',
-        resolve: {
-          translate: function($translatePartialLoader) {
-            $translatePartialLoader.addPart('modules/globalization/i18n');
+      .state('globalization.page', {
+        url: '',
+        views: {
+          overview: {
+            templateUrl: 'modules/globalization/templates/globalization-process-overview.html'
           },
-          languages: function(languageFactory) {
-            return languageFactory.get();
+          about: {
+            templateUrl: 'modules/globalization/templates/globalization-about.html'
+          },
+          reference: {
+            templateUrl: 'modules/globalization/templates/globalization-quick-reference.html'
+          },
+          angularjs: {
+            templateUrl: 'modules/globalization/templates/globalization-angular-translate.html',
+            controller: 'AngularTranslateController as translate',
+            resolve: {
+              translate: function($translatePartialLoader) {
+                $translatePartialLoader.addPart('modules/globalization/i18n');
+              },
+              languages: function(languageFactory) {
+                return languageFactory.get();
+              }
+            }
           }
         }
       });
+
 
   });
 })();
