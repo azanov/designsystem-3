@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="hero-header">
-          <div class="eyebrow">Product Framework / Responsive Web / Elements</div>
+          <div class="eyebrow">Elements</div>
           <h1>Charts</h1>
         </div>
       </div>
@@ -12,12 +12,26 @@
   </div>
   <sub-header headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
     <li><a href="" ui-sref="graphs.c3">C3 Charts</a></li>
-    <li><a href="" ui-sref="graphs.morris">Morris Charts</a></li>
     <li><a href="" ui-sref="graphs.chartjs">ChartJS</a></li>
 
   </sub-header>
+
+  <div headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-unstyled list-inline jump-menu">
+            <li><a href="" du-smooth-scroll="c3-charts" offset="100">C3 Charts</a></li>
+            <li><a href="" du-smooth-scroll="chartjs">ChartJS</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 
 
-<div ui-view></div>
+<div id="c3-charts" ui-view="c3charts"></div>
+<div id="chartjs" ui-view="chartjs"></div>
