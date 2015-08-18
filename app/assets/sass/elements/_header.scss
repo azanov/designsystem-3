@@ -58,9 +58,8 @@ header {
 
     >li >a {
       color: rgba(255, 255, 255, .75);
-      x-text-transform: uppercase;
       font-size: 14px;
-      font-family: $font-family-ps-light;
+      font-family: $font-family-ps-bold;
       font-weight: normal;
     }
     >.open >a {

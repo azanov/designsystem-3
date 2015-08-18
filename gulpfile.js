@@ -69,22 +69,7 @@ gulp.task('sass', function() {
     }));
 });
 
-// experimental::
-// gulp.task('style', function(done) {
-//   return sass('app/assets/sass/', {
-//       sourcemap: true
-//     })
-//     .on('error', done)
-//     .pipe(postcss([autoprefixer({
-//       browsers: ['last 2 versions']
-//     })]))
-//     .on('error', done)
-//     .pipe(sourcemaps.write('.'))
-//     .pipe(gulp.dest('app/assets/css/'))
-//     .pipe(reload({
-//       stream: true
-//     }));
-// });
+
 
 gulp.task('sass-nomaps', function() {
   return sass('app/assets/sass/', {
@@ -101,19 +86,52 @@ gulp.task('sass-nomaps', function() {
     .pipe(gulp.dest('build/assets/css'));
 });
 
+// experiment 8-18
+// gulp.task('sass', function() {
+//   return sass('./app/assets/sass')
+//     .on('error', function(err) {
+//       console.error('Error!', err.message);
+//     })
+//     .pipe(gulp.dest('./app/assets/css'))
+//     .pipe(reload({
+//       stream: true
+//     }));
+// });
+// gulp.task('autoprefixer', ['sass'],  function() {
+//   return gulp.src('./app/assets/css/')
+//     .pipe(sourcemaps.init())
+//     .pipe(postcss([autoprefixer({
+//       browsers: ['last 2 versions']
+//     })]))
+//     .pipe(sourcemaps.write('.'))
+//     .pipe(gulp.dest('./app/assets/css'));
+// });
+//
+//
+
+
+
+
+
+
+
+
+
+
+
 //usemin
 gulp.task('usemin', function() {
   gulp.src('./app/index.html')
     .pipe(usemin({
-      css: [minifyCss(), 'concat'],
-      html: [minifyHtml({
-        empty: true
-      })],
+      //css: [minifyCss()],
+      // html: [minifyHtml({
+      //   empty: true
+      // })],
       vendorjs: [uglify({
         mangle: true
       })],
       appjs: [
-       replace('debug: true', 'debug: false'),
+        replace('debug: true', 'debug: false'),
         ngAnnotate({
           remove: true,
           add: true,
@@ -255,58 +273,5 @@ gulp.task('watch', function() {
     function() {
       reload();
     });
-
-});
-
-// FTP tasks
-// to upload, run "gulp deploy"
-
-var userName = '';
-var userPass = '';
-
-gulp.task('prompt_password', ['prompt_username'], function() {
-  return gulp.src('build/index.html')
-    .pipe(prompt.prompt({
-      type: 'password',
-      name: 'passwordInput',
-      message: 'Please enter your password'
-    }, function(res) {
-      userPass = res.passwordInput;
-    }));
-});
-
-gulp.task('prompt_username', function() {
-  return gulp.src('build/index.html')
-    .pipe(prompt.prompt({
-      type: 'input',
-      name: 'usernameInput',
-      message: 'Please enter your username'
-    }, function(res) {
-      userName = res.usernameInput;
-    }));
-});
-
-gulp.task('deploy', ['prompt_password'], function() {
-  var conn = ftp.create({
-    host: '10.50.8.173',
-    user: userName,
-    password: userPass,
-    parallel: 10,
-    log: gutil.log
-  });
-  var globs = [
-    'build/**'
-  ];
-
-  // using base = '.' will transfer everything to /public_html correctly
-  // otherwise choose the folder whose contents should be the site root
-  // turn off buffering in gulp.src for best performance
-  return gulp.src(globs, {
-    base: 'build',
-    buffer: false
-  })
-
-  //.pipe(conn.newer('/public_html')) // only upload newer files
-  .pipe(conn.dest('/design_system_staging'));
 
 });
