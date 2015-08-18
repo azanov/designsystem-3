@@ -28,19 +28,34 @@
 
     .state('elements.containers', {
       url: '/containers',
+      abstract: true,
       templateUrl: 'modules/elements/templates/elements-containers.html',
       controller: 'ContainersController as containers'
     })
 
-    .state('elements.containers.accordions', {
+    .state('elements.containers.page', {
+      url: '',
       views: {
         accordions: {
           templateUrl: 'modules/elements/templates/elements-accordions.html',
           controller: 'AccordionsController as accordions'
         },
+        cards: {
+          templateUrl: 'modules/elements/templates/elements-cards.html'
+        },
         panels: {
           templateUrl: 'modules/elements/templates/elements-panels.html',
           controller: 'PanelsController as panels'
+        },
+        tabs: {
+          templateUrl: 'modules/elements/templates/elements-tabs.html',
+          controller: 'TabsController as tabs'
+        },
+        tiles: {
+          templateUrl: 'modules/elements/templates/elements-tiles.html'
+        },
+        widgets: {
+          templateUrl: 'modules/elements/templates/elements-widgets.html'
         }
       }
     })
@@ -127,13 +142,6 @@
       url: '/progress',
       templateUrl: 'modules/elements/templates/elements-progress.html',
       controller: 'ProgressController as progress'
-    })
-
-
-    .state('elements.tabs', {
-      url: '/tabs',
-      templateUrl: 'modules/elements/templates/elements-tabs.html',
-      controller: 'TabsController as tabs'
     });
 
 

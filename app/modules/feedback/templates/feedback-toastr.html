@@ -1,7 +1,13 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="main-header"><h1>Toastr</h1></div>
-      </div>
-  </div>
+<div class="container">
+  <h1>Toastr alerts
+    <span class="more-info">
+      <a href="http://foxandxss.github.io/angular-toastr/" target="_blank">More info
+        <i class="fa fa-external-link"></i>
+      </a>
+    </span>
+  </h1>
+  <button class="btn btn-info" ng-click="toastr.toast.info()">Info</button>
+  <button class="btn btn-success" ng-click="toastr.toast.success()">Success</button>
+  <button class="btn btn-warning" ng-click="toastr.toast.warning()">Warning</button>
+  <button class="btn btn-danger" ng-click="toastr.toast.danger()">Danger</button>
 </div>
