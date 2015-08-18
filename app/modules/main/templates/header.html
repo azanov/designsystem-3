@@ -25,15 +25,18 @@
             <a href="" class="dropdown-toggle" data-target="" data-toggle="dropdown">Web <i class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
               <li>
-                <div class="x-yamm-content container-fluid">
+                <div class="yamm-content container">
                   <div class="row">
                     <div class="col-xs-12">
+                      <!-- this row is just so i can do the offset -->
+                      <div class="row">
+                      <div class="col-md-6  mega-offset">
 
                       <div class="row">
                         <div class="col-xs-4" ng-repeat="category in header.nav[1].children[0].children">
-                          <p>{{category.label}}</p>
+                          <p class="category-label">{{category.label}}</p>
 
-                          <ul class="list-unstyled">
+                          <ul class="list-unstyled menu-items">
 
                             <!-- if no sub items-->
                             <li ng-if="!item.children" ng-repeat="item in category.children">
@@ -47,12 +50,16 @@
                               </li>
                             </span>
                           </ul>
-
                         </div>
                       </div>
 
+
+                    </div>
                     </div>
 
+
+
+                    </div>
                   </div>
                 </div>
               </li>
