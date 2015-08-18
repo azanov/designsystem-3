@@ -97,7 +97,7 @@
                   }
                 ]
               },
-            
+
               {
                 "label": "Graphs",
                 "value": "graphs.c3 "
@@ -166,7 +166,7 @@
   },
   {
     "label": "Globalization",
-    "value": "globalization.overview"
+    "value": "globalization"
   },
   {
     "label": "Resources",
