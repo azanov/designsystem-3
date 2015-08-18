@@ -40,18 +40,18 @@
       }
     },
     "CONTROLLER": {
-      "TITLE": "Controller example with $translate service",
+      "TITLE": "Ejemplo de un controlador con servicio de $translate",
       "EXAMPLE": "Utilice estas configuraciones para establecer las opciones de informe predeterminadas de su sistema."
     },
     "FORMATS": {
-      "NUMBER": "Number formats",
-      "DATE": "Date formats",
+      "NUMBER": "Formatos de número",
+      "DATE": "Formatos de fecha",
       "TIME": {
-        "TITLE": "Time formats",
+        "TITLE": "Formatos de hora",
         "TIMESHORT": "Tiempo corto",
         "TIMEMEDIUM": "Medio tiempo"
       },
-      "CURRENCY": "Currency formats"
+      "CURRENCY": "Formatos de moneda"
     }
   }
 }

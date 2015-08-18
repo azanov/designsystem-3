@@ -58,17 +58,17 @@ header {
 
     >li >a {
       color: rgba(255, 255, 255, .75);
-      text-transform: uppercase;
-      font-size: 12px;
-      font-family: $font-family-ps-bold;
+      x-text-transform: uppercase;
+      font-size: 14px;
+      font-family: $font-family-ps-light;
       font-weight: normal;
     }
     >.open >a {
       &,
       &:hover,
       &:focus {
-        background-color: transparentize($pb-blue, .5);
-        color: $navbar-inverse-link-active-color;
+        background-color: #fff;
+        color: $pb-blue;
       }
     }
     // .nav-link {
@@ -125,7 +125,7 @@ header {
   }
 
   .dropdown-menu {
-    background-color: $pb-gray-50;
+    background-color: #fff;
     border: 0;
     margin-top: 1px;
     border-radius: 0;

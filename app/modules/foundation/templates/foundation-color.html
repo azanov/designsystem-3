@@ -9,12 +9,22 @@
       </div>
     </div>
   </div>
-  <sub-header headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
-    <li><a href="">Set</a></li>
-    <li><a href="">Jump menu</a></li>
-    <li><a href="">items</a></li>
-    <li><a href="">Here</a></li>
-  </sub-header>
+
+  <div headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-unstyled list-inline jump-menu">
+            <li><a href="" du-smooth-scroll="color-palette" offset="100">Color Palette</a></li>
+            <li><a href="" du-smooth-scroll="example-application">Example Application</a></li>
+            <li><a href="" du-smooth-scroll="neutral-palette">Neutral Palette</a></li>
+            <li><a href="" du-smooth-scroll="gradients">Gradients</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 
@@ -23,7 +33,7 @@
 <div class="container">
 
 
-  <div class="row">
+  <div id="color-palette" class="row">
     <div class="col-md-12">
       <h2 class="docs">Color Palette</h2>
       <div class="row">
@@ -34,7 +44,7 @@
     </div>
   </div>
 
-  <div class="row spacer-top-xl">
+  <div id="example-application" class="row spacer-top-xl">
     <div class="col-md-12">
       <h2 class="docs">Example Application</h2>
       <div class="row">
@@ -45,7 +55,7 @@
     </div>
   </div>
 
-  <div class="row spacer-top-xl">
+  <div id="neutral-palette" class="row spacer-top-xl">
     <div class="col-md-12">
       <h2 class="docs">Neutral Palette</h2>
       <div class="row">
@@ -56,7 +66,7 @@
     </div>
   </div>
 
-  <div class="row spacer-top-xl">
+  <div id="gradients" class="row spacer-top-xl">
     <div class="col-md-12">
       <h2 class="docs">Gradients</h2>
       <div class="row">
@@ -66,13 +76,5 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
 
 </div>

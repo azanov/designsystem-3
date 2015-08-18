@@ -32,28 +32,27 @@
     })
 
     .state('tables.datatable.overview', {
-      url: '/datatable/overview',
-      templateUrl: 'modules/tables/templates/tables-datatable-overview.html',
-      controller: 'TablesOverviewController as overview'
+      url: '/overview',
+      views: {
+        overview: {
+          templateUrl: 'modules/tables/templates/tables-datatable-overview.html',
+          controller: 'TablesOverviewController as overview'
+        },
+        toolbar: {
+          templateUrl: 'modules/tables/templates/tables-datatable-toolbar.html'
+        },
+        data: {
+          templateUrl: 'modules/tables/templates/tables-datatable-data.html',
+          controller: 'TablesDataController as data'
+        },
+        tabbed: {
+          templateUrl: 'modules/tables/templates/tables-datatable-tabbed.html'
+        }
+      }
     })
 
-    .state('tables.datatable.toolbar', {
-      url: '/datatable/toolbar',
-      templateUrl: 'modules/tables/templates/tables-datatable-toolbar.html'
-    })
 
-    .state('tables.datatable.tabbed', {
-      url: '/datatable/tabbed',
-      templateUrl: 'modules/tables/templates/tables-datatable-tabbed.html'
-    })
-
-    .state('tables.datatable.data', {
-      url: '/datatable/data',
-      templateUrl: 'modules/tables/templates/tables-datatable-data.html',
-      controller: 'TablesDataController as data'
-    })
-
-    .state('tables.datatable.paging', {
+    .state('tables.paging', {
       url: '/datatable/paging',
       templateUrl: 'modules/tables/templates/tables-datatable-paging.html',
       controller: 'TablesDatatableController as datatable',
@@ -61,10 +60,15 @@
         PeopleResolve: function($log, MockDataFactory) {
           return MockDataFactory.query({filename: 'ds_users'});
         }
+      },
+      data: {
+        pageTitle: 'Paging',
+        access: 'public',
+        bodyClass: 'tables signin' //TODO: need to change this to a generic classname
       }
     })
 
-    .state('tables.datatable.infiniteScroll', {
+    .state('tables.infiniteScroll', {
       url: '/datatable/infiniteScroll',
       templateUrl: 'modules/tables/templates/tables-datatable-infinite-scroll.html',
       controller: 'TablesDatatableInfiniteScrollController as datatable',
@@ -72,6 +76,11 @@
         PeopleResolve: function($log, MockDataFactory) {
           return MockDataFactory.query({filename: 'ds_users'});
         }
+      },
+      data: {
+        pageTitle: 'Infinite Scroll',
+        access: 'public',
+        bodyClass: 'tables signin' //TODO: need to change this to a generic classname
       }
     })
 
