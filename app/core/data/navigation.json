@@ -1,7 +1,7 @@
 [
   {
     "label": "Principles",
-    "value": "principles.design"
+    "value": "principles.page"
 
   },
 
@@ -166,7 +166,7 @@
   },
   {
     "label": "Globalization",
-    "value": "globalization"
+    "value": "globalization.page"
   },
   {
     "label": "Resources",
