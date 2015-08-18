@@ -36,14 +36,13 @@
       views: {
         accordions: {
           templateUrl: 'modules/elements/templates/elements-accordions.html',
-          controller: 'ContainersController as containers'
+          controller: 'AccordionsController as accordions'
         },
         panels: {
           templateUrl: 'modules/elements/templates/elements-panels.html',
           controller: 'PanelsController as panels'
         }
       }
-
     })
 
 
