@@ -670,7 +670,7 @@ select[multiple], select[size] { background-image: none !important; }
 .item-selector-button.disabled .image { background-image: url("../images/box-disabled.png"); }
 .item-selector-button.disabled:hover { padding: 15px; border: 1px solid #9b9b9b; box-shadow: none; }
 
-#header, header { background: linear-gradient(90deg, #484da2, #872e96, #c90d8b); }
+#header, header { background: linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%); }
 #header .navbar, header .navbar { margin-bottom: 0; }
 #header .navbar li.first a, header .navbar li.first a { padding-left: 0; }
 
