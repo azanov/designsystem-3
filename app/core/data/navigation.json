@@ -54,7 +54,7 @@
               },
               {
                 "label": "Containers",
-                "value": "elements.containers"
+                "value": "elements.containers.page"
               },
 
               {
@@ -64,10 +64,6 @@
               {
                 "label": "UI Controls",
                 "value": "elements.uicontrols"
-              },
-              {
-                "label": "Containers",
-                "value": "elements.containers"
               },
               {
                 "label": "Popovers",
@@ -100,12 +96,12 @@
 
               {
                 "label": "Graphs",
-                "value": "graphs.c3 "
+                "value": "graphs.page"
 
               },
               {
                 "label": "User Feedback",
-                "value": "feedback.alerts"
+                "value": "feedback.page"
 
 
               }

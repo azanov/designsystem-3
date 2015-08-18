@@ -5,6 +5,7 @@
   angular.module('pb.ds.mobile').config(function($stateProvider) {
     $stateProvider.state('mobile', {
       url: '/mobile',
+      abstract: true,
       templateUrl: 'modules/mobile/templates/mobile.html',
       controller: 'MobileController as mobile',
       data: {
@@ -13,6 +14,13 @@
         bodyClass: 'mobile'
       }
     })
+
+    .state('mobile.page', {
+      url: '',
+      views: {
+
+      }
+    });
 
 
   });

@@ -3,39 +3,47 @@
     <div class="row">
       <div class="col-md-12">
         <div class="hero-header">
-          <div class="eyebrow">Product Framework/ Responsive Web / Elements</div>
+          <div class="eyebrow">Elements</div>
           <h1>Icons</h1>
         </div>
       </div>
     </div>
   </div>
-  <sub-header headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
-    <li><a href="">PB Icons</a></li>
-    <li><a href="">Glyphicons</a></li>
-    <li><a href="">Font Awesome</a></li>
-  </sub-header>
+
+
+  <div headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-unstyled list-inline jump-menu">
+            <li><a href="" du-smooth-scroll="pb-icons" offset="100">PB Icons</a></li>
+            <li><a href="" du-smooth-scroll="glyphicons">Glyphicons</a></li>
+            <li><a href="" du-smooth-scroll="font-awesome">Font Awesome</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
 
 <div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="main-header"><h1>Icons</h1></div>
-    </div>
-  </div>
+
+
   <div class="row">
     <div class="col-md-8">
-      <h4 class="sh">PB Icons</h4>
+      <h1 id="pb-icons">PB Icons</h1>
       <ul class="block-grid-6 glyphicons">
         <li ng-repeat="icon in icons.pbIcons"><i class="pbfont fa-fw fa-2x pb-{{::icon}}"></i>
           <br>pb-{{::icon}}</li>
       </ul>
     </div>
   </div>
+
   <div class="row">
     <div class="col-md-8">
-      <h4 class="sh">Glyphicons</h4>
+      <h1 id="glyphicons" class="sh">Glyphicons</h1>
       <ul class="block-grid-6 glyphicons">
         <li>
           <span class="glyphicon  fa-2x glyphicon-plus"></span>
@@ -89,9 +97,11 @@
       <div class="callout callout-info">Included as part of of Bootstrap. Please see <a href="http://getbootstrap.com/components/#glyphicons-glyphs" target="_blank">getbootstrap.com</a> for all icons.</div>
     </div>
   </div>
+
+
   <div class="row">
     <div class="col-md-8">
-      <h4 class="sh">Font Awesome</h4>
+      <h1 id="font-awesome">Font Awesome</h1>
       <ul class="block-grid-6">
         <li ng-repeat="icon in icons.faIcons | limitTo:24" class="text-center"><i class="fa fa-2x fa-{{::icon.id}}"></i>
           <br>fa-{{::icon.id}}</li>

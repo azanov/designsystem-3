@@ -3,25 +3,34 @@
     <div class="row">
       <div class="col-md-12">
         <div class="hero-header">
-          <div class="eyebrow">Product Framework/ Responsive Web / Elements</div>
+          <div class="eyebrow">Elements</div>
           <h1>User Feedback</h1>
         </div>
       </div>
     </div>
   </div>
-  <sub-header headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
-    <li><a href="" ui-sref="feedback.alerts">Alerts</a></li>
-    <li><a href="" ui-sref="feedback.badges">Badges</a></li>
-    <li><a href="" ui-sref="feedback.notifications">Notifications</a></li>
-    <li><a href="" ui-sref="feedback.progress">Progress Bars</a></li>
-    <li><a href="" ui-sref="feedback.">Toastrs</a></li>
-  </sub-header>
+
+  <div headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-unstyled list-inline jump-menu">
+            <li><a href="" du-smooth-scroll="alerts" offset="100">Alerts</a></li>
+            <li><a href="" du-smooth-scroll="badges">Badges</a></li>
+            <li><a href="" du-smooth-scroll="notifications">Notifications</a></li>
+            <li><a href="" du-smooth-scroll="progress-bars">Progress Bars</a></li>
+            <li><a href="" du-smooth-scroll="toastrs">Toastrs</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 
-
-
-
-
-
-<div ui-view></div>
+<div id="alerts" ui-view="alerts"></div>
+<div id="badges" ui-view="badges"></div>
+<div id="notifications" ui-view="notifications"></div>
+<div id="progress-bars" ui-view="progressbars"></div>
+<div id="toastrs" ui-view="toastrs"></div>
