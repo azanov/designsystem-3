@@ -22,18 +22,16 @@
             <a href="" ui-sref="principles.page">Principles</a>
           </li>
           <li class="dropdown yamm-fw">
-            <a href="" class="dropdown-toggle" data-target="" data-toggle="dropdown">Product Framework <i class="fa fa-angle-down"></i></a>
+            <a href="" class="dropdown-toggle" data-target="" data-toggle="dropdown">Web <i class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
               <li>
                 <div class="x-yamm-content container-fluid">
                   <div class="row">
-                    <div class="col-xs-6">
-
-                      <h3 class="text-center">Responsive Web</h3>
+                    <div class="col-xs-12">
 
                       <div class="row">
                         <div class="col-xs-4" ng-repeat="category in header.nav[1].children[0].children">
-                          <p class="text-center">{{category.label}}</p>
+                          <p>{{category.label}}</p>
 
                           <ul class="list-unstyled">
 
@@ -55,13 +53,13 @@
 
                     </div>
 
-                    <div class="col-xs-6">
-                      <h3 class="text-center">Mobile</h3>
-                    </div>
                   </div>
                 </div>
               </li>
             </ul>
+          </li>
+          <li>
+            <a href="" ui-sref="mobile">Mobile</a>
           </li>
           <li>
             <a href="" ui-sref="globalization.page">Globalization</a>
