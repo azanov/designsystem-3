@@ -169,6 +169,23 @@ figure {
   }
 }
 
+// DOCS TYPOGRAPHY differs from DS
+.doc-head {
+  margin-top: 80px;
+}
+.doc-lede {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #3a3a3a;
+}
+.doc-sectionhead {
+  font-family: $font-family-ps-regular;
+  color: $header-color;
+  font-size: 20px;
+  padding-bottom: 15px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid $pb-light-gray;
+}
 
 
 h4,
