@@ -15,9 +15,9 @@
       <div class="row">
         <div class="col-md-12">
           <ul class="list-unstyled list-inline jump-menu">
-            <li><a href="" du-smooth-scroll="link1" offset="100">Link 1</a></li>
-            <li><a href="" du-smooth-scroll="link2">Link 2</a></li>
-            <li><a href="" du-smooth-scroll="link3">Link 3</a></li>
+            <li><a href="" du-smooth-scroll="typography" offset="100">Typography</a></li>
+            <li><a href="" du-smooth-scroll="header-body-spacing">Header &amp; Body Spacing</a></li>
+            <li><a href="" du-smooth-scroll="tab-table-spacing">Tab &amp; Table Spacing</a></li>
           </ul>
         </div>
       </div>
@@ -32,7 +32,7 @@
 <div class="container">
 
 <!-- intro text block is larger, but only 8 cols wide -->
-  <div class="row">
+  <div id="typography" class="row">
     <div class="col-md-8">
       <h1 class="doc-head">Typography</h1>
       <p class="doc-lede">Thoughtful use of typography is an anchor to our system so it never feels cluttered or jumbled. These fonts chosen have been selected for both their connection to the Pitney Bowes brand typography as well as their ability to perform well on the web. NOTE: Always use even number fonts, and never use a type size below 12 points.</p>
@@ -40,10 +40,11 @@
   </div>
 
 
-  <div class="row">
+  <!-- headers -->
+  <div id="headers" class="row spacer-top-xl">
     <div class="col-md-12">
+      <h1 class="doc-sectionhead">Headers</h1>
 
-      <h1>Headers</h1>
       <table class="table table-bordered type-samples">
         <thead>
           <tr>
@@ -64,14 +65,16 @@
               {{item.tag}}.ko
               <span class="swatch" style="background-color:#fff; color:#2e2e2e">#FFFFFF</span>
             </td>
-
           </tr>
-
         </tbody>
       </table>
+    </div>
+  </div>
 
 
-      <h1>Body Copy</h1>
+  <div class="row spacer-top-xl">
+    <div class="col-md-12">
+      <h1 class="doc-sectionhead">Body Copy</h1>
       <table class="table table-bordered type-samples">
         <thead>
           <tr>
@@ -93,8 +96,14 @@
           </td>
         </tr>
       </table>
+    </div>
+  </div>
 
-      <h1 id="navigation">Navigation</h1>
+
+  <div class="row spacer-top-xl">
+    <div class="col-md-12">
+      <h1 class="doc-sectionhead">Navigation</h1>
+
       <table class="table table-bordered type-samples">
         <thead>
           <tr>
@@ -112,8 +121,13 @@
           </td>
         </tr>
       </table>
+    </div>
+  </div>
 
-      <h3>Forms &amp; Inputs</h3>
+
+  <div class="row spacer-top-xl">
+    <div class="col-md-12">
+      <h1 class="doc-sectionhead">Forms &amp; Inputs</h1>
       <table class="table table-bordered type-samples">
         <thead>
           <tr>
@@ -135,63 +149,253 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-6">
-      <h1>Lists</h1>
-      <h4 class="sh">Ordered list</h4>
-      <ol class="spaced">
-        <li>Lorem ipsum</li>
-        <li>Dolor sit amet</li>
-        <li>Consectetur adipiscing elit</li>
-        <li>Sed cursus ante dapibus lorem ipsum doloreted eptsit amet diam</li>
-        <li>In scelerisque sem at dolor</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quasi soluta maxime?</li>
-      </ol>
-    </div>
-    <div class="col-md-6">
-      <h4 class="sh">Unordered list</h4>
-      <ul class="spaced">
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eius.</li>
-        <li>Dolor sit amet</li>
-        <li>Consectetur adipiscing elit
-          <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor.</li>
-          </ul>
-        </li>
-        <li>Sed cursus ante dapibus diam</li>
-        <li>In scelerisque sem at dolor</li>
-        <li>Sed convallis tristique sem</li>
-      </ul>
+
+  <!-- HEADER AND BODY SPACING-->
+  <div id="header-body-spacing" class="row spacer-top-xl">
+    <div class="col-xs-12">
+      <h1>Header &amp; Body Spacing</h1>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-md-6">
-      <h4 class="sh">Definition list</h4>
-      <dl>
-        <dt>Lorem ipsum dolor sit amet.</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, nemo.</dd>
-        <dt>Lorem ipsum dolor sit amet, consectetur.</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, fuga cupiditate nesciunt!</dd>
-        <dt>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum consequatur praesentium corporis quasi est minima?</dd>
-      </dl>
+    <div class="col-xs-6">
+      <figure>
+        <figcaption>Maximum copy block width 6 columns</figcaption>
+        <h2>Section Header</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, nemo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, nemo.</p>
+      </figure>
     </div>
-    <div class="col-md-6">
-      <h4 class="sh">Definition list, condensed</h4>
-      <dl class="dlist-condensed">
-        <dt>Lorem ipsum dolor sit amet.</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, nemo.</dd>
-        <dt>Lorem ipsum dolor sit amet, consectetur.</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, fuga cupiditate nesciunt!</dd>
-        <dt>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum consequatur praesentium corporis quasi est minima?</dd>
-      </dl>
+
+    <div class="col-xs-3 col-xs-offset-1">
+      <figure>
+        <figcaption>Minimum copy block width 3 columns</figcaption>
+        <h2>Section Header</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, nemo.</p>
+      </figure>
     </div>
   </div>
 
-  <div class="row">
+
+  <div class="row spacer-top-xl">
+    <div class="col-xs-3">
+      <figure>
+        <figcaption>Capitalization and Line Height</figcaption>
+        <h2>h2. Headers = Title Case</h2>
+        <p>Body = Sentence case. Line height = 1.7</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, nemo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, nemo.</p>
+      </figure>
+    </div>
+
+    <div class="col-xs-3 col-xs-offset-1">
+      <figure>
+        <figcaption>Section Dividers</figcaption>
+        <h2>Section Header</h2>
+        <hr>
+        <img class="img-responsive" src="modules/foundation/assets/images/image_placeholder.png" />
+      </figure>
+    </div>
+
+    <div class="col-xs-3 col-xs-offset-1">
+      <figure>
+        <figcaption>Contextual Colors</figcaption>
+        <p class="text-muted">Disabled Text - #c0c0c0</p>
+        <p>Default Text - #717171</p>
+        <p class="text-primary">Primary Text - #3e53a4</p>
+        <p class="text-success">Success Text - #3c763d</p>
+        <p class="text-info">Info Text - #31708f</p>
+        <p class="text-danger">Error Text - #dc0000</p>
+      </figure>
+    </div>
+  </div>
+
+
+  <!-- -->
+  <div class="row spacer-top-lg">
+    <div class="col-md-4">
+      <figure>
+        <figcaption>Descriptive List</figcaption>
+        <h2>h2. Section Header</h2>
+        <dl>
+          <dt>Lorem ipsum dolor sit amet.</dt>
+          <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, fuga cupiditate nesciunt!</dd>
+          <dt>Lorem ipsum dolor sit amet, consectetur.</dt><dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio.</dd>
+        </dl>
+      </figure>
+    </div>
+
+    <div class="col-md-4">
+      <figure>
+        <figcaption>Descriptive List Condensed</figcaption>
+        <h2>h2. Section Header</h2>
+        <dl class="dlist-condensed">
+          <dt>Lorem ipsum dolor sit amet.</dt>
+          <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio.</dd>
+          <dt>Lorem ipsum dolor sit amet, consectetur.</dt>
+          <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, fuga cupiditate nesciunt!</dd>
+        </dl>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row spacer-top-lg">
+    <div class="col-md-4">
+      <figure>
+        <figcaption>Ordered List</figcaption>
+        <h2>h2. Section Header</h2>
+        <ol class="spaced">
+          <li>Lorem ipsum</li>
+          <li>Dolor sit amet</li>
+          <li>Consectetur adipiscing elit</li>
+          <li>Sed cursus ante dapibus lorem ipsum doloreted eptsit amet diam</li>
+          <li>In scelerisque sem at dolor</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quasi soluta maxime?</li>
+        </ol>
+      </figure>
+    </div>
+
+    <div class="col-md-4">
+      <figure>
+        <figcaption>Unordered List</figcaption>
+        <h2>h2. Section Header</h2>
+        <ul class="spaced">
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eius.</li>
+          <li>Dolor sit amet</li>
+          <li>Consectetur adipiscing elit
+            <ul>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor.</li>
+            </ul>
+          </li>
+          <li>Sed cursus ante dapibus diam</li>
+          <li>In scelerisque sem at dolor</li>
+          <li>Sed convallis tristique sem</li>
+        </ul>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row spacer-top-lg">
+    <div class="col-md-4">
+      <figure>
+        <figcaption>Header Margins</figcaption>
+        <h2>h2. Section Header</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, nemo.</p>
+      </figure>
+    </div>
+
+    <div class="col-md-4 col-md-offset-1">
+      <figure>
+        <figcaption>Header Margins</figcaption>
+        <h1>h1. Main Section Header</h1>
+        <h2>h2. Section Header</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, nemo.</p>
+      </figure>
+    </div>
+  </div>
+
+
+  <div class="row spacer-top-lg">
+
+    <div class="col-md-6 col-md-offset-3">
+      <figure>
+        <figcaption class="text-center">Centered Copy Block within Page</figcaption>
+        <div style="border: 1px dashed red; padding: 20px 40px 40px 40px;">
+          <h1 class="text-center">h1. Main Section Header</h1>
+          <h2 class="text-center">h2. Section Header Lorem Ipsum</h2>
+          <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, nemo.</p>
+        </div>
+      </figure>
+    </div>
+  </div>
+
+
+
+  <!-- TABS & TABLE SPACING -->
+  <div id="tab-table-spacing" class="row spacer-top-xl">
+    <div class="col-xs-12">
+      <h1>Tab &amp; Table Spacing</h1>
+    </div>
+  </div>
+
+  <div class="row spacer-top-xl">
+    <div class="col-xs-12">
+      <h1 class="doc-sectionhead">Tab Spacing</h1>
+      <figure>
+        <figcaption>Tab Control Margins</figcaption>
+        <h2>Section Header</h2>
+
+          <tabset>
+            <tab>
+              <tab-heading>
+                Tab One
+              </tab-heading>
+            </tab>
+            <tab>
+              <tab-heading>
+                Tab Two
+              </tab-heading>
+            </tab>
+            <tab>
+              <tab-heading>
+                Tab Three
+              </tab-heading>
+            </tab>
+          </tabset>
+
+      </figure>
+    </div>
+  </div>
+
+
+  <div class="row spacer-top-xl">
+    <div class="col-xs-12">
+      <h1 class="doc-sectionhead">Table Spacing</h1>
+      <figure>
+        <figcaption>Data Table Margins</figcaption>
+        <h2>Section Header</h2>
+
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Heading</th>
+                <th>Heading</th>
+                <th>Heading</th>
+                <th>Heading</th>
+                <th>Heading</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+              </tr>
+              <tr>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+              </tr>
+              <tr>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+              </tr>
+            </tbody>
+          </table>
+
+      </figure>
+    </div>
+  </div>
+
+
+  <div class="row spacer-top-xl">
+    <h1>WHERE DO THESE GO?</h1>
     <div class="col-md-6">
       <h4 class="sh">List Group</h4>
       <ul class="list-group">
@@ -215,18 +419,6 @@
         <a class="list-group-item" href="#">Porta ac consectetur ac</a>
         <a class="list-group-item" href="#">Vestibulum at eros</a>
       </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      <h4 class="section-head">Contextual colored text</h4>
-      <p>Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links and will darken on hover just like our default link styles.</p>
-      <p class="text-muted">Muted text. Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
-      <p class="text-primary">Brand color text. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-      <p class="text-success">Success text. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-      <p class="text-info">Info text. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-      <p class="text-danger">Danger text. Donec ullamcorper nulla non metus auctor fringilla.</p>
     </div>
   </div>
 

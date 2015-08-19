@@ -165,7 +165,7 @@ figure figcaption:first-child { margin-top: 0; }
 
 .doc-lede { font-size: 16px; line-height: 1.5; color: #3a3a3a; }
 
-.doc-sectionhead { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; color: #2e2e2e; font-size: 20px; padding-bottom: 15px; border-bottom: 1px solid #e1e1e1; }
+.doc-sectionhead { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; color: #2e2e2e; font-size: 20px; padding-bottom: 15px; margin-bottom: 40px; border-bottom: 1px solid #e1e1e1; }
 
 h4 .more-info, h1 .more-info, h3 .more-info, legend .more-info { font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-weight: normal; margin-top: 10px; margin-left: 30px; display: inline-block; text-transform: lowercase; }
 h4 .more-info a, h1 .more-info a, h3 .more-info a, legend .more-info a { color: #0072b8; font-weight: normal; }

@@ -25,6 +25,26 @@
                 "value": "foundation.color"
               },
               {
+                "label": "Type",
+                "value": "foundation.typography"
+              },
+              {
+                "label": "Grid",
+                "value": "foundation.grid"
+              },
+              {
+                "label": "Specs",
+                "value": "..."
+              },
+              {
+                "label": "Writing",
+                "value": "foundation.writing"
+              },
+              {
+                "label": "----",
+                "value": "----"
+              },
+              {
                 "label": "Chart Colors",
                 "value": "foundation.chartcolors"
               },
@@ -33,12 +53,12 @@
                 "value": "foundation.font"
               },
               {
-                "label": "Typography",
-                "value": "foundation.typography"
+                "label": "Animations",
+                "value": "..."
               },
               {
-                "label": "Writing",
-                "value": "foundation.writing"
+                "label": "Iconography",
+                "value": "..."
               }
 
             ]
@@ -53,22 +73,21 @@
                 "value": "elements.buttons"
               },
               {
-                "label": "Containers",
-                "value": "elements.containers.page"
-              },
-
-              {
-                "label": "Icons",
-                "value": "elements.icons"
-              },
-              {
                 "label": "UI Controls",
                 "value": "elements.uicontrols"
               },
               {
-                "label": "Popovers",
+                "label": "Containers",
+                "value": "elements.containers.page"
+              },
+              {
+                "label": "Modals & Popovers",
                 "value": "elements.popovers",
                 "className": "popovers"
+              },
+              {
+                "label": "Tables",
+                "value": "tables.page"
               },
               {
                 "label": "Tables",
@@ -95,15 +114,25 @@
               },
 
               {
-                "label": "Graphs",
+                "label": "Charts",
                 "value": "graphs.page"
 
               },
               {
                 "label": "User Feedback",
                 "value": "feedback.page"
-
-
+              },
+              {
+                "label": "------",
+                "value": "-------"
+              },
+              {
+                "label": "Icons",
+                "value": "elements.icons"
+              },
+              {
+                "label": "Helpers",
+                "value": "----"
               }
             ]
           },
@@ -113,12 +142,17 @@
             "toggle": "dropdown",
             "children": [
               {
-                "label": "Sign-in",
+                "label": "Headers and Footers",
+                "value": "patterns.headersfooters"
+              },
+              {
+                "label": "Sign in & Sign up",
                 "value": "patterns.signin"
-              },  {
-                  "label": "Headers and Footers",
-                  "value": "patterns.headersfooters"
-                },
+              },
+              {
+                "label": "Complex Forms",
+                "value": "..."
+              },
               {
                 "label": "Registration",
                 "value": "patterns.registration"
@@ -128,7 +162,7 @@
                 "value": "patterns.forgotpassword"
               },
               {
-                "label": "Welcome",
+                "label": "Welcome & Landing",
                 "value": "patterns.welcome"
               },
               {
@@ -149,12 +183,12 @@
       },
       {
         "label": "Mobile",
-        "value": "mobile",
+        "value": "mobile.page",
         "toggle": "dropdown",
         "children": [
           {
             "label": "Mobile Guide",
-            "value": "mobile"
+            "value": "mobile.page"
           }
         ]
       }

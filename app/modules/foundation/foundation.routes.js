@@ -54,6 +54,14 @@
       }
     })
 
+    .state('foundation.grid', {
+      url: '/font',
+      templateUrl: 'modules/foundation/templates/foundation-grid.html',
+      data: {
+        pageTitle: 'Foundation - Grid'
+      }
+    })
+
     .state('foundation.writing', {
       url: '/writing',
       templateUrl: 'modules/foundation/templates/foundation-writing.html',
