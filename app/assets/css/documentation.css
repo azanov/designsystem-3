@@ -13,7 +13,7 @@
 
 code, .code { font-family: Menlo, Consolas, Monaco, "Courier New", monospace; }
 
-hr { margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #f8f8f8; }
+hr { margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #e1e1e1; }
 
 a { color: #0072b8; }
 a:hover { color: #005a93; }
@@ -144,28 +144,22 @@ small, .text-small, .small { font-size: 12px; }
 .sub-header.jump-bar.headroom-not-top { height: 50px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); top: 50px; position: fixed; }
 .sub-header.jump-bar.headroom-not-top ul { padding-top: 15px; }
 
+.doc-head { margin-top: 80px; }
+
+.doc-lede { font-size: 16px; line-height: 1.5; color: #3a3a3a; }
+
+.doc-sectionhead { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; color: #2e2e2e; font-size: 20px; padding-bottom: 15px; border-bottom: 1px solid #e1e1e1; margin-top: 70px; }
+
 figure { margin-bottom: 10px; }
 figure figcaption { color: #cf0989; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12px; margin-bottom: 5px; margin-top: 25px; }
 figure figcaption:first-child { margin-top: 0; }
 
-.preview-example { background-color: #fff; position: relative; padding: 40px 9px 9px; border: 1px solid #e3e3e3; border-radius: 3px; margin: 20px 0; }
-.preview-example:before { content: 'Example'; position: absolute; font-size: 9px; top: 0; left: 0; padding: 3px 7px; text-transform: uppercase; background-color: #f5f5f5; border: 1px solid #e3e3e3; border-top: 0; border-left: 0; letter-spacing: .1em; }
-.preview-example.preview-example-live:before { font-family: 'FontAwesome'; content: '\f0e7   Live example'; }
-.preview-example + .preview-code { margin-top: -25px; margin-bottom: 20px; }
-
-.preview-code pre { border-color: #e3e3e3; border-top-left-radius: 0; border-top-right-radius: 0; margin: 0; padding: 10px; }
-.preview-code pre code { background: transparent; }
+.figure-spacer { border-top: 1px solid #e1e1e1; padding-bottom: 30px; }
 
 .type-samples h1, .type-samples h2, .type-samples h3, .type-samples h4, .type-samples h5, .type-samples h6 { margin: 0; }
 .type-samples tr > td:first-child { width: 40%; }
 .type-samples tr > td:last-child { font-family: Menlo, Consolas, Monaco, "Courier New", monospace; }
 .type-samples tr > td:last-child .swatch { display: inline-block; min-width: 20px; height: 20px; border: 1px solid #c0c0c0; padding: 2px 5px; font-size: 12px; line-height: 1.2; border-radius: 3px; }
-
-.doc-head { margin-top: 80px; }
-
-.doc-lede { font-size: 16px; line-height: 1.5; color: #3a3a3a; }
-
-.doc-sectionhead { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; color: #2e2e2e; font-size: 20px; padding-bottom: 15px; border-bottom: 1px solid #e1e1e1; }
 
 h4 .more-info, h1 .more-info, h3 .more-info, legend .more-info { font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-weight: normal; margin-top: 10px; margin-left: 30px; display: inline-block; text-transform: lowercase; }
 h4 .more-info a, h1 .more-info a, h3 .more-info a, legend .more-info a { color: #0072b8; font-weight: normal; }

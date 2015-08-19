@@ -43,60 +43,6 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">States</h2>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-5">
-      <p>Form fields have four primary states, each defined by its form and type coloring:</p>
-      <ul>
-        <li>Default</li>
-        <li>Active</li>
-        <li>Disabled</li>
-        <li>Error</li>
-      </ul>
-
-    </div>
-    <div class="col-md-4 col-md-offset-1">
-
-      <figure>
-        <figcaption>Normal</figcaption>
-        <div class="form-group">
-          <label>Text input label</label>
-          <input class="form-control" name="text1" placeholder="Optional placeholder text" type="text"/>
-        </div>
-      </figure>
-
-      <figure>
-        <figcaption>Active (Focused)</figcaption>
-        <div class="form-group">
-          <label>Text input label</label>
-          <input class="form-control focus" name="text1" type="text" value="Some text has been entered"/>
-        </div>
-      </figure>
-
-      <figure>
-        <figcaption>Disabled</figcaption>
-        <div class="form-group">
-          <label>Text input label</label>
-          <input class="form-control" disabled="disabled" name="text1" type="text"/>
-        </div>
-      </figure>
-
-      <figure>
-        <figcaption>Error</figcaption>
-        <div class="form-group has-error">
-          <label>Text field with error</label>
-          <input class="form-control" type="text" value="I was entered in error!">
-          <span class="help-block text-error">Please enter a valid name.</span>
-        </div>
-      </figure>
-
-    </div>
-  </div>
 
   <div class="row">
     <div class="col-md-12">
@@ -104,7 +50,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-4">
       <p>
         We have three sizes of most inputs: default, small, and large. The default size should be used for fields in all instances except:</p>
 
@@ -114,26 +60,107 @@
         <li>Note that the field itself and its contents are smaller, but the label remains 14px always</li>
       </ul>
   </div>
-  <div class="col-md-4 col-md-offset-1">
-      <figure>
-        <figcaption>Large input</figcaption>
-        <div class="form-group">
-          <label>Text Label</label>
-          <input class="form-control input-lg" placeholder=".input-lg" type="text">
-        </div>
-        <figcaption>Standard input</figcaption>
-        <div class="form-group">
-          <label>Text label</label>
-          <input class="form-control"  type="text">
-        </div>
-        <figcaption>Small input</figcaption>
-        <div class="form-group">
-          <label>Text label</label>
-          <input class="form-control input-sm" placeholder=".input-sm" type="text">
-        </div>
-      </figure>
+  <div class="col-md-6">
+    <div class="row">
+      <div class="col-md-6">
+        <figure>
+          <figcaption>Default input</figcaption>
+          <div class="form-group">
+            <label>Text label</label>
+            <input class="form-control" type="text">
+          </div>
+        </figure>
+        <figure>
+          <figcaption>Small input</figcaption>
+          <div class="form-group">
+            <label>Text label</label>
+            <input class="form-control input-sm" placeholder=".input-sm" type="text">
+          </div>
+        </figure>
+
+      </div>
+      <div class="col-md-6">
+        <figure>
+          <figcaption>Large input</figcaption>
+          <div class="form-group">
+            <label>Text Label</label>
+            <input class="form-control input-lg" placeholder=".input-lg" type="text">
+          </div>
+        </figure>
+
+      </div>
+    </div>
+
+
     </div>
   </div>
+
+
+
+  <div class="row">
+    <div class="col-md-4">
+      <p>Form fields have four primary states, each defined by its form and type coloring:</p>
+      <ul>
+        <li>Default</li>
+        <li>Active</li>
+        <li>Disabled</li>
+        <li>Error</li>
+      </ul>
+
+    </div>
+    <div class="col-md-6">
+      <div class="figure-spacer">&nbsp;</div>
+
+
+      <div class="row">
+        <div class="col-md-6 ">
+          <figure>
+            <figcaption>Normal</figcaption>
+            <div class="form-group">
+              <label>Text input label</label>
+              <input class="form-control" name="text1" placeholder="Optional placeholder text" type="text"/>
+            </div>
+          </figure>
+
+          <figure>
+            <figcaption>Active (Focused)</figcaption>
+            <div class="form-group">
+              <label>Text input label</label>
+              <input class="form-control focus" name="text1" type="text" value="Some text has been entered"/>
+            </div>
+          </figure>
+
+
+        </div>
+        <div class="col-md-6">
+
+          <figure>
+            <figcaption>Disabled</figcaption>
+            <div class="form-group">
+              <label>Text input label</label>
+              <input class="form-control" disabled="disabled" name="text1" type="text"/>
+            </div>
+          </figure>
+
+          <figure>
+            <figcaption>Error</figcaption>
+            <div class="form-group has-error">
+              <label>Text field with error</label>
+              <input class="form-control" type="text" value="I was entered in error!">
+              <span class="help-block text-error">Please enter a valid name.</span>
+            </div>
+          </figure>
+
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+
 
 
 
@@ -150,7 +177,7 @@
 
     </div>
 <!-- right -->
-    <div class="col-md-4 col-md-offset-1">
+    <div class="col-md-6">
       <figure>
         <figcaption>Help text below field</figcaption>
         <div class="form-group">
@@ -178,10 +205,10 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-4">
       <p>A password strength meter tied to the input field is specifically on registration pages to help users choose a secure, system-OK combination.</p>
     </div>
-    <div class="col-md-4 col-md-offset-1">
+    <div class="col-md-6">
 
       <div class="post-it">Controls TK</div>
 
@@ -254,7 +281,7 @@
 
     </div>
 <!-- right -->
-    <div class="col-md-4 col-md-offset-1">
+    <div class="col-md-6">
       <figure>
         <figcaption>Standard dropdown</figcaption>
         <div class="form-group">
@@ -298,7 +325,7 @@
   <div class="col-md-5">
     <p class="post-it">Need copy</p>
   </div>
-  <div class="col-md-4 col-md-offset-1">
+  <div class="col-md-6">
     <figure>
       <figcaption>Large</figcaption>
       <div class="form-group">
@@ -335,7 +362,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-4">
       <p class="post-it">copy needed</p>
       <p class="more-info">
         <a href="http://brianreavis.github.io/selectize.js/" target="_blank">
@@ -348,7 +375,7 @@
           <i class="fa fa-external-link"/></a>
       </p>
     </div>
-    <div class="col-md-4 col-md-offset-1">
+    <div class="col-md-6">
       <div class="form-group">
         <label>
           Single-select</label>
@@ -408,7 +435,7 @@
       need copy explaining the 2 types of radios and checkboxes, and when they migh want to use the "basic" ones?
     </p>
   </div>
-  <div class="col-md-4 col-md-offset-1">
+  <div class="col-md-6">
     <figure>
     <div class="row">
       <div class="col-md-6">
@@ -468,7 +495,7 @@
     <p class="post-it">need text</p>
   </div>
   <!-- right -->
-  <div class="col-md-4 col-md-offset-1">
+  <div class="col-md-6">
     <div class="row">
       <figure>
       <div class="col-md-6">
@@ -552,7 +579,7 @@
 <fieldset>
   <legend>Input field sizes</legend>
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-4">
 
       <h4>
         Text inputs</h4>

@@ -6,7 +6,6 @@
 @import 'settings/mixins/mixins';
 // @import 'settings/mixins/colors';
 @import 'settings/mixins/typography';
-@import 'base/gradients';
 
 
 
@@ -58,7 +57,6 @@
 }
 
 
-//for subheader
 .sub-header.jump-bar {
   background: linear-gradient(90deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)),
               linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%);
@@ -84,6 +82,29 @@
 }
 
 
+// DOCS TYPOGRAPHY differs from DS
+.doc-head {
+  margin-top: 80px;
+}
+.doc-lede {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #3a3a3a;
+}
+.doc-sectionhead {
+  font-family: $font-family-ps-regular;
+  color: $header-color;
+  font-size: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $pb-light-gray;
+  margin-top: 70px;
+}
+
+.doc-sectionbreak {
+  
+}
+
+
 figure {
   margin-bottom: 10px;
   figcaption {
@@ -98,57 +119,17 @@ figure {
   }
 }
 
-
-// PREVIEW "EXAMPLE" BOXES, AS ON BS.COM
-.preview-example {
-  background-color: #fff;
-  position: relative;
-  padding: 40px 9px 9px;
-  border: 1px solid #e3e3e3;
-  border-radius: 3px;
-  margin: 20px 0;
-
-  &:before {
-    content: 'Example';
-    position: absolute;
-    font-size: 9px;
-    top: 0;
-    left: 0;
-    padding: 3px 7px;
-    text-transform: uppercase;
-    background-color: #f5f5f5;
-    border: 1px solid #e3e3e3;
-    border-top: 0;
-    border-left: 0;
-    letter-spacing: .1em;
-  }
-
-  &.preview-example-live {
-    &:before {
-      font-family: 'FontAwesome';
-      content: '\f0e7   Live example';
-    }
-  }
-
-  +.preview-code {
-    margin-top: -25px;
-    margin-bottom: 20px;
-  }
+.figure-spacer {
+  border-top: 1px solid $pb-light-gray;
+  padding-bottom: 30px;
 }
 
-.preview-code {
-  pre {
-    border-color: #e3e3e3;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    margin: 0;
-    padding: 10px;
 
-    code {
-      background: transparent;
-    }
-  }
-}
+
+
+
+
+
 
 // type samples table
 .type-samples {
@@ -178,22 +159,6 @@ figure {
   }
 }
 
-// DOCS TYPOGRAPHY differs from DS
-.doc-head {
-  margin-top: 80px;
-}
-.doc-lede {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #3a3a3a;
-}
-.doc-sectionhead {
-  font-family: $font-family-ps-regular;
-  color: $header-color;
-  font-size: 20px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid $pb-light-gray;
-}
 
 
 h4,
@@ -452,3 +417,57 @@ legend {
     color: $brand-warning;
   }
 }
+
+
+// PREVIEW "EXAMPLE" BOXES, AS ON BS.COM
+// not used any longer
+
+// .preview-example {
+//   background-color: #fff;
+//   position: relative;
+//   padding: 40px 9px 9px;
+//   border: 1px solid #e3e3e3;
+//   border-radius: 3px;
+//   margin: 20px 0;
+//
+//   &:before {
+//     content: 'Example';
+//     position: absolute;
+//     font-size: 9px;
+//     top: 0;
+//     left: 0;
+//     padding: 3px 7px;
+//     text-transform: uppercase;
+//     background-color: #f5f5f5;
+//     border: 1px solid #e3e3e3;
+//     border-top: 0;
+//     border-left: 0;
+//     letter-spacing: .1em;
+//   }
+//
+//   &.preview-example-live {
+//     &:before {
+//       font-family: 'FontAwesome';
+//       content: '\f0e7   Live example';
+//     }
+//   }
+//
+//   +.preview-code {
+//     margin-top: -25px;
+//     margin-bottom: 20px;
+//   }
+// }
+//
+// .preview-code {
+//   pre {
+//     border-color: #e3e3e3;
+//     border-top-left-radius: 0;
+//     border-top-right-radius: 0;
+//     margin: 0;
+//     padding: 10px;
+//
+//     code {
+//       background: transparent;
+//     }
+//   }
+// }
