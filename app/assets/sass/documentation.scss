@@ -39,12 +39,17 @@
     background-color: rgba(0, 0, 0, .1);
     color: rgba(255, 255, 255, 1);
     font-family: $font-family-ps-regular;
-    font-size: 16px;
     z-index: 4;
     .jump-menu {
       padding: 15px 0 0;
       li {
-        margin-right: 60px;
+        font-size: 1em;
+        margin-right: 1.5%;
+        transition: all .3s linear;
+         @media (min-width: 1200px) {
+          font-size: 1.2em;
+          margin-right: 4%;
+        }
         a {
           color: inherit;
         }
@@ -57,9 +62,16 @@
 }
 
 
+@include breakpoint($screen-xs) {
+  content: 'Whoa.';
+}
+
+
+
+
 .sub-header.jump-bar {
   background: linear-gradient(90deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)),
-              linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%);
+  linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%);
 
 
   // not docked
@@ -98,37 +110,35 @@
   padding-bottom: 15px;
   border-bottom: 1px solid $pb-light-gray;
   margin-top: 70px;
+  margin-bottom: 50px;
 }
 
 .doc-sectionbreak {
-  
+  margin-top: 50px;
 }
+// right side column on sectionbreak has this div added
+.figure-spacer {
+  border-top: 1px solid $pb-light-gray;
+  padding-top: 40px;
+}
+
 
 
 figure {
   margin-bottom: 10px;
   figcaption {
+    clear: both;
     color: $pb-magenta;
     font-family: $font-family-sans-serif;
     font-size: 12px;
     margin-bottom: 5px;
-    margin-top: 25px;
-    &:first-child {
-      margin-top: 0;
-    }
+    margin-top: 35px;
   }
 }
 
-.figure-spacer {
-  border-top: 1px solid $pb-light-gray;
-  padding-bottom: 30px;
+.row:first-child figure:first-child > figcaption {
+  margin-top: 0;
 }
-
-
-
-
-
-
 
 
 // type samples table
@@ -178,6 +188,11 @@ legend {
       font-weight: normal;
     }
   }
+}
+
+
+h4 {
+  margin: 25px 0 5px;
 }
 
 .donut-varied-padded {

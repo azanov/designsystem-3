@@ -392,12 +392,6 @@ header .navbar .container .navbar-brand.brand-text {
   font-size: 16px;
 }
 
-// some items need to be set back to default body font:
-.checkboxList span,
-a.list-group-item {
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-}
 
 // ------SPECIAL SIZES--------
 
@@ -443,7 +437,7 @@ small,
 }
 
 // changes orientation on phones
-@include bp(screen-xs) {
+@include breakpoint(screen-xs) {
   .text-left-xs {
     text-align: left;
   }

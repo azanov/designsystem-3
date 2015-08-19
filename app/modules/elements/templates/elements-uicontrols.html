@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="hero-header">
-          <div class="eyebrow">Product Framework/ Responsive Web / Elements</div>
+          <div class="eyebrow">Elements</div>
           <h1>UI Controls</h1>
         </div>
       </div>
@@ -15,14 +15,14 @@
       <div class="row">
         <div class="col-md-12">
           <ul class="list-unstyled list-inline jump-menu">
-            <li><a href="" du-smooth-scroll="inputfields" offset="100">Input Fields</a></li>
-            <li><a href="" du-smooth-scroll="dropdowns">Dropdowns</a></li>
-            <li><a href="" du-smooth-scroll="checkboxes">Check boxes</a></li>
-            <li><a href="" du-smooth-scroll="radios">Radio Buttons</a></li>
-            <li><a href="" du-smooth-scroll="switches">Switches</a></li>
-            <li><a href="" du-smooth-scroll="sliders">Sliders</a></li>
-            <li><a href="" du-smooth-scroll="segments">Segments</a></li>
-            <li><a href="" du-smooth-scroll="selectors">Selectors</a></li>
+            <li><a du-smooth-scroll="inputfields" href="" offset="100">Input Fields</a></li>
+            <li><a du-smooth-scroll="dropdowns" href="">Dropdowns</a></li>
+            <li><a du-smooth-scroll="checkboxes" href="">Check boxes</a></li>
+            <li><a du-smooth-scroll="radios" href="">Radio Buttons</a></li>
+            <li><a du-smooth-scroll="switches" href="">Switches</a></li>
+            <li><a du-smooth-scroll="sliders" href="">Sliders</a></li>
+            <li><a du-smooth-scroll="segments" href="">Segments</a></li>
+            <li><a du-smooth-scroll="selectors" href="">Selectors</a></li>
           </ul>
 
         </div>
@@ -43,10 +43,9 @@
     </div>
   </div>
 
-
   <div class="row">
     <div class="col-md-12">
-      <h2 class="doc-sectionhead">Sizes</h2>
+      <h2 class="doc-sectionhead">Basic Form Fields</h2>
     </div>
   </div>
   <div class="row">
@@ -59,45 +58,42 @@
         <li>If you have an extremely light form (&lt;10 fields) consider use large fields (Example: sign in screens)</li>
         <li>Note that the field itself and its contents are smaller, but the label remains 14px always</li>
       </ul>
-  </div>
-  <div class="col-md-6">
-    <div class="row">
-      <div class="col-md-6">
-        <figure>
-          <figcaption>Default input</figcaption>
-          <div class="form-group">
-            <label>Text label</label>
-            <input class="form-control" type="text">
-          </div>
-        </figure>
-        <figure>
-          <figcaption>Small input</figcaption>
-          <div class="form-group">
-            <label>Text label</label>
-            <input class="form-control input-sm" placeholder=".input-sm" type="text">
-          </div>
-        </figure>
-
-      </div>
-      <div class="col-md-6">
-        <figure>
-          <figcaption>Large input</figcaption>
-          <div class="form-group">
-            <label>Text Label</label>
-            <input class="form-control input-lg" placeholder=".input-lg" type="text">
-          </div>
-        </figure>
-
-      </div>
     </div>
+    <div class="col-md-7 col-md-offset-1">
+      <div class="row">
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Default input</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <input class="form-control" type="text">
+            </div>
+          </figure>
+          <figure>
+            <figcaption>Small input</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <input class="form-control input-sm" placeholder=".input-sm" type="text">
+            </div>
+          </figure>
 
+        </div>
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Large input</figcaption>
+            <div class="form-group">
+              <label>Text Label</label>
+              <input class="form-control input-lg" placeholder=".input-lg" type="text">
+            </div>
+          </figure>
+
+        </div>
+      </div>
 
     </div>
   </div>
 
-
-
-  <div class="row">
+  <div class="row doc-sectionbreak">
     <div class="col-md-4">
       <p>Form fields have four primary states, each defined by its form and type coloring:</p>
       <ul>
@@ -106,14 +102,12 @@
         <li>Disabled</li>
         <li>Error</li>
       </ul>
-
     </div>
-    <div class="col-md-6">
-      <div class="figure-spacer">&nbsp;</div>
 
+    <div class="col-md-7 col-md-offset-1 figure-spacer">
 
       <div class="row">
-        <div class="col-md-6 ">
+        <div class="col-md-5">
           <figure>
             <figcaption>Normal</figcaption>
             <div class="form-group">
@@ -130,9 +124,8 @@
             </div>
           </figure>
 
-
         </div>
-        <div class="col-md-6">
+        <div class="col-md-5">
 
           <figure>
             <figcaption>Disabled</figcaption>
@@ -153,23 +146,13 @@
 
         </div>
       </div>
-
-
-
-
-
     </div>
   </div>
 
-
-
-
-
-
 <!-- row -->
-  <div class="row">
+  <div class="row doc-sectionbreak">
 <!-- left -->
-    <div class="col-md-5">
+    <div class="col-md-4">
       <p>
         Some fields require some explanation to users so they understand what they’re being asked for. In these cases you can include a short line of instructional text below the field.
       </p>
@@ -177,43 +160,175 @@
 
     </div>
 <!-- right -->
-    <div class="col-md-6">
-      <figure>
-        <figcaption>Help text below field</figcaption>
-        <div class="form-group">
-          <label>Text field label</label>
-          <input class="form-control" type="text">
-          <span class="help-block">Enter your full name.</span>
-        </div>
-      </figure>
-      <figure>
-        <figcaption>Help icon next to label</figcaption>
-        <div class="form-group">
-          <label>Text field label
-            <i class="fa fa-info-circle"></i>
-          </label>
-          <input class="form-control" type="text">
-        </div>
-      </figure>
+    <div class="col-md-7 col-md-offset-1 figure-spacer">
+      <div class="row">
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Help text below field</figcaption>
+            <div class="form-group">
+              <label>Text field label</label>
+              <input class="form-control" type="text">
+              <span class="help-block">Enter your full name.</span>
+            </div>
+          </figure>
 
+        </div>
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Help icon next to label</figcaption>
+            <div class="form-group">
+              <label>Text field label
+                <i class="fa fa-info-circle"></i>
+              </label>
+              <input class="form-control" type="text">
+            </div>
+          </figure>
+
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Password fields</h2>
-    </div>
-  </div>
-  <div class="row">
+  <div class="row doc-sectionbreak">
     <div class="col-md-4">
       <p>A password strength meter tied to the input field is specifically on registration pages to help users choose a secure, system-OK combination.</p>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-7 col-md-offset-1 figure-spacer">
 
       <div class="post-it">Controls TK</div>
-
     </div>
   </div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="doc-sectionhead">Input groups</h2>
+  </div>
+</div>
+
+<!-- row -->
+<div class="row ">
+  <!-- left -->
+  <div class="col-md-4">
+    Icons, buttons, and simple menus can be prepended and/or appended to text fields.
+    <p class="post-it">need copy?</p>
+  </div>
+  <!-- right -->
+  <div class="col-md-7 col-md-offset-1 ">
+    <!-- 2 columns in right -->
+    <div class="row">
+      <div class="col-md-5">
+
+        <figure>
+          <figcaption>Text field prepended</figcaption>
+          <div class="form-group">
+            <label for="">Text label</label>
+            <div class="input-group">
+              <span class="input-group-addon">@</span><input class="form-control" type="text"></div>
+          </div>
+        </figure>
+
+        <figure>
+          <figcaption>Text field with both</figcaption>
+          <div class="form-group">
+            <label for="">Text label</label>
+            <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input class="form-control" type="text" value="23">
+              <span class="input-group-addon">.00</span>
+            </div>
+          </div>
+        </figure>
+
+      </div>
+      <div class="col-md-5">
+
+        <figure>
+          <figcaption>Text field appended</figcaption>
+          <div class="form-group">
+            <label for="">
+              Text field appended</label>
+            <div class="input-group">
+              <input class="form-control" type="text">
+              <span class="input-group-addon"><i class="fa fa-filter"/></span>
+            </div>
+          </div>
+        </figure>
+
+        <figure>
+          <figcaption>Text field prepended with menu</figcaption>
+          <div class="form-group">
+            <label for="">Text label</label>
+            <div class="input-group">
+              <div class="input-group-btn">
+                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Action&nbsp;<span class="caret"/></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"/>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+            </div><input class="form-control" placeholder="Product name" type="text">
+          </div>
+        </div>
+        </figure>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+
+        <figure>
+          <figcaption>Custom prepended checkbox control</figcaption>
+          <div class="form-group">
+            <label>Text label</label>
+            <div class="input-group" pb-checkable-input-group>
+              <span class="input-group-addon">
+                <input ng-model="checkable.checked" type="checkbox">
+              </span>
+              <input class="form-control" ng-disabled="!checkable.checked" ng-model="checkable.value" type="text"></div>
+          </div>
+        </figure>
+
+
+      </div>
+      <div class="col-md-5">
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <div class="row">
     <div class="col-md-12">
@@ -257,104 +372,207 @@
 
   </div>
 
-  <div class="row" >
+  <div class="row">
     <div class="col-md-8">
-      <h1 class="doc-head" id="dropdowns">Dropdown (Select) Menus</h1>
-      <p class="doc-lede">Dropdown menus behave similarly to form fields, using color to indicate their availability for input and provide feedback to users.</p>
+      <h1 class="doc-head" id="dropdowns">Dropdown Menus</h1>
+      <p class="doc-lede post-it">This is a section with an H1 - does it get a lede paragraph?</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">States</h2>
     </div>
   </div>
 
 <!-- row -->
   <div class="row">
 <!-- left -->
-    <div class="col-md-5">
+    <div class="col-md-4">
       Dropdown menus have four primary states, each defined by its form and type coloring:
       <ul>
         <li>Default</li>
-        <li>Focuses</li>
+        <li>Focused</li>
         <li>Active</li>
         <li>Disabled</li>
       </ul>
       Which states a user sees depends on whether or not the menu is enabled or disabled.
 
-      <p class="post-it">Do we have any position on what the prompt is for a select menu?  Is it "Choose", "Choose one" etc? With out without the ellipses? Nothing?</p>
+      <h4>Defaults</h4>
+      <p>When populating menus, we have certain rules:</p>
+      <ul>
+        <li>Never present the user with a blank menu.</li>
+        <li>In most cases, “Select” should be your first menu item, to help prompt the user to make a selection.
+        </li>
+      </ul>
+
+      <p>The exception is when you are confident that a user will want to select a particular menu item at least 80% of the time. In that case, code your menu to preselect that item.</p>
 
     </div>
 <!-- right -->
-    <div class="col-md-6">
-      <figure>
-        <figcaption>Standard dropdown</figcaption>
-        <div class="form-group">
-          <label>Text label</label>
-          <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
-            <option value="">Choose one...</option>
-          </select>
-        </div>
-        <figcaption>Focused dropdown</figcaption>
-        <div class="form-group">
-          <label>Text label</label>
-          <select class="form-control focus" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
-            <option value="">Choose one...</option>
-          </select>
-        </div>
-        <figcaption>Disabled dropdown</figcaption>
-        <div class="form-group">
-          <label>Text label</label>
-          <select class="form-control" disabled ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
-            <option value="">Choose one...</option>
-          </select>
-        </div>
-        <figcaption>Error dropdown</figcaption>
-        <div class="form-group has-error">
-          <label>Text label</label>
-          <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
-            <option value="">Choose one...</option>
-          </select>
-        </div>
+    <div class="col-md-7 col-md-offset-1 ">
 
-      </figure>
+      <div class="row">
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Standard dropdown</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+                <option value="">Select</option>
+              </select>
+            </div>
+          </figure>
+
+          <figure>
+            <figcaption>Focused dropdown</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <select class="form-control focus" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+                <option value="">Select</option>
+              </select>
+            </div>
+          </figure>
+
+        </div>
+        <div class="col-md-5">
+
+          <figure>
+            <figcaption>Disabled dropdown</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <select class="form-control" disabled ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+                <option value="">Select</option>
+              </select>
+            </div>
+          </figure>
+
+          <figure>
+            <figcaption>Error dropdown</figcaption>
+            <div class="form-group has-error">
+              <label>Text label</label>
+              <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+                <option value="">Select</option>
+              </select>
+            </div>
+          </figure>
+
+        </div>
+      </div>
+
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-12">
-      <h2 class="doc-sectionhead">Sizes of system select menus</h2>
+      <h2 class="doc-sectionhead">Sizes</h2>
     </div>
   </div>
-<div class="row">
-  <div class="col-md-5">
-    <p class="post-it">Need copy</p>
-  </div>
-  <div class="col-md-6">
-    <figure>
-      <figcaption>Large</figcaption>
-      <div class="form-group">
-        <label>Text label</label>
-        <select class="form-control input-lg" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
-          <option value="">
-            Choose one...
-          </option>
-        </select>
+  <div class="row">
+    <div class="col-md-4">
+      <p>We have three sizes of dropdown menus: standard, large and small. Use the standard size for all dropdowns except when:</p>
+      <ul>
+        <li>You have a very crowded form (20+ dropdowns), in which case consider using small dropdown menus.</li>
+        <li>You have only a few dropdowns (&lt;10), in which case consider using large dropdown menus.</li>
+      </ul>
+      <p>Note that even when using large or small dropdown menus the label text remains the standard size.</p>
+    </div>
+    <div class="col-md-7 col-md-offset-1">
+      <div class="row">
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Standard</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+                <option value="">Select</option>
+              </select>
+            </div>
+          </figure>
+
+          <figure>
+            <div class="form-group">
+              <figcaption>Small</figcaption>
+              <label>Text label</label>
+              <select class="form-control input-sm" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+                <option value="">Select</option>
+              </select>
+            </div>
+          </figure>
+
+        </div>
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Large</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <select class="form-control input-lg" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+                <option value="">
+                  Select
+                </option>
+              </select>
+            </div>
+          </figure>
+
+        </div>
       </div>
 
-      <figcaption>Standard</figcaption>
-      <div class="form-group">
-        <label>Text label</label>
-        <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
-          <option value="">Choose one...</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label>Text label</label>
-        <figcaption>Small</figcaption>
-        <select class="form-control input-sm" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
-          <option value="">Choose one...</option>
-        </select>
-      </div>
-    </figure>
+    </div>
   </div>
-</div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Multiple Selection</h2>
+    </div>
+  </div>
+
+<!-- row -->
+  <div class="row">
+<!-- left -->
+    <div class="col-md-4">
+      <p class="post-it">Need copy</p>
+    </div>
+<!-- right -->
+    <div class="col-md-7 col-md-offset-1">
+<!-- 2 columns in right -->
+      <div class="row">
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Multi-select (Ctrl/Cmd-click)</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <select class="form-control" multiple ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople" size="6"/>
+            </div>
+          </figure>
+
+          <figure>
+            <figcaption>Fake multi-select with checkboxes</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <div class="checkboxList form-control">
+                <div class="ms-checkboxitem" ng-repeat="person in inputs.samplePeople">
+                  <label>
+                    <input ng-model="person.isChecked" type="checkbox">&nbsp;
+                    <span>{{person.full_name}}</span>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+          </figure>
+        </div>
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Multi-select Disabled</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <select class="form-control" disabled multiple ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople" size="6"/>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="row">
     <div class="col-md-12">
@@ -363,11 +581,10 @@
   </div>
   <div class="row">
     <div class="col-md-4">
-      <p class="post-it">copy needed</p>
+      <p>You can use certain advanced 3rd-party dropdown types to augment default dropdown menus. These allow your users to do things like type-ahead find, make multiple selections and tokenizing the choices, or grouped/multi-line menu items (such as a contact’s email address), to name a few.</p>
       <p class="more-info">
         <a href="http://brianreavis.github.io/selectize.js/" target="_blank">
           Basic info
-
           <i class="fa fa-external-link"/>
         </a>
         <a href="https://github.com/kbanman/selectize-ng" target="_blank">
@@ -375,21 +592,32 @@
           <i class="fa fa-external-link"/></a>
       </p>
     </div>
-    <div class="col-md-6">
-      <div class="form-group">
-        <label>
-          Single-select</label>
-        <select ng-model="inputs.countrySelect.selected" options="inputs.countrySelect.countries" selectize="inputs.countrySelect.options" type="text"></select>
+    <div class="col-md-7 col-md-offset-1">
+      <div class="row">
+        <div class="col-md-10">
+          <figure>
+            <figcaption>Single-select with type-ahead</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <select ng-model="inputs.countrySelect.selected" options="inputs.countrySelect.countries" selectize="inputs.countrySelect.options" type="text"></select>
+            </div>
+          </figure>
+          <figure>
+            <figcaption>Multi-select with tokens</figcaption>
+            <div class="form-group">
+              <label>Text label</label><input ng-model="inputs.multiCountrySelect.selected" options="inputs.countrySelect.countries" selectize="inputs.multiCountrySelect.options" type="text"/>
+            </div>
+          </figure>
+          <figure>
+            <figcaption>Custom menu items</figcaption>
+            <div class="form-group">
+              <label>Text label</label><select ng-model="inputs.peopleSelect.selected" options="inputs.peopleSelect.people" selectize="inputs.peopleSelect.options"/>
+            </div>
+          </figure>
+
+        </div>
       </div>
-      <div class="form-group">
-        <label>
-          Multi-select with tokens</label><input ng-model="inputs.multiCountrySelect.selected" options="inputs.countrySelect.countries" selectize="inputs.multiCountrySelect.options" type="text"/>
-      </div>
-      <div class="form-group">
-        <label>
-          Custom menu items
-        </label><select ng-model="inputs.peopleSelect.selected" options="inputs.peopleSelect.people" selectize="inputs.peopleSelect.options"/>
-      </div>
+
     </div>
   </div>
 
@@ -402,418 +630,426 @@
 
       <b>Style</b>
       <ul>
-    <li>Use short, active words and phrases.</li>
-    <li>Structure labels to avoid ambiguity in language.</li>
-    <li>To avoid confusing users, use consistent terminology for a given concept (e.g., “Input Recipient’s Name” vs. “Input Addressee’s Name” vs. “Input Contact’s Name”).</li>
-  </ul>
+        <li>Use short, active words and phrases.</li>
+        <li>Structure labels to avoid ambiguity in language.</li>
+        <li>To avoid confusing users, use consistent terminology for a given concept (e.g., “Input Recipient’s Name” vs. “Input Addressee’s Name” vs. “Input Contact’s Name”).</li>
+      </ul>
 
-    <b>Capitalization</b>
-    <ul>
-      <li>Dropdown menu labels use sentence capitalization, except when they include words or phrases that are acronyms or proper nouns, which should be capitalized.</li>
-      <li>Dropdown menu items use title capitalization, because they behave like buttons.</li>
-    </ul>
-    <b>Punctuation</b>
-    <ul>
-    <li>Dropdown labels and items don’t conclude with punctuation, such as periods, colons.</li>
-    <li>Don’t phrase your dropdown labels as questions.</li>
-  </ul>
+      <b>Capitalization</b>
+      <ul>
+        <li>Dropdown menu labels use sentence capitalization, except when they include words or phrases that are acronyms or proper nouns, which should be capitalized.</li>
+        <li>Dropdown menu items use title capitalization, because they behave like buttons.</li>
+      </ul>
+      <b>Punctuation</b>
+      <ul>
+        <li>Dropdown labels and items don’t conclude with punctuation, such as periods, colons.</li>
+        <li>Don’t phrase your dropdown labels as questions.</li>
+      </ul>
 
-  </div>
-
-</div>
-
-<div class="row">
-  <div class="col-md-8">
-    <h1 class="doc-head"  id="checkboxes">Checkboxes</h1>
-  </div>
-</div>
-
-
-<div class="row">
-  <div class="col-md-5">
-    <p class="post-it">
-      need copy explaining the 2 types of radios and checkboxes, and when they migh want to use the "basic" ones?
-    </p>
-  </div>
-  <div class="col-md-6">
-    <figure>
-    <div class="row">
-      <div class="col-md-6">
-        <figcaption>Enhanced checkboxes</figcaption>
-        <div class="checkbox checkbox-enhanced-sm">
-          <input checked id="check4" type="checkbox">
-          <label for="check4">Checkbox</label>
-        </div>
-        <div class="checkbox checkbox-enhanced-sm">
-          <input id="check5" name="check" type="checkbox">
-          <label for="check5">Checkbox
-          </label>
-        </div>
-        <div class="checkbox checkbox-enhanced-sm disabled">
-          <input disabled id="check6" name="check" type="checkbox">
-          <label for="check6">Checkbox (disabled)
-          </label>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <figcaption>Standard OS checkboxes</figcaption>
-        <div class="checkbox">
-          <label for="c1">
-            <input checked id="c1" type="checkbox">
-            Checkbox</label>
-        </div>
-        <div class="checkbox">
-          <label for="c2">
-            <input id="c2" name="check" type="checkbox">
-            Checkbox
-          </label>
-        </div>
-        <div class="checkbox disabled">
-          <label for="c3">
-            <input disabled id="c3" name="check" type="checkbox">
-            Checkbox (disabled)
-          </label>
-        </div>
-      </div>
     </div>
-  </figure>
-</div>
-</div>
 
-<div class="row">
-  <div class="col-md-8">
-    <h1 class="doc-head"  id="radios">Radio buttons</h1>
   </div>
-</div>
 
+  <div class="row">
+    <div class="col-md-8">
+      <h1 class="doc-head" id="checkboxes">Checkboxes</h1>
+    </div>
+  </div>
 
+  <div class="row doc-sectionbreak">
+    <div class="col-md-5">
+      <p>
+        We have two sizes of checkboxes: standard and enhanced. In most cases, you should use the enhanced size. If your product has a lot of checkboxes, however, you should consider using the standard size to save space.
+      </p>
+
+      <p>Note that if you just need to give the user a means to turn on or off a function, a toggle control is a better choice.</p>
+    </div>
+    <div class="col-md-6 figure-spacer">
+      <figure>
+        <div class="row">
+          <div class="col-md-6">
+            <figcaption>Enhanced checkboxes</figcaption>
+            <div class="checkbox checkbox-enhanced-sm">
+              <input checked id="check4" type="checkbox">
+              <label for="check4">Checkbox</label>
+            </div>
+            <div class="checkbox checkbox-enhanced-sm">
+              <input id="check5" name="check" type="checkbox">
+              <label for="check5">Checkbox
+              </label>
+            </div>
+            <div class="checkbox checkbox-enhanced-sm disabled">
+              <input disabled id="check6" name="check" type="checkbox">
+              <label for="check6">Checkbox (disabled)
+              </label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <figcaption>Standard OS checkboxes</figcaption>
+            <div class="checkbox">
+              <label for="c1">
+                <input checked id="c1" type="checkbox">
+                Checkbox</label>
+            </div>
+            <div class="checkbox">
+              <label for="c2">
+                <input id="c2" name="check" type="checkbox">
+                Checkbox
+              </label>
+            </div>
+            <div class="checkbox disabled">
+              <label for="c3">
+                <input disabled id="c3" name="check" type="checkbox">
+                Checkbox (disabled)
+              </label>
+            </div>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row ">
+    <div class="col-md-8">
+      <h2 class="doc-sectionhead">Writing Checkbox Labels</h2>
+
+      <p>When writing your labels, be descriptive enough so users understand what checking the box will do, but try to avoid very long labels. One way to do this is by introducing the checkboxes with a descriptive sentence or two that lends context to the checkboxes’ purpose.</p>
+
+      <p>Here are some basic guidelines for how to write these critical pieces of user interface copy.</p>
+
+      <b>Style</b>
+      <ul>
+        <li>Use short, active words and phrases.</li>
+        <li>Structure labels to avoid ambiguity in language.</li>
+        <li>To avoid confusing users, use consistent terminology.</li>
+        <li>Use the same style and structure for all your labels. If one label is written as a complete sentence then write all of your labels as complete sentences rather than mixing and matching sentences with fragments or phrases.</li>
+      </ul>
+
+      <b>Capitalization</b>
+      <ul>
+        <li>Checkbox labels use sentence capitalization, except when they include words or phrases that are acronyms or proper nouns (e.g., “RMA number,” “Cost Account,” “ZIP Code”).</li>
+      </ul>
+
+      <b>Punctuation</b>
+      <ul>
+        <li>Checkbox labels don’t conclude with punctuation, such as periods or colons.</li>
+        <li>Don’t phrase your checkbox labels as questions.</li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 class="doc-head" id="radios">Radio buttons</h1>
+    </div>
+  </div>
 
 <!-- row -->
-<div class="row">
-  <!-- left -->
-  <div class="col-md-5">
-    <p class="post-it">need text</p>
-  </div>
-  <!-- right -->
-  <div class="col-md-6">
-    <div class="row">
-      <figure>
-      <div class="col-md-6">
-        <figcaption>Enhanced radio buttons</figcaption>
-        <div class="radio radio-enhanced-sm">
-          <input checked id="radio3" name="radioOptions" type="radio">
-          <label for="radio3">Radio</label>
-        </div>
-        <div class="radio radio-enhanced-sm">
-          <input id="radio4" name="radioOptions" type="radio">
-          <label for="radio4">Radio
-          </label>
-        </div>
-        <div class="radio radio-enhanced-sm disabled">
-          <input disabled id="radio5" name="radioOptions" type="radio">
-          <label for="radio5">Radio (disabled)
-          </label>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <figcaption>Standard OS radio buttons</figcaption>
+  <div class="row doc-sectionbreak">
+<!-- left -->
+    <div class="col-md-5">
+      <p>We have two sizes of radio buttons: standard and enhanced. In most cases, you should use the enhanced size. If your product has a lot of radio buttons, however, you should consider using the standard size to save space. </p>
 
-        <div class="radio">
-          <label for="rd11">
-            <input checked id="rd11" name="radioStandard" type="radio">
-            Radio</label>
-        </div>
-        <div class="radio">
-          <label for="rd22">
-            <input id="rd22" name="radioStandard" type="radio">
-            Radio</label>
-        </div>
-        <div class="radio disabled">
-          <label for="rd33">
-            <input disabled id="rd33" name="radioStandard" type="radio">
-            Radio (disabled)
-          </label>
-        </div>
-      </div>
-      </figure>
+<p>Note that if you just need to give the user a means to turn on or off a function, a toggle control is a better choice.</p>
+    </div>
+<!-- right -->
+    <div class="col-md-6 figure-spacer">
+      <div class="row">
+        <figure>
+          <div class="col-md-6">
+            <figcaption>Enhanced radio buttons</figcaption>
+            <div class="radio radio-enhanced-sm">
+              <input checked id="radio3" name="radioOptions" type="radio">
+              <label for="radio3">Radio</label>
+            </div>
+            <div class="radio radio-enhanced-sm">
+              <input id="radio4" name="radioOptions" type="radio">
+              <label for="radio4">Radio
+              </label>
+            </div>
+            <div class="radio radio-enhanced-sm disabled">
+              <input disabled id="radio5" name="radioOptions" type="radio">
+              <label for="radio5">Radio (disabled)
+              </label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <figcaption>Standard OS radio buttons</figcaption>
 
+            <div class="radio">
+              <label for="rd11">
+                <input checked id="rd11" name="radioStandard" type="radio">
+                Radio</label>
+            </div>
+            <div class="radio">
+              <label for="rd22">
+                <input id="rd22" name="radioStandard" type="radio">
+                Radio</label>
+            </div>
+            <div class="radio disabled">
+              <label for="rd33">
+                <input disabled id="rd33" name="radioStandard" type="radio">
+                Radio (disabled)
+              </label>
+            </div>
+          </div>
+        </figure>
+
+      </div>
     </div>
   </div>
-</div>
 
+  <div class="row">
+    <div class="col-md-8">
+      <h2 class="doc-sectionhead">Writing Radio Button Labels</h2>
 
+<p>When writing your labels, be descriptive enough so users understand what selecting a button will do, but try to avoid very long labels. One way to do this is by introducing the set of buttons with a descriptive sentence or two that lends context to their purpose.</p>
 
+<p>Here are some basic guidelines for how to write these critical pieces of user interface copy.</p>
 
-
-
-
-
-
-
-
-
+<b>Style</b>
+<ul>
+<li>Use short, active words and phrases.</li>
+<li>Structure labels to avoid ambiguity in language.</li>
+<li>To avoid confusing users, use consistent terminology.</li>
+<li>Use the same style and structure for all your labels. If one label is written as a complete sentence then write all of your labels as complete sentences rather than mixing and matching sentences with fragments or phrases.</li>
+</ul>
+<b>Capitalization</b>
+<ul>
+<li>Radio button labels use sentence capitalization, except when they include words or phrases that are acronyms or proper nouns (e.g., “RMA number,” “Cost Account,” “ZIP Code”).</li>
+</ul>
+<b>Punctuation</b>
+<ul>
+<li>Radio button labels don’t conclude with punctuation, such as periods or colons.</li>
+<li>Don’t phrase your radio button labels as questions.</li>
+</ul>
+    </div>
+  </div>
 
 <!--  -->
 <!--  -->
-<h1 style="margin-top:400px;">BELOW OLD CONTENT IGNORE</h1>
+  <h1 style="margin-top:400px;">BELOW OLD CONTENT IGNORE</h1>
 
+  <fieldset>
+    <legend>
+      Numeric stepper
+      <span class="more-info">
+        <a href="https://github.com/xFlatlinex/Numeric-Stepper" target="_blank">More info
+          <i class="fa fa-external-link"/></a>
+      </span>
+    </legend>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group"><input class="form-control" options="numericStepper" pb-numeric-stepper type="text" value="10">
+        </div>
+      </div>
+    </div>
 
+  </fieldset>
 
-    <fieldset>
-      <legend>
-        Numeric stepper
-        <span class="more-info">
-          <a href="https://github.com/xFlatlinex/Numeric-Stepper" target="_blank">More info
-            <i class="fa fa-external-link"/></a>
-        </span>
-      </legend>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group"><input class="form-control" options="numericStepper" pb-numeric-stepper type="text" value="10">
+  <fieldset>
+    <legend>Input field sizes</legend>
+    <div class="row">
+      <div class="col-md-4">
+
+        <h4>
+          Text inputs</h4>
+
+        <div class="form-group">
+          <label>Large input</label>
+          <input class="form-control input-lg" placeholder=".input-lg" type="text">
+        </div>
+        <div class="form-group">
+          <label>Standard input</label>
+          <input class="form-control" placeholder="Default input" type="text">
+        </div>
+        <div class="form-group">
+          <label>Small input</label>
+          <input class="form-control input-sm" placeholder=".input-sm" type="text">
+        </div>
+
+        <div class="col-md-5 col-md-offset-1">
+          <h4>
+            Select menus
+          </h4>
+          <select class="form-control input-lg" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+            <option value="">
+              Large Size
+            </option>
+          </select><br>
+          <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+            <option value="">Normal Size</option>
+          </select>
+          <br>
+          <select class="form-control input-sm" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+            <option value="">Small Size</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>
+      Selectize select menu
+      <span class="more-info">
+        <a href="http://brianreavis.github.io/selectize.js/" target="_blank">
+          Basic info
+
+          <i class="fa fa-external-link"/>
+        </a>
+        <a href="https://github.com/kbanman/selectize-ng" target="_blank">
+          Angular info
+          <i class="fa fa-external-link"/></a>
+      </span>
+    </legend>
+    <div class="row"></div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Switches
+      <span class="more-info">
+        <a href="http://jumplink.github.io/angular-toggle-switch/" target="_blank">Angular info
+          <i class="fa fa-external-link"/>
+        </a>
+      </span>
+
+    </legend>
+    <div class="form-group switches row">
+      <div class="col-md-2">
+        <div model="inputs.switchStatus1" toggle-switch/></div>
+      <div class="col-md-2">
+        <div is-disabled="disabled" model="inputs.switchStatus2" toggle-switch/></div>
+      <div class="col-md-2"><div model="inputs.switchStatus3" toggle-switch/>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>
+      Input groups
+      <span class="more-info">
+        <a href="http://getbootstrap.com/components/#input-groups">
+          learn more
+          <i class="fa fa-external-link"/></a>
+      </span>
+    </legend>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="help-text">Icons, buttons, and simple menus can be prepended and/or appended to text fields.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="">Text field prepended</label>
+          <div class="input-group">
+            <span class="input-group-addon">
+              @
+            </span><input class="form-control" placeholder="Username" type="text"></div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-md-offset-1">
+        <div class="form-group">
+          <label for="">
+            Text field appended</label>
+          <div class="input-group">
+            <input class="form-control" placeholder="Text to filter by" type="text">
+            <span class="input-group-addon"><i class="fa fa-filter"/></span>
           </div>
         </div>
       </div>
-
-    </fieldset>
-
-<fieldset>
-  <legend>Input field sizes</legend>
-  <div class="row">
-    <div class="col-md-4">
-
-      <h4>
-        Text inputs</h4>
-
-      <div class="form-group">
-        <label>Large input</label>
-        <input class="form-control input-lg" placeholder=".input-lg" type="text">
-      </div>
-      <div class="form-group">
-        <label>Standard input</label>
-        <input class="form-control" placeholder="Default input" type="text">
-      </div>
-      <div class="form-group">
-        <label>Small input</label>
-        <input class="form-control input-sm" placeholder=".input-sm" type="text">
-      </div>
-
-      <div class="col-md-5 col-md-offset-1">
-        <h4>
-          Select menus
-        </h4>
-        <select class="form-control input-lg" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
-          <option value="">
-            Large Size
-          </option>
-        </select><br>
-        <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
-          <option value="">Normal Size</option>
-        </select>
-        <br>
-        <select class="form-control input-sm" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
-          <option value="">Small Size</option>
-        </select>
+      <div class="col-md-3 col-md-offset-1">
+        <div class="form-group">
+          <label for="">
+            Text field with both</label>
+          <div class="input-group">
+            <span class="input-group-addon">
+              $
+            </span><input class="form-control" placeholder="Amount" type="text">
+            <span class="input-group-addon">.00
+            </span>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</fieldset>
-<fieldset>
-  <legend>
-    Selectize select menu
-    <span class="more-info">
-      <a href="http://brianreavis.github.io/selectize.js/" target="_blank">
-        Basic info
-
-        <i class="fa fa-external-link"/>
-      </a>
-      <a href="https://github.com/kbanman/selectize-ng" target="_blank">
-        Angular info
-        <i class="fa fa-external-link"/></a>
-    </span>
-  </legend>
-  <div class="row"></div>
-</fieldset>
-
-<fieldset>
-  <legend>Switches
-    <span class="more-info">
-      <a href="http://jumplink.github.io/angular-toggle-switch/" target="_blank">Angular info
-        <i class="fa fa-external-link"/>
-      </a>
-    </span>
-
-  </legend>
-  <div class="form-group switches row">
-    <div class="col-md-2">
-      <div model="inputs.switchStatus1" toggle-switch/></div>
-    <div class="col-md-2">
-      <div is-disabled="disabled" model="inputs.switchStatus2" toggle-switch/></div>
-    <div class="col-md-2"><div model="inputs.switchStatus3" toggle-switch/>
-    </div>
-  </div>
-</fieldset>
-
-<fieldset>
-  <legend>
-    Input groups
-    <span class="more-info">
-      <a href="http://getbootstrap.com/components/#input-groups">
-        learn more
-        <i class="fa fa-external-link"/></a>
-    </span>
-  </legend>
-  <div class="row">
-    <div class="col-md-12">
-      <p class="help-text">Icons, buttons, and simple menus can be prepended and/or appended to text fields.</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-3">
-      <div class="form-group">
-        <label for="">Text field prepended</label>
-        <div class="input-group">
-          <span class="input-group-addon">
-            @
-          </span><input class="form-control" placeholder="Username" type="text"></div>
-      </div>
-    </div>
-
-    <div class="col-md-3 col-md-offset-1">
-      <div class="form-group">
-        <label for="">
-          Text field appended</label>
-        <div class="input-group">
-          <input class="form-control" placeholder="Text to filter by" type="text">
-          <span class="input-group-addon"><i class="fa fa-filter"/></span>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="">
+            Text field prepended with menu</label>
+          <div class="input-group">
+            <div class="input-group-btn">
+              <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Action<span class="caret"/>
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">Action</a>
+                </li>
+                <li>
+                  <a href="#">Another action</a>
+                </li>
+                <li>
+                  <a href="#">Something else here</a>
+                </li>
+                <li class="divider"/>
+              <li>
+                <a href="#">Separated link</a>
+              </li>
+            </ul>
+          </div><input class="form-control" placeholder="Product name" type="text">
         </div>
       </div>
     </div>
     <div class="col-md-3 col-md-offset-1">
       <div class="form-group">
         <label for="">
-          Text field with both</label>
+          Text field appended with button</label>
         <div class="input-group">
-          <span class="input-group-addon">
-            $
-          </span><input class="form-control" placeholder="Amount" type="text">
-          <span class="input-group-addon">.00
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-3">
-      <div class="form-group">
-        <label for="">
-          Text field prepended with menu</label>
-        <div class="input-group">
-          <div class="input-group-btn">
-            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Action<span class="caret"/>
+          <input class="form-control" placeholder="Search" type="text">
+          <span class="input-group-btn">
+            <button class="btn btn-primary"><i class="fa fa-search"/>
             </button>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#">Action</a>
-              </li>
-              <li>
-                <a href="#">Another action</a>
-              </li>
-              <li>
-                <a href="#">Something else here</a>
-              </li>
-              <li class="divider"/>
-            <li>
-              <a href="#">Separated link</a>
-            </li>
-          </ul>
-        </div><input class="form-control" placeholder="Product name" type="text">
-      </div>
-    </div>
-  </div>
-  <div class="col-md-3 col-md-offset-1">
-    <div class="form-group">
-      <label for="">
-        Text field appended with button</label>
-      <div class="input-group">
-        <input class="form-control" placeholder="Search" type="text">
-        <span class="input-group-btn">
-          <button class="btn btn-primary"><i class="fa fa-search"/>
-          </button>
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row">
-
-  <div class="col-md-3">
-    <label>
-      Custom prepended checkbox control</label>
-    <div class="input-group" pb-checkable-input-group>
-      <span class="input-group-addon">
-        <input ng-model="checkable.checked" type="checkbox">
-      </span>
-      <input class="form-control" ng-disabled="!checkable.checked" ng-model="checkable.value" type="text"></div>
-  </div>
-</div>
-</fieldset>
-<fieldset>
-<legend>
-  Miscellaneous controls
-</legend>
-
-<div class="row">
-  <div class="col-md-3">
-    <div class="form-group">
-      <label>File upload
-      </label>
-      <input class="form-control" name="file1" type="file">
-    </div>
-  </div>
-</div>
-</fieldset>
-
-<fieldset>
-<legend>Multiple-select</legend>
-
-<div class="row">
-  <div class="col-md-4">
-    <div class="form-group">
-      <label>
-        Multiple select
-      </label>
-      <select class="form-control" multiple ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople"/></div>
-  </div>
-  <div class="col-md-4">
-    <div class="form-group">
-      <label>Multiple select (disabled)</label>
-
-      <select class="form-control" multiple ng-disabled="true" ng-model="selectedPerson2" ng-options="person.full_name for person in inputs.samplePeople"/>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <label>Multiple select with checkboxes
-    </label>
-    <div class="checkboxList form-control">
-      <div class="ms-checkboxitem" ng-repeat="person in inputs.samplePeople">
-        <label>
-          <input ng-model="person.isChecked" type="checkbox">&nbsp;
-          <span>
-            {{person.full_name}}
-
           </span>
-        </label>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <div class="row">
+
+    <div class="col-md-3">
+      <label>
+        Custom prepended checkbox control</label>
+      <div class="input-group" pb-checkable-input-group>
+        <span class="input-group-addon">
+          <input ng-model="checkable.checked" type="checkbox">
+        </span>
+        <input class="form-control" ng-disabled="!checkable.checked" ng-model="checkable.value" type="text"></div>
+    </div>
+  </div>
+</fieldset>
+<fieldset>
+  <legend>
+    Miscellaneous controls
+  </legend>
+
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group">
+        <label>File upload
+        </label>
+        <input class="form-control" name="file1" type="file">
+      </div>
+    </div>
+  </div>
 </fieldset>
 
 <fieldset>
-<legend>Submit and cancel buttons</legend>
-<div class="form-group"><input class="btn btn-primary" type="submit" value="Submit">
-  &nbsp;
-  <input class="btn btn-link" type="reset" value="Cancel">
-</div>
+  <legend>Submit and cancel buttons</legend>
+  <div class="form-group"><input class="btn btn-primary" type="submit" value="Submit">
+    &nbsp;
+    <input class="btn btn-link" type="reset" value="Cancel">
+  </div>
 </fieldset>
 </div>

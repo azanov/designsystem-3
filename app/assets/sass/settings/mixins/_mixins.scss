@@ -9,31 +9,19 @@
     }
 }
 
-@mixin bp($point) {
-
- $screen-xs: '(max-width: 767px)';
- $screen-sm: '(min-width: 768px)';
- $screen-md: '(min-width: 992px)';
- $screen-lg: '(min-width: 1200px)';
+@mixin breakpoint($point) {
 
  @if $point == screen-xs {
-     @media #{$screen-xs} { @content; }
+     @media (max-width: 767px) { @content; }
  } @else if $point == screen-sm {
-     @media #{$screen-sm} { @content; }
+     @media (min-width: 768px) { @content; }
  } @else if $point == screen-md {
-     @media #{$screen-md}  { @content; }
+     @media (min-width: 992px)  { @content; }
  } @else if $point == screen-lg {
-     @media #{$screen-lg}  { @content; }
+     @media (min-width: 1200px) { @content; }
  }
 
 }
-
-//usage:
-// .johnny-utah {
-//   @include bp($screen-xs) {
-//     content: 'Whoa.';
-//   }
-// }
 
 
 

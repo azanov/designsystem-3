@@ -37,6 +37,24 @@ fieldset {
   }
 }
 
+.checkboxList {
+  // scss-lint:disable ImportantRule
+  height: 110px !important;
+  overflow-y: scroll;
+
+    label {
+      margin: 0;
+    }
+
+}
+
+
+// some items need to be set back to default body font:
+.checkboxList span,
+a.list-group-item {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+}
 
 //****** CHECKBOXES *********************************
 .checkbox-enhanced,
@@ -223,7 +241,7 @@ select.input-sm {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
-  line-height: 1.5;
+  line-height: $line-height-base;
 }
 
 

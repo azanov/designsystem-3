@@ -13,6 +13,11 @@
   &.focus {
     @extend %fancy-focus;
   }
+  &.dropdown-active:after {
+    margin-top: -4px;
+    border-width: 0 5px 5px;
+    border-color: transparent transparent #333;
+  }
 }
 
 
@@ -39,7 +44,7 @@
     .selectize-control {
       .selectize-input {
         padding: $padding-large-vertical $padding-large-horizontal;
-        line-height: 1.5;
+        line-height: $line-height-large;
         font-size: $font-size-base;
         @include flat-right($border-radius-large);
         .has-items {
@@ -53,7 +58,7 @@
     .selectize-control {
       .selectize-input {
         padding: $padding-small-vertical $padding-small-horizontal;
-        line-height: 1;
+        line-height: $line-height-small;
         font-size: $font-size-xsmall;
         border-radius: 0;
       }
@@ -82,9 +87,4 @@
   border-style: solid;
   border-width: 5px 5px 0;
   border-color: #333 transparent transparent;
-}
-.selectize-input.dropdown-active:after {
-  margin-top: -4px;
-  border-width: 0 5px 5px;
-  border-color: transparent transparent #333;
 }
