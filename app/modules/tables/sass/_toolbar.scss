@@ -4,7 +4,7 @@
   .btn {
     padding: $padding-small-vertical $padding-small-horizontal;
     font-family: $font-family-ps-regular;
-    line-height: 1.5;
+    line-height: $line-height-base;
     height: 30px;
     font-size: 12px;
   }
@@ -12,7 +12,7 @@
   select {
     padding: $padding-small-vertical $padding-small-horizontal;
     font-family: $font-family-ps-regular;
-    line-height: 1.5;
+    line-height: $line-height-base;
     font-size: 12px;
     height: 30px;
   }
@@ -45,7 +45,7 @@
       padding: $padding-small-vertical $padding-small-horizontal;
       border-left: 0;
       height: 30px;
-      line-height: 1.5;
+      line-height: $line-height-base;
       font-size: 12px;
       &.search {
         padding-right: 25px;

@@ -122,7 +122,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid $pb-bg2;
+  border-top: 1px solid #e1e1e1;
 }
 
 a {
@@ -392,12 +392,6 @@ header .navbar .container .navbar-brand.brand-text {
   font-size: 16px;
 }
 
-// some items need to be set back to default body font:
-.checkboxList span,
-a.list-group-item {
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-}
 
 // ------SPECIAL SIZES--------
 
@@ -443,7 +437,7 @@ small,
 }
 
 // changes orientation on phones
-@include bp(screen-xs) {
+@include breakpoint(screen-xs) {
   .text-left-xs {
     text-align: left;
   }
