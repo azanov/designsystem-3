@@ -1,0 +1,22 @@
+body.landing {
+	@extend %gradient-blue-purple-magenta;
+	height: calc(100vh - 90px);
+
+	header {
+		border-bottom: solid 1px rgba(255,255,255,.15);
+	}
+
+	.centered-content {
+		h1,h2,p,.line-one {
+			color: white;
+		}
+		.line-one {
+			font-weight: 800;
+			line-height: 2;
+		}
+		p {
+			line-height: 2;
+		}
+	}
+
+}
