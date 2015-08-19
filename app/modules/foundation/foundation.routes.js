@@ -69,15 +69,6 @@
       data: {
         pageTitle: 'Foundation - Writing'
       }
-    })
-
-    .state('foundation.font', {
-      url: '/font',
-      templateUrl: 'modules/foundation/templates/foundation-font.html',
-      controller: 'FontController as font',
-      data: {
-        pageTitle: 'foundation - Font'
-      }
     });
 
   });

@@ -41,6 +41,10 @@
                 "value": "foundation.writing"
               },
               {
+                "label": "Iconography",
+                "value": "..."
+              },
+              {
                 "label": "----",
                 "value": "----"
               },
@@ -49,15 +53,7 @@
                 "value": "foundation.chartcolors"
               },
               {
-                "label": "Font",
-                "value": "foundation.font"
-              },
-              {
                 "label": "Animations",
-                "value": "..."
-              },
-              {
-                "label": "Iconography",
                 "value": "..."
               }
 
