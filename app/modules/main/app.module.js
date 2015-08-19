@@ -14,6 +14,7 @@
     'pb.ds.graphs',
     'pb.ds.helpers',
     'pb.ds.mobile',
+    'pb.ds.landing',
     'pb.ds.feedback',
     'pb.ds.patterns',
     'pb.ds.principles',
