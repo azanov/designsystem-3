@@ -81,19 +81,6 @@
       templateUrl: 'modules/elements/templates/elements-grid.html'
     })
 
-    .state('elements.icons', {
-      url: '/icons',
-      templateUrl: 'modules/elements/templates/elements-icons.html',
-      controller: 'IconsController as icons',
-      resolve: {
-        IconsResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({
-            filename: 'fontawesome'
-          });
-        }
-      }
-    })
-
     .state('elements.uicontrols', {
       url: '/uicontrols',
       templateUrl: 'modules/elements/templates/elements-uicontrols.html',

@@ -98,6 +98,12 @@
   angular.module('app').run(function($rootScope, $state, $stateParams, $log, $translate, $anchorScroll, $location) {
 
 
+    //refresh as parts are added in controllers
+    $rootScope.$on('$translatePartialLoaderStructureChanged', function() {
+      $translate.refresh();
+    });
+
+
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
       $log.debug(
         'To State:', toState,
@@ -110,6 +116,7 @@
 
     });
 
+
     $rootScope.$on('$stateChangeError', function(event, toState, tpParams, fromState, fromParams, error) {
       $log.debug('$stateChangeError: ', error);
     });
@@ -118,19 +125,18 @@
       $log.debug('$stateNotFound: ', unfoundState);
     });
 
-    //refresh as parts are added in controllers
-    $rootScope.$on('$translatePartialLoaderStructureChanged', function() {
-      $translate.refresh();
-    });
-
     $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
-      if ($location.hash()) {$anchorScroll();}
+      //if ($location.hash()) {$anchorScroll();}
     });
 
-    // scroll to top
-    // $rootScope.$on('$stateChangeSuccess', function() {
-    //   document.body.scrollTop = document.documentElement.scrollTop = 0;
-    // });
+    $rootScope.$on('$routeChangeStart', function(newRoute, oldRoute) {
+      //if ($location.hash()) {$anchorScroll();}
+    });
+
+    //scroll to top of the page, this makes the transitions wonky and needs more research
+    $rootScope.$on('$stateChangeSuccess', function() {
+      //document.body.scrollTop = document.documentElement.scrollTop = 0;
+    });
 
   });
 
