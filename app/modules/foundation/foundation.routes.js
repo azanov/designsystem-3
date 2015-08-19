@@ -16,34 +16,15 @@
     })
 
 
-
     .state('foundation.color', {
       url: '/color',
       templateUrl: 'modules/foundation/templates/foundation-color.html',
-      controller: 'ColorsController as colors',
-      resolve: {
-        ColorsResolve: function($log, MockDataFactory) {
-          return MockDataFactory.get({filename: 'colors'});
-        }
-      },
       data: {
         pageTitle: 'foundation - Colors'
       }
     })
 
-    .state('foundation.chartcolors', {
-      url: '/chartcolors',
-      templateUrl: 'modules/foundation/templates/foundation-chartcolors.html',
-      controller: 'ColorsController as colors',
-      resolve: {
-        ColorsResolve: function($log, MockDataFactory) {
-          return MockDataFactory.get({filename: 'colors'});
-        }
-      },
-      data: {
-        pageTitle: 'Foundation - Chart Colors'
-      }
-    })
+
 
     .state('foundation.typography', {
       url: '/typography',
@@ -51,6 +32,22 @@
       controller: 'TypographyController as type',
       data: {
         pageTitle: 'foundation - Typography'
+      }
+    })
+
+    .state('foundation.iconography', {
+      url: '/iconography',
+      templateUrl: 'modules/foundation/templates/foundation-iconography.html',
+      controller: 'IconographyController as icons',
+      resolve: {
+        IconsResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({
+            filename: 'fontawesome'
+          });
+        }
+      },
+      data: {
+        pageTitle: 'foundation - Iconography'
       }
     })
 
@@ -68,6 +65,21 @@
       controller: 'WritingController as writing',
       data: {
         pageTitle: 'Foundation - Writing'
+      }
+    })
+
+
+    .state('foundation.chartcolors', {
+      url: '/chartcolors',
+      templateUrl: 'modules/foundation/templates/foundation-chartcolors.html',
+      controller: 'ColorsController as colors',
+      resolve: {
+        ColorsResolve: function($log, MockDataFactory) {
+          return MockDataFactory.get({filename: 'colors'});
+        }
+      },
+      data: {
+        pageTitle: 'Foundation - Chart Colors'
       }
     });
 
