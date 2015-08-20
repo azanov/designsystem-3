@@ -150,7 +150,7 @@ header {
         padding-bottom: 5px;
         margin-bottom: 10px;
         border-bottom: 1px solid $pb-light-gray;
-  
+
       }
       > a {
         // links in the dropdown
@@ -198,6 +198,8 @@ header {
       }
       a {
         color: inherit;
+        display: block;
+        width: 100%;
         &:hover {
           text-decoration: none;
           color: $pb-gray-700;
