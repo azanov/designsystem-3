@@ -149,11 +149,11 @@ small, .text-small, .small { font-size: 12px; }
 
 .doc-lede { font-size: 16px; line-height: 1.5; color: #3a3a3a; }
 
-.doc-sectionhead { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; color: #2e2e2e; font-size: 20px; padding-bottom: 15px; border-bottom: 1px solid #f8f8f8; margin-top: 70px; margin-bottom: 50px; }
+.doc-sectionhead { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; color: #2e2e2e; font-size: 20px; padding-bottom: 15px; border-bottom: 1px solid #e1e1e1; margin-top: 70px; margin-bottom: 50px; }
 
 .doc-sectionbreak { margin-top: 50px; }
 
-.figure-spacer { border-top: 1px solid #f8f8f8; padding-top: 40px; }
+.figure-spacer { border-top: 1px solid #e1e1e1; padding-top: 40px; }
 
 figure { margin-bottom: 10px; }
 figure figcaption { clear: both; color: #cf0989; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12px; margin-bottom: 5px; margin-top: 35px; }
@@ -223,7 +223,7 @@ h4 { margin: 25px 0 5px; }
 
 .gray300 { background-color: #9b9b9b; }
 
-.gray200 { background-color: #f8f8f8; }
+.gray200 { background-color: #e1e1e1; }
 
 .list-group-details .form-group { margin-bottom: 0; }
 .list-group-details .control-label { padding-top: 3px; padding-right: 0; text-align: left; }
