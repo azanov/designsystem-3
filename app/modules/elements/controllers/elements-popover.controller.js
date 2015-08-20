@@ -13,6 +13,36 @@
     };
 
     _this.modals = {
+      basicMessage: function() {
+        $modal.open({
+          templateUrl: 'modules/elements/templates/modals/elements-basic-message.html',
+          controller: 'BootstrapUiBasicMessageModalController'
+        });
+      },
+      singleChoice: function() {
+        $modal.open({
+          templateUrl: 'modules/elements/templates/modals/elements-single-choice.html',
+          controller: 'BootstrapUiSingleChoiceModalController'
+        });
+      },
+      radioButtons: function() {
+        $modal.open({
+          templateUrl: 'modules/elements/templates/modals/elements-radio-buttons.html',
+          controller: 'BootstrapUiRadioButtonsModalController'
+        });
+      },
+      commentForm: function() {
+        $modal.open({
+          templateUrl: 'modules/elements/templates/modals/elements-comment-form.html',
+          controller: 'BootstrapUiCommentFormModalController'
+        });
+      },
+      withCopy: function() {
+        $modal.open({
+          templateUrl: 'modules/elements/templates/modals/elements-with-copy.html',
+          controller: 'BootstrapUiWithCopyModalController'
+        });
+      },
       simple: function() {
         $modal.open({
           templateUrl: 'modules/elements/templates/modals/elements-simple.html',

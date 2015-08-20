@@ -44,28 +44,67 @@
   </div>
 
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-2">
+      <figure>
+        <figcaption>Basic message</figcaption>
+        <button class="btn btn-default" ng-click="pop.modals.basicMessage()">Open Modal</button>
+      </figure>
+    </div>
+
+    <div class="col-md-2">
+      <figure>
+        <figcaption>Single Choice Action Modal</figcaption>
+        <button class="btn btn-default" ng-click="pop.modals.singleChoice()">Open Modal</button>
+      </figure>
+    </div>
+
+    <div class="col-md-2">
+      <figure>
+        <figcaption>Modal with Radio Buttons</figcaption>
+        <button class="btn btn-default" ng-click="pop.modals.radioButtons()">Open Modal</button>
+      </figure>
+    </div>
+
+    <div class="col-md-2">
+      <figure>
+        <figcaption>Modal with Comment Form</figcaption>
+        <button class="btn btn-default" ng-click="pop.modals.commentForm()">Open Modal</button>
+      </figure>
+    </div>
+
+    <div class="col-md-2">
+      <figure>
+        <figcaption>Modal with Copy</figcaption>
+        <button class="btn btn-default" ng-click="pop.modals.withCopy()">Open Modal</button>
+      </figure>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-2">
       <figure>
         <figcaption>Default Modal</figcaption>
         <button class="btn btn-default" ng-click="pop.modals.modal()">Default Modal</button>
       </figure>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-2">
       <figure>
         <figcaption>Modal with Dismiss Options</figcaption>
         <button class="btn btn-default" ng-click="pop.modals.simple()">Modal with Options</button>
       </figure>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-2">
       <figure>
         <figcaption>Modal with User Prompt</figcaption>
         <button class="btn btn-default" ng-click="pop.modals.prompt()">Modal Prompt</button>
       </figure>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-2">
       <figure>
         <figcaption>Draggable Modal</figcaption>
         <button class="btn btn-default" ng-click="pop.modals.draggable()">Draggable Modal</button>
