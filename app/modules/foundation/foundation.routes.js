@@ -66,21 +66,6 @@
       data: {
         pageTitle: 'Foundation - Writing'
       }
-    })
-
-
-    .state('foundation.chartcolors', {
-      url: '/chartcolors',
-      templateUrl: 'modules/foundation/templates/foundation-chartcolors.html',
-      controller: 'ColorsController as colors',
-      resolve: {
-        ColorsResolve: function($log, MockDataFactory) {
-          return MockDataFactory.get({filename: 'colors'});
-        }
-      },
-      data: {
-        pageTitle: 'Foundation - Chart Colors'
-      }
     });
 
   });
