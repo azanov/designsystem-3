@@ -202,27 +202,48 @@ figcaption +h2 {
   margin-top: 0;
 }
 
+%tiny-numbers {
+  color: $pb-orange;
+  display: block;
+  font-family: $font-family-sans-serif;
+  font-size: 12px;
+  border-left: 1px dotted $pb-orange-300;
+  padding-left: 5px;
+  text-align: left;
+  font-style: italic;
+}
+
 @mixin show-specs($top, $bottom) {
   margin: 0;
   &:before {
     content: '#{$top}';
-    color: $pb-magenta;
-    display: block;
-    font-family: $font-family-sans-serif;
-    font-size: 12px;
-    border-left: 1px dotted $pb-magenta-300;
-    padding-left: 5px;
     height: $top;
+    @extend %tiny-numbers;
   }
   &:after {
     content: '#{$bottom}';
-    display: block;
-    color: $pb-magenta;
-    font-family: $font-family-sans-serif;
-    font-size: 12px;
-    border-left: 1px dotted $pb-magenta-300;
-    padding-left: 5px;
     height: $bottom;
+    @extend %tiny-numbers;
+  }
+}
+
+
+@mixin show-specs-above($top) {
+  margin: 0;
+  &:before {
+    content: '#{$top}';
+    height: $top;
+    @extend %tiny-numbers;
+  }
+}
+
+@mixin show-specs-below($bottom) {
+  margin: 0;
+
+  &:after {
+    content: '#{$bottom}';
+    height: $bottom;
+    @extend %tiny-numbers;
   }
 }
 
@@ -231,8 +252,28 @@ h2.specifications {
   @include show-specs(40px, 20px);
 }
 
+h1.specifications {
+  @include show-specs(40px, 20px);
+}
 
 
+p.specifications {
+  @include show-specs-below(1em);
+}
+
+h2.follows-h1, h1 + h2 {
+  &.specifications {
+    @include show-specs(20px, 20px);
+  }
+}
+
+h2.tab-header.specifications {
+  @include show-specs(40px, 40px);
+}
+
+h2.table-header.specifications {
+  @include show-specs(40px, 40px);
+}
 
 
 .donut-varied-padded {
