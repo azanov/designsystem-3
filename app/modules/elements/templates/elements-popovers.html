@@ -15,7 +15,7 @@
       <div class="row">
         <div class="col-md-12">
           <ul class="list-unstyled list-inline jump-menu">
-            <li><a href="" du-smooth-scroll="modals" offset="100">Modals</a></li>
+            <li><a href="" du-smooth-scroll="modals" offset="125">Modals</a></li>
             <li><a href="" du-smooth-scroll="popovers">Popovers</a></li>
             <li><a href="" du-smooth-scroll="tooltips">Tooltips</a></li>
           </ul>
@@ -28,42 +28,154 @@
 
 
 
-
-
 <div class="container">
 
-  <div id="popovers" class="row">
-    <div class="col-md-12">
-      <h1>Popovers</h1>
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="modals" class="doc-head">Modals</h1>
+      <p class="doc-lede">Lorem ipsum dolor sit amet, feugiat inciderint ei eum. Verterem sapientem tincidunt ut his, facilisi mnesarchum per ne. Laoreet alienum explicari cu eos, ludus eirmod ius no, constituto voluptatibus cu per. Mei fabellas definiebas eu, duo veniam deseruisse no.</p>
+
+      <span class="more-info">
+        <a href="http://angular-ui.github.io/bootstrap/#/modal" target="_blank">More info
+          <i class="fa fa-external-link"></i>
+        </a>
+      </span>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-12">
-      <div>
-        <h4>Dynamic</h4>
 
-        <button popover-template="dynamicPopover.templateUrl" popover-title="Hello World" class="btn btn-default">Popover With Template</button>
+  <div class="row">
+    <div class="col-md-3">
+      <figure>
+        <figcaption>Default Modal</figcaption>
+        <button class="btn btn-default" ng-click="pop.modals.modal()">Default Modal</button>
+      </figure>
+    </div>
+
+    <div class="col-md-3">
+      <figure>
+        <figcaption>Modal with Dismiss Options</figcaption>
+        <button class="btn btn-default" ng-click="pop.modals.simple()">Modal with Options</button>
+      </figure>
+    </div>
+
+    <div class="col-md-3">
+      <figure>
+        <figcaption>Modal with User Prompt</figcaption>
+        <button class="btn btn-default" ng-click="pop.modals.prompt()">Modal Prompt</button>
+      </figure>
+    </div>
+
+    <div class="col-md-3">
+      <figure>
+        <figcaption>Draggable Modal</figcaption>
+        <button class="btn btn-default" ng-click="pop.modals.draggable()">Draggable Modal</button>
+      </figure>
+    </div>
+  </div>
+
+
+
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="popovers" class="doc-head">Popovers</h1>
+      <p class="doc-lede">Lorem ipsum dolor sit amet, feugiat inciderint ei eum. Verterem sapientem tincidunt ut his, facilisi mnesarchum per ne. Laoreet alienum explicari cu eos, ludus eirmod ius no, constituto voluptatibus cu per. Mei fabellas definiebas eu, duo veniam deseruisse no.</p>
+
+      <span class="more-info">
+        <a href="http://angular-ui.github.io/bootstrap/#/popover" target="_blank">More info
+          <i class="fa fa-external-link"></i>
+        </a>
+      </span>
+
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-3">
+      <figure>
+        <figcaption>Popover with Template</figcaption>
+        <button popover-template="pop.dynamicPopover.templateUrl" popover-title="Hello World" class="btn btn-default">Popover With Template</button>
 
         <script type="text/ng-template" id="myPopoverTemplate.html">
           <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt provident tempora officia.</div>
         </script>
-        <hr />
-        <h4>Positional</h4>
+      </figure>
+    </div>
+
+    <div class="col-md-3">
+      <figure>
+        <figcaption>Popover Positions</figcaption>
         <button popover-placement="top" popover="On the Top!" class="btn btn-default">Top</button>
         <button popover-placement="left" popover="On the Left!" class="btn btn-default">Left</button>
         <button popover-placement="right" popover="On the Right!" class="btn btn-default">Right</button>
         <button popover-placement="bottom" popover="On the Bottom!" class="btn btn-default">Bottom</button>
-        <hr />
-        <h4>Triggers</h4>
+      </figure>
+    </div>
+
+    <div class="col-md-3">
+      <figure>
+        <figcaption>Popover Triggers</figcaption>
         <p>
           <button popover="I appeared on mouse enter!" popover-trigger="mouseenter" class="btn btn-default">Mouseenter</button>
         </p>
         <input type="text" value="Click me!" popover="I appeared on focus! Click away and I'll vanish..." popover-trigger="focus" class="form-control">
-        <hr />
-        <h4>Other</h4>
-        <button Popover-animation="true" popover="I fade in and out!" class="btn btn-default">fading</button>
+      </figure>
+    </div>
+
+    <div class="col-md-3">
+      <figure>
+        <figcaption>Other Popovers</figcaption>
+        <button popover-animation="true" popover="I fade in and out!" class="btn btn-default">fading</button>
         <button popover="I have a title!" popover-title="The title." class="btn btn-default">title</button>
-      </div>
+
+      </figure>
     </div>
   </div>
+
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="tooltips" class="doc-head">Tooltips</h1>
+      <p class="doc-lede">Lorem ipsum dolor sit amet, feugiat inciderint ei eum. Verterem sapientem tincidunt ut his, facilisi mnesarchum per ne. Laoreet alienum explicari cu eos, ludus eirmod ius no, constituto voluptatibus cu per. Mei fabellas definiebas eu, duo veniam deseruisse no.</p>
+
+      <span class="more-info">
+        <a href="http://angular-ui.github.io/bootstrap/#/tooltip" target="_blank">More info
+          <i class="fa fa-external-link"></i>
+        </a>
+      </span>
+
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-3">
+      <figure>
+        <figcaption>Tooltip in Body</figcaption>
+        <p>Pellentesque <a href="" tooltip-placement="left" tooltip="On the Left!" tooltip-trigger="click">left</a> eget arcu dictum varius duis at consectetur lorem. Vitae elementum curabitur <a href="" tooltip-placement="right" tooltip="On the Right!" tooltip-trigger="click">right</a> nunc sed velit dignissim sodales ut eu sem integer vitae. Turpis egestas <a href="" tooltip-placement="bottom" tooltip="On the Bottom!" tooltip-trigger="click">bottom</a> pharetra convallis posuere morbi leo urna,</p>
+      </figure>
+    </div>
+
+    <div class="col-md-3">
+      <figure>
+        <figcaption>Form Field Focus Tooltip</figcaption>
+        <div class="form-group">
+          <label>Label</label>
+          <input type="text" placeholder="" tooltip="I show on focus."  tooltip-trigger="focus" tooltip-placement="right" class="form-control" />
+        </div>
+      </figure>
+    </div>
+
+    <div class="col-md-3">
+      <figure>
+        <figcaption>Form Field Info Tooltip</figcaption>
+        <div class="form-group">
+          <label>Label <a href="" tooltip="Lorem ipsum dolor sit amet."  tooltip-trigger="click" tooltip-placement="right"><i class="fa fa-fw fa-question-circle"></i></a></label>
+          <input type="text" placeholder=""  class="form-control" />
+        </div>
+      </figure>
+    </div>
+  </div>
+
 </div>
