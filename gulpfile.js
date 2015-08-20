@@ -149,7 +149,7 @@ gulp.task('usemin', function() {
 gulp.task('copy:modules', [], function() {
   gulp.src([
       './app/modules/**/i18n/*',
-      './app/modules/**/templates/*',
+      './app/modules/**/templates/**',
       './app/modules/**/assets/images/*'
     ])
     .pipe(gulp.dest('./build/modules'));
