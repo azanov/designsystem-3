@@ -386,7 +386,7 @@ small,
   color: #2e2e2e;
   font-size: 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 1px solid #f8f8f8;
   margin-top: 70px;
   margin-bottom: 50px; }
 
@@ -394,7 +394,7 @@ small,
   margin-top: 50px; }
 
 .figure-spacer {
-  border-top: 1px solid #e1e1e1;
+  border-top: 1px solid #f8f8f8;
   padding-top: 40px; }
 
 figure {
@@ -430,25 +430,6 @@ figure {
     font-size: 12px;
     line-height: 1.2;
     border-radius: 3px; }
-
-.doc-head {
-  margin-top: 80px; }
-
-.doc-lede {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #3a3a3a; }
-
-.doc-sectionhead {
-  font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif;
-  color: #2e2e2e;
-  font-size: 20px;
-  padding-bottom: 15px;
-  margin-bottom: 40px;
-  border-bottom: 1px solid #e1e1e1; }
-
-.doc-gradient {
-  background: linear-gradient(90deg, #4c4ca2 0%, #872e96 42%, #872e96 48%, #c90d8b 100%); }
 
 h4 .more-info,
 h1 .more-info,
