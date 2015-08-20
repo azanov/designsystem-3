@@ -18,6 +18,9 @@
     .state('graphs.page', {
       url: '',
       views: {
+        colors: {
+          templateUrl: 'modules/graphs/templates/graphs-colors.html'
+        },
         c3charts: {
           templateUrl: 'modules/graphs/templates/graphs-c3.html',
           controller: 'C3Controller as c3'

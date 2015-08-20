@@ -86,21 +86,8 @@
                 "value": "tables.datatable.page"
               },
               {
-                "label": "Tables",
-                "value": "",
-                "toggle": "dropdown",
-                "children": [
-                  {
-                    "label": "Faceted Search",
-                    "value": "tables.facetedsearch"
-                  }
-                ]
-              },
-
-              {
                 "label": "Charts",
                 "value": "graphs.page"
-
               },
               {
                 "label": "User Feedback",
@@ -156,6 +143,10 @@
               {
                 "label": "500",
                 "value": "patterns.500"
+              },
+              {
+                "label": "Faceted Search",
+                "value": "tables.facetedsearch"
               }
             ]
           }

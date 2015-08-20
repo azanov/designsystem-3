@@ -8,22 +8,34 @@
 
     //COLORS
     _this.colours = [
-      '#0082d5',
-      '#a03f9b',
-      '#00b140',
-      '#edb700',
-      '#ef8200',
-      '#cf0989'
+      '#0072B8',
+      '#CF0989',
+      '#009DBF',
+      '#A03F9B',
+      '#EF8200',
+      '#00B140',
+      '#EDB700',
+      '#3E53A4'
     ];
+
+    _this.mono = [
+      '#00436E',
+      '#005A93',
+      '#0072B8',
+      '#66AAD4',
+      '#CCE3F1',
+      '#E5F1F8'
+    ];
+
 
     //BAR
     _this.bar = {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+      labels: ['2011', '2012', '2013', '2014', '2015'],
       data: [
-        [65, 59, 80, 81, 56, 55],
-        [28, 48, 40, 19, 86, 27]
+        [45, 28, 35, 85, 55],
+        [65, 45, 48, 95, 75]
       ],
-      series: ['Series A', 'Series B'],
+      series: ['Category One', 'Category Two'],
       colours: _this.colours,
       options: {
         scaleShowGridLines: false
@@ -35,49 +47,50 @@
 
     //LINE
     _this.line = {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+      labels: ['2013', '2014', '2015', '2016'],
       data: [
-        [65, 59, 80, 81, 56, 55],
-        [28, 48, 40, 19, 86, 27]
+        [35, 60, 40, 45],
+        [25, 50, 45, 60]
       ],
-      series: ['Series A', 'Series B'],
+      series: ['Category One', 'Category Two'],
       colours: _this.colours,
       click: function(points, evt) {
         $log.debug(points, evt);
       }
     };
 
+
+
+
     //DONUT
     _this.donut = {
-      labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling'],
-      data: [65, 59, 90, 81, 56, 55],
-      colours: _this.colours
+      labels: ['Category One', 'Category Two', 'Category Three', 'Category Four', 'Category Five'],
+      data: [35, 24, 22, 12, 7]
     };
 
     //PIE
     _this.pie = {
-      labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling'],
-      data: [65, 59, 90, 81, 56, 55],
-      colours: _this.colours
+      labels: ['Category One', 'Category Two', 'Category Three', 'Category Four', 'Category Five'],
+      data: [35, 24, 22, 12, 7]
     };
 
     //RADAR
     _this.radar = {
-      labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling'],
+      labels: ['Category One', 'Category Two', 'Category Three', 'Category Four', 'Category Five'],
       data: [
-        [65, 59, 90, 81, 56, 55],
-        [28, 48, 40, 19, 96, 27]
+        [65, 59, 90, 81, 56],
+        [28, 48, 40, 19, 96]
       ],
       colours: _this.colours,
-      series: ['Series A', 'Series B']
+      series: ['2014', '2015']
     };
 
     //POLAR
     _this.polar = {
-      labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling'],
-      data: [65, 59, 90, 81, 56, 55],
+      labels: ['Category One', 'Category Two', 'Category Three', 'Category Four', 'Category Five'],
+      data: [65, 59, 90, 81, 56],
       colours: _this.colours,
-      series: ['Series A', 'Series B']
+      series: ['2014', '2015']
     };
 
   });
