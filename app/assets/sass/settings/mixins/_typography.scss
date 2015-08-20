@@ -156,6 +156,8 @@ h1,.h1 {
   font-weight: normal;
   font-family: $font-family-ps-light;
   color: $page-header-color;
+  margin-top: 40px;
+  margin-bottom: 25px;
   &.ko {
     color: #fff;
     font-family: $font-family-ps-regular;
@@ -168,6 +170,9 @@ h1,.h1 {
 h2,.h2 {
   font-size: 20px;
   font-family: $font-family-ps-regular;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 0;
   font-weight: normal;
   color: $header-color;
   &.ko {
@@ -180,6 +185,16 @@ h2,.h2 {
     // for use in Documentation only!
     color: $pb-magenta;
   }
+}
+
+h2.section-divider {
+padding-bottom: 20px;
+margin-bottom: 30px;
+border-bottom: 1px solid $pb-light-gray;
+}
+
+h2.follows-h1 {
+  margin-top: 0;
 }
 
 h3,.h3 {
@@ -197,19 +212,9 @@ h3,.h3 {
 
 h4 {
   font-size: 16px;
-  font-family: $font-family-ps-bold;
+  font-family: $font-family-ps-regular;
   font-weight: normal;
   color: $header-color;
-  &.ko {
-    color: fff;
-  }
-  &.alt {
-    color: $header-color-alt;
-  }
-  &.docs {
-    // for use in Documentation only!
-    color: $pb-magenta;
-  }
 }
 
 h5 {
@@ -372,6 +377,8 @@ ol {
 
 .panel-heading {
   font-family: $font-family-ps-regular;
+  font-size: 14px;
+  font-weight: normal;
 
   // tables inside panel heads, edge case
   td,

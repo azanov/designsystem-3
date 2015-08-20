@@ -42,7 +42,7 @@
 
 
   <!-- headers -->
-  <div id="headers" class="row spacer-top-xl">
+  <div id="headers" class="row">
     <div class="col-md-12">
       <h1 class="doc-sectionhead">Headers</h1>
 
@@ -73,7 +73,7 @@
   </div>
 
 
-  <div class="row spacer-top-xl">
+  <div class="row">
     <div class="col-md-12">
       <h1 class="doc-sectionhead">Body Copy</h1>
       <table class="table table-bordered type-samples">
@@ -101,7 +101,7 @@
   </div>
 
 
-  <div class="row spacer-top-xl">
+  <div class="row">
     <div class="col-md-12">
       <h1 class="doc-sectionhead">Navigation</h1>
 
@@ -126,7 +126,7 @@
   </div>
 
 
-  <div class="row spacer-top-xl">
+  <div class="row">
     <div class="col-md-12">
       <h1 class="doc-sectionhead">Forms &amp; Inputs</h1>
       <table class="table table-bordered type-samples">
@@ -152,9 +152,15 @@
 
 
   <!-- HEADER AND BODY SPACING-->
-  <div id="header-body-spacing" class="row spacer-top-xl">
+  <div id="header-body-spacing" class="row">
     <div class="col-xs-12">
       <h1>Header &amp; Body Spacing</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Text Column Sizing</h2>
     </div>
   </div>
 
@@ -162,7 +168,7 @@
     <div class="col-xs-6">
       <figure>
         <figcaption>Maximum copy block width 6 columns</figcaption>
-        <h2>Section Header</h2>
+        <h2 class="specifications">Header H2</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, nemo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, nemo.</p>
       </figure>
     </div>
@@ -170,75 +176,86 @@
     <div class="col-xs-3 col-xs-offset-1">
       <figure>
         <figcaption>Minimum copy block width 3 columns</figcaption>
-        <h2>Section Header</h2>
+        <h2>Header H2</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, nemo.</p>
       </figure>
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Header and Text Specifications</h2>
+    </div>
+  </div>
 
-  <div class="row spacer-top-xl">
-    <div class="col-xs-3">
+
+  <div class="row">
+    <div class="col-md-4">
       <figure>
         <figcaption>Capitalization and Line Height</figcaption>
-        <h2>h2. Headers = Title Case</h2>
-        <p>Body = Sentence case. Line height = 1.7</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, nemo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, nemo.</p>
+        <h2>Header H2 is Title Case</h2>
+
+        <p>Body = Sentence case. <br>Line height = 1.42857143, BS standard</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, nemo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio. Lorem  dolor sit amet, consectetur adipisicing elit. Sapiente, nemo.</p>
       </figure>
     </div>
 
-    <div class="col-xs-3 col-xs-offset-1">
+    <div class="col-md-4 col-md-offset-1">
       <figure>
         <figcaption>Section Dividers</figcaption>
-        <h2>Section Header</h2>
-        <hr>
-        <img class="img-responsive" src="modules/foundation/assets/images/image_placeholder.png" />
+        <h2 class="section-divider">H2 Class section-divider</h2>
+        <!-- <img class="img-responsive" src="modules/foundation/assets/images/image_placeholder.png" /> -->
+        <p>
+          H2s with the class"section divider" have a 1-pixel rule, #E1E1E1. There is 20 pixels of space bwtween the header and this rule, and another 30 pixels below the rule. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nobis.
+        </p>
       </figure>
     </div>
+  </div>
 
-    <div class="col-xs-3 col-xs-offset-1">
-      <figure>
-        <figcaption>Contextual Colors</figcaption>
-        <p class="text-muted">Disabled Text - #c0c0c0</p>
-        <p>Default Text - #717171</p>
-        <p class="text-primary">Primary Text - #3e53a4</p>
-        <p class="text-success">Success Text - #3c763d</p>
-        <p class="text-info">Info Text - #31708f</p>
-        <p class="text-danger">Error Text - #dc0000</p>
-      </figure>
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Definition Lists</h2>
     </div>
   </div>
 
 
   <!-- -->
-  <div class="row spacer-top-lg">
+  <div class="row">
     <div class="col-md-4">
       <figure>
-        <figcaption>Descriptive List</figcaption>
-        <h2>h2. Section Header</h2>
+        <figcaption>Definition List (<code>dl</code>)</figcaption>
+        <h2>Header</h2>
         <dl>
           <dt>Lorem ipsum dolor sit amet.</dt>
-          <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, fuga cupiditate nesciunt!</dd>
-          <dt>Lorem ipsum dolor sit amet, consectetur.</dt><dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio.</dd>
+            <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, fuga cupiditate nesciunt!</dd>
+          <dt>Lorem ipsum dolor sit amet, consectetur.</dt>
+            <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio.</dd>
         </dl>
       </figure>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4 col-md-offset-1">
       <figure>
-        <figcaption>Descriptive List Condensed</figcaption>
-        <h2>h2. Section Header</h2>
+        <figcaption>Descriptive List Condensed (<code>dl.dlist-condensed</code>)</figcaption>
+        <h2>Header</h2>
         <dl class="dlist-condensed">
-          <dt>Lorem ipsum dolor sit amet.</dt>
-          <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio.</dd>
+          <dt>Note that the sapcing in this variaant is tighter, for where space is an issue</dt>
+            <dd>If space is not an issue, please use the sandard list. Dae fuga error eum quisquam distinctio atque aliquam optio.</dd>
           <dt>Lorem ipsum dolor sit amet, consectetur.</dt>
-          <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, fuga cupiditate nesciunt!</dd>
+            <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, fuga cupiditate nesciunt!</dd>
         </dl>
       </figure>
     </div>
   </div>
 
-  <div class="row spacer-top-lg">
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Lists</h2>
+    </div>
+  </div>
+
+  <div class="row">
     <div class="col-md-4">
       <figure>
         <figcaption>Ordered List</figcaption>
@@ -254,7 +271,7 @@
       </figure>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4 col-md-offset-1 ">
       <figure>
         <figcaption>Unordered List</figcaption>
         <h2>h2. Section Header</h2>
@@ -275,16 +292,15 @@
     </div>
   </div>
 
-  <div class="row spacer-top-lg">
-    <div class="col-md-4">
-      <figure>
-        <figcaption>Header Margins</figcaption>
-        <h2>h2. Section Header</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, nemo.</p>
-      </figure>
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Using Headers Together</h2>
     </div>
+  </div>
 
-    <div class="col-md-4 col-md-offset-1">
+  <div class="row">
+
+    <div class="col-md-4">
       <figure>
         <figcaption>Header Margins</figcaption>
         <h1>h1. Main Section Header</h1>
@@ -292,12 +308,8 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dae fuga error eum quisquam distinctio atque aliquam optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, nemo.</p>
       </figure>
     </div>
-  </div>
 
-
-  <div class="row spacer-top-lg">
-
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-6 col-md-offset-2">
       <figure>
         <figcaption class="text-center">Centered Copy Block within Page</figcaption>
         <div style="border: 1px dashed red; padding: 20px 40px 40px 40px;">
@@ -312,15 +324,15 @@
 
 
   <!-- TABS & TABLE SPACING -->
-  <div id="tab-table-spacing" class="row spacer-top-xl">
+  <div id="tab-table-spacing" class="row">
     <div class="col-xs-12">
       <h1>Tab &amp; Table Spacing</h1>
     </div>
   </div>
 
-  <div class="row spacer-top-xl">
+  <div class="row">
     <div class="col-xs-12">
-      <h1 class="doc-sectionhead">Tab Spacing</h1>
+      <h2 class="doc-sectionhead follows-h1">Tab Spacing</h2>
       <figure>
         <figcaption>Tab Control Margins</figcaption>
         <h2>Section Header</h2>
@@ -348,7 +360,7 @@
   </div>
 
 
-  <div class="row spacer-top-xl">
+  <div>
     <div class="col-xs-12">
       <h1 class="doc-sectionhead">Table Spacing</h1>
       <figure>
@@ -397,13 +409,13 @@
 
 
   <!-- TABS & TABLE SPACING -->
-  <div id="precision-sans" class="row spacer-top-xl">
+  <div id="precision-sans">
     <div class="col-xs-12">
       <h1>Precision Sans</h1>
     </div>
   </div>
 
-  <div class="row spacer-top-xl">
+  <!-- <div>
 
     <div class="col-xs-4">
       <p>Lorem ipsum</p>
@@ -426,11 +438,11 @@
 
       </figure>
     </div>
-  </div>
+  </div> -->
 
 
 
-  <div class="row spacer-top-xl">
+  <div>
     <h1>WHERE DO THESE GO?</h1>
     <div class="col-md-6">
       <h4 class="sh">List Group</h4>
