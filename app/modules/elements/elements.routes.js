@@ -37,15 +37,29 @@
       url: '',
       views: {
         accordions: {
-          templateUrl: 'modules/elements/templates/elements-accordions.html',
-          controller: 'AccordionsController as accordions'
+          templateUrl: 'modules/elements/templates/elements-accordions.html'
+          //controller: 'AccordionsController as accordions'
         },
         cards: {
           templateUrl: 'modules/elements/templates/elements-cards.html'
         },
         panels: {
           templateUrl: 'modules/elements/templates/elements-panels.html',
-          controller: 'PanelsController as panels'
+          controller: 'PanelsController as panels',
+          resolve: {
+            PeopleResolve: function($log, MockDataFactory) {
+              return MockDataFactory.query({
+                filename: 'people'
+              });
+            },
+            MillerResolve: function($log, MockDataFactory) {
+              return MockDataFactory.get({
+                filename: 'millercolumn'
+              }, function(response) {
+                return response.versionInfos;
+              });
+            }
+          }
         },
         tabs: {
           templateUrl: 'modules/elements/templates/elements-tabs.html',
@@ -76,11 +90,6 @@
       }
     })
 
-    .state('elements.grid', {
-      url: '/grid',
-      templateUrl: 'modules/elements/templates/elements-grid.html'
-    })
-
     .state('elements.uicontrols', {
       url: '/uicontrols',
       templateUrl: 'modules/elements/templates/elements-uicontrols.html',
@@ -99,25 +108,7 @@
       }
     })
 
-    .state('elements.panels', {
-      url: '/panels',
-      templateUrl: 'modules/elements/templates/elements-panels.html',
-      controller: 'PanelsController as panels',
-      resolve: {
-        PeopleResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({
-            filename: 'people'
-          });
-        },
-        MillerResolve: function($log, MockDataFactory) {
-          return MockDataFactory.get({
-            filename: 'millercolumn'
-          }, function(response) {
-            return response.versionInfos;
-          });
-        }
-      }
-    })
+
 
     .state('elements.popovers', {
       url: '/popovers',
