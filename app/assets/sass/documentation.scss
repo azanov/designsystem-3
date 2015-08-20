@@ -202,26 +202,33 @@ figcaption +h2 {
   margin-top: 0;
 }
 
-
-h2.specifications {
+@mixin show-specs($top, $bottom) {
+  margin: 0;
   &:before {
-    content: '40px';
+    content: '#{$top}';
     color: $pb-magenta;
     display: block;
     font-family: $font-family-sans-serif;
     font-size: 12px;
-    background-color: lightgreen;
-    height: 40px;
+    border-left: 1px dotted $pb-magenta-300;
+    padding-left: 5px;
+    height: $top;
   }
   &:after {
-    content: '\00000a20px';
+    content: '#{$bottom}';
     display: block;
     color: $pb-magenta;
     font-family: $font-family-sans-serif;
     font-size: 12px;
-    background-color: lightgreen;
-height: 20px;
+    border-left: 1px dotted $pb-magenta-300;
+    padding-left: 5px;
+    height: $bottom;
   }
+}
+
+
+h2.specifications {
+  @include show-specs(40px, 20px);
 }
 
 

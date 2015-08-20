@@ -463,22 +463,26 @@ legend .more-info {
 figcaption + h2 {
   margin-top: 0; }
 
-h2.specifications:before {
-  content: '40px';
-  color: #cf0989;
-  display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  background-color: lightgreen;
-  height: 40px; }
-h2.specifications:after {
-  content: '\00000a20px';
-  display: block;
-  color: #cf0989;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  background-color: lightgreen;
-  height: 20px; }
+h2.specifications {
+  margin: 0; }
+  h2.specifications:before {
+    content: "40px";
+    color: #cf0989;
+    display: block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    border-left: 1px dotted #e26bb8;
+    padding-left: 5px;
+    height: 40px; }
+  h2.specifications:after {
+    content: "20px";
+    display: block;
+    color: #cf0989;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    border-left: 1px dotted #e26bb8;
+    padding-left: 5px;
+    height: 20px; }
 
 .donut-varied-padded {
   margin-right: 25px;
@@ -648,5 +652,41 @@ h2.specifications:after {
   color: #dc0000; }
 .status.status-warning {
   color: #ef8200; }
+
+.preview-example {
+  background-color: #fff;
+  position: relative;
+  padding: 40px 9px 9px;
+  border: 1px solid #e3e3e3;
+  border-radius: 3px;
+  margin: 20px 0; }
+  .preview-example:before {
+    content: 'Example';
+    position: absolute;
+    font-size: 9px;
+    top: 0;
+    left: 0;
+    padding: 3px 7px;
+    text-transform: uppercase;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-top: 0;
+    border-left: 0;
+    letter-spacing: .1em; }
+  .preview-example.preview-example-live:before {
+    font-family: 'FontAwesome';
+    content: '\f0e7   Live example'; }
+  .preview-example + .preview-code {
+    margin-top: -25px;
+    margin-bottom: 20px; }
+
+.preview-code pre {
+  border-color: #e3e3e3;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin: 0;
+  padding: 10px; }
+  .preview-code pre code {
+    background: transparent; }
 
 /*# sourceMappingURL=documentation.css.map */
