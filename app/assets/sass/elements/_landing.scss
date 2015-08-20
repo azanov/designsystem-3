@@ -46,21 +46,21 @@ body.landing {
    		color: white;
 		}
 		&:-moz-placeholder { /* Firefox 18- */
-		  color: white;  
+		  color: white;
 		}
 		&::-moz-placeholder {  /* Firefox 19+ */
-		  color: white;  
+		  color: white;
 		}
-		&:-ms-input-placeholder {  
-		  color: white;  
+		&:-ms-input-placeholder {
+		  color: white;
 		}
 	}
-	
+
 	.btn-circle {
 		@extend .h3;
 		border: solid 1px white;
 		border-radius: 50%;
-		color: white; 
+		color: white;
 		min-width: 47px;
 	}
 

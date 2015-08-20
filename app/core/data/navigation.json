@@ -33,20 +33,20 @@
                 "value": "foundation.grid"
               },
               {
-                "label": "Specs",
-                "value": "..."
-              },
-              {
                 "label": "Writing",
                 "value": "foundation.writing"
               },
               {
                 "label": "Iconography",
-                "value": "..."
+                "value": "foundation.iconography"
               },
               {
                 "label": "----",
                 "value": "----"
+              },
+              {
+                "label": "Specs",
+                "value": "..."
               },
               {
                 "label": "Chart Colors",
@@ -121,10 +121,6 @@
               {
                 "label": "------",
                 "value": "-------"
-              },
-              {
-                "label": "Icons",
-                "value": "elements.icons"
               },
               {
                 "label": "Helpers",
