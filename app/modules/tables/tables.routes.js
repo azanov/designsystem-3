@@ -16,12 +16,13 @@
     })
 
     .state('tables.datatable', {
+      abstract: true,
       url: '/datatable',
       templateUrl: 'modules/tables/templates/tables-datatable.html'
     })
 
-    .state('tables.datatable.overview', {
-      url: '/overview',
+    .state('tables.datatable.page', {
+      url: '',
       views: {
         basic: {
           templateUrl: 'modules/tables/templates/tables-simple.html',
