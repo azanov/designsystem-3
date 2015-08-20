@@ -15,17 +15,6 @@
       }
     })
 
-    .state('tables.simple', {
-      url: '/lib1',
-      templateUrl: 'modules/tables/templates/tables-simple.html',
-      controller: 'TablesSimpleController as simple',
-      resolve: {
-        PeopleResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'people'});
-        }
-      }
-    })
-
     .state('tables.datatable', {
       url: '/datatable',
       templateUrl: 'modules/tables/templates/tables-datatable.html'
@@ -34,6 +23,15 @@
     .state('tables.datatable.overview', {
       url: '/overview',
       views: {
+        basic: {
+          templateUrl: 'modules/tables/templates/tables-simple.html',
+          controller: 'TablesSimpleController as simple',
+          resolve: {
+            PeopleResolve: function($log, MockDataFactory) {
+              return MockDataFactory.query({filename: 'people'});
+            }
+          }
+        },
         overview: {
           templateUrl: 'modules/tables/templates/tables-datatable-overview.html',
           controller: 'TablesOverviewController as overview'
@@ -64,7 +62,7 @@
       data: {
         pageTitle: 'Paging',
         access: 'public',
-        bodyClass: 'tables signin' //TODO: need to change this to a generic classname
+        bodyClass: 'tables fullscreen'
       }
     })
 
@@ -80,7 +78,7 @@
       data: {
         pageTitle: 'Infinite Scroll',
         access: 'public',
-        bodyClass: 'tables signin' //TODO: need to change this to a generic classname
+        bodyClass: 'tables fullscreen'
       }
     })
 
@@ -92,6 +90,11 @@
         PeopleResolve: function($log, MockDataFactory) {
           return MockDataFactory.query({filename: 'ds_users'});
         }
+      },
+      data: {
+        pageTitle: 'Infinite Scroll',
+        access: 'public',
+        bodyClass: 'tables fullscreen'
       }
     })
 
