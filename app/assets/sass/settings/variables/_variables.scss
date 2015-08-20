@@ -185,13 +185,13 @@ $table-condensed-extra-cell-padding: 2px;
 //** Default background color used for all tables.
 $table-bg: #fff;
 //** Background color used for `.table-striped`.
-$table-bg-accent: $pb-gray-50;
+$table-bg-accent: $pb-bg2;
 //** Border color for table and cell borders.
 $table-border-color: #C5CBE3;
 $table-vertical-cell-dividers: #EAEDF8;
 //** Background color used for `.table-hover`.
-$table-bg-hover: tint($pb-blue, 10%);
-$table-bg-active: tint($pb-blue, 20%);
+$table-bg-hover:$pb-bg4;
+$table-bg-active: $pb-bg5;
 
 
 //== Buttons  // see buttons.scss
