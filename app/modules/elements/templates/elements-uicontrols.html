@@ -895,7 +895,7 @@
 </div>
 
 
-<div class="row">
+<div class="row" ng-controller="DatepickerDemoCtrl">
   <div class="col-md-8">
     <h1 class="doc-head" id="datepickers">Date Pickers</h1>
   </div>
@@ -909,14 +909,24 @@
   <!-- right -->
   <div class="col-md-7 col-md-offset-1 figure-spacer">
     <!-- 2 columns in right -->
-    <div class="row">
-      <div class="col-md-5">
-        <p class="post-it">To come</p>
-      </div>
-      <div class="col-md-5">
-
-      </div>
+<div class="row">
+  <div class="col-md-5">
+    <div class="input-group">
+      <input class="form-control" close-text="Close" date-disabled="disabled(date, mode)" datepicker-options="dateOptions" datepicker-popup="{{format}}" is-open="status.opened" max-date="'2020-06-22'" min-date="minDate" ng-model="dt" ng-required="true" type="text"/>
+      <span class="input-group-btn">
+        <button class="btn btn-default" ng-click="open($event)" type="button">
+          <i class="glyphicon glyphicon-calendar"></i>
+        </button>
+      </span>
     </div>
+
+
+
+  </div>
+  <div class="col-md-5"></div>
+</div>
+
+
   </div>
 </div>
 

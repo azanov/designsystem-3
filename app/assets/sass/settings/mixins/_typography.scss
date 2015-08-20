@@ -100,6 +100,9 @@ $font-size-xsmall: ceil(($font-size-base * .72)); // ~10px
 
 //----------------------------
 
+.glyphicon {
+  line-height: $line-height-base;
+}
 
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 

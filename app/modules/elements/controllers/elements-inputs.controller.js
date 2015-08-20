@@ -13,15 +13,6 @@
       arrowStep: 1
     };
 
-    //datetimepicker1
-    _this.datetimepicker1 = {
-      pickTime: false
-    };
-
-    //datetimepicker2
-    _this.datetimepicker2 = {
-      pickDate: false
-    };
 
     _this.samplePeople = PeopleResolve;
 
@@ -130,6 +121,11 @@
     _this.switchStatus2 = false;
     _this.switchStatus3 = true;
     _this.switchStatus4 = false;
+
+
+
+
+
 
   });
 
