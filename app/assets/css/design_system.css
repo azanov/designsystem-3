@@ -3312,7 +3312,7 @@ input.cmn-toggle-round-flat:checked + label:after {
   background-color: #b2badb; }
 
 .table-striped > tbody > tr:nth-child(odd) {
-  background-color: #e1e1e1; }
+  background-color: #f8f8f8; }
 
 .table > tbody > tr > td,
 .table > tbody > tr > th {
