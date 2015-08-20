@@ -83,7 +83,7 @@
               },
               {
                 "label": "Tables",
-                "value": "tables.page"
+                "value": "tables.datatable.overview"
               },
               {
                 "label": "Tables",
@@ -91,20 +91,8 @@
                 "toggle": "dropdown",
                 "children": [
                   {
-                    "label": "Simple",
-                    "value": "tables.simple"
-                  },
-                  {
-                    "label": "Datatable",
-                    "value": "tables.datatable.overview"
-                  },
-                  {
                     "label": "Faceted Search",
                     "value": "tables.facetedsearch"
-                  },
-                  {
-                    "label": "Datatable.net",
-                    "value": "tables.datatablesnet"
                   }
                 ]
               },
