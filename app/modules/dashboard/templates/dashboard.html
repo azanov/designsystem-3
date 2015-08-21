@@ -6,58 +6,13 @@
   <div class="container">
     <div class="row" style="margin-top:30px">
       <div class="col-md-12">
-        <h1 class="main-title">Temporary Navigation</h1>
-        <p>
-          Note: Gray non-linked levels are going to be menu labels only. Only one that's different is Tables - For now, navigate to "Datatable".  I think all tables should be integrated under one hub page. Patterns suggestion needs study, since these are items that really should spawn full pages.
-        </p>
+        <h1 class="main-title">Dashboard</h1>
+
       </div>
     </div>
     <div class="row">
       <div class="col-md-12 hero-unit">
-
-        <ul>
-          <li ng-repeat="level1 in dash.navdata" ng-switch on="level1.toggle">
-            <span ng-switch-when="dropdown">{{level1.label}}</span>
-            <a ui-sref="{{level1.value}}" href="" ng-switch-default>{{level1.label}}</a>
-
-            <ul>
-              <li ng-repeat="level2 in level1.children" ng-switch on="level2.toggle">
-                <span ng-switch-when="dropdown">{{level2.label}}</span>
-                <a ui-sref="{{level2.value}}" href="" ng-switch-default>{{level2.label}}</a>
-
-                <ul>
-                  <li ng-repeat="level3 in level2.children" ng-switch on="level3.toggle">
-                    <span ng-switch-when="dropdown">{{level3.label}}</span>
-                    <a ui-sref="{{level3.value}}" href="" ng-switch-default>{{level3.label}}</a>
-
-                    <ul>
-                      <li ng-repeat="level4 in level3.children"  ng-switch on="level4.toggle">
-                        <span ng-switch-when="dropdown">{{level4.label}}</span>
-                        <a ui-sref="{{level4.value}}" href="" ng-switch-default>{{level4.label}}</a>
-
-                        <ul>
-                          <li ng-repeat="level5 in level4.children">
-                            <a ui-sref="{{level5.value}}">{{level5.label}}</a>
-                          </li>
-                        </ul>
-
-
-
-
-
-                      </li>
-                    </ul>
-
-                  </li>
-                </ul>
-              </li>
-            </ul>
-
-          </li>
-        </ul>
-
-        <a ui-sref="elements.containers.accordions">test</a>
-
+        
       </div>
 
     </div>

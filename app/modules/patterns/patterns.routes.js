@@ -4,6 +4,7 @@
 
   angular.module('pb.ds.patterns').config(function($stateProvider) {
     $stateProvider.state('patterns', {
+      abstract: true,
       url: '/patterns',
       templateUrl: 'modules/patterns/templates/patterns.html',
       controller: 'PatternsController as patterns',
@@ -32,31 +33,37 @@
       templateUrl: 'modules/patterns/templates/signin.html',
       controller: 'SignInController as signin'
     })
+
     .state('patterns.forgotpassword', {
       url: '/patterns/forgotpassword',
       templateUrl: 'modules/patterns/templates/forgot-password.html',
       controller: 'ForgotPasswordController as forgot'
     })
+
     .state('patterns.welcome', {
       url: '/patterns/welcome',
-      templateUrl: 'modules/patterns/templates/welcome.html',
+      templateUrl: 'modules/patterns/templates/welcome-landing.html',
       controller: 'WelcomeController as welcome'
     })
+
     .state('patterns.registration', {
       url: '/patterns/registration',
       templateUrl: 'modules/patterns/templates/registration.html',
       controller: 'RegistrationController as registration'
     })
+
     .state('patterns.undermaintenance', {
       url: '/patterns/undermaintenance',
       templateUrl: 'modules/patterns/templates/under-maintenance.html',
       controller: 'UnderMaintenanceController as under'
     })
+
     .state('patterns.500', {
       url: '/patterns/500',
       templateUrl: 'modules/patterns/templates/500.html',
       controller: '500Controller'
     })
+    
     .state('patterns.404', {
       url: '/patterns/404',
       templateUrl: 'modules/patterns/templates/404.html',
