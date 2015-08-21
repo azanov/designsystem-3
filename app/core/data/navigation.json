@@ -68,11 +68,8 @@
             "label": "User Feedback",
             "value": "feedback.page"
           }, {
-            "label": "------",
-            "value": "-------"
-          }, {
             "label": "Helpers",
-            "value": "----"
+            "value": "helpers"
           }]
         }, {
           "label": "Patterns",
