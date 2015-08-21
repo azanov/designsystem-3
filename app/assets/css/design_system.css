@@ -1794,7 +1794,8 @@ a.user-dot {
     .navbar-default .navbar-brand:hover {
       color: #fff; }
     .navbar-default .navbar-brand > img {
-      display: block; }
+      display: block;
+      margin-top: -7px; }
     .navbar-default .navbar-brand a {
       color: inherit; }
       .navbar-default .navbar-brand a:hover {
