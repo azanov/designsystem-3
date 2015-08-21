@@ -1678,18 +1678,24 @@ fieldset[disabled] .form-control.timepicker {
       border: 1px solid #9b9b9b;
       box-shadow: none; }
 
-#header, header {
+#header,
+header {
   background: linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%); }
-  #header .navbar, header .navbar {
+  #header .navbar,
+  header .navbar {
     margin-bottom: 0; }
-    #header .navbar li.first a, header .navbar li.first a {
+    #header .navbar li.first a,
+    header .navbar li.first a {
       padding-left: 0; }
-  #header .logo-box, header .logo-box {
+  #header .logo-box,
+  header .logo-box {
     border: 1px solid #ff0; }
-  #header .pb-footer-logo, header .pb-footer-logo {
+  #header .pb-footer-logo,
+  header .pb-footer-logo {
     margin-right: 30px;
     display: table; }
-    #header .pb-footer-logo:before, header .pb-footer-logo:before {
+    #header .pb-footer-logo:before,
+    header .pb-footer-logo:before {
       display: table-cell;
       width: 112px;
       height: 24px;
@@ -1724,7 +1730,7 @@ form#magic-search {
     box-shadow: inset 0 0 5px #77186c;
     width: 130px;
     padding-left: 32px;
-    color: #FFF;
+    color: #fff;
     opacity: 1;
     cursor: auto; }
   form#magic-search input[type=search]:hover {
@@ -1734,6 +1740,12 @@ form#magic-search {
     color: transparent; }
   form#magic-search input::-webkit-input-placeholder {
     color: transparent; }
+
+a.user-dot {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 11px !important;
+  text-align: center;
+  background: transparent url("../images/dot.svg") no-repeat center center; }
 
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -1802,7 +1814,7 @@ form#magic-search {
     margin-bottom: 0;
     border-radius: 0;
     padding: 0;
-    border: 1px solid #E1E1E1;
+    border: 1px solid #e1e1e1;
     border-top: 0;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3); }
     .navbar-default .dropdown-menu .divider {

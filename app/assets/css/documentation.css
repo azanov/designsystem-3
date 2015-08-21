@@ -390,6 +390,11 @@ small,
         .doc-hero .jump-bar .jump-menu li:last-child {
           margin-right: 0; }
 
+.btn-default-ko.hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
+.btn-default-ko.active {
+  opacity: 0.8; }
+
 .sub-header.jump-bar {
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%); }
   .sub-header.jump-bar.headroom-top {
@@ -423,6 +428,9 @@ small,
 .doc-sectionbreak {
   margin-top: 50px; }
 
+.doc-gradient {
+  background: linear-gradient(90deg, #4c4ca2 0%, #872e96 42%, #872e96 48%, #c90d8b 100%); }
+
 .figure-spacer {
   border-top: 1px solid #e1e1e1;
   padding-top: 40px; }
@@ -437,10 +445,12 @@ figcaption {
   font-size: 12px;
   margin-bottom: 5px;
   margin-top: 35px; }
-  figcaption:first-of-type {
-    margin-top: 0; }
   figcaption + h2 {
     margin-top: 0; }
+  figcaption:first-of-type {
+    margin-top: 0; }
+  figcaption.ko {
+    color: #fff; }
 
 .row:first-child figure:first-child > figcaption {
   margin-top: 0; }
