@@ -67,6 +67,16 @@
 }
 
 
+//tertiary button states
+.btn-default-ko {
+  &.hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  &.active {
+    opacity: 0.8;
+  }
+}
+
 
 
 .sub-header.jump-bar {
@@ -116,6 +126,10 @@
 .doc-sectionbreak {
   margin-top: 50px;
 }
+.doc-gradient {
+  background: linear-gradient(90deg, #4c4ca2 0%, #872e96 42%, #872e96 48%, #c90d8b 100%);
+}
+
 // right side column on sectionbreak has this div added
 .figure-spacer {
   border-top: 1px solid $pb-light-gray;
@@ -135,6 +149,9 @@ figure {
     margin-top: 35px;
     &:first-of-type {
       margin-top: 0;
+    }
+    &.ko {
+      color: #fff;
     }
   }
 }

@@ -480,11 +480,10 @@ div.accordion-group .panel.active .panel-title:before { content: '\25B8'; -webki
 .btn-group-borderless .btn-default.disabled, .btn-group-borderless .btn-default.disabled:hover, .btn-group-borderless .btn-default.disabled.hover, .btn-group-borderless .btn-default.disabled:focus, .btn-group-borderless .btn-default.disabled.focus, .btn-group-borderless .btn-default.disabled:active, .btn-group-borderless .btn-default.disabled.active, .btn-group-borderless .btn-default[disabled], .btn-group-borderless .btn-default[disabled]:hover, .btn-group-borderless .btn-default[disabled].hover, .btn-group-borderless .btn-default[disabled]:focus, .btn-group-borderless .btn-default[disabled].focus, .btn-group-borderless .btn-default[disabled]:active, .btn-group-borderless .btn-default[disabled].active, fieldset[disabled] .btn-group-borderless .btn-default, fieldset[disabled] .btn-group-borderless .btn-default:hover, fieldset[disabled] .btn-group-borderless .btn-default.hover, fieldset[disabled] .btn-group-borderless .btn-default:focus, fieldset[disabled] .btn-group-borderless .btn-default.focus, fieldset[disabled] .btn-group-borderless .btn-default:active, fieldset[disabled] .btn-group-borderless .btn-default.active { background-color: #8b98c8; border-color: #3e53a4; color: #3e53a4; }
 .btn-group-borderless .btn-default .badge { color: transparent; background-color: #3e53a4; }
 
-.btn-default-ko { color: #fff; background-color: transparent; border-color: #fff; }
-.btn-default-ko:hover, .btn-default-ko.hover, .btn-default-ko:focus, .btn-default-ko.focus, .btn-default-ko:active, .btn-default-ko.active, .open > .btn-default-ko.dropdown-toggle { color: #fff; background-color: transparent; border-color: #fff; }
-.btn-default-ko:active, .btn-default-ko.active, .open > .btn-default-ko.dropdown-toggle { background-image: none; }
-.btn-default-ko.disabled, .btn-default-ko.disabled:hover, .btn-default-ko.disabled.hover, .btn-default-ko.disabled:focus, .btn-default-ko.disabled.focus, .btn-default-ko.disabled:active, .btn-default-ko.disabled.active, .btn-default-ko[disabled], .btn-default-ko[disabled]:hover, .btn-default-ko[disabled].hover, .btn-default-ko[disabled]:focus, .btn-default-ko[disabled].focus, .btn-default-ko[disabled]:active, .btn-default-ko[disabled].active, fieldset[disabled] .btn-default-ko, fieldset[disabled] .btn-default-ko:hover, fieldset[disabled] .btn-default-ko.hover, fieldset[disabled] .btn-default-ko:focus, fieldset[disabled] .btn-default-ko.focus, fieldset[disabled] .btn-default-ko:active, fieldset[disabled] .btn-default-ko.active { background-color: #f8f8f8; border-color: #9b9b9b; color: #9b9b9b; }
-.btn-default-ko .badge { color: transparent; background-color: #fff; }
+.btn.btn-default-ko { color: #3e53a4; background-color: #fff; border-radius: 40px; border: 1px solid #fff; padding: 10px 30px; }
+.btn.btn-default-ko:disabled { color: #fff; background-color: transparent; opacity: 0.5; }
+.btn.btn-default-ko:hover { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
+.btn.btn-default-ko:active { opacity: 0.8; }
 
 .btn-success { color: #fff; background-color: #008000; border-color: #008000; }
 .btn-success:hover, .btn-success.hover, .btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle { color: #fff; background-color: #008000; border-color: #008000; }
@@ -726,19 +725,15 @@ body.landing { background: linear-gradient(90deg, #484da2 0%, #872e96 40%, #872e
 body.landing header { border-bottom: solid 1px rgba(255, 255, 255, 0.15); }
 body.landing .site-content { display: -webkit-flex; display: -ms-flexbox; display: flex; }
 body.landing .container { -webkit-align-self: center; -ms-flex-item-align: center; align-self: center; }
-body.landing h1, body.landing h2, body.landing p, body.landing .line-one, body.landing label, body.landing .fa { color: white; letter-spacing: .05em; }
-body.landing .line-one { font-weight: 600; line-height: 2; }
-body.landing p { line-height: 2; font-weight: 200; }
-body.landing .fa.fa-lg { font-size: 3em; }
-body.landing input { color: white; background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.8); }
-body.landing input:focus { border-color: white; background-color: rgba(255, 255, 255, 0.18); }
-body.landing input::-webkit-input-placeholder { color: white; }
-body.landing input:-moz-placeholder { /* Firefox 18- */ color: white; }
-body.landing input::-moz-placeholder { /* Firefox 19+ */ color: white; }
-body.landing input:-ms-input-placeholder { color: white; }
-body.landing .btn-circle { border: solid 1px white; border-radius: 50%; color: white; min-width: 47px; }
-body.landing .btn-default { transition: all .15s linear; background-color: rgba(255, 255, 255, 0.85); border-radius: 20px; border: 0; padding-left: 30px; padding-right: 30px; }
-body.landing .btn-default:hover { background-color: white; }
+body.landing .landing-gradient h1, body.landing .landing-gradient h2, body.landing .landing-gradient h3, body.landing .landing-gradient h4, body.landing .landing-gradient h5, body.landing .landing-gradient h6, body.landing .landing-gradient p, body.landing .landing-gradient strong, body.landing .landing-gradient em, body.landing .landing-gradient label, body.landing .landing-gradient .fa { color: white; }
+body.landing .landing-gradient p { line-height: 2em; }
+body.landing .landing-gradient input { color: white; background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.8); }
+body.landing .landing-gradient input:focus { border-color: white; background-color: rgba(255, 255, 255, 0.18); }
+body.landing .landing-gradient input::-webkit-input-placeholder { color: white; }
+body.landing .landing-gradient input:-moz-placeholder { /* Firefox 18- */ color: white; }
+body.landing .landing-gradient input::-moz-placeholder { /* Firefox 19+ */ color: white; }
+body.landing .landing-gradient input:-ms-input-placeholder { color: white; }
+body.landing .btn-circle { border: solid 1px white; border-radius: 100%; color: white; min-width: 47px; line-height: 47px; padding: 0; }
 body.landing.landing-bgImg { background: linear-gradient(90deg, rgba(72, 77, 162, 0.85) 0%, rgba(135, 46, 150, 0.85) 40%, rgba(135, 46, 150, 0.85) 45%, rgba(201, 13, 139, 0.85) 100%), url("../images/bg-imageDemo.jpeg"); background-repeat: no-repeat; background-position: center; background-size: cover; }
 body.landing.landing-bgImg header { background: transparent; }
 body.landing.landing-info .site-content { -webkit-flex-flow: row wrap; -ms-flex-flow: row wrap; flex-flow: row wrap; padding-top: 50px; min-height: calc(100vh - (45px)); -webkit-align-content: space-between; -ms-flex-line-pack: justify; align-content: space-between; }

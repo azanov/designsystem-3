@@ -146,6 +146,9 @@ small, .text-small, .small { font-size: 12px; }
 .doc-hero .jump-bar .jump-menu li a { color: inherit; }
 .doc-hero .jump-bar .jump-menu li:last-child { margin-right: 0; }
 
+.btn-default-ko.hover { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
+.btn-default-ko.active { opacity: 0.8; }
+
 .sub-header.jump-bar { background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%); }
 .sub-header.jump-bar.headroom-top { height: 50px; top: 250px; }
 .sub-header.jump-bar.headroom-not-top { height: 50px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); top: 50px; position: fixed; }
@@ -159,11 +162,14 @@ small, .text-small, .small { font-size: 12px; }
 
 .doc-sectionbreak { margin-top: 50px; }
 
+.doc-gradient { background: linear-gradient(90deg, #4c4ca2 0%, #872e96 42%, #872e96 48%, #c90d8b 100%); }
+
 .figure-spacer { border-top: 1px solid #e1e1e1; padding-top: 40px; }
 
 figure { margin-bottom: 10px; }
 figure figcaption { clear: both; color: #cf0989; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12px; margin-bottom: 5px; margin-top: 35px; }
 figure figcaption:first-of-type { margin-top: 0; }
+figure figcaption.ko { color: #fff; }
 
 .row:first-child figure:first-child > figcaption { margin-top: 0; }
 
