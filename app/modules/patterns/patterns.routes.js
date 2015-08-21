@@ -6,9 +6,9 @@
     $stateProvider.state('patterns', {
       url: '/patterns',
       templateUrl: 'modules/patterns/templates/patterns.html',
-      controller: 'PrinciplesController as patterns',
+      controller: 'PatternsController as patterns',
       data: {
-        pageTitle: 'Principles - Design Philosophy',
+        pageTitle: 'Patterns',
         access: 'public',
         bodyClass: 'patterns'
       }
@@ -18,9 +18,9 @@
     .state('patterns.headersfooters', {
       url: '/headersfooters',
       templateUrl: 'modules/patterns/templates/headers-footers.html',
-      controller: 'PrinciplesController as patterns',
+      controller: 'PatternsController as patterns',
       data: {
-        pageTitle: 'Principles - Design Philosophy',
+        pageTitle: 'Patterns - Header & Footers',
         access: 'public',
         bodyClass: 'patterns'
       }
