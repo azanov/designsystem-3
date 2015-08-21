@@ -8,16 +8,26 @@
 
     _this.toast = {
       danger: function() {
-        toastr.error('It is dangerous to remain here. You must leave within two days.', 'Message as follows:');
+        toastr.error('There was an error with job "98"');
       },
       success:  function() {
-        toastr.success('I am completely operational, and all my circuits are functioning perfectly.');
+        toastr.success('New job "1238" was successfully created.');
       },
       info:  function() {
-        toastr.info('The 9000 series is the most reliable computer ever made.');
+        toastr.info('A new update is available.');
       },
       warning:  function() {
-        toastr.warning('Just what do you think you\'re doing, Dave?');
+        toastr.warning('Please review job "1298" before continuing.');
+      },
+      closeButton:  function() {
+        toastr.info('I have a close button', {
+          closeButton: true
+        });
+      },
+      progressBar:  function() {
+        toastr.info('I have a progress bar.', {
+          progressBar: true
+        });
       }
 
     };

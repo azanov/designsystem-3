@@ -263,7 +263,7 @@
                 Text field appended</label>
               <div class="input-group">
                 <input class="form-control" type="text">
-                <span class="input-group-addon"><i class="fa fa-filter"/></span>
+                <span class="input-group-addon"><i class="fa fa-filter"></i></span>
               </div>
             </div>
           </figure>
@@ -285,7 +285,7 @@
                     <li>
                       <a href="#">Something else here</a>
                     </li>
-                    <li class="divider"/>
+                    <li class="divider"></li>
                   <li>
                     <a href="#">Separated link</a>
                   </li>
@@ -529,7 +529,7 @@
           <figcaption>Multi-select (Ctrl/Cmd-click)</figcaption>
           <div class="form-group">
             <label>Text label</label>
-            <select class="form-control" multiple ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople" size="6"/>
+            <select class="form-control" multiple ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople" size="6"></select>
           </div>
         </figure>
 
@@ -554,7 +554,7 @@
           <figcaption>Multi-select Disabled</figcaption>
           <div class="form-group">
             <label>Text label</label>
-            <select class="form-control" disabled multiple ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople" size="6"/>
+            <select class="form-control" disabled multiple ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople" size="6"></select>
           </div>
         </figure>
       </div>
@@ -573,11 +573,11 @@
     <p class="more-info">
       <a href="http://brianreavis.github.io/selectize.js/" target="_blank">
         Basic info
-        <i class="fa fa-external-link"/>
+        <i class="fa fa-external-link"></i>
       </a>
       <a href="https://github.com/kbanman/selectize-ng" target="_blank">
         Angular info
-        <i class="fa fa-external-link"/></a>
+        <i class="fa fa-external-link"></i></a>
     </p>
   </div>
   <div class="col-md-7 col-md-offset-1">
@@ -599,7 +599,7 @@
         <figure>
           <figcaption>Custom menu items</figcaption>
           <div class="form-group">
-            <label>Text label</label><select ng-model="inputs.peopleSelect.selected" options="inputs.peopleSelect.people" selectize="inputs.peopleSelect.options"/>
+            <label>Text label</label><select ng-model="inputs.peopleSelect.selected" options="inputs.peopleSelect.people" selectize="inputs.peopleSelect.options"></select>
           </div>
         </figure>
 
@@ -829,7 +829,7 @@
     <p class="post-it">copy?</p>
     <p class="more-info">
     <a href="https://github.com/xFlatlinex/Numeric-Stepper" target="_blank">More info
-      <i class="fa fa-external-link"/></a>
+      <i class="fa fa-external-link"></i></a>
     </p>
   </div>
   <!-- right -->
@@ -837,15 +837,33 @@
     <!-- 2 columns in right -->
     <div class="row">
       <div class="col-md-5">
-        <div class="form-group"><input class="form-control" options="numericStepper" pb-numeric-stepper type="text" value="10">
-
-      </div>
-      <div class="col-md-5">
-
+        <div class="form-group"><input class="form-control" options="numericStepper" pb-numeric-stepper type="text" value="10"></div>
       </div>
     </div>
   </div>
 </div>
+
+
+<div class="row">
+  <!-- left -->
+  <div class="col-md-4">
+    <h4>Range slider</h4>
+    <p class="post-it">copy? Should we ditch this control?</p>
+    <p class="more-info">
+      <a href="http://danielcrisp.github.io/angular-rangeslider/" target="_blank">More Info
+        <i class="fa fa-external-link"></i>
+      </a>
+    </p>
+  </div>
+
+  <div class="col-md-6">
+    <figure>
+      <figcaption>Range slider</figcaption>
+      <div max="100" min="0" model-max="60" model-min="30" range-slider></div>
+    </figure>
+  </div>
+</div>
+
 
 <div class="row">
   <div class="col-md-8">
@@ -861,7 +879,7 @@
     <p class="post-it">Need copy</p>
     <p class="more-info">
       <a href="http://jumplink.github.io/angular-toggle-switch/" target="_blank">Angular info
-        <i class="fa fa-external-link"/>
+        <i class="fa fa-external-link"></i>
       </a>
     </p>
   </div>
@@ -931,10 +949,4 @@
 </div>
 
 
-
-
-
-
-
-</div>
 </div>

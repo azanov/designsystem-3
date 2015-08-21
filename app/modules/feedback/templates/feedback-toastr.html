@@ -1,13 +1,41 @@
 <div class="container">
-  <h1>Toastr alerts
-    <span class="more-info">
-      <a href="http://foxandxss.github.io/angular-toastr/" target="_blank">More info
-        <i class="fa fa-external-link"></i>
-      </a>
-    </span>
-  </h1>
-  <button class="btn btn-info" ng-click="toastr.toast.info()">Info</button>
-  <button class="btn btn-success" ng-click="toastr.toast.success()">Success</button>
-  <button class="btn btn-warning" ng-click="toastr.toast.warning()">Warning</button>
-  <button class="btn btn-danger" ng-click="toastr.toast.danger()">Danger</button>
+
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="toastrs" class="doc-head">Toastr Alerts</h1>
+      <p class="doc-lede">Lorem ipsum dolor sit amet, feugiat inciderint ei eum. Verterem sapientem tincidunt ut his, facilisi mnesarchum per ne. Laoreet alienum explicari cu eos, ludus eirmod ius no, constituto voluptatibus cu per. Mei fabellas definiebas eu, duo veniam deseruisse no.</p>
+
+      <span class="more-info">
+        <a href="http://foxandxss.github.io/angular-toastr/" target="_blank">More info
+          <i class="fa fa-external-link"></i>
+        </a>
+      </span>
+    </div>
+  </div>
+
+
+  <div class="row doc-sectionbreak">
+    <div class="col-md-3">
+      <p>Use inline on page where important info needs to be shown to user.</p>
+    </div>
+
+    <div class="col-md-8 col-md-offset-1">
+
+      <figure>
+        <figcaption>Toastr alerts</figcaption>
+        <button class="btn btn-info" ng-click="toastr.toast.info()">Info</button>
+        <button class="btn btn-success" ng-click="toastr.toast.success()">Success</button>
+        <button class="btn btn-warning" ng-click="toastr.toast.warning()">Warning</button>
+        <button class="btn btn-danger" ng-click="toastr.toast.danger()">Danger</button>
+        <button class="btn btn-default" ng-click="toastr.toast.closeButton()">With Close Button</button>
+        <button class="btn btn-default" ng-click="toastr.toast.progressBar()">With Progress Bar</button>
+      </figure>
+
+    </div>
+  </div>
+
+
+
+
 </div>

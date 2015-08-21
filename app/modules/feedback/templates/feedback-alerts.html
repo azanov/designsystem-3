@@ -1,131 +1,169 @@
 <div class="container">
+
+
   <div class="row">
-    <div class="col-md-12">
-      <div class="main-header">
-        <h1>Alerts</h1>
-      </div>
+    <div class="col-md-8">
+      <h1 id="alerts" class="doc-head">Alerts</h1>
+      <p class="doc-lede">Lorem ipsum dolor sit amet, feugiat inciderint ei eum. Verterem sapientem tincidunt ut his, facilisi mnesarchum per ne. Laoreet alienum explicari cu eos, ludus eirmod ius no, constituto voluptatibus cu per. Mei fabellas definiebas eu, duo veniam deseruisse no.</p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-12">
-      <h3>Inline alerts</h3>
+      <h1 class="doc-sectionhead">Default Alerts</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <figure>
+        <figcaption>Danger</figcaption>
+        <div class="alert alert-danger">
+          Unable to process request. Please check all fields and try again.
+        </div>
+      </figure>
+
+      <figure>
+        <figcaption>Warning</figcaption>
+        <div class="alert alert-warning">
+          Invalid entry. Format should me mm/dd/yyyy.
+        </div>
+      </figure>
+
+      <figure>
+        <figcaption>Success</figcaption>
+        <div class="alert alert-success">
+          A new address was successfully imported.
+        </div>
+      </figure>
+
+      <figure>
+        <figcaption>Info</figcaption>
+        <div class="alert alert-info">
+          There are many help resources available.
+        </div>
+      </figure>
+
+      <figure>
+        <figcaption>Alert with Link</figcaption>
+        <div class="alert alert-info">
+          There are many help resources available. <a class="alert-link" href="#">Click here!</a>
+        </div>
+      </figure>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="doc-sectionhead">Spot Alerts</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <figure>
+        <figcaption>Info</figcaption>
+        <div class="alert alert-info">
+          <i class="fa fa-fw fa-info-circle fa-lg"></i> <strong>Tip:</strong> More options are available under the settings menu.
+        </div>
+      </figure>
+
+      <figure>
+        <figcaption>Danger</figcaption>
+        <div class="alert alert-danger">
+          <i class="fa fa-fw fa-info-circle fa-lg"></i> <strong>Action Denied!</strong> Please check all fields and try again.
+        </div>
+      </figure>
+
+      <figure>
+        <figcaption>Warning</figcaption>
+        <div class="alert alert-warning">
+          <i class="fa fa-fw fa-exclamation-circle fa-lg"></i> <strong>Warning!</strong> Missing information in six fields.
+        </div>
+      </figure>
+
+      <figure>
+        <figcaption>Success</figcaption>
+        <div class="alert alert-success">
+          <i class="fa fa-fw fa-exclamation-triangle fa-lg"></i> <strong>Success!</strong> A new address was successfully imported.
+        </div>
+      </figure>
+
+
+
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="doc-sectionhead">Dismissable Alerts</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <figure>
+        <figcaption>Danger</figcaption>
+        <div class="alert alert-danger">
+          <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button>
+          Unable to process request. Please check all fields and try again.
+        </div>
+      </figure>
+
+      <figure>
+        <figcaption>Warning</figcaption>
+        <div class="alert alert-warning">
+          <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button>
+          Invalid entry. Format should me mm/dd/yyyy.
+        </div>
+      </figure>
+
+      <figure>
+        <figcaption>Success</figcaption>
+        <div class="alert alert-success">
+          <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button>
+          A new address was successfully imported.
+        </div>
+      </figure>
+
+      <figure>
+        <figcaption>Info</figcaption>
+        <div class="alert alert-info">
+          <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button>
+          There are many help resources available.
+        </div>
+      </figure>
+    </div>
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="doc-sectionhead">Transitory Alert</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
       <p>Use inline on page where important info needs to be shown to user.</p>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <h4>Danger</h4>
-      <div class="alert alert-danger">
-        <strong>Oh snap!</strong>
-        Change a few things up and try submitting again.
-      </div>
 
-      <h4>Warning</h4>
-      <div class="alert alert-warning">
-        <strong>Warning!</strong>
-        Better check yourself, you're not looking too good.
-      </div>
+    <div class="col-md-8 col-md-offset-1">
 
-      <h4>Success</h4>
-      <div class="alert alert-success">
-        <strong>Excellent!</strong>
-        You've finished the process.
-      </div>
-
-    </div>
-    <div class="col-md-6">
-
-      <h4>Info</h4>
-      <div class="alert alert-info">
-        <strong>Note:</strong>
-        There are many help resources available.
-      </div>
-
-      <h4>Alert with Link</h4>
-      <div class="alert alert-info">
-        <strong>Note:</strong>
-        There are many help resources available.
-        <a class="alert-link" href="#">Click here!</a>
-      </div>
-
-      <h4>Dismissable Alert</h4>
-
-      <div class="alert alert-danger alert-dismissable">
-        <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button>
-        If you don't want to be nagged, click the close box.
-      </div>
-    </div>
-  </div>
-
-  <div class="row spacer-top-lg">
-    <div class="col-md-6">
-      <h3>Transitory alert</h3>
-      <span ng-model="alerts.transitoryAlert" pb-transitory-alert>
-        <button class="btn btn-primary" ng-click="setMessage()">Click Me</button>
-      </span>
-    </div>
-  </div>
-
-  
-
-  <div class="row  spacer-top-lg">
-    <div class="col-md-12">
-      <h2>Callouts</h2>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-
-      <h4>Danger</h4>
-      <div class="callout callout-danger">
-        <h4>Sample Callout</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, quasi, eaque, debitis, voluptatum iure ad corrupti praesentium magnam odit suscipit quam neque consectetur placeat consequatur ducimus sunt?
-        </p>
-      </div>
-
-      <h4>Warning</h4>
-      <div class="callout callout-warning">
-        <h4>Sample Callout</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, quasi, eaque, debitis, voluptatum iure ad corrupti praesentium magnam odit suscipit quam neque consectetur placeat consequatur ducimus sunt?
-        </p>
-      </div>
-
-      <h4>Success</h4>
-      <div class="callout callout-success">
-        <h4>Sample Callout</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, quasi, eaque, debitis, voluptatum iure ad corrupti praesentium magnam odit suscipit quam neque consectetur placeat consequatur ducimus sunt?
-        </p>
-      </div>
-
-    </div>
-    <div class="col-md-6">
-
-      <h4>Info</h4>
-      <div class="callout callout-info">
-        <h4>Sample Callout</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, quasi, eaque, debitis, voluptatum iure ad corrupti praesentium magnam odit suscipit quam neque consectetur placeat consequatur ducimus sunt?
-        </p>
-      </div>
-
-      <h4>Blockquote</h4>
-      <blockquote>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, quasi, eaque, debitis, voluptatum iure ad corrupti praesentium magnam odit suscipit quam neque consectetur placeat consequatur ducimus sunt?
-        </p>
-      </blockquote>
+      <figure>
+        <figcaption>Transitory Alert</figcaption>
+        <span ng-model="alerts.transitoryAlert" pb-transitory-alert>
+          <button class="btn btn-primary" ng-click="setMessage()">Click Me</button>
+        </span>
+      </figure>
 
     </div>
   </div>
 
-  <div class="row  spacer-top-lg">
-    <div class="col-md-10">
-      <h3>Contextual Color Backgrounds</h3>
-      <p class="bg-primary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, sapiente!</p>
-      <p class="bg-danger">Dolores assumenda vero tempore a deleniti perferendis veniam ipsa.</p>
-      <p class="bg-warning">Dolores assumenda vero tempore a deleniti perferendis veniam ipsa.</p>
-      <p class="bg-success">Sequi asperiores quia est, tempora recusandae, deleniti laboriosam molestiae.</p>
-      <p class="bg-info">Delectus rerum earum dolorem unde. Explicabo dolorum distinctio vel!</p>
-    </div>
-  </div>
 
 </div>

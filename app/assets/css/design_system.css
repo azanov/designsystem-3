@@ -746,6 +746,13 @@ body.landing.landing-info .container { -webkit-align-self: flex-start; -ms-flex-
 body.landing.landing-info .container-fluid { -webkit-align-self: flex-end; -ms-flex-item-align: end; align-self: flex-end; -webkit-flex: 1 100%; -ms-flex: 1 100%; flex: 1 100%; }
 body.landing.landing-info footer { margin-top: 0; }
 
+#loading-bar .bar { background: #fff; height: 1px; }
+#loading-bar .peg { -ms-box-shadow: #29d 1px 0 6px 1px; box-shadow: #29d 1px 0 6px 1px; height: 1px; }
+
+#loading-bar-spinner { display: block; position: fixed; z-index: 10002; top: 10px; left: 10px; }
+
+#loading-bar-spinner .spinner-icon { border-top-color: #fff; border-left-color: #fff; }
+
 .nav-left { position: absolute; width: 275px; top: 80px; padding: 10px; z-index: 100; transition: width .8s; transition-delay: width .3s; }
 .minified .nav-left { width: 50px; }
 
