@@ -33,7 +33,7 @@
                       <div class="col-md-6  mega-offset">
 
                       <div class="row">
-                        <div class="col-xs-4" ng-repeat="category in header.nav[1].children[0].children">
+                        <div class="col-xs-4" ng-repeat="category in header.nav[1].Web[0].children[0].children">
                           <p class="section-head">{{category.label}}</p>
 
                           <ul class="list-unstyled menu-items">
@@ -65,8 +65,49 @@
               </li>
             </ul>
           </li>
-          <li>
-            <a href="" ui-sref="mobile.page">Mobile</a>
+          <li class="dropdown yamm-fw">
+            <a href="" class="dropdown-toggle" data-target="" data-toggle="dropdown">Mobile <i class="fa fa-angle-down"></i></a>
+            <ul class="dropdown-menu">
+              <li>
+                <div class="yamm-content container">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <!-- this row is just so i can do the offset -->
+                      <div class="row">
+                      <div class="col-md-6  mega-offset">
+
+                      <div class="row">
+                        <div class="col-xs-4" ng-repeat="category in header.nav[2].Mobile[0].children[0].children">
+                          <p class="section-head">{{category.label}}</p>
+
+                          <ul class="list-unstyled menu-items">
+
+                            <!-- if no sub items-->
+                            <li ng-if="!item.children" ng-repeat="item in category.children">
+                              <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
+                            </li>
+
+                            <!-- if sub items -->
+                            <span ng-if="item.children" ng-repeat="item in category.children">
+                              <li ng-repeat="item in item.children">
+                                <a href="" ui-sref="{{item.value}}" >{{item.label}}</a>
+                              </li>
+                            </span>
+                          </ul>
+                        </div>
+                      </div>
+
+
+                    </div>
+                    </div>
+
+
+
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="" ui-sref="globalization.page">Globalization</a>

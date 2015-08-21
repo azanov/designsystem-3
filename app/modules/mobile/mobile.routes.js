@@ -15,11 +15,14 @@
       }
     })
 
-    .state('mobile.page', {
-      url: '',
-      views: {
+    .state('mobile.buttons', {
+      url: '/buttons',
+      templateUrl: 'modules/mobile/templates/mobile-buttons.html'
+    })
 
-      }
+    .state('mobile.uicontrols', {
+      url: '/uicontrols',
+      templateUrl: 'modules/mobile/templates/mobile-uicontrols.html'
     });
 
 

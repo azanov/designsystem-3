@@ -1,171 +1,160 @@
-[
-  {
+[{
     "label": "Principles",
     "value": "principles.page"
 
-  },
-
-  {
-    "label": "Product Framework",
-    "value": "",
-    "toggle": "dropdown",
-    "children": [
-      {
+  }, {
+    "Web": [{
+      "label": "Product Framework",
+      "value": "",
+      "toggle": "dropdown",
+      "children": [{
         "label": "Responsive Web",
         "value": "",
         "toggle": "dropdown",
-        "children": [
-          {
-            "label": "Foundation",
-            "value": "",
-            "toggle": "dropdown",
-            "children": [
-              {
-                "label": "Color",
-                "value": "foundation.color"
-              },
-              {
-                "label": "Type",
-                "value": "foundation.typography"
-              },
-              {
-                "label": "Grid",
-                "value": "foundation.grid"
-              },
-              {
-                "label": "Writing",
-                "value": "foundation.writing"
-              },
-              {
-                "label": "Iconography",
-                "value": "foundation.iconography"
-              },
-              {
-                "label": "----",
-                "value": "----"
-              },
-              {
-                "label": "Specs",
-                "value": "..."
-              },
-              {
-                "label": "Animations",
-                "value": "..."
-              }
-
-            ]
-          },
-          {
-            "label": "Elements",
-            "value": "",
-            "toggle": "dropdown",
-            "children": [
-              {
-                "label": "Buttons",
-                "value": "elements.buttons"
-              },
-              {
-                "label": "UI Controls",
-                "value": "elements.uicontrols"
-              },
-              {
-                "label": "Containers",
-                "value": "elements.containers.page"
-              },
-              {
-                "label": "Modals & Popovers",
-                "value": "elements.popovers",
-                "className": "popovers"
-              },
-              {
-                "label": "Tables",
-                "value": "tables.datatable.page"
-              },
-              {
-                "label": "Charts",
-                "value": "graphs.page"
-              },
-              {
-                "label": "User Feedback",
-                "value": "feedback.page"
-              },
-              {
-                "label": "------",
-                "value": "-------"
-              },
-              {
-                "label": "Helpers",
-                "value": "----"
-              }
-            ]
-          },
-          {
-            "label": "Patterns",
-            "value": "",
-            "toggle": "dropdown",
-            "children": [
-              {
-                "label": "Headers and Footers",
-                "value": "patterns.headersfooters"
-              },
-              {
-                "label": "Sign in & Sign up",
-                "value": "patterns.signin"
-              },
-              {
-                "label": "Complex Forms",
-                "value": "..."
-              },
-              {
-                "label": "Registration",
-                "value": "patterns.registration"
-              },
-              {
-                "label": "Forgot Password",
-                "value": "patterns.forgotpassword"
-              },
-              {
-                "label": "Welcome & Landing",
-                "value": "patterns.welcome"
-              },
-              {
-                "label": "Under Maintenance",
-                "value": "patterns.undermaintenance"
-              },
-              {
-                "label": "404",
-                "value": "patterns.404"
-              },
-              {
-                "label": "500",
-                "value": "patterns.500"
-              },
-              {
-                "label": "Faceted Search",
-                "value": "tables.facetedsearch"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Mobile",
-        "value": "mobile.page",
+        "children": [{
+          "label": "Foundation",
+          "value": "",
+          "toggle": "dropdown",
+          "children": [{
+              "label": "Color",
+              "value": "foundation.color"
+            }, {
+              "label": "Type",
+              "value": "foundation.typography"
+            }, {
+              "label": "Grid",
+              "value": "foundation.grid"
+            }, {
+              "label": "Writing",
+              "value": "foundation.writing"
+            }, {
+              "label": "Iconography",
+              "value": "foundation.iconography"
+            }, {
+              "label": "----",
+              "value": "----"
+            }, {
+              "label": "Specs",
+              "value": "..."
+            }, {
+              "label": "Animations",
+              "value": "..."
+            }
+          ]
+        }, {
+          "label": "Elements",
+          "value": "",
+          "toggle": "dropdown",
+          "children": [{
+            "label": "Buttons",
+            "value": "elements.buttons"
+          }, {
+            "label": "UI Controls",
+            "value": "elements.uicontrols"
+          }, {
+            "label": "Containers",
+            "value": "elements.containers.page"
+          }, {
+            "label": "Modals & Popovers",
+            "value": "elements.popovers",
+            "className": "popovers"
+          }, {
+            "label": "Tables",
+            "value": "tables.datatable.page"
+          }, {
+            "label": "Charts",
+            "value": "graphs.page"
+          }, {
+            "label": "User Feedback",
+            "value": "feedback.page"
+          }, {
+            "label": "------",
+            "value": "-------"
+          }, {
+            "label": "Helpers",
+            "value": "----"
+          }]
+        }, {
+          "label": "Patterns",
+          "value": "",
+          "toggle": "dropdown",
+          "children": [{
+            "label": "Headers and Footers",
+            "value": "patterns.headersfooters"
+          }, {
+            "label": "Sign in & Sign up",
+            "value": "patterns.signin"
+          }, {
+            "label": "Complex Forms",
+            "value": "..."
+          }, {
+            "label": "Registration",
+            "value": "patterns.registration"
+          }, {
+            "label": "Forgot Password",
+            "value": "patterns.forgotpassword"
+          }, {
+            "label": "Welcome & Landing",
+            "value": "patterns.welcome"
+          }, {
+            "label": "Under Maintenance",
+            "value": "patterns.undermaintenance"
+          }, {
+            "label": "404",
+            "value": "patterns.404"
+          }, {
+            "label": "500",
+            "value": "patterns.500"
+          }, {
+            "label": "Faceted Search",
+            "value": "tables.facetedsearch"
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "Mobile": [{
+      "label": "Product Framework",
+      "value": "",
+      "toggle": "dropdown",
+      "children": [{
+        "label": "Responsive Web",
+        "value": "",
         "toggle": "dropdown",
-        "children": [
-          {
-            "label": "Mobile Guide",
-            "value": "mobile.page"
-          }
-        ]
-      }
-    ]
-  },
-  {
+        "children": [{
+          "label": "Foundation",
+          "value": "",
+          "toggle": "dropdown",
+          "children": [{
+              "label": "Section",
+              "value": "section.mobile"
+            }]
+        }, {
+          "label": "Elements",
+          "value": "",
+          "toggle": "dropdown",
+          "children": [{
+            "label": "Buttons",
+            "value": "mobile.buttons"
+          }, {
+            "label": "UI Controls",
+            "value": "mobile.uicontrols"
+          }]
+        }, {
+          "label": "Patterns",
+          "value": "",
+          "toggle": "dropdown",
+          "children": [{
+            "label": "Section",
+            "value": "mobile.section"
+          }]
+        }]
+      }]
+    }]
+  }, {
     "label": "Globalization",
     "value": "globalization.page"
-  },
-  {
+  }, {
     "label": "Resources",
     "value": "resources.developers"
   }
