@@ -80,7 +80,7 @@
             "value": "patterns.headersfooters"
           }, {
             "label": "Sign in & Sign up",
-            "value": "patterns.signin"
+            "value": "patterns.signinup"
           }, {
             "label": "Complex Forms",
             "value": "..."
