@@ -31,6 +31,9 @@
               "label": "Iconography",
               "value": "foundation.iconography"
             }, {
+              "label": "Helpers",
+              "value": "helpers"
+            }, {
               "label": "----",
               "value": "----"
             }, {
@@ -67,9 +70,6 @@
           }, {
             "label": "User Feedback",
             "value": "feedback.page"
-          }, {
-            "label": "Helpers",
-            "value": "helpers"
           }]
         }, {
           "label": "Patterns",
