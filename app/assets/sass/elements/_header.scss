@@ -23,10 +23,14 @@ header {
       margin-right: 10px;
     }
   }
+
 }
 
+
+
+
 // for the expanding search field - scoped to this form so as to not affect all search forms
-form#magic-search {
+form.magic-search {
   // scss-lint:disable VendorPrefixes
   margin-top: 7px;
   input {
@@ -79,7 +83,14 @@ a.user-dot {
   font-size: 11px !important;
   text-align: center;
   background: transparent url('../images/dot.svg') no-repeat center center;
+}
 
+a.dot {
+  background: transparent url('../images/dot.svg') no-repeat center center;
+}
+
+a.app-launcher {
+  background: transparent url('../images/app-launcher.svg') no-repeat center center;
 }
 
 
