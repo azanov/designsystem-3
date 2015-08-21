@@ -27,11 +27,25 @@
       }
     })
 
+    .state('patterns.welcome', {
+      url: '/patterns/welcome',
+      templateUrl: 'modules/patterns/templates/welcome-landing.html',
+      controller: 'WelcomeController as welcome'
+    })
+
+    .state('patterns.signinup', {
+      url: '/patterns/signinup',
+      templateUrl: 'modules/patterns/templates/sign-in-sign-up.html'
+    })
+
 
     .state('patterns.signin', {
       url: '/patterns/signin',
       templateUrl: 'modules/patterns/templates/signin.html',
-      controller: 'SignInController as signin'
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'signin'
+      }
     })
 
     .state('patterns.forgotpassword', {
@@ -40,11 +54,7 @@
       controller: 'ForgotPasswordController as forgot'
     })
 
-    .state('patterns.welcome', {
-      url: '/patterns/welcome',
-      templateUrl: 'modules/patterns/templates/welcome-landing.html',
-      controller: 'WelcomeController as welcome'
-    })
+
 
     .state('patterns.registration', {
       url: '/patterns/registration',
@@ -63,7 +73,7 @@
       templateUrl: 'modules/patterns/templates/500.html',
       controller: '500Controller'
     })
-    
+
     .state('patterns.404', {
       url: '/patterns/404',
       templateUrl: 'modules/patterns/templates/404.html',
