@@ -977,7 +977,7 @@ a.list-group-item.active .badge { color: #fff; background-color: #3e53a4; }
 
 .panel { box-shadow: none; }
 .panel.panel-default { border-color: #e1e1e1; }
-.panel.panel-default .panel-heading { background-color: #f3f5fa; border-bottom-color: #e1e1e1; }
+.panel.panel-default .panel-heading { background-color: #f3f4f9; border-bottom-color: #e1e1e1; }
 
 .panel-footer { background-color: #f8f8f8; border-top-color: #e1e1e1; }
 
@@ -1210,15 +1210,10 @@ input.cmn-toggle-round-flat:checked + label:after { margin-left: 50px; backgroun
 
 .signin .bg { position: fixed; top: 0; left: 0; bottom: 0; right: 0; background-color: #254d9d; background: linear-gradient(135deg, #4cc6f3 0%, #32b1e5 10%, #3e53a4 53%, #cf0989 100%); background-size: cover; background-repeat: no-repeat; }
 .signin header, .signin #header, .signin footer, .signin #footer { display: none; }
-.signin .signin-box { background-color: #fff; padding: 40px; margin-top: 60px; }
-@media (max-width: 767px) { .signin .signin-box { margin-top: 0; } }
-.signin .prod-name { font-family: "PrecisionSans_W_Bd", "Helvetica Neue", Arial, sans-serif; font-size: 24px; color: #3e53a4; padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid #3e53a4; }
-.signin .title { font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; font-size: 32px; color: #cf0989; }
-.signin .signin-footer { color: #e784c4; margin-top: 20px; }
+.signin .signin-box { background-color: #fff; padding: 40px; }
+.signin .prod-name { color: #fff; }
+.signin .signin-footer { color: #fff; }
 .signin .signin-footer a { color: inherit; }
-.signin .signin-footer .nav { padding-top: 5px; }
-@media (max-width: 767px) { .signin .signin-footer .logo { text-align: center; }
-  .signin .signin-footer .nav { text-align: center; padding-top: 10px; } }
 
 .table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th { background-color: #f2f4fa; }
 

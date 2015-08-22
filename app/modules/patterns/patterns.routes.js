@@ -27,12 +27,48 @@
       }
     })
 
+    .state('patterns.welcome', {
+      url: '/patterns/welcome',
+      templateUrl: 'modules/patterns/templates/welcome-landing.html',
+      controller: 'WelcomeController as welcome'
+    })
 
+    .state('patterns.signinup', {
+      url: '/patterns/signinup',
+      templateUrl: 'modules/patterns/templates/sign-in-sign-up.html'
+    })
+
+    //this is the signin example page
     .state('patterns.signin', {
       url: '/patterns/signin',
       templateUrl: 'modules/patterns/templates/signin.html',
-      controller: 'SignInController as signin'
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'signin'
+      }
     })
+
+    .state('patterns.dashboards', {
+      url: '/patterns/dashboards',
+      templateUrl: 'modules/patterns/templates/dashboards.html'
+    })
+
+    .state('patterns.gettingstarted', {
+      url: '/patterns/gettingstarted',
+      templateUrl: 'modules/patterns/templates/getting-started.html'
+    })
+
+    .state('patterns.facetedsearch', {
+      url: '/patterns/facetedsearch',
+      templateUrl: 'modules/patterns/templates/faceted-search.html'
+    })
+
+    .state('patterns.errorpages', {
+      url: '/patterns/errorpages',
+      templateUrl: 'modules/patterns/templates/error-pages.html'
+    })
+
+
 
     .state('patterns.forgotpassword', {
       url: '/patterns/forgotpassword',
@@ -40,11 +76,7 @@
       controller: 'ForgotPasswordController as forgot'
     })
 
-    .state('patterns.welcome', {
-      url: '/patterns/welcome',
-      templateUrl: 'modules/patterns/templates/welcome-landing.html',
-      controller: 'WelcomeController as welcome'
-    })
+
 
     .state('patterns.registration', {
       url: '/patterns/registration',
@@ -63,7 +95,7 @@
       templateUrl: 'modules/patterns/templates/500.html',
       controller: '500Controller'
     })
-    
+
     .state('patterns.404', {
       url: '/patterns/404',
       templateUrl: 'modules/patterns/templates/404.html',
