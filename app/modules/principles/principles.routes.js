@@ -18,6 +18,14 @@
     .state('principles.page', {
       url: '',
       views: {
+        overview: {
+          templateUrl: 'modules/principles/templates/principles-overview.html',
+          data: {
+            pageTitle: 'Principles - Overview',
+            access: 'public',
+            bodyClass: 'principles'
+          }
+        },
         experience: {
           templateUrl: 'modules/principles/templates/principles-experience.html',
           data: {

@@ -15,22 +15,20 @@
       <div class="row">
         <div class="col-md-12">
           <ul class="list-unstyled list-inline jump-menu">
-            <li><a href="" du-smooth-scroll="brand" offset="100">Brand</a></li>
+            <li><a href="" du-smooth-scroll="overview">Overview</a></li>
             <li><a href="" du-smooth-scroll="design">Design</a></li>
             <li><a href="" du-smooth-scroll="experience">Experience</a></li>
+            <li><a href="" du-smooth-scroll="brand">Brand</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-  
+
 </div>
 
 
-
-
-<div id="brand" ui-view="brand"></div>
-
-<div id="design" ui-view="design"></div>
-
-<div id="experience" ui-view="experience"></div>
+<div ui-view="overview"></div>
+<div ui-view="design"></div>
+<div ui-view="experience"></div>
+<div ui-view="brand"></div>
