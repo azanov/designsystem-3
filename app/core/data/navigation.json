@@ -85,6 +85,9 @@
             "label": "Dashboards",
             "value": "patterns.dashboards"
           }, {
+            "label": "Getting Started",
+            "value": "patterns.gettingstarted"
+          }, {
             "label": "Complex Forms",
             "value": "..."
           }, {

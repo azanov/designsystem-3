@@ -53,6 +53,11 @@
       templateUrl: 'modules/patterns/templates/dashboards.html'
     })
 
+    .state('patterns.gettingstarted', {
+      url: '/patterns/gettingstarted',
+      templateUrl: 'modules/patterns/templates/getting-started.html'
+    })
+
 
     .state('patterns.forgotpassword', {
       url: '/patterns/forgotpassword',
