@@ -6,8 +6,6 @@
 
     var _this = this;
 
-    _this.showHeaderFooter = false;
-
   });
 
 })();
