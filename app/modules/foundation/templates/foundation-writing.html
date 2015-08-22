@@ -15,9 +15,10 @@
       <div class="row">
         <div class="col-md-12">
           <ul class="list-unstyled list-inline jump-menu">
-            <li><a href="" du-smooth-scroll="link1" offset="100">Link 1</a></li>
-            <li><a href="" du-smooth-scroll="link2">Link 2</a></li>
-            <li><a href="" du-smooth-scroll="link3">Link 3</a></li>
+            <li><a href="" du-smooth-scroll="overview" offset="100">Overview</a></li>
+            <li><a href="" du-smooth-scroll="voice">Voice</a></li>
+            <li><a href="" du-smooth-scroll="style">Style</a></li>
+            <li><a href="" du-smooth-scroll="terminology">Terminology</a></li>
           </ul>
         </div>
       </div>
@@ -29,13 +30,7 @@
 
 
 
-<div class="container">
-
-
-
-  <div class="row" ng-repeat="font in font.fonts">
-    <div class="col-md-8">
-
-    </div>
-  </div>
-</div>
+<div ui-view="overview"></div>
+<div ui-view="voice"></div>
+<div ui-view="style"></div>
+<div ui-view="terminology"></div>

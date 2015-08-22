@@ -60,11 +60,30 @@
     })
 
     .state('foundation.writing', {
+      abstract: true,
       url: '/writing',
       templateUrl: 'modules/foundation/templates/foundation-writing.html',
       controller: 'WritingController as writing',
       data: {
         pageTitle: 'Foundation - Writing'
+      }
+    })
+
+    .state('foundation.writing.page', {
+      url: '',
+      views: {
+        overview: {
+          templateUrl: 'modules/foundation/templates/foundation-writing-overview.html'
+        },
+        voice: {
+          templateUrl: 'modules/foundation/templates/foundation-writing-voice.html'
+        },
+        style: {
+          templateUrl: 'modules/foundation/templates/foundation-writing-style.html'
+        },
+        terminology: {
+          templateUrl: 'modules/foundation/templates/foundation-writing-terminology.html'
+        }
       }
     });
 
