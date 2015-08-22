@@ -38,7 +38,7 @@
       templateUrl: 'modules/patterns/templates/sign-in-sign-up.html'
     })
 
-
+    //this is the signin example page
     .state('patterns.signin', {
       url: '/patterns/signin',
       templateUrl: 'modules/patterns/templates/signin.html',
@@ -47,6 +47,12 @@
         bodyClass: 'signin'
       }
     })
+
+    .state('patterns.dashboards', {
+      url: '/patterns/dashboards',
+      templateUrl: 'modules/patterns/templates/dashboards.html'
+    })
+
 
     .state('patterns.forgotpassword', {
       url: '/patterns/forgotpassword',

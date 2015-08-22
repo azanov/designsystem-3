@@ -82,6 +82,9 @@
             "label": "Sign in & Sign up",
             "value": "patterns.signinup"
           }, {
+            "label": "Dashboards",
+            "value": "patterns.dashboards"
+          }, {
             "label": "Complex Forms",
             "value": "..."
           }, {
