@@ -2,6 +2,7 @@
 
 
 .signin {
+
   .bg {
     position: fixed;
     top: 0;
@@ -13,50 +14,28 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+
   header, #header,
   footer, #footer {
     display: none;
   }
+
   .signin-box {
     background-color: #fff;
     padding: 40px;
-    margin-top: 60px;
-    @include breakpoint(screen-xs) {
-      margin-top: 0;
-    }
   }
+
   .prod-name {
-    font-family: $font-family-ps-bold;
-    font-size: 24px;
-    color: $pb-blue;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid $pb-blue;
+    color: #fff;
   }
-  .title {
-    font-family: $font-family-ps-light;
-    font-size: 32px;
-    color: $pb-magenta;
-  }
+
   .signin-footer {
-    color: tint($pb-magenta, 50%);
-    margin-top: 20px;
+    color: #fff;
+
     a {
       color: inherit;
     }
-    .nav {
-      padding-top: 5px;
-    }
-    @include breakpoint(screen-xs) {
-      .logo {
-        text-align: center;
-      }
-      .nav {
-        text-align: center;
-        padding-top: 10px;
-      }
-    }
-  }
 
+  }
 
 }
