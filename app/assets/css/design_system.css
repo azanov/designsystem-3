@@ -976,7 +976,7 @@ a.list-group-item.active .badge { color: #fff; background-color: #3e53a4; }
 
 .panel { box-shadow: none; }
 .panel.panel-default { border-color: #e1e1e1; }
-.panel.panel-default .panel-heading { background-color: #f3f5fa; border-bottom-color: #e1e1e1; }
+.panel.panel-default .panel-heading { background-color: #f3f4f9; border-bottom-color: #e1e1e1; }
 
 .panel-footer { background-color: #f8f8f8; border-top-color: #e1e1e1; }
 
