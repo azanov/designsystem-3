@@ -58,6 +58,12 @@
       templateUrl: 'modules/patterns/templates/getting-started.html'
     })
 
+    .state('patterns.facetedsearch', {
+      url: '/patterns/facetedsearch',
+      templateUrl: 'modules/patterns/templates/faceted-search.html'
+    })
+  
+
 
     .state('patterns.forgotpassword', {
       url: '/patterns/forgotpassword',
