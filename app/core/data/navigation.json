@@ -94,6 +94,9 @@
             "label": "Welcome & Landing",
             "value": "patterns.welcome"
           }, {
+            "label": "Error Pages",
+            "value": "patterns.errorpages"
+          }, {
             "label": "----------------------",
             "value": "---"
           }, {
@@ -108,12 +111,6 @@
           }, {
             "label": "Under Maintenance",
             "value": "patterns.undermaintenance"
-          }, {
-            "label": "404",
-            "value": "patterns.404"
-          }, {
-            "label": "500",
-            "value": "patterns.500"
           }]
         }]
       }]

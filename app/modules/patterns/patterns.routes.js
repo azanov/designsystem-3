@@ -62,7 +62,12 @@
       url: '/patterns/facetedsearch',
       templateUrl: 'modules/patterns/templates/faceted-search.html'
     })
-  
+
+    .state('patterns.errorpages', {
+      url: '/patterns/errorpages',
+      templateUrl: 'modules/patterns/templates/error-pages.html'
+    })
+
 
 
     .state('patterns.forgotpassword', {
