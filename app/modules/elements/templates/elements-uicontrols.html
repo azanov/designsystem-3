@@ -923,25 +923,34 @@
   <!-- left -->
   <div class="col-md-4">
     <p class="post-it">Need copy</p>
+    <p class="more-info">
+      <a href="https://github.com/fragaria/angular-daterangepicker" target="_blank">Angular info
+        <i class="fa fa-external-link"></i>
+      </a>
+    </p>
+    <p class="more-info">
+      <a href="http://www.daterangepicker.com/" target="_blank">Bootstrap Daterange Picker
+        <i class="fa fa-external-link"></i>
+      </a>
+    </p>
   </div>
   <!-- right -->
   <div class="col-md-7 col-md-offset-1 figure-spacer">
     <!-- 2 columns in right -->
 <div class="row">
   <div class="col-md-5">
+
     <div class="input-group">
-      <input class="form-control" close-text="Close" date-disabled="disabled(date, mode)" datepicker-options="dateOptions" datepicker-popup="{{format}}" is-open="status.opened" max-date="'2020-06-22'" min-date="minDate" ng-model="dt" ng-required="true" type="text"/>
-      <span class="input-group-btn">
-        <button class="btn btn-default" ng-click="open($event)" type="button">
-          <i class="glyphicon glyphicon-calendar"></i>
-        </button>
-      </span>
+      <input class="form-control" date-range-picker options="{singleDatePicker: true, drops: 'up'}" ng-model="dt" type="text"/>
+      <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
     </div>
 
-
-
+    <div class="input-group spacer-top-md">
+      <input class="form-control" date-range-picker options="{drops: 'up'}" ng-model="dt" type="text"/>
+      <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+    </div>
   </div>
-  <div class="col-md-5"></div>
+
 </div>
 
 
