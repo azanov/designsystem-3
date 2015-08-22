@@ -88,6 +88,15 @@
             "label": "Getting Started",
             "value": "patterns.gettingstarted"
           }, {
+            "label": "Faceted Filtering",
+            "value": "patterns.facetedsearch"
+          }, {
+            "label": "Welcome & Landing",
+            "value": "patterns.welcome"
+          }, {
+            "label": "----------------------",
+            "value": "---"
+          }, {
             "label": "Complex Forms",
             "value": "..."
           }, {
@@ -97,9 +106,6 @@
             "label": "Forgot Password",
             "value": "patterns.forgotpassword"
           }, {
-            "label": "Welcome & Landing",
-            "value": "patterns.welcome"
-          }, {
             "label": "Under Maintenance",
             "value": "patterns.undermaintenance"
           }, {
@@ -108,9 +114,6 @@
           }, {
             "label": "500",
             "value": "patterns.500"
-          }, {
-            "label": "Faceted Search",
-            "value": "tables.facetedsearch"
           }]
         }]
       }]

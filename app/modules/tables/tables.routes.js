@@ -107,6 +107,11 @@
         PeopleResolve: function($log, MockDataFactory) {
           return MockDataFactory.query({filename: 'ds_users'});
         }
+      },
+      data: {
+        pageTitle: 'Faceted Search',
+        access: 'public',
+        bodyClass: 'tables fullscreen'
       }
     });
 
