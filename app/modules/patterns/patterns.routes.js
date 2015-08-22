@@ -68,6 +68,12 @@
       templateUrl: 'modules/patterns/templates/error-pages.html'
     })
 
+    .state('patterns.forms', {
+      url: '/patterns/forms',
+      templateUrl: 'modules/patterns/templates/forms-containers.html'
+    })
+
+
 
 
     .state('patterns.forgotpassword', {

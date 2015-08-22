@@ -97,11 +97,11 @@
             "label": "Error Pages",
             "value": "patterns.errorpages"
           }, {
+            "label": "Forms & Containers",
+            "value": "patterns.forms"
+          }, {
             "label": "----------------------",
             "value": "---"
-          }, {
-            "label": "Complex Forms",
-            "value": "..."
           }, {
             "label": "Registration",
             "value": "patterns.registration"
