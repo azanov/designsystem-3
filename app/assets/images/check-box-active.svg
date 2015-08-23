@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
     <title>check-box-active</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
         <g id="check-box-active" sketch:type="MSLayerGroup" stroke="#3E53A4">
-            <rect id="Box" stroke-width="2" fill-opacity="0.1" fill="#E0E0E0" sketch:type="MSShapeGroup" x="0" y="0" width="24" height="24"></rect>
-            <path d="M6,12.8286092 L10.1171112,17 L19,8" id="Path-106" stroke-width="1.80000007" sketch:type="MSShapeGroup"></path>
+            <rect id="Box" stroke-width="1.5" fill-opacity="0.1" fill="#E0E0E0" sketch:type="MSShapeGroup" x="0" y="0" width="18" height="18"></rect>
+            <path d="M4.5,9.62145694 L7.58783337,12.75 L14.25,6" id="Path-106" stroke-width="1.35000005" sketch:type="MSShapeGroup"></path>
         </g>
     </g>
 </svg>

@@ -618,8 +618,8 @@ fieldset legend { color: #4e4e4e; }
 .checkbox-enhanced.disabled input[type='checkbox'] + label::before, .checkbox-enhanced-sm.disabled input[type='checkbox'] + label::before { opacity: .5; }
 
 .checkbox-enhanced-sm label { font-size: 13px; }
-.checkbox-enhanced-sm input[type='checkbox'] + label::before { content: url("../images/check-box-inactive@0.75x.png"); }
-.checkbox-enhanced-sm input[type='checkbox']:checked + label::before { content: url("../images/check-box-active@0.75x.png"); }
+.checkbox-enhanced-sm input[type='checkbox'] + label::before { content: url("../images/check-box-inactive.svg"); }
+.checkbox-enhanced-sm input[type='checkbox']:checked + label::before { content: url("../images/check-box-active.svg"); }
 
 .radio-enhanced.radio-inline, .radio-enhanced-sm.radio-inline { padding-left: 0; }
 .radio-enhanced label, .radio-enhanced-sm label { padding-left: 0; }
@@ -628,8 +628,8 @@ fieldset legend { color: #4e4e4e; }
 .radio-enhanced input[type='radio']:checked + label::before, .radio-enhanced-sm input[type='radio']:checked + label::before { content: url("../images/radio-on.png"); margin-right: 8px; vertical-align: middle; display: inline-block; width: 26px; height: 26px; }
 .radio-enhanced.disabled input[type='radio'] + label::before, .radio-enhanced-sm.disabled input[type='radio'] + label::before { opacity: .5; }
 
-.radio-enhanced-sm input[type='radio'] + label::before { content: url("../images/radio-off@0.75x.png"); margin-right: 3px; }
-.radio-enhanced-sm input[type='radio']:checked + label::before { content: url("../images/radio-on@0.75x.png"); margin-right: 3px; }
+.radio-enhanced-sm input[type='radio'] + label::before { content: url("../images/radio-off.svg"); margin-right: 3px; }
+.radio-enhanced-sm input[type='radio']:checked + label::before { content: url("../images/radio-on.svg"); margin-right: 3px; }
 
 .enhanced-inline { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: baseline; -ms-flex-align: baseline; align-items: baseline; }
 .enhanced-inline div { margin-right: 10px; }
