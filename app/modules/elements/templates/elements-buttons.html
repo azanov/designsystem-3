@@ -15,10 +15,10 @@
       <div class="row">
         <div class="col-md-12">
           <ul class="list-unstyled list-inline jump-menu">
-            <li><a href="" du-smooth-scroll="action-buttons" offset="100">Action Buttons</a></li>
-            <li><a href="" du-smooth-scroll="links">Links</a></li>
-            <li><a href="" du-smooth-scroll="button-toolbar">Button Toolbar</a></li>
-            <li><a href="" du-smooth-scroll="link3">Button Tiles</a></li>
+            <li><a href="" du-smooth-scroll="action">Action</a></li>
+            <li><a href="" du-smooth-scroll="link">Link</a></li>
+            <li><a href="" du-smooth-scroll="toolbar">Toolbar</a></li>
+            <li><a href="" du-smooth-scroll="tile">Tile</a></li>
           </ul>
         </div>
       </div>
@@ -33,10 +33,21 @@
 
 <div class="container">
 
-  <div id="action-buttons" class="row">
+  <div class="row">
     <div class="col-md-8">
-      <h1 class="doc-head">Action Buttons</h1>
-      <p class="doc-lede">Lorem ipsum dolor sit amet, feugiat inciderint ei eum. Verterem sapientem tincidunt ut his, facilisi mnesarchum per ne. Laoreet alienum explicari cu eos, ludus eirmod ius no, constituto voluptatibus cu per. Mei fabellas definiebas eu, duo veniam deseruisse no.</p>
+      <h1 id="action" class="doc-head">Action</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <h3>Overview</h3>
+      <p>All buttons should:</p>
+      <ul>
+        <li>Use Precision Sans</li>
+        <li>Use title capitalization</li>
+        <li>Never include punctuation</li>
+      </ul>
     </div>
   </div>
 
@@ -44,7 +55,7 @@
   <!-- primary buttons -->
   <div class="row spacer-top-xl">
     <div class="col-md-12">
-      <h1 class="doc-sectionhead">Primary Buttons</h1>
+      <h1 class="doc-sectionhead">Primary</h1>
     </div>
   </div>
 
@@ -83,7 +94,7 @@
   <!-- secondary buttons -->
   <div class="row spacer-top-xl">
     <div class="col-md-12">
-      <h1 class="doc-sectionhead">Secondary Buttons</h1>
+      <h1 class="doc-sectionhead">Secondary</h1>
     </div>
   </div>
 
@@ -122,7 +133,7 @@
   <!-- tertiary buttons -->
   <div class="row spacer-top-xl">
     <div class="col-md-12">
-      <h1 class="doc-sectionhead">Tertiary Buttons</h1>
+      <h1 class="doc-sectionhead">Tertiary</h1>
     </div>
   </div>
 
@@ -404,15 +415,24 @@
         <figcaption>Toggle with Notification</figcaption>
         <div class="btn-group" data-toggle="buttons">
           <label class="btn btn-default active">
-            <input type="radio" name="options" id="option1" autocomplete="off" checked> Data View 1
+            <input type="radio" name="options" id="option4" autocomplete="off" checked> Data View 1
           </label>
           <label class="btn btn-default">
-            <input type="radio" name="options" id="option2" autocomplete="off"> Data View 2 <span class="badge" style="color: #fff;">2</span>
+            <input type="radio" name="options" id="option5" autocomplete="off"> Data View 2 <span class="badge" style="color: #fff;">2</span>
           </label>
         </div>
       </figure>
     </div>
   </div>
+
+  <!-- TODO: need more research on ui-sref anchor links, this is not working, see: -->
+  <!-- https://github.com/angular-ui/ui-router/pull/1867 -->
+  <!-- <div class="row">
+    <div class="col-md-12 spacer-top-lg">
+      <p>See also: <a href="" ui-sref="feedback.page({ '#': 'badges' })">badges</a>, <a href="" ui-sref="elements.uicontrols({'#': 'checkboxes'})">checkboxes</a>, <a href="" ui-sref="elements.uicontrols({'#': 'radios'})">radio buttons</a></p>
+
+    </div>
+  </div> -->
 
 
 
@@ -720,15 +740,28 @@
 
 
   <!-- LINKS -->
-  <div id="links" class="row">
+  <div class="row">
     <div class="col-md-8">
-      <h1 class="doc-head">Links</h1>
-      <p class="doc-lede">Lorem ipsum dolor sit amet, feugiat inciderint ei eum. Verterem sapientem tincidunt ut his, facilisi mnesarchum per ne. Laoreet alienum explicari cu eos, ludus eirmod ius no, constituto voluptatibus cu per. Mei fabellas definiebas eu, duo veniam deseruisse no.</p>
+      <h1 id="link" class="doc-head">Link</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <p>Hyperlinked buttons should:</p>
+      <ul>
+        <li>Feel conversational</li>
+        <li>Use active writing and be positive</li>
+        <li>Use sentence capitalization</li>
+        <li>Never conclude with punctuation unless they are formed as questions</li>
+      </ul>
+
+      <p>You can include an icon with your link if it will increase the user’s understanding. But avoid using icons that are unclear or unnecessary.</p>
     </div>
   </div>
 
 
-  <div class="row">
+  <div class="row spacer-top-lg">
     <div class="col-md-3">
       <figure>
         <figcaption>Standard Link</figcaption>
@@ -746,16 +779,20 @@
 
 
   <!-- BUTTON TOOLBARS -->
-  <div id="button-toolbar" class="row">
+  <div class="row">
     <div class="col-md-8">
-      <h1 class="doc-head">Button Toolbars</h1>
-      <p class="doc-lede">Lorem ipsum dolor sit amet, feugiat inciderint ei eum. Verterem sapientem tincidunt ut his, facilisi mnesarchum per ne. Laoreet alienum explicari cu eos, ludus eirmod ius no, constituto voluptatibus cu per. Mei fabellas definiebas eu, duo veniam deseruisse no.</p>
-      <p>Toolbars can be used with or without borders by adding <code>btn-group-borderless</code>. For correct usage of button groups in table toolbars, please see the <a href="" ui-sref="tables.datatable.toolbar">Toolbar page</a></p>
+      <h1 id="toolbar" class="doc-head">Toolbar</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <p>Toolbars can be used with or without borders by adding <code>btn-group-borderless</code>.</p>
     </div>
   </div>
 
 
-  <div class="row">
+  <div class="row spacer-top-md">
     <div class="col-md-4">
       <figure>
         <figcaption>Default Action Buttons</figcaption>
@@ -820,15 +857,26 @@
 
 
   <!-- BUTTON TILES -->
-  <div id="button-tiles" class="row">
+  <div  class="row">
     <div class="col-md-8">
-      <h1 class="doc-head">Button Tiles</h1>
-      <p class="doc-lede">Lorem ipsum dolor sit amet, feugiat inciderint ei eum. Verterem sapientem tincidunt ut his, facilisi mnesarchum per ne. Laoreet alienum explicari cu eos, ludus eirmod ius no, constituto voluptatibus cu per. Mei fabellas definiebas eu, duo veniam deseruisse no.</p>
+      <h1 id="tile" class="doc-head">Tile</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <p>We use tiled buttons to highlight functionality that defines the purpose of a particular product. These buttons:</p>
+      <ul>
+        <li>Can be either bordered or borderless</li>
+        <li>Are visually prominent and highly graphical</li>
+        <li>Make use of icons or recognizable brand elements</li>
+        <li>Are designed to be easy for users to see and click on</li>
+      </ul>
     </div>
   </div>
 
 
-  <div class="row">
+  <div class="row spacer-top-md">
     <div class="col-md-3">
       <figure>
         <figcaption>Disabled</figcaption>
