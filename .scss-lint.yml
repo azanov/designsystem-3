@@ -91,7 +91,7 @@ linters:
     max_depth: 10
 
   PlaceholderInExtend:
-    enabled: true
+    enabled: false
 
   PropertyCount:
     enabled: false
