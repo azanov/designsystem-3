@@ -1,6 +1,8 @@
 //*/ Buttons */
 // --------------------------------------------------
 
+// scss-lint:disable MergeableSelector
+
 // $fg, $bg, $border, $disabled-fg, $disabled-bg, $hover-fg:$fg, $hover-bg:$bg
 .btn-primary {
   @include button-variant(#fff, $button-primary, $button-primary, $pb-gray-500, $pb-bg2, #fff, $pb-blue-700);
@@ -17,6 +19,9 @@
   @include button-variant($button-primary, transparent, $button-primary, $button-primary, $pb-blue-300, $pb-gray-300, $pb-bg2);
 }
 
+
+//"tertiary", or ghost/ko pill-shaped buttons
+
 .btn.btn-default-ko {
   color: $button-primary;
   background-color: #fff;
@@ -31,7 +36,7 @@
   }
 
   &:hover {
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
 
   &:active {
@@ -40,6 +45,7 @@
 
 }
 
+// bootstrap buttons
 .btn-success {
   @include button-variant(#fff, $brand-success, $brand-success, $pb-gray-300, $pb-bg2);
 }
@@ -116,6 +122,10 @@
   .btn {
     border: 0;
   }
+}
+.btn-group .btn-default.active {
+  background-color: $pb-blue;
+  color: #fff;
 }
 
 

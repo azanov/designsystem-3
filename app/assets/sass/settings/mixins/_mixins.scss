@@ -186,8 +186,9 @@ $grid-column-padding: 15px;
   }
 
   .badge {
-    color: $bg;
-    background-color: $fg;
+    color: #fff;
+    background-color: $pb-magenta;
+    margin-left: 10px;
   }
 }
 
