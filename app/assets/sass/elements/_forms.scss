@@ -93,11 +93,11 @@ a.list-group-item {
   }
 
   input[type='checkbox'] +label::before {
-    content: url('../images/check-box-inactive@0.75x.png');
+    content: url('../images/check-box-inactive.svg');
   }
 
   input[type='checkbox']:checked +label::before {
-    content: url('../images/check-box-active@0.75x.png');
+    content: url('../images/check-box-active.svg');
   }
 }
 
@@ -140,11 +140,11 @@ a.list-group-item {
 }
 .radio-enhanced-sm {
   input[type='radio'] +label::before {
-    content: url('../images/radio-off@0.75x.png');
+    content: url('../images/radio-off.svg');
     margin-right: 3px;
   }
   input[type='radio']:checked +label::before {
-    content: url('../images/radio-on@0.75x.png');
+    content: url('../images/radio-on.svg');
     margin-right: 3px;
   }
 }
