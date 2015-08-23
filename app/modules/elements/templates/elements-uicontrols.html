@@ -10,41 +10,27 @@
     </div>
   </div>
 
-  <sub-header class="sub-header jump-bar headroom" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}" headroom offset="240" tolerance="5">
+  <div headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <ul class="list-unstyled list-inline jump-menu">
-            <li>
-              <a du-smooth-scroll="inputfields" href="" offset="100">Input Fields</a>
-            </li>
-            <li>
-              <a du-smooth-scroll="dropdowns" href="">Dropdowns</a>
-            </li>
-            <li>
-              <a du-smooth-scroll="checkboxes" href="">Check boxes</a>
-            </li>
-            <li>
-              <a du-smooth-scroll="radios" href="">Radio Buttons</a>
-            </li>
-            <li>
-              <a du-smooth-scroll="switches" href="">Switches</a>
-            </li>
-            <li>
-              <a du-smooth-scroll="steppers" href="">Steppers</a>
-            </li>
-            <li>
-              <a du-smooth-scroll="datepickers" href="">Date Pickers</a>
-            </li>
-
+            <li><a href="" du-smooth-scroll="inputfields">Input Fields</a></li>
+            <li><a href="" du-smooth-scroll="dropdowns">Dropdowns</a></li>
+            <li><a href="" du-smooth-scroll="checkboxes">Check boxes</a></li>
+            <li><a href="" du-smooth-scroll="radios">Radio Buttons</a></li>
+            <li><a href="" du-smooth-scroll="switches">Switches</a></li>
+            <li><a href="" du-smooth-scroll="steppers">Steppers</a></li>
+            <li><a href="" du-smooth-scroll="datepickers">Date Pickers</a></li>
           </ul>
-
         </div>
       </div>
     </div>
-  </sub-header>
+  </div>
 
 </div>
+
+
 
 <div class="container">
 
@@ -52,64 +38,19 @@
   <div class="row" id="inputfields">
     <div class="col-md-8">
       <h1 class="doc-head">Input Fields</h1>
-      <p class="doc-lede">The form field is our most often used input, and thus has a range of states and uses that inform our users. It is our rule that the content within a field is the primary design focus, while the label is secondary.
-      </p>
     </div>
   </div>
+
 
   <div class="row">
     <div class="col-md-12">
-      <h2 class="doc-sectionhead">Basic Form Fields</h2>
+      <h2 class="doc-sectionhead">States</h2>
     </div>
   </div>
+
   <div class="row">
-    <div class="col-md-4">
-      <p>
-        We have three sizes of most inputs: default, small, and large. The default size should be used for fields in all instances except:</p>
-
-      <ul>
-        <li>If you have a large, crowded form (20+ fields) consider using the smaller size inputs</li>
-        <li>If you have an extremely light form (&lt;10 fields) consider use large fields (Example: sign in screens)</li>
-        <li>Note that the field itself and its contents are smaller, but the label remains 14px always</li>
-      </ul>
-    </div>
-    <div class="col-md-7 col-md-offset-1">
-      <div class="row">
-        <div class="col-md-5">
-          <figure>
-            <figcaption>Default input</figcaption>
-            <div class="form-group">
-              <label>Text label</label>
-              <input class="form-control" type="text">
-            </div>
-          </figure>
-          <figure>
-            <figcaption>Small input</figcaption>
-            <div class="form-group">
-              <label>Text label</label>
-              <input class="form-control input-sm" placeholder=".input-sm" type="text">
-            </div>
-          </figure>
-
-        </div>
-        <div class="col-md-5">
-          <figure>
-            <figcaption>Large input</figcaption>
-            <div class="form-group">
-              <label>Text Label</label>
-              <input class="form-control input-lg" placeholder=".input-lg" type="text">
-            </div>
-          </figure>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="row doc-sectionbreak">
-    <div class="col-md-4">
-      <p>Form fields have four primary states, each defined by its form and type coloring:</p>
+    <div class="col-md-3">
+      <p>Input fields have four primary states, each defined by its form and type coloring:</p>
       <ul>
         <li>Default</li>
         <li>Active</li>
@@ -118,8 +59,7 @@
       </ul>
     </div>
 
-    <div class="col-md-7 col-md-offset-1 figure-spacer">
-
+    <div class="col-md-7 col-md-offset-1">
       <div class="row">
         <div class="col-md-5">
           <figure>
@@ -163,18 +103,112 @@
     </div>
   </div>
 
-<!-- row -->
-  <div class="row doc-sectionbreak">
-<!-- left -->
-    <div class="col-md-4">
-      <p>
-        Some fields require some explanation to users so they understand what they’re being asked for. In these cases you can include a short line of instructional text below the field.
-      </p>
-      <p>Should that not be sufficient, you can provide a small popover next to the label that provides additional context for users.</p>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Sizes</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <p>We have three sizes of input fields: small, standard and large. Use the standard size for all fields except when:</p>
+      <ul>
+        <li>You have a very crowded form (20+ fields), in which case consider using small input fields.</li>
+        <li>You have only a few fields (&lt;10), in which case consider using large input fields. An example of this is a Sign In screen.</li>
+      </ul>
+
+      <p>Once you&rsquo;ve selected an input field size, use it consistently throughout your product. The exceptions to this rule are pages that are outside of your product&rsquo;s flow (such as Sign In or Sign Up).</p>
+
+      <p>Note that even when using large or small input fields the label font remains the standard size.</p>
+    </div>
+
+    <div class="col-md-7 col-md-offset-1">
+
+      <div class="row">
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Standard input</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <input class="form-control" type="text">
+            </div>
+          </figure>
+
+          <figure>
+            <figcaption>Small input</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <input class="form-control input-sm" placeholder=".input-sm" type="text">
+            </div>
+          </figure>
+        </div>
+
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Large input</figcaption>
+            <div class="form-group">
+              <label>Text Label</label>
+              <input class="form-control input-lg" placeholder=".input-lg" type="text">
+            </div>
+          </figure>
+        </div>
+      </div>
 
     </div>
-<!-- right -->
-    <div class="col-md-7 col-md-offset-1 figure-spacer">
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Colors</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <p>We apply red to field elements to alert users to an input error that needs their attention</p>
+    </div>
+
+    <div class="col-md-7 col-md-offset-1">
+
+      <div class="row">
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Error</figcaption>
+            <div class="form-group has-error">
+              <label>Text field with error</label>
+              <input class="form-control" type="text" value="I was entered in error!">
+              <span class="help-block text-error">Please enter a valid name.</span>
+            </div>
+          </figure>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Options</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <p>There are several ways to help users understand what they&rsquo;re being asked to input. These include:</p>
+    <ul>
+      <li>In-field prompt copy.</li>
+      <li>A short line of instructional copy below the field.</li>
+      <li>A small popover next to the field’s label that provide additional context.</li>
+    </ul>
+    </div>
+
+    <div class="col-md-7 col-md-offset-1">
+
       <div class="row">
         <div class="col-md-5">
           <figure>
@@ -185,8 +219,8 @@
               <span class="help-block">Enter your full name.</span>
             </div>
           </figure>
-
         </div>
+
         <div class="col-md-5">
           <figure>
             <figcaption>Help icon next to label</figcaption>
@@ -197,21 +231,36 @@
               <input class="form-control" type="text">
             </div>
           </figure>
-
         </div>
       </div>
+
     </div>
   </div>
 
-  <div class="row doc-sectionbreak">
-    <div class="col-md-4">
-      <p>A password strength meter tied to the input field is specifically on registration pages to help users choose a secure, system-OK combination.</p>
-    </div>
-    <div class="col-md-7 col-md-offset-1 figure-spacer">
 
-      <div class="post-it">Controls TK</div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Password Fields</h2>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <p>When asking users to create a password, we can use a password strength meter to help them see how secure their password will be. If your product has specific password requirements (such as required characters or lengths), include those requirements on relevant pages (such as Sign Up or Password Reset).</p>
+    </div>
+
+    <div class="col-md-7 col-md-offset-1">
+      <div class="post-it">NEED IMAGE</div>
+    </div>
+  </div>
+
+
+
+
+
+
+
 
   <div class="row">
     <div class="col-md-12">
@@ -219,19 +268,15 @@
     </div>
   </div>
 
-<!-- row -->
   <div class="row ">
-<!-- left -->
     <div class="col-md-4">
-      Icons, buttons, and simple menus can be prepended and/or appended to text fields.
-      <p class="post-it">need copy?</p>
+      You can augment regular input field behavior by prepending or appending icons, checkboxes, buttons or dropdown menus to them.
     </div>
-<!-- right -->
+
     <div class="col-md-7 col-md-offset-1 ">
-<!-- 2 columns in right -->
+
       <div class="row">
         <div class="col-md-5">
-
           <figure>
             <figcaption>Text field prepended</figcaption>
             <div class="form-group">
@@ -252,10 +297,9 @@
               </div>
             </div>
           </figure>
-
         </div>
-        <div class="col-md-5">
 
+        <div class="col-md-5">
           <figure>
             <figcaption>Text field appended</figcaption>
             <div class="form-group">
@@ -294,12 +338,11 @@
             </div>
           </div>
         </figure>
-
       </div>
     </div>
+
     <div class="row">
       <div class="col-md-5">
-
         <figure>
           <figcaption>Custom prepended checkbox control</figcaption>
           <div class="form-group">
@@ -311,59 +354,54 @@
               <input class="form-control" ng-disabled="!checkable.checked" ng-model="checkable.value" type="text"></div>
           </div>
         </figure>
-
       </div>
-      <div class="col-md-5"></div>
     </div>
+
   </div>
 </div>
+
+
 
 <div class="row">
   <div class="col-md-12">
-    <h2 class="doc-sectionhead">Writing Form Field Labels</h2>
+    <h2 class="doc-sectionhead">Writing Field Copy</h2>
   </div>
 </div>
-<!-- row -->
+
 <div class="row">
-<!-- left -->
   <div class="col-md-8">
 
-    <p>
+    <p>When writing your labels and in-field prompt copy, it&rsquo;s important to stay consistent across your entire product. Here are some basic guidelines for how to write these critical pieces of user interface copy.</p>
 
-      <p>When writing your labels and in-field prompt text, it’s important to stay consistent across your entire product. Here are some basic guidelines for how to write these critical pieces of user interface copy.
-      </p>
-      <p>
-        <b>Style</b>
-      </p>
-      <ul>
-        <li>Use short, active words and phrases.</li>
-        <li>Structure labels to avoid ambiguity in language.</li>
-        <li>To avoid confusing users, use consistent terminology for a given concept (e.g., “Input Recipient’s Name” vs. “Input Addressee’s Name” vs. “Input Contact’s Name”).</li>
-      </ul>
-      <p>
-        <b>Capitalization</b>
-      </p>
-      <ul>
-        <li>Form field labels use sentence capitalization, except when they include words or phrases that are acronyms or proper nouns (e.g., “RMA number,” “Cost Account,” “ZIP Code”).</li>
-      </ul>
+    <h3>Style</h3>
+    <ul>
+      <li>Use short, active words and phrases.</li>
+      <li>Structure copy to avoid ambiguity in language.</li>
+      <li>To avoid confusing users, use consistent terminology.</li>
+    </ul>
 
-      <p>
-        <b>Punctuation</b>
-      </p>
-      <ul>
-        <li>Form field labels don’t conclude with punctuation, such as periods, colons.</li>
-        <li>Don’t phrase your form field labels as questions.</li>
-      </ul>
-    </p>
+    <h3>Capitalization</h3>
+    <ul>
+      <li>Use sentence capitalization, except when copy includes words or phrases that are acronyms or proper nouns (e.g., &ldquo;RMA number,&rdquo; &ldquo;Cost Account,&rdquo; &ldquo;ZIP Code&rdquo;).</li>
+    </ul>
+
+    <h3>Punctuation</h3>
+    <ul>
+      <li>Don&rsquo;t conclude copy with punctuation, such as periods or colons.</li>
+      <li>Don’t phrase your copy as questions.</li>
+    </ul>
 
   </div>
-
 </div>
+
+
+
+
 
 <div class="row">
   <div class="col-md-8">
     <h1 class="doc-head" id="dropdowns">Dropdown Menus</h1>
-    <p class="doc-lede post-it">This is a section with an H1 - does it get a lede paragraph?</p>
+    <p class="doc-lede">Best suited for lists containing 7-15 items. For fewer items items consider using radio buttons.</p>
   </div>
 </div>
 
@@ -373,31 +411,17 @@
   </div>
 </div>
 
-<!-- row -->
 <div class="row">
-<!-- left -->
   <div class="col-md-4">
-    Dropdown menus have four primary states, each defined by its form and type coloring:
+    <p>Dropdown menus have four primary states, each defined by its form and type coloring:</p>
     <ul>
       <li>Default</li>
       <li>Focused</li>
       <li>Active</li>
       <li>Disabled</li>
     </ul>
-    Which states a user sees depends on whether or not the menu is enabled or disabled.
-
-    <h4>Defaults</h4>
-    <p>When populating menus, we have certain rules:</p>
-    <ul>
-      <li>Never present the user with a blank menu.</li>
-      <li>In most cases, “Select” should be your first menu item, to help prompt the user to make a selection.
-      </li>
-    </ul>
-
-    <p>The exception is when you are confident that a user will want to select a particular menu item at least 80% of the time. In that case, code your menu to preselect that item.</p>
-
   </div>
-<!-- right -->
+
   <div class="col-md-7 col-md-offset-1 ">
 
     <div class="row">
@@ -451,11 +475,35 @@
   </div>
 </div>
 
+
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="doc-sectionhead">Defaults</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8">
+    <p>When populating menus:</p>
+    <ul>
+      <li>Never present the user with a blank menu.</li>
+      <li>In most cases, &lsquo;Select&rsquo; should be your first menu item, to help prompt the user to make a selection.</li>
+      <li>Use extreme caution with preselecting an item, especially in required or critical menus &mdash; only do so if at least 80% of users are likely to select that item.</li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+
+
 <div class="row">
   <div class="col-md-12">
     <h2 class="doc-sectionhead">Sizes</h2>
   </div>
 </div>
+
 <div class="row">
   <div class="col-md-4">
     <p>We have three sizes of dropdown menus: standard, large and small. Use the standard size for all dropdowns except when:</p>
@@ -463,9 +511,15 @@
       <li>You have a very crowded form (20+ dropdowns), in which case consider using small dropdown menus.</li>
       <li>You have only a few dropdowns (&lt;10), in which case consider using large dropdown menus.</li>
     </ul>
-    <p>Note that even when using large or small dropdown menus the label text remains the standard size.</p>
+
+    <p>Once you&rsquo;ve selected a dropdown menu size, use it consistently throughout your product. The exceptions to this rule are pages that are outside of your product&rsquo;s flow (such as Sign Up).</p>
+
+    <p>Note that even when using large or small dropdown menus the label font remains the standard size.</p>
+
   </div>
+
   <div class="col-md-7 col-md-offset-1">
+
     <div class="row">
       <div class="col-md-5">
         <figure>
@@ -487,8 +541,8 @@
             </select>
           </div>
         </figure>
-
       </div>
+
       <div class="col-md-5">
         <figure>
           <figcaption>Large</figcaption>
@@ -501,12 +555,13 @@
             </select>
           </div>
         </figure>
-
       </div>
     </div>
 
   </div>
 </div>
+
+
 
 <div class="row">
   <div class="col-md-12">
@@ -514,15 +569,14 @@
   </div>
 </div>
 
-<!-- row -->
 <div class="row">
-<!-- left -->
   <div class="col-md-4">
-    <p class="post-it">Need copy</p>
+    <p>When populating menus:</p>
+    <p class="post-it">Where is the rest of this copy? Not in word doc.</p>
   </div>
-<!-- right -->
+
   <div class="col-md-7 col-md-offset-1">
-<!-- 2 columns in right -->
+
     <div class="row">
       <div class="col-md-5">
         <figure>
@@ -545,10 +599,10 @@
                 </label>
               </div>
             </div>
-
           </div>
         </figure>
       </div>
+
       <div class="col-md-5">
         <figure>
           <figcaption>Multi-select Disabled</figcaption>
@@ -559,8 +613,12 @@
         </figure>
       </div>
     </div>
+
   </div>
 </div>
+
+
+
 
 <div class="row">
   <div class="col-md-12">
@@ -569,7 +627,8 @@
 </div>
 <div class="row">
   <div class="col-md-4">
-    <p>You can use certain advanced 3rd-party dropdown types to augment default dropdown menus. These allow your users to do things like type-ahead find, make multiple selections and tokenizing the choices, or grouped/multi-line menu items (such as a contact’s email address), to name a few.</p>
+    <p>You can use these advanced menu types to augment our standard dropdown menus. “Multi-select with tokens” is a good alternative to the multi-section types above, as it allows users to create a persistent list of selections that they can easily edit.</p>
+
     <p class="more-info">
       <a href="http://brianreavis.github.io/selectize.js/" target="_blank">
         Basic info
@@ -580,6 +639,7 @@
         <i class="fa fa-external-link"></i></a>
     </p>
   </div>
+
   <div class="col-md-7 col-md-offset-1">
     <div class="row">
       <div class="col-md-10">
@@ -609,34 +669,41 @@
   </div>
 </div>
 
-<!-- row -->
-<div class="row">
-<!-- left -->
-  <div class="col-md-8">
-    <h2 class="doc-sectionhead">Writing Dropdown Menu Labels</h2>
-    <p>When writing labels and menu items for dropdowns, it’s important to stay consistent across your entire product. Here are some basic guidelines for how to write these critical pieces of user interface copy.</p>
 
-    <b>Style</b>
+
+
+
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="doc-sectionhead">Writing Dropdown Copy</h2>
+    <p class="doc-lede">When writing labels and menu items for dropdowns, it’s important to stay consistent across your entire product. Here are some basic guidelines for how to write these critical pieces of user interface copy.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8">
+    <h3>Style</h3>
     <ul>
       <li>Use short, active words and phrases.</li>
-      <li>Structure labels to avoid ambiguity in language.</li>
-      <li>To avoid confusing users, use consistent terminology for a given concept (e.g., “Input Recipient’s Name” vs. “Input Addressee’s Name” vs. “Input Contact’s Name”).</li>
+      <li>Structure copy to avoid ambiguity in language.</li>
+      <li>To avoid confusing users, use consistent terminology.</li>
     </ul>
 
-    <b>Capitalization</b>
+    <h3>Capitalization</h3>
     <ul>
-      <li>Dropdown menu labels use sentence capitalization, except when they include words or phrases that are acronyms or proper nouns, which should be capitalized.</li>
-      <li>Dropdown menu items use title capitalization, because they behave like buttons.</li>
-    </ul>
-    <b>Punctuation</b>
-    <ul>
-      <li>Dropdown labels and items don’t conclude with punctuation, such as periods, colons.</li>
-      <li>Don’t phrase your dropdown labels as questions.</li>
+      <li>Labels use sentence capitalization, except when copy includes words or phrases that are acronyms or proper nouns, which should be capitalized.</li>
+      <li>Menu items use title capitalization, because they behave like buttons.</li>
     </ul>
 
+    <h3>Punctuation</h3>
+    <ul>
+      <li>Don’t conclude copy with punctuation, such as periods or colons.</li>
+      <li>Don’t phrase your copy as questions.</li>
+    </ul>
   </div>
-
 </div>
+
+
 
 <div class="row">
   <div class="col-md-8">
@@ -644,15 +711,26 @@
   </div>
 </div>
 
-<div class="row doc-sectionbreak">
-  <div class="col-md-5">
-    <p>
-      We have two sizes of checkboxes: standard and enhanced. In most cases, you should use the enhanced size. If your product has a lot of checkboxes, however, you should consider using the standard size to save space.
-    </p>
 
-    <p>Note that if you just need to give the user a means to turn on or off a function, a toggle control is a better choice.</p>
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="doc-sectionhead">Styles</h1>
   </div>
-  <div class="col-md-6 figure-spacer">
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <p>We have two styles of checkboxes: design system and browser default.</p>
+
+    <p><strong>Usage</strong></p>
+    <ul>
+      <li>When possible, you should use the design system style.</li>
+      <li>If your product has long lists of checkboxes (and space is an issue), consider using the browser default.</li>
+      <li>Use the same style for your checkboxes and radio buttons, and apply that style consistently across your product.</li>
+    </ul>
+  </div>
+
+  <div class="col-md-7 col-md-offset-1">
     <figure>
       <div class="row">
         <div class="col-md-6">
@@ -697,35 +775,46 @@
   </div>
 </div>
 
-<div class="row ">
-  <div class="col-md-8">
-    <h2 class="doc-sectionhead">Writing Checkbox Labels</h2>
 
-    <p>When writing your labels, be descriptive enough so users understand what checking the box will do, but try to avoid very long labels. One way to do this is by introducing the checkboxes with a descriptive sentence or two that lends context to the checkboxes’ purpose.</p>
+
+<div class="row ">
+  <div class="col-md-12">
+    <h2 class="doc-sectionhead">Writing Checkbox Labels</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8">
+
+    <p>When writing your labels, be descriptive enough so users understand what checking the box will do, but try to avoid very long labels. One way to do this is by introducing the checkboxes with a descriptive piece of copy that lends context to the checkboxes’ purpose.</p>
 
     <p>Here are some basic guidelines for how to write these critical pieces of user interface copy.</p>
 
-    <b>Style</b>
+    <h3>Style</h3>
     <ul>
       <li>Use short, active words and phrases.</li>
       <li>Structure labels to avoid ambiguity in language.</li>
-      <li>To avoid confusing users, use consistent terminology.</li>
-      <li>Use the same style and structure for all your labels. If one label is written as a complete sentence then write all of your labels as complete sentences rather than mixing and matching sentences with fragments or phrases.</li>
+      <li>Use consistent terminology.</li>
+      <li>Use the same style and structure for all your labels.</li>
     </ul>
 
-    <b>Capitalization</b>
+    <h3>Capitalization</h3>
     <ul>
-      <li>Checkbox labels use sentence capitalization, except when they include words or phrases that are acronyms or proper nouns (e.g., “RMA number,” “Cost Account,” “ZIP Code”).</li>
+      <li>Checkbox labels use sentence capitalization, except when they include words or phrases that are acronyms or proper nouns (e.g., &ldquo;RMA number,&rdquo; &ldquo;Cost Account,&rdquo; &ldquo;ZIP Code&rdquo;).</li>
     </ul>
 
-    <b>Punctuation</b>
+    <h3>Punctuation</h3>
     <ul>
-      <li>Checkbox labels don’t conclude with punctuation, such as periods or colons.</li>
-      <li>Don’t phrase your checkbox labels as questions.</li>
+      <li>Don&rsquo;t conclude labels with punctuation, such as periods or colons.</li>
+      <li>Don&rsquo;t phrase your labels as questions.</li>
     </ul>
 
   </div>
 </div>
+
+
+
+
 
 <div class="row">
   <div class="col-md-8">
@@ -733,17 +822,26 @@
   </div>
 </div>
 
-<!-- row -->
-<div class="row doc-sectionbreak">
-<!-- left -->
-  <div class="col-md-5">
-    <p>We have two sizes of radio buttons: standard and enhanced. In most cases, you should use the enhanced size. If your product has a lot of radio buttons, however, you should consider using the standard size to save space.
-    </p>
 
-    <p>Note that if you just need to give the user a means to turn on or off a function, a toggle control is a better choice.</p>
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="doc-sectionhead">Styles</h1>
   </div>
-<!-- right -->
-  <div class="col-md-6 figure-spacer">
+</div>
+
+<div class="row">
+  <div class="col-md-5">
+    <p>We have two styles of radio buttons: design system and browser default.</p>
+
+    <p><strong>Usage</strong></p>
+    <ul>
+      <li>When possible, you should use the design system style.</li>
+      <li>If your product has long lists of radio buttons (and space is an issue), consider using the browser default.</li>
+      <li>Use the same style for your radio buttons and checkboxes, and apply that style consistently across your product.</li>
+    </ul>
+  </div>
+
+  <div class="col-md-6">
     <div class="row">
       <figure>
         <div class="col-md-6">
@@ -790,51 +888,66 @@
 </div>
 
 <div class="row">
-  <div class="col-md-8">
+  <div class="col-md-12">
     <h2 class="doc-sectionhead">Writing Radio Button Labels</h2>
-
-    <p>When writing your labels, be descriptive enough so users understand what selecting a button will do, but try to avoid very long labels. One way to do this is by introducing the set of buttons with a descriptive sentence or two that lends context to their purpose.</p>
-
-    <p>Here are some basic guidelines for how to write these critical pieces of user interface copy.</p>
-
-    <b>Style</b>
-    <ul>
-      <li>Use short, active words and phrases.</li>
-      <li>Structure labels to avoid ambiguity in language.</li>
-      <li>To avoid confusing users, use consistent terminology.</li>
-      <li>Use the same style and structure for all your labels. If one label is written as a complete sentence then write all of your labels as complete sentences rather than mixing and matching sentences with fragments or phrases.</li>
-    </ul>
-    <b>Capitalization</b>
-    <ul>
-      <li>Radio button labels use sentence capitalization, except when they include words or phrases that are acronyms or proper nouns (e.g., “RMA number,” “Cost Account,” “ZIP Code”).</li>
-    </ul>
-    <b>Punctuation</b>
-    <ul>
-      <li>Radio button labels don’t conclude with punctuation, such as periods or colons.</li>
-      <li>Don’t phrase your radio button labels as questions.</li>
-    </ul>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-8">
-    <h1 class="doc-head" id="steppers">Steppers</h1>
+
+    <p>When writing your labels, be descriptive enough so users understand what selecting a button will do, but try to avoid very long labels. One way to do this is by introducing the set of buttons with a descriptive sentence or two that lends context to their purpose.</p>
+
+    <p>Here are some basic guidelines for how to write these critical pieces of user interface copy.</p>
+
+    <h3>Style</h3>
+    <ul>
+      <li>Use short, active words and phrases.</li>
+      <li>Structure labels to avoid ambiguity in language.</li>
+      <li>Use consistent terminology.</li>
+      <li>Use the same style and structure for all your labels. </li>
+    </ul>
+
+    <h3>Capitalization</h3>
+    <ul>
+      <li>Radio button labels use sentence capitalization, except when they include words or phrases that are acronyms or proper nouns (e.g., &ldquo;RMA number,&rdquo; &ldquo;Cost Account,&rdquo; &ldquo;ZIP Code&rdquo;).</li>
+    </ul>
+
+    <h3>Punctuation</h3>
+    <ul>
+      <li>Don&rsquo;t conclude your labels with punctuation, such as periods or colons.</li>
+      <li>Don&rsquo;t phrase your labels as questions.</li>
+    </ul>
+
   </div>
 </div>
 
-<!-- row -->
+
+
+
+<div class="row">
+  <div class="col-md-8">
+    <h1 id="steppers" class="doc-head">Steppers</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="doc-sectionhead">Numeric Stepper</h1>
+  </div>
+</div>
+
 <div class="row ">
-  <!-- left -->
   <div class="col-md-4">
-    <p class="post-it">copy?</p>
+    <p>Use the stepper when you want users to select incrementally from a wide range of values, or input their own value.</p>
+
     <p class="more-info">
     <a href="https://github.com/xFlatlinex/Numeric-Stepper" target="_blank">More info
       <i class="fa fa-external-link"></i></a>
     </p>
   </div>
-  <!-- right -->
-  <div class="col-md-7 col-md-offset-1 figure-spacer">
-    <!-- 2 columns in right -->
+
+  <div class="col-md-7 col-md-offset-1">
     <div class="row">
       <div class="col-md-5">
         <div class="form-group"><input class="form-control" options="numericStepper" pb-numeric-stepper type="text" value="10"></div>
@@ -845,9 +958,14 @@
 
 
 <div class="row">
-  <!-- left -->
+  <div class="col-md-12">
+    <h1 class="doc-sectionhead">Range slider</h1>
+  </div>
+</div>
+
+
+<div class="row">
   <div class="col-md-4">
-    <h4>Range slider</h4>
     <p class="post-it">copy? Should we ditch this control?</p>
     <p class="more-info">
       <a href="http://danielcrisp.github.io/angular-rangeslider/" target="_blank">More Info
@@ -865,16 +983,22 @@
 </div>
 
 
+
+
 <div class="row">
   <div class="col-md-8">
     <h1 class="doc-head" id="switches">Switches</h1>
   </div>
 </div>
 
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="doc-sectionhead">Toggle Switch</h1>
+  </div>
+</div>
 
-<!-- row -->
+
 <div class="row ">
-<!-- left -->
   <div class="col-md-4">
     <p class="post-it">Need copy</p>
     <p class="more-info">
@@ -883,12 +1007,11 @@
       </a>
     </p>
   </div>
-<!-- right -->
-  <div class="col-md-7 col-md-offset-1 figure-spacer">
-<!-- 2 columns in right -->
+
+  <div class="col-md-7 col-md-offset-1">
+
     <div class="row">
       <div class="col-md-5">
-
         <figure>
           <figcaption>Standard switch</figcaption>
             <div class="form-group">
@@ -896,20 +1019,20 @@
               <div model="inputs.switchStatus1" toggle-switch>&nbsp;</div>
             </div>
         </figure>
-
-    </div>
-    <div class="col-md-5">
-      <figure>
-        <figcaption>Standard switch disabled</figcaption>
-      <div class="form-group">
-        <label>Text label</label>
-        <div is-disabled="disabled" model="inputs.switchStatus2" toggle-switch>&nbsp;</div>
       </div>
-    </figure>
+
+      <div class="col-md-5">
+        <figure>
+          <figcaption>Standard switch disabled</figcaption>
+          <div class="form-group">
+            <label>Text label</label>
+            <div is-disabled="disabled" model="inputs.switchStatus2" toggle-switch>&nbsp;</div>
+          </div>
+        </figure>
+      </div>
+    </div>
 
   </div>
-</div>
-</div>
 </div>
 
 
@@ -918,9 +1041,14 @@
     <h1 class="doc-head" id="datepickers">Date Pickers</h1>
   </div>
 </div>
-<!-- row -->
-<div class="row doc-sectionbreak">
-  <!-- left -->
+
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="doc-sectionhead">Daterange Picker</h1>
+  </div>
+</div>
+
+<div class="row">
   <div class="col-md-4">
     <p class="post-it">Need copy</p>
     <p class="more-info">
@@ -934,25 +1062,22 @@
       </a>
     </p>
   </div>
-  <!-- right -->
-  <div class="col-md-7 col-md-offset-1 figure-spacer">
-    <!-- 2 columns in right -->
-<div class="row">
-  <div class="col-md-5">
 
-    <div class="input-group">
-      <input class="form-control" date-range-picker options="{singleDatePicker: true, drops: 'up'}" ng-model="dt" type="text"/>
-      <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+  <div class="col-md-7 col-md-offset-1">
+
+    <div class="row">
+      <div class="col-md-5">
+        <div class="input-group">
+          <input class="form-control" date-range-picker options="{singleDatePicker: true, drops: 'up'}" ng-model="dt" type="text"/>
+          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+        </div>
+
+        <div class="input-group spacer-top-md">
+          <input class="form-control" date-range-picker options="{drops: 'up'}" ng-model="dt" type="text"/>
+          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+        </div>
+      </div>
     </div>
-
-    <div class="input-group spacer-top-md">
-      <input class="form-control" date-range-picker options="{drops: 'up'}" ng-model="dt" type="text"/>
-      <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-    </div>
-  </div>
-
-</div>
-
 
   </div>
 </div>
