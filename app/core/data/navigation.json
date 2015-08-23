@@ -106,9 +106,6 @@
             "label": "Registration",
             "value": "patterns.registration"
           }, {
-            "label": "Forgot Password",
-            "value": "patterns.forgotpassword"
-          }, {
             "label": "Under Maintenance",
             "value": "patterns.undermaintenance"
           }]
