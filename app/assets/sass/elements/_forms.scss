@@ -344,9 +344,9 @@ fieldset[disabled] .form-control.timepicker {
   &:after {
     content: "";
     position: absolute;
-    bottom: -12px;
-    left: $left+3;
-    border-width: 12px 12px 0;
+    bottom: -13px;
+    left: 66px;
+    border-width: 14px 14px 0;
     border-style: solid;
     border-color: $color transparent;
   }
@@ -358,8 +358,8 @@ fieldset[disabled] .form-control.timepicker {
     content: "";
     position: absolute;
     bottom: -15px;
-    left: $left;
-    border-width: 15px 15px 0;
+    left: 66px;
+    border-width: 14px 14px 0;
     border-style: solid;
     border-color: $color transparent;
   }
