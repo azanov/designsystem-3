@@ -8,12 +8,12 @@
 
     _this.spacers = {
       top: {
-        values: ['no top spacer', 'spacer-top-xs', 'spacer-top-sm', 'spacer-top-md', 'spacer-top-lg', 'spacer-top-xl'],
-        selected: 'spacer-top-sm'
+        values: ['no top spacer', 'spacer-top-xs (10px)', 'spacer-top-sm (20px)', 'spacer-top-md (30px)', 'spacer-top-lg (40px)', 'spacer-top-xl (50px)'],
+        selected: 'spacer-top-sm (20px)'
       },
       bottom: {
-        values: ['no bottom spacer', 'spacer-bottom-xs','spacer-bottom-sm', 'spacer-bottom-md', 'spacer-bottom-lg', 'spacer-bottom-xl'],
-        selected: 'spacer-bottom-sm'
+        values: ['no bottom spacer', 'spacer-bottom-xs (10px)','spacer-bottom-sm (20px)', 'spacer-bottom-md (30px)', 'spacer-bottom-lg (40px)', 'spacer-bottom-xl (50px)'],
+        selected: 'spacer-bottom-sm (20px)'
       }
     };
 
