@@ -223,18 +223,18 @@ h3,
   }
 }
 
-h4 {
+h4, .h4 {
   font-size: 16px;
-  font-family: $font-family-ps-regular;
-  font-weight: normal;
+  font-family: $font-family-sans-serif;
+  font-weight: bold;
   color: $header-color;
 }
 
-h5 {
+h5, .h5 {
   font-size: 14px;
-  font-family: $font-family-ps-bold;
-  font-weight: normal;
-  color: $brand-primary;
+  font-family: $font-family-sans-serif;
+  font-weight: bold;
+  color: $header-color;
   &.ko {
     color: fff;
   }
@@ -243,12 +243,11 @@ h5 {
   }
 }
 
-// h6 is only used in documentation
-h6 {
+h6, .h6 {
   font-size: 12px;
   font-family: $font-family-sans-serif;
-  font-weight: normal;
-  color: $pb-magenta;
+  font-weight: bold;
+  color: $header-color;
   margin-bottom: 0;
   margin-top: 14px;
 }

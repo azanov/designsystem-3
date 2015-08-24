@@ -157,27 +157,27 @@ body.landing .btn-circle {
   body.landing .alt.btn-circle {
     color: #4e4e4e; }
 
-h4 {
+h4, .h4 {
   font-size: 16px;
-  font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif;
-  font-weight: normal;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
   color: #2e2e2e; }
 
-h5 {
+h5, .h5 {
   font-size: 14px;
-  font-family: "PrecisionSans_W_Bd", "Helvetica Neue", Arial, sans-serif;
-  font-weight: normal;
-  color: #3e53a4; }
-  h5.ko {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #2e2e2e; }
+  h5.ko, .h5.ko {
     color: fff; }
-  h5.alt {
+  h5.alt, .h5.alt {
     color: #2e2e2e; }
 
-h6 {
+h6, .h6 {
   font-size: 12px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  color: #cf0989;
+  font-weight: bold;
+  color: #2e2e2e;
   margin-bottom: 0;
   margin-top: 14px; }
 

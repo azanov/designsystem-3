@@ -15,3 +15,5 @@ _X_ should footer use container, not container-fluid?
 __ DAN: fix page scroll issue
 
 __ Using multiple duplicate IDs on headers/footers, since if use "header", the header directive kicks in and replaces mine with the real one.
+
+__ clean up utility text color classes
