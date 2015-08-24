@@ -126,8 +126,11 @@
           "value": "",
           "toggle": "dropdown",
           "children": [{
-              "label": "Section",
-              "value": "section.mobile"
+              "label": "Color",
+              "value": "mobile.color"
+            }, {
+              "label": "Typography",
+              "value": "mobile.typography"
             }]
         }, {
           "label": "Elements",
@@ -139,14 +142,29 @@
           }, {
             "label": "UI Controls",
             "value": "mobile.uicontrols"
+          }, {
+            "label": "Containers",
+            "value": "mobile.containers"
+          }, {
+            "label": "Modals & Popovers",
+            "value": "mobile.modals-popovers"
+          }, {
+            "label": "Lists & Grids",
+            "value": "mobile.lists-grids"
+          }, {
+            "label": "---------",
+            "value": "--"
+          }, {
+            "label": "Prototype",
+            "value": "mobile.prototype"
           }]
         }, {
           "label": "Patterns",
           "value": "",
           "toggle": "dropdown",
           "children": [{
-            "label": "Section",
-            "value": "mobile.section"
+            "label": "Navigation",
+            "value": "mobile.navigation"
           }]
         }]
       }]

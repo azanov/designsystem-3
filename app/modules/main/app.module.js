@@ -111,6 +111,8 @@
         'From state:', fromState
       );
 
+      $anchorScroll();
+
       if (!toState || !toState.data) {
         return;
       }
@@ -128,10 +130,12 @@
 
     $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
       //if ($location.hash()) {$anchorScroll();}
+      $anchorScroll();
     });
 
     $rootScope.$on('$routeChangeStart', function(newRoute, oldRoute) {
       //if ($location.hash()) {$anchorScroll();}
+      //$anchorScroll();
     });
 
     //scroll to top of the page, this makes the transitions wonky and needs more research
@@ -141,16 +145,16 @@
 
 
     // hack to scroll to top when navigating to new URLS but not back/forward
-    var wrap = function(method) {
-      var orig = $window.window.history[method];
-      $window.window.history[method] = function() {
-        var retval = orig.apply(this, Array.prototype.slice.call(arguments));
-        $anchorScroll();
-        return retval;
-      };
-    };
-    wrap('pushState');
-    wrap('replaceState');
+    // var wrap = function(method) {
+    //   var orig = $window.window.history[method];
+    //   $window.window.history[method] = function() {
+    //     var retval = orig.apply(this, Array.prototype.slice.call(arguments));
+    //     $anchorScroll();
+    //     return retval;
+    //   };
+    // };
+    // wrap('pushState');
+    // wrap('replaceState');
 
   });
 
