@@ -2,7 +2,6 @@
 
   &.draggable {
     .modal-content {
-      //border-radius: 4px 4px 0 0;
       cursor: move;
       &:active {
         background-color: $pb-bg2;
@@ -12,7 +11,7 @@
 
   .modal-header {
     border-bottom: 1px solid #dddedf; //TODO: replace with correct color
-    padding: 0 0 10px 0;
+    padding: 0 0 10px;
     margin-bottom: 30px;
 
     .close {
@@ -25,12 +24,13 @@
       color: $pb-blue;
 
       &:before {
-        content: 'x'
+        content: 'x';
       }
     }
   }
 
   .modal-content {
+    border-radius: 0;
     padding: 60px;
   }
 
