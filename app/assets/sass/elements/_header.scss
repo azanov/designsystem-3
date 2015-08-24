@@ -41,7 +41,7 @@ form.magic-search {
     -webkit-box-sizing: content-box;
     font-family: $font-family-sans-serif;
     font-size: 14px;
-    background: transparent url('../images/search.svg') no-repeat 9px center;
+    background: transparent url('data:image/svg+xml;utf8,<svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><title>search</title><desc>Created with Sketch.</desc><path d="M5.625 1.25c2.413 0 4.375 1.962 4.375 4.375 0 2.412-1.963 4.375-4.375 4.375-2.413 0-4.375-1.963-4.375-4.375 0-2.413 1.963-4.375 4.375-4.375m0 10c1.333 0 2.556-.467 3.521-1.244l4.786 4.811c.123.123.283.184.443.184.159 0 .319-.061.441-.182.245-.244.246-.639.003-.884l-4.792-4.816c.764-.961 1.224-2.173 1.224-3.493 0-3.101-2.523-5.625-5.625-5.625s-5.625 2.524-5.625 5.625c0 3.102 2.523 5.625 5.625 5.625" sketch:type="MSShapeGroup" fill="#fff"/></svg>') no-repeat 9px center;
     opacity: .7;
     border: solid 1px transparent;
     padding: 7px 10px 7px 32px;
@@ -79,18 +79,19 @@ form.magic-search {
 }
 
 a.user-dot {
+  // scss-lint:disable ImportantRule
   font-family: $font-family-sans-serif;
   font-size: 11px !important;
   text-align: center;
-  background: transparent url('../images/dot.svg') no-repeat center center;
+  background: transparent url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><title>dot</title><desc>Created with Sketch.</desc><path d="M12 24c6.627 0 12-5.373 12-12s-5.373-12-12-12-12 5.373-12 12 5.373 12 12 12z" fill="#980D70" sketch:type="MSShapeGroup"/></svg>') no-repeat center center;
 }
 
 a.dot {
-  background: transparent url('../images/dot.svg') no-repeat center center;
+  background: transparent url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><title>dot</title><desc>Created with Sketch.</desc><path d="M12 24c6.627 0 12-5.373 12-12s-5.373-12-12-12-12 5.373-12 12 5.373 12 12 12z" fill="#980D70" sketch:type="MSShapeGroup"/></svg>') no-repeat center center;
 }
 
 a.app-launcher {
-  background: transparent url('../images/app-launcher.svg') no-repeat center center;
+  background: transparent url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><title>app-launcher</title><desc>Created with Sketch.</desc><g sketch:type="MSLayerGroup" fill="#fff"><path d="M10.089.004h-3.954c-.182 0-.33.148-.33.33v3.954c0 .182.148.33.33.33h3.954c.182 0 .33-.148.33-.33v-3.954c0-.182-.148-.33-.33-.33" sketch:type="MSShapeGroup"/><path d="M4.817.004h-3.954c-.182 0-.33.148-.33.33v3.954c0 .182.148.33.33.33h3.954c.182 0 .33-.148.33-.33v-3.954c0-.182-.148-.33-.33-.33" opacity=".8" sketch:type="MSShapeGroup"/><path d="M15.361.004h-3.954c-.182 0-.33.148-.33.33v3.954c0 .182.148.33.33.33h3.954c.182 0 .33-.148.33-.33v-3.954c0-.182-.148-.33-.33-.33" opacity=".8" sketch:type="MSShapeGroup"/><path d="M10.089 5.277h-3.954c-.182 0-.33.148-.33.33v3.954c0 .182.148.33.33.33h3.954c.182 0 .33-.148.33-.33v-3.954c0-.182-.148-.33-.33-.33" opacity=".8" sketch:type="MSShapeGroup"/><path d="M4.817 5.277h-3.954c-.182 0-.33.148-.33.33v3.954c0 .182.148.33.33.33h3.954c.182 0 .33-.148.33-.33v-3.954c0-.182-.148-.33-.33-.33" sketch:type="MSShapeGroup"/><path d="M15.361 5.277h-3.954c-.182 0-.33.148-.33.33v3.954c0 .182.148.33.33.33h3.954c.182 0 .33-.148.33-.33v-3.954c0-.182-.148-.33-.33-.33" sketch:type="MSShapeGroup"/><path d="M10.089 10.549h-3.954c-.182 0-.33.148-.33.33v3.954c0 .182.148.33.33.33h3.954c.182 0 .33-.148.33-.33v-3.954c0-.182-.148-.33-.33-.33" sketch:type="MSShapeGroup"/><path d="M4.817 10.549h-3.954c-.182 0-.33.148-.33.33v3.954c0 .182.148.33.33.33h3.954c.182 0 .33-.148.33-.33v-3.954c0-.182-.148-.33-.33-.33" opacity=".8" sketch:type="MSShapeGroup"/><path d="M15.361 10.549h-3.954c-.182 0-.33.148-.33.33v3.954c0 .182.148.33.33.33h3.954c.182 0 .33-.148.33-.33v-3.954c0-.182-.148-.33-.33-.33" opacity=".8" sketch:type="MSShapeGroup"/></g></svg>') no-repeat center center;
 }
 
 
@@ -301,7 +302,7 @@ a.app-launcher {
       transform: scale(0);
       display: block;
       overflow: hidden;
-      transition: opacity .2s linear, max-height .3s cubic-bezier(0.190, 1.000, 0.220, 1.000), transform 0s linear .5s;
+      transition: opacity .2s linear, max-height .3s cubic-bezier(0.190, 1, 0.220, 1), transform 0s linear .5s;
     }
   }
 
@@ -311,7 +312,7 @@ a.app-launcher {
         opacity: 1;
         transform: scale(1);
         max-height: 500px;
-        transition: opacity .3s linear, max-height 2s cubic-bezier(0.190, 1.000, 0.220, 1.000), transform 0s linear;
+        transition: opacity .3s linear, max-height 2s cubic-bezier(0.190, 1, 0.220, 1), transform 0s linear;
       }
     }
   }
