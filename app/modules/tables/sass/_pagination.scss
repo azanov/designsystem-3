@@ -1,21 +1,21 @@
 
 @mixin pagination-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
-  > li {
-    > a,
-    > span {
+  >li {
+    >a,
+    >span {
       padding: $padding-vertical $padding-horizontal;
       font-size: $font-size;
       line-height: $line-height;
     }
     &:first-child {
-      > a,
-      > span {
+      >a,
+      >span {
         @include border-left-radius($border-radius);
       }
     }
     &:last-child {
-      > a,
-      > span {
+      >a,
+      >span {
         @include border-right-radius($border-radius);
       }
     }
@@ -33,10 +33,10 @@
   margin: $line-height-computed 0;
   border-radius: $border-radius-base;
 
-  > li {
+  >li {
     display: inline; // Remove list-style and block-level defaults
-    > a,
-    > span {
+    >a,
+    >span {
       position: relative;
       float: left; // Collapse white-space
       padding: $padding-base-vertical $padding-base-horizontal;
@@ -48,22 +48,22 @@
       margin-left: -1px;
     }
     &:first-child {
-      > a,
-      > span {
+      >a,
+      >span {
         margin-left: 0;
         @include border-left-radius($border-radius-base);
       }
     }
     &:last-child {
-      > a,
-      > span {
+      >a,
+      >span {
         @include border-right-radius($border-radius-base);
       }
     }
   }
 
-  > li > a,
-  > li > span {
+  >li >a,
+  >li >span {
     &:hover,
     &:focus {
       z-index: 3;
@@ -73,8 +73,8 @@
     }
   }
 
-  > .active > a,
-  > .active > span {
+  >.active >a,
+  >.active >span {
     &,
     &:hover,
     &:focus {
@@ -85,20 +85,18 @@
       cursor: default;
     }
   }
+}
 
-  > .disabled {
-    > span,
-    > span:hover,
-    > span:focus,
-    > a,
-    > a:hover,
-    > a:focus {
-      color: $pagination-disabled-color;
-      background-color: $pagination-disabled-bg;
-      border-color: $pagination-disabled-border;
-      cursor: $cursor-disabled;
-    }
-  }
+.pagination >.disabled >span,
+.pagination >.disabled >span:hover,
+.pagination >.disabled >span:focus,
+.pagination >.disabled >a,
+.pagination >.disabled >a:hover,
+.pagination >.disabled >a:focus {
+  color: $pagination-color;
+  background-color: $pagination-bg;
+  border-color: $input-border;
+  cursor: not-allowed;
 }
 
 // Sizing
