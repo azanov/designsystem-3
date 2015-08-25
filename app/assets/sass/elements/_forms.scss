@@ -18,6 +18,10 @@
 
 label {
   font-weight: normal;
+  .optional {
+    font-size: 12px;
+    font-style: italic;
+  }
 }
 
 
@@ -44,6 +48,9 @@ fieldset {
 
   label {
     margin: 0;
+  }
+  span {
+    color: $text-color;
   }
 }
 
@@ -224,9 +231,18 @@ a.list-group-item {
 .input-group-addon {
   background-color: transparent;
   border-color: $input-border;
+  border-radius: 0;
+}
+.input-group-btn > .btn {
+  border-radius: 0;
+  border-color: $input-border;
+  border-right-color: transparent;
 }
 
+.input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group {
+  border-right-color: transparent;
 
+}
 
 select {
   //  scss-lint:disable ImportantRule
@@ -235,6 +251,13 @@ select {
   &[multiple],
   &[size] {
     background-image: none !important;
+    color: $text-color;
+    option {
+      &:selected {
+        background-color: #fff;
+        color: $pb-blue;
+      }
+    }
   }
 }
 

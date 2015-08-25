@@ -73,6 +73,12 @@
   }
 }
 
+.selectize-input.items.has-options.full.has-items {
+  .item {
+    color: $pb-blue;
+  }
+}
+
 
 // adds down-arrows to all selectize menus
 .selectize-input:after {

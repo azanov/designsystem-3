@@ -5,9 +5,7 @@
   display: inline-block;
   input {
     text-align: right;
-
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-radius: 0;
   }
 
 }
@@ -19,18 +17,14 @@
   width: 20px;
   height: 100%;
   border: 1px solid $input-border;
+  border-radius: 0;
   border-left: 0;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  background-color: $pb-bg2;
-  .stepper-btn-up {
-    padding-top: 3px;
-  }
-  .stepper-btn-down {
-    padding-top: 3px;
-  }
+  background-color: $pb-gray-50;
+  background-image: none;
+
   a {
     font-size: 10px;
+    text-indent: -9999px;
     line-height: 100%;
     display: block;
     overflow: hidden;
@@ -38,10 +32,20 @@
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    color: #666;
+
+    &.stepper-btn-up {
+      padding-top: 3px;
+      background: transparent url('data:image/svg+xml;utf8,<svg width="16" height="22" viewBox="0 0 16 22" xmlns="http://www.w3.org/2000/svg"><title>droparrow</title><path d="M0 7.344h10.5l-5.25 5.566-5.25-5.565z" fill="#717171" fill-rule="evenodd"/></svg>') 4px center no-repeat;
+      transform: rotate(180deg);
+
+    }
+    &.stepper-btn-dwn {
+      padding-top: 3px;
+      background: transparent url('data:image/svg+xml;utf8,<svg width="16" height="22" viewBox="0 0 16 22" xmlns="http://www.w3.org/2000/svg"><title>droparrow</title><path d="M0 7.344h10.5l-5.25 5.566-5.25-5.565z" fill="#717171" fill-rule="evenodd"/></svg>') 4px center no-repeat;
+    }
     &:hover {
-      color: #fff;
-      background-color: $brand-primary;
+
+      background-color: darken(#e1e1e1, 10%);
     }
   }
 }
