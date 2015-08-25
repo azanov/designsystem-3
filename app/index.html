@@ -75,13 +75,13 @@
 
   <div class="site">
     <!-- header -->
-    <header headroom class="headroom" tolerance="5" offset="40" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}"></header>
+    <header headroom class="headroom" tolerance="5" offset="40" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}" pb-ds-header></header>
 
     <!-- content -->
     <div ui-view="" class="view-animate site-content" autoscroll="false"></div>
 
     <!-- FOOTER -->
-    <footer ng-if="app.footer"></footer>
+    <footer ng-if="app.footer" pb-ds-footer></footer>
   </div>
 
 
@@ -171,7 +171,7 @@
     <script src="modules/forms/controllers/forms-linline-help.controller.js"></script>
 
     <script src="core/core.module.js"></script>
-    <script src="core/directives/pb-fixed-navbar.directive.js"></script>
+
     <script src="core/directives/pb-panel-collapsible.directive.js"></script>
     <script src="core/directives/pb-panel-draggable.directive.js"></script>
     <script src="core/directives/pb-transitory-alert.directive.js"></script>

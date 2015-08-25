@@ -2,12 +2,10 @@
 
   'use strict';
 
-  angular.module('app').directive('footer', function() {
+  angular.module('app').directive('pbDsFooter', function() {
     return {
-      restrict: 'E',
-      templateUrl: 'modules/main/templates/footer.html',
-      controller: '',
-      controllerAs: ''
+      restrict: 'A',
+      templateUrl: 'modules/main/templates/footer.html'
     };
   });
 
