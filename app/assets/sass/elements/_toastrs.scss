@@ -3,10 +3,10 @@
 //
 
 //List that pairs toastr classes with colors
-$toastr-list: '.toast-info'     $state-info-bg  $state-info-border $state-info-text,
-              '.toast-success'  $state-success-bg   $state-success-border $state-success-text,
-              '.toast-warning'  $state-warning-bg   $state-warning-border $state-warning-text,
-              '.toast-error'    $state-danger-bg   $state-danger-border $state-danger-text,
+$toastr-list: '.toast-info'     $state-info-bg $state-info-border $state-info-text,
+              '.toast-success'  $state-success-bg $state-success-border $state-success-text,
+              '.toast-warning'  $state-warning-bg $state-warning-border $state-warning-text,
+              '.toast-error'    $state-danger-bg $state-danger-border $state-danger-text,
               '.toast-custom'   pbcolor(pbpurple, 300)  pbcolor(pbpurple, 600) pbcolor(pbpurple, 800);
 
 //mixin that creates a single toastr instance
@@ -21,6 +21,14 @@ $toastr-list: '.toast-info'     $state-info-bg  $state-info-border $state-info-t
   border-color         : $toastr-border-color;
   color                : $toastr-txt-color;
   background-image     : none !important;
+
+  //see elements.module.js to configure the close X, SVG must be added as global config option
+  .close-x {
+    stroke: $text;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
 
   .toast-close-button:hover,
   .toast-close-button:focus {
@@ -91,6 +99,14 @@ $toastr-list: '.toast-info'     $state-info-bg  $state-info-border $state-info-t
     .toast-title {
       @extend .toast-message;
     }
+    // .toast-progress {
+    //   position: absolute;
+    //   left: 0;
+    //   bottom: 0;
+    //   height: 4px;
+    //   background-color: @black;
+    //   opacity: 0.4;
+    // }
   }
 
   @include build-toastrs($toastr-list);
