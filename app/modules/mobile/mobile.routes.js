@@ -26,6 +26,11 @@
       templateUrl: 'modules/mobile/templates/mobile-typography.html'
     })
 
+    .state('mobile.grid', {
+      url: '/grid',
+      templateUrl: 'modules/mobile/templates/mobile-grid.html'
+    })
+
     //ELEMENTS
     .state('mobile.buttons', {
       url: '/buttons',
@@ -52,6 +57,11 @@
       templateUrl: 'modules/mobile/templates/mobile-lists-grids.html'
     })
 
+    .state('mobile.user-feedback', {
+      url: '/user-feedback',
+      templateUrl: 'modules/mobile/templates/mobile-user-feedback.html'
+    })
+
     .state('mobile.prototype', {
       url: '/prototype',
       templateUrl: 'modules/mobile/templates/mobile-prototype.html'
@@ -61,6 +71,41 @@
     .state('mobile.navigation', {
       url: '/navigation',
       templateUrl: 'modules/mobile/templates/mobile-navigation.html'
+    })
+
+    .state('mobile.sign-in-up', {
+      url: '/sign-in-up',
+      templateUrl: 'modules/mobile/templates/mobile-sign-in-up.html'
+    })
+
+    .state('mobile.welcome', {
+      url: '/welcome',
+      templateUrl: 'modules/mobile/templates/mobile-welcome.html'
+    })
+
+    .state('mobile.getting-started', {
+      url: '/getting-started',
+      templateUrl: 'modules/mobile/templates/mobile-getting-started.html'
+    })
+
+    .state('mobile.homepage', {
+      url: '/homepage',
+      templateUrl: 'modules/mobile/templates/mobile-homepage.html'
+    })
+
+    .state('mobile.search-results', {
+      url: '/search-results',
+      templateUrl: 'modules/mobile/templates/mobile-search-results.html'
+    })
+
+    .state('mobile.forms', {
+      url: '/forms',
+      templateUrl: 'modules/mobile/templates/mobile-forms.html'
+    })
+
+    .state('mobile.maps', {
+      url: '/maps',
+      templateUrl: 'modules/mobile/templates/mobile-maps.html'
     });
 
   });
