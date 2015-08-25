@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.ds.graphs').controller('ChartjsController', function($log) {
+  angular.module('pb.ds.graphs').controller('ChartjsController', function($log, $scope) {
 
     var _this = this;
 
@@ -28,6 +28,20 @@
     ];
 
 
+    //generate random data
+    _this.random = function RandomArray(max, limit) {
+
+      var arr = [];
+
+      for (var i = 0; i < limit; i++) {
+        arr.push(Math.round(Math.random() * max));
+      }
+
+      return arr;
+
+    };
+
+
     //BAR
     _this.bar = {
       labels: ['2011', '2012', '2013', '2014', '2015'],
@@ -41,7 +55,8 @@
         scaleShowGridLines: false
       },
       click: function(points, evt) {
-        $log.debug(points, evt);
+        _this.bar.data[0] = _this.random(100, 5);
+        _this.bar.data[1] = _this.random(100, 5);
       }
     };
 
@@ -55,7 +70,8 @@
       series: ['Category One', 'Category Two'],
       colours: _this.colours,
       click: function(points, evt) {
-        $log.debug(points, evt);
+        _this.line.data[0] = _this.random(60, 4);
+        _this.line.data[1] = _this.random(90, 4);
       }
     };
 
@@ -65,13 +81,19 @@
     //DONUT
     _this.donut = {
       labels: ['Category One', 'Category Two', 'Category Three', 'Category Four', 'Category Five'],
-      data: [35, 24, 22, 12, 7]
+      data: [35, 24, 22, 12, 7],
+      click: function(points, evt) {
+        _this.donut.data = _this.random(100, 5);
+      }
     };
 
     //PIE
     _this.pie = {
       labels: ['Category One', 'Category Two', 'Category Three', 'Category Four', 'Category Five'],
-      data: [35, 24, 22, 12, 7]
+      data: [35, 24, 22, 12, 7],
+      click: function(points, evt) {
+        _this.pie.data = _this.random(100, 5);
+      }
     };
 
     //RADAR
@@ -82,7 +104,11 @@
         [28, 48, 40, 19, 96]
       ],
       colours: _this.colours,
-      series: ['2014', '2015']
+      series: ['2014', '2015'],
+      click: function(points, evt) {
+        _this.radar.data[0] = _this.random(60, 5);
+        _this.radar.data[1] = _this.random(90, 5);
+      }
     };
 
     //POLAR
@@ -90,7 +116,10 @@
       labels: ['Category One', 'Category Two', 'Category Three', 'Category Four', 'Category Five'],
       data: [65, 59, 90, 81, 56],
       colours: _this.colours,
-      series: ['2014', '2015']
+      series: ['2014', '2015'],
+      click: function(points, evt) {
+        _this.polar.data = _this.random(100, 5);
+      }
     };
 
   });
