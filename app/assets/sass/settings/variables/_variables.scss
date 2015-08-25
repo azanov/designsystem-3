@@ -205,12 +205,16 @@ $table-bg-active: $pb-bg5;
 //** `<input>` background color
 $input-bg: #fff;
 //** `<input disabled>` background color
-$input-bg-disabled: $pb-light-gray;
+$input-bg-disabled: #f0f0f0;
 
 //** Text color for `<input>`s
 $input-color: $pb-blue;
+$input-color-disabled: #c0c0c0;
+
+
 //** `<input>` border color
 $input-border: $pb-gray-300;
+$input-border-disabled: #dbdbdb;
 
 //** Border color for inputs on focus
 $input-border-focus: $pb-blue;
