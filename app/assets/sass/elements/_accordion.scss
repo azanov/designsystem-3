@@ -58,6 +58,15 @@ div.accordion-group {
     }
   }
 }
+
+.panel-group .panel {
+  border-radius: 0;
+  .panel-heading {
+    background-color: rgba(200, 200, 200, .2);
+    margin: 0;
+    padding: 15px $panel-body-padding 10px;
+  }
+}
 .collapse-button {
   cursor: pointer;
   &:hover {

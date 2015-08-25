@@ -428,6 +428,9 @@ div.accordion-group .panel-title a:hover { color: #0072b8; text-decoration: none
 div.accordion-group .panel.active .panel-title:before { content: '\25B8'; -webkit-transform: rotate(90deg); transform: rotate(90deg); }
 .no-csstransforms div.accordion-group .panel.active:before { content: '\25be'; }
 
+.panel-group .panel { border-radius: 0; }
+.panel-group .panel .panel-heading { background-color: rgba(200, 200, 200, 0.2); margin: 0; padding: 15px 30px 10px; }
+
 .collapse-button { cursor: pointer; }
 .collapse-button:hover { color: #0072b8; }
 .collapse-button:hover:before { color: #0072b8; }
