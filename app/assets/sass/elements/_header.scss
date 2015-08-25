@@ -295,10 +295,10 @@ a.app-launcher {
   }
 }
 
-//animate yamm menu
-.dropdown {
-  .dropdown-menu {
-    &.yamm-animate-menu {
+//animate menus
+.navbar-nav {
+  .dropdown {
+    .dropdown-menu {
       backface-visibility: hidden;
       opacity: 0;
       max-height: 0;
@@ -307,11 +307,9 @@ a.app-launcher {
       overflow: hidden;
       transition: opacity .2s linear, max-height .3s cubic-bezier(0.190, 1, 0.220, 1), transform 0s linear .5s;
     }
-  }
 
-  &.open {
-    .dropdown-menu {
-      &.yamm-animate-menu {
+    &.open {
+      .dropdown-menu {
         opacity: 1;
         transform: scale(1);
         max-height: 500px;
@@ -320,7 +318,6 @@ a.app-launcher {
     }
   }
 }
-
 
 
 // for header that slides up/down on scroll
