@@ -65,7 +65,6 @@ p.lead, p.lede { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, san
 .media-heading { font-family: "PrecisionSans_W_Bd", "Helvetica Neue", Arial, sans-serif; font-weight: normal; }
 
 body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; color: #717171; }
-body .has-error { color: #dc0000; }
 
 dt { margin-top: 10px; margin-bottom: 3px; }
 dt:first-child { margin-top: 0; }
