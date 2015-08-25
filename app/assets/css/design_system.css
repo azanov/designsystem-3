@@ -825,8 +825,7 @@ a.list-group-item.active .badge { color: #fff; background-color: #3e53a4; }
 .modal.draggable .modal-content { cursor: move; }
 .modal.draggable .modal-content:active { background-color: #f8f8f8; }
 .modal .modal-header { border-bottom: 1px solid #dddedf; padding: 0 0 10px; margin-bottom: 30px; }
-.modal .modal-header .close { font-size: 30px; font-weight: 100; position: absolute; top: 15px; right: 20px; margin: 0; color: #3e53a4; }
-.modal .modal-header .close:before { content: 'x'; }
+.modal .modal-header .close { position: absolute; top: 15px; right: 20px; width: 21px; height: 21px; margin: 0; color: #3e53a4; background: transparent url('data:image/svg+xml;utf8,<svg width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg"><g stroke="#3E53A4" stroke-width="2" fill="none"><path d="M15.216 1.784l-14.14 14.14M1.076 1.784l14.14 14.14"/></g></svg>') center center no-repeat; }
 .modal .modal-content { border-radius: 0; padding: 60px; }
 .modal .modal-body { padding: 0; }
 .modal .modal-footer { border-top: 0; text-align: left; padding: 0; margin-top: 40px; }
