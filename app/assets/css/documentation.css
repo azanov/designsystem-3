@@ -94,9 +94,6 @@ ul, ol { margin-top: 0; margin-bottom: 10px; margin-left: 0; padding-left: 1.5em
 
 .psr14 { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-weight: normal; font-size: 14px; }
 
-.panel-heading { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-weight: normal; }
-.panel-heading td, .panel-heading th { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
 #header .navbar .navbar-brand.brand-text, #header .navbar .container .navbar-brand.brand-text, header .navbar .navbar-brand.brand-text, header .navbar .container .navbar-brand.brand-text { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-weight: normal; }
 
 .nav.navbar-nav { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-weight: normal; font-size: 16px; }
@@ -261,12 +258,6 @@ h2.table-header.specifications:after { content: "40px"; height: 40px; }
 .gray300 { background-color: #9b9b9b; }
 
 .gray200 { background-color: #e1e1e1; }
-
-.list-group-details .form-group { margin-bottom: 0; }
-.list-group-details .control-label { padding-top: 3px; padding-right: 0; text-align: left; }
-.list-group-details .control-label strong { font-weight: normal; padding-right: .3em; color: #4e4e4e; background-color: #fff; }
-.list-group-details .control-label:before { float: left; width: 0; content: '..........................................'; white-space: nowrap; color: #9b9b9b; }
-.list-group-details .form-control-static { padding-top: 2px; padding-bottom: 2px; padding-left: .3em; word-wrap: break-word; background-color: #fff; }
 
 .view-animate { transition: all .3s; }
 .view-animate.ng-enter, .view-animate.ng-leave { opacity: 1; }

@@ -1,29 +1,108 @@
-
+// Base class
 .panel {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  &.panel-default {
-    border-color: $nav-tabs-border-color;
-    .panel-heading {
-      background-color: tint($pb-blue-300, 10%);;
-      border-bottom-color: $nav-tabs-border-color;
-    }
+  margin-bottom: $line-height-computed;
+  background-color: $panel-bg;
+  border: 1px solid #F0F0F0;
+  border-radius: $panel-border-radius;
+  box-shadow: inset 0 1px 0 #E1E1E1;
+}
+
+// Panel contents
+.panel-body {
+  padding: $panel-body-padding;
+  @include clearfix;
+}
+
+// Optional heading
+.panel-heading {
+  padding: 15px 0 10px;
+  margin: 0 $panel-body-padding;
+  background-color: transparent;
+  border-bottom: 1px solid #E1E1E1;
+  border-radius: 0;
+  font-family: $font-family-ps-regular;
+  font-size: 16px;
+  color: #2E2E2E;
+  .panel-filled-heading & {
+    margin: 0;
+    padding: 15px $panel-body-padding 10px;
+  }
+
+  > .dropdown .dropdown-toggle {
+    color: inherit;
+  }
+  + .panel-body {
+    padding-top: 20px;
+  }
+}
+// Within heading, strip any `h*` tag of its default margins for spacing.
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $font-family-ps-regular;
+  font-size: 16px;
+  color: #2E2E2E;
+
+  > a,
+  > small,
+  > .small,
+  > small > a,
+  > .small > a {
+    color: inherit;
   }
 }
 
-.panel-footer {
-  background-color: $pb-bg2;
-  border-top-color: $nav-tabs-border-color;
+// Contextual variations
+//$border, $heading-text-color, $heading-bg-color, $heading-border
+.panel-default {
+  @include panel-variant($panel-default-border, #2E2E2E, $panel-default-heading-bg, $panel-default-border);
+}
+.panel-filled-heading {
+  @include panel-variant($panel-default-border, #2E2E2E, rgba(200, 200, 200, .2), transparent);
 }
 
-// simple row divider
-.row.divider {
-  hr {
-    margin: 30px 15px;
-    color: $nav-tabs-border-color;
-  }
-}
+
+
+
+
+//
+// .panel {
+//
+//   box-shadow: none;
+//   &.panel-default {
+//     border-color: $nav-tabs-border-color;
+//     .panel-heading {
+//       background-color: tint($pb-blue-300, 10%);;
+//       border-bottom-color: $nav-tabs-border-color;
+//     }
+//   }
+// }
+//
+// .panel-footer {
+//   background-color: $pb-bg2;
+//   border-top-color: $nav-tabs-border-color;
+// }
+//
+// // simple row divider
+// .row.divider {
+//   hr {
+//     margin: 30px 15px;
+//     color: $nav-tabs-border-color;
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // draggable /
 .column {
@@ -45,52 +124,5 @@
   color: $pb-gray-300;
   &:hover {
     color: $brand-primary;
-  }
-}
-// Miller Columns
-.miller-columns {
-  margin-bottom: 20px;
-  .panel {
-    height: 100%;
-    overflow-y: auto;
-  }
-  .first-column {
-    padding-right: 0;
-    height: 100%;
-    .panel-default {
-      border-right: 0;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      .panel-heading {
-        border-top-right-radius: 0;
-      }
-    }
-  }
-  .inner-column {
-    padding-left: 0;
-    padding-right: 0;
-    height: 100%;
-    .panel-default {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      .panel-heading {
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-      }
-    }
-  }
-  .last-column {
-    padding-left: 0;
-    height: 100%;
-    .panel-default {
-      border-left: 0;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      .panel-heading {
-        border-top-left-radius: 0;
-      }
-    }
   }
 }

@@ -389,17 +389,7 @@ ol {
   font-size: 14px;
 }
 
-.panel-heading {
-  font-family: $font-family-ps-regular;
-  font-size: 14px;
-  font-weight: normal;
 
-  // tables inside panel heads, edge case
-  td,
-  th {
-    font-family: $font-family-base;
-  }
-}
 
 // boostrap makes changing the weight of the logo quite difficult
 #header .navbar .navbar-brand.brand-text,
