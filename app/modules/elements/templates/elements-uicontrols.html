@@ -63,9 +63,9 @@
       <div class="row">
         <div class="col-md-5">
           <figure>
-            <figcaption>Normal</figcaption>
+            <figcaption>Default</figcaption>
             <div class="form-group">
-              <label>Text input label</label>
+              <label>Text label</label>
               <input class="form-control" name="text1" placeholder="Optional placeholder text" type="text"/>
             </div>
           </figure>
@@ -73,7 +73,7 @@
           <figure>
             <figcaption>Active (Focused)</figcaption>
             <div class="form-group">
-              <label>Text input label</label>
+              <label>Text label</label>
               <input class="form-control focus" name="text1" type="text" value="Some text has been entered"/>
             </div>
           </figure>
@@ -84,7 +84,7 @@
           <figure>
             <figcaption>Disabled</figcaption>
             <div class="form-group">
-              <label>Text input label</label>
+              <label>Text label</label>
               <input class="form-control" disabled="disabled" name="text1" type="text"/>
             </div>
           </figure>
@@ -92,7 +92,7 @@
           <figure>
             <figcaption>Error</figcaption>
             <div class="form-group has-error">
-              <label>Text field with error</label>
+              <label>Text label</label>
               <input class="form-control" type="text" value="I was entered in error!">
               <span class="help-block text-error">Please enter a valid name.</span>
             </div>
@@ -128,7 +128,7 @@
       <div class="row">
         <div class="col-md-5">
           <figure>
-            <figcaption>Standard input</figcaption>
+            <figcaption>Default</figcaption>
             <div class="form-group">
               <label>Text label</label>
               <input class="form-control" type="text">
@@ -136,7 +136,7 @@
           </figure>
 
           <figure>
-            <figcaption>Small input</figcaption>
+            <figcaption>Small Input</figcaption>
             <div class="form-group">
               <label>Text label</label>
               <input class="form-control input-sm" placeholder=".input-sm" type="text">
@@ -146,9 +146,9 @@
 
         <div class="col-md-5">
           <figure>
-            <figcaption>Large input</figcaption>
+            <figcaption>Large Input</figcaption>
             <div class="form-group">
-              <label>Text Label</label>
+              <label>Text label</label>
               <input class="form-control input-lg" placeholder=".input-lg" type="text">
             </div>
           </figure>
@@ -212,7 +212,7 @@
       <div class="row">
         <div class="col-md-5">
           <figure>
-            <figcaption>Help text below field</figcaption>
+            <figcaption>Help text below Field</figcaption>
             <div class="form-group">
               <label>Text field label</label>
               <input class="form-control" type="text">
@@ -223,7 +223,7 @@
 
         <div class="col-md-5">
           <figure>
-            <figcaption>Help icon next to label</figcaption>
+            <figcaption>Help icon next to Label</figcaption>
             <div class="form-group">
               <label>Text field label
                 <i class="fa fa-info-circle"></i>
@@ -233,7 +233,10 @@
           </figure>
         </div>
       </div>
-      <div class="row col-md-5">
+      <div class="row">
+
+
+      <div class="col-md-5">
         <figure>
           <figcaption>Optional field</figcaption>
           <div class="form-group">
@@ -242,7 +245,16 @@
           </div>
         </figure>
       </div>
-      <div class="row col-md-5"></div>
+      <div class="col-md-5">
+        <figure>
+          <figcaption>Read-only field</figcaption>
+          <div class="form-group">
+            <label>Text field label</label>
+            <input class="form-control" type="text" readonly="readonly">
+          </div>
+        </figure>
+      </div>
+          </div>
 
     </div>
   </div>
@@ -454,7 +466,7 @@
     <div class="row">
       <div class="col-md-5">
         <figure>
-          <figcaption>Standard dropdown</figcaption>
+          <figcaption>Default Dropdown</figcaption>
           <div class="form-group">
             <label>Text label</label>
             <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
@@ -464,7 +476,7 @@
         </figure>
 
         <figure>
-          <figcaption>Focused dropdown</figcaption>
+          <figcaption>Default Dropdown, Focused</figcaption>
           <div class="form-group">
             <label>Text label</label>
             <select class="form-control focus" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
@@ -477,7 +489,7 @@
       <div class="col-md-5">
 
         <figure>
-          <figcaption>Disabled dropdown</figcaption>
+          <figcaption>Default Dropdown, Disabled</figcaption>
           <div class="form-group">
             <label>Text label</label>
             <select class="form-control" disabled ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
@@ -487,7 +499,7 @@
         </figure>
 
         <figure>
-          <figcaption>Error dropdown</figcaption>
+          <figcaption>Default Dropdown, with Error</figcaption>
           <div class="form-group has-error">
             <label>Text label</label>
             <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
@@ -521,10 +533,6 @@
 
 </div>
 
-
-
-
-
 <div class="row">
   <div class="col-md-12">
     <h2 class="doc-sectionhead">Sizes</h2>
@@ -550,7 +558,7 @@
     <div class="row">
       <div class="col-md-5">
         <figure>
-          <figcaption>Standard</figcaption>
+          <figcaption>Default</figcaption>
           <div class="form-group">
             <label>Text label</label>
             <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
@@ -676,20 +684,20 @@
     <div class="row">
       <div class="col-md-10">
         <figure>
-          <figcaption>Single-select with type-ahead</figcaption>
+          <figcaption>Single-select with Type-ahead</figcaption>
           <div class="form-group">
             <label>Text label</label>
             <select ng-model="inputs.countrySelect.selected" options="inputs.countrySelect.countries" selectize="inputs.countrySelect.options" type="text"></select>
           </div>
         </figure>
         <figure>
-          <figcaption>Multi-select with tokens</figcaption>
+          <figcaption>Multi-select with Tokens</figcaption>
           <div class="form-group">
             <label>Text label</label><input ng-model="inputs.multiCountrySelect.selected" options="inputs.countrySelect.countries" selectize="inputs.multiCountrySelect.options" type="text"/>
           </div>
         </figure>
         <figure>
-          <figcaption>Custom menu items</figcaption>
+          <figcaption>Custom Menu Items</figcaption>
           <div class="form-group">
             <label>Text label</label><select ng-model="inputs.peopleSelect.selected" options="inputs.peopleSelect.people" selectize="inputs.peopleSelect.options"></select>
           </div>
@@ -766,7 +774,7 @@
     <figure>
       <div class="row">
         <div class="col-md-7">
-          <figcaption>Enhanced checkboxes</figcaption>
+          <figcaption>Enhanced Checkboxes</figcaption>
           <div class="checkbox checkbox-enhanced">
             <input checked id="check4" type="checkbox">
             <label for="check4">Checkbox</label>
@@ -783,7 +791,7 @@
           </div>
         </div>
         <div class="col-md-5">
-          <figcaption>Standard OS checkboxes</figcaption>
+          <figcaption>Default OS Checkboxes</figcaption>
           <div class="checkbox">
             <label for="c1">
               <input checked id="c1" type="checkbox">
@@ -805,7 +813,7 @@
       </div>
       <div class="row">
         <div class="col-md-7">
-          <figcaption>Enhanced checkboxes</figcaption>
+          <figcaption>Enhanced Checkboxes</figcaption>
           <div class="enhanced-inline">
             <div class="checkbox checkbox-enhanced">
               <input checked id="check7" type="checkbox">
@@ -822,7 +830,7 @@
           </div>
         </div>
         <div class="col-md-5">
-          <figcaption>Standard OS checkboxes</figcaption>
+          <figcaption>Default OS Checkboxes</figcaption>
           <label class="checkbox-inline">
             <input type="checkbox" id="inlineCheckbox1" value="option1" checked> 1
           </label>
@@ -881,7 +889,7 @@
 
 <div class="row">
   <div class="col-md-8">
-    <h1 class="doc-head" id="radios">Radio buttons</h1>
+    <h1 class="doc-head" id="radios">Radio Buttons</h1>
   </div>
 </div>
 
@@ -908,7 +916,7 @@
     <div class="row">
       <figure>
         <div class="col-md-7">
-          <figcaption>Enhanced radio buttons</figcaption>
+          <figcaption>Enhanced Radio Buttons</figcaption>
           <div class="radio radio-enhanced">
             <input checked id="radio3" name="radioOptions" type="radio">
             <label for="radio3">Radio</label>
@@ -925,7 +933,7 @@
           </div>
         </div>
         <div class="col-md-5">
-          <figcaption>Standard OS radio buttons</figcaption>
+          <figcaption>Default OS Radio Buttons</figcaption>
 
           <div class="radio">
             <label for="rd11">
@@ -950,7 +958,7 @@
     <div class="row">
       <figure>
         <div class="col-md-7">
-          <figcaption>Enhanced radio buttons</figcaption>
+          <figcaption>Enhanced Radio Buttons</figcaption>
           <div class="enhanced-inline">
             <div class="radio radio-enhanced">
               <input checked id="radioA" name="radioOptionsInline" type="radio">
@@ -969,7 +977,7 @@
           </div>
         </div>
         <div class="col-md-5">
-          <figcaption>Standard OS radio buttons</figcaption>
+          <figcaption>Default OS Radio Buttons</figcaption>
           <label class="radio-inline">
             <input type="radio" name="inlineRadioOptions" id="inlineRadio33" value="option1"> 1
           </label>
@@ -1041,6 +1049,9 @@
 <div class="row ">
   <div class="col-md-3">
     <p>Use the stepper when you want users to select incrementally from a wide range of values, or input their own value.</p>
+    <p>
+      Steppers, like all Boostrap form controls, expand to fill the width of their container.
+    </p>
 
     <p class="more-info">
     <a href="https://github.com/xFlatlinex/Numeric-Stepper" target="_blank">More info
@@ -1051,7 +1062,7 @@
   <div class="col-md-7 col-md-offset-1">
     <div class="row">
       <div class="col-md-5">
-        <div class="form-group"><input class="form-control" options="numericStepper" pb-numeric-stepper type="text" value="10"></div>
+        <div class="form-group"><input class="form-control" options="numericStepper" pb-numeric-stepper type="text" value="42"></div>
       </div>
     </div>
   </div>
@@ -1113,7 +1124,7 @@
     <div class="row">
       <div class="col-md-5">
         <figure>
-          <figcaption>Standard switch</figcaption>
+          <figcaption>Default Switch</figcaption>
             <div class="form-group">
               <label>Text label</label>
               <div model="inputs.switchStatus1" toggle-switch>&nbsp;</div>
@@ -1123,7 +1134,7 @@
 
       <div class="col-md-5">
         <figure>
-          <figcaption>Standard switch disabled</figcaption>
+          <figcaption>Default Switch Disabled</figcaption>
           <div class="form-group">
             <label>Text label</label>
             <div is-disabled="disabled" model="inputs.switchStatus2" toggle-switch>&nbsp;</div>
