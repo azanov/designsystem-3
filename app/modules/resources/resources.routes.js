@@ -15,16 +15,14 @@
       }
     })
 
-    .state('resources.page', {
-      url: '',
-      views: {
-        developers: {
-          templateUrl: 'modules/resources/templates/resources-developers.html'
-        },
-        designers: {
-          templateUrl: 'modules/resources/templates/resources-designers.html'
-        }
-      }
+    .state('resources.strategy', {
+      url: '/strategy',
+      templateUrl: 'modules/resources/templates/resources-strategy.html'
+    })
+
+    .state('resources.tools', {
+      url: '/tools',
+      templateUrl: 'modules/resources/templates/resources-tools.html'
     });
 
   });
