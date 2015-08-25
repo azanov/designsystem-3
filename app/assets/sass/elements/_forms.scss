@@ -227,9 +227,10 @@ a.list-group-item {
   }
 
   &[readonly] {
-    background-color: $input-bg-disabled;
-    border-color: $input-border-disabled;
+    background-color: lighten($input-bg-disabled, 3%);
+    border-color: lighten($input-border-disabled, 8%);
     color: #4e4e4e;
+    pointer-events: none;
   }
 
 }
