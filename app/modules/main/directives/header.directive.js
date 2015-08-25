@@ -2,9 +2,9 @@
 
   'use strict';
 
-  angular.module('app').directive('header', function() {
+  angular.module('app').directive('pbDsHeader', function() {
     return {
-      restrict: 'E',
+      restrict: 'A',
       templateUrl: 'modules/main/templates/header.html',
       controller: 'HeaderController as header'
     };
