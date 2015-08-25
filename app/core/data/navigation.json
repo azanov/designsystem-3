@@ -131,6 +131,9 @@
             }, {
               "label": "Typography",
               "value": "mobile.typography"
+            }, {
+              "label": "Grid",
+              "value": "mobile.grid"
             }]
         }, {
           "label": "Elements",
@@ -152,6 +155,9 @@
             "label": "Lists & Grids",
             "value": "mobile.lists-grids"
           }, {
+            "label": "User Feedback",
+            "value": "mobile.user-feedback"
+          }, {
             "label": "---------",
             "value": "--"
           }, {
@@ -165,6 +171,27 @@
           "children": [{
             "label": "Navigation",
             "value": "mobile.navigation"
+          }, {
+            "label": "Sign in & Sign Up",
+            "value": "mobile.sign-in-up"
+          }, {
+            "label": "Welcome",
+            "value": "mobile.welcome"
+          }, {
+            "label": "Getting Started",
+            "value": "mobile.getting-started"
+          }, {
+            "label": "Home Page",
+            "value": "mobile.homepage"
+          }, {
+            "label": "Search & Results",
+            "value": "mobile.search-results"
+          }, {
+            "label": "Forms",
+            "value": "mobile.forms"
+          }, {
+            "label": "Maps",
+            "value": "mobile.maps"
           }]
         }]
       }]
