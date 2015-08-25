@@ -204,28 +204,34 @@ a.list-group-item {
     @extend %fancy-focus;
   }
 
+  .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #f0f0f0;
+    border-color: #dbdbdb;
+    color: #c0c0c0;
+    opacity: 1;
+}
 
-  // Placeholder
-  //@include placeholder;
   // Disabled and read-only inputs
   //
   // HTML5 says that controls under a fieldset > legend:first-child won't be
   // disabled if the fieldset is disabled. Due to implementation difficulty, we
   // don't honor that edge case; we style them as disabled anyway.
+
   &[disabled],
-  &[readonly],
   fieldset[disabled] & {
     background-color: $input-bg-disabled;
     border-color: $input-border-disabled;
     color: $input-color-disabled;
+    cursor: $cursor-disabled;
     opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
   }
 
-
-  &[disabled],
-  fieldset[disabled] & {
-    cursor: $cursor-disabled;
+  &[readonly] {
+    background-color: $input-bg-disabled;
+    border-color: $input-border-disabled;
+    color: #4e4e4e;
   }
+
 }
 
 //****  INPUT GROUPS ***************************
