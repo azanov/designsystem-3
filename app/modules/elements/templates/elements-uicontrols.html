@@ -233,13 +233,23 @@
           </figure>
         </div>
       </div>
+      <div class="row col-md-5">
+        <figure>
+          <figcaption>Optional field</figcaption>
+          <div class="form-group">
+            <label>Text field label <span class="optional">(optional)</span></label>
+            <input class="form-control" type="text">
+          </div>
+        </figure>
+      </div>
+      <div class="row col-md-5"></div>
 
     </div>
   </div>
 
 
 
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-md-12">
       <h2 class="doc-sectionhead">Password Fields</h2>
     </div>
@@ -254,7 +264,7 @@
       <div class="post-it">NEED IMAGE</div>
     </div>
   </div>
-
+ -->
 
 
 
@@ -595,14 +605,14 @@
       <li>Use extreme caution with preselecting an item, especially in required or critical menus &mdash; only do so if at least 80% of users are likely to select that item.</li>
     </ul>
   </div>
-</div>
 
-  <div class="col-md-7 col-md-offset-1">
+
+  <div class="col-md-8 col-md-offset-1">
 
     <div class="row">
       <div class="col-md-5">
         <figure>
-          <figcaption>Multi-select (Ctrl/Cmd-click)</figcaption>
+          <figcaption>Multi-Row Select Menu (Ctrl/Cmd-click)</figcaption>
           <div class="form-group">
             <label>Text label</label>
             <select class="form-control" multiple ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople" size="6"></select>
@@ -610,7 +620,7 @@
         </figure>
 
         <figure>
-          <figcaption>Fake multi-select with checkboxes</figcaption>
+          <figcaption>Multi-Row Select Menu with Checkboxes</figcaption>
           <div class="form-group">
             <label>Text label</label>
             <div class="checkboxList form-control">
@@ -627,15 +637,15 @@
 
       <div class="col-md-5">
         <figure>
-          <figcaption>Multi-select Disabled</figcaption>
+          <figcaption>Multi-Row Select Menu (Disabled)</figcaption>
           <div class="form-group">
             <label>Text label</label>
-            <select class="form-control" disabled multiple ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople" size="6"></select>
+            <select class="form-control" disabled multiple ng-model="selectedPersonn" ng-options="person.full_name for person in inputs.samplePeople" size="6"></select>
           </div>
         </figure>
       </div>
     </div>
-
+  </div>
   </div>
 </div>
 
@@ -644,7 +654,7 @@
 
 <div class="row">
   <div class="col-md-12">
-    <h2 class="doc-sectionhead">Advanced select menus</h2>
+    <h2 class="doc-sectionhead">Advanced Select Menus</h2>
   </div>
 </div>
 <div class="row">
@@ -1047,7 +1057,7 @@
   </div>
 </div>
 
-
+<!--
 <div class="row">
   <div class="col-md-12">
     <h2 class="doc-sectionhead">Range slider</h2>
@@ -1072,7 +1082,7 @@
     </figure>
   </div>
 </div>
-
+ -->
 
 
 
