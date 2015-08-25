@@ -33,6 +33,15 @@ label {
   }
 }
 
+.read-only-data {
+  label {
+    margin: 5px 0 0;
+    + p {
+      font-weight: bold;
+    }
+  }
+}
+
 
 fieldset {
   margin-top: 40px;

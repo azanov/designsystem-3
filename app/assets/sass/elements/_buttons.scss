@@ -25,9 +25,10 @@
 .btn.btn-default-ko {
   color: $button-primary;
   background-color: #fff;
-  border-radius: 40px;
+  border-radius: 20px;
   border: 1px solid #fff;
-  padding: 10px 30px;
+  padding: $padding-base-vertical $padding-large-horizontal;
+  min-width: 120px;
 
   &:disabled {
     color: #fff;

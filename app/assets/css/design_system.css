@@ -479,7 +479,7 @@ div.accordion-group .panel.active .panel-title:before { content: '\25B8'; -webki
 .btn-group-borderless .btn-default.disabled, .btn-group-borderless .btn-default.disabled:hover, .btn-group-borderless .btn-default.disabled.hover, .btn-group-borderless .btn-default.disabled:focus, .btn-group-borderless .btn-default.disabled.focus, .btn-group-borderless .btn-default.disabled:active, .btn-group-borderless .btn-default.disabled.active, .btn-group-borderless .btn-default[disabled], .btn-group-borderless .btn-default[disabled]:hover, .btn-group-borderless .btn-default[disabled].hover, .btn-group-borderless .btn-default[disabled]:focus, .btn-group-borderless .btn-default[disabled].focus, .btn-group-borderless .btn-default[disabled]:active, .btn-group-borderless .btn-default[disabled].active, fieldset[disabled] .btn-group-borderless .btn-default, fieldset[disabled] .btn-group-borderless .btn-default:hover, fieldset[disabled] .btn-group-borderless .btn-default.hover, fieldset[disabled] .btn-group-borderless .btn-default:focus, fieldset[disabled] .btn-group-borderless .btn-default.focus, fieldset[disabled] .btn-group-borderless .btn-default:active, fieldset[disabled] .btn-group-borderless .btn-default.active { background-color: #8b98c8; border-color: #3e53a4; color: #3e53a4; }
 .btn-group-borderless .btn-default .badge { color: #fff; background-color: #cf0989; margin-left: 10px; }
 
-.btn.btn-default-ko { color: #3e53a4; background-color: #fff; border-radius: 40px; border: 1px solid #fff; padding: 10px 30px; }
+.btn.btn-default-ko { color: #3e53a4; background-color: #fff; border-radius: 20px; border: 1px solid #fff; padding: 6px 16px; min-width: 120px; }
 .btn.btn-default-ko:disabled { color: #fff; background-color: transparent; opacity: 0.5; }
 .btn.btn-default-ko:hover { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
 .btn.btn-default-ko:active { opacity: 0.8; }
@@ -603,6 +603,9 @@ label .optional { font-size: 12px; font-style: italic; }
 
 .help-block.text-error { display: none; }
 .has-error .help-block.text-error { display: block; color: #dc0000; }
+
+.read-only-data label { margin: 5px 0 0; }
+.read-only-data label + p { font-weight: bold; }
 
 fieldset { margin-top: 40px; }
 fieldset legend { color: #4e4e4e; }
