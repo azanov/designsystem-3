@@ -48,7 +48,7 @@
         <li>Never include punctuation</li>
       </ul>
     </div>
-    <div class="col-md-8 col-md-offset-1">
+    <div class="col-md-9">
           <div class="row">
             <div class="col-md-12">
               <h2 class="doc-sectionhead" style="margin-top:0;">Primary</h2>
@@ -119,12 +119,7 @@
 
         <div class="row">
           <div class="doc-gradient clearfix" style="margin: 10px 15px; padding: 15px 20px;">
-            <div class="col-md-4 spacer-top-xs">
-              <figure>
-                <figcaption class="ko">Disabled</figcaption>
-                  <button class="btn btn-default-ko " disabled="disabled">Tertiary</button>
-              </figure>
-            </div>
+
 
             <div class="col-md-4 spacer-top-xs">
               <figure>
@@ -140,6 +135,12 @@
               </figure>
             </div>
 
+            <div class="col-md-4 spacer-top-xs">
+              <figure>
+                <figcaption class="ko">Disabled</figcaption>
+                  <button class="btn btn-default-ko " disabled="disabled">Tertiary</button>
+              </figure>
+            </div>
 
           </div>
         </div>
@@ -160,7 +161,7 @@
 
 
   <!-- button sizes -->
-  <div class="row spacer-top-xl">
+  <div class="row">
     <div class="col-md-12">
       <h2 class="doc-sectionhead">Button Sizes</h2>
     </div>
@@ -178,7 +179,7 @@
 
     <div class="col-md-6">
       <figure>
-        <figcaption>Regular</figcaption>
+        <figcaption>Default</figcaption>
           <button class="btn btn-primary">Primary</button>
           <button class="btn btn-default">Secondary</button>
           <button class="btn btn-link">Link</button>
@@ -210,7 +211,7 @@
 
 
   <!-- icon buttons -->
-  <div class="row spacer-top-xl">
+  <div class="row">
     <div class="col-md-12">
       <h2 class="doc-sectionhead">Icon Buttons</h2>
     </div>
@@ -220,7 +221,7 @@
 
     <div class="col-md-3">
       <figure>
-        <figcaption>Regular</figcaption>
+        <figcaption>Default</figcaption>
           <button class="btn btn-primary"><i class="fa fa-fw fa-envelope"></i> Send</button>
           <button class="btn btn-default"><i class="fa fa-fw fa-download"></i> Download</button>
       </figure>
@@ -230,7 +231,7 @@
 
 
   <!-- block buttons -->
-  <div class="row spacer-top-xl">
+  <div class="row">
     <div class="col-md-12">
       <h2 class="doc-sectionhead">Block Buttons</h2>
     </div>
@@ -240,7 +241,7 @@
 
     <div class="col-md-3">
       <figure>
-        <figcaption>Regular</figcaption>
+        <figcaption>Default</figcaption>
         <button class="btn btn-primary btn-block">Block Button</button>
         <button class="btn btn-default btn-block">Block Button</button>
       </figure>
@@ -255,11 +256,14 @@
   <div class="row spacer-top-xl">
     <div class="col-md-12">
       <h2 class="doc-sectionhead">Group Buttons</h2>
+      <p>
+        Group a series of buttons together on a single line with the button group.
+      </p>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-3">
       <figure>
         <figcaption>Standard Button Group</figcaption>
         <div class="btn-group">
@@ -278,6 +282,7 @@
         </div>
       </figure>
     </div>
+
 
     <div class="col-md-6">
       <figure>
@@ -300,34 +305,105 @@
     </div>
   </div>
 
+  <div class="row spacer-top-lg">
+    <div class="col-md-12">
+      <p>
+        You can also add/use icons to create a quick toolbar.  For guidelines on Toolbars, please see <i>Elements &gt; Tables &gt; Datatables</i>.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-5">
+      <figure>
+        <figcaption>Icon Button Group</figcaption>
+        <div class="btn-group">
+          <div class="btn-group">
+            <button class="btn btn-default" type="button"><i class="fa fa-commenting"></i></button>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-default" type="button"><i class="fa fa-hand-stop-o"></i></button>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-default" type="button"><i class="fa fa-clone"></i></button>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-default" type="button"><i class="fa fa-object-ungroup"></i></button>
+          </div>
+        </div>
+      </figure>
+      <figure>
+        <figcaption>Icon Button Multiple Groups</figcaption>
+
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group" role="group" aria-label="First group">
+            <button type="button" class="btn btn-default">1</button>
+            <button type="button" class="btn btn-default">2</button>
+            <button type="button" class="btn btn-default">3</button>
+            <button type="button" class="btn btn-default">4</button>
+          </div>
+          <div class="btn-group" role="group" aria-label="Second group">
+            <button type="button" class="btn btn-default">5</button>
+            <button type="button" class="btn btn-default">6</button>
+            <button type="button" class="btn btn-default">7</button>
+          </div>
+          <div class="btn-group" role="group" aria-label="Third group">
+            <button type="button" class="btn btn-default">8</button>
+          </div>
+        </div>
+
+      </figure>
+    </div>
+    <div class="col-md-3">
+      <figure>
+        <figcaption>Icon Vertical Button Group</figcaption>
+        <div class="btn-group btn-group-vertical">
+          <div class="btn-group">
+            <button class="btn btn-default" type="button"><i class="fa fa-commenting"></i></button>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-default" type="button"><i class="fa fa-hand-stop-o"></i></button>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-default" type="button"><i class="fa fa-clone"></i></button>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-default" type="button"><i class="fa fa-object-ungroup"></i></button>
+          </div>
+        </div>
+      </figure>
+    </div>
+    <div class="col-md-3">
+      <figure>
+        <figcaption>Vertical Button Group</figcaption>
+        <div class="btn-group btn-group-vertical">
+          <div class="btn-group">
+            <button class="btn btn-default" type="button">One</button>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-default" type="button">Two</button>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-default" type="button">Three</button>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-default" type="button">Four</button>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </div>
+
 
 
   <!-- toggle buttons -->
-  <div class="row spacer-top-xl">
+  <div class="row">
     <div class="col-md-12">
       <h2 class="doc-sectionhead">Toggle Buttons</h2>
     </div>
   </div>
 
   <div class="row">
-
-
-    <!-- <div class="col-md-4">
-      <figure>
-        <figcaption>Checkbox (multiple selection)</figcaption>
-        <div class="btn-group" data-toggle="buttons">
-          <label class="btn btn-default active">
-            <input type="checkbox" autocomplete="off" checked> Checkbox 1
-          </label>
-          <label class="btn btn-default">
-            <input type="checkbox" autocomplete="off"> Checkbox 2
-          </label>
-          <label class="btn btn-default">
-            <input type="checkbox" autocomplete="off"> Checkbox 3
-          </label>
-        </div>
-      </figure>
-    </div> -->
 
     <div class="col-md-3">
       <figure>
@@ -371,31 +447,17 @@
 
 
   <!-- dropdown buttons -->
-  <div class="row spacer-top-xl">
+  <div class="row">
     <div class="col-md-12">
-      <h2 class="doc-sectionhead">Dropdown Buttons</h2>
+      <h2 class="doc-sectionhead">Single Button Dropdown</h2>
+      <p>Turn a button into a dropdown toggle with some basic markup changes.</p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-4">
       <figure>
-        <figcaption>Dropdown Button Sizes</figcaption>
-
-        <!-- <div class="btn-group">
-          <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
-            Large
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div> -->
-
+        <figcaption>Dropdown Button</figcaption>
         <div class="btn-group">
           <button class="btn btn-default btn dropdown-toggle" type="button" data-toggle="dropdown">
             Button
@@ -409,101 +471,9 @@
             <li><a href="#">Separated link</a></li>
           </ul>
         </div>
-
-        <!-- <div class="btn-group">
-          <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
-            Small
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div>
-
-        <div class="btn-group">
-          <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
-            Extra small
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div> -->
-
       </figure>
     </div>
 
-    <div class="col-md-5">
-      <figure>
-        <figcaption>Split Dropdown Button</figcaption>
-        <!-- <div class="btn-group">
-          <button class="btn btn-default btn-lg" type="Button">Large</button>
-          <button class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown">
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div> -->
-
-        <div class="btn-group">
-        <button class="btn btn-default" type="Button">Button</button>
-        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-        </div>
-
-        <!-- <div class="btn-group">
-        <button class="btn btn-default btn-sm" type="Button">Small</button>
-        <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-        </div>
-
-        <div class="btn-group">
-        <button class="btn btn-default btn-xs" type="Button">Extra Small</button>
-        <button class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-        </div> -->
-      </figure>
-    </div>
-  </div>
-
-  <div class="row spacer-top-xl">
     <div class="col-md-5">
       <figure>
         <figcaption>Dropdown Button in Button Group</figcaption>
@@ -524,9 +494,41 @@
           </div>
         </div>
       </figure>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Split Button Dropdowns</h2>
+      <p>Place a <code>.btn-group</code> within another <code>.btn-group</code> when you want dropdown menus mixed with a series of buttons.</p>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-3">
+      <figure>
+        <figcaption>Split Dropdown Button</figcaption>
+
+        <div class="btn-group">
+        <button class="btn btn-default" type="Button">Button</button>
+        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+        </div>
+
+      </figure>
     </div>
 
-    <div class="col-md-5">
+    <div class="col-md-3">
       <figure>
         <figcaption>Dropup Buttons</figcaption>
 
@@ -549,8 +551,8 @@
         </div>
 
         <div class="btn-group dropup">
-          <button class="btn btn-default" type="Button">Button</button>
-          <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <button class="btn btn-primary" type="Button">Button</button>
+          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
             <span class="caret"></span>
           </button>
           <ul class="dropdown-menu">
@@ -564,6 +566,47 @@
 
       </figure>
     </div>
+    <div class="col-md-3">
+      <figure>
+        <figcaption>Mixed Buttons and Drop-buttons</figcaption>
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-default">1</button>
+          <button type="button" class="btn btn-default">2</button>
+
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Dropdown link</a></li>
+              <li><a href="#">Dropdown link</a></li>
+            </ul>
+          </div>
+        </div>
+      </figure>
+    </div>
+
+    <div class="col-md-3">
+      <figure>
+        <figcaption>Vertical as well</figcaption>
+        <div class="btn-group-vertical" role="group" aria-label="...">
+          <button type="button" class="btn btn-default">1</button>
+          <button type="button" class="btn btn-default">2</button>
+
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Dropdown link</a></li>
+              <li><a href="#">Dropdown link</a></li>
+            </ul>
+          </div>
+        </div>
+      </figure>
+    </div>
   </div>
 
 
@@ -575,7 +618,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-4">
         <figure>
           <figcaption>Bootstrap Functional Colors</figcaption>
           <button class="btn btn-success">Success</button>
@@ -583,6 +626,28 @@
           <button class="btn btn-warning">Warning</button>
           <button class="btn btn-danger">Danger</button>
         </figure>
+    </div>
+    <div class="col-md-4">
+      <figure>
+        <figcaption>Use colors for any button type</figcaption>
+
+        <div class="btn-group">
+        <button class="btn btn-success" type="Button">Button</button>
+        <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+        </div>
+
+        <button class="btn btn-danger"><i class="fa fa-exclamation-circle"></i> Delete All</button>
+
+      </figure>
     </div>
   </div>
 
