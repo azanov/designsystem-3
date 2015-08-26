@@ -781,7 +781,7 @@ body.landing .landing-gradient input:-moz-placeholder { /* Firefox 18- */ color:
 body.landing .landing-gradient input::-moz-placeholder { /* Firefox 19+ */ color: white; }
 body.landing .landing-gradient input:-ms-input-placeholder { color: white; }
 body.landing .btn-circle { border: solid 1px white; border-radius: 100%; color: white; min-width: 47px; line-height: 47px; padding: 0; }
-body.landing.landing-bgImg { background: linear-gradient(90deg, rgba(72, 77, 162, 0.85) 0%, rgba(135, 46, 150, 0.85) 40%, rgba(135, 46, 150, 0.85) 45%, rgba(201, 13, 139, 0.85) 100%), url("../images/bg-imageDemo.jpeg"); background-repeat: no-repeat; background-position: center; background-size: cover; }
+body.landing.landing-bgImg { background: linear-gradient(90deg, rgba(72, 77, 162, 0.85) 0%, rgba(135, 46, 150, 0.85) 40%, rgba(135, 46, 150, 0.85) 45%, rgba(201, 13, 139, 0.85) 100%), url("../images/bg-imageDemo.png"); background-repeat: no-repeat; background-position: center; background-size: cover; }
 body.landing.landing-bgImg header { background: transparent; }
 body.landing.landing-info .site-content { -webkit-flex-flow: row wrap; -ms-flex-flow: row wrap; flex-flow: row wrap; padding-top: 50px; min-height: calc(100vh - (45px)); -webkit-align-content: space-between; -ms-flex-line-pack: justify; align-content: space-between; }
 body.landing.landing-info .container { -webkit-align-self: flex-start; -ms-flex-item-align: start; align-self: flex-start; }
