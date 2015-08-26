@@ -1,48 +1,59 @@
 <!-- for the gradient -->
-<div class="bg"></div>
+<div class="bg">
 
-<div class="container">
+  <div class="centered-box">
+    <h1 class="prod-name text-center">Product Name</h1>
 
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4 col-xs-12 col-xs-offset-0">
-        <h1 class="prod-name text-center">Product Name</h1>
+    <div class="signin-box">
 
-        <div class="signin-box">
-
-          <form name="myForm" novalidate autocomplete="off">
-            <div class="form-group" ng-class="{'has-error': myForm.name.$error.required  && myForm.name.$dirty}">
-              <label for="name">Username</label>
-              <input class="form-control" type="text" name="name" ng-model="myForm.data.name" ng-model-options="{ updateOn: 'blur' }" required>
-              <span class="help-block" ng-show="myForm.name.$error.required && myForm.name.$dirty">Name is required.</span>
-            </div>
-            <div class="form-group" ng-class="{'has-error': myForm.pwd.$error.required && myForm.pwd.$dirty}">
-              <label for="pwd">Password</label>
-              <input class="form-control" type="password" name="pwd" ng-model="myForm.data.pwd" required>
-              <span class="help-block" ng-show="myForm.pwd.$error.required && myForm.pwd.$dirty">Password is required.</span>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox"> Remember me
-              </label>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block btn-lg spacer-top-xs" ng-click="login()">Sign in</button>
-          </form>
-
-          <p class="text-center spacer-top-md">Forgot <a href="">Username</a> or <a href="">Password</a>?</p>
-          <p class="text-center">Don&rsquo;t have an account? <a href="">Sign up</a></p>
+      <form autocomplete="off" name="myForm" novalidate>
+        <div class="form-group" ng-class="{'has-error': myForm.name.$error.required  && myForm.name.$dirty}">
+          <label for="name">Username</label>
+          <input class="form-control" name="name" ng-model-options="{ updateOn: 'blur' }" ng-model="myForm.data.name" required type="text">
+          <span class="help-block" ng-show="myForm.name.$error.required && myForm.name.$dirty">Name is required.</span>
         </div>
-        <!-- // end white box -->
-
-        <div class="row signin-footer text-center">
-          <div class="col-md-12">
-            <p class="spacer-top-sm spacer-bottom-sm"><a href="http://www.pb.com"><i class="pb-footer-logo ko"></i></a></p>
-
-            <p><small>© 2015 Pitney Bowes Inc. All rights reserved. Privacy<br>
-              Version 2.2&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">Privacy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">Terms &amp; Conditions</a></small></p>
-          </div>
+        <div class="form-group" ng-class="{'has-error': myForm.pwd.$error.required && myForm.pwd.$dirty}">
+          <label for="pwd">Password</label>
+          <input class="form-control" name="pwd" ng-model="myForm.data.pwd" required type="password">
+          <span class="help-block" ng-show="myForm.pwd.$error.required && myForm.pwd.$dirty">Password is required.</span>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox">
+            Remember me
+          </label>
         </div>
 
+        <button class="btn btn-primary btn-block btn-lg spacer-top-xs" ng-click="login()" type="submit">Sign in</button>
+      </form>
+
+      <p class="text-center spacer-top-md">Forgot
+        <a href="">Username</a>
+        or
+        <a href="">Password</a>?</p>
+      <p class="text-center">Don&rsquo;t have an account?
+        <a href="">Sign up</a>
+      </p>
+    </div>
+<!-- // end white box -->
+
+    <div class="row signin-footer text-center">
+      <div class="col-md-12">
+        <p class="spacer-top-sm spacer-bottom-sm">
+          <a href="http://www.pb.com">
+            <i class="pb-footer-logo ko"></i>
+          </a>
+        </p>
+
+        <p>
+          <small>© 2015 Pitney Bowes Inc. All rights reserved. Privacy<br>
+            Version 2.2&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="">Privacy</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="">Terms &amp; Conditions</a>
+          </small>
+        </p>
+      </div>
     </div>
   </div>
+
 </div>

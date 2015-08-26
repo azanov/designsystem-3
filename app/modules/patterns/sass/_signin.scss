@@ -4,20 +4,28 @@
 .signin {
 
   .bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    width: 100vw;
+    height: 100vh;
     background-color: #254d9d;
     background: linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%);
     background-size: cover;
     background-repeat: no-repeat;
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   header, #header,
   footer, #footer {
     display: none;
+  }
+
+  .centered-box {
+    min-width: 400px;
   }
 
   .signin-box {
@@ -27,6 +35,7 @@
 
   .prod-name {
     color: #fff;
+    margin-top: 0;
   }
 
   .signin-footer {
