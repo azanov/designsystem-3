@@ -79,9 +79,6 @@
             "label": "Getting Started",
             "value": "patterns.gettingstarted"
           }, {
-            "label": "Faceted Filtering",
-            "value": "patterns.facetedsearch"
-          }, {
             "label": "Welcome & Landing",
             "value": "patterns.welcome"
           }, {

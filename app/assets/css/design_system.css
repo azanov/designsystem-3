@@ -731,14 +731,15 @@ a.app-launcher { height: 16px; width: 16px; margin-top: 10px; background: transp
 
 @media (min-width: 1200px) { .navbar-nav > li > a { padding-top: 15px; padding-bottom: 15px; padding-right: 21px; padding-left: 21px; } }
 .navbar-default { background-color: transparent; border: 0; border-radius: 0; border-bottom: 0; }
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus { color: white; }
+.navbar-default .navbar-nav > li > a:hover { color: white; }
+.navbar-default .navbar-nav > li > a:focus { color: rgba(255, 255, 255, 0.75); }
 .navbar-default .navbar-toggle { border-color: #fff; background-color: rgba(62, 83, 164, 0.5); border-radius: 0; }
 .navbar-default .navbar-toggle .icon-bar { background-color: #fff; }
 .navbar-default .navbar-nav .divider-vertical { height: 30px; margin: 10px 5px; border-left: 1px solid rgba(255, 255, 255, 0.3); }
 .navbar-default .navbar-nav > li > a { color: rgba(255, 255, 255, 0.75); font-size: 14px; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-weight: normal; }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus { background-color: #fff; color: #3e53a4; }
 .navbar-default .navbar-brand { float: left; padding: 15px 15px; font-size: 24px; line-height: 20px; color: #fff; height: 50px; font-family: "PrecisionSans_W_Bd", "Helvetica Neue", Arial, sans-serif; }
-.navbar-default .navbar-brand:hover { color: #fff; }
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus { color: #fff; }
 .navbar-default .navbar-brand > img { display: block; margin-top: -7px; }
 .navbar-default .navbar-brand a { color: inherit; }
 .navbar-default .navbar-brand a:hover { color: inherit; }
