@@ -78,6 +78,11 @@
       templateUrl: 'modules/mobile/templates/mobile-sign-in-up.html'
     })
 
+    .state('mobile.onboarding', {
+      url: '/onboarding',
+      templateUrl: 'modules/mobile/templates/mobile-onboarding.html'
+    })
+
     .state('mobile.welcome', {
       url: '/welcome',
       templateUrl: 'modules/mobile/templates/mobile-welcome.html'
@@ -86,6 +91,11 @@
     .state('mobile.getting-started', {
       url: '/getting-started',
       templateUrl: 'modules/mobile/templates/mobile-getting-started.html'
+    })
+
+    .state('mobile.landing', {
+      url: '/landing',
+      templateUrl: 'modules/mobile/templates/mobile-landing.html'
     })
 
     .state('mobile.homepage', {
