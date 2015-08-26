@@ -1270,7 +1270,7 @@ a.list-group-item.active .badge { color: #fff; background-color: #3e53a4; }
 
 .fullscreen header, .fullscreen #header, .fullscreen footer, .fullscreen #footer { display: none; }
 
-.signin .bg { position: fixed; top: 0; left: 0; bottom: 0; right: 0; background-color: #254d9d; background: linear-gradient(135deg, #4cc6f3 0%, #32b1e5 10%, #3e53a4 53%, #cf0989 100%); background-size: cover; background-repeat: no-repeat; }
+.signin .bg { position: fixed; top: 0; left: 0; bottom: 0; right: 0; background-color: #254d9d; background: linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%); background-size: cover; background-repeat: no-repeat; }
 .signin header, .signin #header, .signin footer, .signin #footer { display: none; }
 .signin .signin-box { background-color: #fff; padding: 40px; }
 .signin .prod-name { color: #fff; }
