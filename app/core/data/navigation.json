@@ -174,15 +174,6 @@
           }, {
             "label": "Maps",
             "value": "mobile.maps"
-          }, {
-            "label": "-----",
-            "value": "------"
-          }, {
-            "label": "Welcome",
-            "value": "mobile.welcome"
-          }, {
-            "label": "Getting Started",
-            "value": "mobile.getting-started"
           }]
         }]
       }]
