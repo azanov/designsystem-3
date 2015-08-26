@@ -12,6 +12,35 @@
 
 $hero-height: 500px;
 
+.home-links {
+  li {
+    border-right: 1px solid #c0c0c0;
+    padding-right: 10px;
+    a {
+      text-decoration: underline;
+      font-size: 16px;
+    }
+    &:last-child {
+      border-right: 0;
+    }
+  }
+  &.knockout {
+    li {
+      border-right: 1px solid rgba(255, 255, 255, .6);
+      padding-right: 10px;
+      a {
+        color: #fff;
+        text-decoration: underline;
+        font-size: 16px;
+      }
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+
+}
+
 
 .hero-main {
   background: #3E53A4 url('../images/hero-bg.jpg') top right 0 no-repeat;
