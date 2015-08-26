@@ -90,15 +90,6 @@
           }, {
             "label": "Forms & Containers",
             "value": "patterns.forms"
-          }, {
-            "label": "----------------------",
-            "value": "---"
-          }, {
-            "label": "Registration",
-            "value": "patterns.registration"
-          }, {
-            "label": "Under Maintenance",
-            "value": "patterns.undermaintenance"
           }]
         }]
       }]
