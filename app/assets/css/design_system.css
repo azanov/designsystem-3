@@ -1292,7 +1292,7 @@ td.centered, th.centered { text-align: center; }
 .table > thead > tr > th a, .table > tbody > tr > th a, .table > tfoot > tr > th a, .table thead th a { color: inherit; }
 
 .table .table-row-selected td { background-color: #c5cbe4; }
-.table .table-details td { padding: 0; background-color: #e1e1e1; border-top-width: 0; }
+.table .table-details td { padding: 0; background-color: #f0f0f0; border-top-width: 0; }
 .table .table-details > td { background: linear-gradient(to bottom, #cbcbcb -5%, #f0f0f0 6%, #f0f0f0 100%); }
 .table .table-details .table-details-content { padding: 10px; }
 .table.table-border-bottom tr:last-child td { border-bottom: 1px solid #ddd; }
