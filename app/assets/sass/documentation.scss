@@ -14,10 +14,16 @@ $hero-height: 500px;
 
 
 .hero-main {
-  background: #504694 url('../images/hero-bg.jpg') top right 0 no-repeat;
-  margin-top: 50px;
+  background: #3E53A4 url('../images/hero-bg.jpg') top right 0 no-repeat;
+  margin-top: 51px;
   height: $hero-height;
   color: #fff;
+  position: relative;
+  .scroll-down-arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+  }
   .row {
     margin-top: 100px;
   }
@@ -138,6 +144,27 @@ $hero-height: 500px;
     }
   }
 }
+
+.hero-resources {
+  height: $hero-height;
+  .row {
+    margin-top: 100px;
+  }
+  .title-unit {
+    h1 {
+      color: #717171;
+      font-size: 32px;
+      font-family: $font-family-ps-regular;
+      margin-top: 5px;
+    }
+    .eyebrow {
+      color: rgba(207, 9, 137, .65);
+      font-size: 20px;
+      font-family: $font-family-ps-regular;
+    }
+  }
+}
+
 
 
 
