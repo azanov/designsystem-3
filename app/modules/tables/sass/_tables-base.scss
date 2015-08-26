@@ -1,68 +1,84 @@
 //* TABLES */
 
 
-// for some reason, bootstrap will not do this with the variables.
-.table-hover >tbody >tr:hover >td,
-.table-hover >tbody >tr:hover >th {
-  background-color: #f2f4fa;
+table {
+  background-color: $table-bg;
 }
-.table-hover >tbody >tr:active >td,
-.table-hover >tbody >tr:active >th,
-.table-hover >tbody >tr.active >td,
-.table-hover >tbody >tr.active >th, {
-  background-color: #b2badb;
+caption {
+  padding-top: $table-cell-padding;
+  padding-bottom: $table-cell-padding;
+  color: $text-muted;
+  text-align: left;
 }
-
-.table-striped >tbody >tr:nth-child(odd) {
-  background-color: $table-bg-accent;
-}
-// table transitions for hovers
-.table >tbody >tr >td,
-.table >tbody >tr >th {
-  transition: background-color .3s;
+th {
+  text-align: left;
 }
 
-.table-fixed {
-  table-layout: fixed;
-}
 
-.table-clickable {
-  tr {
-    cursor: pointer;
-  }
-}
-td.centered,
-th.centered {
-  text-align: center;
-}
-.table-condensed-extra {
-  font-size: 14px;
+// Baseline styles
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: $line-height-computed;
+  border: 1px solid $table-border-color;
+  // Cells and heads
   >thead,
   >tbody,
   >tfoot {
     >tr {
       >th,
       >td {
-        padding: $table-condensed-extra-cell-padding;
+        padding: $table-cell-padding;
+        line-height: $line-height-base;
+        vertical-align: top;
+        border: 1px solid $table-border-color;
       }
     }
   }
-}
-.table >thead >tr >th,
-.table >tbody >tr >th,
-.table >tfoot >tr >th,
-.table thead th {
-  font-family: $font-family-sans-serif;
-  font-weight: bold;
-  color: $text-color;
-  border-bottom-color: $text-color;
-  border-bottom-width: 1px;
-  a {
-    color: inherit;
+  // cells only, get vertical rules slightly lighter
+  >tbody,
+  >tfoot {
+    >tr {
+      >td {
+        border-right: 1px solid $table-vertical-cell-dividers;
+        &:last-child {
+          border-right: 1px solid $table-border-color;
+        }
+      }
+    }
   }
-}
+  // Bottom align for column headings
+  >thead >tr >th {
+    vertical-align: bottom;
+    background-color: #f8f8f8;
+    font-family: $font-family-ps-regular;
+    color: $pb-gray-700;
+    font-weight: normal;
+    border-bottom: 1px solid $table-border-color;
+  }
 
-.table {
+  // Remove top border from thead by default
+  >caption +thead,
+  >colgroup +thead,
+  >thead:first-child {
+    >tr:first-child {
+      >th,
+      >td {
+        border-top: 0;
+      }
+    }
+  }
+  // Account for multiple tbody instances
+  >tbody +tbody {
+    border-top: 2px solid $table-border-color;
+  }
+
+  // Nesting
+  .table {
+    background-color: $body-bg;
+  }
+
   .table-row-selected {
     td {
       background-color: #c5cbe4;
@@ -85,49 +101,43 @@ th.centered {
       padding: 10px;
     }
   }
+}
 
-  &.table-border-bottom {
-    tr:last-child {
-      td {
-        //TODO: get the correct color variable
-        border-bottom: 1px solid #ddd;
-      }
-    }
+
+
+
+
+// table transitions for hovers
+.table >tbody >tr >td,
+.table >tbody >tr >th {
+  transition: background-color .3s;
+}
+
+.table-fixed {
+  table-layout: fixed;
+}
+
+.table-clickable {
+  tr {
+    cursor: pointer;
   }
 }
 
-.table-bordered >tbody >tr >td,
-.table-bordered >tbody >tr >th,
-.table-bordered >tfoot >tr >td,
-.table-bordered >tfoot >tr >th,
-.table-bordered >thead >tr >td,
-.table-bordered >thead >tr >th {
-  border: 1px solid $table-border-color;
+td.centered,
+th.centered {
+  text-align: center;
 }
 
-.table-bordered {
-
+.table-condensed-extra {
+  font-size: 14px;
+  >thead,
   >tbody,
   >tfoot {
     >tr {
-
+      >th,
       >td {
-        border-right: 1px solid $table-vertical-cell-dividers;
-        &:last-child {
-          border-right: 1px solid $table-border-color;
-        }
+        padding: $table-condensed-extra-cell-padding;
       }
     }
   }
-  >thead >tr {
-    >th,
-    >td {
-      background-color: #f8f8f8;
-      font-family: $font-family-ps-regular;
-      color: $pb-gray-700;
-      font-weight: normal;
-      border-bottom: 1px solid $table-border-color;
-    }
-  }
-  border: 1px solid $table-border-color;
 }

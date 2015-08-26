@@ -1276,11 +1276,24 @@ a.list-group-item.active .badge { color: #fff; background-color: #3e53a4; }
 .signin .signin-footer { color: #fff; }
 .signin .signin-footer a { color: inherit; }
 
-.table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th { background-color: #f2f4fa; }
+table { background-color: #fff; }
 
-.table-hover > tbody > tr:active > td, .table-hover > tbody > tr:active > th, .table-hover > tbody > tr.active > td, .table-hover > tbody > tr.active > th { background-color: #b2badb; }
+caption { padding-top: 8px; padding-bottom: 8px; color: #9b9b9b; text-align: left; }
 
-.table-striped > tbody > tr:nth-child(odd) { background-color: #f8f8f8; }
+th { text-align: left; }
+
+.table { width: 100%; max-width: 100%; margin-bottom: 20px; border: 1px solid #C5CBE3; }
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td { padding: 8px; line-height: 1.42857; vertical-align: top; border: 1px solid #C5CBE3; }
+.table > tbody > tr > td, .table > tfoot > tr > td { border-right: 1px solid #EAEDF8; }
+.table > tbody > tr > td:last-child, .table > tfoot > tr > td:last-child { border-right: 1px solid #C5CBE3; }
+.table > thead > tr > th { vertical-align: bottom; background-color: #f8f8f8; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; color: #2e2e2e; font-weight: normal; border-bottom: 1px solid #C5CBE3; }
+.table > caption + thead > tr:first-child > th, .table > caption + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > td, .table > thead:first-child > tr:first-child > th, .table > thead:first-child > tr:first-child > td { border-top: 0; }
+.table > tbody + tbody { border-top: 2px solid #C5CBE3; }
+.table .table { background-color: #fff; }
+.table .table-row-selected td { background-color: #c5cbe4; }
+.table .table-details td { padding: 0; background-color: #f0f0f0; border-top-width: 0; }
+.table .table-details > td { background: linear-gradient(to bottom, #cbcbcb -5%, #f0f0f0 6%, #f0f0f0 100%); }
+.table .table-details .table-details-content { padding: 10px; }
 
 .table > tbody > tr > td, .table > tbody > tr > th { transition: background-color .3s; }
 
@@ -1292,22 +1305,6 @@ td.centered, th.centered { text-align: center; }
 
 .table-condensed-extra { font-size: 14px; }
 .table-condensed-extra > thead > tr > th, .table-condensed-extra > thead > tr > td, .table-condensed-extra > tbody > tr > th, .table-condensed-extra > tbody > tr > td, .table-condensed-extra > tfoot > tr > th, .table-condensed-extra > tfoot > tr > td { padding: 2px; }
-
-.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table thead th { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: bold; color: #717171; border-bottom-color: #717171; border-bottom-width: 1px; }
-.table > thead > tr > th a, .table > tbody > tr > th a, .table > tfoot > tr > th a, .table thead th a { color: inherit; }
-
-.table .table-row-selected td { background-color: #c5cbe4; }
-.table .table-details td { padding: 0; background-color: #f0f0f0; border-top-width: 0; }
-.table .table-details > td { background: linear-gradient(to bottom, #cbcbcb -5%, #f0f0f0 6%, #f0f0f0 100%); }
-.table .table-details .table-details-content { padding: 10px; }
-.table.table-border-bottom tr:last-child td { border-bottom: 1px solid #ddd; }
-
-.table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th { border: 1px solid #C5CBE3; }
-
-.table-bordered { border: 1px solid #C5CBE3; }
-.table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td { border-right: 1px solid #EAEDF8; }
-.table-bordered > tbody > tr > td:last-child, .table-bordered > tfoot > tr > td:last-child { border-right: 1px solid #C5CBE3; }
-.table-bordered > thead > tr > th, .table-bordered > thead > tr > td { background-color: #f8f8f8; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; color: #2e2e2e; font-weight: normal; border-bottom: 1px solid #C5CBE3; }
 
 .daterangepicker.dropdown-menu { max-width: none; z-index: 3000; }
 

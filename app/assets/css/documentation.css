@@ -131,6 +131,13 @@ small, .text-small, .small { font-size: 12px; }
 
 .text-danger { color: #dc0000; }
 
+.home-links li { border-right: 1px solid #c0c0c0; padding-right: 10px; }
+.home-links li a { text-decoration: underline; font-size: 16px; }
+.home-links li:last-child { border-right: 0; }
+.home-links.knockout li { border-right: 1px solid rgba(255, 255, 255, 0.6); padding-right: 10px; }
+.home-links.knockout li a { color: #fff; text-decoration: underline; font-size: 16px; }
+.home-links.knockout li:last-child { border-right: 0; }
+
 .hero-main { background: #3E53A4 url("../images/hero-bg.jpg") top right 0 no-repeat; margin-top: 51px; height: 500px; color: #fff; position: relative; }
 .hero-main .scroll-down-arrow { position: absolute; bottom: 20px; left: 50%; }
 .hero-main .row { margin-top: 100px; }
