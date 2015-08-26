@@ -487,10 +487,15 @@ div.accordion-group .panel.active .panel-title:before { content: '\25B8'; -webki
 .btn-group-borderless .btn-default.disabled, .btn-group-borderless .btn-default.disabled:hover, .btn-group-borderless .btn-default.disabled.hover, .btn-group-borderless .btn-default.disabled:focus, .btn-group-borderless .btn-default.disabled.focus, .btn-group-borderless .btn-default.disabled:active, .btn-group-borderless .btn-default.disabled.active, .btn-group-borderless .btn-default[disabled], .btn-group-borderless .btn-default[disabled]:hover, .btn-group-borderless .btn-default[disabled].hover, .btn-group-borderless .btn-default[disabled]:focus, .btn-group-borderless .btn-default[disabled].focus, .btn-group-borderless .btn-default[disabled]:active, .btn-group-borderless .btn-default[disabled].active, fieldset[disabled] .btn-group-borderless .btn-default, fieldset[disabled] .btn-group-borderless .btn-default:hover, fieldset[disabled] .btn-group-borderless .btn-default.hover, fieldset[disabled] .btn-group-borderless .btn-default:focus, fieldset[disabled] .btn-group-borderless .btn-default.focus, fieldset[disabled] .btn-group-borderless .btn-default:active, fieldset[disabled] .btn-group-borderless .btn-default.active { background-color: #8b98c8; border-color: #3e53a4; color: #3e53a4; }
 .btn-group-borderless .btn-default .badge { color: #fff; background-color: #cf0989; margin-left: 10px; }
 
-.btn.btn-default-ko { color: #3e53a4; background-color: #fff; border-radius: 20px; border: 1px solid #fff; padding: 6px 16px; min-width: 120px; }
-.btn.btn-default-ko:disabled { color: #fff; background-color: transparent; opacity: 0.5; }
-.btn.btn-default-ko:hover { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
-.btn.btn-default-ko:active { opacity: 0.8; }
+.btn-pill-ko { color: #3e53a4; background-color: #fff; border-radius: 40px !important; border: 1px solid #fff; padding: 6px 16px; min-width: 120px; }
+.btn-pill-ko:disabled { color: #fff; background-color: transparent; opacity: 0.5; }
+.btn-pill-ko:hover { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); color: #3e53a4; }
+.btn-pill-ko:active { opacity: 0.8; }
+
+.btn-pill-brand { color: #fff; background-color: #3e53a4; border-radius: 40px !important; border: 1px solid #3e53a4; padding: 6px 16px; min-width: 120px; }
+.btn-pill-brand:disabled { color: #3e53a4; background-color: transparent; opacity: 0.5; }
+.btn-pill-brand:hover { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); color: #fff; }
+.btn-pill-brand:active { opacity: 0.8; }
 
 .btn-success { color: #fff; background-color: #008000; border-color: #008000; }
 .btn-success:hover, .btn-success.hover, .btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle { color: #fff; background-color: #008000; border-color: #008000; }

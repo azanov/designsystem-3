@@ -20,24 +20,25 @@
 }
 
 
-//"tertiary", or ghost/ko pill-shaped buttons
+//"tertiary", or pill-shaped buttons
 
-.btn.btn-default-ko {
-  color: $button-primary;
-  background-color: #fff;
-  border-radius: 20px;
-  border: 1px solid #fff;
+@mixin btn-pill($label, $bg, $bdr) {
+  color: $label;
+  background-color: $bg;
+  border-radius: 40px !important;
+  border: 1px solid $bdr;
   padding: $padding-base-vertical $padding-large-horizontal;
   min-width: 120px;
 
   &:disabled {
-    color: #fff;
+    color: $bg;
     background-color: transparent;
     opacity: 0.5;
   }
 
   &:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: $label;
   }
 
   &:active {
@@ -45,6 +46,18 @@
   }
 
 }
+
+.btn-pill-ko {
+  @include btn-pill($pb-blue, #fff, #fff);
+}
+.btn-pill-brand {
+  @include btn-pill(#fff, $pb-blue, $pb-blue);
+}
+
+
+
+
+
 
 // bootstrap buttons
 .btn-success {

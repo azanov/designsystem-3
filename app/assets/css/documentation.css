@@ -131,6 +131,37 @@ small, .text-small, .small { font-size: 12px; }
 
 .text-danger { color: #dc0000; }
 
+.hero-main { background: #504694 url("../images/hero-bg.jpg") top right 0 no-repeat; margin-top: 50px; height: 500px; color: #fff; }
+.hero-main .row { margin-top: 100px; }
+.hero-main .title-unit h1 { color: inherit; font-size: 32px; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; margin-top: 5px; }
+.hero-main .title-unit .eyebrow { color: inherit; font-size: 20px; font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; }
+.hero-main .title-unit p { color: inherit; font-size: 16px; line-height: 1.5; }
+@media (min-width: 768px) { .hero-main .title-unit p { margin-right: 160px; } }
+@media (min-width: 992px) { .hero-main .title-unit p { margin-right: 380px; } }
+@media (min-width: 1200px) { .hero-main .title-unit p { margin-right: 575px; } }
+
+.hero-principles { height: 500px; }
+.hero-principles .row { margin-top: 100px; }
+.hero-principles .title-unit h1 { color: #717171; font-size: 32px; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; margin-top: 5px; }
+.hero-principles .title-unit .eyebrow { color: #cf0989; font-size: 20px; font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; }
+
+.hero-web { height: 500px; background: #b73489 url("../images/hero-web-pattern.jpg") top center no-repeat; }
+.hero-web .row { margin-top: 100px; }
+.hero-web .title-unit h1 { color: #fff; font-size: 32px; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; margin-top: 5px; }
+.hero-web .title-unit .eyebrow { color: rgba(255, 255, 255, 0.6); font-size: 20px; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; }
+
+.hero-mobile { height: 500px; }
+.hero-mobile .row { margin-top: 20px; }
+.hero-mobile .title-unit { margin-top: 100px; }
+.hero-mobile .title-unit h1 { color: #717171; font-size: 32px; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; margin-top: 5px; }
+.hero-mobile .title-unit .eyebrow { color: rgba(207, 9, 137, 0.65); font-size: 20px; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; }
+
+.hero-global { background: linear-gradient(270deg, #4652a3 0%, #7f469b 42%, #7f469b 48%, #9d4097 100%); height: 500px; }
+.hero-global .row { margin-top: 57px; }
+.hero-global .title-unit { margin-top: 100px; }
+.hero-global .title-unit h1 { color: #fff; font-size: 32px; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; margin-top: 5px; }
+.hero-global .title-unit .eyebrow { color: rgba(255, 255, 255, 0.6); font-size: 20px; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; }
+
 .doc-hero { background: linear-gradient(90deg, #4c4ca2 0%, #872e96 42%, #872e96 48%, #c90d8b 100%); height: 300px; border-top: 1px solid rgba(255, 255, 255, 0.5); margin-top: 50px; position: relative; }
 .doc-hero .hero-header { margin-top: 115px; }
 .doc-hero .hero-header .eyebrow { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; font-size: 16px; color: rgba(255, 255, 255, 0.5); }
@@ -143,7 +174,7 @@ small, .text-small, .small { font-size: 12px; }
 .doc-hero .jump-bar .jump-menu li:last-child { margin-right: 0; }
 
 .btn-default-ko.hover { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
-.btn-default-ko.active { opacity: 0.8; }
+.btn-default-ko.active { opacity: .8; }
 
 .sub-header.jump-bar { background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%); }
 .sub-header.jump-bar.headroom-top { height: 50px; top: 250px; }
