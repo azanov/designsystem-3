@@ -166,11 +166,8 @@
             "label": "Sign in & Sign Up",
             "value": "mobile.sign-in-up"
           }, {
-            "label": "Welcome",
-            "value": "mobile.welcome"
-          }, {
-            "label": "Getting Started",
-            "value": "mobile.getting-started"
+            "label": "Onboarding",
+            "value": "mobile.onboarding"
           }, {
             "label": "Home Page",
             "value": "mobile.homepage"
@@ -178,11 +175,23 @@
             "label": "Search & Results",
             "value": "mobile.search-results"
           }, {
+            "label": "Landing",
+            "value": "mobile.landing"
+          }, {
             "label": "Forms",
             "value": "mobile.forms"
           }, {
             "label": "Maps",
             "value": "mobile.maps"
+          }, {
+            "label": "-----",
+            "value": "------"
+          }, {
+            "label": "Welcome",
+            "value": "mobile.welcome"
+          }, {
+            "label": "Getting Started",
+            "value": "mobile.getting-started"
           }]
         }]
       }]
