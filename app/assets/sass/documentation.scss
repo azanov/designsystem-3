@@ -103,6 +103,17 @@
   }
 }
 
+.modal-demo {
+  border: 1px solid #c0c0c0;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, .2);
+  margin-bottom: 15px;
+  + .btn {
+    min-width: 120px;
+    margin-bottom: 40px;
+  }
+
+}
+
 
 // DOCS TYPOGRAPHY differs from DS
 .doc-head {

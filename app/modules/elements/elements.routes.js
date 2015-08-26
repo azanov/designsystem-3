@@ -112,7 +112,7 @@
 
     .state('elements.popovers', {
       url: '/popovers',
-      templateUrl: 'modules/elements/templates/elements-popovers.html',
+      templateUrl: 'modules/elements/templates/elements-modals-popovers.html',
       controller: 'BootstrapUiPopoverController as pop'
     })
 
