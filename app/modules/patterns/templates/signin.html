@@ -6,9 +6,11 @@
 
     <div class="signin-box">
 
+      <h1 class="spacer-top-xs">Sign In</h1>
+
       <form autocomplete="off" name="myForm" novalidate>
         <div class="form-group" ng-class="{'has-error': myForm.name.$error.required  && myForm.name.$dirty}">
-          <label for="name">Username</label>
+          <label for="name">Email</label>
           <input class="form-control" name="name" ng-model-options="{ updateOn: 'blur' }" ng-model="myForm.data.name" required type="text">
           <span class="help-block" ng-show="myForm.name.$error.required && myForm.name.$dirty">Name is required.</span>
         </div>
@@ -24,13 +26,13 @@
           </label>
         </div>
 
-        <button class="btn btn-primary btn-block btn-lg spacer-top-xs" ng-click="login()" type="submit">Sign in</button>
+        <button class="btn btn-primary btn-block btn-lg spacer-top-xs" ng-click="login()" type="submit">Sign In</button>
       </form>
 
-      <p class="text-center spacer-top-md">Forgot
-        <a href="">Username</a>
+      <p class="text-center spacer-top-md">Forgot your
+        <a href="">username</a>
         or
-        <a href="">Password</a>?</p>
+        <a href="">password</a>?</p>
       <p class="text-center">Don&rsquo;t have an account?
         <a href="">Sign up</a>
       </p>
@@ -46,7 +48,7 @@
         </p>
 
         <p>
-          <small>© 2015 Pitney Bowes Inc. All rights reserved. Privacy<br>
+          <small>© 2015 Pitney Bowes Inc. All rights reserved.<br>
             Version 2.2&nbsp;&nbsp;|&nbsp;&nbsp;
             <a href="">Privacy</a>&nbsp;&nbsp;|&nbsp;&nbsp;
             <a href="">Terms &amp; Conditions</a>
