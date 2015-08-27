@@ -4,9 +4,85 @@
   <div class="row">
     <div class="col-md-8">
       <h1 id="alerts" class="doc-head">Alerts</h1>
-      <p class="doc-lede">Lorem ipsum dolor sit amet, feugiat inciderint ei eum. Verterem sapientem tincidunt ut his, facilisi mnesarchum per ne. Laoreet alienum explicari cu eos, ludus eirmod ius no, constituto voluptatibus cu per. Mei fabellas definiebas eu, duo veniam deseruisse no.</p>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Usage</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <ul>
+        <li>Limit to 1-2 sentences</li>
+        <li>Be sure to apply the correct color for an alert&rsquo;s level</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Levels</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <p>We have four levels of alerts:</p>
+      <ul>
+        <li>Error: an application error has occurred</li>
+        <li>Warning: the user is about to perform an irreversible or destructive action; or the result of an action is unexpected, but is not an error</li>
+        <li>Success: confirmation that the application was able to complete a user’s action or request</li>
+        <li>Info: the application has non-critical — but helpful — information to share</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Writing</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <p>When writing your alerts, focus on providing a clear, simple description of what has happened or what needs to happen next. Here are some basic guidelines for how to write these critical pieces of user interface copy.</p>
+
+      <h3>Goals</h3>
+      <ul>
+        <li>Help the user understand what action caused the alert.</li>
+        <li>Explain how what the user can do next to remedy the situation, if applicable.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Style</h3>
+  <ul>
+    <li>Use active rather than passive writing.</li>
+    <li>Focus on what the user most needs to know.</li>
+    <li>Provide solutions to a problem where possible.</li>
+    <li>Construct short sentences, written in plain language.</li>
+  </ul>
+
+  <h3>Capitalization</h3>
+  <p>Alerts labels use sentence capitalization, except when they include words or phrases that are acronyms or proper nouns (e.g., “RMA number,” “Cost Account,” “ZIP Code”).</p>
+
+  <h3>Punctuation</h3>
+  <ul>
+    <li>Conclude your alert copy with a period.</li>
+    <li>Don’t phrase your alert copy as a question.</li>
+    <li>You can include exclamation points in success alerts. For warning alerts, reserve their use when alerting users to critical information, not to everyday alerts. For both kinds of alerts, don’t end your copy with an exclamation point.</li>
+  </ul>
+
+
+
+
+
+
 
   <div class="row">
     <div class="col-md-12">
@@ -19,35 +95,35 @@
       <figure>
         <figcaption>Danger</figcaption>
         <div class="alert alert-danger">
-          Unable to process request. Please check all fields and try again.
+          We couldn’t complete your request. Please try again in a moment.
         </div>
       </figure>
 
       <figure>
         <figcaption>Warning</figcaption>
         <div class="alert alert-warning">
-          Invalid entry. Format should me mm/dd/yyyy.
+          Enter a valid date using mm/dd/yyyy.
         </div>
       </figure>
 
       <figure>
         <figcaption>Success</figcaption>
         <div class="alert alert-success">
-          A new address was successfully imported.
+          A new address was imported.
         </div>
       </figure>
 
       <figure>
         <figcaption>Info</figcaption>
         <div class="alert alert-info">
-          There are many help resources available.
+          Learn more about Cost Accounts in the Help section.
         </div>
       </figure>
 
       <figure>
         <figcaption>Alert with Link</figcaption>
         <div class="alert alert-info">
-          There are many help resources available. <a class="alert-link" href="">Click here!</a>
+          Learn more about <a class="alert-link" href="">Cost Accounts</a>.
         </div>
       </figure>
     </div>
@@ -63,35 +139,34 @@
 
   <div class="row">
     <div class="col-md-12">
-      <figure>
-        <figcaption>Info</figcaption>
-        <div class="alert alert-info">
-          <i class="fa fa-fw fa-info-circle fa-lg"></i> <strong>Tip:</strong> More options are available under the settings menu.
-        </div>
-      </figure>
 
       <figure>
         <figcaption>Danger</figcaption>
         <div class="alert alert-danger">
-          <i class="fa fa-fw fa-info-circle fa-lg"></i> <strong>Action Denied!</strong> Please check all fields and try again.
+          <i class="fa fa-fw fa-info-circle fa-lg"></i> <strong>Sorry.</strong> We couldn’t complete your request. Please try again in a moment.
         </div>
       </figure>
 
       <figure>
         <figcaption>Warning</figcaption>
         <div class="alert alert-warning">
-          <i class="fa fa-fw fa-exclamation-circle fa-lg"></i> <strong>Warning!</strong> Missing information in six fields.
+          <i class="fa fa-fw fa-exclamation-circle fa-lg"></i> <strong>Warning!</strong> You are about to erase all of your addresses.
         </div>
       </figure>
 
       <figure>
         <figcaption>Success</figcaption>
         <div class="alert alert-success">
-          <i class="fa fa-fw fa-exclamation-triangle fa-lg"></i> <strong>Success!</strong> A new address was successfully imported.
+          <i class="fa fa-fw fa-exclamation-triangle fa-lg"></i> <strong>Success!</strong> Your new address was imported.
         </div>
       </figure>
 
-
+      <figure>
+        <figcaption>Info</figcaption>
+        <div class="alert alert-info">
+          <i class="fa fa-fw fa-info-circle fa-lg"></i> <strong>Tip:</strong> You can find more options under the Settings menu.
+        </div>
+      </figure>
 
     </div>
   </div>
@@ -110,7 +185,7 @@
         <figcaption>Danger</figcaption>
         <div class="alert alert-danger">
           <button aria-hidden="true" class="close" data-dismiss="alert" type="button"></button>
-          Unable to process request. Please check all fields and try again.
+          We couldn’t complete your request. Please try again in a moment.
         </div>
       </figure>
 
@@ -118,7 +193,7 @@
         <figcaption>Warning</figcaption>
         <div class="alert alert-warning">
           <button aria-hidden="true" class="close" data-dismiss="alert" type="button"></button>
-          Invalid entry. Format should me mm/dd/yyyy.
+          Enter a valid date using mm/dd/yyyy.
         </div>
       </figure>
 
@@ -126,7 +201,7 @@
         <figcaption>Success</figcaption>
         <div class="alert alert-success">
           <button aria-hidden="true" class="close" data-dismiss="alert" type="button"></button>
-          A new address was successfully imported.
+          A new address was imported.
         </div>
       </figure>
 
@@ -134,7 +209,7 @@
         <figcaption>Info</figcaption>
         <div class="alert alert-info">
           <button aria-hidden="true" class="close" data-dismiss="alert" type="button"></button>
-          There are many help resources available.
+          Learn more about Cost Accounts in the Help section.
         </div>
       </figure>
     </div>
@@ -150,7 +225,7 @@
 
   <div class="row">
     <div class="col-md-3">
-      <p>Use inline on page where important info needs to be shown to user.</p>
+      <p>Use to provide an inline alert for a specific onscreen element.</p>
     </div>
 
     <div class="col-md-8 col-md-offset-1">
