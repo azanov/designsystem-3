@@ -2,7 +2,7 @@
 
   <div id="action-buttons" class="row">
     <div class="col-md-8">
-      <h1 id="quick-reference" class="doc-head">Quick Reference</h1>
+      <h1 id="quick-reference" class="doc-head">Reference</h1>
     </div>
   </div>
 
@@ -12,7 +12,7 @@
 
       <p>The Design System&rsquo;s guidance on UI, branding, voice and other user-related considerations is meant to be as comprehensive as possible. In some cases, however, our &ldquo;out of the box&rdquo; guidelines may not apply to a specific local or regional scenario. So be aware that certain elements or portions of your code will probably need to be reviewed and customized to meet specific internationalization requirements and user needs. The Globalization Team, as part of the globalization process, can review your product plans to identify these kinds of exceptions.</p>
 
-      <h3>Pseudo localization</h3>
+      <h3>Pseudo Localization</h3>
 
       <p>Pseudo localization is one of the services that the Globalization Team can provide early on in your development process. Here&rsquo;s how it works:</p>
 
@@ -33,9 +33,11 @@
 
       <p>How you write and structure your strings will have a big impact on streamlining the localization process.</p>
 
-      <h6>How to prepare your work for translation</h6>
+      <h6>How to Prepare Your Work for Translation</h6>
 
       <p>Translators and other localization professionals are not programmers. They can&rsquo;t always tell your code from your copy. You can help prevent accidental modifications to your code (and speed up their work) by structuring your strings and the files that contain them to anticipate and prevent such issues by following the basic guidelines below.</p>
+
+      <h6>Seperate Your Files to Ease Translation</h6>
 
       <p>You should also break out the strings that need to be translated vs. those that don&rsquo;t into separate files. In this example, developers have created two separate files for strings and dialogs, which form the basis for the eventual translations into Japanese and German. They will send only these files to their translation resource.</p>
 
@@ -43,7 +45,7 @@
 
       <p>Taking the time to separate your content accomplishes two things: first, it ensures that translators can clearly recognize what needs to be translated in your code; second, it prevents them from spending time translating items that don&rsquo;t need to be localized.</p>
 
-      <h3>Basic guidelines for strings</h3>
+      <h3>Basic Guidelines for Strings</h3>
       <ul>
         <li><strong>Create a glossary of exceptions.</strong> Things like product names will appear in strings but shouldn&rsquo;t be translated. For cases like these, create a glossary and list these items as &ldquo;non-translatable terms.&rdquo;</li>
         <li><strong>Use Unicode.</strong> By using the Unicode standard in all of your text, file formats and databases you&rsquo;ll be producing assets that will be recognized across all other platforms, programs and languages.</li>
@@ -130,7 +132,7 @@
 
       <p>Concatenated words won&rsquo;t be translated. For example, translators will ignore <code>DateFormat</code>, <code>Date_Format</code> and <code>Date.Format</code> but they will translate Date Format.</p>
 
-      <h3>Sorting order</h3>
+      <h3>Sorting Order</h3>
 
       <p>Languages other than English may use sort orders that differ from English&rsquo;s alphabetical sort order. Your code needs to support the sort order used by all of your target languages.</p>
 
@@ -162,11 +164,11 @@
 
       <img src="modules/globalization/assets/images/sorting_order.png" class="img-responsive">
 
-      <h3>Nouns vs. verbs</h3>
+      <h3>Nouns vs. Verbs</h3>
 
       <p>When constructing control labels and other user-facing copy, try to avoid ambiguity between noun and verb forms. For example, the word &ldquo;view&rdquo; in <code>View File</code> could be interpreted as either a noun or a verb. To reduce confusion for translators and users, say <code>View the File</code> instead.</p>
 
-      <h4>Line and word breaks</h4>
+      <h3>Line and Word Breaks</h3>
 
       <p>If a sentence won&rsquo;t fit in a given line width then it will have to wrap. In some languages, this presents challenges for developers</p>
 
@@ -176,7 +178,7 @@
 
       <img src="modules/globalization/assets/images/line_and_breaks.png" class="img-responsive">
 
-      <h3>Bidirectional alphabets</h3>
+      <h3>Bidirectional Alphabets</h3>
 
       <p>English and other Latin-based languages flow from left to right (or &ldquo;LTR&rdquo;)  whereas many non-Latin languages flow from right to left (or &ldquo;RTL&rdquo;). It’s best to avoid using them, but if you have to here are some tips.</p>
 
@@ -203,7 +205,7 @@
         <li><strong>Symbolic objects.</strong> Crescents, magic wands, wizard hats — even an eye — can be the source of either confusion or offense in certain cultures.</li>
       </ul>
 
-      <h3>User preferences</h3>
+      <h3>User Preferences</h3>
 
       <p>All users of your product should be able to choose certain preferred settings. If your product uses a mechanism that automatically detects the user&rsquo;s location to define their default settings, that&rsquo;s great — but you shouldn&rsquo;t assume what users actually want. So always allow them to set the values they want.</p>
 
