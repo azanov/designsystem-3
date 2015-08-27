@@ -587,7 +587,9 @@
 
 <div class="row">
   <div class="col-md-3">
-    <p>When using multiple selection menus, consider letting users know which keys they need to use (Ctrl-click or Cmd-click) in order to use this feature. Or consider using the multi-select with tokens menu.</p>
+    <p>When using multiple selection menus, consider letting users know which keys they need to use (Ctrl-click or Cmd-click) on desktop devices in order to use this feature. Or consider using the multi-select with tokens menu.</p>
+
+    <p>Mobile devices may present their own UI for making the multiple selection. On iOS, a tap will present a popover menu where you can scroll and tap choices.  Checkmarks appear next to chosen options. When the popover is closed, the "menu" now displays the number of chosen items.</p>
   </div>
 
 
@@ -596,7 +598,7 @@
     <div class="row">
       <div class="col-md-5">
         <figure>
-          <figcaption>Multi-Row Select Menu (Ctrl/Cmd-click)</figcaption>
+          <figcaption>Multi-Select Menu</figcaption>
           <div class="form-group">
             <label>Text label</label>
             <select class="form-control" multiple ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople" size="6"></select>
