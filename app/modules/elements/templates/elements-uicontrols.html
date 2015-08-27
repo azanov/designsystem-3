@@ -112,15 +112,15 @@
 
   <div class="row">
     <div class="col-md-3">
-      <p>We have three sizes of input fields: small, standard and large. Use the standard size for all fields except when:</p>
+      <p>We have three sizes of input fields: small, default and large. Use the default size for all fields except when:</p>
       <ul>
         <li>You have a very crowded form (20+ fields), in which case consider using small input fields.</li>
         <li>You have only a few fields (&lt;10), in which case consider using large input fields. An example of this is a Sign In screen.</li>
       </ul>
 
-      <p>Once you&rsquo;ve selected an input field size, use it consistently throughout your product. The exceptions to this rule are pages that are outside of your product&rsquo;s flow (such as Sign In or Sign Up).</p>
+      <p>Once you&rsquo;ve selected an input field size, use it consistently throughout your product. The exceptions to this rule are pages that are outside of your product&rsquo;s flow (such as Sign In or Sign Up), which should use the large size.</p>
 
-      <p>Note that even when using large or small input fields the label font remains the standard size.</p>
+      <p>Note that even when using large or small input fields the label font remains the default size.</p>
     </div>
 
     <div class="col-md-7 col-md-offset-1">
@@ -193,7 +193,7 @@
 
   <div class="row">
     <div class="col-md-12">
-      <h2 class="doc-sectionhead">Options</h2>
+      <h2 class="doc-sectionhead">Help Prompt</h2>
     </div>
   </div>
 
@@ -423,7 +423,6 @@
 <div class="row">
   <div class="col-md-8">
     <h1 class="doc-head" id="dropdowns">Dropdown Menus</h1>
-    <p class="doc-lede">Best suited for lists containing 7-15 items. For fewer items items consider using radio buttons.</p>
   </div>
 </div>
 
@@ -517,37 +516,19 @@
 
 <div class="row">
   <div class="col-md-12">
-    <h2 class="doc-sectionhead">Defaults</h2>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-8">
-    <p>When populating menus:</p>
-    <ul>
-      <li>Never present the user with a blank menu.</li>
-      <li>In most cases, &lsquo;Select&rsquo; should be your first menu item, to help prompt the user to make a selection.</li>
-      <li>Use extreme caution with preselecting an item, especially in required or critical menus &mdash; only do so if at least 80% of users are likely to select that item.</li>
-    </ul>
-  </div>
-
-</div>
-
-<div class="row">
-  <div class="col-md-12">
     <h2 class="doc-sectionhead">Sizes</h2>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-3">
-    <p>We have three sizes of dropdown menus: standard, large and small. Use the standard size for all dropdowns except when:</p>
+    <p>We have three sizes of dropdown menus: default, large and small. Use the default size for all dropdowns except when:</p>
     <ul>
       <li>You have a very crowded form (20+ dropdowns), in which case consider using small dropdown menus.</li>
       <li>You have only a few dropdowns (&lt;10), in which case consider using large dropdown menus.</li>
     </ul>
 
-    <p>Once you&rsquo;ve selected a dropdown menu size, use it consistently throughout your product. The exceptions to this rule are pages that are outside of your product&rsquo;s flow (such as Sign Up).</p>
+    <p>Once you&rsquo;ve selected a dropdown menu size, use it consistently throughout your product. The exceptions to this rule are pages that are outside of your product&rsquo;s flow (such as Sign Up), which should use the large size.</p>
 
     <p>Note that even when using large or small dropdown menus the label font remains the standard size.</p>
 
@@ -606,12 +587,7 @@
 
 <div class="row">
   <div class="col-md-3">
-    <p>When populating menus:</p>
-    <ul>
-      <li>Never present the user with a blank menu.</li>
-      <li>In most cases, &ldquo;Select&rdquo; should be your first menu item, to help prompt the user to make a selection.</li>
-      <li>Use extreme caution with preselecting an item, especially in required or critical menus &mdash; only do so if at least 80% of users are likely to select that item.</li>
-    </ul>
+    <p>When using multiple selection menus, consider letting users know which keys they need to use (Ctrl-click or Cmd-click) in order to use this feature. Or consider using the multi-select with tokens menu.</p>
   </div>
 
 
@@ -760,12 +736,12 @@
 
 <div class="row">
   <div class="col-md-3">
-    <p>We have two styles of checkboxes: design system and browser default.</p>
+    <p>We have two styles of checkboxes: enhanced and standard OS.</p>
 
     <p><strong>Usage</strong></p>
     <ul>
-      <li>When possible, you should use the design system style.</li>
-      <li>If your product has long lists of checkboxes (and space is an issue), consider using the browser default.</li>
+      <li>When possible, you should use the enhanced style.</li>
+      <li>If your product has long lists of checkboxes (and space is an issue), consider using the standard OS.</li>
       <li>Use the same style for your checkboxes and radio buttons, and apply that style consistently across your product.</li>
     </ul>
   </div>
@@ -777,68 +753,69 @@
           <figcaption>Enhanced Checkboxes</figcaption>
           <div class="checkbox checkbox-enhanced">
             <input checked id="check4" type="checkbox">
-            <label for="check4">Checkbox</label>
+            <label for="check4">Checked checkbox</label>
           </div>
           <div class="checkbox checkbox-enhanced">
             <input id="check5" name="check" type="checkbox">
-            <label for="check5">Checkbox
+            <label for="check5">Unchecked checkbox
             </label>
           </div>
           <div class="checkbox checkbox-enhanced disabled">
             <input disabled id="check6" name="check" type="checkbox">
-            <label for="check6">Checkbox (disabled)
+            <label for="check6">Disabled checkbox
             </label>
           </div>
         </div>
         <div class="col-md-5">
-          <figcaption>Default OS Checkboxes</figcaption>
+          <figcaption>Standard OS Checkboxes</figcaption>
           <div class="checkbox">
             <label for="c1">
               <input checked id="c1" type="checkbox">
-              Checkbox</label>
+              This is a checked checkbox</label>
           </div>
           <div class="checkbox">
             <label for="c2">
               <input id="c2" name="check" type="checkbox">
-              Checkbox
+              This is an unchecked checkbox
             </label>
           </div>
           <div class="checkbox disabled">
             <label for="c3">
               <input disabled id="c3" name="check" type="checkbox">
-              Checkbox (disabled)
+              This is a disabled checkbox
             </label>
           </div>
         </div>
       </div>
-      <div class="row">
+
+      <div class="row spacer-top-lg">
         <div class="col-md-7">
           <figcaption>Enhanced Checkboxes</figcaption>
           <div class="enhanced-inline">
             <div class="checkbox checkbox-enhanced">
               <input checked id="check7" type="checkbox">
-              <label for="check7">1</label>
+              <label for="check7">One</label>
             </div>
             <div class="checkbox checkbox-enhanced">
               <input id="check8" name="check" type="checkbox">
-              <label for="check8">2</label>
+              <label for="check8">Two</label>
             </div>
             <div class="checkbox checkbox-enhanced ">
               <input id="check9" name="check" type="checkbox">
-              <label for="check9">3</label>
+              <label for="check9">Three</label>
             </div>
           </div>
         </div>
         <div class="col-md-5">
-          <figcaption>Default OS Checkboxes</figcaption>
+          <figcaption>Standard OS Checkboxes</figcaption>
           <label class="checkbox-inline">
-            <input type="checkbox" id="inlineCheckbox1" value="option1" checked> 1
+            <input type="checkbox" id="inlineCheckbox1" value="option1" checked> One
           </label>
           <label class="checkbox-inline">
-            <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+            <input type="checkbox" id="inlineCheckbox2" value="option2"> Two
           </label>
           <label class="checkbox-inline">
-            <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+            <input type="checkbox" id="inlineCheckbox3" value="option3"> Three
           </label>
         </div>
       </div>
@@ -902,12 +879,12 @@
 
 <div class="row">
   <div class="col-md-3">
-    <p>We have two styles of radio buttons: design system and browser default.</p>
+    <p>We have two styles of radio buttons: enhanced and standard OS.</p>
 
     <p><strong>Usage</strong></p>
     <ul>
-      <li>When possible, you should use the design system style.</li>
-      <li>If your product has long lists of radio buttons (and space is an issue), consider using the browser default.</li>
+      <li>When possible, you should use the enhanced style.</li>
+      <li>If your product has long lists of radio buttons (and space is an issue), consider using the standard OS style.</li>
       <li>Use the same style for your radio buttons and checkboxes, and apply that style consistently across your product.</li>
     </ul>
   </div>
@@ -919,73 +896,73 @@
           <figcaption>Enhanced Radio Buttons</figcaption>
           <div class="radio radio-enhanced">
             <input checked id="radio3" name="radioOptions" type="radio">
-            <label for="radio3">Radio</label>
+            <label for="radio3">Selected radio button</label>
           </div>
           <div class="radio radio-enhanced">
             <input id="radio4" name="radioOptions" type="radio">
-            <label for="radio4">Radio
+            <label for="radio4">Deselected radio button
             </label>
           </div>
           <div class="radio radio-enhanced disabled">
             <input disabled id="radio5" name="radioOptions" type="radio">
-            <label for="radio5">Radio (disabled)
+            <label for="radio5">Disabled radio button
             </label>
           </div>
         </div>
         <div class="col-md-5">
-          <figcaption>Default OS Radio Buttons</figcaption>
+          <figcaption>Standard OS Radio Buttons</figcaption>
 
           <div class="radio">
             <label for="rd11">
               <input checked id="rd11" name="radioStandard" type="radio">
-              Radio</label>
+              This is a selected radio button</label>
           </div>
           <div class="radio">
             <label for="rd22">
               <input id="rd22" name="radioStandard" type="radio">
-              Radio</label>
+              This is a deselected radio button</label>
           </div>
           <div class="radio disabled">
             <label for="rd33">
               <input disabled id="rd33" name="radioStandard" type="radio">
-              Radio (disabled)
+              This is a disabled radio button
             </label>
           </div>
         </div>
       </figure>
 
     </div>
-    <div class="row">
+    <div class="row spacer-top-lg">
       <figure>
         <div class="col-md-7">
           <figcaption>Enhanced Radio Buttons</figcaption>
           <div class="enhanced-inline">
             <div class="radio radio-enhanced">
               <input checked id="radioA" name="radioOptionsInline" type="radio">
-              <label for="radioA">1</label>
+              <label for="radioA">One</label>
             </div>
             <div class="radio radio-enhanced">
               <input id="radioB" name="radioOptionsInline" type="radio">
-              <label for="radioB">2
+              <label for="radioB">Two
               </label>
             </div>
             <div class="radio radio-enhanced disabled">
               <input disabled id="radioC" name="radioOptionsInline" type="radio">
-              <label for="radioC">3 (disabled)
+              <label for="radioC">Three (disabled)
               </label>
             </div>
           </div>
         </div>
         <div class="col-md-5">
-          <figcaption>Default OS Radio Buttons</figcaption>
+          <figcaption>Standard OS Radio Buttons</figcaption>
           <label class="radio-inline">
-            <input type="radio" name="inlineRadioOptions" id="inlineRadio33" value="option1"> 1
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio33" value="option1"> One
           </label>
           <label class="radio-inline">
-            <input type="radio" name="inlineRadioOptions" id="inlineRadi44" value="option2"> 2
+            <input type="radio" name="inlineRadioOptions" id="inlineRadi44" value="option2"> Two
           </label>
           <label class="radio-inline">
-            <input type="radio" name="inlineRadioOptions" id="inlineRadio55" value="option3"> 3
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio55" value="option3"> Three
           </label>
         </div>
 
