@@ -1297,6 +1297,10 @@ th { text-align: left; }
 .table .table-details > td { background: linear-gradient(to bottom, #cbcbcb -5%, #f0f0f0 6%, #f0f0f0 100%); }
 .table .table-details .table-details-content { padding: 10px; }
 
+.table-details-content table, .table-details-content .table { border: 0; }
+.table-details-content table td, .table-details-content table th, .table-details-content .table td, .table-details-content .table th { border: 0; }
+.table-details-content table td:last-child, .table-details-content table th:last-child, .table-details-content .table td:last-child, .table-details-content .table th:last-child { border-right: 0; }
+
 .table > tbody > tr > td, .table > tbody > tr > th { transition: background-color .3s; }
 
 .table-fixed { table-layout: fixed; }
