@@ -103,8 +103,16 @@ th {
   }
 }
 
-
-
+// remove borders for tables inside detail rows
+.table-details-content table, .table-details-content .table {
+  border: 0;
+  td, th {
+    border: 0;
+    &:last-child {
+      border-right: 0;
+    }
+  }
+}
 
 
 // table transitions for hovers
