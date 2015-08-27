@@ -223,8 +223,9 @@ figcaption.ko { color: #fff; }
 .type-samples tr > td:last-child { font-family: Menlo, Consolas, Monaco, "Courier New", monospace; }
 .type-samples tr > td:last-child .swatch { display: inline-block; min-width: 20px; height: 20px; border: 1px solid #c0c0c0; padding: 2px 5px; font-size: 12px; line-height: 1.2; border-radius: 3px; }
 
-h4 .more-info, h1 .more-info, h3 .more-info, legend .more-info { font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-weight: normal; margin-top: 10px; margin-left: 30px; display: inline-block; text-transform: lowercase; }
-h4 .more-info a, h1 .more-info a, h3 .more-info a, legend .more-info a { color: #0072b8; font-weight: normal; }
+.more-info { background-color: #4e4e4e; padding: 5px 15px; border-radius: 20px; font-family: "PrecisionSans_W_Lt", "Helvetica Neue", Arial, sans-serif; font-size: 12px; margin-top: 10px; display: inline-block; text-transform: lowercase; color: #fff; font-weight: normal; }
+.more-info:hover { color: #fff; background-color: #2e2e2e; text-decoration: none; }
+.more-info.plugin:before { font-family: FontAwesome; content: '\f1e6'; padding-right: 7px; }
 
 h2.specifications:before, h2.specifications:after, h1.specifications:before, h1.specifications:after, p.specifications:after, h2.follows-h1.specifications:before, h1 + h2.specifications:before, h2.follows-h1.specifications:after, h1 + h2.specifications:after, h2.tab-header.specifications:before, h2.tab-header.specifications:after, h2.table-header.specifications:before, h2.table-header.specifications:after { color: #ef8200; display: block; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12px; border-left: 1px dotted #f5a66d; padding-left: 5px; text-align: left; font-style: italic; }
 
