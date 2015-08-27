@@ -333,24 +333,32 @@ figcaption {
 
 
 
-h4,
-h1,
-h3,
-legend {
-  .more-info {
+.more-info {
+    background-color: $pb-gray-500;
+    padding: 5px 15px;
+    border-radius: 20px;
     font-family: $font-family-ps-light;
-    font-size: 14px;
-    font-weight: normal;
+    font-size: 12px;
     margin-top: 10px;
-    margin-left: 30px;
     display: inline-block;
     text-transform: lowercase;
-    a {
-      color: $link-color;
-      font-weight: normal;
+    color: #fff;
+    font-weight: normal;
+
+    &:hover {
+      color: #fff;
+      background-color: $pb-gray-700;
+      text-decoration: none;
+    }
+
+    &.plugin {
+      &:before {
+        font-family: FontAwesome;
+        content: '\f1e6';
+        padding-right: 7px;
+      }
     }
   }
-}
 
 
 %tiny-numbers {
