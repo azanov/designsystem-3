@@ -85,7 +85,7 @@
             "label": "Error Pages",
             "value": "patterns.errorpages"
           }, {
-            "label": "Forms & Containers",
+            "label": "Form Samples",
             "value": "patterns.forms"
           }]
         }]
