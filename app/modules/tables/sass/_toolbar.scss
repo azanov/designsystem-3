@@ -9,11 +9,12 @@
   }
 
   select {
-    padding: $padding-small-vertical $padding-small-horizontal;
+  //  padding: $padding-small-vertical $padding-small-horizontal;
     font-family: $font-family-ps-regular;
     line-height: $line-height-base;
     font-size: 12px;
     height: 30px;
+    padding: 5px 20px 5px 10px;
   }
 
 
