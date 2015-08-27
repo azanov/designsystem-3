@@ -55,8 +55,11 @@
         <li><strong>Show UI controls.</strong> Don&rsquo;t use hidden or overlapping controls.</li>
         <li><strong>Call out variables.</strong> When variables are necessary, use unique names. Don&rsquo;t compound several variables.</li>
         <li><strong>Construct full sentences using a single string.</strong> In this example the translator sees &ldquo;I saw a &rdquo; and has no idea what follows &ldquo;a&rdquo;. In some languages, such as German, nouns have gender (masculine, feminine, or neuter), which influences a sentence&rsquo;s syntax and grammar. In cases like this the translator must make a choice, one that will not fit all possible cases.<br>
-        <code>char szString[] = &ldquo;I saw a &rdquo;; char szFinalString[cbMaxSz]= szString + szObject + &ldquo;?&rdquo;;</code><br>
-          <table class="table table-bordered">
+        <p><code>char szString[] = &ldquo;I saw a &rdquo;; char szFinalString[cbMaxSz]= szString + szObject + &ldquo;?&rdquo;;</code></p>
+
+        <img src="modules/globalization/assets/images/strings.png" class="img-responsive">
+
+          <!-- <table class="table table-bordered">
             <thead>
               <tr>
                 <th>English</th>
@@ -81,7 +84,7 @@
                 <td>Masculine</td>
               </tr>
             </tbody>
-          </table>
+          </table> -->
         </li>
       </ul>
 
@@ -157,7 +160,7 @@
         </tbody>
       </table> -->
 
-      <img src="modules/globalization/assets/images/sortingorder.png" class="img-responsive">
+      <img src="modules/globalization/assets/images/sorting_order.png" class="img-responsive">
 
       <h3>Nouns vs. verbs</h3>
 
@@ -171,7 +174,7 @@
 
       <p>Some languages don&rsquo;t use a period to indicate the end of a sentence. Others don&rsquo;t even have spaces between words. Because of these essential differences between English and other languages, you can&rsquo;t rely on standard line-break or word-wrap algorithms, space characters or standard punctuation rules. So in these cases line and word breaks are based on grammatical analysis and on word matching to dictionaries at runtime.</p>
 
-      <img src="modules/globalization/assets/images/lineWord.png" class="img-responsive">
+      <img src="modules/globalization/assets/images/line_and_breaks.png" class="img-responsive">
 
       <h3>Bidirectional alphabets</h3>
 
