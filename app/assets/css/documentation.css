@@ -506,6 +506,8 @@ small,
 
 figure {
   margin-bottom: 10px; }
+  figure img {
+    border: 1px solid #e1e1e1; }
 
 figcaption {
   clear: both;
