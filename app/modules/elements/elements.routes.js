@@ -61,6 +61,9 @@
             }
           }
         },
+        gallery: {
+          templateUrl: 'modules/elements/templates/elements-gallery.html'
+        },
         tabs: {
           templateUrl: 'modules/elements/templates/elements-tabs.html',
           controller: 'TabsController as tabs'
