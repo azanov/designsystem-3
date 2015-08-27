@@ -53,14 +53,14 @@
             "value": "elements.popovers",
             "className": "popovers"
           }, {
+            "label": "User Feedback",
+            "value": "feedback.page"
+          }, {
             "label": "Tables",
             "value": "tables.datatable.page"
           }, {
             "label": "Charts",
             "value": "graphs.page"
-          }, {
-            "label": "User Feedback",
-            "value": "feedback.page"
           }]
         }, {
           "label": "Patterns",
@@ -70,13 +70,13 @@
             "label": "Headers & Footers",
             "value": "patterns.headersfooters"
           }, {
-            "label": "Sign in & Sign up",
+            "label": "Sign in & Sign Up Pages",
             "value": "patterns.signinup"
           }, {
             "label": "Dashboards",
             "value": "patterns.dashboards"
           }, {
-            "label": "Getting Started",
+            "label": "Getting Started Pages",
             "value": "patterns.gettingstarted"
           }, {
             "label": "Welcome Pages",
@@ -145,10 +145,10 @@
             "label": "Navigation",
             "value": "mobile.navigation"
           }, {
-            "label": "Sign in & Sign Up",
+            "label": "Sign in & Sign Up Pages",
             "value": "mobile.sign-in-up"
           }, {
-            "label": "Getting Started",
+            "label": "Getting Started Pages",
             "value": "mobile.onboarding"
           }, {
             "label": "Home Page",
@@ -157,7 +157,7 @@
             "label": "Search & Results",
             "value": "mobile.search-results"
           }, {
-            "label": "Landing",
+            "label": "Welcome Pages",
             "value": "mobile.landing"
           }, {
             "label": "Forms",
