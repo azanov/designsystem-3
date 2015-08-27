@@ -67,7 +67,7 @@
           "value": "",
           "toggle": "dropdown",
           "children": [{
-            "label": "Headers and Footers",
+            "label": "Headers & Footers",
             "value": "patterns.headersfooters"
           }, {
             "label": "Sign in & Sign up",
