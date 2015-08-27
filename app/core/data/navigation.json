@@ -131,17 +131,11 @@
             "label": "Modals & Popovers",
             "value": "mobile.modals-popovers"
           }, {
-            "label": "Lists & Grids",
+            "label": "Lists",
             "value": "mobile.lists-grids"
           }, {
-            "label": "User Feedback",
+            "label": "Alerts",
             "value": "mobile.user-feedback"
-          }, {
-            "label": "---------",
-            "value": "--"
-          }, {
-            "label": "Prototype",
-            "value": "mobile.prototype"
           }]
         }, {
           "label": "Patterns",
@@ -154,7 +148,7 @@
             "label": "Sign in & Sign Up",
             "value": "mobile.sign-in-up"
           }, {
-            "label": "Onboarding",
+            "label": "Getting Started",
             "value": "mobile.onboarding"
           }, {
             "label": "Home Page",
