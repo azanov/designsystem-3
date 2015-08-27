@@ -1915,7 +1915,7 @@ a.app-launcher {
       margin-bottom: 10px;
       border-bottom: 1px solid #e1e1e1; }
     .navbar-default .dropdown-menu > li > a {
-      padding: 12px 30px;
+      padding: 16px 30px 16px 20px;
       font-weight: normal;
       line-height: 1.4;
       color: #717171;
@@ -1923,7 +1923,7 @@ a.app-launcher {
       white-space: nowrap;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
       .navbar-default .dropdown-menu > li > a:last-child {
-        padding-bottom: 10px; }
+        padding-bottom: 16px; }
 
 .mega-offset {
   margin-left: 140px; }
@@ -1947,7 +1947,7 @@ a.app-launcher {
     color: inherit;
     display: block;
     width: 100%;
-    padding: 5px; }
+    padding: 8px 5px 8px 0; }
     .yamm-content .menu-items li a:hover {
       text-decoration: none;
       color: #2e2e2e; }
