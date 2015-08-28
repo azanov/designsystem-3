@@ -145,10 +145,10 @@
             "label": "Navigation",
             "value": "mobile.navigation"
           }, {
-            "label": "Sign in & Sign Up Pages",
+            "label": "Sign in",
             "value": "mobile.sign-in-up"
           }, {
-            "label": "Getting Started Pages",
+            "label": "Getting Started",
             "value": "mobile.onboarding"
           }, {
             "label": "Home Page",
@@ -157,11 +157,8 @@
             "label": "Search & Results",
             "value": "mobile.search-results"
           }, {
-            "label": "Welcome Pages",
+            "label": "Welcome",
             "value": "mobile.landing"
-          }, {
-            "label": "Forms",
-            "value": "mobile.forms"
           }, {
             "label": "Maps",
             "value": "mobile.maps"
