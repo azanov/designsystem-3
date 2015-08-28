@@ -67,6 +67,16 @@
       }
     })
 
+    //this is the reset password example page
+    .state('patterns.youre-invited', {
+      url: '/patterns/youreinvited',
+      templateUrl: 'modules/patterns/templates/your-invited.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'signin'
+      }
+    })
+
     .state('patterns.dashboards', {
       url: '/patterns/dashboards',
       templateUrl: 'modules/patterns/templates/dashboards.html'
