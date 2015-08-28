@@ -25,7 +25,9 @@
     align-items: center;
     > div:first-child {
       padding-right: 60px;
+      transition: padding .5s ease;
     }
+    transition: padding .5s ease;
   }
 
   .title-unit {
@@ -104,7 +106,8 @@
 
   //
   .hero-global {
-    background: linear-gradient(270deg, #4652a3 0%, #7f469b 42%, #7f469b 48%, #9d4097 100%);
+    background: transparent url('../images/hero-globalization.jpg') center center no-repeat;
+    // linear-gradient(270deg, #4652a3 0%, #7f469b 42%, #7f469b 48%, #9d4097 100%);
     .title-unit {
       h1 {
         color: #fff;
@@ -125,6 +128,52 @@
         color: rgba(207, 9, 137, .65);
       }
     }
+  }
+
+
+  // offset layout for large desktop
+  @media screen and (min-width: $screen-lg) {
+    .hero-principles {
+      .diptych {
+        padding-right: 190px;
+        > div:first-child {
+          padding-right: 150px;
+        }
+      }
+    }
+    .hero-web {
+      .diptych {
+        > div:first-child {
+          padding-right: 140px;
+        }
+      }
+    }
+    .hero-mobile {
+      .diptych {
+        padding-right: 170px;
+        > div:first-child {
+          padding-right: 230px;
+        }
+      }
+    }
+    .hero-global {
+      .diptych {
+        padding-right: 100px;
+        > div:first-child {
+          padding-right: 200px;
+        }
+      }
+    }
+    .hero-resources {
+      .diptych {
+        padding-right: 160px;
+        > div:first-child {
+          padding-right: 120px;
+        }
+      }
+    }
+
+
   }
 
 
@@ -329,12 +378,12 @@ figcaption {
 
 
 .more-info {
-    background-color: $pb-gray-500;
+    background-color: #c0c0c0;
     padding: 5px 15px;
     border-radius: 20px;
-    font-family: $font-family-ps-light;
-    font-size: 12px;
-    margin-top: 10px;
+    font-family: $font-family-monospace;
+    font-size: 11px;
+    margin: 5px;
     display: inline-block;
     text-transform: lowercase;
     color: #fff;

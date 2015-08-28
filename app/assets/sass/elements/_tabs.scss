@@ -191,11 +191,13 @@
   border: 0;
   margin-bottom: 0;
 }
+.tabs-fancy >.nav.nav-tabs li a,
 .tabs-fancy >.nav.nav-tabs li a:hover,
 .tabs-fancy >.nav.nav-tabs li a:active,
 .tabs-fancy >.nav.nav-tabs li a:focus {
   background-color: transparent;
 }
+
 //* start tab styles for undlerline */
 .tabs-fancy >.nav.nav-tabs li:last-child:after {
   content: '';
