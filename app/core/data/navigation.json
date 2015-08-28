@@ -40,11 +40,11 @@
           "value": "",
           "toggle": "dropdown",
           "children": [{
-            "label": "Buttons",
-            "value": "elements.buttons"
-          }, {
             "label": "UI Controls",
             "value": "elements.uicontrols"
+          }, {
+            "label": "Buttons",
+            "value": "elements.buttons"
           }, {
             "label": "Containers",
             "value": "elements.containers.page"
@@ -70,19 +70,19 @@
             "label": "Headers & Footers",
             "value": "patterns.headersfooters"
           }, {
-            "label": "Sign in & Sign Up Pages",
+            "label": "Sign in & Sign Up",
             "value": "patterns.signinup"
           }, {
             "label": "Dashboards",
             "value": "patterns.dashboards"
           }, {
-            "label": "Getting Started Pages",
+            "label": "Getting Started",
             "value": "patterns.gettingstarted"
           }, {
-            "label": "Welcome Pages",
+            "label": "Welcome",
             "value": "patterns.welcome"
           }, {
-            "label": "Error Pages",
+            "label": "Page Errors",
             "value": "patterns.errorpages"
           }, {
             "label": "Form Samples",
@@ -145,10 +145,10 @@
             "label": "Navigation",
             "value": "mobile.navigation"
           }, {
-            "label": "Sign in & Sign Up Pages",
+            "label": "Sign in",
             "value": "mobile.sign-in-up"
           }, {
-            "label": "Getting Started Pages",
+            "label": "Getting Started",
             "value": "mobile.onboarding"
           }, {
             "label": "Home Page",
@@ -157,11 +157,8 @@
             "label": "Search & Results",
             "value": "mobile.search-results"
           }, {
-            "label": "Welcome Pages",
+            "label": "Welcome",
             "value": "mobile.landing"
-          }, {
-            "label": "Forms",
-            "value": "mobile.forms"
           }, {
             "label": "Maps",
             "value": "mobile.maps"
