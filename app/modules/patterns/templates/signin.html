@@ -4,13 +4,11 @@
   <div class="centered-box">
     <h1 class="prod-name text-center">Product Name</h1>
 
-    <div class="signin-box">
-
-      <h1 class="spacer-top-xs">Sign In</h1>
+    <div class="signin-box spacer-bottom-md">
 
       <form autocomplete="off" name="myForm" novalidate>
         <div class="form-group" ng-class="{'has-error': myForm.name.$error.required  && myForm.name.$dirty}">
-          <label for="name">Email</label>
+          <label for="name">Email or username</label>
           <input class="form-control" name="name" ng-model-options="{ updateOn: 'blur' }" ng-model="myForm.data.name" required type="text">
           <span class="help-block" ng-show="myForm.name.$error.required && myForm.name.$dirty">Name is required.</span>
         </div>
@@ -19,11 +17,9 @@
           <input class="form-control" name="pwd" ng-model="myForm.data.pwd" required type="password">
           <span class="help-block" ng-show="myForm.pwd.$error.required && myForm.pwd.$dirty">Password is required.</span>
         </div>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox">
-            Remember me
-          </label>
+        <div class="checkbox checkbox-enhanced spacer-top-sm spacer-bottom-sm">
+          <input id="check4" type="checkbox">
+          <label for="check4">Remember me</label>
         </div>
 
         <button class="btn btn-primary btn-block btn-lg spacer-top-xs" ng-click="login()" type="submit">Sign In</button>
@@ -48,11 +44,7 @@
         </p>
 
         <p>
-          <small>© 2015 Pitney Bowes Inc. All rights reserved.<br>
-            Version 2.2&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="">Privacy</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="">Terms &amp; Conditions</a>
-          </small>
+          <small>&copy; 2015 Pitney Bowes Inc. All rights reserved. <a href="">Privacy</a>&nbsp;|&nbsp;<a href="">Terms &amp; Conditions</a></small>
         </p>
       </div>
     </div>

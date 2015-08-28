@@ -26,11 +26,17 @@
 
   .centered-box {
     min-width: 400px;
+    max-width: 400px;
   }
 
   .signin-box {
     background-color: #fff;
     padding: 40px;
+    box-shadow: 0 17px 26px -9px rgba(0, 0, 0, 0.5);
+  }
+
+  .sign-in-title {
+    margin-top: 0;
   }
 
   .prod-name {
@@ -41,8 +47,13 @@
   .signin-footer {
     color: #fff;
 
-    a {
-      color: inherit;
+    small {
+      opacity: .4;
+      font-weight: 200;
+      a {
+        color: inherit;
+
+      }
     }
 
   }

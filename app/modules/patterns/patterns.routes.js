@@ -48,6 +48,35 @@
       }
     })
 
+    //this is the reset password example page
+    .state('patterns.reset-password', {
+      url: '/patterns/resetpassword',
+      templateUrl: 'modules/patterns/templates/reset-password.html',
+      data: {
+        bodyClass: 'signin'
+      }
+    })
+
+    //this is the reset password example page
+    .state('patterns.sign-up', {
+      url: '/patterns/signup',
+      templateUrl: 'modules/patterns/templates/sign-up.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'signin'
+      }
+    })
+
+    //this is the reset password example page
+    .state('patterns.youre-invited', {
+      url: '/patterns/youreinvited',
+      templateUrl: 'modules/patterns/templates/your-invited.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'signin'
+      }
+    })
+
     .state('patterns.dashboards', {
       url: '/patterns/dashboards',
       templateUrl: 'modules/patterns/templates/dashboards.html'

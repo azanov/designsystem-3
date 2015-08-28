@@ -1272,11 +1272,13 @@ a.list-group-item.active .badge { color: #fff; background-color: #3e53a4; }
 
 .signin .bg { width: 100vw; height: 100vh; background-color: #254d9d; background: linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%); background-size: cover; background-repeat: no-repeat; margin: 0; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
 .signin header, .signin #header, .signin footer, .signin #footer { display: none; }
-.signin .centered-box { min-width: 400px; }
-.signin .signin-box { background-color: #fff; padding: 40px; }
+.signin .centered-box { min-width: 400px; max-width: 400px; }
+.signin .signin-box { background-color: #fff; padding: 40px; box-shadow: 0 17px 26px -9px rgba(0, 0, 0, 0.5); }
+.signin .sign-in-title { margin-top: 0; }
 .signin .prod-name { color: #fff; margin-top: 0; }
 .signin .signin-footer { color: #fff; }
-.signin .signin-footer a { color: inherit; }
+.signin .signin-footer small { opacity: .4; font-weight: 200; }
+.signin .signin-footer small a { color: inherit; }
 
 table { background-color: #fff; }
 
