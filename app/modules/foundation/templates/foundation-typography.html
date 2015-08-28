@@ -82,9 +82,9 @@
             <td>{{item.use}}</td>
             <td>
               {{item.tag}}{{item.class}}
-              <span class="swatch" style="background-color:{{item.color}};color: #fff">{{item.color}}</span>,
+              <span class="swatch" ng-style="{'background-color':item.color,'color': '#fff'}">{{item.color}}</span>,
               {{item.tag}}{{item.altclass}}
-              <span class="swatch" style="background-color:{{item.altcolor}};color: #fff">{{item.altcolor}}</span>,
+              <span class="swatch" ng-style="{'background-color':item.altcolor,'color': '#fff'}">{{item.altcolor}}</span>,
               {{item.tag}}.ko
               <span class="swatch" style="background-color:#fff; color:#2e2e2e">#FFFFFF</span>
             </td>
@@ -210,7 +210,7 @@
           <td>{{item.class}}</td>
           <td>{{item.variable}}</td>
           <td>
-            <span class="swatch" ng-if="item.color != '#FFFFFF'" style="background-color:{{item.color}}; color:#fff">{{item.color}}</span>
+            <span class="swatch" ng-if="item.color != '#FFFFFF'" ng-style="{'background-color':item.color, 'color':'#fff'}">{{item.color}}</span>
             <span class="swatch" ng-if="item.color == '#FFFFFF'" style="background-color:#fff; color:#2e2e2e">#FFFFFF</span>
           </td>
         </tr>
@@ -378,7 +378,7 @@
           <td class="psr14">{{item.desc}}</td>
           <td>Precision Sans Regular 14px</td>
           <td>
-            <span class="swatch" ng-if="item.color != '#FFFFFF'" style="background-color:{{item.color}}; color:#fff">{{item.color}}</span>
+            <span class="swatch" ng-if="item.color != '#FFFFFF'" ng-style="{'background-color':item.color, 'color':'#fff'}">{{item.color}}</span>
             <span class="swatch" ng-if="item.color == '#FFFFFF'" style="background-color:#fff; color:#2e2e2e">#FFFFFF</span>
           </td>
         </tr>
@@ -405,7 +405,7 @@
           <td class="psr14">{{item.desc}}</td>
           <td>Precision Sans Regular 14px</td>
           <td>
-            <span class="swatch" ng-if="item.color != '#FFFFFF'" style="background-color:{{item.color}}; color:#fff">{{item.color}}</span>
+            <span class="swatch" ng-if="item.color != '#FFFFFF'" ng-style="{'background-color':item.color, 'color':'#fff'}">{{item.color}}</span>
             <span class="swatch" ng-if="item.color == '#FFFFFF'" style="background-color:#fff; color:#2e2e2e">#FFFFFF</span>
           </td>
         </tr>
