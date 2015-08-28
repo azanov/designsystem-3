@@ -189,7 +189,6 @@ small, .text-small, .small { font-size: 12px; }
 .figure-spacer { border-top: 1px solid #e1e1e1; padding-top: 40px; }
 
 figure { margin-bottom: 10px; }
-figure img { border: 1px solid #e1e1e1; }
 
 figcaption { clear: both; color: #cf0989; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12px; letter-spacing: .05em; margin-bottom: 15px; margin-top: 35px; text-transform: capitalize; }
 figcaption + h2 { margin-top: 0; }
