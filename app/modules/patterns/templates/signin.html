@@ -8,7 +8,7 @@
 
       <form autocomplete="off" name="myForm" novalidate>
         <div class="form-group" ng-class="{'has-error': myForm.name.$error.required  && myForm.name.$dirty}">
-          <label for="name">Username or email</label>
+          <label for="name">Email or username</label>
           <input class="form-control" name="name" ng-model-options="{ updateOn: 'blur' }" ng-model="myForm.data.name" required type="text">
           <span class="help-block" ng-show="myForm.name.$error.required && myForm.name.$dirty">Name is required.</span>
         </div>
