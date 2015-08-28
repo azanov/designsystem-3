@@ -131,7 +131,7 @@ small, .text-small, .small { font-size: 12px; }
 
 .text-danger { color: #dc0000; }
 
-.home div[class^="hero-"] { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; height: 500px; width: 100vw; }
+.home div[class^="hero-"] { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; height: 500px; }
 .home .diptych { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 .home .diptych > div:first-child { padding-right: 60px; }
 .home .title-unit h1 { color: inherit; font-size: 32px; font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; margin-top: 5px; }
