@@ -24,7 +24,7 @@
     display: flex;
     align-items: center;
     > div:first-child {
-      padding-right: 60px;
+      padding-right: 20px;
       transition: padding .5s ease;
     }
     transition: padding .5s ease;
@@ -79,6 +79,11 @@
   //
   .hero-web {
     background: #b73489 url('../images/hero-web-pattern.jpg') top center no-repeat;
+    .diptych {
+     >  div:first-child {
+       margin-left: 20px;
+     }
+    }
     .title-unit {
       h1 {
         color: #fff;
