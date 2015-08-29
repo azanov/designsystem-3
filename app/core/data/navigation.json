@@ -70,7 +70,7 @@
             "label": "Headers & Footers",
             "value": "patterns.headersfooters"
           }, {
-            "label": "Sign in & Sign Up",
+            "label": "Sign In & Sign Up",
             "value": "patterns.signinup"
           }, {
             "label": "Dashboards",
@@ -145,7 +145,7 @@
             "label": "Navigation",
             "value": "mobile.navigation"
           }, {
-            "label": "Sign in",
+            "label": "Sign In & Sign Up",
             "value": "mobile.sign-in-up"
           }, {
             "label": "Getting Started",
