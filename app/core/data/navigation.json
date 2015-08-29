@@ -160,6 +160,9 @@
             "label": "Welcome",
             "value": "mobile.landing"
           }, {
+            "label": "Forms",
+            "value": "mobile.forms"
+          }, {
             "label": "Maps",
             "value": "mobile.maps"
           }]
