@@ -13,10 +13,15 @@
   &.focus {
     @extend %fancy-focus;
   }
-  &.dropdown-active:after {
-    margin-top: -4px;
-    border-width: 0 5px 5px;
-    border-color: transparent transparent #333;
+  &.dropdown-active {
+
+    border-radius: 0;
+
+    &:after {
+      margin-top: -4px;
+      border-width: 0 5px 5px;
+      border-color: transparent transparent #333;
+    }
   }
 }
 

@@ -1090,6 +1090,7 @@ a.list-group-item.active .badge { color: #fff; background-color: #3e53a4; }
 .form-control:focus, .form-control.focus, .logo-button-usps:hover, .logo-button-usps.hover, .item-selector-button:hover, .item-selector-button.hover, .selectize-input.focus, .selectize-control.single .selectize-input.focus, .ats-switch:hover, .toolbar .input-group .form-control.search:focus, .toolbar .input-group .form-control.search.focus { border-color: #3e53a4; border-width: 1px; outline: 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); }
 
 .selectize-input { border-color: #9b9b9b; border-radius: 0; }
+.selectize-input.dropdown-active { border-radius: 0; }
 .selectize-input.dropdown-active:after { margin-top: -4px; border-width: 0 5px 5px; border-color: transparent transparent #333; }
 
 .input-group .selectize-control .selectize-input { overflow: initial; border-color: #9b9b9b; border-bottom-left-radius: 4px; border-top-left-radius: 4px; border-top-right-radius: 0; border-bottom-right-radius: 0; }
