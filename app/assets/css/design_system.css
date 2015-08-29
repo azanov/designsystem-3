@@ -611,6 +611,8 @@ div.accordion-group .panel.active .panel-title:before { content: '\25B8'; -webki
 
 :-ms-input-placeholder { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: #c1c1c1; }
 
+::-ms-clear { display: none; }
+
 label { font-weight: normal; }
 label .optional { font-size: 12px; font-style: italic; }
 

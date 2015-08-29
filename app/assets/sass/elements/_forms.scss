@@ -16,6 +16,14 @@
 }
 
 
+// Prevent IE10 from adding clear X to inputs
+// see SO http://stackoverflow.com/questions/19291044/ie-10-cuts-off-text-in-text-box-after-100-px
+// and DS issue https://github.com/PBGUX/designsystem/issues/19
+::-ms-clear {
+  display: none;
+}
+
+
 label {
   font-weight: normal;
   .optional {
