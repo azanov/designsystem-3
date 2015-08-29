@@ -555,6 +555,10 @@ div.accordion-group .panel.active .panel-title:before { content: '\25B8'; -webki
 .close { transition: color 0.5s; opacity: 1; filter: alpha(opacity=1); }
 .close:hover { opacity: 1; filter: alpha(opacity=1); }
 
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child { border-top-right-radius: 4px; }
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle { border-top-right-radius: 4px; }
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child { border-bottom-left-radius: 4px; }
+
 .bootstrap-datetimepicker-widget td.active, .bootstrap-datetimepicker-widget td.active:hover { background-color: #3e53a4; }
 
 .site-content { min-height: 550px; min-height: calc(100vh - (45px + 40px)); }

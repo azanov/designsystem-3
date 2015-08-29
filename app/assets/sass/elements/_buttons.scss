@@ -188,3 +188,30 @@ fieldset[disabled] .btn {
     filter: alpha(opacity=1);
   }
 }
+
+
+
+// Vertical button groups
+// ----------------------
+.btn-group-vertical {
+  > .btn-group {
+    &:first-child:not(:last-child) {
+      >.btn {
+        &:last-child {
+          border-top-right-radius: $border-radius-base;
+        }
+      }
+      >.dropdown-toggle {
+        border-top-right-radius: $border-radius-base;
+      }
+    }
+
+    &:last-child:not(:first-child){
+      >.btn {
+        &:first-child {
+          border-bottom-left-radius: $border-radius-base;
+        }
+      }
+    }
+  }
+}
