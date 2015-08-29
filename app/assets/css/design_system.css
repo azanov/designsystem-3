@@ -1458,7 +1458,7 @@ td.centered, th.centered { text-align: center; }
 .toolbar .input-group-btn.open { color: #fff; }
 .toolbar .input-group-btn.open .dropdown-toggle { color: #fff; }
 .toolbar .search-clear { position: absolute; padding-right: 3px; padding-left: 0; right: 0; z-index: 10; border: 0; opacity: 1; color: #c0c0c0; transition: all .3s ease-in-out; }
-.toolbar .search-clear .btn { border: 0; }
+.toolbar .search-clear:hover { color: #2e2e2e; background-color: inherit; }
 .toolbar .dropdown-menu > li > a { font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif; color: #3e53a4; font-size: 13px; display: block; padding: 3px 20px; clear: both; line-height: 1.42857143; white-space: nowrap; }
 .toolbar .dropdown-menu > li > a a:hover { text-decoration: none; }
 .toolbar .dropdown-menu > li > a:focus, .toolbar .dropdown-menu > li > a:hover { background-color: #3e53a4; color: #fff; }
