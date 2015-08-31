@@ -90,6 +90,7 @@ gulp.task('cssrelease', ['fontrelease'], function() {
   gulp.src([
     'build/assets/css/design_system.css'
   ])
+  .pipe()
   .pipe(gulp.dest('./dist/css'));
 });
 
@@ -129,7 +130,7 @@ gulp.task('fontrelease', function() {
 gulp.task('usemin', function() {
   gulp.src('./app/index.html')
     .pipe(usemin({
-      //css: [minifyCss()],
+      // css: [minifyCss()],
       // html: [minifyHtml({
       //   empty: true
       // })],
