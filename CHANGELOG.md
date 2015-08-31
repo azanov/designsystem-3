@@ -8,7 +8,36 @@
 ######Header
 - Use the `<header>` tag in place of a div with a class or id
 
+######Footer
+- Use the `<footer>` tag in place of a div with a class or id
+- uses flexbox and does not need Bootstrap classes
 
+```html
+<footer>
+	<div class="footer-wrapper">
+	  <div  class="container">
+		  <div class="fb-footer">
+		    <!-- Copyright -->
+		    <div>
+		      <a href="http://www.pb.com"><i class="pb-footer-logo gradient"></i></a><span class="copyright">&copy; 2015 Pitney Bowes Inc. All rights reserved.</span>
+		    </div>
+
+		    <!-- Legal -->
+		    <div>
+		      <ul class="list-unstyled list-inline legal">
+		        <li><a href="" target="_blank">Terms &amp; Conditions</a></li>
+		        <li><a href="" target="_blank">Privacy Policy</a></li>
+		      </ul>
+		    </div>
+
+		    <div>
+		      <a href="mailto:someone@pb.com">Send us feedback</a>
+		    </div>
+		  </div>
+		</div>
+	</div>
+</footer>
+```
 
 ###1.2.0 Feb 20,2015
 - Added "sign-in screen"

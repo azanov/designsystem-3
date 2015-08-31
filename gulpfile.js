@@ -90,7 +90,6 @@ gulp.task('cssrelease', ['fontrelease'], function() {
   gulp.src([
     'build/assets/css/design_system.css'
   ])
-  .pipe()
   .pipe(gulp.dest('./dist/css'));
 });
 
