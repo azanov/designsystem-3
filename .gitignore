@@ -6,7 +6,6 @@ node_modules
 config.codekit
 .ftppass
 .tmp
-app/styles/design_system.css
 npm-debug.log
 scss-lint.log
 .idea
