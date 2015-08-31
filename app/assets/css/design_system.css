@@ -678,6 +678,7 @@ fieldset legend { color: #4e4e4e; }
 select { background: #fff url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAxNiAyMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+ZHJvcGFycm93PC90aXRsZT48cGF0aCBkPSJNMCA3LjM0NGgxMC41bC01LjI1IDUuNTY2LTUuMjUtNS41NjV6IiBmaWxsPSIjNzE3MTcxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=") right center no-repeat !important; }
 select[multiple], select[size] { background-image: none !important; color: #717171; }
 select[multiple] option:selected, select[size] option:selected { background-color: #fff; color: #3e53a4; }
+select.form-control { padding-right: 22px; }
 
 .input-sm, select.input-sm { height: 30px; padding: 5px 10px; font-size: 12px; line-height: 1.42857; }
 
