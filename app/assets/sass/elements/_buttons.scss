@@ -9,10 +9,17 @@
 }
 
 .btn-default,
-.btn-cancel, .btn-link,
+.btn-cancel,
 .btn-group .btn-default,
 .btn-group-vertical .btn-default {
   @include button-variant($button-primary, transparent, $button-primary, $pb-gray-500, $pb-bg2, $button-primary, #d9dced);
+}
+
+.btn-link {
+  @include button-variant($button-primary, transparent, transparent, $pb-gray-500, $pb-bg2, $button-primary, #d9dced);
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .btn-group-borderless .btn-default {
