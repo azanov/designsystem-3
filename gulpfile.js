@@ -86,6 +86,22 @@ gulp.task('sass-nomaps', function() {
     .pipe(gulp.dest('build/assets/css'));
 });
 
+gulp.task('cssrelease', ['fontrelease'], function() {
+  gulp.src([
+    'build/assets/css/design_system.css'
+  ])
+  .pipe()
+  .pipe(gulp.dest('./dist/css'));
+});
+
+gulp.task('fontrelease', function() {
+  gulp.src([
+    'build/assets/fonts/**/*'
+  ])
+  .pipe(gulp.dest('./dist/fonts'));
+});
+
+
 // experiment 8-18
 // gulp.task('sass', function() {
 //   return sass('./app/assets/sass')
@@ -110,20 +126,11 @@ gulp.task('sass-nomaps', function() {
 //
 
 
-
-
-
-
-
-
-
-
-
 //usemin
 gulp.task('usemin', function() {
   gulp.src('./app/index.html')
     .pipe(usemin({
-      //css: [minifyCss()],
+      // css: [minifyCss()],
       // html: [minifyHtml({
       //   empty: true
       // })],
