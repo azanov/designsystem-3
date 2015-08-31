@@ -678,6 +678,7 @@ fieldset legend { color: #4e4e4e; }
 select { background: #fff url('data:image/svg+xml;utf8,<svg width="16" height="22" viewBox="0 0 16 22" xmlns="http://www.w3.org/2000/svg"><title>droparrow</title><path d="M0 7.344h10.5l-5.25 5.566-5.25-5.565z" fill="#717171" fill-rule="evenodd"/></svg>') right center no-repeat !important; }
 select[multiple], select[size] { background-image: none !important; color: #717171; }
 select[multiple] option:selected, select[size] option:selected { background-color: #fff; color: #3e53a4; }
+select.form-control { padding-right: 22px; }
 
 .input-sm, select.input-sm { height: 30px; padding: 5px 10px; font-size: 12px; line-height: 1.42857; }
 
