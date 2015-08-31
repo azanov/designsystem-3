@@ -1,0 +1,301 @@
+<div class="doc-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero-header">
+          <div class="eyebrow">Foundation</div>
+          <h1>Iconography</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-unstyled list-inline jump-menu">
+            <li><a href="" du-smooth-scroll="icon-strategy">Icon Strategy</a></li>
+            <li><a href="" du-smooth-scroll="brand-icons">Brand Icons</a></li>
+            <li><a href="" du-smooth-scroll="pb-icons">PB Icons</a></li>
+            <li><a href="" du-smooth-scroll="glyphicons">Glyphicons</a></li>
+            <li><a href="" du-smooth-scroll="font-awesome">Font Awesome</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="icon-strategy" class="doc-head">Icon Strategy</h1>
+      <p class="doc-lede">We&rsquo;ve created a family of icons and illustrations with an expanding hierarchy that fans out with more choices as the required use broadens.</p>
+    </div>
+  </div>
+
+  <div class="row doc-sectionbreak">
+    <div class="col-md-8">
+      <p>When using icons, considerations should be made for what type of page the illustration or icon will be used on (for example, marketing page vs. product app) and what size the mark will be applied. Every icon is created to feel as if from the same family, no matter where it is used. We use illustrations at larger sizes and icons at smaller sizes when less detail/style can be conveyed.</p>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="doc-sectionhead">Category illustrations</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <p>Our category illustrations sit just below our brand&rsquo;s logo in terms of their specific use, as they are tied to our five business units. They are mainly used on marketing materials and landing pages. They are illustrations rather than icons because of their complexity and lack of scalability, along with particular application requirements.</p>
+    </div>
+
+    <div class="col-md-8 col-md-offset-1">
+      <img class="img-responsive" src="modules/foundation/assets/images/category.png" alt="" />
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="doc-sectionhead">Brand Illustrations</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <p>Brand illustrations symbolize category and concept names used for any landing page, marketing material or application within any of our five business units.</p>
+    </div>
+
+    <div class="col-md-8 col-md-offset-1">
+      <img class="img-responsive" src="modules/foundation/assets/images/brand.png" alt="" />
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="doc-sectionhead">Brand Icons</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <p>Brand icons are simplified versions of the brand illustrations that can be used at smaller scales.</p>
+    </div>
+
+    <div class="col-md-8 col-md-offset-1">
+      <img class="img-responsive" src="modules/foundation/assets/images/brand_icons.png" alt="" />
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="doc-sectionhead">Functional Icons</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <p>Functional icons are used to quickly convey a command, a category, or common actions or labels within an application. They are used as live navigation/commands within the UI.</p>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="brand-icons" class="doc-head">Brand Icons</h1>
+      <p class="doc-lede">The Pitney Bowes logo appears in the footer of all our products. Use the the 4-color positive version on white backgrounds and a 1-color variation everywhere else (positive on lighter backgrounds, reverse on darker backgrounds). Download <a href="http://designsystem.pbi.global.pvt:8080/wp-content/uploads/2014/12/PB-Logo-Quick-Reference.pdf" target="_blank">logo guidance</a> or <a href="http://designsystem.pbi.global.pvt:8080/wp-content/uploads/2014/12/PB_logos.zip" target="_blank">logo files</a>.</p>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="pb-icons" class="doc-head">Pitney Bowes Icons</h1>
+    </div>
+  </div>
+
+  <div class="row spacer-top-xl">
+    <div class="col-md-12">
+      <ul class="block-grid-6 glyphicons">
+        <li ng-repeat="icon in icons.pbIcons"><i class="pbfont fa-fw fa-2x pb-{{::icon}}"></i>
+          <br>pb-{{::icon}}</li>
+      </ul>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="glyphicons" class="doc-head">Glyphicons</h1>
+
+      <div class="callout callout-info">Included as part of of Bootstrap. Please see <a href="http://getbootstrap.com/components/#glyphicons-glyphs" target="_blank">getbootstrap.com</a> for all icons.</div>
+
+    </div>
+  </div>
+
+  <div class="row spacer-top-xl">
+    <div class="col-md-12">
+      <ul class="block-grid-6 glyphicons">
+        <li>
+          <span class="glyphicon  fa-2x glyphicon-plus"></span>
+          <br><span class="glyphicon-class">glyphicon-plus</span>
+        </li>
+        <li>
+          <span class="glyphicon  fa-2x glyphicon-minus"></span>
+          <br><span class="glyphicon-class">glyphicon-minus</span>
+        </li>
+        <li>
+          <span class="glyphicon  fa-2x glyphicon-cloud"></span>
+          <br><span class="glyphicon-class">glyphicon-cloud</span>
+        </li>
+        <li>
+          <span class="glyphicon  fa-2x glyphicon-envelope"></span>
+          <br><span class="glyphicon-class">glyphicon-envelope</span>
+        </li>
+        <li>
+          <span class="glyphicon  fa-2x glyphicon-pencil"></span>
+          <br><span class="glyphicon-class">glyphicon-pencil</span>
+        </li>
+        <li>
+          <span class="glyphicon  fa-2x glyphicon-search"></span>
+          <br><span class="glyphicon-class">glyphicon-search</span>
+        </li>
+        <li>
+          <span class="glyphicon  fa-2x glyphicon-star"></span>
+          <br><span class="glyphicon-class">glyphicon-star</span>
+        </li>
+        <li>
+          <span class="glyphicon  fa-2x glyphicon-star-empty"></span>
+          <br><span class="glyphicon-class">glyphicon-star-empty</span>
+        </li>
+        <li>
+          <span class="glyphicon  fa-2x glyphicon-user"></span>
+          <br><span class="glyphicon-class">glyphicon-user</span>
+        </li>
+        <li>
+          <span class="glyphicon  fa-2x glyphicon-th-large"></span>
+          <br><span class="glyphicon-class">glyphicon-th-large</span>
+        </li>
+        <li>
+          <span class="glyphicon  fa-2x glyphicon-th"></span>
+          <br><span class="glyphicon-class">glyphicon-th</span>
+        </li>
+        <li>
+          <span class="glyphicon  fa-2x glyphicon-th-list"></span>
+          <br><span class="glyphicon-class">glyphicon-th-list</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="font-awesome" class="doc-head">Font Awesome</h1>
+
+      <div class="callout callout-info">Included in Design System via link to CDN. Please see <a href="http://fontawesome.io/icons/" target="_blank">fontawesome.io/icons/</a> for all latest icons. See <a href="http://fontawesome.io/examples/">fontawesome.io/examples/</a> for more examples and options.</div>
+
+    </div>
+  </div>
+
+  <div class="row spacer-top-xl">
+    <div class="col-md-12">
+      <ul class="block-grid-6">
+        <li ng-repeat="icon in icons.faIcons | limitTo:24" class="text-center">
+          <i class="fa fa-2x fa-{{::icon.id}}"></i>
+          <br>fa-{{::icon.id}}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row spacer-top-xl">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Examples</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <figure>
+        <figcaption>Spinning Icons</figcaption>
+        <ul class="list-inline">
+          <li>
+            <i class="fa fa-2x fa-spinner fa-spin"></i>
+          </li>
+          <li>
+            <i class="fa fa-2x fa-circle-o-notch fa-spin"></i>
+          </li>
+          <li>
+            <i class="fa fa-2x fa-refresh fa-spin"></i>
+          </li>
+          <li>
+            <i class="fa fa-2x fa-cog fa-spin"></i>
+          </li>
+        </ul>
+      </figure>
+    </div>
+
+    <div class="col-md-3">
+      <figure>
+        <figcaption>List Icons</figcaption>
+        <p>Use <code>fa-ul</code> and <code>fa-li</code> to easily replace default bullets in unordered lists.</p>
+        <ul class="fa-ul">
+          <li><i class="fa-li fa fa-check-square"></i>List icons</li>
+          <li><i class="fa-li fa fa-check-square"></i>can be used</li>
+          <li><i class="fa-li fa fa-spinner fa-spin"></i>as bullets</li>
+          <li><i class="fa-li fa fa-square"></i>in lists</li>
+        </ul>
+      </figure>
+    </div>
+
+    <div class="col-md-3">
+      <figure>
+        <figcaption>Stacked Icons</figcaption>
+        <p>To stack multiple icons, use the <code>fa-stack</code> class on the parent, the <code>fa-stack-1x</code> for the regularly sized icon, and <code>fa-stack-2x</code> for the larger icon. <code>fa-inverse</code> can be used as an alternative icon color. You can even throw larger icon classes on the parent to get further control of sizing.</p>
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square-o fa-stack-2x"></i>
+          <i class="fa fa-cog fa-stack-1x text-info"></i>
+        </span> fa-cog on fa-square-o
+        <br>
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x text-success"></i>
+          <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
+        </span> fa-flag on fa-circle
+        <br>
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+        </span> fa-terminal on fa-square
+        <br>
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-camera fa-stack-1x"></i>
+          <i class="fa fa-ban fa-stack-2x text-danger"></i>
+        </span> fa-ban on fa-camera
+      </figure>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <div class="callout callout-danger">CSS3 animation only works in supported browsers.</div>
+    </div>
+  </div>
+
+</div>
