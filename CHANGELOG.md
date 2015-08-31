@@ -1,4 +1,14 @@
 ##Release Notes
+###2.0.0 August 31, 2015
+- dropped support for IE8/9, following industry standards
+- SVG embedded graphics used for resolution independence
+- CSS3 Flexbox used in places for layout and alignment
+- Updates to header and footer, see below
+
+######Header
+- Use the `<header>` tag in place of a div with a class or id
+
+
 
 ###1.2.0 Feb 20,2015
 - Added "sign-in screen"
