@@ -328,8 +328,9 @@ h2.table-header.specifications:after { content: "40px"; height: 40px; }
 .preview-code pre { border-color: #e3e3e3; border-top-left-radius: 0; border-top-right-radius: 0; margin: 0; padding: 10px; }
 .preview-code pre code { background: transparent; }
 
-.panel-download .panel-body { min-height: 425px; }
+.panel-download .panel-body { min-height: 425px; transition: all .3s ease-in-out; }
 .panel-download .panel-body ul li { margin-bottom: 8px; }
+.panel-download .panel-body:hover { box-shadow: 0 11px 20px -5px rgba(0, 0, 0, 0.5); transition: all .3s ease-in-out; }
 .panel-download a { color: #fff; font-weight: 200; }
 .panel-download a:hover { color: #fff; }
 .panel-download hr { width: 50%; }

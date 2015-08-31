@@ -808,11 +808,17 @@ h2.table-header.specifications {
 
   .panel-body {
     min-height: 425px;
+    transition: all .3s ease-in-out;
 
     ul {
       li {
         margin-bottom: 8px;
       }
+    }
+
+    &:hover {
+      box-shadow: 0 11px 20px -5px rgba(0, 0, 0, .5);
+      transition: all .3s ease-in-out;
     }
 
   }
