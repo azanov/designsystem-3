@@ -11,3 +11,4 @@ npm-debug.log
 scss-lint.log
 .idea
 build
+dist
