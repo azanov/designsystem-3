@@ -1,0 +1,528 @@
+//* -- FORMS -- */
+// scss-lint:disable VendorPrefixes
+::-webkit-input-placeholder {
+  font-family: $font-family-sans-serif;
+  color: #c1c1c1;
+}
+
+::-moz-placeholder {
+  font-family: $font-family-sans-serif;
+  color: #c1c1c1;
+}
+
+:-ms-input-placeholder {
+  font-family: $font-family-sans-serif;
+  color: #c1c1c1;
+}
+
+
+// Prevent IE10 from adding clear X to inputs
+// see SO http://stackoverflow.com/questions/19291044/ie-10-cuts-off-text-in-text-box-after-100-px
+// and DS issue https://github.com/PBGUX/designsystem/issues/19
+::-ms-clear {
+  display: none;
+}
+
+
+label {
+  font-weight: normal;
+  .optional {
+    font-size: 12px;
+    font-style: italic;
+  }
+}
+
+
+.help-block.text-error {
+  display: none;
+  .has-error & {
+    display: block;
+    color: $brand-danger;
+  }
+}
+
+.read-only-data {
+  label {
+    margin: 5px 0 0;
+    + p {
+      font-weight: bold;
+    }
+  }
+}
+
+
+fieldset {
+  margin-top: 40px;
+  legend {
+    color: $pb-gray-500;
+  }
+}
+
+.checkboxList {
+  // scss-lint:disable ImportantRule
+  height: 110px !important;
+  overflow-y: scroll;
+
+  label {
+    margin: 0;
+  }
+  span {
+    color: $text-color;
+  }
+}
+
+
+// some items need to be set back to default body font:
+.checkboxList span,
+a.list-group-item {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+}
+
+//****** CHECKBOXES *********************************
+.checkbox-enhanced {
+  &.checkbox-inline {
+    padding-left: 0;
+  }
+  label {
+    padding-left: 0;
+  }
+  input[type='checkbox'] {
+    display: none;
+    +label::before {
+      content: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9 Im5vIj8+Cjxzdmcgd2lkdGg9IjE4cHgiIGhlaWdodD0iMThweCIgdmlld0JveD0i MCAwIDE4IDE4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9y Zy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkv eGxpbmsiPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ry b2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVs ZT0iZXZlbm9kZCI+CiAgICAgICAgPHJlY3QgaWQ9ImNoZWNrLWJveC1pbmFjdGl2 ZSIgc3Ryb2tlPSIjQzBDMEMwIiBmaWxsPSIjRjhGOEY4IiB4PSIwIiB5PSIwIiB3 aWR0aD0iMTgiIGhlaWdodD0iMTgiPjwvcmVjdD4KICAgIDwvZz4KPC9zdmc+ ');
+      margin-right: 8px;
+      vertical-align: middle;
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+    }
+  }
+  input[type='checkbox']:checked +label::before {
+    content: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9 Im5vIj8+Cjxzdmcgd2lkdGg9IjE4cHgiIGhlaWdodD0iMThweCIgdmlld0JveD0i MCAwIDE4IDE4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9y Zy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkv eGxpbmsiPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ry b2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVs ZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9ImNoZWNrLWJveC1hY3RpdmUiIHN0 cm9rZT0iIzNFNTNBNCI+CiAgICAgICAgICAgIDxyZWN0IGlkPSJCb3giIHN0cm9r ZS13aWR0aD0iMiIgZmlsbC1vcGFjaXR5PSIwLjEiIGZpbGw9IiNFMEUwRTAiIHg9 IjAiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PC9yZWN0PgogICAgICAg ICAgICA8cGF0aCBkPSJNNC41LDkuNjIxNDU2OTQgTDcuNTg3ODMzMzcsMTIuNzUg TDE0LjI1LDYiIGlkPSJQYXRoLTEwNiIgc3Ryb2tlLXdpZHRoPSIxLjgiPjwvcGF0 aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==');
+    margin-right: 8px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+  }
+  &.disabled {
+    input[type='checkbox'] +label::before {
+      opacity: .5;
+    }
+  }
+}
+
+
+
+
+
+
+//
+// .checkbox-enhanced-sm {
+//   label {
+//     font-size: 13px;
+//   }
+//
+//   input[type='checkbox'] +label::before {
+//     content: url('../images/check-box-inactive.svg');
+//   }
+//
+//   input[type='checkbox']:checked +label::before {
+//     content: url('../images/check-box-active.svg');
+//   }
+// }
+
+
+//**** RADIOS ****************************
+.radio-enhanced {
+  &.radio-inline {
+    padding-left: 0;
+  }
+
+  label {
+    padding-left: 0;
+  }
+
+  input[type='radio'] {
+    display: none;
+    +label::before {
+      content: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9 Im5vIj8+Cjxzdmcgd2lkdGg9IjIycHgiIGhlaWdodD0iMjJweCIgdmlld0JveD0i MCAwIDIyIDIyIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9y Zy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkv eGxpbmsiPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ry b2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVs ZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9InJhZGlvLW9mZiIgdHJhbnNmb3Jt PSJ0cmFuc2xhdGUoMi4wMDAwMDAsIDIuMDAwMDAwKSI+CiAgICAgICAgICAgIDxj aXJjbGUgaWQ9Ik92YWwtMjAiIHN0cm9rZT0iI0MwQzBDMCIgc3Ryb2tlLXdpZHRo PSIxLjQiIGZpbGw9IiNGOEY4RjgiIGN4PSI5IiBjeT0iOSIgcj0iOSI+PC9jaXJj bGU+CiAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwtMjAtQ29weSIgb3BhY2l0 eT0iMCIgZmlsbD0iIzNFNTNBNCIgY3g9IjkiIGN5PSI5IiByPSI2LjYiPjwvY2ly Y2xlPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+ ');
+      margin-right: 8px;
+      vertical-align: middle;
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+    }
+  }
+  input[type='radio']:checked +label::before {
+    content: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9 Im5vIj8+Cjxzdmcgd2lkdGg9IjIycHgiIGhlaWdodD0iMjJweCIgdmlld0JveD0i MCAwIDIyIDIyIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9y Zy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkv eGxpbmsiPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ry b2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVs ZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9InJhZGlvLW9uIiB0cmFuc2Zvcm09 InRyYW5zbGF0ZSgyLjAwMDAwMCwgMi4wMDAwMDApIj4KICAgICAgICAgICAgPGNp cmNsZSBpZD0iT3ZhbC0yMCIgc3Ryb2tlPSIjM0U1M0E0IiBzdHJva2Utd2lkdGg9 IjEuNCIgY3g9IjkiIGN5PSI5IiByPSI5Ij48L2NpcmNsZT4KICAgICAgICAgICAg PGNpcmNsZSBpZD0iT3ZhbC0yMC1Db3B5IiBmaWxsPSIjM0U1M0E0IiBjeD0iOSIg Y3k9IjkiIHI9IjYuNiI+PC9jaXJjbGU+CiAgICAgICAgPC9nPgogICAgPC9nPgo8 L3N2Zz4= ');
+    margin-right: 8px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+  }
+  &.disabled {
+    input[type='radio'] +label::before {
+      opacity: .5;
+    }
+  }
+}
+// .radio-enhanced-sm {
+//   input[type='radio'] +label::before {
+//     content: url('../images/radio-off.svg');
+//     margin-right: 3px;
+//   }
+//   input[type='radio']:checked +label::before {
+//     content: url('../images/radio-on.svg');
+//     margin-right: 3px;
+//   }
+// }
+
+.enhanced-inline {
+  display: flex;
+  align-items: baseline;
+  div {
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+
+// extend this in fields where you want the 2.0 focus treatment
+%fancy-focus {
+  border-color: $pb-blue;
+  border-width: 1px;
+  outline: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
+}
+
+
+.form-control {
+  display: block;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: $input-color;
+  background-color: $input-bg;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid $input-border;
+  border-radius: 0; //can't use input-border-radius since buttons use that and buttons DO have radius.
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+  // trying to remove focus ring on FFx
+  &:focus {
+    outline: none;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+
+  // Customize the `:focus` state to use the FA "fancy focus" defined above.
+  //@include form-control-focus;
+  &:focus,
+  &.focus {
+    @extend %fancy-focus;
+  }
+
+  .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #f0f0f0;
+    border-color: #dbdbdb;
+    color: #c0c0c0;
+    opacity: 1;
+}
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: $input-bg-disabled;
+    border-color: $input-border-disabled;
+    color: $input-color-disabled;
+    cursor: $cursor-disabled;
+    opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+  }
+
+  &[readonly] {
+    background-color: lighten($input-bg-disabled, 3%);
+    border-color: lighten($input-border-disabled, 8%);
+    color: #4e4e4e;
+    pointer-events: none;
+  }
+
+}
+
+//****  INPUT GROUPS ***************************
+.input-group-addon {
+  background-color: transparent;
+  border-color: $input-border;
+  border-radius: 0;
+}
+.input-group-btn > .btn {
+  border-radius: 0;
+  border-color: $input-border;
+  border-right-color: transparent;
+}
+
+.input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group {
+  border-right-color: transparent;
+
+}
+
+select {
+  //  scss-lint:disable ImportantRule
+
+  background: #fff url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAxNiAyMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+ZHJvcGFycm93PC90aXRsZT48cGF0aCBkPSJNMCA3LjM0NGgxMC41bC01LjI1IDUuNTY2LTUuMjUtNS41NjV6IiBmaWxsPSIjNzE3MTcxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=') right center no-repeat !important;
+  &[multiple],
+  &[size] {
+    background-image: none !important;
+    color: $text-color;
+    option {
+      &:selected {
+        background-color: #fff;
+        color: $pb-blue;
+      }
+    }
+  }
+  &.form-control {
+    padding-right: 22px;
+  }
+}
+
+
+.input-sm,
+select.input-sm {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: $line-height-base;
+}
+
+
+.input-lg,
+select.input-lg {
+  line-height: 1.42857;
+}
+
+
+.widget-header {
+  h3 {
+    font-family: $font-family-sans-serif;
+  }
+}
+
+
+.has-error {
+  .form-control {
+    border-color: $brand-danger;
+  }
+}
+
+
+// date and time picker
+.form-control[disabled].datepicker,
+.form-control[readonly].datepicker,
+fieldset[disabled] .form-control.datepicker,
+.form-control[disabled].timepicker,
+.form-control[readonly].timepicker,
+fieldset[disabled] .form-control.timepicker {
+  cursor: pointer;
+  background-color: #fff;
+}
+
+
+
+
+
+.repeated-field {
+  margin-bottom: 20px;
+  &.last {
+    margin-bottom: 3px;
+  }
+}
+
+.add-another-link {
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+
+// for the item buttons
+@mixin logo-button($logo, $w: 160px, $h:120px) {
+  position: relative;
+  cursor: pointer;
+  border: 1px solid $input-border;
+  padding: 15px;
+  border-radius: 0;
+  color: #000;
+  width: 160px;
+  height: 120px;
+  background: #fff url('../images/logo-#{$logo}.png') center center no-repeat;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  &:hover,
+  &.hover {
+    @extend %fancy-focus;
+  }
+
+
+  &:active,
+  &.active {
+    border-width: 2px;
+    border-color: $pb-blue;
+  }
+
+
+  &.disabled {
+    background-image: url('../images/logo-#{$logo}-disabled.png');
+    cursor: not-allowed;
+
+    // @include hidpi(1.5) {
+    //   background-image: url('../images/logo-usps-disabled@2x.png');
+    // }
+    &:hover {
+      border: 1px solid $input-border;
+      box-shadow: none;
+    }
+  }
+}
+
+
+// declare actual buttons here
+// include logo name and see above for naming structure
+.logo-button-usps {
+  @include logo-button('usps');
+}
+
+
+@mixin arrow-inside($color: #fff, $left: 65px) {
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -13px;
+    left: 66px;
+    border-width: 14px 14px 0;
+    border-style: solid;
+    border-color: $color transparent;
+  }
+}
+
+
+@mixin arrow-outside($color: $pb-blue, $left: 65px) {
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 66px;
+    border-width: 14px 14px 0;
+    border-style: solid;
+    border-color: $color transparent;
+  }
+}
+
+
+// for the item buttons
+.item-selector-button {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid $input-border;
+  padding: 15px;
+  border-radius: 0;
+  color: #000;
+  width: 160px;
+  height: 120px;
+  transition: all ease-in-out .1s, box-shadow ease-in-out .1s;
+
+  .title {
+    color: $pb-blue;
+    font-size: 12px;
+    margin: 0;
+    padding-top: -3px;
+    font-family: $font-family-ps-medium;
+  }
+
+
+  .divider {
+    height: 1px;
+    width: 20px;
+    background-color: $input-border;
+    margin: 4px auto 10px;
+  }
+
+
+  .image {
+    background: #fff url('../images/box.png') center center no-repeat;
+    width: 64px;
+    height: 57px;
+    margin: 4px auto;
+  }
+
+
+  &:hover,
+  &.hover {
+    padding: 14px;
+    @extend %fancy-focus;
+    @include arrow-inside;
+    @include arrow-outside;
+  }
+
+
+  &:active,
+  &.active {
+    border-width: 2px;
+    border-color: $pb-blue;
+    background-color: $pb-blue;
+    @include arrow-outside;
+
+    .title {
+      color: #fff;
+    }
+
+    .divider {
+      background-color: #fff;
+    }
+
+    .image {
+      background-color: $pb-blue;
+    }
+
+    &:hover {
+      padding: 15px;
+      box-shadow: none;
+      @include arrow-inside($pb-blue);
+    }
+  }
+
+
+  &.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+
+    .title {
+      color: #c3c3c3;
+    }
+
+    .image {
+      background-image: url('../images/box-disabled.png');
+    }
+
+
+    // @include hidpi(1.5) {
+    //   background-image: url('../images/logo-usps-disabled@2x.png');
+    // }
+    &:hover {
+      padding: 15px;
+      border: 1px solid $input-border;
+      box-shadow: none;
+    }
+  }
+}

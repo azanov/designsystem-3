@@ -1,0 +1,12 @@
+/.sublime-grunt.cache
+app/bower_components
+.sass-cache
+node_modules
+.DS_Store
+config.codekit
+.ftppass
+.tmp
+npm-debug.log
+scss-lint.log
+.idea
+build

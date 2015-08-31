@@ -1,0 +1,224 @@
+//*/ Buttons */
+// --------------------------------------------------
+
+// scss-lint:disable MergeableSelector
+
+// $fg, $bg, $border, $disabled-fg, $disabled-bg, $hover-fg:$fg, $hover-bg:$bg
+.btn-primary {
+  @include button-variant(#fff, $button-primary, $button-primary, $pb-gray-500, $pb-bg2, #fff, $pb-blue-700);
+}
+
+.btn-default,
+.btn-cancel,
+.btn-group .btn-default,
+.btn-group-vertical .btn-default {
+  @include button-variant($button-primary, transparent, $button-primary, $pb-gray-500, $pb-bg2, $button-primary, #d9dced);
+}
+
+.btn-link {
+  @include button-variant($button-primary, transparent, transparent, $pb-gray-500, $pb-bg2, $button-primary, #d9dced);
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn-group-borderless .btn-default {
+  @include button-variant($button-primary, transparent, $button-primary, $button-primary, $pb-blue-300, $pb-gray-300, $pb-bg2);
+}
+
+
+//"tertiary", or pill-shaped buttons
+
+@mixin btn-pill($label, $bg, $bdr) {
+  color: $label;
+  background-color: $bg;
+  border-radius: 40px !important;
+  border: 1px solid $bdr;
+  padding: $padding-base-vertical $padding-large-horizontal;
+  min-width: 120px;
+
+  &:disabled {
+    color: $bg;
+    background-color: transparent;
+    opacity: 0.5;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: $label;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+}
+
+.btn-pill-ko {
+  @include btn-pill($pb-blue, #fff, #fff);
+}
+.btn-pill-brand {
+  @include btn-pill(#fff, $pb-blue, $pb-blue);
+}
+
+
+
+
+
+
+// bootstrap buttons
+.btn-success {
+  @include button-variant(#fff, $brand-success, $brand-success, $pb-gray-300, $pb-bg2);
+}
+
+.btn-info {
+  @include button-variant(#fff, $brand-info, $brand-info, $pb-gray-300, $pb-bg2);
+}
+
+.btn-warning {
+  @include button-variant(#fff, $brand-warning, $brand-warning, $pb-gray-300, $pb-bg2);
+}
+
+.btn-danger {
+  @include button-variant(#fff, $brand-danger, $brand-danger, $pb-gray-300, $pb-bg2);
+}
+
+
+
+// -- sizing definitions
+.btn {
+  // line-height: ensure even-numbered height of button next to input
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-base);
+}
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+}
+.btn-xs {
+  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+}
+///** bs overrides **//
+// i give up, bootstrap, here you go
+.open>.dropdown-toggle.btn-default {
+  color: #fff;
+  background-color: $pb-blue-300;
+  border-color: $pb-blue;
+  box-shadow: none;
+}
+// just to remove the BS inset shadows
+.btn:active,
+.btn.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: none;
+}
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover {
+  color: $pb-gray-700;
+  text-decoration: none;
+  background-color: #f5f6fa;
+}
+// font awesome icon size overrides in button groups
+.btn-group {
+  &-sm {
+    .btn {
+      i.fa {
+        font-size: 16px;
+      }
+    }
+  }
+  &-xs {
+    .btn {
+      i.fa {
+        font-size: 14px;
+      }
+    }
+  }
+}
+.btn-group-borderless {
+  .btn {
+    border: 0;
+  }
+}
+.btn-group .btn-default.active {
+  background-color: $pb-blue;
+  color: #fff;
+}
+
+
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  pointer-events: none;
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.35;
+}
+.btn-group-justified {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  > .btn,
+  > .btn-group {
+    float: none;
+    display: table-cell;
+    width: 1%;
+  }
+  > .btn-group .btn {
+    width: 100%;
+  }
+  // correct the "double borders"
+  > .btn-group:not(:first-child) > .btn {
+    border-left: 0;
+  }
+  > .btn-group .dropdown-menu {
+    left: auto;
+  }
+}
+//  transitory alert msg next to button
+.btn-response {
+  display: inline-block;
+  margin-left: 10px;
+}
+// overrides for bootstrap's Close button
+.close {
+  transition: color 0.5s;
+  opacity: 1;
+  filter: alpha(opacity=1);
+  &:hover {
+    opacity: 1;
+    filter: alpha(opacity=1);
+  }
+}
+
+
+
+// Vertical button groups
+// ----------------------
+.btn-group-vertical {
+  > .btn-group {
+    &:first-child:not(:last-child) {
+      >.btn {
+        &:last-child {
+          border-top-right-radius: $border-radius-base;
+        }
+      }
+      >.dropdown-toggle {
+        border-top-right-radius: $border-radius-base;
+      }
+    }
+
+    &:last-child:not(:first-child){
+      >.btn {
+        &:first-child {
+          border-bottom-left-radius: $border-radius-base;
+        }
+      }
+    }
+  }
+}
