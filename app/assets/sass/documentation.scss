@@ -801,3 +801,40 @@ h2.table-header.specifications {
 //     }
 //   }
 // }
+
+
+//RESOURCES
+.panel-download {
+
+  .panel-body {
+    min-height: 425px;
+
+    ul {
+      li {
+        margin-bottom: 8px;
+      }
+    }
+
+  }
+
+  a {
+    color: #fff;
+    font-weight: 200;
+
+    &:hover {
+      color: #fff;
+      //text-decoration: none;
+    }
+  }
+
+  hr {
+    width: 50%;
+    &.web {
+      border-color: $pb-purple-300;
+    }
+    &.ios {
+      border-color: $pb-gray-400;
+    }
+  }
+
+}
