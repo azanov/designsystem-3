@@ -2,35 +2,35 @@
 /*jshint node:true */
 
 var gulp = require('gulp'),
-  usemin = require('gulp-usemin'),
-  sass = require('gulp-ruby-sass'),
-  autoprefixer = require('gulp-autoprefixer'),
+  autoprefixer = require('autoprefixer-core'),
+  browsersync = require('browser-sync'),
+  cache = require('gulp-cache'),
+  concat = require('gulp-concat'),
+  connect = require('gulp-connect'),
+  del = require('del'),
+  filter = require('gulp-filter'),
+  ftp = require('vinyl-ftp'),
+  gutil = require('gulp-util'),
+  header = require('gulp-header'),
+  imagemin = require('gulp-imagemin'),
+  jshint = require('gulp-jshint'),
   minifyCss = require('gulp-minify-css'),
   minifyHtml = require('gulp-minify-html'),
-  jshint = require('gulp-jshint'),
-  uglify = require('gulp-uglify'),
-  imagemin = require('gulp-imagemin'),
-  rename = require('gulp-rename'),
-  concat = require('gulp-concat'),
+  ngAnnotate = require('gulp-ng-annotate'),
   notify = require('gulp-notify'),
-  cache = require('gulp-cache'),
-  connect = require('gulp-connect'),
-  browsersync = require('browser-sync'),
-  reload = browsersync.reload,
-  rev = require('gulp-rev'),
-  sourcemaps = require('gulp-sourcemaps'),
-  filter = require('gulp-filter'),
   plumber = require('gulp-plumber'),
   postcss = require('gulp-postcss'),
-  del = require('del'),
-  gutil = require('gulp-util'),
   printfiles = require('gulp-print'),
   prompt = require('gulp-prompt'),
-  ftp = require('vinyl-ftp'),
-  runSequence = require('run-sequence'),
-  header = require('gulp-header'),
+  reload = browsersync.reload,
+  rename = require('gulp-rename'),
   replace = require('gulp-replace'),
-  ngAnnotate = require('gulp-ng-annotate');
+  rev = require('gulp-rev'),
+  runSequence = require('run-sequence'),
+  sass = require('gulp-ruby-sass'),
+  sourcemaps = require('gulp-sourcemaps'),
+  uglify = require('gulp-uglify'),
+  usemin = require('gulp-usemin');
 
 var today = new Date();
 var pkg = require('./package.json');
@@ -49,80 +49,85 @@ gulp.task('clean:dist', function(cb) {
 });
 
 //styles
+// gulp.task('sass', function() {
+//   sass('app/assets/sass/', {
+//       sourcemap: true,
+//       style: 'compact'
+//     })
+//     .pipe(plumber())
+//     .pipe(autoprefixer({
+//       browsers: ['last 2 versions']
+//     }))
+//     .pipe(sourcemaps.write('maps', {
+//       includeContent: false,
+//       sourceRoot: '/source'
+//     }))
+//     .pipe(gulp.dest('app/assets/css'))
+//     .pipe(filter('**/*.css'))
+//     .pipe(reload({
+//       stream: true
+//     }));
+// });
+//
+// gulp.task('sass-nomaps', function() {
+//   return sass('app/assets/sass/', {
+//       sourcemap: false,
+//       style: 'compact'
+//     })
+//     .pipe(plumber())
+//     .pipe(autoprefixer({
+//       browsers: ['last 2 versions']
+//     }))
+//     .pipe(header(banner, {
+//       pkg: pkg
+//     }))
+//     .pipe(gulp.dest('build/assets/css'));
+// });
+
+gulp.task('cssrelease', ['fontrelease'], function() {
+  gulp.src([
+      'build/assets/css/design_system.css'
+    ])
+    .pipe(gulp.dest('./dist/css'));
+});
+
+gulp.task('fontrelease', function() {
+  gulp.src([
+      'build/assets/fonts/**/*'
+    ])
+    .pipe(gulp.dest('./dist/fonts'));
+});
+
+// experiment 8-18
 gulp.task('sass', function() {
-  sass('app/assets/sass/', {
-      sourcemap: true,
+  var cssfilter = filter('*.css', {restore:true});
+  return sass('./app/assets/sass', {
       style: 'compact'
     })
-    .pipe(plumber())
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions']
-    }))
-    .pipe(sourcemaps.write('maps', {
-      includeContent: false,
-      sourceRoot: '/source'
-    }))
-    .pipe(gulp.dest('app/assets/css'))
-    .pipe(filter('**/*.css'))
+    .on('error', function(err) {
+      console.error('Error!', err.message);
+    })
+    .pipe(gulp.dest('./app/assets/css'))
+    .pipe(cssfilter)
     .pipe(reload({
       stream: true
     }));
 });
 
-
-
-gulp.task('sass-nomaps', function() {
-  return sass('app/assets/sass/', {
-      sourcemap: false,
-      style: 'compact'
-    })
-    .pipe(plumber())
-    .pipe(autoprefixer({
+gulp.task('autoprefixer', ['sass'], function() {
+  return gulp.src('./app/assets/css/*.css')
+    .pipe(sourcemaps.init().on('error', gutil.log))
+    .pipe(postcss([autoprefixer({
       browsers: ['last 2 versions']
-    }))
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
-    .pipe(gulp.dest('build/assets/css'));
-});
-
-gulp.task('cssrelease', ['fontrelease'], function() {
-  gulp.src([
-    'build/assets/css/design_system.css'
-  ])
-  .pipe(gulp.dest('./dist/css'));
-});
-
-gulp.task('fontrelease', function() {
-  gulp.src([
-    'build/assets/fonts/**/*'
-  ])
-  .pipe(gulp.dest('./dist/fonts'));
+    })]))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./app/assets/css/'));
 });
 
 
-// experiment 8-18
-// gulp.task('sass', function() {
-//   return sass('./app/assets/sass')
-//     .on('error', function(err) {
-//       console.error('Error!', err.message);
-//     })
-//     .pipe(gulp.dest('./app/assets/css'))
-//     .pipe(reload({
-//       stream: true
-//     }));
-// });
-// gulp.task('autoprefixer', ['sass'],  function() {
-//   return gulp.src('./app/assets/css/')
-//     .pipe(sourcemaps.init())
-//     .pipe(postcss([autoprefixer({
-//       browsers: ['last 2 versions']
-//     })]))
-//     .pipe(sourcemaps.write('.'))
-//     .pipe(gulp.dest('./app/assets/css'));
-// });
-//
-//
+
+
+
 
 
 //usemin
@@ -230,8 +235,6 @@ gulp.task('browser-sync', function() {
   });
 });
 
-// run this to open project in browser and watch for changes in CSS
-gulp.task('default', ['sass', 'browser-sync', 'watch']);
 
 // run from the build folder
 gulp.task('serve-build', [], function() {
@@ -261,23 +264,19 @@ gulp.task('build', ['clean:dist', 'sass-nomaps'], function() {
   );
 });
 
+
+// run this to open project in browser and watch for changes in CSS
+gulp.task('default', function() {
+  'watch';
+});
+
 // Watch
-gulp.task('watch', function() {
+gulp.task('watch', ['browser-sync', 'sass'], function() {
 
-  // Watch .scss files
-  gulp.watch(
-    ['app/assets/sass/**/*.scss', 'app/modules/**/*.scss'], ['sass']);
+  gulp.watch(['app/assets/sass/**/*.scss', 'app/modules/**/*.scss'], ['autoprefixer']);
 
-  gulp.watch(
-    [
-      'app/core/**/*.js',
-      'app/modules/**/*.js',
-      'app/core/**/*.json',
-      'app/core/**/*.html',
-      'app/modules/**/*.html'
-    ],
-    function() {
-      reload();
-    });
+  gulp.watch(['app/core/**/*.js', 'app/modules/**/*.js', 'app/core/**/*.json'], reload);
+
+  gulp.watch(['app/core/**/*.html', 'app/modules/**/*.html'], reload);
 
 });

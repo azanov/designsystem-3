@@ -21,7 +21,7 @@
       //handle languages that have an additional identifier, such as Panjabi: pa-guru-in
       if (codeArray.length > 2) {
         language = codeArray[0] + '-' + codeArray[1];
-        country = codeArray[2].toLowerCase()
+        country = codeArray[2].toLowerCase();
       }
       else {
         language = codeArray[0];
