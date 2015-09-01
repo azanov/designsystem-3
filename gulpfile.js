@@ -1,36 +1,36 @@
 /*jshint strict:false */
 /*jshint node:true */
 
-var gulp = require('gulp'),
+var gulp       = require('gulp'),
   autoprefixer = require('autoprefixer-core'),
-  browsersync = require('browser-sync'),
-  cache = require('gulp-cache'),
-  concat = require('gulp-concat'),
-  connect = require('gulp-connect'),
-  del = require('del'),
-  filter = require('gulp-filter'),
-  ftp = require('vinyl-ftp'),
-  gutil = require('gulp-util'),
-  header = require('gulp-header'),
-  imagemin = require('gulp-imagemin'),
-  jshint = require('gulp-jshint'),
-  minifyCss = require('gulp-minify-css'),
-  minifyHtml = require('gulp-minify-html'),
-  ngAnnotate = require('gulp-ng-annotate'),
-  notify = require('gulp-notify'),
-  plumber = require('gulp-plumber'),
-  postcss = require('gulp-postcss'),
-  printfiles = require('gulp-print'),
-  prompt = require('gulp-prompt'),
-  reload = browsersync.reload,
-  rename = require('gulp-rename'),
-  replace = require('gulp-replace'),
-  rev = require('gulp-rev'),
-  runSequence = require('run-sequence'),
-  sass = require('gulp-ruby-sass'),
-  sourcemaps = require('gulp-sourcemaps'),
-  uglify = require('gulp-uglify'),
-  usemin = require('gulp-usemin');
+  browsersync  = require('browser-sync'),
+  cache        = require('gulp-cache'),
+  concat       = require('gulp-concat'),
+  connect      = require('gulp-connect'),
+  del          = require('del'),
+  filter       = require('gulp-filter'),
+  gutil        = require('gulp-util'),
+  header       = require('gulp-header'),
+  imagemin     = require('gulp-imagemin'),
+  jshint       = require('gulp-jshint'),
+  minifyCss    = require('gulp-minify-css'),
+  minifyHtml   = require('gulp-minify-html'),
+  nano         = require('gulp-cssnano'),
+  ngAnnotate   = require('gulp-ng-annotate'),
+  notify       = require('gulp-notify'),
+  plumber      = require('gulp-plumber'),
+  postcss      = require('gulp-postcss'),
+  printfiles   = require('gulp-print'),
+  prompt       = require('gulp-prompt'),
+  reload       = browsersync.reload,
+  rename       = require('gulp-rename'),
+  replace      = require('gulp-replace'),
+  rev          = require('gulp-rev'),
+  runSequence  = require('run-sequence'),
+  sass         = require('gulp-ruby-sass'),
+  sourcemaps   = require('gulp-sourcemaps'),
+  uglify       = require('gulp-uglify'),
+  usemin       = require('gulp-usemin');
 
 var today = new Date();
 var pkg = require('./package.json');
@@ -98,12 +98,10 @@ gulp.task('fontrelease', function() {
     .pipe(gulp.dest('./dist/fonts'));
 });
 
-// experiment 8-18
+// process scss to sass, inject changes
 gulp.task('sass', function() {
   var cssfilter = filter('*.css', {restore:true});
-  return sass('./app/assets/sass', {
-      style: 'compact'
-    })
+  return sass('./app/assets/sass')
     .on('error', function(err) {
       console.error('Error!', err.message);
     })
@@ -114,9 +112,11 @@ gulp.task('sass', function() {
     }));
 });
 
-gulp.task('autoprefixer', ['sass'], function() {
+
+// kick off css processing with maps
+gulp.task('css-working', ['sass'], function() {
   return gulp.src('./app/assets/css/*.css')
-    .pipe(sourcemaps.init().on('error', gutil.log))
+    .pipe(sourcemaps.init())
     .pipe(postcss([autoprefixer({
       browsers: ['last 2 versions']
     })]))
@@ -124,9 +124,14 @@ gulp.task('autoprefixer', ['sass'], function() {
     .pipe(gulp.dest('./app/assets/css/'));
 });
 
-
-
-
+// kick off css processing, without maps
+gulp.task('css-final', ['sass'], function() {
+  return gulp.src('./app/assets/css/*.css')
+    .pipe(postcss([autoprefixer({
+      browsers: ['last 2 versions']
+    })]))
+    .pipe(gulp.dest('./build/assets/css/'));
+});
 
 
 
@@ -226,6 +231,8 @@ gulp.task('clean', function(cb) {
   del(['build/**/*'], cb);
 });
 
+
+
 // browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
   browsersync({
@@ -250,7 +257,7 @@ gulp.task('serve-build', [], function() {
 // });
 
 //build
-gulp.task('build', ['clean:dist', 'sass-nomaps'], function() {
+gulp.task('build', ['css-final', 'clean:dist'], function() {
   runSequence(
     'usemin',
     'copy:modules',
@@ -266,14 +273,12 @@ gulp.task('build', ['clean:dist', 'sass-nomaps'], function() {
 
 
 // run this to open project in browser and watch for changes in CSS
-gulp.task('default', function() {
-  'watch';
-});
+gulp.task('default', ['watch'], function() {});
 
 // Watch
 gulp.task('watch', ['browser-sync', 'sass'], function() {
 
-  gulp.watch(['app/assets/sass/**/*.scss', 'app/modules/**/*.scss'], ['autoprefixer']);
+  gulp.watch(['app/assets/sass/**/*.scss', 'app/modules/**/*.scss'], ['css-working']);
 
   gulp.watch(['app/core/**/*.js', 'app/modules/**/*.js', 'app/core/**/*.json'], reload);
 
