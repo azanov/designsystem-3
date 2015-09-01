@@ -848,6 +848,18 @@ a.list-group-item.active .badge { color: #fff; background-color: #3e53a4; }
 
 .media-heading { font-weight: 700; }
 
+.miller-columns { margin-bottom: 20px; }
+.miller-columns .panel { height: 100%; overflow-y: auto; }
+.miller-columns .first-column { padding-right: 0; height: 100%; }
+.miller-columns .first-column .panel-default { border-right: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; }
+.miller-columns .first-column .panel-default .panel-heading { border-top-right-radius: 0; }
+.miller-columns .inner-column { padding-left: 0; padding-right: 0; height: 100%; }
+.miller-columns .inner-column .panel-default { border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; }
+.miller-columns .inner-column .panel-default .panel-heading { border-top-left-radius: 0; border-top-right-radius: 0; }
+.miller-columns .last-column { padding-left: 0; height: 100%; }
+.miller-columns .last-column .panel-default { border-left: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; }
+.miller-columns .last-column .panel-default .panel-heading { border-top-left-radius: 0; }
+
 .ngrs-range-slider { box-shadow: none; border: 0; background-color: pbcolor(pbgray, 50); }
 .ngrs-range-slider .ngrs-join { position: absolute; z-index: 1; top: 50%; left: 0; right: 100%; height: 14px; margin: -7px 0 0; background-color: pbcolor(pbmediumblue); background-image: none; }
 .ngrs-range-slider .ngrs-handle { background: #fff; border: 1px solid pbcolor(pbgray, 200); border-radius: 0; }
