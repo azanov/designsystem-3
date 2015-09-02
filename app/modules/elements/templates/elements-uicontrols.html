@@ -46,12 +46,16 @@
 
 <div class="container">
 
+
+
 <!-- intro text block is larger, but only 8 cols wide -->
-  <div class="row" >
+  <div class="row">
     <div class="col-md-8">
       <h1 id="inputfields" class="doc-head">Input Fields</h1>
     </div>
   </div>
+
+
 
   <div class="row">
     <div class="col-md-12">
@@ -168,6 +172,7 @@
     </div>
   </div>
 
+
   <div class="row">
     <div class="col-md-12">
       <h2 class="doc-sectionhead">Errors</h2>
@@ -196,6 +201,8 @@
 
     </div>
   </div>
+
+
 
   <div class="row">
     <div class="col-md-12">
@@ -266,22 +273,8 @@
     </div>
   </div>
 
-<!-- <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Password Fields</h2>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col-md-3">
-      <p>When asking users to create a password, we can use a password strength meter to help them see how secure their password will be. If your product has specific password requirements (such as required characters or lengths), include those requirements on relevant pages (such as Sign Up or Password Reset).</p>
-    </div>
 
-    <div class="col-md-7 col-md-offset-1">
-      <div class="post-it">NEED IMAGE</div>
-    </div>
-  </div>
- -->
 
   <div class="row">
     <div class="col-md-12">
@@ -636,37 +629,54 @@
       <p>
         <a class="more-info plugin" href="http://brianreavis.github.io/selectize.js/" target="_blank">selectize.js v0.12.0</a>
         <a class="more-info plugin" href="https://github.com/angular-ui/ui-select" target="_blank">angular ui-select v0.12.1</a>
-
-        <p class="small spacer-top-lg">
-          <em>The angular ui-select plugin is preferred. The examples in this section will be revised to use this plugin soon. The interaction pattern is the same.</em>
-        </p>
       </p>
+
+      <p class="small spacer-top-md"><em>ui-select v0.12.1 has a known issue with webkit browsers displaying as a dropup. See this Github <a href="https://github.com/angular-ui/ui-select/issues/1016" target="blank">issue</a> and <a href="https://github.com/pulse14/ui-select/commit/f788aa555d10453d8ba455c0aaa97a4f4e832c72" target="blank">pending fix</a> on github.</em></p>
     </div>
 
     <div class="col-md-7 col-md-offset-1">
+
       <div class="row">
         <div class="col-md-10">
           <figure>
-            <figcaption>Single-select with Type-ahead</figcaption>
+            <figcaption>Single Select With Type-Ahead</figcaption>
             <div class="form-group">
               <label>Text label</label>
-              <select ng-model="inputs.countrySelect.selected" options="inputs.countrySelect.countries" selectize="inputs.countrySelect.options" type="text"></select>
+              <ui-select ng-model="inputs.countrySelect.singleSelected" theme="bootstrap">
+                <ui-select-match placeholder="">{{$select.selected.name}}</ui-select-match>
+                <ui-select-choices repeat="item in inputs.countrySelect.countries | filter: $select.search">
+                  <div ng-bind-html="item.name | highlight: $select.search"></div>
+                </ui-select-choices>
+              </ui-select>
             </div>
           </figure>
+
           <figure>
-            <figcaption>Multi-select with Tokens</figcaption>
+            <figcaption>Multi-Select With Tokens</figcaption>
             <div class="form-group">
-              <label>Text label</label><input ng-model="inputs.multiCountrySelect.selected" options="inputs.countrySelect.countries" selectize="inputs.multiCountrySelect.options" type="text"/>
+              <label>Text label</label>
+              <ui-select ng-model="inputs.countrySelect.multipleSelected" theme="bootstrap" multiple >
+                <ui-select-match placeholder="">{{$item.name}}</ui-select-match>
+                <ui-select-choices repeat="item in inputs.countrySelect.countries | filter: $select.search">
+                  <div ng-bind-html="item.name | highlight: $select.search"></div>
+                </ui-select-choices>
+              </ui-select>
             </div>
           </figure>
+
           <figure>
             <figcaption>Custom Menu Items</figcaption>
             <div class="form-group">
               <label>Text label</label>
-              <select ng-model="inputs.peopleSelect.selected" options="inputs.peopleSelect.people" selectize="inputs.peopleSelect.options"></select>
+              <ui-select ng-model="inputs.peopleSelect.selected" theme="bootstrap">
+                <ui-select-match placeholder="">{{$select.selected.name}}</ui-select-match>
+                <ui-select-choices repeat="item in inputs.peopleSelect.people | filter: $select.search">
+                  <div ng-bind-html="item.name | highlight: $select.search"></div>
+                  <small ng-bind-html="item.email | highlight: $select.search"></small>
+                </ui-select-choices>
+              </ui-select>
             </div>
           </figure>
-
         </div>
       </div>
 

@@ -13,7 +13,6 @@
     'angular-loading-bar',
     'pascalprecht.translate',
     'tmh.dynamicLocale',
-    'selectize-ng',
     'toggle-switch',
     'toastr',
     'ui.bootstrap',
@@ -30,7 +29,8 @@
     'datatables.tabletools',
     'xeditable',
     'angularChart',
-    'duScroll'
+    'duScroll',
+    'ui.select'
   ]);
 
 })();

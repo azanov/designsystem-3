@@ -1279,6 +1279,9 @@ a.list-group-item.active .badge { color: #fff; background-color: #3e53a4; }
 .nav.nav-list.tree-menu.utility-nav ul li { padding-left: 27px; padding-top: 5px; width: 100%; }
 .nav.nav-list.tree-menu.utility-nav ul li:hover { background: #f8f8f8; }
 
+.ui-select-multiple.ui-select-bootstrap .ui-select-match-item { background: #e1e1e1; border: 0; color: #3e53a4; vertical-align: middle; }
+.ui-select-multiple.ui-select-bootstrap .ui-select-match-item .close { font-weight: 200; font-size: 1.1em; line-height: 1.1em; vertical-align: middle; text-shadow: none; position: relative; }
+
 .bs-wizard .bs-wizard-step { padding: 0; position: relative; }
 .bs-wizard .bs-wizard-step .bs-wizard-stepnum { color: #717171; font-size: 16px; margin-bottom: 5px; }
 .bs-wizard .bs-wizard-step .bs-wizard-info { color: #717171; font-size: 12px; }
