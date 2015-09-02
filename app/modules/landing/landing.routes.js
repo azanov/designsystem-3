@@ -5,7 +5,7 @@
   angular.module('pb.ds.landing').config(function($stateProvider) {
     $stateProvider.state('landing', {
       url: '/landing',
-      templateUrl: 'modules/landing/templates/landing.html',
+      templateUrl: 'modules/landing/templates/landing-bgphoto.html',
       controller: 'LandingController as landing',
       resolve: {
         NavigationResolve: function($log, MockDataFactory) {
@@ -18,9 +18,9 @@
         bodyClass: 'landing'
       }
     });
-    $stateProvider.state('landing-bgImg', {
+    $stateProvider.state('landing-bgphoto', {
       url: '/landing/bg-image',
-      templateUrl: 'modules/landing/templates/landing.html',
+      templateUrl: 'modules/landing/templates/landing-bgphoto.html',
       data: {
         pageTitle: 'Landing Pages',
         access: 'public',
