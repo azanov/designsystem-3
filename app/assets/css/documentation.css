@@ -322,13 +322,23 @@ small,
   color: #dc0000; }
 
 .home div[class^="hero-"] {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 500px; }
 .home .diptych {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   transition: padding .5s ease; }
   .home .diptych > div:first-child {
     padding-right: 20px;
@@ -658,7 +668,8 @@ h2.table-header.specifications {
   font-size: 16px;
   background-color: #ffe373;
   padding: 10px;
-  transform: rotate(-1deg); }
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg); }
 
 .brand-primary {
   background-color: #3e53a4; }
@@ -827,3 +838,5 @@ h2.table-header.specifications {
     border-color: #c68cc3; }
   .panel-download hr.ios {
     border-color: #717171; }
+
+/*# sourceMappingURL=documentation.css.map */
