@@ -278,10 +278,10 @@ gulp.task('default', ['watch'], function() {});
 // Watch
 gulp.task('watch', ['browser-sync', 'sass'], function() {
 
-  gulp.watch(['app/assets/sass/**/*.scss', 'app/modules/**/*.scss'], ['css-working']);
+  gulp.watch(['app/assets/sass/**/*.scss', 'app/modules/**/*.scss'], {interval: 500}, ['css-working']);
 
-  gulp.watch(['app/core/**/*.js', 'app/modules/**/*.js', 'app/core/**/*.json'], reload);
+  gulp.watch(['app/core/**/*.js', 'app/modules/**/*.js', 'app/core/**/*.json', '!app/modules/i18n/angular-i18n/*.js'], {interval: 500}, reload);
 
-  gulp.watch(['app/core/**/*.html', 'app/modules/**/*.html'], reload);
+  gulp.watch(['app/core/**/*.html', 'app/modules/**/*.html'], {interval: 500}, reload);
 
 });
