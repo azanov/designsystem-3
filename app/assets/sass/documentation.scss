@@ -289,6 +289,7 @@
 // DOCS TYPOGRAPHY differs from DS
 .doc-head {
   margin-top: 80px;
+  margin-bottom: 10px;
 }
 .doc-lede {
   font-size: 16px;
@@ -300,9 +301,9 @@
   color: $header-color;
   font-size: 20px;
   border-bottom: 1px solid $pb-light-gray;
-  margin-top: 70px;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
 }
 
 .doc-sectionbreak {
@@ -311,6 +312,11 @@
 .doc-gradient {
   background: linear-gradient(90deg, #4c4ca2 0%, #872e96 42%, #872e96 48%, #c90d8b 100%);
 }
+
+
+
+
+
 
 // right side column on sectionbreak has this div added
 .figure-spacer {
