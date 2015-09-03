@@ -6,7 +6,7 @@
 
     //third party modules are in /core/core.module.js
     'pb.core',
-    'pb.dashboard',
+    'pb.ds.home',
     'pb.ds.elements',
     'pb.ds.forms',
     'pb.ds.foundation',
@@ -51,7 +51,7 @@
       url: '*path',
       template: '',
       controller: function($state) {
-        $state.go('dashboard');
+        $state.go('home');
       }
     });
   });

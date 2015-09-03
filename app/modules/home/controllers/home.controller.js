@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.dashboard').controller('DashboardController', function($log, NavigationResolve) {
+  angular.module('pb.ds.home').controller('HomeController', function($log, NavigationResolve) {
 
     var _this = this;
 

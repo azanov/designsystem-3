@@ -2,18 +2,18 @@
 
   'use strict';
 
-  angular.module('pb.dashboard').config(function($stateProvider) {
-    $stateProvider.state('dashboard', {
-      url: '/dashboard',
-      templateUrl: 'modules/dashboard/templates/dashboard.html',
-      controller: 'DashboardController as dash',
+  angular.module('pb.ds.home').config(function($stateProvider) {
+    $stateProvider.state('home', {
+      url: '/home',
+      templateUrl: 'modules/home/templates/home.html',
+      controller: 'HomeController as home',
       resolve: {
         NavigationResolve: function($log, MockDataFactory) {
           return MockDataFactory.query({filename: 'navigation'});
         }
       },
       data: {
-        pageTitle: 'Dashboard',
+        pageTitle: 'Home',
         access: 'public',
         bodyClass: 'home'
       }
