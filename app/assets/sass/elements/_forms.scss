@@ -269,6 +269,7 @@ a.list-group-item {
 }
 .input-group-btn > .btn {
   border-radius: 0;
+  line-height: $line-height-base + .01; //HACK : no idea why, just sick of it
   border-color: $input-border;
   border-right-color: transparent;
 }

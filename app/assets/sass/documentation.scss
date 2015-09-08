@@ -78,7 +78,7 @@
 
   //
   .hero-web {
-    background: #b73489 url('../images/hero-web-pattern.jpg') top center no-repeat;
+    background: #cf098b url('../images/hero-web-pattern.jpg') top center no-repeat;
     .diptych {
      >  div:first-child {
        margin-left: 20px;
@@ -111,8 +111,8 @@
 
   //
   .hero-global {
-    background: transparent url('../images/hero-globalization.jpg') center center no-repeat;
-    // linear-gradient(270deg, #4652a3 0%, #7f469b 42%, #7f469b 48%, #9d4097 100%);
+    background:  url('../images/hero-globalization.jpg') center center no-repeat,
+     linear-gradient(270deg, #4652a3 0%, #7f469b 42%, #7f469b 48%, #9d4097 100%);
     .title-unit {
       h1 {
         color: #fff;
