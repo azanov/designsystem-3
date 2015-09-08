@@ -492,6 +492,9 @@ small,
 .white {
   color: #fff; }
 
+.bk {
+  color: #000; }
+
 .text-medium-blue-300 {
   color: #66aad4; }
 
@@ -538,13 +541,13 @@ small,
   color: #a5076e; }
 
 .text-dark-orange-300 {
-  color: #f5a66d; }
+  color: #f5a466; }
 
 .text-dark-orange {
-  color: #ee6b0b; }
+  color: #ee6700; }
 
 .text-dark-orange-700 {
-  color: #be5408; }
+  color: #be5200; }
 
 .text-orange-300 {
   color: #f5a66d; }
@@ -559,7 +562,7 @@ small,
   color: #f4d466; }
 
 .text-yellow {
-  color: #bd9100; }
+  color: #edb700; }
 
 .text-green-300 {
   color: #aad88f; }
@@ -568,16 +571,16 @@ small,
   color: #72bf44; }
 
 .text-green-700 {
-  color: #72bf44; }
+  color: #5a9836; }
 
 .text-dark-green-300 {
-  color: #66d08c; }
+  color: #66ca8c; }
 
 .text-dark-green {
-  color: #00b140; }
+  color: #00a740; }
 
 .text-dark-green-700 {
-  color: #008d34; }
+  color: #008500; }
 
 .text-gray-700 {
   color: #2e2e2e; }
@@ -667,13 +670,13 @@ small,
   background-color: #a5076e; }
 
 .bg-pb-dark-orange-300 {
-  background-color: #f5a66d; }
+  background-color: #f5a466; }
 
 .bg-pb-dark-orange {
-  background-color: #ee6b0b; }
+  background-color: #ee6700; }
 
 .bg-pb-dark-orange-700 {
-  background-color: #be5408; }
+  background-color: #be5200; }
 
 .bg-pb-orange-300 {
   background-color: #f5a66d; }
@@ -688,6 +691,9 @@ small,
   background-color: #f4d466; }
 
 .bg-pb-yellow {
+  background-color: #edb700; }
+
+.bg-pb-yellow-700 {
   background-color: #bd9100; }
 
 .bg-pb-green-300 {
@@ -697,16 +703,16 @@ small,
   background-color: #72bf44; }
 
 .bg-pb-green-700 {
-  background-color: #72bf44; }
+  background-color: #5a9836; }
 
 .bg-pb-dark-green-300 {
-  background-color: #66d08c; }
+  background-color: #66ca8c; }
 
 .bg-pb-dark-green {
-  background-color: #00b140; }
+  background-color: #00a740; }
 
 .bg-pb-dark-green-700 {
-  background-color: #008d34; }
+  background-color: #008500; }
 
 .bg-pb-gray-700 {
   background-color: #2e2e2e; }
@@ -2887,7 +2893,7 @@ a.list-group-item {
   background-color: #dc0000; }
 
 .progress-bar-green {
-  background-color: #00b140; }
+  background-color: #00a740; }
 
 .progress-bar-blue {
   background-color: #009dbf; }
@@ -3535,9 +3541,9 @@ a.list-group-item {
       background: #9b9b9b; }
   .bs-wizard .bs-wizard-step.complete > .progress > .progress-bar {
     width: 100%;
-    background-color: #00b140; }
+    background-color: #00a740; }
   .bs-wizard .bs-wizard-step.complete .bs-wizard-stepnum {
-    color: #00b140; }
+    color: #00a740; }
   .bs-wizard .bs-wizard-step.active > .progress > .progress-bar {
     width: 50%;
     background-color: #009dbf; }

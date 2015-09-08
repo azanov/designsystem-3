@@ -638,6 +638,17 @@ h2.table-header.specifications {
     content: "40px";
     height: 40px; }
 
+.swatches {
+  margin: 0;
+  padding: 0; }
+  .swatches li {
+    font-family: Menlo, Consolas, Monaco, "Courier New", monospace;
+    list-style: none;
+    padding: 15px;
+    color: #fff; }
+    .swatches li.bk {
+      color: #000; }
+
 .donut-varied-padded {
   margin-right: 25px;
   margin-left: 25px; }
@@ -687,7 +698,7 @@ h2.table-header.specifications {
   background-color: #bf6800; }
 
 .chart-green {
-  background-color: #00b140; }
+  background-color: #00a740; }
 
 .chart-blue {
   background-color: #009dbf; }

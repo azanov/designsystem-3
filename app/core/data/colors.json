@@ -1,7 +1,7 @@
 {
   "colors": {
 
-    "main": [{
+    "primary": [{
         "varname": "pb-cyan",
         "hex": "#009dbf"
       }, {
@@ -76,90 +76,7 @@
         "name": "Brand Info"
       }
 
-    ],
-
-    "blues": [{
-        "varname": "$blue1",
-        "hex": "#3e53a4",
-        "name": "Blue 1"
-      }, {
-        "varname": "$blue2",
-        "hex": "#5d71be",
-        "name": "Blue 2"
-      }, {
-        "varname": "$blue3",
-        "hex": "#8393d0",
-        "name": "Blue 3"
-      }, {
-        "varname": "$blue4",
-        "hex": "#9aa6d6",
-        "name": "Blue 4"
-      }, {
-        "varname": "$blue5",
-        "hex": "#afb9dd",
-        "name": "Blue 5"
-      }, {
-        "varname": "$blue6",
-        "hex": "#c5cbe4",
-        "name": "Blue 6"
-      }
-
-    ],
-    "charts": [{
-        "varname": "$chart-green",
-        "hex": "#00b140",
-        "name": "Chart Green"
-      }, {
-        "varname": "$chart-blue",
-        "hex": "#0082d5",
-        "name": "Chart Blue"
-      },
-
-      {
-        "varname": "$chart-purple",
-        "hex": "#a03f9b",
-        "name": "Chart Purple"
-      }, {
-        "varname": "$chart-yellow",
-        "hex": "#edb700",
-        "name": "Chart Yellow"
-      }, {
-        "varname": "$chart-orange",
-        "hex": "#ef8200",
-        "name": "Chart Orange"
-      }, {
-        "varname": "$chart-magenta",
-        "hex": "#cf0989",
-        "name": "Chart Magenta"
-      }
-    ],
-    "chartgrays": [{
-        "varname": "$gray1",
-        "hex": "#414141",
-        "name": "Chart Gray1"
-      }, {
-        "varname": "$gray2",
-        "hex": "#4e4e4e",
-        "name": "Chart Gray2"
-      },
-
-      {
-        "varname": "$gray3",
-        "hex": "#686868",
-        "name": "Chart Gray3"
-      }, {
-        "varname": "$gray4",
-        "hex": "#818181",
-        "name": "Chart Gray4"
-      }, {
-        "varname": "$gray5",
-        "hex": "#9b9b9b",
-        "name": "Chart Gray5"
-      }, {
-        "varname": "$gray6",
-        "hex": "#c0c0c0",
-        "name": "Chart Gray6"
-      }
     ]
+
   }
 }
