@@ -372,7 +372,7 @@ small,
 .home .hero-principles .title-unit .eyebrow {
   color: #cf0989; }
 .home .hero-web {
-  background: #b73489 url("../images/hero-web-pattern.jpg") top center no-repeat; }
+  background: #cf098b url("../images/hero-web-pattern.jpg") top center no-repeat; }
   .home .hero-web .diptych > div:first-child {
     margin-left: 20px; }
   .home .hero-web .title-unit h1 {
@@ -386,7 +386,7 @@ small,
 .home .hero-mobile .title-unit .eyebrow {
   color: rgba(207, 9, 137, 0.65); }
 .home .hero-global {
-  background: transparent url("../images/hero-globalization.jpg") center center no-repeat; }
+  background: url("../images/hero-globalization.jpg") center center no-repeat, linear-gradient(270deg, #4652a3 0%, #7f469b 42%, #7f469b 48%, #9d4097 100%); }
   .home .hero-global .title-unit h1 {
     color: #fff; }
   .home .hero-global .title-unit .eyebrow {

@@ -1609,6 +1609,7 @@ a.list-group-item {
 
 .input-group-btn > .btn {
   border-radius: 0;
+  line-height: 1.43857;
   border-color: #9b9b9b;
   border-right-color: transparent; }
 
