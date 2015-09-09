@@ -50,12 +50,7 @@ gulp.task('clean:dist', function(cb) {
 
 
 
-gulp.task('fontrelease', function() {
-  gulp.src([
-      'build/assets/fonts/**/*'
-    ])
-    .pipe(gulp.dest('./dist/fonts'));
-});
+
 
 gulp.task('sass', function() {
   var cssfilter = filter('*.css', {restore:true});
@@ -127,6 +122,13 @@ gulp.task('usemin', function() {
     .pipe(gulp.dest('./build'));
 });
 
+gulp.task('fontrelease', function() {
+  gulp.src([
+      'build/assets/fonts/**/*'
+    ])
+    .pipe(gulp.dest('./dist/fonts'));
+});
+
 //copy modules
 gulp.task('copy:modules', [], function() {
   gulp.src([
@@ -174,7 +176,9 @@ gulp.task('copy:fonts', [], function() {
   gulp.src([
       './app/assets/fonts/*'
     ])
-    .pipe(gulp.dest('./build/assets/fonts'));
+    .pipe(gulp.dest('./build/assets/fonts'))
+    .pipe(gulp.dest('./dist/fonts'));
+
 });
 
 //copy images
