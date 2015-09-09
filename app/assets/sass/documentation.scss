@@ -490,6 +490,20 @@ h2.table-header.specifications {
   @include show-specs(40px, 40px);
 }
 
+// color swatches
+.swatches {
+  margin: 0;
+  padding: 0;
+  li {
+    font-family: $font-family-monospace;
+    list-style: none;
+    padding: 15px;
+    color: #fff;
+    &.bk {
+      color: #000;
+    }
+  }
+}
 
 .donut-varied-padded {
   margin-right: 25px;
