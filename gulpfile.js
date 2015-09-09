@@ -3,7 +3,7 @@
 
 var gulp       = require('gulp'),
   autoprefixer = require('autoprefixer-core'),
-  browsersync  = require('browser-sync'),
+  browserSync =  require('browser-sync').create(),
   cache        = require('gulp-cache'),
   concat       = require('gulp-concat'),
   connect      = require('gulp-connect'),
@@ -22,7 +22,7 @@ var gulp       = require('gulp'),
   postcss      = require('gulp-postcss'),
   printfiles   = require('gulp-print'),
   prompt       = require('gulp-prompt'),
-  reload       = browsersync.reload,
+  reload       = browserSync.reload,
   rename       = require('gulp-rename'),
   replace      = require('gulp-replace'),
   rev          = require('gulp-rev'),
@@ -48,48 +48,7 @@ gulp.task('clean:dist', function(cb) {
   return del(['./build'], cb);
 });
 
-//styles
-// gulp.task('sass', function() {
-//   sass('app/assets/sass/', {
-//       sourcemap: true,
-//       style: 'compact'
-//     })
-//     .pipe(plumber())
-//     .pipe(autoprefixer({
-//       browsers: ['last 2 versions']
-//     }))
-//     .pipe(sourcemaps.write('maps', {
-//       includeContent: false,
-//       sourceRoot: '/source'
-//     }))
-//     .pipe(gulp.dest('app/assets/css'))
-//     .pipe(filter('**/*.css'))
-//     .pipe(reload({
-//       stream: true
-//     }));
-// });
-//
-// gulp.task('sass-nomaps', function() {
-//   return sass('app/assets/sass/', {
-//       sourcemap: false,
-//       style: 'compact'
-//     })
-//     .pipe(plumber())
-//     .pipe(autoprefixer({
-//       browsers: ['last 2 versions']
-//     }))
-//     .pipe(header(banner, {
-//       pkg: pkg
-//     }))
-//     .pipe(gulp.dest('build/assets/css'));
-// });
 
-gulp.task('cssrelease', ['fontrelease'], function() {
-  gulp.src([
-      'build/assets/css/design_system.css'
-    ])
-    .pipe(gulp.dest('./dist/css'));
-});
 
 gulp.task('fontrelease', function() {
   gulp.src([
@@ -98,39 +57,46 @@ gulp.task('fontrelease', function() {
     .pipe(gulp.dest('./dist/fonts'));
 });
 
-// process scss to sass, inject changes
 gulp.task('sass', function() {
   var cssfilter = filter('*.css', {restore:true});
-  return sass('./app/assets/sass')
-    .on('error', function(err) {
-      console.error('Error!', err.message);
-    })
+  return sass('./app/assets/sass', {sourcemap: true})
+    .on('error', sass.logError)
+
+    // For inline sourcemaps
+    // .pipe(sourcemaps.write())
+
+    .pipe(postcss([autoprefixer({
+      browsers: ['last 2 versions']
+    })]))
+
+    // For file sourcemaps
+    .pipe(sourcemaps.write('maps', {
+      includeContent: false,
+      sourceRoot: 'source'
+    }))
+
     .pipe(gulp.dest('./app/assets/css'))
+
     .pipe(cssfilter)
-    .pipe(reload({
-      stream: true
-    }));
+
+    .pipe(browserSync.stream());
 });
 
 
-// kick off css processing with maps
-gulp.task('css-working', ['sass'], function() {
-  return gulp.src('./app/assets/css/*.css')
-    .pipe(sourcemaps.init())
-    .pipe(postcss([autoprefixer({
-      browsers: ['last 2 versions']
-    })]))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./app/assets/css/'));
-});
+gulp.task('sass-dist', function() {
+  return sass('./app/assets/sass', {sourcemap: false, style:'compressed'})
+    .on('error', sass.logError)
 
-// kick off css processing, without maps
-gulp.task('css-final', ['sass'], function() {
-  return gulp.src('./app/assets/css/*.css')
+    // For inline sourcemaps
+    // .pipe(sourcemaps.write())
+
     .pipe(postcss([autoprefixer({
       browsers: ['last 2 versions']
     })]))
-    .pipe(gulp.dest('./build/assets/css/'));
+
+    .pipe(gulp.dest('./build/assets/css'))
+    .pipe(gulp.dest('./dist/css'));
+
 });
 
 
@@ -235,7 +201,7 @@ gulp.task('clean', function(cb) {
 
 // browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
-  browsersync({
+  browserSync.init({
     server: {
       baseDir: './app'
     }
@@ -245,7 +211,7 @@ gulp.task('browser-sync', function() {
 
 // run from the build folder
 gulp.task('serve-build', [], function() {
-  browsersync({
+  browserSync.init({
     server: {
       baseDir: './build'
     }
@@ -257,7 +223,7 @@ gulp.task('serve-build', [], function() {
 // });
 
 //build
-gulp.task('build', ['css-final', 'clean:dist'], function() {
+gulp.task('build', ['sass-dist', 'clean:dist'], function() {
   runSequence(
     'usemin',
     'copy:modules',
