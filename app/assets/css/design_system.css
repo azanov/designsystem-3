@@ -564,6 +564,9 @@ small,
 .text-gray {
   color: #c0c0c0; }
 
+.text-gray-50 {
+  color: #e1e1e1; }
+
 .text-gray-300 {
   color: #9b9b9b; }
 
@@ -587,9 +590,6 @@ small,
 
 .text-green-700 {
   color: #5a9836; }
-
-.text-light-gray {
-  color: #e1e1e1; }
 
 .text-magenta {
   color: #cf0989; }
@@ -732,6 +732,9 @@ small,
 .bg-pb-gray {
   background-color: #c0c0c0; }
 
+.bg-pb-gray-50 {
+  background-color: #e1e1e1; }
+
 .bg-pb-gray-300 {
   background-color: #9b9b9b; }
 
@@ -755,9 +758,6 @@ small,
 
 .bg-pb-green-700 {
   background-color: #5a9836; }
-
-.bg-pb-light-gray {
-  background-color: #e1e1e1; }
 
 .bg-pb-magenta {
   background-color: #cf0989; }

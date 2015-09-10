@@ -513,6 +513,9 @@ h2.table-header.specifications {
     &.bk {
       color: #000;
     }
+    span {
+      float: right;
+    }
   }
   &.spaced {
     li {
@@ -525,6 +528,17 @@ h2.table-header.specifications {
     font-size: 16px;
   }
 }
+
+.gradient-swatch {
+  height: 50px;
+  &.gradient1 {
+    background: $gradient1;
+  }
+  &.gradient2 {
+    background: $gradient2;
+  }
+}
+
 
 .donut-varied-padded {
   margin-right: 25px;

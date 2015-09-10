@@ -83,6 +83,7 @@ $directions: (top, bottom);
 .text-dark-orange-700 { color: $pb-dark-orange-700;}
 .text-error {color: $brand-danger;}
 .text-gray { color: $pb-gray;}
+.text-gray-50 { color: $pb-light-gray;}
 .text-gray-300 { color: $pb-gray-300;}
 .text-gray-400 { color: $pb-gray-400;}
 .text-gray-500 { color: $pb-gray-500;}
@@ -91,7 +92,6 @@ $directions: (top, bottom);
 .text-green-300 { color: $pb-green-300;}
 .text-green-500 { color: $pb-green-500;}
 .text-green-700 { color: $pb-green-700;}
-.text-light-gray { color: $pb-light-gray;}
 .text-magenta { color: $pb-magenta;}
 .text-magenta-300 { color: $pb-magenta-300;}
 .text-magenta-500 { color: $pb-magenta-500;}
@@ -141,6 +141,7 @@ $directions: (top, bottom);
 .bg-pb-dark-green-500 { background-color:  $pb-dark-green-500;}
 .bg-pb-dark-green-700 { background-color:  $pb-dark-green-700;}
 .bg-pb-gray { background-color:            $pb-gray;}
+.bg-pb-gray-50 { background-color:         $pb-light-gray;}
 .bg-pb-gray-300 { background-color:        $pb-gray-300;}
 .bg-pb-gray-400 { background-color:        $pb-gray-400;}
 .bg-pb-gray-500 { background-color:        $pb-gray-500;}
@@ -149,7 +150,6 @@ $directions: (top, bottom);
 .bg-pb-green-300 { background-color:       $pb-green-300;}
 .bg-pb-green-500 { background-color:       $pb-green-500;}
 .bg-pb-green-700 { background-color:       $pb-green-700;}
-.bg-pb-light-gray { background-color:      $pb-light-gray;}
 .bg-pb-magenta { background-color:         $pb-magenta;}
 .bg-pb-magenta-300 { background-color:     $pb-magenta-300;}
 .bg-pb-magenta-500 { background-color:     $pb-magenta-500;}
