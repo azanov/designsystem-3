@@ -5,42 +5,51 @@
 // FA 2.0 design final colors
 
 //Use this color palette for primary or accent colors
-$pb-blue:                #3e53a4;
+// note that the 500 color is the main color
 $pb-blue-300:            #8b98c8;
+$pb-blue-500:            #3e53a4;
 $pb-blue-700:            #314183;
-$pb-magenta:             #cf0989;
+$pb-blue:                $pb-blue-500;
 $pb-magenta-300:         #e26bb8;
+$pb-magenta-500:         #cf0989;
 $pb-magenta-700:         #a5076e;
-$pb-medium-blue:         #0072b8;
+$pb-magenta:             $pb-magenta-500;
 $pb-medium-blue-300:     #66aad4;
+$pb-medium-blue-500:     #0072b8;
 $pb-medium-blue-700:     #005a93;
-$pb-purple:              #a03f9b;
+$pb-medium-blue:         $pb-medium-blue-500;
 $pb-purple-300:          #c68cc3;
+$pb-purple-500:          #a03f9b;
 $pb-purple-700:          #80327c;
+$pb-purple:              $pb-purple-500;
 
 //Use this color palette for accent colors
-$pb-cyan:                #009dbf;
 $pb-cyan-300:            #66c3ec;
+$pb-cyan-500:            #009dbf;
 $pb-cyan-700:            #007cb2;
-$pb-dark-green:          #00a740;
+$pb-cyan:                $pb-cyan-500;
 $pb-dark-green-300:      #66ca8c;
+$pb-dark-green-500:      #00a740;
 $pb-dark-green-700:      #008500;
-$pb-dark-orange:         #ee6700;
+$pb-dark-green:          $pb-dark-green-500;
 $pb-dark-orange-300:     #f5a466;
+$pb-dark-orange-500:     #ee6700;
 $pb-dark-orange-700:     #be5200;
+$pb-dark-orange:         $pb-dark-orange-500;
 
 //Use this color palette for auxiliary colors
-
-
-$pb-green:               #72bf44;
 $pb-green-300:           #aad88f;
+$pb-green-500:           #72bf44;
 $pb-green-700:           #5a9836;
-$pb-orange:              #ef8200;
+$pb-green:               $pb-green-500;
 $pb-orange-300:          #f5a66d;
+$pb-orange-500:          #ef8200;
 $pb-orange-700:          #bf6800;
-$pb-yellow:              #edb700;
+$pb-orange:              $pb-orange-500;
 $pb-yellow-300:          #f4d466;
+$pb-yellow-500:          #edb700;
 $pb-yellow-700:          #bd9100;
+$pb-yellow:              $pb-yellow-500;
 
 //Neutral Dark Color Palette
 $pb-gray-700:            #2e2e2e; //section headers
@@ -58,17 +67,18 @@ $pb-bg3:                 #eaedf8; //row hover states
 $pb-bg4:                 #e4e6fa; //summary tables, vertical dividers
 $pb-bg5:                 #c5cbe3; //data cell borders
 
-
-$pb-error-red:           #dc0000;
-
-
+$pb-error-red:            #e70000;
 
 // bootstrap functional colors
 $brand-primary:          $pb-blue;
-$brand-success:          #008000;
+$brand-success:          $pb-dark-green-700;
 $brand-info:             $pb-blue;
-$brand-warning:          #bf6800;
+$brand-warning:          $pb-dark-orange-700;
 $brand-danger:           $pb-error-red;
+
+
+$gradient1:              linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%);
+$gradient2:              linear-gradient(90deg, $pb-blue 0%, $pb-cyan-700 100%);
 
 
 
