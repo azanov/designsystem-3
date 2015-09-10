@@ -20,7 +20,8 @@
       url: '/color',
       templateUrl: 'modules/foundation/templates/foundation-color.html',
       data: {
-        pageTitle: 'foundation - Colors'
+        pageTitle: 'foundation - Colors',
+        bodyClass: 'colors'
       }
     })
 
