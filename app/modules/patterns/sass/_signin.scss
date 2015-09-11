@@ -25,8 +25,8 @@
   }
 
   .centered-box {
-    min-width: 400px;
-    max-width: 400px;
+    width: 400px;
+    // can be replaced with min/max to be more flexible if needed
   }
 
   .signin-box {
