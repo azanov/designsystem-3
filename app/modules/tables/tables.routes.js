@@ -53,7 +53,7 @@
 
     .state('tables.paging', {
       url: '/datatable/paging',
-      templateUrl: 'modules/tables/templates/tables-datatable-paging.html',
+      templateUrl: 'modules/tables/templates/tables-datatable-popup-paging.html',
       controller: 'TablesDatatableController as datatable',
       resolve: {
         PeopleResolve: function($log, MockDataFactory) {
@@ -69,7 +69,7 @@
 
     .state('tables.infiniteScroll', {
       url: '/datatable/infiniteScroll',
-      templateUrl: 'modules/tables/templates/tables-datatable-infinite-scroll.html',
+      templateUrl: 'modules/tables/templates/tables-datatable-popup-infinite-scroll.html',
       controller: 'TablesDatatableInfiniteScrollController as datatable',
       resolve: {
         PeopleResolve: function($log, MockDataFactory) {

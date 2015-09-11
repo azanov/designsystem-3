@@ -3518,8 +3518,7 @@ a.list-group-item {
 .signin footer, .signin #footer {
   display: none; }
 .signin .centered-box {
-  min-width: 400px;
-  max-width: 400px; }
+  width: 400px; }
 .signin .signin-box {
   background-color: #fff;
   padding: 40px;

@@ -1,10 +1,8 @@
 <div class="row">
   <div class="col-md-12">
-    <h2 class="doc-sectionhead">Data</h2>
+    <h2 class="doc-sectionhead">Working with Data in Tables</h2>
   </div>
 </div>
-
-
 
 
   <!-- COLUMN SORTING -->
@@ -12,11 +10,9 @@
 
     <div class="col-md-12">
 
-      <p class="alert alert-info spacer-bottom-xl"><a href="" ui-sref="tables.paging" target="_blank">Paging example</a> shows the following items in action.</p>
+      <!-- <p class="alert alert-info spacer-bottom-xl"><a href="" ui-sref="tables.paging" target="_blank">Paging example</a> shows the following items in action.</p> -->
 
-      <h3>Column Sorting</h3>
-
-      <div class="preview-example">
+      <figcaption>Sortable Columns</figcaption>
 
           <table class="table table-datatable">
             <thead>
@@ -44,7 +40,6 @@
             </tbody>
           </table>
 
-      </div>
 
     </div>
 
@@ -57,7 +52,7 @@
 
     <div class="col-md-12">
 
-      <h3>Row Details</h3>
+      <figcaption>Showing Row Details</figcaption>
 
       <div class="alert alert-info spacer-bottom-xl">Try to limit your tables to eight columns. If that&rsquo;s not possible, then use the row details.</div>
 
@@ -142,7 +137,7 @@
 
     <div class="col-md-12">
 
-      <h3>Row Multiple Selection</h3>
+      <figcaption>Multiple Row Selection with Checkboxes</figcaption>
 
 
       <table class="table table-datatable">
@@ -194,7 +189,8 @@
 
     <div class="col-md-12">
 
-      <h3>Row Details with Multiple Selection</h3>
+      <figcaption>Showing Row Details, with Multiple Row Selection</figcaption>
+
 
           <table class="table">
             <thead>
@@ -275,7 +271,7 @@
 
     <div class="col-md-12">
 
-      <h3>Row Actions</h3>
+      <figcaption>Single-Row Action Menu</figcaption>
 
 
           <table class="table table-datatable">
@@ -324,7 +320,8 @@
 
 
   <!-- ROW LINKS -->
-  <div class="row spacer-top-md">
+  <!-- Just hyperlinkd text, why do we need? -->
+  <!-- <div class="row spacer-top-md">
 
     <div class="col-md-12">
 
@@ -360,7 +357,7 @@
 
     </div>
 
-  </div>
+  </div> -->
 
 
 
@@ -369,7 +366,7 @@
 
     <div class="col-md-12">
 
-      <h3>Row Selection (click)</h3>
+      <figcaption>Multiple Row Selection via Click</figcaption>
 
       <div class="alert alert-info spacer-bottom-xl">When users click on a row, the only action that should be triggered is a row selection.</div>
 
@@ -415,9 +412,7 @@
 
     <div class="col-md-12">
 
-      <h3>Row Icons</h3>
-
-
+      <figcaption>Font Awesome Row Icons</figcaption>
         <table class="table table-datatable">
           <thead>
             <tr>
@@ -428,7 +423,7 @@
               <th>Shipping Info</th>
               <th>Tracking #</th>
               <th>Status</th>
-              <th>Amount</th>
+              <th>Notification</th>
             </tr>
           </thead>
           <tbody>
@@ -439,8 +434,8 @@
               <td>Carrier</td>
               <td>Shipping Info</td>
               <td>Tracking #</td>
-              <td>Status</td>
-              <td>Amount</td>
+              <td><i class="fa fa-fw fa-check"></i></td>
+              <td><i class="fa fa-bell-o"></i></td>
             </tr>
             <tr>
               <td><i class="fa fa-fw fa-user"></i></td>
@@ -449,16 +444,12 @@
               <td>Carrier</td>
               <td>Shipping Info</td>
               <td>Tracking #</td>
-              <td>Status</td>
-              <td>Amount</td>
+              <td><i class="fa fa-fw fa-times"></i></td>
+              <td>&nbsp;</td>
             </tr>
             <tr><td colspan="8">&#8230;</td></tr>
           </tbody>
         </table>
-
-
-
-      <p>See also <a href="" ui-sref="foundation.iconography">iconography</a></p>
 
     </div>
 
@@ -471,7 +462,7 @@
 
     <div class="col-md-12">
 
-      <h3>Row Status Icons</h3>
+      <figcaption>Color Font Awesome Icons</figcaption>
 
       <!-- colored icons-->
 
@@ -519,118 +510,6 @@
           </tbody>
         </table>
 
-
-      <p>See also <a href="" ui-sref="foundation.iconography">iconography</a></p>
-
-
-      <!-- text color icons-->
-
-        <table class="table table-datatable">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Recipient</th>
-              <th>Carrier</th>
-              <th>Shipping Info</th>
-              <th>Tracking #</th>
-              <th>Status</th>
-              <th>Amount</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Date</td>
-              <td>Recipient</td>
-              <td>Carrier</td>
-              <td>Shipping Info</td>
-              <td>Tracking #</td>
-              <td><i class="fa fa-fw fa-check"></i></td>
-              <td>Amount</td>
-            </tr>
-            <tr>
-              <td>Date</td>
-              <td>Recipient</td>
-              <td>Carrier</td>
-              <td>Shipping Info</td>
-              <td>Tracking #</td>
-              <td><i class="fa fa-fw fa-times"></i></td>
-              <td>Amount</td>
-            </tr>
-            <tr>
-              <td>Date</td>
-              <td>Recipient</td>
-              <td>Carrier</td>
-              <td>Shipping Info</td>
-              <td>Tracking #</td>
-              <td><i class="fa fa-fw fa-clock-o"></i></td>
-              <td>Amount</td>
-            </tr>
-            <tr><td colspan="8">&#8230;</td></tr>
-          </tbody>
-        </table>
-
-
-      <!-- with notification icons -->
-
-        <table class="table table-datatable">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Recipient</th>
-              <th>Carrier</th>
-              <th>Shipping Info</th>
-              <th>Tracking #</th>
-              <th>Trigger</th>
-              <th>Amount</th>
-              <th>Notification</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Date</td>
-              <td>Recipient</td>
-              <td>Carrier</td>
-              <td>Shipping Info</td>
-              <td>Tracking #</td>
-              <td><i class="fa fa-fw fa-clock-o"></i></td>
-              <td>Amount</td>
-              <td><i class="fa fa-bell-o"></i></td>
-            </tr>
-            <tr>
-              <td>Date</td>
-              <td>Recipient</td>
-              <td>Carrier</td>
-              <td>Shipping Info</td>
-              <td>Tracking #</td>
-              <td><i class="fa fa-fw fa-refresh"></i></td>
-              <td>Amount</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <td>Date</td>
-              <td>Recipient</td>
-              <td>Carrier</td>
-              <td>Shipping Info</td>
-              <td>Tracking #</td>
-              <td><i class="fa fa-fw fa-clock-o text-muted"></i></td>
-              <td>Amount</td>
-              <td><i class="fa fa-bell-o"></i></td>
-            </tr>
-            <tr>
-              <td>Date</td>
-              <td>Recipient</td>
-              <td>Carrier</td>
-              <td>Shipping Info</td>
-              <td>Tracking #</td>
-              <td><i class="fa fa-fw fa-folder-o"></i></td>
-              <td>Amount</td>
-              <td><i class="fa fa-bell-o"></i></td>
-            </tr>
-            <tr><td colspan="8">&#8230;</td></tr>
-          </tbody>
-        </table>
-
-
     </div>
 
   </div>
@@ -642,7 +521,7 @@
 
     <div class="col-md-12">
 
-      <h3>Row Progress Bars</h3>
+      <figcaption>Row Progress Bars</figcaption>
 
       <!-- progress bars -->
 
@@ -667,7 +546,7 @@
               <td>Tracking #</td>
               <td>
                 <div class="progress no-margins">
-                  <div class="progress-bar" style="min-width: 2em; width: 2%;">
+                  <div class="progress-bar-success" style="min-width: 2em; width: 2%;">
                     2%
                   </div>
                 </div>
@@ -682,8 +561,16 @@
               <td>Tracking #</td>
               <td>
                 <div class="progress no-margins">
-                  <div class="progress-bar" style="min-width: 2em; width: 60%;">
-                    60%
+                  <div class="progress no-margins">
+                    <div class="progress-bar progress-bar-success" style="width: 35%" tooltip="35%">
+                      <span class="sr-only">35% Complete</span>
+                    </div>
+                    <div class="progress-bar progress-bar-warning" style="width: 20%" tooltip="20%">
+                      <span class="sr-only">20% Complete</span>
+                    </div>
+                    <div class="progress-bar progress-bar-danger" style="width: 10%" tooltip="10%">
+                      <span class="sr-only">10% Complete</span>
+                    </div>
                   </div>
                 </div>
               </td>
@@ -692,107 +579,25 @@
             <tr><td colspan="8">&#8230;</td></tr>
           </tbody>
         </table>
-
-
-
-      <!-- color/stacked progress bars -->
-
-        <table class="table table-datatable">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Recipient</th>
-              <th>Carrier</th>
-              <th>Shipping Info</th>
-              <th>Tracking #</th>
-              <th style="min-width: 200px;">Status</th>
-              <th>Amount</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Date</td>
-              <td>Recipient</td>
-              <td>Carrier</td>
-              <td>Shipping Info</td>
-              <td>Tracking #</td>
-              <td>
-                <div class="progress no-margins">
-                  <div class="progress-bar progress-bar-success" style="width: 100%;"></div>
-                </div>
-              </td>
-              <td>Amount</td>
-            </tr>
-            <tr>
-              <td>Date</td>
-              <td>Recipient</td>
-              <td>Carrier</td>
-              <td>Shipping Info</td>
-              <td>Tracking #</td>
-              <td>
-                <div class="progress no-margins">
-                  <div class="progress-bar progress-bar-warning" style="width: 100%;"></div>
-                </div>
-              </td>
-              <td>Amount</td>
-            </tr>
-            <tr>
-              <td>Date</td>
-              <td>Recipient</td>
-              <td>Carrier</td>
-              <td>Shipping Info</td>
-              <td>Tracking #</td>
-              <td>
-                <div class="progress no-margins">
-                  <div class="progress-bar" style="width: 0%;"></div>
-                </div>
-              </td>
-              <td>Amount</td>
-            </tr>
-            <tr>
-              <td>Date</td>
-              <td>Recipient</td>
-              <td>Carrier</td>
-              <td>Shipping Info</td>
-              <td>Tracking #</td>
-              <td>
-                <div class="progress no-margins">
-                  <div class="progress-bar progress-bar-success" style="width: 35%" tooltip="35%">
-                    <span class="sr-only">35% Complete</span>
-                  </div>
-                  <div class="progress-bar progress-bar-warning" style="width: 20%" tooltip="20%">
-                    <span class="sr-only">20% Complete</span>
-                  </div>
-                  <div class="progress-bar progress-bar-danger" style="width: 10%" tooltip="10%">
-                    <span class="sr-only">10% Complete</span>
-                  </div>
-                </div>
-              </td>
-              <td>Amount</td>
-            </tr>
-            <tr><td colspan="8">&#8230;</td></tr>
-          </tbody>
-        </table>
-
-
-      <p>See also <a href="" ui-sref="foundation.color">color</a></p>
 
     </div>
 
   </div>
 
 
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="doc-sectionhead">Inline Editing</h2>
+  </div>
+</div>
+
+
 
   <!-- INLINE EDIT -->
-  <div class="row spacer-top-md">
-
+  <div class="row">
     <div class="col-md-12">
 
-      <h3>Inline Edit</h3>
-
-      <p>
         <a class="more-info plugin" href="http://vitalets.github.io/angular-xeditable/#" target="blank">angular-xeditable v0.1.9</a>
-      </p>
 
       <div class="alert alert-danger spacer-top-md">
         Not all control types are supported. Please refer to the <a href="http://vitalets.github.io/angular-xeditable/#" target="blank">angular-xeditable</a> documentation for more information.
