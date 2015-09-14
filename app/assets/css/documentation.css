@@ -534,6 +534,11 @@ figcaption {
 .colors p {
   margin-top: 10px; }
 
+.sample-app .panel-heading {
+  background: linear-gradient(90deg, #4652a3 0%, #7f469b 42%, #7f469b 48%, #9d4097 100%);
+  color: #fff;
+  border: 0; }
+
 .type-samples h1,
 .type-samples h2,
 .type-samples h3,

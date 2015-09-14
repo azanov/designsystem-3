@@ -15,10 +15,10 @@
       <div class="row">
         <div class="col-md-12">
           <ul class="list-unstyled list-inline jump-menu">
-            <li><a href="" du-smooth-scroll="color-palette">Color Palette</a></li>
-            <li><a href="" du-smooth-scroll="example-application">Example Application</a></li>
-            <li><a href="" du-smooth-scroll="neutral-palette">Neutral Palette</a></li>
+            <li><a href="" du-smooth-scroll="color-palette">Palettes</a></li>
+            <li><a href="" du-smooth-scroll="color-selection">Color Selection</a></li>
             <li><a href="" du-smooth-scroll="gradients">Gradients</a></li>
+            <li><a href="" du-smooth-scroll="application">Application</a></li>
           </ul>
         </div>
       </div>
@@ -34,17 +34,20 @@
 
   <div  class="row">
     <div class="col-md-8">
-      <h1 id="color-palette" class="doc-head">Color Palettes</h1>
-      <p class="doc-lede">Our primary color palette is designed to display well, with optimum contrast, on the web and on mobile devices. Our foundational brand colors &mdash; cyan and magenta &mdash; don&rsquo;t read well in small type sizes on digital screens. So they&rsquo;ve been limited to use as accent colors and large type sizes only. Our auxiliary color palette contains colors that should be used sparingly due to their potential to clash with our other two palettes.</p>
+      <h1 id="color-palette" class="doc-head">Palettes</h1>
     </div>
   </div>
 
 
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="doc-sectionhead">Colorful</h2>
+  </div>
+</div>
 
-
-  <div class="row spacer-top-lg">
+  <div class="row">
     <div class="col-md-12">
-      <figcaption>Primary or Accent Colors</figcaption>
+        <p>Our <strong>primary</strong> colors are designed to display well, with optimum contrast, on the web and on mobile devices. These can be used for buttons, badges, H1 headers and charts. You can use a second primary color as an accent color, as shown in the Color Application examples below.</p>
       <div class="row">
         <div class="col-md-2">
           <ul class="swatches">
@@ -80,8 +83,8 @@
           </ul>
         </div>
       </div>
-      <p>
-        These colors can be used for buttons, badges, and H1-Headers. WCAG 2.0 contrast AA Compliant - text (under 18pt) ratio of at least 4.5:1 (larger text 18pt+, at least 3:1). Can also be used for graphics and charts.
+      <p class="small">
+        WCAG 2.0 contrast AA Compliant — text ratio of at least 4.5:1 (for text under 18pt); for larger text (18pt+), text ratio of at least 3:1.
       </p>
     </div>
 
@@ -92,7 +95,9 @@
   <div class="col-md-12">
     <div class="row">
       <div class="col-md-10">
-        <figcaption>Accent Colors</figcaption>
+        <p>
+          Our <strong>accent</strong> colors can be used for H1 headers, as well as for charts.
+        </p>
       </div>
     </div>
     <div class="row">
@@ -124,8 +129,8 @@
       </div>
 
     </div>
-    <p >
-      These colors can be used for H1-Headers. Can also be use for graphics and charts. WCAG 2.0 contrast AA Compliant - larger text 18pt+. at least 3:1.
+    <p class="small">
+      WCAG 2.0 contrast AA Compliant — text ratio of at least 4.5:1 (for text under 18pt); for larger text (18pt+), text ratio of at least 3:1.
     </p>
   </div>
 
@@ -136,7 +141,9 @@
   <div class="col-md-12">
     <div class="row">
       <div class="col-md-10">
-        <figcaption>Auxilary Colors</figcaption>
+        <p>
+          Our <strong>auxiliary</strong> colors should be used only for charts.
+        </p>
       </div>
     </div>
     <div class="row">
@@ -166,26 +173,56 @@
         </ul>
       </div>
     </div>
+  </div>
+</div>
 
-    <p>
-      These colors can be used for graphics and charts.
-    </p>
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="doc-sectionhead">Neutral</h2>
+    <p>Our <strong>neutral</strong> colors are used across elements that make up the underlying framework of your product, such as typography and containers. Darker colors are primarily used for type. Lighter colors are exclusively used for backgrounds, dividers, hovers and containers.
+</p>
+  </div>
+</div>
+
+
+  <div class="row spacer-top-sm">
+    <div class="col-md-5">
+      <figcaption>Neutral Dark Color Palette</figcaption>
+      <ul class="swatches">
+        <li class="bg-pb-gray-700"><div class="header">Primary Color</div>PB Gray 700 — #2e2e2e<span>Section Headers</span></li>
+        <li class="bg-pb-gray-500">PB Gray 500 — #4e4e4e<span>Sub Headers</span></li>
+        <li class="bg-pb-gray-400">PB Gray 400 — #717171<span>Body Copy</span></li>
+        <li class="bg-pb-gray-300">PB Gray 300 — #9b9b9b<span>Field Borders/Icons</span></li>
+        <li class="bg-pb-gray bk">PB Gray — #c0c0c0<span>Disabled States</span></li>
+        <li class="bg-pb-gray-50 bk">PB Gray 50 — #e1e1e1<span>Section Dividers</span></li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <figcaption>Neutral Light Color Palette</figcaption>
+      <ul class="swatches">
+        <li class="bg-pb-bg1 bk">PB BG1 — #f0f0f0<span>Footers</span></li>
+        <li class="bg-pb-bg2 bk">PB BG2 — #f8f8f8<span>Container Backgrounds/Table Row Stripes</span></li>
+        <li class="bg-pb-bg3 bk">PB BG3 — #eaedf8<span>Table Vertical Dividers/Summary States</span></li>
+        <li class="bg-pb-bg4 bk">PB BG4 — #e4e6fa<span>Table Row Hover States</span></li>
+        <li class="bg-pb-bg5 bk">PB BG5 — #c5cbe3<span>Data Cell Borders/Table Row Selected</span></li>
+      </ul>
+
+    </div>
   </div>
 
-</div>
+
 
 
 
 
   <div class="row">
     <div class="col-md-8">
-      <h1 id="example-application" class="doc-head">Color Application 1</h1>
-      <p class="doc-lede">Choose three colors &mdash; one primary color, one accent color, and one auxiliary color &mdash; and then use only those colors (and its variations in saturation) throughout your product. Since PB Magenta pairs well with all colors, we highly recommended that you use it as your secondary color.</p>
+      <h1 id="color-selection" class="doc-head">Color Selection</h1>
+      <p>Our primary color selection consists of PB Blue accented with PB Magenta for headers and badges. Use PB Medium Blue for links.</p>
     </div>
   </div>
 
-  <div class="row">
-
+  <div class="row spacer-top-sm">
     <div class="col-md-4">
       <figcaption>Primary Color</figcaption>
       <ul class="swatches">
@@ -221,51 +258,15 @@
 
 
 
-
   <div class="row">
     <div class="col-md-8">
-      <h1 id="neutral-palette" class="doc-head">Neutral Palettes</h1>
-      <p class="doc-lede">Our neutral palette&rsquo;s colors are used across elements that make up the underlying framework of your product, such as typography and containers. Darker colors are primarily used for type. Lighter colors are exclusively used for backgrounds, hovers and containers.</p>
-    </div>
-  </div>
-
-  <div class="row spacer-top-xl">
-    <div class="col-md-5">
-      <figcaption>Neutral Dark Color Palette</figcaption>
-      <ul class="swatches">
-        <li class="bg-pb-gray-700"><div class="header">Primary Color</div>PB Gray 700 — #2e2e2e<span>Section Headers</span></li>
-        <li class="bg-pb-gray-500">PB Gray 500 — #4e4e4e<span>Sub Headers</span></li>
-        <li class="bg-pb-gray-400">PB Gray 400 — #717171<span>Body Copy</span></li>
-        <li class="bg-pb-gray-300">PB Gray 300 — #9b9b9b<span>Field Borders/Icons</span></li>
-        <li class="bg-pb-gray bk">PB Gray — #c0c0c0<span>Disabled States</span></li>
-        <li class="bg-pb-gray-50 bk">PB Gray 50 — #e1e1e1<span>Section Dividers</span></li>
-      </ul>
-    </div>
-    <div class="col-md-6">
-      <figcaption>Neutral Light Color Palette</figcaption>
-      <ul class="swatches">
-        <li class="bg-pb-bg1 bk">PB BG1 — #f0f0f0<span>Footers</span></li>
-        <li class="bg-pb-bg2 bk">PB BG2 — #f8f8f8<span>Container Backgrounds/Table Row Stripes</span></li>
-        <li class="bg-pb-bg3 bk">PB BG3 — #eaedf8<span>Table Vertical Dividers/Summary States</span></li>
-        <li class="bg-pb-bg4 bk">PB BG4 — #e4e6fa<span>Table Row Hover States</span></li>
-        <li class="bg-pb-bg5 bk">PB BG5 — #c5cbe3<span>Data Cell Borders/Table Row Selected</span></li>
-      </ul>
-
-    </div>
-  </div>
-
-
-
-  <div class="row">
-    <div class="col-md-8">
-      <h1 id="gradients" class="doc-head">Gradients</h1>
-      <p class="doc-lede">Our gradients are based on our primary and accent palettes and can be used to add visual interest to your product&rsquo;s navigation. A gradient always consists of a combination of a primary color on the left and an accent color on the right. While this system allows for a range of options we recommend using the first gradient shown (PB Blue transitioning to PB Magenta), to keep our products looking consistent. Whichever gradient you use, make sure that its color aligns with the colors you’ve chosen for the rest of your product.</p>
+      <h1 id="gradients" class="doc-head">Gradient</h1>
+      <p>Our header gradient starts with PB Blue and transitions to PB Magenta. It aligns with the first color application example above. Use this gradient combination to keep our products looking consistent.</p>
     </div>
   </div>
 
   <div class="row spacer-top-md">
     <div class="col-md-10">
-      <figcaption>Primary header gradient starts with PB Blue and transitions to PB Magenta (use with Color Application 1)</figcaption>
       <div class="gradient-swatch gradient1">&nbsp;</div>
     </div>
   </div>
@@ -275,5 +276,44 @@
       <div class="gradient-swatch gradient2">&nbsp;</div>
     </div>
   </div> -->
+
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 class="doc-head" id="application">Product Application</h1>
+      <p>Here’s an example, using a Panel, showing how to put the various colors together by mixing primary and accent colors for a gradient header, an H1 header, a link and buttons.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="panel panel-filled-heading sample-app">
+        <div class="panel-heading">Product Name</div>
+      <div class="panel-body">
+
+        <h1>H1 - Header</h1>
+        <h2>Section Header</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab reiciendis perferendis aliquam iusto tempora omnis consequatur nam, repellat sunt, corporis dicta deleniti quidem. Cum, repellendus!
+        </p>
+        <dl>
+          <dt>Account Number</dt>
+            <dd><a href="">3455905690-48056</a></dd>
+        </dl>
+
+      </div>
+      <div class="panel-footer">
+        <button class="btn btn-primary">Button</button>
+        <button class="btn btn-default">Button</button>
+      </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
 
 </div>
