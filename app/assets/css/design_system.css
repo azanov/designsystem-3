@@ -1853,12 +1853,13 @@ form.magic-search {
   .help-icon i.fa.fa-circle.fa-stack-1x {
     font-size: 26px;
     color: #980d70; }
-  .help-icon i.fa.fa-stack-1x.fa-question.fa-inverse, .help-icon .initials {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 18px; }
+  .help-icon i.fa.fa-stack-1x.fa-question, .help-icon .initials {
+    font-size: 20px; }
 
 .navbar-right .dropdown-toggle {
   height: 50px; }
+.navbar-right li.open i.fa.fa-circle.fa-stack-1x {
+  display: none; }
 
 .user-menu {
   position: relative; }
@@ -1876,8 +1877,8 @@ form.magic-search {
     font-size: 11px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center; }
-  .user-menu.open > a {
-    color: #fff !important; }
+  .user-menu.open i.fa.fa-circle.fa-stack-1x {
+    display: none; }
 
 a.user-dot {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

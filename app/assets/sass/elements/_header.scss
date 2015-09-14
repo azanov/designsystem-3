@@ -97,9 +97,8 @@ form.magic-search {
     font-size: 26px;
     color: #980d70;
   }
-  i.fa.fa-stack-1x.fa-question.fa-inverse, .initials {
-    color: rgba(255, 255, 255, .8);
-    font-size: 18px;
+  i.fa.fa-stack-1x.fa-question, .initials {
+    font-size: 20px;
   }
 }
 
@@ -107,6 +106,11 @@ form.magic-search {
 .navbar-right {
   .dropdown-toggle {
     height: 50px;
+  }
+  li.open {
+    i.fa.fa-circle.fa-stack-1x {
+      display: none;
+    }
   }
 }
 
@@ -130,8 +134,8 @@ form.magic-search {
     text-align: center;
   }
   &.open {
-    > a {
-      color: #fff !important;
+    i.fa.fa-circle.fa-stack-1x {
+      display: none;
     }
   }
 }
