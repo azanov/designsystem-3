@@ -168,8 +168,32 @@
   <div class="row spacer-top-lg">
     <div class="col-md-6">
       <figure>
-        <figcaption>Bordered Table</figcaption>
-        <table class="table table-bordered">
+        <figcaption>"Open" Table</figcaption>
+        <table class="table table-open">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First name</th>
+              <th>Last name</th>
+              <th class="currency">Gross Sales</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="person in simple.people">
+              <td>00{{::person.id}}</td>
+              <td>{{::person.firstName}}</td>
+              <td>{{::person.lastName}}</td>
+              <td class="currency">{{::person.gross_sales}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    </div>
+
+    <div class="col-md-6">
+      <figure>
+        <figcaption>"Unstyled" Table</figcaption>
+        <table class="table table-unstyled">
           <thead>
             <tr>
               <th>#</th>

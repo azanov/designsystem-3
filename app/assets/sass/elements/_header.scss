@@ -27,6 +27,21 @@ header {
 }
 
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    margin-top: 0;
+    transition: all .03s ease-out;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+    &.shadow {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    }
+}
+
+
 
 
 // for the expanding search field - scoped to this form so as to not affect all search forms
@@ -323,25 +338,25 @@ a.app-launcher {
 
 
 // for header that slides up/down on scroll
-.headroom {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  margin-top: 0;
-
-  &.headroom-not-top {
-    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
-  }
-
-
-  &.headroom-top {
-    box-shadow: 0 0 0 rgba(0, 0, 0, .4);
-    transition: all .03s ease-out;
-  }
-}
-
+// .headroom {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   z-index: 10;
+//   margin-top: 0;
+//
+//   &.headroom-not-top {
+//     box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+//   }
+//
+//
+//   &.headroom-top {
+//     box-shadow: 0 0 0 rgba(0, 0, 0, .4);
+//     transition: all .03s ease-out;
+//   }
+// }
+//
 
 
 // MEDIA QUERIES */

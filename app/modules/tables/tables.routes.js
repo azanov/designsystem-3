@@ -25,7 +25,7 @@
       url: '',
       views: {
         basic: {
-          templateUrl: 'modules/tables/templates/tables-simple.html',
+          templateUrl: 'modules/tables/templates/tables-basic.html',
           controller: 'TablesSimpleController as simple',
           resolve: {
             PeopleResolve: function($log, MockDataFactory) {

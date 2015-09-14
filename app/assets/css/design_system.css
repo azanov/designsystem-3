@@ -1800,6 +1800,18 @@ header {
       vertical-align: middle;
       margin-right: 10px; }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin-top: 0;
+  transition: all .03s ease-out;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6); }
+  header.shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); }
+
 form.magic-search {
   margin-top: 7px; }
   form.magic-search input {
@@ -1994,19 +2006,6 @@ a.app-launcher {
   max-height: 500px;
   transition: opacity 0.3s linear, max-height 2s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0s linear;
   transition: opacity 0.3s linear, max-height 2s cubic-bezier(0.19, 1, 0.22, 1), transform 0s linear; }
-
-.headroom {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  margin-top: 0; }
-  .headroom.headroom-not-top {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
-  .headroom.headroom-top {
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
-    transition: all .03s ease-out; }
 
 @media (max-width: 767px) {
   .activity {
@@ -3629,6 +3628,32 @@ th.centered {
   .table-condensed-extra > tfoot > tr > th,
   .table-condensed-extra > tfoot > tr > td {
     padding: 2px; }
+
+.table-open > thead > tr > th, .table-open > thead > tr > td, .table-open > tbody > tr > th, .table-open > tbody > tr > td, .table-open > tfoot > tr > th, .table > tfoot > tr > td {
+  border-top: 1px solid #C5CBE3;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #C5CBE3; }
+
+.table-open > tbody > tr > td:last-child, .table-open > tfoot > tr > td:last-child {
+  border-right: 0; }
+
+.table-open {
+  border: 0;
+  background-color: transparent; }
+
+.table-unstyled {
+  border: 0;
+  background-color: transparent; }
+
+.table-unstyled > thead > tr > th, .table-unstyled > thead > tr > td, .table-unstyled > tbody > tr > th, .table-unstyled > tbody > tr > td, .table-unstyled > tfoot > tr > th, .table-unstyled > tfoot > tr > td {
+  border: 0; }
+
+.table-unstyled > tbody > tr > td, .table-unstyled > tfoot > tr > td {
+  border-right: 0; }
+
+.table-unstyled > tbody > tr > td:last-child, .table-unstyled > tfoot > tr > td:last-child {
+  border-right: 0; }
 
 .daterangepicker.dropdown-menu {
   max-width: none;

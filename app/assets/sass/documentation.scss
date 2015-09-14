@@ -366,6 +366,13 @@ figcaption {
     margin-top: 10px;
   }
 }
+.sample-app {
+  .panel-heading {
+    background: linear-gradient(90deg, #4652a3 0%, #7f469b 42%, #7f469b 48%, #9d4097 100%);
+    color: #fff;
+    border: 0;
+  }
+}
 
 
 
@@ -765,6 +772,8 @@ h2.table-header.specifications {
 }
 
 
+
+
 // used for example table status, move to Live preview sass
 .status {
   &.status-success {
@@ -829,33 +838,6 @@ h2.table-header.specifications {
     }
   }
 }
-// .home-links {
-//   li {
-//     border-right: 1px solid #c0c0c0;
-//     padding-right: 10px;
-//     a {
-//       text-decoration: underline;
-//       font-size: 16px;
-//     }
-//     &:last-child {
-//       border-right: 0;
-//     }
-//   }
-//   &.knockout {
-//     li {
-//       border-right: 1px solid rgba(255, 255, 255, .6);
-//       padding-right: 10px;
-//       a {
-//         color: #fff;
-//         text-decoration: underline;
-//         font-size: 16px;
-//       }
-//       &:last-child {
-//         border-right: 0;
-//       }
-//     }
-//   }
-// }
 
 
 //RESOURCES
