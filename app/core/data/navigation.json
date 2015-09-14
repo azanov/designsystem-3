@@ -118,12 +118,12 @@
           "label": "Elements",
           "value": "",
           "toggle": "dropdown",
-          "children": [{
-            "label": "Buttons",
-            "value": "mobile.buttons"
-          }, {
+          "children": [ {
             "label": "UI Controls",
             "value": "mobile.uicontrols"
+          },{
+            "label": "Buttons",
+            "value": "mobile.buttons"
           }, {
             "label": "Containers",
             "value": "mobile.containers"

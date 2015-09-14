@@ -9,9 +9,7 @@ header {
       padding-left: 0;
     }
   }
-  .logo-box {
-    border: 1px solid #ff0;
-  }
+
   .pb-footer-logo {
     margin-right: 30px;
     display: table;
@@ -26,8 +24,8 @@ header {
 
 }
 
-
-header {
+// added "not demo" so the headers on the "headers" page won't snap to top
+header:not(.demo) {
     position: fixed;
     top: 0;
     left: 0;
@@ -46,7 +44,7 @@ header {
 
 // for the expanding search field - scoped to this form so as to not affect all search forms
 form.magic-search {
-  // scss-lint:disable VendorPrefixes
+  // scss-lint:disable VendorPrefix
   margin-top: 7px;
   input {
     outline: none;
@@ -90,6 +88,51 @@ form.magic-search {
   }
   input::-webkit-input-placeholder {
     color: transparent;
+  }
+}
+
+.help-icon {
+  height: 70px;
+  i.fa.fa-circle.fa-stack-1x {
+    font-size: 26px;
+    color: #980d70;
+  }
+  i.fa.fa-stack-1x.fa-question.fa-inverse, .initials {
+    color: rgba(255, 255, 255, .8);
+    font-size: 18px;
+  }
+}
+
+
+.navbar-right {
+  .dropdown-toggle {
+    height: 50px;
+  }
+}
+
+.user-menu {
+  // scss-lint:disable ImportantRule
+  position: relative;
+  i.fa.fa-circle.fa-stack-1x {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 26px;
+    color: #980d70;
+    text-align: center;
+  }
+  .initials {
+    position: absolute;
+    left: 12px;
+    top: 14px;
+    font-size: 11px;
+    font-family: $font-family-sans-serif;
+    text-align: center;
+  }
+  &.open {
+    > a {
+      color: #fff !important;
+    }
   }
 }
 
