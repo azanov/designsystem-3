@@ -1785,9 +1785,6 @@ header {
     #header .navbar li.first a,
     header .navbar li.first a {
       padding-left: 0; }
-  #header .logo-box,
-  header .logo-box {
-    border: 1px solid #ff0; }
   #header .pb-footer-logo,
   header .pb-footer-logo {
     margin-right: 30px;
@@ -1800,7 +1797,7 @@ header {
       vertical-align: middle;
       margin-right: 10px; }
 
-header {
+header:not(.demo) {
   position: fixed;
   top: 0;
   left: 0;
@@ -1809,7 +1806,7 @@ header {
   margin-top: 0;
   transition: all .03s ease-out;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.6); }
-  header.shadow {
+  header:not(.demo).shadow {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); }
 
 form.magic-search {
@@ -1850,6 +1847,38 @@ form.magic-search {
     color: transparent; }
   form.magic-search input::-webkit-input-placeholder {
     color: transparent; }
+
+.help-icon {
+  height: 70px; }
+  .help-icon i.fa.fa-circle.fa-stack-1x {
+    font-size: 26px;
+    color: #980d70; }
+  .help-icon i.fa.fa-stack-1x.fa-question, .help-icon .initials {
+    font-size: 20px; }
+
+.navbar-right .dropdown-toggle {
+  height: 50px; }
+.navbar-right li.open i.fa.fa-circle.fa-stack-1x {
+  display: none; }
+
+.user-menu {
+  position: relative; }
+  .user-menu i.fa.fa-circle.fa-stack-1x {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 26px;
+    color: #980d70;
+    text-align: center; }
+  .user-menu .initials {
+    position: absolute;
+    left: 12px;
+    top: 14px;
+    font-size: 11px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center; }
+  .user-menu.open i.fa.fa-circle.fa-stack-1x {
+    display: none; }
 
 a.user-dot {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
