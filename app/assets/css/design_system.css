@@ -3651,6 +3651,14 @@ td.centered,
 th.centered {
   text-align: center; }
 
+.table-condensed > thead > tr > th,
+.table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > th,
+.table-condensed > tbody > tr > td,
+.table-condensed > tfoot > tr > th,
+.table-condensed > tfoot > tr > td {
+  padding: 5px; }
+
 .table-condensed-extra {
   font-size: 14px; }
   .table-condensed-extra > thead > tr > th,
@@ -3659,7 +3667,7 @@ th.centered {
   .table-condensed-extra > tbody > tr > td,
   .table-condensed-extra > tfoot > tr > th,
   .table-condensed-extra > tfoot > tr > td {
-    padding: 2px; }
+    padding: 2px 5px; }
 
 .table-open > thead > tr > th, .table-open > thead > tr > td, .table-open > tbody > tr > th, .table-open > tbody > tr > td, .table-open > tfoot > tr > th, .table > tfoot > tr > td {
   border-top: 1px solid #C5CBE3;

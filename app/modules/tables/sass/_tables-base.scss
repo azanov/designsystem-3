@@ -136,6 +136,21 @@ th.centered {
   text-align: center;
 }
 
+
+.table-condensed {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: $table-condensed-cell-padding;
+      }
+    }
+  }
+}
+
+
 .table-condensed-extra {
   font-size: 14px;
   >thead,
@@ -144,7 +159,7 @@ th.centered {
     >tr {
       >th,
       >td {
-        padding: $table-condensed-extra-cell-padding;
+        padding: $table-condensed-extra-cell-padding $table-condensed-cell-padding;
       }
     }
   }
