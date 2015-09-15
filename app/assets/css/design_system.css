@@ -3671,7 +3671,7 @@ th.centered {
   border-right: 0; }
 
 .table-open {
-  border: 0;
+  border-style: solid none none;
   background-color: transparent; }
 
 .table-unstyled {
@@ -3680,10 +3680,7 @@ th.centered {
 
 .table-unstyled > thead > tr > th, .table-unstyled > thead > tr > td, .table-unstyled > tbody > tr > th, .table-unstyled > tbody > tr > td, .table-unstyled > tfoot > tr > th, .table-unstyled > tfoot > tr > td {
   border: 0;
-  background-color: transparent;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  color: #717171; }
+  background-color: transparent; }
 
 .table-unstyled > tbody > tr > td, .table-unstyled > tfoot > tr > td {
   border-right: 0; }
