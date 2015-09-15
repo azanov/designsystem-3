@@ -3676,7 +3676,11 @@ th.centered {
   background-color: transparent; }
 
 .table-unstyled > thead > tr > th, .table-unstyled > thead > tr > td, .table-unstyled > tbody > tr > th, .table-unstyled > tbody > tr > td, .table-unstyled > tfoot > tr > th, .table-unstyled > tfoot > tr > td {
-  border: 0; }
+  border: 0;
+  background-color: transparent;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #717171; }
 
 .table-unstyled > tbody > tr > td, .table-unstyled > tfoot > tr > td {
   border-right: 0; }
