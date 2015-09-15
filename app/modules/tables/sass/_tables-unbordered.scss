@@ -14,12 +14,17 @@
 	background-color: transparent;
 }
 
+
 .table-unstyled {
 	border: 0;
 	background-color: transparent;
 }
 .table-unstyled > thead > tr > th, .table-unstyled > thead > tr > td, .table-unstyled > tbody > tr > th, .table-unstyled > tbody > tr > td, .table-unstyled > tfoot > tr > th, .table-unstyled > tfoot > tr > td {
 	border: 0;
+	background-color: transparent;
+	font-family: $font-family-sans-serif;
+	font-weight: normal;
+	color: $text-color;
 }
 .table-unstyled > tbody > tr > td, .table-unstyled > tfoot > tr > td {
 	border-right: 0;
