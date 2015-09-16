@@ -29,7 +29,7 @@
     {
       "firstName" : "Simon",
       "lastName" : "Tam",
-      "gross_sales" : "¥76,330,989.00",
+      "gross_sales" : "¥76,330,989",
       "type" : "trophy",
       "image" : "avatar100_f01.jpg",
       "address" : "1500 Southwest 10th Avenue<br/>Topeka, KS 66606<br/>(785) 354-6000",
@@ -38,7 +38,7 @@
     {
       "firstName" : "Jayne",
       "lastName" : "Cobb",
-      "gross_sales" : "¥76,330,989.00",
+      "gross_sales" : "¥76,330,989",
       "type" : "trophy",
       "image" : "avatar100_f01.jpg",
       "address" : "1500 Southwest 10th Avenue<br/>Topeka, KS 66606<br/>(785) 354-6000",
