@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.ds.elements').controller('InputsController', function($log, CountriesResolve, PeopleResolve) {
+  angular.module('pb.ds.elements').controller('InputsController', function($log, CountriesResolve, PeopleResolve, moment) {
 
     var _this = this;
 
@@ -124,6 +124,74 @@
 
 
 
+    _this.customRange = {
+      dropdown: {
+        items: [
+          {
+            label: 'Today',
+            start: moment().startOf('day'),
+            end: moment().endOf('day'),
+            selected: false,
+            isRange: false,
+            isCustom: false
+          },
+          {
+            label: 'Yesterday',
+            start: moment().startOf('day').subtract(1, 'days'),
+            end: moment().endOf('day').subtract(1, 'days'),
+            selected: true,
+            isRange: false,
+            isCustom: false
+          },
+          {
+            label: 'Custom',
+            selected: false,
+            isRange: true,
+            isCustom: true
+          }
+        ],
+        selected: null,
+        init: function() {
+          angular.forEach(_this.customRange.dropdown.items, function(value, index) {
+            if (value.selected === true) {
+              _this.customRange.dropdown.selected = value;
+              return;
+            }
+          });
+        },
+        click: function(item) {
+
+          angular.forEach(_this.customRange.dropdown.items, function(value, index) {
+            value.selected = false;
+          });
+
+          item.selected = true;
+
+          _this.customRange.dropdown.selected = item;
+        }
+      },
+      start: {
+        //startDate: moment().startOf('day').format('MM/DD/YY'),
+        startDate: moment().startOf('day'),
+        endDate: moment().endOf('day'),
+        options: {
+          singleDatePicker: true,
+          drops: 'up',
+          format: 'MM/DD/YYYY'
+        }
+      },
+      end: {
+        //startDate: moment().startOf('day').format('MM/DD/YY'),
+        startDate: moment().startOf('day'),
+        endDate: moment().endOf('day'),
+        options: {
+          singleDatePicker: true,
+          drops: 'up',
+          format: 'MM/DD/YYYY'
+        }
+      }
+
+    };
 
 
 

@@ -1240,11 +1240,58 @@
       <div class="row">
         <div class="col-md-5">
           <div class="input-group">
-            <input class="form-control" date-range-picker ng-model="dt" options="{singleDatePicker: true, drops: 'up'}" type="text"/>
+            <input class="form-control" date-range-picker ng-model="dt" options="{singleDatePicker: true, drops: 'up', format: 'MM/DD/YYYY'}" type="text"/>
             <span class="input-group-addon">
               <i class="glyphicon glyphicon-calendar"></i>
             </span>
           </div>
+
+<!-- <div class="input-group spacer-top-md">
+          <input class="form-control" date-range-picker options="{drops: 'up'}" ng-model="dt" type="text"/>
+          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+        </div> -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- CUSTOM DATERANGE -->
+  <div class="row">
+    <div class="col-md-3">
+
+    </div>
+
+    <div class="col-md-7 col-md-offset-1">
+
+      <div class="row">
+        <div class="col-md-5">
+
+          <div class="input-group">
+
+            <div class="input-group-btn">
+
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{inputs.customRange.dropdown.selected.label}} <i class="fa fa-angle-down"></i>
+              </button>
+
+              <ul class="dropdown-menu">
+                <li ng-init="inputs.customRange.dropdown.init()" ng-repeat="item in inputs.customRange.dropdown.items">
+                  <a href="" ng-click="inputs.customRange.dropdown.click(item)">{{item.label}}</a>
+                </li>
+              </ul>
+
+            </div>
+
+            <div ng-show="!inputs.customRange.dropdown.selected.isCustom">
+              <span>{{inputs.customRange.dropdown.selected.start | amDateFormat: 'MM/DD/YYYY'}} {{inputs.customRange.dropdown.selected.end | amDateFormat: 'MM/DD/YYYY'}}</span>
+            </div>
+
+            <input type="text" class="form-control pull-left" style="display: inline;" ng-model="inputs.customRange.start.startDate" date-range-picker options="inputs.customRange.start.options">
+            <input type="text" class="form-control pull-left" style="display: inline;" ng-model="inputs.customRange.end.startDate" date-range-picker options="inputs.customRange.end.options">
+          </div><!-- /input-group -->
+
 
 <!-- <div class="input-group spacer-top-md">
           <input class="form-control" date-range-picker options="{drops: 'up'}" ng-model="dt" type="text"/>
