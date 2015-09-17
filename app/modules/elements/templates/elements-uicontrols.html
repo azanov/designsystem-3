@@ -1157,11 +1157,6 @@
               <i class="glyphicon glyphicon-calendar"></i>
             </span>
           </div>
-
-<!-- <div class="input-group spacer-top-md">
-          <input class="form-control" date-range-picker options="{drops: 'up'}" ng-model="dt" type="text"/>
-          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-        </div> -->
         </div>
       </div>
 
@@ -1200,15 +1195,10 @@
               <span>{{inputs.customRange.dropdown.selected.start | amDateFormat: 'MM/DD/YYYY'}} {{inputs.customRange.dropdown.selected.end | amDateFormat: 'MM/DD/YYYY'}}</span>
             </div>
 
-            <input type="text" class="form-control pull-left" style="display: inline;" ng-model="inputs.customRange.start.startDate" date-range-picker options="inputs.customRange.start.options">
-            <input type="text" class="form-control pull-left" style="display: inline;" ng-model="inputs.customRange.end.startDate" date-range-picker options="inputs.customRange.end.options">
-          </div><!-- /input-group -->
+            <input type="text" class="form-control pull-left" style="display: inline;" ng-model="inputs.customRange.date" date-range-picker options="inputs.customRange.options">
+            <input type="text" class="form-control pull-left" style="display: inline;" ng-model="inputs.customRange.end" date-range-picker options="inputs.customRange.end.options">
+          </div>
 
-
-<!-- <div class="input-group spacer-top-md">
-          <input class="form-control" date-range-picker options="{drops: 'up'}" ng-model="dt" type="text"/>
-          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-        </div> -->
         </div>
       </div>
 

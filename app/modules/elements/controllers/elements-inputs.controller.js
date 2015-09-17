@@ -125,6 +125,10 @@
 
 
     _this.customRange = {
+      date: {
+        startDate: moment().startOf('day'),
+        endDate: moment().endOf('day')
+      },
       dropdown: {
         items: [
           {
@@ -155,6 +159,9 @@
           angular.forEach(_this.customRange.dropdown.items, function(value, index) {
             if (value.selected === true) {
               _this.customRange.dropdown.selected = value;
+
+              _this.customRange.date.startDate = value.start;
+              _this.customRange.date.endDate = value.start;
               return;
             }
           });
@@ -167,21 +174,34 @@
 
           item.selected = true;
 
+          _this.customRange.date.startDate = item.start;
+          _this.customRange.date.endDate = item.start;
+
+          $log.debug(item, _this.customRange.date.startDate);
+
           _this.customRange.dropdown.selected = item;
         }
       },
       start: {
-        //startDate: moment().startOf('day').format('MM/DD/YY'),
         startDate: moment().startOf('day'),
-        endDate: moment().endOf('day'),
-        options: {
-          singleDatePicker: true,
-          drops: 'up',
-          format: 'MM/DD/YYYY'
+        endDate: moment().endOf('day')
+      },
+      options: {
+        singleDatePicker: true,
+        autoApply: true,
+        // autoUpdateInput: true,
+        drops: 'up',
+        format: 'MM/DD/YYYY',
+        startDate: moment(),
+        endDate: moment(),
+        eventHandlers: {
+          'apply.daterangepicker': function(ev, picker) {
+            // _this.table.daterangepicker.displayDate(picker.startDate, picker.endDate);
+            return picker.startDate;
+          }
         }
       },
       end: {
-        //startDate: moment().startOf('day').format('MM/DD/YY'),
         startDate: moment().startOf('day'),
         endDate: moment().endOf('day'),
         options: {
