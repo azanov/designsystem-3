@@ -202,8 +202,12 @@
         options: {
           singleDatePicker: true,
           autoApply: true,
-          drops: 'up',
-          format: 'MM/DD/YYYY'
+          format: 'MM/DD/YYYY',
+          eventHandlers: {
+            'apply.daterangepicker': function(ev, picker) {
+              // handle when date changed
+            }
+          }
         }
       },
       start: {
@@ -214,12 +218,10 @@
         options: {
           singleDatePicker: true,
           autoApply: true,
-          drops: 'up',
           format: 'MM/DD/YYYY',
           eventHandlers: {
             'apply.daterangepicker': function(ev, picker) {
-              // _this.table.daterangepicker.displayDate(picker.startDate, picker.endDate);
-              //return picker.startDate;
+              // handle when date changed
             }
           }
         }
