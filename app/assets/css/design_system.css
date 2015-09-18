@@ -328,12 +328,15 @@ small,
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 1; }
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 .pb-treeview:before {
   content: "\e616"; }
 
-.pb-flag-o:before {
+.pb-flag:before {
   content: "\f11d"; }
 
 .pb-scale:before {
@@ -413,6 +416,9 @@ small,
 
 .pb-line:before {
   content: "\e615"; }
+
+.pb-admin:before {
+  content: "\e61b"; }
 
 .spacer-top-xs {
   margin-top: 10px; }
