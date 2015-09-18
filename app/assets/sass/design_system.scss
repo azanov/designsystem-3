@@ -3,61 +3,59 @@
 
 // Settings
 // ========================================
-@import 'settings/settings';
+@import "settings/variables";
 
-// Vendor
+// Mixins
 // ========================================
+@import "settings/mixins";
+@import "settings/typography";
+@import "settings/pbfont";
+@import "settings/helpers";
 
-// Base
+
+// Legacy
+// Items removed from the DS but which we do not want to break if in use
 // ========================================
-
-@import 'base/global';
-@import 'base/uibootstrap';
-
-
-// Components
-// ========================================
-@import 'elements/accordion';
-@import 'elements/alerts';
-@import 'elements/badges';
-@import 'elements/breadcrumbs';
-@import 'elements/buttons';
-@import 'elements/date-picker';
-@import 'elements/footer';
-// @import 'elements/form-icons';
-@import 'elements/forms';
-@import 'elements/header';
-@import 'elements/loading-bar';
-@import 'elements/left-nav';
-@import 'elements/list-group';
-@import 'elements/media-object';
-@import 'elements/miller-columns';
-@import 'elements/notifications';
-// @import 'elements/onoff';
-@import 'elements/panels';
-@import 'elements/popover';
-@import 'elements/progress-bar';
-@import 'elements/selectize';
-@import 'elements/stepper';
-@import 'elements/switches';
-@import 'elements/tabs';
-@import 'elements/toastrs';
-@import 'elements/toggle-switch';
-@import 'elements/tree-menu';
-@import 'elements/ui-select';
-@import 'elements/wizard';
-// @import 'button-groups';
+@import 'legacy/miller-columns';
+@import 'legacy/selectize';
+@import 'legacy/wizard';
+@import 'legacy/stepper';
+@import 'legacy/media-object';
 
 
 // PAGES
 // ========================================
 @import 'pages/fullscreen';
+@import 'pages/left-nav';
+@import 'pages/tree-menu';
 
 
 // Modules
 // ========================================
+@import '../../modules/elements/assets/sass/accordion';
+@import '../../modules/elements/assets/sass/alerts';
+@import '../../modules/elements/assets/sass/badges';
+@import '../../modules/elements/assets/sass/breadcrumbs';
+@import '../../modules/elements/assets/sass/buttons';
+@import '../../modules/elements/assets/sass/forms';
+@import '../../modules/elements/assets/sass/list-group';
+@import '../../modules/elements/assets/sass/loading-bar';
+@import '../../modules/elements/assets/sass/notifications';
+@import '../../modules/elements/assets/sass/switches';
+@import '../../modules/elements/assets/sass/tabs';
+@import '../../modules/elements/assets/sass/toastrs';
+@import '../../modules/elements/assets/sass/toggle-switch';
+@import '../../modules/elements/assets/sass/ui-select';
+@import '../../modules/elements/assets/sass/uibootstrap';
+
+@import '../../modules/main/assets/sass/header';
+@import '../../modules/main/assets/sass/footer';
+
+@import '../../modules/elements/assets/sass/panels';
+@import '../../modules/elements/assets/sass/popover';
+@import '../../modules/elements/assets/sass/progress-bar';
 
 @import '../../modules/patterns/sass/signin';
-@import '../../modules/tables/sass/tables';
+@import '../../modules/tables/assets/sass/tables';
 @import '../../modules/graphs/sass/c3';
 @import '../../modules/landing/assets/sass/landing';

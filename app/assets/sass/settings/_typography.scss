@@ -198,7 +198,7 @@ h3,
   font-weight: normal;
   color: $header-color;
   &.ko {
-    color: fff;
+    color: #fff;
   }
   &.alt {
     color: $header-color-alt;
@@ -458,6 +458,6 @@ small,
 .text-warning {
   color: $state-warning-text;
 }
-.text-danger {
+.text-danger, .text-error {
   color: $brand-danger;
 }

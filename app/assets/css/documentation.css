@@ -1,3 +1,9 @@
+.container-fluid {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: auto;
+  margin-right: auto; }
+
 @font-face {
   font-family: 'PrecisionSans_W_Rg';
   src: url("../fonts/PrecisionSans_W_Rg.eot");
@@ -131,7 +137,7 @@ h3,
   color: #2e2e2e; }
   h3.ko,
   .h3.ko {
-    color: fff; }
+    color: #fff; }
   h3.alt,
   .h3.alt {
     color: #4e4e4e; }
@@ -318,8 +324,8 @@ small,
 .text-warning {
   color: #be5200; }
 
-.text-danger {
-  color: #e70000; }
+.text-danger, .text-error {
+  color: #e70600; }
 
 .home div[class^="hero-"] {
   display: -webkit-flex;
@@ -712,7 +718,7 @@ h2.table-header.specifications {
   background-color: #008500; }
 
 .brand-danger {
-  background-color: #e70000; }
+  background-color: #e70600; }
 
 .brand-info {
   background-color: #3e53a4; }
@@ -813,7 +819,7 @@ h2.table-header.specifications {
 .status.status-success {
   color: #3e53a4; }
 .status.status-error {
-  color: #e70000; }
+  color: #e70600; }
 .status.status-warning {
   color: #be5200; }
 

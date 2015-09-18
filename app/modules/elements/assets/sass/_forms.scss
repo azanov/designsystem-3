@@ -33,13 +33,24 @@ label {
 }
 
 
+// all help-block with a text-error class are hidden by default
 .help-block.text-error {
   display: none;
+  // once the parent has-error, the help-block will show and be red
   .has-error & {
     display: block;
     color: $brand-danger;
   }
 }
+
+// any help block class text-error or text-danger is red, period
+.help-block.text-error, .help-block.text-danger {
+    color: $brand-danger;
+}
+
+
+
+
 
 .read-only-data {
   label {

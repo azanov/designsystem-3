@@ -297,3 +297,39 @@ $grid-column-padding: 15px;
   border-bottom-left-radius: $radius;
   border-top-left-radius: $radius;
 }
+
+
+// Single side border-radius
+
+@mixin border-top-radius($radius) {
+  border-top-right-radius: $radius;
+   border-top-left-radius: $radius;
+}
+@mixin border-right-radius($radius) {
+  border-bottom-right-radius: $radius;
+     border-top-right-radius: $radius;
+}
+@mixin border-bottom-radius($radius) {
+  border-bottom-right-radius: $radius;
+   border-bottom-left-radius: $radius;
+}
+@mixin border-left-radius($radius) {
+  border-bottom-left-radius: $radius;
+     border-top-left-radius: $radius;
+}
+
+
+// @each $item, $color in $pbcolors {
+//   @each $shade, $value in $color {
+//     .bg-#{$item}-#{$shade} {
+//       background-color: $value;
+//     }
+//   }
+// }
+// @each $item, $color in $pbcolors {
+//   @each $shade, $value in $color {
+//     .text-#{$item}-#{$shade} {
+//       color: $value;
+//     }
+//   }
+// }

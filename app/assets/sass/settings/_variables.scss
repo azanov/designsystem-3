@@ -1,7 +1,7 @@
 //
 // Variables
 // --------------------------------------------------
-// updated 8/8/15
+// updated 9/18/15
 // FA 2.0 design final colors
 
 //Use this color palette for primary or accent colors
@@ -67,7 +67,7 @@ $pb-bg3:                 #eaedf8; //row hover states
 $pb-bg4:                 #e4e6fa; //summary tables, vertical dividers
 $pb-bg5:                 #c5cbe3; //data cell borders
 
-$pb-error-red:            #e70000;
+$pb-error-red:           #e70600;
 
 // bootstrap functional colors
 $brand-primary:          $pb-blue;
@@ -368,7 +368,16 @@ $grid-float-breakpoint: $screen-sm-min;
 $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 
 //== Container sizes
-//
+
+// we have added a 40px margin to the container-fluid
+.container-fluid {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 //## Define the maximum width of `.container` for different screen sizes.
 
 // Small screen / tablet
