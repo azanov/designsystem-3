@@ -1191,15 +1191,17 @@
 
             </div>
 
-            <div ng-show="!inputs.customRange.selected.isCustom">
-              <span>{{inputs.customRange.selected.start | amDateFormat: 'MM/DD/YYYY'}} <span ng-show="inputs.customRange.selected.isRange">- {{inputs.customRange.selected.end | amDateFormat: 'MM/DD/YYYY'}}</span></span>
-            </div>
+            <div class="" style="border: 1px solid #9b9b9b; border-left: 0; padding: 6px 0 6px 0;">
+              <div ng-show="!inputs.customRange.selected.isCustom">
+                <span>{{inputs.customRange.selected.start | amDateFormat: 'MM/DD/YYYY'}} <span ng-show="inputs.customRange.selected.isRange">- {{inputs.customRange.selected.end | amDateFormat: 'MM/DD/YYYY'}}</span></span>
+              </div>
 
-            <div ng-show="inputs.customRange.selected.isCustom">
-              <span>From: </span>
-              <input type="text" class="form-control" style="display: inline-block; float: none;" ng-model="inputs.customRange.start.date" date-range-picker options="inputs.customRange.start.options">
-              <span>To:</span>
-              <input type="text" class="form-control" style="display: inline-block; float: none;" ng-model="inputs.customRange.end.date" date-range-picker options="inputs.customRange.end.options">
+              <div ng-show="inputs.customRange.selected.isCustom">
+                <span>From: </span>
+                <input type="text" class="" style="display: inline-block; float: none;" ng-model="inputs.customRange.start.date" date-range-picker options="inputs.customRange.start.options">
+                <span>To:</span>
+                <input type="text" class="" style="display: inline-block; float: none;" ng-model="inputs.customRange.end.date" date-range-picker options="inputs.customRange.end.options">
+              </div>
             </div>
 
           </div>
