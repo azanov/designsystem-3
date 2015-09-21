@@ -216,10 +216,6 @@
           startDate: moment().startOf('day'),
           endDate: moment().endOf('day')
         },
-        keyup: function(){
-          $log.debug('key');
-          return false;
-        },
         options: {
           singleDatePicker: true,
           autoApply: true,
