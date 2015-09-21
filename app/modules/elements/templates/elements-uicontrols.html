@@ -1101,7 +1101,7 @@
  <div class="row">
    <div class="col-md-3">
      <p>
-       <a class="more-info plugin" href="https://github.com/fragaria/angular-daterangepicker" target="_blank">angular-daterangepicker v0.1.15</a>
+       <a class="more-info plugin" href="https://github.com/fragaria/angular-daterangepicker" target="_blank">angular-daterangepicker v0.1.17</a>
        <a class="more-info plugin" href="http://www.daterangepicker.com/" target="_blank">Bootstrap Daterange Picker v1.3.23</a>
      </p>
    </div>
@@ -1110,66 +1110,64 @@
 
      <div class="row">
        <div class="col-md-5">
-         <div class="input-group">
-           <input class="form-control" date-range-picker ng-model="dt" options="{singleDatePicker: true, format: 'MM/DD/YYYY'}" type="text"/>
-           <span class="input-group-addon">
-             <i class="glyphicon glyphicon-calendar"></i>
-           </span>
-         </div>
+         <figure>
+           <figcaption>Single date picker</figcaption>
+           <div class="input-group">
+             <input class="form-control" date-range-picker ng-model="dt" options="{singleDatePicker: true, format: 'MM/DD/YYYY'}" type="text"/>
+             <span class="input-group-addon">
+               <i class="glyphicon glyphicon-calendar"></i>
+             </span>
+           </div>
+         </figure>
        </div>
      </div>
 
-   </div>
- </div>
-
-
- <!-- CUSTOM DATERANGE -->
- <div class="row">
-   <div class="col-md-3">
-
-   </div>
-
-   <div class="col-md-7 col-md-offset-1">
-
-     <div class="row">
+     <!-- CUSTOM DATERANGE -->
+     <div class="row spacer-top-md">
        <div class="col-md-12">
 
-         <div class="input-group custom-daterange">
+         <figure>
+           <figcaption>Custom daterange with single date pickers</figcaption>
+           <div class="input-group custom-daterange">
 
-           <div class="input-group-btn">
+             <div class="input-group-btn">
 
-             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               {{inputs.customRange.selected.label}} <i class="fa fa-angle-down"></i>
-             </button>
+               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 {{inputs.customRange.selected.label}} <i class="fa fa-angle-down"></i>
+               </button>
 
-             <ul class="dropdown-menu">
-               <li ng-init="inputs.customRange.init()" ng-repeat="item in inputs.customRange.items">
-                 <a href="" ng-click="inputs.customRange.click(item)">{{item.label}}</a>
-               </li>
-             </ul>
+               <ul class="dropdown-menu">
+                 <li ng-init="inputs.customRange.init()" ng-repeat="item in inputs.customRange.items">
+                   <a href="" ng-click="inputs.customRange.click(item)">{{item.label}}</a>
+                 </li>
+               </ul>
 
-           </div>
-
-           <div class="custom-daterange-container">
-             <div ng-show="!inputs.customRange.selected.isCustom">
-               <span>{{inputs.customRange.selected.start | amDateFormat: 'MM/DD/YYYY'}} <span ng-show="inputs.customRange.selected.isRange">- {{inputs.customRange.selected.end | amDateFormat: 'MM/DD/YYYY'}}</span></span>
              </div>
 
-             <div  class="custom-daterange-inputs" ng-show="inputs.customRange.selected.isCustom">
-               <label>From</label>
-               <input type="text" ng-model="inputs.customRange.start.date" date-range-picker options="inputs.customRange.start.options">
-               <label>To</label>
-               <input type="text" ng-model="inputs.customRange.end.date" date-range-picker options="inputs.customRange.end.options">
-             </div>
-           </div>
+             <div class="custom-daterange-container">
+               <div ng-show="!inputs.customRange.selected.isCustom" class="custom-daterange-labels">
+                 <span>{{inputs.customRange.selected.start | amDateFormat: 'MM/DD/YYYY'}} <span ng-show="inputs.customRange.selected.isRange">- {{inputs.customRange.selected.end | amDateFormat: 'MM/DD/YYYY'}}</span></span>
+               </div>
 
-         </div>
+               <div class="custom-daterange-inputs" ng-show="inputs.customRange.selected.isCustom">
+                 <label>From</label>
+                 <input type="text" ng-model="inputs.customRange.start.date" date-range-picker options="inputs.customRange.start.options" readonly>
+                 <label>To</label>
+                 <input type="text" ng-model="inputs.customRange.end.date" date-range-picker options="inputs.customRange.end.options" readonly>
+               </div>
+             </div>
+
+           </div>
+         </figure>
 
        </div>
      </div>
 
    </div>
  </div>
+
+
+
 
 
 
