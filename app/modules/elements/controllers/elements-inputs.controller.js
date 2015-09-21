@@ -203,6 +203,7 @@
           singleDatePicker: true,
           autoApply: true,
           format: 'MM/DD/YYYY',
+          opens: 'center',
           eventHandlers: {
             'apply.daterangepicker': function(ev, picker) {
               // handle when date changed
@@ -215,10 +216,15 @@
           startDate: moment().startOf('day'),
           endDate: moment().endOf('day')
         },
+        keyup: function(){
+          $log.debug('key');
+          return false;
+        },
         options: {
           singleDatePicker: true,
           autoApply: true,
           format: 'MM/DD/YYYY',
+          opens: 'center',
           eventHandlers: {
             'apply.daterangepicker': function(ev, picker) {
               // handle when date changed
