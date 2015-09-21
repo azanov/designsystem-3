@@ -2030,9 +2030,6 @@ fieldset[disabled] .form-control.timepicker {
       border: 1px solid #9b9b9b;
       box-shadow: none; }
 
-body {
-  margin: 60px; }
-
 /*
  * WTF, forms?
  * Released under MIT and copyright 2014 Mark Otto.
