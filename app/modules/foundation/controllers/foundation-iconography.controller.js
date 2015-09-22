@@ -35,7 +35,8 @@
       'scale',
       'table',
       'tile',
-      'treeview'
+      'treeview',
+      'admin'
     ];
 
   });
