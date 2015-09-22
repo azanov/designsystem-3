@@ -1,0 +1,44 @@
+.custom-daterange {
+
+  .custom-daterange-container {
+    border: 1px solid #9b9b9b;
+    border-left: 0;
+    padding: 6px 5px 5px;
+    display: inline-block;
+
+    .custom-daterange-labels {
+      padding-bottom: 1px;
+    }
+
+    .custom-daterange-inputs {
+
+      label {
+        padding: 0;
+        margin: 0;
+      }
+
+      input[type="text"] {
+        border-width: 0;
+        border-bottom: 1px dashed;
+        min-width: 10px;
+        padding: 0 5px;
+        margin: 0;
+        color: $pb-blue;
+        width: 90px;
+        text-align: center;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+      }
+
+    }
+
+  }
+
+}

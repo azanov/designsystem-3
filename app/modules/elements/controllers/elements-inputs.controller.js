@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.ds.elements').controller('InputsController', function($log, CountriesResolve, PeopleResolve) {
+  angular.module('pb.ds.elements').controller('InputsController', function($log, CountriesResolve, PeopleResolve, moment) {
 
     var _this = this;
 
@@ -124,6 +124,112 @@
 
 
 
+    _this.customRange = {
+
+      items: [
+        {
+          label: 'Today',
+          start: moment().startOf('day'),
+          end: moment().endOf('day'),
+          selected: false,
+          isRange: false,
+          isCustom: false
+        },
+        {
+          label: 'Yesterday',
+          start: moment().startOf('day').subtract(1, 'days'),
+          end: moment().endOf('day').subtract(1, 'days'),
+          selected: true,
+          isRange: false,
+          isCustom: false
+        },
+        {
+          label: 'Last Week',
+          start: moment().startOf('day').subtract(7, 'days'),
+          end: moment().endOf('day'),
+          selected: false,
+          isRange: true,
+          isCustom: false
+        },
+        {
+          label: 'Custom',
+          selected: false,
+          isRange: true,
+          isCustom: true
+        }
+      ],
+      selected: null,
+      init: function() {
+        angular.forEach(_this.customRange.items, function(value, index) {
+          if (value.selected === true) {
+            _this.customRange.selected = value;
+
+            _this.customRange.start.date.startDate = value.start;
+            _this.customRange.start.date.endDate = value.start;
+
+            _this.customRange.end.date.startDate = value.end;
+            _this.customRange.end.date.endDate = value.end;
+            return;
+          }
+        });
+      },
+      click: function(item) {
+
+        angular.forEach(_this.customRange.items, function(value, index) {
+          value.selected = false;
+        });
+
+        item.selected = true;
+
+        if (item.isCustom) {
+          item.start = _this.customRange.selected.start;
+          item.end = _this.customRange.selected.end;
+        }
+
+        _this.customRange.start.date.startDate = item.start;
+        _this.customRange.start.date.endDate = item.start;
+
+        _this.customRange.end.date.startDate = item.end;
+        _this.customRange.end.date.endDate = item.end;
+
+        _this.customRange.selected = item;
+      },
+      end: {
+        date: {
+          startDate: moment().startOf('day'),
+          endDate: moment().endOf('day')
+        },
+        options: {
+          singleDatePicker: true,
+          autoApply: true,
+          format: 'MM/DD/YYYY',
+          opens: 'center',
+          eventHandlers: {
+            'apply.daterangepicker': function(ev, picker) {
+              // handle when date changed
+            }
+          }
+        }
+      },
+      start: {
+        date: {
+          startDate: moment().startOf('day'),
+          endDate: moment().endOf('day')
+        },
+        options: {
+          singleDatePicker: true,
+          autoApply: true,
+          format: 'MM/DD/YYYY',
+          opens: 'center',
+          eventHandlers: {
+            'apply.daterangepicker': function(ev, picker) {
+              // handle when date changed
+            }
+          }
+        }
+      }
+
+    };
 
 
 
