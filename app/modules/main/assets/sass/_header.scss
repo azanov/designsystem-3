@@ -217,7 +217,7 @@ a.app-launcher {
       &,
       &:hover,
       &:focus {
-        background-color: rgba(255, 255, 255, .2);
+        background-color: rgba(0, 0, 0, .21);
         color: rgba(255, 255, 255, 1);
       }
     }
@@ -271,7 +271,7 @@ a.app-launcher {
     background-color: transparent;
     color: $pb-blue;
     &:hover {
-      background-color: $pb-light-gray;
+      background-color: $pb-bg3;
       color: $pb-gray-700;
     }
   }
@@ -341,7 +341,7 @@ a.app-launcher {
       transition: padding .2s linear;
 
       &:hover {
-        background-color: $pb-light-gray;
+        background-color: $pb-bg3;
         color: $pb-gray-700;
         padding-left: 10px;
       }
