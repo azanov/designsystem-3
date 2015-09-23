@@ -144,6 +144,8 @@
         singleDatePicker: false,
         format: 'MM/DD/YYYY',
         opens: 'center',
+        autoApply: false,
+        applyClass: 'btn-primary',
         ranges: {
           Today: [moment(), moment()],
           'Last 7 Days': [moment().subtract(6, 'days'), moment()],
@@ -172,6 +174,48 @@
         return result;
       }
     };
+
+
+    _this.daterangepicker2 = {
+      date: {
+        startDate: moment().startOf('year'),
+        endDate: moment().endOf('month')
+      },
+      options: {
+        singleDatePicker: false,
+        format: 'MM/DD/YYYY',
+        opens: 'center',
+        autoApply: true,
+        ranges: {
+          Today: [moment(), moment()],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Month to date': [moment().startOf('month'), moment()],
+          'Year to date': [moment().startOf('year'), moment()]
+        }
+      },
+      displayDate: function(start, end) {
+
+        var startDate = start || _this.table.daterangepicker.date.startDate;
+        var endDate = end || _this.table.daterangepicker.date.endDate;
+
+        var dateDiff = endDate.diff(startDate, 'days');
+        var result = '';
+
+        if (dateDiff === 0) {
+          result = 'Today ' + moment(startDate).format('MM/DD/YYYY');
+        }
+        else if (dateDiff === 6) {
+          result = 'Last 7 days';
+        }
+        else {
+          result = 'From ' + moment(startDate).format('MM/DD/YYYY') + ' to ' + moment(endDate).format('MM/DD/YYYY');
+        }
+
+        return result;
+      }
+    };
+
+
 
 
     _this.customRange = {

@@ -284,8 +284,16 @@
   background: none;
 }
 
+.daterangepicker td.available.today:hover {
+  background: $pb-bg3;
+}
+
 .daterangepicker td.available.today.in-range {
   background: $pb-bg4;
+}
+
+.daterangepicker td.available.today.in-range:hover {
+  background: $pb-bg3;
 }
 
 .daterangepicker td.available.today.active {

@@ -4072,8 +4072,14 @@ th.centered {
 .daterangepicker td.available.today {
   background: none; }
 
+.daterangepicker td.available.today:hover {
+  background: #eaedf8; }
+
 .daterangepicker td.available.today.in-range {
   background: #e4e6fa; }
+
+.daterangepicker td.available.today.in-range:hover {
+  background: #eaedf8; }
 
 .daterangepicker td.available.today.active {
   background: #3e53a4; }
@@ -4569,8 +4575,14 @@ th.centered {
 .daterangepicker td.available.today {
   background: none; }
 
+.daterangepicker td.available.today:hover {
+  background: #eaedf8; }
+
 .daterangepicker td.available.today.in-range {
   background: #e4e6fa; }
+
+.daterangepicker td.available.today.in-range:hover {
+  background: #eaedf8; }
 
 .daterangepicker td.available.today.active {
   background: #3e53a4; }
