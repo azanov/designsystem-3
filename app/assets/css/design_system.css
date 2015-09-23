@@ -4070,7 +4070,13 @@ th.centered {
   color: #fff; }
 
 .daterangepicker td.available.today {
+  background: none; }
+
+.daterangepicker td.available.today.in-range {
   background: #e4e6fa; }
+
+.daterangepicker td.available.today.active {
+  background: #3e53a4; }
 
 .daterangepicker td.week, .daterangepicker th.week {
   font-size: 80%;
@@ -4561,7 +4567,13 @@ th.centered {
   color: #fff; }
 
 .daterangepicker td.available.today {
+  background: none; }
+
+.daterangepicker td.available.today.in-range {
   background: #e4e6fa; }
+
+.daterangepicker td.available.today.active {
+  background: #3e53a4; }
 
 .daterangepicker td.week, .daterangepicker th.week {
   font-size: 80%;

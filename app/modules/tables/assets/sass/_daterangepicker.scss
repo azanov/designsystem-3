@@ -281,7 +281,15 @@
 }
 
 .daterangepicker td.available.today {
+  background: none;
+}
+
+.daterangepicker td.available.today.in-range {
   background: $pb-bg4;
+}
+
+.daterangepicker td.available.today.active {
+  background: $pb-blue;
 }
 
 .daterangepicker td.week, .daterangepicker th.week {

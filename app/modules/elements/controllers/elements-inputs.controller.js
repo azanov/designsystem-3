@@ -123,6 +123,17 @@
     _this.switchStatus4 = false;
 
 
+    _this.singlepicker = {
+      date: {
+        startDate: moment().startOf('day'),
+        endDate: moment().startOf('day')
+      },
+      options: {
+        singleDatePicker: true,
+        format: 'MM/DD/YYYY'
+      }
+    };
+
 
     _this.daterangepicker = {
       date: {
@@ -131,6 +142,7 @@
       },
       options: {
         singleDatePicker: false,
+        format: 'MM/DD/YYYY',
         opens: 'center',
         ranges: {
           Today: [moment(), moment()],
