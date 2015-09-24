@@ -36,6 +36,9 @@
             <li>
               <a du-smooth-scroll="switches" href="">Switches</a>
             </li>
+            <li>
+              <a du-smooth-scroll="writing" href="">Writing</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -109,7 +112,7 @@
             <div class="form-group has-error">
               <label>Text label</label>
               <input class="form-control" type="text" value="I was entered in error!">
-              <span class="help-block text-error">Please enter a valid name.</span>
+              <span class="help-block text-error">Enter a valid email address.</span>
             </div>
           </figure>
 
@@ -128,8 +131,8 @@
     <div class="col-md-3">
       <p>We have three sizes of input fields: small, default and large. Use the default size for all fields except when:</p>
       <ul>
-        <li>You have a very crowded form (20+ fields), in which case consider using small input fields</li>
-        <li>You have only a few fields (&lt;10), in which case consider using large input fields; an example of this is a Sign In screen</li>
+        <li>You have a very crowded form (20+ fields), in which case consider using small input fields; these are also suitable for use in tables or space-challenged forms</li>
+        <li>You have only a few fields (&lt;10), in which case consider using large input fields; an example of this is a Sign In screen or is an input field of central importance, such as a Search field</li>
       </ul>
 
       <p>Once you&rsquo;ve selected an input field size, use it consistently throughout your product. The exceptions to this rule are pages that are outside of your product&rsquo;s flow (such as Sign In or Sign Up), which should use the large size.</p>
@@ -376,37 +379,6 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Writing Field Copy</h2>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-8">
-
-      <p>When writing your labels and in-field prompt copy, it&rsquo;s important to stay consistent across your entire product. Here are some basic guidelines for how to write these critical pieces of user interface copy.</p>
-
-      <h3>Style</h3>
-      <ul>
-        <li>Use short, active words and phrases.</li>
-        <li>Structure copy to avoid ambiguity in language.</li>
-        <li>To avoid confusing users, use consistent terminology.</li>
-      </ul>
-
-      <h3>Capitalization</h3>
-      <ul>
-        <li>Use sentence capitalization, except when copy includes words or phrases that are acronyms or proper nouns (e.g., &ldquo;RMA number,&rdquo; &ldquo;Cost Account,&rdquo; &ldquo;ZIP Code&rdquo;).</li>
-      </ul>
-
-      <h3>Punctuation</h3>
-      <ul>
-        <li>Don&rsquo;t conclude copy with punctuation, such as periods or colons.</li>
-        <li>Don’t phrase your copy as questions.</li>
-      </ul>
-
-    </div>
-  </div>
 
   <div class="row">
     <div class="col-md-8">
@@ -462,7 +434,7 @@
           </figure>
 
           <figure>
-            <figcaption>Default Dropdown, Focused</figcaption>
+            <figcaption>Default Dropdown (Focused)</figcaption>
             <div class="form-group">
               <label>Text label</label>
               <select class="form-control focus" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
@@ -485,7 +457,7 @@
           </figure>
 
           <figure>
-            <figcaption>Default Dropdown, with Error</figcaption>
+            <figcaption>Default Dropdown (Error)</figcaption>
             <div class="form-group has-error">
               <label>Text label</label>
               <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
@@ -638,7 +610,7 @@
       <div class="row">
         <div class="col-md-10">
           <figure>
-            <figcaption>Single Select With Type-Ahead</figcaption>
+            <figcaption>Single-Select with Type-Ahead</figcaption>
             <div class="form-group">
               <label>Text label</label>
               <ui-select ng-model="inputs.countrySelect.singleSelected" theme="bootstrap">
@@ -651,7 +623,7 @@
           </figure>
 
           <figure>
-            <figcaption>Multi-Select With Tokens</figcaption>
+            <figcaption>Multi-Select with Tokens</figcaption>
             <div class="form-group">
               <label>Text label</label>
               <ui-select ng-model="inputs.countrySelect.multipleSelected" theme="bootstrap" multiple >
@@ -682,36 +654,6 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Writing Dropdown Copy</h2>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-8">
-      <p class="doc-lede">When writing labels and menu items for dropdowns, it’s important to stay consistent across your entire product. Here are some basic guidelines for how to write these critical pieces of user interface copy.</p>
-
-      <h3>Style</h3>
-      <ul>
-        <li>Use short, active words and phrases.</li>
-        <li>Structure copy to avoid ambiguity in language.</li>
-        <li>To avoid confusing users, use consistent terminology.</li>
-      </ul>
-
-      <h3>Capitalization</h3>
-      <ul>
-        <li>Labels use sentence capitalization, except when copy includes words or phrases that are acronyms or proper nouns, which should be capitalized.</li>
-        <li>Menu items use title capitalization, because they behave like buttons.</li>
-      </ul>
-
-      <h3>Punctuation</h3>
-      <ul>
-        <li>Don’t conclude copy with punctuation, such as periods or colons.</li>
-        <li>Don’t phrase your copy as questions.</li>
-      </ul>
-    </div>
-  </div>
 
   <div class="row">
     <div class="col-md-8">
@@ -821,41 +763,6 @@
           </div>
         </div>
       </figure>
-    </div>
-  </div>
-
-  <div class="row ">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Writing Checkbox Labels</h2>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-8">
-
-      <p>When writing your labels, be descriptive enough so users understand what checking the box will do, but try to avoid very long labels. One way to do this is by introducing the checkboxes with a descriptive piece of copy that lends context to the checkboxes’ purpose.</p>
-
-      <p>Here are some basic guidelines for how to write these critical pieces of user interface copy.</p>
-
-      <h3>Style</h3>
-      <ul>
-        <li>Use short, active words and phrases.</li>
-        <li>Structure labels to avoid ambiguity in language.</li>
-        <li>Use consistent terminology.</li>
-        <li>Use the same style and structure for all your labels.</li>
-      </ul>
-
-      <h3>Capitalization</h3>
-      <ul>
-        <li>Checkbox labels use sentence capitalization, except when they include words or phrases that are acronyms or proper nouns (e.g., &ldquo;RMA number,&rdquo; &ldquo;Cost Account,&rdquo; &ldquo;ZIP Code&rdquo;).</li>
-      </ul>
-
-      <h3>Punctuation</h3>
-      <ul>
-        <li>Don&rsquo;t conclude labels with punctuation, such as periods or colons.</li>
-        <li>Don&rsquo;t phrase your labels as questions.</li>
-      </ul>
-
     </div>
   </div>
 
@@ -983,41 +890,6 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Writing Radio Button Labels</h2>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-8">
-
-      <p>When writing your labels, be descriptive enough so users understand what selecting a button will do, but try to avoid very long labels. One way to do this is by introducing the set of buttons with a descriptive sentence or two that lends context to their purpose.</p>
-
-      <p>Here are some basic guidelines for how to write these critical pieces of user interface copy.</p>
-
-      <h3>Style</h3>
-      <ul>
-        <li>Use short, active words and phrases.</li>
-        <li>Structure labels to avoid ambiguity in language.</li>
-        <li>Use consistent terminology.</li>
-        <li>Use the same style and structure for all your labels.
-        </li>
-      </ul>
-
-      <h3>Capitalization</h3>
-      <ul>
-        <li>Radio button labels use sentence capitalization, except when they include words or phrases that are acronyms or proper nouns (e.g., &ldquo;RMA number,&rdquo; &ldquo;Cost Account,&rdquo; &ldquo;ZIP Code&rdquo;).</li>
-      </ul>
-
-      <h3>Punctuation</h3>
-      <ul>
-        <li>Don&rsquo;t conclude your labels with punctuation, such as periods or colons.</li>
-        <li>Don&rsquo;t phrase your labels as questions.</li>
-      </ul>
-
-    </div>
-  </div>
 
   <div class="row">
     <div class="col-md-8">
@@ -1051,36 +923,6 @@
       </div>
     </div>
   </div>
-<!--
-
-<div class="row">
-  <div class="col-md-12">
-    <h2 class="doc-sectionhead">Range slider</h2>
-  </div>
-</div>
-
-
-<div class="row">
-  <div class="col-md-3">
-    <p class="post-it">copy? Should we ditch this control?</p>
-    <p class="more-info">
-      <a href="http://danielcrisp.github.io/angular-rangeslider/" target="_blank">More Info
-        <i class="fa fa-external-link"></i>
-      </a>
-    </p>
-  </div>
-
-  <div class="col-md-6">
-    <figure>
-      <figcaption>Range Slider</figcaption>
-      <div max="100" min="0" model-max="60" model-min="30" range-slider></div>
-    </figure>
-  </div>
-</div>
- -->
-
-
-
 
 
  <!-- DATE PICKER -->
@@ -1098,7 +940,7 @@
 
  <div class="row">
    <div class="col-md-6">
-     <p>Never present the user with a blank menu. In most cases you should pre-populated the picker&rsquo;s input field with the current day&rsquo;s date (in your user&rsquo;s time zone).</p>
+     <p>Never present the user with a blank menu. In most cases you should pre-populate the picker&rsquo;s input field with the current day&rsquo;s date (in your user&rsquo;s time zone).</p>
    </div>
  </div>
 
@@ -1250,7 +1092,7 @@
 
         <div class="col-md-5">
           <figure>
-            <figcaption>Default Switch Disabled</figcaption>
+            <figcaption>Default Switch (Disabled)</figcaption>
             <div class="form-group">
               <label>Text label</label>
               <div is-disabled="disabled" model="inputs.switchStatus2" toggle-switch>&nbsp;</div>
@@ -1259,6 +1101,46 @@
         </div>
       </div>
 
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 class="doc-head" id="writing">Writing for UI Controls</h1>
+      <p class="lede">When writing your labels, dropdown menu items and in-field prompt copy it&rsquo;s important to stay consistent across your entire product. Here are some basic guidelines for how to write these critical pieces of user interface copy.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Style</h3>
+      <ul>
+        <li>Use short, active words and phrases.</li>
+        <li>Structure copy to avoid ambiguity in language.</li>
+        <li>Use the same style and structure for all your labels.</li>
+        <li>To avoid confusing users, use consistent terminology.</li>
+        <li>Introduce a group of controls with copy that clearly defines its purpose.</li>
+      </ul>
+
+      <h3>Capitalization</h3>
+      <ul>
+        <li>Labels use sentence capitalization, except when copy includes words or phrases that are acronyms or proper nouns, which should be capitalized.</li>
+        <li>Dropdown menu items use title capitalization because they behave like buttons.</li>
+      </ul>
+
+      <h3>Punctuation</h3>
+      <ul>
+        <li>Don&rsquo;t conclude copy with punctuation, such as periods or colons.</li>
+        <li>Don&rsquo;t phrase your copy as questions.</li>
+      </ul>
+
+      <h3>Error Text Length</h3>
+      <ul>
+        <li>Error text length should be similar in length to the input field associated with it.</li>
+        <li>If your error text needs to be longer than its companion field, consider wrapping/flowing it &mdash; bearing in mind that 3-6 columns in width is optimal.</li>
+      </ul>
     </div>
   </div>
 
