@@ -3116,8 +3116,7 @@ table[timepicker] tbody tr td {
 .custom-daterange .custom-daterange-container {
   border: 1px solid #9b9b9b;
   border-left: 0;
-  padding: 6px 0;
-  display: inline-block; }
+  padding: 6px 0; }
   .custom-daterange .custom-daterange-container .custom-daterange-labels {
     padding-right: 12px;
     padding-left: 12px; }
