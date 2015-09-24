@@ -362,6 +362,38 @@
 
       <div class="row">
         <div class="col-md-5">
+
+          <figure>
+            <figcaption>Text Field Appended with Button</figcaption>
+            <div class="form-group">
+              <label for="">Text label</label>
+              <div class="input-group">
+                <input class="form-control" placeholder="Product name" type="text">
+                <div class="input-group-btn">
+                  <button class="btn btn-pr" type="button">Action</button>
+                </div>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Text Field Appended with Button</figcaption>
+            <div class="form-group">
+              <label for="">Text label</label>
+              <div class="input-group">
+                <input class="form-control" placeholder="Product name" type="text">
+                <div class="input-group-btn">
+                  <button class="btn btn-default" type="button">Action</button>
+                </div>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-5">
           <figure>
             <figcaption>Custom Prepended Checkbox Control</figcaption>
             <div class="form-group">
@@ -374,6 +406,7 @@
             </div>
           </figure>
         </div>
+        <div class="col-md-5"></div>
       </div>
 
     </div>
@@ -425,8 +458,8 @@
         <div class="col-md-5">
           <figure>
             <figcaption>Default Dropdown</figcaption>
-            <div class="form-group">
               <label>Text label</label>
+            <div class="form-group">
               <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
                 <option value="">Select</option>
               </select>
