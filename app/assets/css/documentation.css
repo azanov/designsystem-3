@@ -322,10 +322,10 @@ small,
   color: #3e53a4; }
 
 .text-warning {
-  color: #be5200; }
+  color: #be5000; }
 
 .text-danger, .text-error {
-  color: #e70600; }
+  color: #dc0000; }
 
 .home div[class^="hero-"] {
   display: -webkit-flex;
@@ -718,13 +718,13 @@ h2.table-header.specifications {
   background-color: #008500; }
 
 .brand-danger {
-  background-color: #e70600; }
+  background-color: #dc0000; }
 
 .brand-info {
   background-color: #3e53a4; }
 
 .brand-warning {
-  background-color: #be5200; }
+  background-color: #be5000; }
 
 .chart-green {
   background-color: #00a740; }
@@ -819,9 +819,9 @@ h2.table-header.specifications {
 .status.status-success {
   color: #3e53a4; }
 .status.status-error {
-  color: #e70600; }
+  color: #dc0000; }
 .status.status-warning {
-  color: #be5200; }
+  color: #be5000; }
 
 .preview-example {
   background-color: #fff;

@@ -34,7 +34,7 @@ $pb-dark-green-700:      #008500;
 $pb-dark-green:          $pb-dark-green-500;
 $pb-dark-orange-300:     #f5a466;
 $pb-dark-orange-500:     #ee6700;
-$pb-dark-orange-700:     #be5200;
+$pb-dark-orange-700:     #be5000;
 $pb-dark-orange:         $pb-dark-orange-500;
 
 //Use this color palette for auxiliary colors
@@ -67,7 +67,7 @@ $pb-bg3:                 #eaedf8; //row hover states
 $pb-bg4:                 #e4e6fa; //summary tables, vertical dividers
 $pb-bg5:                 #c5cbe3; //data cell borders
 
-$pb-error-red:           #e70600;
+$pb-error-red:           #dc0000;
 
 // bootstrap functional colors
 $brand-primary:          $pb-blue;
@@ -531,16 +531,16 @@ $jumbotron-font-size: ceil(($font-size-base * 1.5));
 //## Define colors for form feedback states and, by default, alerts.
 
 $state-success-text: $brand-success;
-$state-success-bg: #E5F7EB;
+$state-success-bg: #f2f9f2;
 $state-success-border: #9FE1B7;
 $state-info-text: $brand-info;
 $state-info-bg: #EBEDF5;
 $state-info-border: #C5CBE3;
 $state-warning-text: $brand-warning;
-$state-warning-bg: #f8f0e5;
+$state-warning-bg: #fcf6f2;
 $state-warning-border: #f2e1cc;
 $state-danger-text: $brand-danger;
-$state-danger-bg: rgba(251, 229, 229, 100);
+$state-danger-bg: #fef2f2;
 $state-danger-border: rgba(244, 183, 183, 100);
 
 
