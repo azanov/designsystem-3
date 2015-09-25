@@ -28,10 +28,19 @@
     })
 
     .state('patterns.welcome', {
-      url: '/patterns/welcome',
+      url: '/welcome',
       templateUrl: 'modules/patterns/templates/welcome-landing.html',
       controller: 'WelcomeController as welcome'
     })
+
+    .state('patterns.splitview', {
+      url: '/splitview',
+      templateUrl: 'modules/patterns/templates/splitview.html',
+      controller: 'SplitviewController as split'
+    })
+
+
+
 
     .state('patterns.signinup', {
       url: '/patterns/signinup',
@@ -136,6 +145,10 @@
       templateUrl: 'modules/patterns/templates/404.html',
       controller: '404Controller'
     });
+
+
+
+
 
 
 
