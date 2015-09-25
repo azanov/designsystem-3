@@ -192,11 +192,31 @@
           'Month to date': [moment().startOf('month'), moment()],
           'Year to date': [moment().startOf('year'), moment()]
         }
+      }
+    };
+
+
+    _this.daterangepicker3 = {
+      date: {
+        startDate: moment().startOf('day'),
+        endDate: moment().endOf('day')
+      },
+      options: {
+        singleDatePicker: false,
+        format: 'MM/DD/YYYY',
+        opens: 'center',
+        autoApply: true,
+        ranges: {
+          Today: [moment(), moment()],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Month to date': [moment().startOf('month'), moment()],
+          'Year to date': [moment().startOf('year'), moment()]
+        }
       },
       displayDate: function(start, end) {
 
-        var startDate = start || _this.table.daterangepicker.date.startDate;
-        var endDate = end || _this.table.daterangepicker.date.endDate;
+        var startDate = start || _this.daterangepicker3.date.startDate;
+        var endDate = end || _this.daterangepicker3.date.endDate;
 
         var dateDiff = endDate.diff(startDate, 'days');
         var result = '';
@@ -238,7 +258,7 @@
           isCustom: false
         },
         {
-          label: 'Last Week',
+          label: 'Last 7 Days',
           start: moment().startOf('day').subtract(7, 'days'),
           end: moment().endOf('day'),
           selected: false,
