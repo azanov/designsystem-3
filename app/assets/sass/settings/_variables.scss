@@ -202,8 +202,12 @@ $table-bg-accent: #f9f9f9;
 $table-border-color: #C5CBE3;
 $table-vertical-cell-dividers: #EAEDF8;
 //** Background color used for `.table-hover`.
-$table-bg-hover:$pb-bg4;
+$table-bg-hover:$pb-bg3;
 $table-bg-active: $pb-bg5;
+
+$table-text-color: $pb-gray-700;    //td
+$table-header-text-color: $pb-gray-500;    //th
+$table-header-background-color: $pb-bg2;
 
 
 
