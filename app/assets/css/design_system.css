@@ -1729,6 +1729,9 @@ fieldset[disabled] .btn {
 ::-ms-clear {
   display: none; }
 
+select::-ms-expand {
+  display: none; }
+
 label {
   font-weight: normal; }
   label .optional {
@@ -3633,6 +3636,7 @@ th {
     border: 1px solid #C5CBE3; }
   .table > tbody > tr > td,
   .table > tfoot > tr > td {
+    color: #2e2e2e;
     border-right: 1px solid #EAEDF8; }
     .table > tbody > tr > td:last-child,
     .table > tfoot > tr > td:last-child {
@@ -3641,7 +3645,7 @@ th {
     vertical-align: bottom;
     background-color: #f8f8f8;
     font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif;
-    color: #2e2e2e;
+    color: #4e4e4e;
     font-weight: normal;
     border-bottom: 1px solid #C5CBE3; }
   .table > caption + thead > tr:first-child > th,
@@ -3694,6 +3698,9 @@ th.centered {
 .table-condensed > tfoot > tr > th,
 .table-condensed > tfoot > tr > td {
   padding: 5px; }
+
+.table-hover > tbody > tr:hover {
+  background-color: #eaedf8; }
 
 .table-condensed-extra {
   font-size: 13px; }

@@ -23,6 +23,11 @@
   display: none;
 }
 
+//removes native droparrows from select menus in IE11
+select::-ms-expand {
+    display: none;
+}
+
 
 label {
   font-weight: normal;
