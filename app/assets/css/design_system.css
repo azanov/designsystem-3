@@ -4728,6 +4728,18 @@ th.centered {
     margin-bottom: 0; }
   .splitview .leftnav .list-group-section .list-group {
     margin-bottom: 10px; }
+  .splitview .leftnav .nav-list {
+    padding: 10px 15px; }
+    .splitview .leftnav .nav-list .nav-header {
+      font-size: 16px;
+      margin-bottom: 0; }
+    .splitview .leftnav .nav-list a {
+      font-size: 14px;
+      color: #2e2e2e; }
+      .splitview .leftnav .nav-list a:hover {
+        background-color: #eaedf8; }
+      .splitview .leftnav .nav-list a:active, .splitview .leftnav .nav-list a.active {
+        background-color: #c5cbe3; }
 
 .framed {
   border: 1px solid #e1e1e1; }

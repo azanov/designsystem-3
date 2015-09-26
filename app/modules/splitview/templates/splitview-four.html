@@ -2,25 +2,16 @@
   <div class="row two-col-wrapper">
     <div class="col-md-2 leftnav leftnav-white">
 
-    <div class="list-group-section">
-        <h3>Section One</h3>
-        <div class="list-group">
-        <a class="list-group-item active" href="">Validate Address</a>
-        <a class="list-group-item" href="">Get Postal Codes</a>
-        <a class="list-group-item" href="">Get City/State/Province</a>
 
-      </div>
-    </div>
 
     <ul class="nav nav-list">
-      <li ng-repeat="n in splitview.sidebar"><label class="tree-toggle nav-header">{{n.label}}</label>
-        <ul class="nav nav-list tree">
-<li>doppppp</li>
+      <li ng-repeat="n in splitview.leftnav">
+        <label class="tree-toggle nav-header"><a href="" ng-click="showDetails = ! showDetails">{{n.label}}</a></label>
+        <ul class="nav nav-list tree" ng-show="showDetails">
+          <li ng-repeat="s in n.children"><a href="">{{s.label}}</a></li>
         </ul>
       </li>
     </ul>
-
-
 
     </div>
     <div class="col-md-10 main-content">

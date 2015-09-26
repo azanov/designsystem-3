@@ -9,7 +9,7 @@
       controller: 'SplitviewController as splitview',
       resolve: {
         NavigationResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'navigation'});
+          return MockDataFactory.query({filename: 'dummynav'});
         }
       },
       data: {
@@ -30,6 +30,30 @@
     .state('splitview-two', {
       url: '/splitview/two',
       templateUrl: 'modules/splitview/templates/splitview-two.html',
+      data: {
+        pageTitle: 'Split Views',
+        access: 'public',
+        bodyClass: 'splitview'
+      }
+    })
+    .state('splitview-three', {
+      url: '/splitview/three',
+      templateUrl: 'modules/splitview/templates/splitview-three.html',
+      data: {
+        pageTitle: 'Split Views',
+        access: 'public',
+        bodyClass: 'splitview'
+      }
+    })
+    .state('splitview-four', {
+      url: '/splitview/four',
+      templateUrl: 'modules/splitview/templates/splitview-four.html',
+      controller: 'SplitviewController as splitview',
+      resolve: {
+        DummyNavResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'dummynav'});
+        }
+      },
       data: {
         pageTitle: 'Split Views',
         access: 'public',
