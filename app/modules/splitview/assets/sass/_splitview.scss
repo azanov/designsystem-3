@@ -1,0 +1,50 @@
+.splitview {
+  .two-col-wrapper {
+    height: 100%;
+    .main-content {
+      padding-top: 90px;
+    }
+  }
+
+  .leftnav {
+    padding: 90px 0 0;
+    height: 100vh;
+    &-gray {
+      background-color: $pb-bg2;
+      border-left: 1px solid #e8e8e8;
+      border-right: 1px solid #e8e8e8;
+    }
+    &-white {
+      background-color: #fff;
+      border-left: 1px solid #e8e8e8;
+      border-right: 1px solid #e8e8e8;
+    }
+    a {
+      font-size: 14px;
+      color: $pb-gray-700;
+      &:hover {
+        background-color: $bg-hover;
+      }
+      &:active,
+      &.active {
+        background-color: $bg-active;
+      }
+    }
+  }
+
+  .sectionhead {
+    border-bottom: 1px solid $pb-light-gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+
+    h2 {
+      border-bottom: 1px solid $pb-light-gray;
+    }
+  }
+}
+
+.framed {
+  border: 1px solid $pb-light-gray;
+}

@@ -1323,11 +1323,13 @@ div.accordion-group .panel.active .panel-title:before {
 .breadcrumb {
   padding: 0;
   background-color: transparent;
-  margin: 40px 0 0;
+  margin-bottom: 5px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px; }
   .breadcrumb + h1 {
     margin-top: 0; }
+  .breadcrumb .active {
+    color: #c0c0c0; }
 
 .btn-primary {
   color: #fff;
@@ -1824,7 +1826,7 @@ a.list-group-item {
       -ms-flex-align: baseline;
           align-items: baseline; }
   .enhanced-inline div {
-    margin-right: 10px; }
+    margin-right: 20px; }
     .enhanced-inline div:last-child {
       margin-right: 0; }
 
@@ -2037,16 +2039,17 @@ a.list-group-item {
   font-size: 16px;
   border: 0;
   border-radius: 0;
-  transition: background-color .3s, color .2s; }
+  transition: background-color .3s, color .2s;
+  background-color: transparent; }
   a.list-group-item:hover {
     color: #005a93;
-    background-color: #e1e1e1; }
+    background-color: #eaedf8; }
   a.list-group-item:first-child {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
   a.list-group-item.active {
-    background-color: #e1e1e1;
-    border-color: #e1e1e1;
+    background-color: #c5cbe3;
+    border-color: #c5cbe3;
     color: #0072b8; }
     a.list-group-item.active:hover, a.list-group-item.active:focus {
       background-color: #e1e1e1;
@@ -4683,6 +4686,46 @@ th.centered {
   margin-top: 50px; }
 .landing h3 {
   color: #2e2e2e; }
+
+.splitview .two-col-wrapper {
+  height: 100%; }
+  .splitview .two-col-wrapper .main-content {
+    padding-top: 90px; }
+.splitview .leftnav {
+  padding: 90px 0 0;
+  height: 100vh; }
+  .splitview .leftnav-gray {
+    background-color: #f8f8f8;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8; }
+  .splitview .leftnav-white {
+    background-color: #fff;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8; }
+  .splitview .leftnav a {
+    font-size: 14px;
+    color: #2e2e2e; }
+    .splitview .leftnav a:hover {
+      background-color: #eaedf8; }
+    .splitview .leftnav a:active, .splitview .leftnav a.active {
+      background-color: #c5cbe3; }
+.splitview .sectionhead {
+  border-bottom: 1px solid #e1e1e1;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 10px; }
+  .splitview .sectionhead h2 {
+    border-bottom: 1px solid #e1e1e1; }
+
+.framed {
+  border: 1px solid #e1e1e1; }
 
 
 
