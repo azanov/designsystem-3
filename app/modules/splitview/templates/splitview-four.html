@@ -1,22 +1,34 @@
 <div class="container">
   <div class="row two-col-wrapper">
-    <div class="col-md-2 leftnav leftnav-gray">
-      <div class="list-group">
+    <div class="col-md-2 leftnav leftnav-white">
+
+    <div class="list-group-section">
+        <h3>Section One</h3>
+        <div class="list-group">
         <a class="list-group-item active" href="">Validate Address</a>
         <a class="list-group-item" href="">Get Postal Codes</a>
         <a class="list-group-item" href="">Get City/State/Province</a>
-        <a class="list-group-item" href="">Get Candidate Address</a>
-        <a class="list-group-item" href="">Auto Complete</a>
+
       </div>
+    </div>
+
+    <ul class="nav nav-list">
+      <li ng-repeat="n in splitview.sidebar"><label class="tree-toggle nav-header">{{n.label}}</label>
+        <ul class="nav nav-list tree">
+<li>doppppp</li>
+        </ul>
+      </li>
+    </ul>
+
+
+
     </div>
     <div class="col-md-10 main-content">
       <div class="row">
         <div class="col-md-12">
           <div class="breadcrumb">
-            <a href="">Home</a>
-            &gt;
-            <a href="">Services/Universal Addressing</a>
-            &gt; Validate Address</div>
+            <a href="">Home</a>&nbsp;&gt;&nbsp;<a href="">Services/Universal Addressing</a>&nbsp;&gt;&nbsp;Validate Address</div>
+
           <h1>Validate Address</h1>
 
           <div class="enhanced-inline">

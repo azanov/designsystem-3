@@ -16,7 +16,7 @@
   .leftnav {
     padding: 90px 0 0;
     min-height: 100%;
-    margin:  0 60px 0 0;
+    margin:  0 30px 0 0;
 
     &-gray {
       background-color: $pb-bg2;
@@ -39,19 +39,32 @@
         background-color: $bg-active;
       }
     }
-  }
 
-  .sectionhead {
-    border-bottom: 1px solid $pb-light-gray;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 10px;
-
-    h2 {
-      border-bottom: 1px solid $pb-light-gray;
+    .list-group-section {
+      &:not(:first-child) {
+        border-top: 1px solid #e8e8e8;
+      }
+      &:last-child {
+        border-bottom: 1px solid #e8e8e8;
+      }
+      h3 {
+        font-size: 16px;
+        padding: 10px 15px;
+        margin-bottom: 0;
+      }
+      .list-group {
+        margin-bottom: 10px;
+      }
     }
+
+
+
+
   }
+
+
+
+
 }
 
 .framed {

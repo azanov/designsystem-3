@@ -4702,7 +4702,7 @@ th.centered {
 .splitview .leftnav {
   padding: 90px 0 0;
   min-height: 100%;
-  margin: 0 60px 0 0; }
+  margin: 0 30px 0 0; }
   .splitview .leftnav-gray {
     background-color: #f8f8f8;
     border-left: 1px solid #e8e8e8;
@@ -4718,20 +4718,16 @@ th.centered {
       background-color: #eaedf8; }
     .splitview .leftnav a:active, .splitview .leftnav a.active {
       background-color: #c5cbe3; }
-.splitview .sectionhead {
-  border-bottom: 1px solid #e1e1e1;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-bottom: 10px; }
-  .splitview .sectionhead h2 {
-    border-bottom: 1px solid #e1e1e1; }
+  .splitview .leftnav .list-group-section:not(:first-child) {
+    border-top: 1px solid #e8e8e8; }
+  .splitview .leftnav .list-group-section:last-child {
+    border-bottom: 1px solid #e8e8e8; }
+  .splitview .leftnav .list-group-section h3 {
+    font-size: 16px;
+    padding: 10px 15px;
+    margin-bottom: 0; }
+  .splitview .leftnav .list-group-section .list-group {
+    margin-bottom: 10px; }
 
 .framed {
   border: 1px solid #e1e1e1; }
