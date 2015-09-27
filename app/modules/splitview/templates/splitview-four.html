@@ -5,10 +5,11 @@
 
 
     <ul class="nav nav-list">
-      <li ng-repeat="n in splitview.leftnav" ng-class="{ 'open': showDetails }">
-        <label class="tree-toggle nav-header">
-          <a href="" ng-click="showDetails = ! showDetails">{{n.label}} <i class="fa fa-chevron-right"></i></a>
+      <li ng-repeat="n in splitview.leftnav" ng-class="{ 'open': showDetails }"  class="nav-header">
+        <label class="tree-toggle">
+          <a href="" ng-click="showDetails = ! showDetails">{{n.label}}</a>
         </label>
+        <i class="fa fa-chevron-right"></i>
 
         <ul class="nav nav-list tree" ng-show="showDetails">
           <li ng-repeat="s in n.children"><a href="">{{s.label}}</a></li>

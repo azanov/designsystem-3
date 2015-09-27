@@ -64,13 +64,23 @@
       .nav-header {
         font-size: 16px;
         margin-bottom: 0;
+
+        i {
+          float: right;
+        }
+
+        &.open {
+          i {
+            transform: rotate(90deg);
+          }
+        }
+
         a {
           font-size: inherit;
           display: block;
-        i {
-          color: red;
-          float: right;
-        }
+          &:hover {
+            text-decoration: none;
+          }
         }
 
       }
