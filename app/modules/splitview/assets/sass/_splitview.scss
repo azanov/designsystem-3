@@ -56,16 +56,28 @@
         margin-bottom: 10px;
       }
     }
+
+    // collapsible ones
     .nav-list {
         padding: 10px 15px;
 
       .nav-header {
         font-size: 16px;
         margin-bottom: 0;
+        a {
+          font-size: inherit;
+          display: block;
+        i {
+          color: red;
+          float: right;
+        }
+        }
+
       }
       a {
         font-size: 14px;
         color: $pb-gray-700;
+        display: block;
         &:hover {
           background-color: $bg-hover;
         }

@@ -4733,9 +4733,16 @@ th.centered {
     .splitview .leftnav .nav-list .nav-header {
       font-size: 16px;
       margin-bottom: 0; }
+      .splitview .leftnav .nav-list .nav-header a {
+        font-size: inherit;
+        display: block; }
+        .splitview .leftnav .nav-list .nav-header a i {
+          color: red;
+          float: right; }
     .splitview .leftnav .nav-list a {
       font-size: 14px;
-      color: #2e2e2e; }
+      color: #2e2e2e;
+      display: block; }
       .splitview .leftnav .nav-list a:hover {
         background-color: #eaedf8; }
       .splitview .leftnav .nav-list a:active, .splitview .leftnav .nav-list a.active {
