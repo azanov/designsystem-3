@@ -1,0 +1,120 @@
+<div class="container">
+  <div class="row two-col-wrapper">
+    <div class="col-md-2 leftnav leftnav-white">
+
+
+
+    <ul class="nav nav-list">
+      <li ng-repeat="n in splitview.leftnav" ng-class="{ 'open': showDetails }"  class="nav-header">
+        <label class="tree-toggle" ng-click="showDetails = ! showDetails">
+          {{n.label}}
+        </label>
+        <i class="fa fa-chevron-right"></i>
+
+        <ul class="nav nav-list tree" ng-show="showDetails">
+          <li ng-repeat="s in n.children"><a href="" ui-sref-active="active">{{s.label}}</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    </div>
+    <div class="col-md-10 main-content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="breadcrumb">
+            <a href="">Home</a>&nbsp;&gt;&nbsp;<a href="">Services/Universal Addressing</a>&nbsp;&gt;&nbsp;Validate Address</div>
+
+          <h1>Validate Address</h1>
+
+          <div class="enhanced-inline">
+            <label style="margin-right:20px;">Remote Routing</label>
+            <div class="radio radio-enhanced">
+              <input checked id="radioA" name="radioOptionsInline" type="radio">
+              <label for="radioA">Local</label>
+            </div>
+            <div class="radio radio-enhanced">
+              <input id="radioB" name="radioOptionsInline" type="radio">
+              <label for="radioB">Server One
+              </label>
+            </div>
+            <div class="radio radio-enhanced disabled">
+              <input disabled id="radioC" name="radioOptionsInline" type="radio">
+              <label for="radioC">Server Two
+              </label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row spacer-top-lg">
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              USA
+            </div>
+            <div class="panel-body">
+              <form>
+                <div class="form-group">
+                  <label for="item1">Item 1</label>
+                  <input class="form-control" id="item1" placeholder="" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="item2">Item 2</label>
+                  <input class="form-control" id="item2" placeholder="" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="item3">Item 3</label>
+                  <input class="form-control" id="item3" placeholder="" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="item4">Remote Routing</label>
+                  <select class="form-control" name="item4"></select>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              Australia
+            </div>
+            <div class="panel-body">
+              <form>
+                <div class="form-group">
+                  <label for="item1a">Item 1</label>
+                  <input class="form-control" id="item1a" placeholder="" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="item2a">Item 2</label>
+                  <input class="form-control" id="item2a" placeholder="" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="item3a">Item 3</label>
+                  <input class="form-control" id="item3a" placeholder="" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="item4">Remote Routing</label>
+                  <select class="form-control" name="item4"></select>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <button class="btn btn-primary">Save</button>&nbsp;&nbsp;
+          <button class="btn btn-default">Cancel</button></div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

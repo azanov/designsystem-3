@@ -21,7 +21,8 @@
     'pb.ds.resources',
     'pb.ds.tables',
     'pb.ds.writing',
-    'pb.settings'
+    'pb.settings',
+    'pb.ds.splitview'
   ]);
 
   //angular scroll configuration

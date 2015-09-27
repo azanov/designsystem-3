@@ -81,6 +81,8 @@ $gradient1:              linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96
 $gradient2:              linear-gradient(90deg, $pb-blue 0%, $pb-cyan-700 100%);
 
 
+$bg-hover:$pb-bg3;
+$bg-active: $pb-bg5;
 
 
 // legacy color names
@@ -202,8 +204,8 @@ $table-bg-accent: #f9f9f9;
 $table-border-color: #C5CBE3;
 $table-vertical-cell-dividers: #EAEDF8;
 //** Background color used for `.table-hover`.
-$table-bg-hover:$pb-bg3;
-$table-bg-active: $pb-bg5;
+$table-bg-hover: $bg-hover;
+$table-bg-active: $bg-active;
 
 $table-text-color: $pb-gray-700;    //td
 $table-header-text-color: $pb-gray-500;    //th

@@ -1,0 +1,131 @@
+// scss-lint:disable SelectorDepth
+
+.splitview {
+  footer {
+    margin: 0;
+  }
+  .two-col-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: stretch;
+    .main-content {
+      padding-top: 90px;
+    }
+  }
+
+
+
+  .leftnav {
+    padding: 90px 0 0;
+    min-height: 100%;
+    margin: 0 30px 0 0;
+
+    &-gray {
+      background-color: $pb-bg2;
+      border-left: 1px solid #e8e8e8;
+      border-right: 1px solid #e8e8e8;
+    }
+    &-white {
+      background-color: #fff;
+      border-left: 1px solid #e8e8e8;
+      border-right: 1px solid #e8e8e8;
+    }
+    a {
+      font-size: 14px;
+      color: $pb-gray-700;
+      &:hover {
+        background-color: $bg-hover;
+      }
+      &:active,
+      &.active {
+        background-color: $bg-active;
+      }
+    }
+
+    .list-group-section {
+      &:not(:first-child) {
+        border-top: 1px solid #e8e8e8;
+      }
+      &:last-child {
+        border-bottom: 1px solid #e8e8e8;
+      }
+      h3 {
+        font-size: 16px;
+        padding: 10px 15px;
+        margin-bottom: 0;
+      }
+      .list-group {
+        margin-bottom: 10px;
+      }
+    }
+
+    // collapsible ones
+    .nav-list {
+      .nav-header {
+        &:not(:first-child) {
+          border-top: 1px solid #e8e8e8;
+        }
+        &:last-child {
+          border-bottom: 1px solid #e8e8e8;
+          padding-bottom: 20px;
+        }
+        margin-bottom: 0;
+        margin-top: 20px;
+        padding-top: 10px;
+        label {
+          cursor: pointer;
+          font-family: $font-family-ps-regular;
+          font-size: 16px;
+          color: #2e2e2e;
+          padding-left: 10px;
+        }
+
+        i {
+          float: right;
+          margin-right: 10px;
+          margin-top: 2px;
+          color: #2e2e2e;
+          transition: transform .2s linear;
+        }
+
+        &.open {
+          i {
+            transform: rotate(90deg);
+            margin-right: 10px;
+          }
+        }
+
+        a {
+          font-size: inherit;
+          display: block;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+      .tree {
+        padding: 0;
+        li {
+          padding-left: 0;
+          a {
+            font-size: 14px;
+            padding: 10px;
+            color: $pb-gray-700;
+            display: block;
+            &:hover {
+              background-color: $bg-hover;
+            }
+            &:active,
+            &.active {
+              background-color: $bg-active;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.framed {
+  border: 1px solid $pb-light-gray;
+}

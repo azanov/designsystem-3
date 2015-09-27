@@ -1323,11 +1323,13 @@ div.accordion-group .panel.active .panel-title:before {
 .breadcrumb {
   padding: 0;
   background-color: transparent;
-  margin: 40px 0 0;
+  margin-bottom: 5px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px; }
   .breadcrumb + h1 {
     margin-top: 0; }
+  .breadcrumb .active {
+    color: #c0c0c0; }
 
 .btn-primary {
   color: #fff;
@@ -1824,7 +1826,7 @@ a.list-group-item {
       -ms-flex-align: baseline;
           align-items: baseline; }
   .enhanced-inline div {
-    margin-right: 10px; }
+    margin-right: 20px; }
     .enhanced-inline div:last-child {
       margin-right: 0; }
 
@@ -2037,16 +2039,17 @@ a.list-group-item {
   font-size: 16px;
   border: 0;
   border-radius: 0;
-  transition: background-color .3s, color .2s; }
+  transition: background-color .3s, color .2s;
+  background-color: transparent; }
   a.list-group-item:hover {
     color: #005a93;
-    background-color: #e1e1e1; }
+    background-color: #eaedf8; }
   a.list-group-item:first-child {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
   a.list-group-item.active {
-    background-color: #e1e1e1;
-    border-color: #e1e1e1;
+    background-color: #c5cbe3;
+    border-color: #c5cbe3;
     color: #0072b8; }
     a.list-group-item.active:hover, a.list-group-item.active:focus {
       background-color: #e1e1e1;
@@ -4683,6 +4686,95 @@ th.centered {
   margin-top: 50px; }
 .landing h3 {
   color: #2e2e2e; }
+
+.splitview footer {
+  margin: 0; }
+.splitview .two-col-wrapper {
+  min-height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+  .splitview .two-col-wrapper .main-content {
+    padding-top: 90px; }
+.splitview .leftnav {
+  padding: 90px 0 0;
+  min-height: 100%;
+  margin: 0 30px 0 0; }
+  .splitview .leftnav-gray {
+    background-color: #f8f8f8;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8; }
+  .splitview .leftnav-white {
+    background-color: #fff;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8; }
+  .splitview .leftnav a {
+    font-size: 14px;
+    color: #2e2e2e; }
+    .splitview .leftnav a:hover {
+      background-color: #eaedf8; }
+    .splitview .leftnav a:active, .splitview .leftnav a.active {
+      background-color: #c5cbe3; }
+  .splitview .leftnav .list-group-section:not(:first-child) {
+    border-top: 1px solid #e8e8e8; }
+  .splitview .leftnav .list-group-section:last-child {
+    border-bottom: 1px solid #e8e8e8; }
+  .splitview .leftnav .list-group-section h3 {
+    font-size: 16px;
+    padding: 10px 15px;
+    margin-bottom: 0; }
+  .splitview .leftnav .list-group-section .list-group {
+    margin-bottom: 10px; }
+  .splitview .leftnav .nav-list .nav-header {
+    margin-bottom: 0;
+    margin-top: 20px;
+    padding-top: 10px; }
+    .splitview .leftnav .nav-list .nav-header:not(:first-child) {
+      border-top: 1px solid #e8e8e8; }
+    .splitview .leftnav .nav-list .nav-header:last-child {
+      border-bottom: 1px solid #e8e8e8;
+      padding-bottom: 20px; }
+    .splitview .leftnav .nav-list .nav-header label {
+      cursor: pointer;
+      font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      color: #2e2e2e;
+      padding-left: 10px; }
+    .splitview .leftnav .nav-list .nav-header i {
+      float: right;
+      margin-right: 10px;
+      margin-top: 2px;
+      color: #2e2e2e;
+      transition: -webkit-transform .2s linear;
+      transition: transform .2s linear; }
+    .splitview .leftnav .nav-list .nav-header.open i {
+      -webkit-transform: rotate(90deg);
+              transform: rotate(90deg);
+      margin-right: 10px; }
+    .splitview .leftnav .nav-list .nav-header a {
+      font-size: inherit;
+      display: block; }
+      .splitview .leftnav .nav-list .nav-header a:hover {
+        text-decoration: none; }
+  .splitview .leftnav .nav-list .tree {
+    padding: 0; }
+    .splitview .leftnav .nav-list .tree li {
+      padding-left: 0; }
+      .splitview .leftnav .nav-list .tree li a {
+        font-size: 14px;
+        padding: 10px;
+        color: #2e2e2e;
+        display: block; }
+        .splitview .leftnav .nav-list .tree li a:hover {
+          background-color: #eaedf8; }
+        .splitview .leftnav .nav-list .tree li a:active, .splitview .leftnav .nav-list .tree li a.active {
+          background-color: #c5cbe3; }
+
+.framed {
+  border: 1px solid #e1e1e1; }
 
 
 
