@@ -1,3 +1,5 @@
+// scss-lint:disable SelectorDepth
+
 .splitview {
   footer {
     margin: 0;
@@ -16,7 +18,7 @@
   .leftnav {
     padding: 90px 0 0;
     min-height: 100%;
-    margin:  0 30px 0 0;
+    margin: 0 30px 0 0;
 
     &-gray {
       background-color: $pb-bg2;
@@ -59,19 +61,37 @@
 
     // collapsible ones
     .nav-list {
-        padding: 10px 15px;
-
       .nav-header {
-        font-size: 16px;
+        &:not(:first-child) {
+          border-top: 1px solid #e8e8e8;
+        }
+        &:last-child {
+          border-bottom: 1px solid #e8e8e8;
+          padding-bottom: 20px;
+        }
         margin-bottom: 0;
+        margin-top: 20px;
+        padding-top: 10px;
+        label {
+          cursor: pointer;
+          font-family: $font-family-ps-regular;
+          font-size: 16px;
+          color: #2e2e2e;
+          padding-left: 10px;
+        }
 
         i {
           float: right;
+          margin-right: 10px;
+          margin-top: 2px;
+          color: #2e2e2e;
+          transition: transform .2s linear;
         }
 
         &.open {
           i {
             transform: rotate(90deg);
+            margin-right: 10px;
           }
         }
 
@@ -82,30 +102,28 @@
             text-decoration: none;
           }
         }
-
       }
-      a {
-        font-size: 14px;
-        color: $pb-gray-700;
-        display: block;
-        &:hover {
-          background-color: $bg-hover;
-        }
-        &:active,
-        &.active {
-          background-color: $bg-active;
+      .tree {
+        padding: 0;
+        li {
+          padding-left: 0;
+          a {
+            font-size: 14px;
+            padding: 10px;
+            color: $pb-gray-700;
+            display: block;
+            &:hover {
+              background-color: $bg-hover;
+            }
+            &:active,
+            &.active {
+              background-color: $bg-active;
+            }
+          }
         }
       }
     }
-
-
-
-
   }
-
-
-
-
 }
 
 .framed {
