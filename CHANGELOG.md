@@ -1,13 +1,13 @@
 ##Release Notes
 
-###2.1.0 September 29, 2015
+###2.1.0 -- September 29, 2015
 - modal dialogs no longer need an inline close icon in the `modal-header`, remove the markup from the html indicated by the NO ICON HERE in the example below. The icon is added by the CSS with an SVG image to the button.
-	```html
-	<div class="modal-header">
-	  <button type="button" class="close" ng-click="close()"><!-- NO ICON HERE --><span aria-hidden="true"></span><span class="sr-only">Close</span></button>
-	  <h4 class="modal-title">Simple Dialog Box</h4>
-	</div>
-	```
+```html
+<div class="modal-header">
+  <button type="button" class="close" ng-click="close()"><!-- NO ICON HERE --><span aria-hidden="true"></span><span class="sr-only">Close</span></button>
+  <h4 class="modal-title">Simple Dialog Box</h4>
+</div>
+```
 - added daterange picker examples, revised styling with new hover/selected states
 - revised color values for accessibility
 - updated pb-font to latest verion
@@ -23,10 +23,17 @@
 - changed selectize menus to use ui-select plugin
 - added `::ms-expand` to remove extra arrow in IE dropdowns (fixes [#25](https://github.com/PBGUX/designsystem/issues/25))
 - fixed misaligned prepended inputs; fixes [#26](https://github.com/PBGUX/designsystem/issues/26)
+- input group buttons on right side missing border (fixes [#29](https://github.com/PBGUX/designsystem/issues/29))
 - various revisions and improvements to the Design System website (copy changes, styling changes, image revisions, etc)
 - revised gulp tasks, updated plugins
 
-###2.0.0 August 31, 2015
+---
+
+__Thanks to the following contributors and bug reporters:__
+
+Rick Dukeshier, Shawn Sharifi, Luke Daugherty, Nick Roberts, Nisha Rana, Sam Swartz, Ania Mastriano, Joan Doutney, Renee Barsoum, Andy Grossman
+
+###2.0.0 -- August 31, 2015
 - dropped support for IE8/9, following industry standards
 - SVG embedded graphics used for resolution independence
 - CSS3 Flexbox used in places for layout and alignment
