@@ -3800,7 +3800,7 @@ th.centered {
   font-size: 11px; }
 
 .daterangepicker .ranges .input-mini {
-  border: 1px solid #ccc;
+  border: 1px solid #c0c0c0;
   border-radius: 4px;
   color: #717171;
   display: block;
@@ -3828,8 +3828,8 @@ th.centered {
   cursor: pointer; }
 
 .daterangepicker .ranges li.active {
-  background: #e4e6fa;
-  border: 1px solid #e4e6fa;
+  background: #c5cbe3;
+  border: 1px solid #c5cbe3;
   color: #3e53a4; }
 
 .daterangepicker .ranges li:hover {
@@ -3838,7 +3838,7 @@ th.centered {
   color: #3e53a4; }
 
 .daterangepicker .calendar-date {
-  border: 1px solid #ddd;
+  border: 1px solid #e1e1e1;
   padding: 4px;
   border-radius: 4px;
   background: #fff; }
@@ -3863,7 +3863,7 @@ th.centered {
   right: 9px;
   display: inline-block;
   border-right: 7px solid transparent;
-  border-bottom: 7px solid #ccc;
+  border-bottom: 7px solid #c0c0c0;
   border-left: 7px solid transparent;
   border-bottom-color: rgba(0, 0, 0, 0.2);
   content: ''; }
@@ -3888,7 +3888,7 @@ th.centered {
   margin-right: auto;
   display: inline-block;
   border-right: 7px solid transparent;
-  border-bottom: 7px solid #ccc;
+  border-bottom: 7px solid #c0c0c0;
   border-left: 7px solid transparent;
   border-bottom-color: rgba(0, 0, 0, 0.2);
   content: ''; }
@@ -3913,7 +3913,7 @@ th.centered {
   left: 9px;
   display: inline-block;
   border-right: 7px solid transparent;
-  border-bottom: 7px solid #ccc;
+  border-bottom: 7px solid #c0c0c0;
   border-left: 7px solid transparent;
   border-bottom-color: rgba(0, 0, 0, 0.2);
   content: ''; }
@@ -3935,7 +3935,7 @@ th.centered {
   top: initial;
   bottom: -7px;
   border-bottom: initial;
-  border-top: 7px solid #ccc; }
+  border-top: 7px solid #c0c0c0; }
 
 .daterangepicker.dropup:after {
   top: initial;
@@ -3965,7 +3965,7 @@ th.centered {
   background: #eaedf8; }
 
 .daterangepicker td.in-range {
-  background: #e4e6fa;
+  background: #c5cbe3;
   border-radius: 0; }
 
 .daterangepicker td.start-date {
@@ -3999,7 +3999,7 @@ th.centered {
 
 .daterangepicker td.week, .daterangepicker th.week {
   font-size: 80%;
-  color: #ccc; }
+  color: #c0c0c0; }
 
 .daterangepicker select.monthselect, .daterangepicker select.yearselect {
   font-size: 12px;
@@ -4303,7 +4303,7 @@ th.centered {
   font-size: 11px; }
 
 .daterangepicker .ranges .input-mini {
-  border: 1px solid #ccc;
+  border: 1px solid #c0c0c0;
   border-radius: 4px;
   color: #717171;
   display: block;
@@ -4331,8 +4331,8 @@ th.centered {
   cursor: pointer; }
 
 .daterangepicker .ranges li.active {
-  background: #e4e6fa;
-  border: 1px solid #e4e6fa;
+  background: #c5cbe3;
+  border: 1px solid #c5cbe3;
   color: #3e53a4; }
 
 .daterangepicker .ranges li:hover {
@@ -4341,7 +4341,7 @@ th.centered {
   color: #3e53a4; }
 
 .daterangepicker .calendar-date {
-  border: 1px solid #ddd;
+  border: 1px solid #e1e1e1;
   padding: 4px;
   border-radius: 4px;
   background: #fff; }
@@ -4366,7 +4366,7 @@ th.centered {
   right: 9px;
   display: inline-block;
   border-right: 7px solid transparent;
-  border-bottom: 7px solid #ccc;
+  border-bottom: 7px solid #c0c0c0;
   border-left: 7px solid transparent;
   border-bottom-color: rgba(0, 0, 0, 0.2);
   content: ''; }
@@ -4391,7 +4391,7 @@ th.centered {
   margin-right: auto;
   display: inline-block;
   border-right: 7px solid transparent;
-  border-bottom: 7px solid #ccc;
+  border-bottom: 7px solid #c0c0c0;
   border-left: 7px solid transparent;
   border-bottom-color: rgba(0, 0, 0, 0.2);
   content: ''; }
@@ -4416,7 +4416,7 @@ th.centered {
   left: 9px;
   display: inline-block;
   border-right: 7px solid transparent;
-  border-bottom: 7px solid #ccc;
+  border-bottom: 7px solid #c0c0c0;
   border-left: 7px solid transparent;
   border-bottom-color: rgba(0, 0, 0, 0.2);
   content: ''; }
@@ -4438,7 +4438,7 @@ th.centered {
   top: initial;
   bottom: -7px;
   border-bottom: initial;
-  border-top: 7px solid #ccc; }
+  border-top: 7px solid #c0c0c0; }
 
 .daterangepicker.dropup:after {
   top: initial;
@@ -4468,7 +4468,7 @@ th.centered {
   background: #eaedf8; }
 
 .daterangepicker td.in-range {
-  background: #e4e6fa;
+  background: #c5cbe3;
   border-radius: 0; }
 
 .daterangepicker td.start-date {
@@ -4502,7 +4502,7 @@ th.centered {
 
 .daterangepicker td.week, .daterangepicker th.week {
   font-size: 80%;
-  color: #ccc; }
+  color: #c0c0c0; }
 
 .daterangepicker select.monthselect, .daterangepicker select.yearselect {
   font-size: 12px;
