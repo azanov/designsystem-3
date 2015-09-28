@@ -31,7 +31,7 @@
 
 __Thanks to the following contributors and bug reporters:__
 
-Rick Dukeshier, Shawn Sharifi, Luke Daugherty, Nick Roberts, Nisha Rana, Sam Swartz, Ania Mastriano, Joan Doutney, Renee Barsoum, Andy Grossman
+Rick Dukeshier, Shawn Sharifi, Luke Daugherty, Nick Roberts, Nisha Rana, Sam Swartz, Ania Mastriano, Joan Doutney, Renee Barsoum, Andy Grossman, Steve King, Andrea Gregg-McManus
 
 ###2.0.0 -- August 31, 2015
 - dropped support for IE8/9, following industry standards
