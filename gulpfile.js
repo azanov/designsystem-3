@@ -79,6 +79,7 @@ gulp.task('sass', function() {
 
 
 gulp.task('sass-dist', function() {
+  var cssfilter = filter('design_system.css', {restore:true});
   return sass('./app/assets/sass', {sourcemap: false, style:'compressed'})
     .on('error', sass.logError)
 
@@ -90,6 +91,7 @@ gulp.task('sass-dist', function() {
     })]))
 
     .pipe(gulp.dest('./build/assets/css'))
+    .pipe(cssfilter)
     .pipe(gulp.dest('./dist/css'));
 
 });
