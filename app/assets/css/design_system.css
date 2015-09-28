@@ -1899,6 +1899,9 @@ select.input-sm {
   font-size: 12px;
   line-height: 1.42857; }
 
+.input-group-sm > .form-control, .input-group-sm > .input-group-addon, .input-group-sm > .input-group-btn > .btn {
+  border-radius: 0; }
+
 .input-lg,
 select.input-lg {
   line-height: 1.42857; }
