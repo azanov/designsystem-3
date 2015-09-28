@@ -23,7 +23,8 @@
 - changed selectize menus to use ui-select plugin
 - added `::ms-expand` to remove extra arrow in IE dropdowns (fixes [#25](https://github.com/PBGUX/designsystem/issues/25))
 - fixed misaligned prepended inputs; fixes [#26](https://github.com/PBGUX/designsystem/issues/26)
-- various revisions and improvements to the Design System website (copy changes, styling changes, image revisions, etc) 
+- various revisions and improvements to the Design System website (copy changes, styling changes, image revisions, etc)
+- revised gulp tasks, updated plugins
 
 ###2.0.0 August 31, 2015
 - dropped support for IE8/9, following industry standards
