@@ -3,22 +3,24 @@
   'use strict';
 
   angular.module('pb.ds.splitview').config(function($stateProvider) {
-    $stateProvider.state('splitview-examples', {
+    $stateProvider.state('splitview', {
+      abstract: true,
       url: '/splitview',
-      templateUrl: 'modules/splitview/templates/splitview-one.html',
-      controller: 'SplitviewController as splitview',
-      resolve: {
-        NavigationResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'dummynav'});
-        }
-      },
+      templateUrl: 'modules/splitview/templates/splitview.html',
+      controller: 'SplitviewController as splitview'
+    })
+
+    .state('splitview.page', {
+      url: '/page',
+      templateUrl: 'modules/splitview/templates/splitview-page.html',
       data: {
         pageTitle: 'Split Views',
         access: 'public',
         bodyClass: 'splitview'
       }
     })
-    .state('splitview-one', {
+
+    .state('splitview.one', {
       url: '/splitview/one',
       templateUrl: 'modules/splitview/templates/splitview-one.html',
       data: {
@@ -27,7 +29,8 @@
         bodyClass: 'splitview'
       }
     })
-    .state('splitview-two', {
+
+    .state('splitview.two', {
       url: '/splitview/two',
       templateUrl: 'modules/splitview/templates/splitview-two.html',
       data: {
@@ -36,7 +39,8 @@
         bodyClass: 'splitview'
       }
     })
-    .state('splitview-three', {
+
+    .state('splitview.three', {
       url: '/splitview/three',
       templateUrl: 'modules/splitview/templates/splitview-three.html',
       data: {
@@ -45,29 +49,16 @@
         bodyClass: 'splitview'
       }
     })
-    .state('splitview-four', {
+
+    .state('splitview.four', {
       url: '/splitview/four',
       templateUrl: 'modules/splitview/templates/splitview-four.html',
-      controller: 'SplitviewController as splitview',
-      resolve: {
-        DummyNavResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'dummynav'});
-        }
-      },
       data: {
         pageTitle: 'Split Views',
         access: 'public',
         bodyClass: 'splitview'
       }
     });
-
-
-
-
-
-
-
-
 
 
   });

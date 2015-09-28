@@ -33,15 +33,6 @@
       controller: 'WelcomeController as welcome'
     })
 
-    .state('patterns.splitview', {
-      url: '/splitview',
-      templateUrl: 'modules/patterns/templates/splitview.html',
-      controller: 'SplitviewController as split'
-    })
-
-
-
-
     .state('patterns.signinup', {
       url: '/patterns/signinup',
       templateUrl: 'modules/patterns/templates/sign-in-sign-up.html'

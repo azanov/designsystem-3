@@ -77,7 +77,7 @@
             "value": "patterns.dashboards"
           }, {
             "label": "Split Views",
-            "value": "patterns.splitview"
+            "value": "splitview.page"
           },{
             "label": "Getting Started",
             "value": "patterns.gettingstarted"
