@@ -16,7 +16,7 @@
       data: {
         pageTitle: 'Split Views',
         access: 'public',
-        bodyClass: 'splitview'
+        bodyClass: ''
       }
     })
 
