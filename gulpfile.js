@@ -2,11 +2,9 @@
 /*jshint node:true */
 
 var gulp       = require('gulp'),
-  autoprefixer = require('autoprefixer-core'),
-  browserSync =  require('browser-sync').create(),
+  browserSync  = require('browser-sync').create(),
   cache        = require('gulp-cache'),
   concat       = require('gulp-concat'),
-  connect      = require('gulp-connect'),
   del          = require('del'),
   filter       = require('gulp-filter'),
   gutil        = require('gulp-util'),
@@ -15,13 +13,12 @@ var gulp       = require('gulp'),
   jshint       = require('gulp-jshint'),
   minifyCss    = require('gulp-minify-css'),
   minifyHtml   = require('gulp-minify-html'),
-  nano         = require('gulp-cssnano'),
   ngAnnotate   = require('gulp-ng-annotate'),
   notify       = require('gulp-notify'),
   plumber      = require('gulp-plumber'),
   postcss      = require('gulp-postcss'),
+  autoprefixer = require('gulp-autoprefixer'),
   printfiles   = require('gulp-print'),
-  prompt       = require('gulp-prompt'),
   reload       = browserSync.reload,
   rename       = require('gulp-rename'),
   replace      = require('gulp-replace'),
@@ -52,27 +49,49 @@ gulp.task('clean:dist', function(cb) {
 
 
 
-gulp.task('sass', function() {
-  var cssfilter = filter('*.css', {restore:true});
-  return sass('./app/assets/sass', {sourcemap: true})
+// gulp.task('sass', function() {
+//   var cssfilter = filter('*.css', {restore:true});
+//   return sass('./app/assets/sass/*.scss', {sourcemap: true})
+//     .on('error', sass.logError)
+//
+//     // For inline sourcemaps
+//     .pipe(sourcemaps.write())
+//
+
+//
+//     // For file sourcemaps
+//     // .pipe(sourcemaps.write('maps', {
+//     //   includeContent: false,
+//     //   sourceRoot: 'source'
+//     // }))
+//
+//     .pipe(gulp.dest('./app/assets/css'))
+//
+//     .pipe(cssfilter)
+//
+//     .pipe(browserSync.stream());
+// });
+
+
+
+gulp.task('sass', function () {
+  return sass('./app/assets/sass/**/*', { sourcemap: true })
     .on('error', sass.logError)
 
-    // For inline sourcemaps
-    // .pipe(sourcemaps.write())
-
-    .pipe(postcss([autoprefixer({
+    .pipe(autoprefixer({
       browsers: ['last 2 versions']
-    })]))
+    }))
+    // For inline sourcemaps
+    .pipe(sourcemaps.write())
+
 
     // For file sourcemaps
-    .pipe(sourcemaps.write('maps', {
-      includeContent: false,
-      sourceRoot: 'source'
-    }))
+    // .pipe(sourcemaps.write('maps', {
+    //   includeContent: false,
+    //   sourceRoot: 'source'
+    // }))
 
     .pipe(gulp.dest('./app/assets/css'))
-
-    .pipe(cssfilter)
 
     .pipe(browserSync.stream());
 });
