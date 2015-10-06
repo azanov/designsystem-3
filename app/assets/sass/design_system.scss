@@ -2,17 +2,17 @@
 // ========================================
 
 // Settings
-// Global variables and mixins, distribute
-// ========================================
+// Global variables and mixins, Bower distribute
+// =============================================
 @import "settings/variables";
 @import "settings/mixins";
-@import "settings/pbfont";
-@import "settings/fonts";
 
 
 // Base
 // Site-wide style definitions
 // ========================================
+@import "base/fonts";
+@import "base/pbfont";
 @import "base/typography";
 @import "base/helpers";
 
