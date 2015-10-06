@@ -35,7 +35,7 @@ var banner = ['/**',
   ' * <%= pkg.name %> - <%= pkg.description %>',
   ' * @version v<%= pkg.version %>',
   ' * @link <%= pkg.homepage %>',
-  ' * ' + today + ' ',
+  ' * Built ' + today + ' ',
   ' */',
   ''
 ].join('\n');
@@ -44,33 +44,6 @@ var banner = ['/**',
 gulp.task('clean:dist', function(cb) {
   return del(['./build'], cb);
 });
-
-
-
-
-
-// gulp.task('sass', function() {
-//   var cssfilter = filter('*.css', {restore:true});
-//   return sass('./app/assets/sass/*.scss', {sourcemap: true})
-//     .on('error', sass.logError)
-//
-//     // For inline sourcemaps
-//     .pipe(sourcemaps.write())
-//
-
-//
-//     // For file sourcemaps
-//     // .pipe(sourcemaps.write('maps', {
-//     //   includeContent: false,
-//     //   sourceRoot: 'source'
-//     // }))
-//
-//     .pipe(gulp.dest('./app/assets/css'))
-//
-//     .pipe(cssfilter)
-//
-//     .pipe(browserSync.stream());
-// });
 
 
 
@@ -90,6 +63,7 @@ gulp.task('sass', function () {
     //   includeContent: false,
     //   sourceRoot: 'source'
     // }))
+    .pipe(header(banner, { pkg : pkg } ))
 
     .pipe(gulp.dest('./app/assets/css'))
 
@@ -97,17 +71,19 @@ gulp.task('sass', function () {
 });
 
 
-gulp.task('sass-dist', function() {
+
+
+gulp.task('sass-dist', function () {
   var cssfilter = filter('design_system.css', {restore:true});
-  return sass('./app/assets/sass', {sourcemap: false, style:'compressed'})
+
+  return sass('./app/assets/sass/**/*', { sourcemap: false, style: 'condensed' })
     .on('error', sass.logError)
 
-    // For inline sourcemaps
-    // .pipe(sourcemaps.write())
-
-    .pipe(postcss([autoprefixer({
+    .pipe(autoprefixer({
       browsers: ['last 2 versions']
-    })]))
+    }))
+
+    .pipe(header(banner, { pkg : pkg } ))
 
     .pipe(gulp.dest('./build/assets/css'))
     .pipe(cssfilter)
@@ -224,6 +200,9 @@ gulp.task('clean', function(cb) {
 
 
 
+
+
+
 // browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
   browserSync.init({
@@ -243,9 +222,6 @@ gulp.task('serve-build', [], function() {
   });
 });
 
-// gulp.task('build', ['clean'],function() {
-//  gulp.run(['sass-nomaps','usemin','scripts','assets']);
-// });
 
 //build
 gulp.task('build', ['sass-dist', 'clean:dist'], function() {
