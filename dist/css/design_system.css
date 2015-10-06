@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.1.1
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Tue Oct 06 2015 09:49:39 GMT-0400 (EDT) 
+ * Built Tue Oct 06 2015 14:51:36 GMT-0400 (EDT) 
  */
 .container-fluid {
   padding-left: 40px;
@@ -2929,7 +2929,7 @@ form.magic-search input[type=search] {
   padding: 7px 10px 7px 32px;
   display: inline-block;
   width: 15px;
-  padding-left: 10px;
+  padding-left: 20px;
   color: transparent;
   cursor: pointer;
   border-radius: 20px;
