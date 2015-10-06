@@ -1,0 +1,141 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Designsystem - v2.1.1</title><link rel="stylesheet" href="assets/css/main.css"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Designsystem - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="Release the docs!"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title"><a href="http://guxstaging.pbi.global.pvt/design_system">Designsystem - v2.1.1</a></h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="clearfix" data-type="mixin"><a href="#mixin-clearfix">clearfix</a></li><li class="sidebar__item sassdoc__item" data-name="breakpoint" data-type="mixin"><a href="#mixin-breakpoint">breakpoint</a></li><li class="sidebar__item sassdoc__item" data-name="hidpi" data-type="mixin"><a href="#mixin-hidpi">hidpi</a></li><li class="sidebar__item sassdoc__item" data-name="panel-variant" data-type="mixin"><a href="#mixin-panel-variant">panel-variant</a></li><li class="sidebar__item sassdoc__item" data-name="hide-text" data-type="mixin"><a href="#mixin-hide-text">hide-text</a></li><li class="sidebar__item sassdoc__item" data-name="triangle-closed" data-type="mixin"><a href="#mixin-triangle-closed">triangle-closed</a></li><li class="sidebar__item sassdoc__item" data-name="triangle-opened" data-type="mixin"><a href="#mixin-triangle-opened">triangle-opened</a></li><li class="sidebar__item sassdoc__item" data-name="button-variant" data-type="mixin"><a href="#mixin-button-variant">button-variant</a></li><li class="sidebar__item sassdoc__item" data-name="button-size" data-type="mixin"><a href="#mixin-button-size">button-size</a></li><li class="sidebar__item sassdoc__item" data-name="border-top-radius" data-type="mixin"><a href="#mixin-border-top-radius">border-top-radius</a></li><li class="sidebar__item sassdoc__item" data-name="border-bottom-radius" data-type="mixin"><a href="#mixin-border-bottom-radius">border-bottom-radius</a></li><li class="sidebar__item sassdoc__item" data-name="border-right-radius" data-type="mixin"><a href="#mixin-border-right-radius">border-right-radius</a></li><li class="sidebar__item sassdoc__item" data-name="border-left-radius" data-type="mixin"><a href="#mixin-border-left-radius">border-left-radius</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-function"><a href="#undefined-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="tint" data-type="function"><a href="#function-tint">tint</a></li><li class="sidebar__item sassdoc__item" data-name="shade" data-type="function"><a href="#function-shade">shade</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="mixin-clearfix"><h3 class="item__heading"><a class="item__name" href="#mixin-clearfix">clearfix</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin clearfix() { 
+  zoom: 1;
+  &amp;:before,
+  &amp;:after {
+    content: &#39;&#39;;
+    display: table;
+  }
+  &amp;:after {
+    clear: both;
+  }
+ }" data-collapsed="@mixin clearfix() { ... }"><code>@mixin clearfix() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Deprecated clearfix</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="mixin-breakpoint"><h3 class="item__heading"><a class="item__name" href="#mixin-breakpoint">breakpoint</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin breakpoint() { 
+  @if $point == screen-xs {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == screen-sm {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $point == screen-md {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $point == screen-lg {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+ }" data-collapsed="@mixin breakpoint() { ... }"><code>@mixin breakpoint() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoints for reponsive design</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).</p></section><section class="main__item container item" id="mixin-hidpi"><h3 class="item__heading"><a class="item__name" href="#mixin-hidpi">hidpi</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin hidpi() { 
+  @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
+  only screen and (min--moz-device-pixel-ratio: $ratio),
+  only screen and (-o-min-device-pixel-ratio: #{$ratio}/1),
+  only screen and (min-resolution: round($ratio * 96dpi)),
+  only screen and (min-resolution: $ratio * 1dppx) {
+    @content;
+  }
+ }" data-collapsed="@mixin hidpi() { ... }"><code>@mixin hidpi() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>HiDPI mixin. Default value set to 1.3 to target Google Nexus 7 (<a href="http://bjango.com/articles/min-device-pixel-ratio/">http://bjango.com/articles/min-device-pixel-ratio/</a>)</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).</p></section><section class="main__item container item" id="mixin-panel-variant"><h3 class="item__heading"><a class="item__name" href="#mixin-panel-variant">panel-variant</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin panel-variant() { 
+  border-color: $border;
+
+  &gt;.panel-heading {
+    color: $heading-text-color;
+    background-color: $heading-bg-color;
+    border-color: $heading-border;
+
+    +.panel-collapse &gt;.panel-body {
+      border-top-color: $border;
+    }
+    .badge {
+      color: $heading-bg-color;
+      background-color: $heading-text-color;
+    }
+  }
+  &gt;.panel-footer {
+    +.panel-collapse &gt;.panel-body {
+      border-bottom-color: $border;
+    }
+  }
+ }" data-collapsed="@mixin panel-variant() { ... }"><code>@mixin panel-variant() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Panel Variants</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="mixin-hide-text"><h3 class="item__heading"><a class="item__name" href="#mixin-hide-text">hide-text</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin hide-text() { 
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+ }" data-collapsed="@mixin hide-text() { ... }"><code>@mixin hide-text() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>.element {
+  @include hide-text;
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>CSS Output</p></div><pre class="example__code language-css"><code>.element {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+}</code></pre></div></section><section class="main__item container item" id="mixin-triangle-closed"><h3 class="item__heading"><a class="item__name" href="#mixin-triangle-closed">triangle-closed</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin triangle-closed() { 
+  content: &#39;\25B8&#39;; // triangle right
+  transform: rotate(0deg);
+ }" data-collapsed="@mixin triangle-closed() { ... }"><code>@mixin triangle-closed() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="mixin-triangle-opened"><h3 class="item__heading"><a class="item__name" href="#mixin-triangle-opened">triangle-opened</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin triangle-opened() { 
+  content: &#39;\25B8&#39;; // triangle right
+  transform: rotate(90deg);
+ }" data-collapsed="@mixin triangle-opened() { ... }"><code>@mixin triangle-opened() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="mixin-button-variant"><h3 class="item__heading"><a class="item__name" href="#mixin-button-variant">button-variant</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin button-variant() { 
+  color: $fg;
+  background-color: $bg;
+  border-color: $border;
+
+  &amp;:hover,
+  &amp;.hover,
+  &amp;:focus,
+  &amp;.focus,
+  &amp;:active,
+  &amp;.active,
+  .open &gt;&amp;.dropdown-toggle {
+    color: $hover-fg;
+    background-color: $hover-bg;
+    border-color: $border;
+  }
+
+  &amp;:active,
+  &amp;.active,
+  .open &gt;&amp;.dropdown-toggle {
+    background-image: none;
+  }
+
+  &amp;.disabled,
+  &amp;[disabled],
+  fieldset[disabled] &amp; {
+    &amp;,
+    &amp;:hover,
+    &amp;.hover,
+    &amp;:focus,
+    &amp;.focus,
+    &amp;:active,
+    &amp;.active {
+      background-color: $disabled-bg;
+      border-color: $disabled-fg;
+      color: $disabled-fg;
+    }
+  }
+
+  .badge {
+    color: #fff;
+    background-color: $pb-magenta;
+    margin-left: 10px;
+  }
+ }" data-collapsed="@mixin button-variant() { ... }"><code>@mixin button-variant() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>.btn-primary {
+ @include button-variant(#fff, $button-primary, $button-primary, $pb-gray-500, $pb-bg2, #fff, $pb-blue-700);
+}</code></pre></div></section><section class="main__item container item" id="mixin-button-size"><h3 class="item__heading"><a class="item__name" href="#mixin-button-size">button-size</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin button-size() { 
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+ }" data-collapsed="@mixin button-size() { ... }"><code>@mixin button-size() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Button sizes</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="mixin-border-top-radius"><h3 class="item__heading"><a class="item__name" href="#mixin-border-top-radius">border-top-radius</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin border-top-radius() { 
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+ }" data-collapsed="@mixin border-top-radius() { ... }"><code>@mixin border-top-radius() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>top</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="mixin-border-bottom-radius"><h3 class="item__heading"><a class="item__name" href="#mixin-border-bottom-radius">border-bottom-radius</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin border-bottom-radius() { 
+  border-bottom-right-radius: $radius;
+   border-bottom-left-radius: $radius;
+ }" data-collapsed="@mixin border-bottom-radius() { ... }"><code>@mixin border-bottom-radius() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>bottom</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="mixin-border-right-radius"><h3 class="item__heading"><a class="item__name" href="#mixin-border-right-radius">border-right-radius</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin border-right-radius() { 
+  border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+ }" data-collapsed="@mixin border-right-radius() { ... }"><code>@mixin border-right-radius() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>right</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="mixin-border-left-radius"><h3 class="item__heading"><a class="item__name" href="#mixin-border-left-radius">border-left-radius</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin border-left-radius() { 
+  border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+ }" data-collapsed="@mixin border-left-radius() { ... }"><code>@mixin border-left-radius() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>left</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section></section><section class="main__sub-section" id="undefined-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="function-tint"><h3 class="item__heading"><a class="item__name" href="#function-tint">tint</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function tint() { 
+  @return mix($color, #fff, $percentage);
+ }" data-collapsed="@function tint() { ... }"><code>@function tint() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>tint function</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="function-shade"><h3 class="item__heading"><a class="item__name" href="#function-shade">shade</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function shade() { 
+  @return mix($color, #000, $percentage);
+ }" data-collapsed="@function shade() { ... }"><code>@function shade() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>shade function</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --><a class="project-info__name" href="http://guxstaging.pbi.global.pvt/design_system">Designsystem</a><!-- Version --> <span class="project-info__version">- v2.1.1</span><!-- License --></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>

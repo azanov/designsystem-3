@@ -27,7 +27,8 @@ var gulp       = require('gulp'),
   sass         = require('gulp-ruby-sass'),
   sourcemaps   = require('gulp-sourcemaps'),
   uglify       = require('gulp-uglify'),
-  usemin       = require('gulp-usemin');
+  usemin       = require('gulp-usemin'),
+  sassdoc      = require('sassdoc');
 
 var today = new Date();
 var pkg = require('./package.json');
@@ -198,6 +199,11 @@ gulp.task('clean', function(cb) {
   del(['build/**/*'], cb);
 });
 
+
+gulp.task('sassdoc', function () {
+  return gulp.src('./app/assets/sass/**/*')
+    .pipe(sassdoc());
+});
 
 
 
