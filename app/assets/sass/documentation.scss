@@ -840,6 +840,13 @@ h2.table-header.specifications {
 
 
 //RESOURCES
+.fillin-blank {
+  border-bottom: 1px solid $pb-gray-500;
+  width: 150px;
+  display: inline-block;
+  margin-right: 3px;
+}
+
 .panel-download {
 
   .panel-body {
