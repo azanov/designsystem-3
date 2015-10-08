@@ -20,7 +20,16 @@
       url: '/color',
       templateUrl: 'modules/foundation/templates/foundation-color.html',
       data: {
-        pageTitle: 'foundation - Colors',
+        pageTitle: 'Foundation - Colors',
+        bodyClass: 'colors'
+      }
+    })
+
+    .state('foundation.accessibility', {
+      url: '/accessibility',
+      templateUrl: 'modules/foundation/templates/foundation-accessibility.html',
+      data: {
+        pageTitle: 'Foundation - Accessibility',
         bodyClass: 'colors'
       }
     })
@@ -32,7 +41,7 @@
       templateUrl: 'modules/foundation/templates/foundation-typography.html',
       controller: 'TypographyController as type',
       data: {
-        pageTitle: 'foundation - Typography'
+        pageTitle: 'Foundation - Typography'
       }
     })
 
@@ -48,7 +57,7 @@
         }
       },
       data: {
-        pageTitle: 'foundation - Iconography'
+        pageTitle: 'Foundation - Iconography'
       }
     })
 

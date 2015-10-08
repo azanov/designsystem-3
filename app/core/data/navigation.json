@@ -19,6 +19,9 @@
               "label": "Color",
               "value": "foundation.color"
             }, {
+              "label": "Accessibility",
+              "value": "foundation.accessibility"
+            }, {
               "label": "Typography",
               "value": "foundation.typography"
             }, {
