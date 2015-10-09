@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.1.1
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Thu Oct 08 2015 16:50:34 GMT-0400 (EDT) 
+ * Built Fri Oct 09 2015 09:12:38 GMT-0400 (EDT) 
  */
 .container-fluid {
   padding-left: 40px;
@@ -3077,10 +3077,9 @@ a.app-launcher {
   background-color: #9b9b9b; }
 .navbar-default .dropdown-menu > li.section-head {
   font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif;
-  margin: 12px 30px 6px;
+  margin: 12px 20px 5px;
   color: #2e2e2e;
   padding-bottom: 5px;
-  margin-bottom: 10px;
   border-bottom: 1px solid #e1e1e1; }
 .navbar-default .dropdown-menu > li > a {
   padding: 16px 30px 16px 20px;
