@@ -1,5 +1,27 @@
 ##Release Notes
 
+###2.1.1 -- October 2015 update
+######CSS changes
+
+- added version header to CSS (closes [#32](https://github.com/PBGUX/designsystem/issues/32))
+- fixed header magnify glass icon in FF, was cut off on right side
+- header links changed to solid white for accessibility compliance
+
+
+######Website changes
+- updated Resources > Strategy section, added Personas content
+- fixed table selected state examples, used incorrect color
+- added header dropdown examples with section heads
+- added Web > Foundation > Accessibility section
+- updated AngularJS to v1.4.5
+- updated select-ui to v0.13.1 (fixes webkit dropup issue)
+- updated angular-scroll to v0.7.3
+
+######Thanks to the following contributors and bug reporters:
+
+Nick Roberts, Nisha Rana
+
+
 ###2.1.0 -- September 29, 2015
 - modal dialogs no longer need an inline close icon in the `modal-header`, remove the markup from the html indicated by the NO ICON HERE in the example below. The icon is added by the CSS with an SVG image to the button.
 ```html
@@ -10,7 +32,7 @@
 ```
 - added daterange picker examples, revised styling with new hover/selected states
 - revised color values for accessibility
-- updated pb-font to latest verion
+- updated pb-font to latest version
 - added table variations
 	- `table-unstyled` removes all borders
 	- `table-open` removes all vertical borders
