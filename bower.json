@@ -6,7 +6,7 @@
     "Numeric-Stepper": "*",
     "angular": "1.4.5",
     "angular-animate": "1.4.5",
-    "angular-bootstrap": "0.13.4",
+    "angular-bootstrap": "0.14.1",
     "angular-bootstrap-toggle-switch": "0.5.2",
     "angular-chart": "0.3.2",
     "angular-chart.js": "0.7.2",
@@ -48,14 +48,13 @@
     "ngprogress": "1.1.2",
     "selectize": "0.12.1",
     "ui-router": "0.2.15",
-    "ui-select": "angular-ui-select#0.13.1",
+    "ui-select": "angular-ui-select#0.13.2",
     "yamm3": "1.1.0"
   },
   "resolutions": {
     "angular": "1.4.5",
     "moment": "~2.9.0",
-    "angular-translate": "2.8.1",
-    "angular-translate-storage-cookie": "2.8.1"
+    "angular-translate": "2.8.1"
   },
   "devDependencies": {}
 }
