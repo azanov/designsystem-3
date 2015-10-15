@@ -1,12 +1,12 @@
 {
   "name": "DesignSystem",
-  "version": "2.0.0",
+  "version": "2.2.0",
   "dependencies": {
     "Chart.js": "1.0.2",
     "Numeric-Stepper": "*",
     "angular": "1.4.5",
     "angular-animate": "1.4.5",
-    "angular-bootstrap": "0.14.1",
+    "angular-bootstrap": "0.14.2",
     "angular-bootstrap-toggle-switch": "0.5.2",
     "angular-chart": "0.3.2",
     "angular-chart.js": "0.7.2",
@@ -24,7 +24,7 @@
     "angular-sanitize": "1.4.5",
     "angular-scroll": "0.7.3",
     "angular-toastr": "1.4.1",
-    "angular-translate": "2.7.2",
+    "angular-translate": "2.8.1",
     "angular-translate-loader-partial": "2.8.1",
     "angular-translate-storage-cookie": "2.8.1",
     "angular-translate-storage-local": "2.8.1",
@@ -32,7 +32,7 @@
     "angular-utils-pagination": "0.9.0",
     "angular-xeditable": "0.1.9",
     "animate.css": "3.2.6",
-    "bootstrap": "3.3.4",
+    "bootstrap": "3.3.5",
     "bootstrap-vertical-tabs": "1.2.1",
     "bowser": "1.0.0",
     "datatables": "1.10.9",
@@ -52,9 +52,7 @@
     "yamm3": "1.1.0"
   },
   "resolutions": {
-    "angular": "1.4.5",
-    "moment": "~2.9.0",
-    "angular-translate": "2.8.1"
+    "angular": "1.4.5"
   },
   "devDependencies": {}
 }
