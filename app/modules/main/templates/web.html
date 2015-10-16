@@ -10,7 +10,7 @@
     </div>
   </div>
 
-  <div headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
+  <!-- <div headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 </div>
 
@@ -31,57 +31,76 @@
 
 <div class="container">
 
-<div class="row">
-  <div class="col-md-8">
-    <h1 class="doc-head" id="foundations">Foundations</h1>
-  </div>
-</div>
+  <div class="row">
+    <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="doc-head" id="foundations">Foundations</h1>
+      </div>
+    </div>
 
-<div class="row">
-  <div class="col-md-6">
-    Foundations encompass a product’s basic building blocks — primarily, these are the “look, feel and tone” aspects of a product that reflect Pitney Bowes as a brand.
-    <ul class="section-list">
-      <li ng-repeat="item in SLC.nav[1].Web[0].children[0].children[0].children">
-          <a href="" ui-sref="{{item.value}}" >{{item.label}}</a>
-      </li>
-    </ul>
-  </div>
-</div>
+    <div class="row">
+      <div class="col-md-12">
+        Foundations encompass a product’s basic building blocks — primarily, these are the “look, feel and tone” aspects of a product that reflect Pitney Bowes as a brand.
+        <ul class="section-list">
+          <li ng-repeat="item in SLC.nav[1].Web[0].children[0].children[0].children">
+              <a href="" ui-sref="{{item.value}}" >{{item.label}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-<div class="row">
-  <div class="col-md-8">
-    <h1 class="doc-head" id="elements">Elements</h1>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-6">
-    Elements are the individual components of a product — the means by which your users interact with your product on a practical and functional level.
+    </div>
+    <div class="col-md-4">
 
-    <ul class="section-list">
-      <li ng-repeat="item in SLC.nav[1].Web[0].children[0].children[1].children">
-          <a href="" ui-sref="{{item.value}}" >{{item.label}}</a>
-      </li>
-    </ul>
-  </div>
-</div>
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="doc-head" id="elements">Elements</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        Elements are the individual components of a product — the means by which your users interact with your product on a practical and functional level.
 
-<div class="row">
-  <div class="col-md-8">
-    <h1 class="doc-head" id="patterns">Patterns</h1>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-6">
-    Patterns show how to combine our design foundation with our design elements to address common product design scenarios.
+        <ul class="section-list">
+          <li ng-repeat="item in SLC.nav[1].Web[0].children[0].children[1].children">
+              <a href="" ui-sref="{{item.value}}" >{{item.label}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
 
-    <ul class="section-list">
-      <li ng-repeat="item in SLC.nav[1].Web[0].children[0].children[2].children">
-          <a href="" ui-sref="{{item.value}}" >{{item.label}}</a>
-      </li>
-    </ul>
+
+    </div>
+    <div class="col-md-4">
+
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="doc-head" id="patterns">Patterns</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        Patterns show how to combine our design foundation with our design elements to address common product design scenarios.
+
+
+        <ul class="section-list">
+          <li ng-repeat="item in SLC.nav[1].Web[0].children[0].children[2].children">
+              <a href="" ui-sref="{{item.value}}" >{{item.label}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    </div>
   </div>
-</div>
+
+
+
+
 
 
 
