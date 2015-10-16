@@ -48,7 +48,22 @@
 
   // UI ROUTER CONFIG
   angular.module('app').config(function($stateProvider) {
-    $stateProvider.state('otherwise', {
+    $stateProvider.state('web', {
+      url: '/web',
+      templateUrl: 'modules/main/templates/web.html',
+      controller: 'SectionLandingController as SLC',
+      resolve: {
+        NavigationResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'navigation'});
+        }
+      },
+      data: {
+        pageTitle: 'Web',
+        access: 'public',
+        bodyClass: 'web sectionlanding'
+      }
+    })
+    .state('otherwise', {
       url: '*path',
       template: '',
       controller: function($state) {
