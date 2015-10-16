@@ -290,6 +290,12 @@ select {
   }
 }
 
+.ui-select-bootstrap .ui-select-choices-row.active > a {
+    color: $pb-gray-700;
+    text-decoration: none;
+    outline: 0;
+    background-color: $pb-bg3;
+}
 
 .input-sm,
 select.input-sm {

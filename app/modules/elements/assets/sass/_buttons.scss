@@ -1,18 +1,18 @@
 //*/ Buttons */
 // --------------------------------------------------
 
-// scss-lint:disable MergeableSelector
+// scss-lint:disable MergeableSelector ImportantRule
 
 // $fg, $bg, $border, $disabled-fg, $disabled-bg, $hover-fg:$fg, $hover-bg:$bg
 .btn-primary {
-  @include button-variant(#fff, $button-primary, $button-primary, $pb-gray-500, $pb-bg2, #fff, $pb-blue-700);
+  @include button-variant(#fff, $button-primary, $button-primary, $pb-gray-500, $pb-bg3, #fff, $pb-blue-700);
 }
 
 .btn-default,
 .btn-cancel,
 .btn-group .btn-default,
 .btn-group-vertical .btn-default {
-  @include button-variant($button-primary, transparent, $button-primary, $pb-gray-500, $pb-bg2, $button-primary, #d9dced);
+  @include button-variant($button-primary, transparent, $button-primary, $pb-gray-500, transparent, $button-primary, #d9dced);
 }
 
 .btn-link {
@@ -24,6 +24,16 @@
 
 .btn-group-borderless .btn-default {
   @include button-variant($button-primary, transparent, $button-primary, $button-primary, $pb-blue-300, $pb-gray-300, $pb-bg2);
+}
+
+.btn-right {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.btn-left {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 
@@ -120,7 +130,7 @@
 .dropdown-menu>li>a:hover {
   color: $pb-gray-700;
   text-decoration: none;
-  background-color: #f5f6fa;
+  background-color: $pb-bg3;
 }
 // font awesome icon size overrides in button groups
 .btn-group {
@@ -189,10 +199,10 @@ fieldset[disabled] .btn {
 .close {
   transition: color 0.5s;
   opacity: 1;
-  filter: alpha(opacity=1);
+  filter: alpha(opacity = 1);
   &:hover {
     opacity: 1;
-    filter: alpha(opacity=1);
+    filter: alpha(opacity = 1);
   }
 }
 
