@@ -125,12 +125,14 @@
 
     _this.singlepicker = {
       date: {
-        startDate: moment().startOf('day'),
+        startDate: moment().startOf('year'),
         endDate: moment().startOf('day')
       },
       options: {
         singleDatePicker: true,
-        format: 'MM/DD/YYYY'
+        locale: {
+          format: 'MM/DD/YYYY'
+        }
       }
     };
 
@@ -142,7 +144,9 @@
       },
       options: {
         singleDatePicker: false,
-        format: 'MM/DD/YYYY',
+        locale: {
+          format: 'MM/DD/YYYY'
+        },
         opens: 'center',
         autoApply: false,
         applyClass: 'btn-primary',
@@ -152,26 +156,6 @@
           'Month to date': [moment().startOf('month'), moment()],
           'Year to date': [moment().startOf('year'), moment()]
         }
-      },
-      displayDate: function(start, end) {
-
-        var startDate = start || _this.table.daterangepicker.date.startDate;
-        var endDate = end || _this.table.daterangepicker.date.endDate;
-
-        var dateDiff = endDate.diff(startDate, 'days');
-        var result = '';
-
-        if (dateDiff === 0) {
-          result = 'Today ' + moment(startDate).format('MM/DD/YYYY');
-        }
-        else if (dateDiff === 6) {
-          result = 'Last 7 days';
-        }
-        else {
-          result = 'From ' + moment(startDate).format('MM/DD/YYYY') + ' to ' + moment(endDate).format('MM/DD/YYYY');
-        }
-
-        return result;
       }
     };
 
@@ -316,7 +300,9 @@
         options: {
           singleDatePicker: true,
           autoApply: true,
-          format: 'MM/DD/YYYY',
+          locale: {
+            format: 'MM/DD/YYYY'
+          },
           opens: 'center',
           eventHandlers: {
             'apply.daterangepicker': function(ev, picker) {
@@ -333,7 +319,9 @@
         options: {
           singleDatePicker: true,
           autoApply: true,
-          format: 'MM/DD/YYYY',
+          locale: {
+            format: 'MM/DD/YYYY'
+          },
           opens: 'center',
           eventHandlers: {
             'apply.daterangepicker': function(ev, picker) {

@@ -48,7 +48,7 @@ gulp.task('clean:dist', function(cb) {
 
 
 
-gulp.task('sass', function () {
+gulp.task('sass', function() {
   return sass('./app/assets/sass/**/*', { sourcemap: true })
     .on('error', sass.logError)
 
@@ -64,7 +64,7 @@ gulp.task('sass', function () {
     //   includeContent: false,
     //   sourceRoot: 'source'
     // }))
-    .pipe(header(banner, { pkg : pkg } ))
+    .pipe(header(banner, { pkg: pkg }))
 
     .pipe(gulp.dest('./app/assets/css'))
 
@@ -74,7 +74,7 @@ gulp.task('sass', function () {
 
 
 
-gulp.task('sass-dist', function () {
+gulp.task('sass-dist', function() {
   var cssfilter = filter('design_system.css', {restore:true});
 
   return sass('./app/assets/sass/**/*', { sourcemap: false, style: 'condensed' })
@@ -84,7 +84,7 @@ gulp.task('sass-dist', function () {
       browsers: ['last 2 versions']
     }))
 
-    .pipe(header(banner, { pkg : pkg } ))
+    .pipe(header(banner, { pkg: pkg }))
 
     .pipe(gulp.dest('./build/assets/css'))
     .pipe(cssfilter)
@@ -172,7 +172,8 @@ gulp.task('copy:json-i18n-data', [], function() {
 //copy fonts
 gulp.task('copy:fonts', [], function() {
   gulp.src([
-      './app/assets/fonts/*'
+      './app/assets/fonts/*',
+      './app/bower_components/bootstrap/dist/fonts/*'
     ])
     .pipe(gulp.dest('./build/assets/fonts'))
     .pipe(gulp.dest('./dist/fonts'));
@@ -200,7 +201,7 @@ gulp.task('clean', function(cb) {
 });
 
 
-gulp.task('sassdoc', function () {
+gulp.task('sassdoc', function() {
   return gulp.src('./app/assets/sass/**/*')
     .pipe(sassdoc());
 });

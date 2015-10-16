@@ -22,7 +22,7 @@
           <input class="form-control" name="name" type="password" ng-init="signin.focus = false" ng-focus="signin.focus = !signin.focus" ng-blur="signin.focus = !signin.focus">
         </div>
 
-        <div collapse="!signin.focus">
+        <div uib-collapse="!signin.focus">
           <div class="alert alert-info">
             Your password must be at least 8 characters long and contain an uppercase letter plus at least one digit or special character.
           </div>

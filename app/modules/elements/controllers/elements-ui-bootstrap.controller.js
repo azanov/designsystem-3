@@ -2,19 +2,19 @@
 
   'use strict';
 
-  angular.module('pb.ds.elements').controller('UiBootstrapController', function($log, $modal, $timeout, $window) {
+  angular.module('pb.ds.elements').controller('UiBootstrapController', function($log, $uibModal, $timeout, $window) {
 
     var _this = this;
 
     _this.modals = {
       simple: function() {
-        $modal.open({
+        $uibModal.open({
           templateUrl: 'modules/components/modals/elements-simple.html',
           controller: 'BootstrapUiSimpleModalController'
         });
       },
       modal: function() {
-        $modal.open({
+        $uibModal.open({
           templateUrl: 'modules/elements/modals/elements-modal.html',
           controller: 'BootstrapUiModalController',
           keyboard: false,
@@ -22,7 +22,7 @@
         });
       },
       prompt: function() {
-        $modal.open({
+        $uibModal.open({
           templateUrl: 'modules/elements/modals/elements-prompt.html',
           controller: 'BootstrapUiPromptModalController',
           keyboard: false,
@@ -32,7 +32,7 @@
         });
       },
       draggable: function() {
-        $modal.open({
+        $uibModal.open({
           windowTemplateUrl: 'modules/elements/modals/elements-draggable-template.html',
           templateUrl: 'modules/elements/modals/elements-draggable.html',
           controller: 'BootstrapUiDraggableModalController',

@@ -40,8 +40,8 @@
   });
 
   //ui-bootstrap tooltip
-  angular.module('app').config(function($tooltipProvider) {
-    $tooltipProvider.options({
+  angular.module('app').config(function($uibTooltipProvider) {
+    $uibTooltipProvider.options({
       appendToBody: true
     });
   });

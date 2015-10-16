@@ -11,15 +11,15 @@
 
     <div class="col-md-3">
 
-      <button type="button" class="btn btn-default" tooltip="Add&nbsp;user">
+      <button type="button" class="btn btn-default" uib-tooltip="Add&nbsp;user">
         <i class="fa fa-fw fa-plus"></i>
       </button>
 
-      <button ng-if="datatable.table.selectedRows.length" type="button" class="btn btn-default" tooltip="Delete">
+      <button ng-if="datatable.table.selectedRows.length" type="button" class="btn btn-default" uib-tooltip="Delete">
         <i class="fa fa-fw fa-trash-o"></i>
       </button>
 
-      <button ng-if="datatable.table.selectedRows.length === 1" type="button" class="btn btn-default" tooltip="Edit">
+      <button ng-if="datatable.table.selectedRows.length === 1" type="button" class="btn btn-default" uib-tooltip="Edit">
         <i class="fa fa-fw fa-pencil"></i>
       </button>
 
@@ -130,7 +130,7 @@
             <td></td>
             <td></td>
             <td colspan="8">
-              <div collapse="!item.showDetails">
+              <div uib-collapse="!item.showDetails">
                 <div class="table-details-content">
 
                   <div class="row">

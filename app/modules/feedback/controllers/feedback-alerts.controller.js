@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.ds.feedback').controller('AlertsController', function($log, $modal) {
+  angular.module('pb.ds.feedback').controller('AlertsController', function($log, $uibModal) {
 
     var _this = this;
 
