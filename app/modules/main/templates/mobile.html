@@ -4,7 +4,7 @@
       <div class="col-md-12">
         <div class="hero-header">
           <!-- <div class="eyebrow">Elements</div> -->
-          <h1>Guidance for Responsive Web</h1>
+          <h1>Guidance for Mobile</h1>
         </div>
       </div>
     </div>
@@ -43,10 +43,13 @@
       <div class="col-md-12">
         Foundations encompass a product’s building blocks — the “look, feel and tone” aspects of a product that reflect Pitney Bowes as a brand.
         <ul class="section-list">
-          <li ng-repeat="item in SLC.nav[1].Web[0].children[0].children[0].children">
+          <li ng-repeat="item in SLC.nav[2].Mobile[0].children[0].children[0].children">
               <a href="" ui-sref="{{item.value}}" >{{item.label}}</a>
           </li>
         </ul>
+        <p>
+          In addition, the <a href="" ui-sref="weblanding">web section</a> offers guidance on writing and iconography.
+        </p>
       </div>
     </div>
 
@@ -62,8 +65,9 @@
       <div class="col-md-12">
         Elements are the individual components of a product — the means by which your users interact with your product on a practical and functional level.
 
+
         <ul class="section-list">
-          <li ng-repeat="item in SLC.nav[1].Web[0].children[0].children[1].children">
+          <li ng-repeat="item in SLC.nav[2].Mobile[0].children[0].children[1].children">
               <a href="" ui-sref="{{item.value}}" >{{item.label}}</a>
           </li>
         </ul>
@@ -82,11 +86,11 @@
     </div>
     <div class="row">
       <div class="col-md-12 ">
-        Patterns show how to combine our design foundation with our design elements to address common product design scenarios.
+Patterns show how to combine our design foundation with our design elements to address common product design scenarios.
 
 
         <ul class="section-list">
-          <li ng-repeat="item in SLC.nav[1].Web[0].children[0].children[2].children">
+          <li ng-repeat="item in SLC.nav[2].Mobile[0].children[0].children[2].children">
               <a href="" ui-sref="{{item.value}}" >{{item.label}}</a>
           </li>
         </ul>

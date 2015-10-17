@@ -48,7 +48,7 @@
 
   // UI ROUTER CONFIG
   angular.module('app').config(function($stateProvider) {
-    $stateProvider.state('web', {
+    $stateProvider.state('weblanding', {
       url: '/web',
       templateUrl: 'modules/main/templates/web.html',
       controller: 'SectionLandingController as SLC',
@@ -61,6 +61,21 @@
         pageTitle: 'Web',
         access: 'public',
         bodyClass: 'web sectionlanding'
+      }
+    })
+    .state('mobilelanding', {
+      url: '/mobile',
+      templateUrl: 'modules/main/templates/mobile.html',
+      controller: 'SectionLandingController as SLC',
+      resolve: {
+        NavigationResolve: function($log, MockDataFactory) {
+          return MockDataFactory.query({filename: 'navigation'});
+        }
+      },
+      data: {
+        pageTitle: 'Mobile',
+        access: 'public',
+        bodyClass: 'mobile sectionlanding'
       }
     })
     .state('otherwise', {

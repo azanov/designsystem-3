@@ -8,7 +8,7 @@
 
     _this.nav = NavigationResolve;
 
-    $log.debug(_this.nav);
+    $log.debug(_this.nav[1].Web[0].children[0].children[0].children);
 
 
   });
