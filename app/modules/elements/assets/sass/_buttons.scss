@@ -206,6 +206,30 @@ fieldset[disabled] .btn {
   }
 }
 
+/////////////////
+// Tile Buttons
+/////////////////
+
+.tile-button {
+  border-radius: 0;
+  height: 120px;
+  width: 160px;
+  &:hover, &.hover {
+    @extend %fancy-focus;
+    background-color: #fff;
+  }
+  &:active,
+  &.active {
+    border-width: 2px;
+    background-color: #fff;
+  }
+  &.disabled, &[disabled] {
+    img {
+      filter: grayscale(100%);
+      border-color: #9b9b9b;
+    }
+  }
+}
 
 
 // Vertical button groups
