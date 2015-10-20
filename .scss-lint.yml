@@ -159,6 +159,8 @@ linters:
 
   TrailingZero:
     enabled: false
+  TrailingWhitespace:
+    enabled: false
 
   UnnecessaryMantissa:
     enabled: true
