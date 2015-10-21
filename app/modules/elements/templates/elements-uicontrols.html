@@ -733,23 +733,23 @@
         <div class="row">
           <div class="col-md-7">
             <figcaption>Enhanced Checkboxes</figcaption>
-            <div class="checkbox checkbox-enhanced">
-              <input checked id="check4" type="checkbox">
-              <label for="check4">Checked checkbox</label>
-            </div>
-            <div class="checkbox checkbox-enhanced">
-              <input id="check5" name="check" type="checkbox">
-              <label for="check5">Unchecked checkbox
+            <div class="controls-stacked">
+              <label class="control checkbox">
+                <input type="checkbox">
+                <span class="control-indicator"></span> Check this custom checkbox
               </label>
-            </div>
-            <div class="checkbox checkbox-enhanced disabled">
-              <input disabled id="check6" name="check" type="checkbox">
-              <label for="check6">Disabled checkbox
+              <label class="control checkbox">
+                <input type="checkbox">
+                <span class="control-indicator"></span> Check this custom checkbox
               </label>
-            </div>
-            <div class="checkbox checkbox-enhanced">
-              <input id="check3" name="check" type="checkbox">
-              <label for="check3">Checkbox that has a really long label that wraps to multiple lines
+              <label class="control checkbox">
+                <input type="checkbox">
+                <span class="control-indicator"></span> Check this custom checkbox
+              </label>
+              <label class="control checkbox disabled">
+                <!-- you can disabled to the label (class=control) only, or to both it and the input -->
+                <input type="checkbox" disabled="disabled">
+                <span class="control-indicator"></span> But not this custom checkbox
               </label>
             </div>
           </div>
@@ -778,20 +778,20 @@
         <div class="row spacer-top-lg">
           <div class="col-md-7">
             <figcaption>Enhanced Checkboxes</figcaption>
-            <div class="enhanced-inline">
-              <div class="checkbox checkbox-enhanced">
-                <input checked id="check7" type="checkbox">
-                <label for="check7">One</label>
-              </div>
-              <div class="checkbox checkbox-enhanced">
-                <input id="check8" name="check" type="checkbox">
-                <label for="check8">Two</label>
-              </div>
-              <div class="checkbox checkbox-enhanced ">
-                <input id="check9" name="check" type="checkbox">
-                <label for="check9">Three</label>
-              </div>
-            </div>
+            <div class="controls-inline">
+              <div class="controls-inline">
+         <label class="control checkbox">
+           <input type="checkbox">
+           <span class="control-indicator"></span> Custom checkbox
+         </label>
+         <label class="control checkbox">
+           <input type="checkbox">
+           <span class="control-indicator"></span> Custom checkbox
+         </label>
+
+
+       </div>
+     </div>
           </div>
           <div class="col-md-5">
             <figcaption>Standard OS Checkboxes</figcaption>
@@ -851,25 +851,20 @@
         <figure>
           <div class="col-md-7">
             <figcaption>Enhanced Radio Buttons</figcaption>
-            <div class="radio radio-enhanced">
-              <input checked id="radio3" name="radioOptions" type="radio">
-              <label for="radio3">Selected radio button</label>
-            </div>
-            <div class="radio radio-enhanced">
-              <input id="radio4" name="radioOptions" type="radio">
-              <label for="radio4">Deselected radio button
-              </label>
-            </div>
-            <div class="radio radio-enhanced disabled">
-              <input disabled id="radio5" name="radioOptions" type="radio">
-              <label for="radio5">Disabled radio button
-              </label>
-            </div>
-            <div class="radio radio-enhanced">
-              <input id="radio6" name="radioOptions" type="radio">
-              <label for="radio6">Radio button that has a really long lable that wraps to multiple lines
-              </label>
-            </div>
+            <div class="controls-stacked">
+                  <label class="control radio">
+                    <input id="radio1" name="radio" type="radio">
+                    <span class="control-indicator"></span> Toggle this custom radio
+                  </label>
+                  <label class="control radio">
+                    <input id="radio2" name="radio" type="radio">
+                    <span class="control-indicator"></span> Or toggle this other custom radio
+                  </label>
+                  <label class="control radio disabled">
+                    <input id="radio2" name="radio" type="radio">
+                    <span class="control-indicator"></span> Or toggle this other custom radio
+                  </label>
+                </div>
           </div>
           <div class="col-md-5">
             <figcaption>Standard OS Radio Buttons</figcaption>
@@ -898,22 +893,19 @@
         <figure>
           <div class="col-md-7">
             <figcaption>Enhanced Radio Buttons</figcaption>
-            <div class="enhanced-inline">
-              <div class="radio radio-enhanced">
-                <input checked id="radioA" name="radioOptionsInline" type="radio">
-                <label for="radioA">One</label>
-              </div>
-              <div class="radio radio-enhanced">
-                <input id="radioB" name="radioOptionsInline" type="radio">
-                <label for="radioB">Two
-                </label>
-              </div>
-              <div class="radio radio-enhanced disabled">
-                <input disabled id="radioC" name="radioOptionsInline" type="radio">
-                <label for="radioC">Three (disabled)
-                </label>
-              </div>
-            </div>
+            <div class="controls-inline">
+            <label class="control radio">
+              <input id="radio11" name="radio" type="radio">
+              <span class="control-indicator"></span> Custom radio
+            </label>
+            <label class="control radio">
+              <input id="radio22" name="radio" type="radio">
+              <span class="control-indicator"></span> Or Custom radio
+            </label>
+    </div>
+
+
+
           </div>
           <div class="col-md-5">
             <figcaption>Standard OS Radio Buttons</figcaption>
