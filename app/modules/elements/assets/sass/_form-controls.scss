@@ -1,19 +1,8 @@
 // scss-lint:disable VendorPrefix, MergeableSelector
-/*
- * WTF, forms?
- * Released under MIT and copyright 2014 Mark Otto.
- * http://wtfforms.com
- *
- * Embedded icons from Open Iconic.
- * Released under MIT and copyright 2014 Waybury.
- * http://useiconic.com/open
- */
 
-
-
-/*
- * Checkboxes and radios
- */
+/////////////////////////
+/// Checkboxes and radios
+/////////////////////////
 
 .control {
   position: relative;
@@ -49,33 +38,32 @@
           user-select: none;
 }
 
-/* Hover state */
-/* Uncomment if you need it, but be aware of the sticky iOS states.
-.control:hover .control-indicator {
-  color: #fff;
-  background-color: #ccc;
-}
-*/
+//* Hover state */
+//.control:hover .control-indicator {
+//  color: #fff;
+//  background-color: #ccc;
+//}
+/*/
 
-/* Focus */
+// Focus */
 .control input:focus ~ .control-indicator {
   box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #8b98c8;
 }
 
-/* Checked state */
+//* Checked state */
 .control input:checked ~ .control-indicator {
   color: #3E53A4;
   border: 1px solid #3E53A4;
   background-color: #fff;
 }
 
-/* Active */
+//* Active */
 .control input:active ~ .control-indicator {
   color: #3E53A4;
   background-color: #fff;
 }
 
-/* Disabled */
+//* Disabled */
 .control input[disabled] ~ .control-indicator, .control.disabled input ~ .control-indicator {
   color: #dbdbdb;
   background-color: #f0f0f0;
@@ -87,7 +75,7 @@
   cursor: default;
 }
 
-/* Checkbox modifiers */
+//* Checkbox modifiers */
 .checkbox .control-indicator {
   border-radius: 0;
 }
@@ -95,7 +83,7 @@
   background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgOSA4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik03LjIyMSAwbC0uNzkuNzktMy4xNTkgMy4xNTktLjkwMy0uOTAzLS43OS0uNzktMS41NzkgMS41NzkuNzkuNzkgMS42OTIgMS42OTIuNzkuNzkuNzktLjc5IDMuOTQ5LTMuOTQ5Ljc5LS43OS0xLjU3OS0xLjU3OXoiIGZpbGw9IiMzRTUzQTQiLz48L3N2Zz4=');
 }
 
-/* Radio modifiers */
+//* Radio modifiers */
 .radio .control-indicator {
   border-radius: 50%;
 }
@@ -105,9 +93,9 @@
 
 
 
-/*
- * Control layouts
- */
+///////////////////
+/// Control layouts
+///////////////////
 
 .controls-stacked {
   margin: 15px 0;
