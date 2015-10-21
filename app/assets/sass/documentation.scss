@@ -19,6 +19,15 @@
     height: 500px;
   }
 
+  p.versions {
+    font-size: 12px !important;
+    a {
+      font-size: 12px;
+      color: hsl(0, 0%, 90%);
+      text-decoration: underline;
+    }
+  }
+
   .diptych {
     display: flex;
     align-items: center;
