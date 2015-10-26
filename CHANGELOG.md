@@ -1,5 +1,108 @@
 ##Release Notes
 
+###2.2.0 -- October 30, 2015
+The Design System is now available via [Bower](http://bower.io). See the [bower-designsystem](https://github.com/PBGUX/bower-designsystem) repo for more information and installation.
+
+
+######CSS changes
+**BREAKING CHANGES**
+- updated angular-daterange-picker to v0.2.0 and now supports Bootstrap Daterangepicker v2+ (prior versions of CSS is not supported)
+- Enhanced input and radio buttons use [WTF forms](http://wtfforms.com/) as a base to support accessibility keyboard interaction and focus states. The markup structure and class names have changed as follows:
+```html
+<!-- Stacked checkboxes -->
+<div class="controls-stacked">
+  <label class="control checkbox">
+    <input type="checkbox">
+    <span class="control-indicator"></span> Check this custom checkbox
+  </label>
+  <label class="control checkbox disabled">
+    <input type="checkbox" disabled="disabled">
+    <span class="control-indicator"></span> But not this custom checkbox
+  </label>
+</div>
+
+<!-- Inline checkboxes -->
+<div class="controls-inline">
+  <label class="control checkbox">
+    <input type="checkbox">
+    <span class="control-indicator"></span> Custom checkbox
+  </label>
+  <label class="control checkbox">
+    <input type="checkbox">
+    <span class="control-indicator"></span> Custom checkbox
+  </label>
+</div>
+
+
+<!-- Stacked radio buttons -->
+<div class="controls-stacked">
+  <label class="control radio">
+    <input id="radio1" name="radio" type="radio">
+    <span class="control-indicator"></span> Toggle this custom radio
+  </label>
+  <label class="control radio disabled">
+    <input id="radio2" name="radio" type="radio">
+    <span class="control-indicator"></span> Or toggle this other custom radio
+  </label>
+</div>
+
+<!-- Inline radio buttons -->
+<div class="controls-inline">
+  <label class="control radio">
+    <input id="radio11" name="radio" type="radio">
+    <span class="control-indicator"></span> Custom radio
+  </label>
+  <label class="control radio">
+    <input id="radio22" name="radio" type="radio">
+    <span class="control-indicator"></span> Or Custom radio
+  </label>
+</div>
+```
+
+
+**NON-BREAKING CHANGES**
+- primary button disabled state fill slightly darkened
+- secondary disabled button now has no fill color
+- .site-content calc() correctly calculates footer placement
+- color changes:
+  - cyan 300 from #66C3EC to #66C4D9
+  - cyan 700 from #007CB2 to #007D99
+  - yellow 500 from #EEB700 to #EDB700
+- adjusted header menu items for consistency
+  - mega menu: removed item animation, indent titles and items to left align
+  - single menu: reduce vertical padding
+- .tile-button no longer has image embeded in css (.logo-button-usps removed), the image should be added in markup
+```html
+<button type="button" name="button" class="btn btn-default tile-button">
+  <img src="assets/images/logo-usps.png" alt="">
+</button>
+```
+
+
+######Wesite changes
+- added web and mobile roadmaps in embeded iframes
+- upgrade angular ui-select to v13.2
+- upgrade angular-bootstrap to v14.3
+- fixed references to bootstrap to use bower_components
+- added landing pages for web and mobile buttons from homepage
+- added version numbers for web and mobile to the homepage header
+- change text description for BG3-5 on color page:
+  - BG3 - #EAEDF8 - Summary Tables / Vertical Dividers / Hover States
+  - BG4 - #D8DBF1 - Selected States
+  - BG5 - #C5CBE3 - Data Cell Borders
+- Color Selection portion of Color page had incorrect text labels (colors in CSS were correct):
+  - Change PB Blue from #72BF44 to #3E53A4
+  - Change 700 from #5A9836 to #314183
+  - Change 500 from #72BF44 to #3E53A4
+  - Change 300 from #F5A66D to #8B98C8
+  - Change PB Magenta from #72BF44 to #CF0989
+  - Change Error Color from #E70600 to #DC0000
+- fix download links for personas under resources > strategy; one link missing file extension (.pdf), "+" character causing issue in some browsers
+
+######Thanks to the following contributors and bug reporters:
+Luke Daugherty, Nick Roberts, Nisha Rana, dustin2524, Ron Cianfaglione, Sam Swartz
+
+
 ###2.1.1 -- October 2015 update
 ######CSS changes
 
