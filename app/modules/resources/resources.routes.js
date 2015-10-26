@@ -25,10 +25,18 @@
       templateUrl: 'modules/resources/templates/resources-tools.html'
     })
 
+    .state('resources.gallery', {
+      url: '/gallery',
+      templateUrl: 'modules/resources/templates/resources-gallery.html'
+    })
+
     .state('resources.roadmap', {
       url: '/roadmap',
       templateUrl: 'modules/resources/templates/resources-roadmap.html'
     });
+
+
+
 
   });
 
