@@ -3,7 +3,7 @@
 
   // scss-lint:disable DuplicateProperty
   min-height: 550px; //fallback, just in case
-  min-height: calc(100vh - (45px + 40px)); //45 for nav height, 40 for additional margin
+  min-height: calc(100vh - (50px + 40px + 44px)); //50 for nav height, 40 footer margin, 44 footer height
 }
 
 // wrap box
