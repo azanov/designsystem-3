@@ -23,6 +23,11 @@
     .state('resources.tools', {
       url: '/tools',
       templateUrl: 'modules/resources/templates/resources-tools.html'
+    })
+
+    .state('resources.gallery', {
+      url: '/gallery',
+      templateUrl: 'modules/resources/templates/resources-gallery.html'
     });
 
   });
