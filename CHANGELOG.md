@@ -61,6 +61,7 @@ The Design System is now available via [Bower](http://bower.io). See the [bower-
 
 
 **NON-BREAKING CHANGES**
+- fa-lg issue with pb-font icons (fixes [#35](https://github.com/PBGUX/designsystem/issues/35))
 - primary button disabled state fill slightly darkened
 - secondary disabled button now has no fill color
 - .site-content calc() correctly calculates footer placement
@@ -79,7 +80,7 @@ The Design System is now available via [Bower](http://bower.io). See the [bower-
 ```
 
 
-######Website changes
+######Wesite changes
 - added web and mobile roadmaps in embeded iframes
 - upgrade angular ui-select to v13.2
 - upgrade angular-bootstrap to v14.3
