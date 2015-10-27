@@ -61,6 +61,7 @@ The Design System is now available via [Bower](http://bower.io). See the [bower-
 
 
 **NON-BREAKING CHANGES**
+- fa-lg issue with pb-font icons (fixes [#35](https://github.com/PBGUX/designsystem/issues/35))
 - primary button disabled state fill slightly darkened
 - secondary disabled button now has no fill color
 - .site-content calc() correctly calculates footer placement
