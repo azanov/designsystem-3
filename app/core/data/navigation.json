@@ -84,7 +84,10 @@
           }, {
             "label": "Welcome",
             "value": "patterns.welcome"
-          }, {
+          },{
+            "label": "Split Views",
+            "value": "splitview.page"
+          },  {
             "label": "Page Errors",
             "value": "patterns.errorpages"
           }, {

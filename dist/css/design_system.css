@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.1.1
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Mon Oct 26 2015 13:03:00 GMT-0400 (EDT) 
+ * Built Tue Oct 27 2015 09:04:16 GMT-0400 (EDT) 
  */
 .container-fluid {
   padding-left: 40px;
@@ -319,6 +319,12 @@ ul, ol {
 
 .fa-lg {
   font-size: 1.5em; }
+
+.pb-lg {
+  font-size: 1.4em;
+  line-height: .5;
+  display: inline-block;
+  vertical-align: -3px; }
 
 .transition-all {
   transition: all .2s ease-in-out; }
@@ -1870,7 +1876,7 @@ select.form-control {
 .control {
   position: relative;
   display: inline-block;
-  padding-left: 20px;
+  padding-left: 25px;
   color: #555;
   cursor: pointer; }
 
@@ -1882,18 +1888,18 @@ select.form-control {
 
 .control-indicator {
   position: absolute;
-  top: 2px;
+  top: 0;
   left: 0;
   display: block;
-  width: 15px;
-  height: 15px;
-  line-height: 15px;
-  font-size: 65%;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  font-size: 100%;
   color: #eee;
   border: 1px solid #9b9b9b;
   text-align: center;
   background-color: #fff;
-  background-size: 65% 65%;
+  background-size: 50% 50%;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-user-select: none;
@@ -1905,7 +1911,7 @@ select.form-control {
 
 // Focus */
 .control input:focus ~ .control-indicator {
-  box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #8b98c8; }
+  box-shadow: 0 0 0 .08rem #fff, 0 0 0 .2rem #8b98c8; }
 
 .control input:checked ~ .control-indicator {
   color: #3E53A4;
@@ -1936,7 +1942,7 @@ select.form-control {
   border-radius: 50%; }
 
 .radio input:checked ~ .control-indicator {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgNiA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0zIDBjLTEuNyAwLTMgMS4zLTMgM3MxLjMgMyAzIDMgMy0xLjMgMy0zLTEuMy0zLTMtM3oiIGZpbGw9IiMzRTUzQTQiLz48L3N2Zz4="); }
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgNiA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxjaXJjbGUgZmlsbD0iIzNFNTNBNCIgY3g9IjMiIGN5PSIzIiByPSIzIi8+PC9zdmc+"); }
 
 .controls-stacked {
   margin: 15px 0; }
@@ -1950,8 +1956,11 @@ select.form-control {
 .controls-inline {
   margin: 15px 0; }
 
+.form-inline .controls-inline .control.radio {
+  padding-left: 10px; }
+
 .controls-inline .control {
-  display: inline-block;
+  display: inline;
   height: 15px; }
 
 .controls-inline .control + .control {
