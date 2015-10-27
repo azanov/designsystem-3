@@ -1,5 +1,5 @@
-
-    <ul class="nav nav-list">
+<div class="leftnav-tree">
+    <ul class="nav nav-list ">
       <li ng-repeat="n in splitview.leftnav" ng-class="{ 'open': showDetails }"  class="nav-header" ng-click="showDetails = !showDetails">
         <label class="tree-toggle" >
           {{n.label}}
@@ -11,3 +11,4 @@
         </ul>
       </li>
     </ul>
+  </div>

@@ -68,6 +68,26 @@
         access: 'public',
         bodyClass: 'splitview splitview-white-open'
       }
+    })
+
+    .state('splitview.six', {
+      url: '/splitview/six',
+      templateUrl: 'modules/splitview/templates/splitview-six.html',
+      data: {
+        pageTitle: 'Split Views',
+        access: 'public',
+        bodyClass: 'splitview splitview-white-open'
+      }
+    })
+
+    .state('splitview.seven', {
+      url: '/splitview/seven',
+      templateUrl: 'modules/splitview/templates/splitview-seven.html',
+      data: {
+        pageTitle: 'Split Views',
+        access: 'public',
+        bodyClass: 'splitview splitview-white-open'
+      }
     });
 
 
