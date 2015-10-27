@@ -10,9 +10,9 @@
       controller: 'SplitviewController as splitview'
     })
 
-    .state('splitview.page', {
-      url: '/page',
-      templateUrl: 'modules/splitview/templates/splitview-page.html',
+    .state('splitview.overview', {
+      url: '/overview',
+      templateUrl: 'modules/splitview/templates/splitview-overview.html',
       data: {
         pageTitle: 'Split Views - Overview',
         access: 'public',
@@ -56,7 +56,7 @@
       data: {
         pageTitle: 'Split Views - Four',
         access: 'public',
-        bodyClass: 'splitview splitview-whiteopen'
+        bodyClass: 'splitview splitview-white-open'
       }
     })
 
@@ -66,7 +66,7 @@
       data: {
         pageTitle: 'Split Views',
         access: 'public',
-        bodyClass: 'splitview splitview-whiteopenfluid'
+        bodyClass: 'splitview splitview-white-open'
       }
     });
 

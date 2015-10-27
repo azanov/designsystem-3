@@ -1,17 +1,14 @@
 <div class="container">
   <div class="row two-col-wrapper">
     <div class="col-md-2 leftnav">
-      <div class="list-group">
-        <a class="list-group-item active" href="">Validate Address</a>
-        <a class="list-group-item" href="">Get Postal Codes</a>
-        <a class="list-group-item" href="">Get City/State/Province</a>
-        <a class="list-group-item" href="">Get Candidate Address</a>
-        <a class="list-group-item" href="">Auto Complete</a>
-      </div>
+
+      <div ng-include="'modules/splitview/templates/includes/leftnav-simple.html'"></div>
+
+
     </div>
     <div class="col-md-9  main-content">
 
-      <div ng-include="'modules/splitview/templates/fpo-content.html'"></div>
+      <div ng-include="'modules/splitview/templates/includes/fpo-content.html'"></div>
 
 
     </div><!-- end main content -->

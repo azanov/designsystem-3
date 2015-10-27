@@ -40,9 +40,6 @@
   }
 }
 
-// there are 5 variations
-
-//first
 // gray navbar / white bg / 2 rules
 .splitview-filled {
   .leftnav {
@@ -52,8 +49,6 @@
   }
 }
 
-
-// second
 // white navbar / gray bg / 3 rules
 .splitview-white {
   background-color: $pb-bg1;
@@ -70,7 +65,6 @@
 }
 
 
-// third
 // white navbar / white bg / 3 rules
 .splitview-white-filled{
   .leftnav {
@@ -82,12 +76,27 @@
   }
 }
 
-// fourth
-// white bar, bg, 1 rule dividing only
-.splitview-whiteopen {
+
+// white navbar / white bg / 1 rule
+.splitview-white-open {
   .leftnav {
     border-right: 1px solid #e8e8e8;
-    background-color: #fff;
+  }
+}
+
+.splitview-white-open-fluid {
+  .leftnav {
+    border-right: 1px solid #e8e8e8;
+  }
+}
+//NOTE: set container-fluid in html container tag
+
+
+
+// fourth
+// white bar, bg, 1 rule dividing only
+.sectioned {
+
 
     .list-group-section {
       &:not(:first-child) {
@@ -113,10 +122,10 @@
       }
     }
   }
-}
+
 
 // fifth
-// white bar, bg, 1 rule dividing only, container fluid
+// white bar & bg, 1 rule dividing only, container fluid
 // container-fluid must be set separately in the html
 .splitview-whiteopenfluid {
   .leftnav {

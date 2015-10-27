@@ -86,7 +86,7 @@
             "value": "patterns.welcome"
           }, {
             "label": "Split Views",
-            "value": "splitview.page"
+            "value": "splitview.overview"
           }, {
            "label": "Page Errors",
            "value": "patterns.errorpages"
