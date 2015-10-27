@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.1.1
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Fri Oct 23 2015 15:58:46 GMT-0400 (EDT) 
+ * Built Mon Oct 26 2015 13:03:00 GMT-0400 (EDT) 
  */
 .container-fluid {
   padding-left: 40px;
@@ -3205,7 +3205,7 @@ a.app-launcher {
     display: inline-block; } }
 .site-content {
   min-height: 550px;
-  min-height: calc(100vh - (45px + 40px)); }
+  min-height: calc(100vh - (50px + 40px + 44px)); }
 
 .footer-wrapper {
   background-color: #e1e1e1; }

@@ -49,16 +49,12 @@
 
 <div class="container">
 
-
-
-<!-- intro text block is larger, but only 8 cols wide -->
+  <!-- intro text block is larger, but only 8 cols wide -->
   <div class="row">
     <div class="col-md-8">
-      <h1 id="inputfields" class="doc-head">Input Fields</h1>
+      <h1 class="doc-head" id="inputfields">Input Fields</h1>
     </div>
   </div>
-
-
 
   <div class="row">
     <div class="col-md-12">
@@ -175,7 +171,6 @@
     </div>
   </div>
 
-
   <div class="row">
     <div class="col-md-12">
       <h2 class="doc-sectionhead">Errors</h2>
@@ -204,8 +199,6 @@
 
     </div>
   </div>
-
-
 
   <div class="row">
     <div class="col-md-12">
@@ -242,7 +235,9 @@
             <figcaption>Help Icon Next to Label</figcaption>
             <div class="form-group">
               <label>Text field label
-                <a href=""><i class="fa fa-info-circle"></i></a>
+                <a href="">
+                  <i class="fa fa-info-circle"></i>
+                </a>
               </label>
               <input class="form-control" type="text">
             </div>
@@ -275,9 +270,6 @@
 
     </div>
   </div>
-
-
-
 
   <div class="row">
     <div class="col-md-12">
@@ -413,19 +405,16 @@
               <label for="">Text label</label>
               <div class="input-group input-group-sm">
                 <span class="input-group-addon" id="sizing-addon3">@</span>
-                <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3">
+                <input aria-describedby="sizing-addon3" class="form-control" placeholder="Username" type="text">
               </div>
             </div>
           </figure>
-
-
 
         </div>
       </div>
 
     </div>
   </div>
-
 
   <div class="row">
     <div class="col-md-8">
@@ -472,7 +461,7 @@
         <div class="col-md-5">
           <figure>
             <figcaption>Default Dropdown</figcaption>
-              <label>Text label</label>
+            <label>Text label</label>
             <div class="form-group">
               <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
                 <option value="">Select</option>
@@ -673,7 +662,7 @@
             <figcaption>Multi-Select with Tokens</figcaption>
             <div class="form-group">
               <label>Text label</label>
-              <ui-select ng-model="inputs.countrySelect.multipleSelected" theme="bootstrap" multiple >
+              <ui-select multiple  ng-model="inputs.countrySelect.multipleSelected" theme="bootstrap">
                 <ui-select-match placeholder="">{{$item.name}}</ui-select-match>
                 <ui-select-choices repeat="item in inputs.countrySelect.countries | filter: $select.search">
                   <div ng-bind-html="item.name | highlight: $select.search"></div>
@@ -700,7 +689,6 @@
 
     </div>
   </div>
-
 
   <div class="row">
     <div class="col-md-8">
@@ -736,20 +724,24 @@
             <div class="controls-stacked">
               <label class="control checkbox">
                 <input type="checkbox">
-                <span class="control-indicator"></span> Check this custom checkbox
+                <span class="control-indicator"></span>
+                Check this custom checkbox
               </label>
               <label class="control checkbox">
                 <input type="checkbox">
-                <span class="control-indicator"></span> Check this custom checkbox
+                <span class="control-indicator"></span>
+                Check this custom checkbox
               </label>
               <label class="control checkbox">
                 <input type="checkbox">
-                <span class="control-indicator"></span> Check this custom checkbox
+                <span class="control-indicator"></span>
+                Check this custom checkbox
               </label>
               <label class="control checkbox disabled">
                 <!-- you can disabled to the label (class=control) only, or to both it and the input -->
-                <input type="checkbox" disabled="disabled">
-                <span class="control-indicator"></span> But not this custom checkbox
+                <input disabled="disabled" type="checkbox">
+                <span class="control-indicator"></span>
+                But not this custom checkbox
               </label>
             </div>
           </div>
@@ -777,24 +769,23 @@
 
         <div class="row spacer-top-lg">
           <div class="col-md-7">
-            <figcaption>Enhanced Checkboxes</figcaption>
+            <figcaption>Enhanced Inline Checkboxes</figcaption>
             <div class="controls-inline">
-              <div class="controls-inline">
-         <label class="control checkbox">
-           <input type="checkbox">
-           <span class="control-indicator"></span> Custom checkbox
-         </label>
-         <label class="control checkbox">
-           <input type="checkbox">
-           <span class="control-indicator"></span> Custom checkbox
-         </label>
+              <label class="control checkbox">
+                <input type="checkbox">
+                <span class="control-indicator"></span>
+                Custom checkbox
+              </label>
+              <label class="control checkbox">
+                <input type="checkbox">
+                <span class="control-indicator"></span>
+                Custom checkbox
+              </label>
 
-
-       </div>
-     </div>
+            </div>
           </div>
           <div class="col-md-5">
-            <figcaption>Standard OS Checkboxes</figcaption>
+            <figcaption>Standard OS Inline Checkboxes</figcaption>
             <label class="checkbox-inline">
               <input checked id="inlineCheckbox1" type="checkbox" value="option1">
               One
@@ -809,6 +800,29 @@
             </label>
           </div>
         </div>
+
+        <div class="row spacer-top-lg">
+          <div class="col-md-8">
+            <figcaption>Enhanced Inline Checkboxes (when enclosed in "form-inline")</figcaption>
+            <div class="controls-inline">
+              <form class="form-inline">
+              <label class="control checkbox">
+                <input type="checkbox">
+                <span class="control-indicator"></span>
+                Custom checkbox
+              </label>
+              <label class="control checkbox">
+                <input type="checkbox">
+                <span class="control-indicator"></span>
+                Custom checkbox
+              </label>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
       </figure>
     </div>
   </div>
@@ -852,19 +866,22 @@
           <div class="col-md-7">
             <figcaption>Enhanced Radio Buttons</figcaption>
             <div class="controls-stacked">
-                  <label class="control radio">
-                    <input id="radio1" name="radio" type="radio">
-                    <span class="control-indicator"></span> Toggle this custom radio
-                  </label>
-                  <label class="control radio">
-                    <input id="radio2" name="radio" type="radio">
-                    <span class="control-indicator"></span> Or toggle this other custom radio
-                  </label>
-                  <label class="control radio disabled">
-                    <input id="radio2" name="radio" type="radio">
-                    <span class="control-indicator"></span> Or toggle this other custom radio
-                  </label>
-                </div>
+              <label class="control radio">
+                <input id="radio1" name="radio" type="radio">
+                <span class="control-indicator"></span>
+                Toggle this custom radio
+              </label>
+              <label class="control radio">
+                <input id="radio2" name="radio" type="radio">
+                <span class="control-indicator"></span>
+                Or toggle this other custom radio
+              </label>
+              <label class="control radio disabled">
+                <input id="radio2" name="radio" type="radio" disabled>
+                <span class="control-indicator"></span>
+                Or toggle this other custom radio
+              </label>
+            </div>
           </div>
           <div class="col-md-5">
             <figcaption>Standard OS Radio Buttons</figcaption>
@@ -889,22 +906,24 @@
         </figure>
 
       </div>
+
+
       <div class="row spacer-top-lg">
         <figure>
           <div class="col-md-7">
-            <figcaption>Enhanced Radio Buttons</figcaption>
+            <figcaption>Enhanced Inline Radio Buttons</figcaption>
             <div class="controls-inline">
-            <label class="control radio">
-              <input id="radio11" name="radio" type="radio">
-              <span class="control-indicator"></span> Custom radio
-            </label>
-            <label class="control radio">
-              <input id="radio22" name="radio" type="radio">
-              <span class="control-indicator"></span> Or Custom radio
-            </label>
-    </div>
-
-
+              <label class="control radio">
+                <input id="radio11" name="radio" type="radio">
+                <span class="control-indicator"></span>
+                Custom radio
+              </label>
+              <label class="control radio">
+                <input id="radio22" name="radio" type="radio">
+                <span class="control-indicator"></span>
+                Or Custom radio
+              </label>
+            </div>
 
           </div>
           <div class="col-md-5">
@@ -922,13 +941,38 @@
               Three
             </label>
           </div>
-
         </figure>
-
       </div>
+
+
+      <div class="row spacer-top-lg">
+        <figure>
+          <div class="col-md-8">
+            <figcaption>Enhanced Inline Radio Buttons (when enclosed in "form-inline")</figcaption>
+            <form class="form-inline">
+              <div class="controls-inline">
+                <label class="control radio">
+                  <input id="radio11" name="radio" type="radio">
+                  <span class="control-indicator"></span>
+                  Custom radio
+                </label>
+                <label class="control radio">
+                  <input id="radio22" name="radio" type="radio">
+                  <span class="control-indicator"></span>
+                  Or Custom radio
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-4">
+
+          </div>
+        </figure>
+      </div>
+
+
     </div>
   </div>
-
 
   <div class="row">
     <div class="col-md-8">
@@ -963,156 +1007,149 @@
     </div>
   </div>
 
+  <!-- DATE PICKER -->
+  <div class="row">
+    <div class="col-md-8">
+      <h1 class="doc-head" id="datepickers">Date Picker</h1>
+    </div>
+  </div>
 
- <!-- DATE PICKER -->
- <div class="row">
-   <div class="col-md-8">
-     <h1 class="doc-head" id="datepickers">Date Picker</h1>
-   </div>
- </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Usage</h2>
+    </div>
+  </div>
 
- <div class="row">
-   <div class="col-md-12">
-     <h2 class="doc-sectionhead">Usage</h2>
-   </div>
- </div>
+  <div class="row">
+    <div class="col-md-6">
+      <p>Never present the user with a blank menu. In most cases you should pre-populate the picker&rsquo;s input field with the current day&rsquo;s date (in your user&rsquo;s time zone).</p>
+    </div>
+  </div>
 
- <div class="row">
-   <div class="col-md-6">
-     <p>Never present the user with a blank menu. In most cases you should pre-populate the picker&rsquo;s input field with the current day&rsquo;s date (in your user&rsquo;s time zone).</p>
-   </div>
- </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Styles</h2>
+    </div>
+  </div>
 
- <div class="row">
-   <div class="col-md-12">
-     <h2 class="doc-sectionhead">Styles</h2>
-   </div>
- </div>
+  <div class="row">
+    <div class="col-md-3">
+      <p>
+        <a class="more-info plugin" href="https://github.com/fragaria/angular-daterangepicker" target="_blank">angular-daterangepicker v0.2.0</a>
+        <a class="more-info plugin" href="http://www.daterangepicker.com/" target="_blank">Bootstrap Daterange Picker v2.1.12</a>
+      </p>
+    </div>
 
- <div class="row">
-   <div class="col-md-3">
-     <p>
-       <a class="more-info plugin" href="https://github.com/fragaria/angular-daterangepicker" target="_blank">angular-daterangepicker v0.2.0</a>
-       <a class="more-info plugin" href="http://www.daterangepicker.com/" target="_blank">Bootstrap Daterange Picker v2.1.12</a>
-     </p>
-   </div>
+    <div class="col-md-7 col-md-offset-1">
 
-   <div class="col-md-7 col-md-offset-1">
+      <div class="row">
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Single Date Picker</figcaption>
+            <div class="input-group">
+              <input class="form-control" date-range-picker ng-model="inputs.singlepicker.date" options="inputs.singlepicker.options" type="text"/>
+              <span class="input-group-addon">
+                <i class="fa fa-fw fa-calendar"></i>
+              </span>
+            </div>
+          </figure>
+        </div>
+      </div>
 
-     <div class="row">
-       <div class="col-md-5">
-         <figure>
-           <figcaption>Single Date Picker</figcaption>
-           <div class="input-group">
-             <input class="form-control" date-range-picker ng-model="inputs.singlepicker.date" options="inputs.singlepicker.options" type="text"/>
-             <span class="input-group-addon">
-               <i class="fa fa-fw fa-calendar"></i>
-             </span>
-           </div>
-         </figure>
-       </div>
-     </div>
+      <div class="row spacer-top-sm">
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Date Range Picker</figcaption>
+            <div class="input-group">
+              <input class="form-control" date-range-picker ng-model="inputs.daterangepicker.date" options="inputs.daterangepicker.options" type="text"/>
+              <span class="input-group-addon">
+                <i class="fa fa-fw fa-calendar"></i>
+              </span>
+            </div>
+          </figure>
+        </div>
+      </div>
 
+      <div class="row spacer-top-sm">
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Date Range Picker with Auto Apply Option</figcaption>
+            <div class="input-group">
+              <input class="form-control" date-range-picker ng-model="inputs.daterangepicker2.date" options="inputs.daterangepicker2.options" type="text"/>
+              <span class="input-group-addon">
+                <i class="fa fa-fw fa-calendar"></i>
+              </span>
+            </div>
+          </figure>
+        </div>
+      </div>
 
-     <div class="row spacer-top-sm">
-       <div class="col-md-5">
-         <figure>
-           <figcaption>Date Range Picker</figcaption>
-           <div class="input-group">
-             <input class="form-control" date-range-picker ng-model="inputs.daterangepicker.date" options="inputs.daterangepicker.options" type="text"/>
-             <span class="input-group-addon">
-               <i class="fa fa-fw fa-calendar"></i>
-             </span>
-           </div>
-         </figure>
-       </div>
-     </div>
+      <div class="row spacer-top-sm">
+        <div class="col-md-8">
+          <figure>
+            <figcaption>Button Range Picker with Formatted Labels</figcaption>
+            <a class="btn btn-link" date-range-picker href="" ng-model="inputs.daterangepicker3.date" options="inputs.daterangepicker3.options">
+              <i class="fa fa-fw fa-calendar"></i>
+              {{inputs.daterangepicker3.displayDate()}}
+              <i class="fa fa-angle-down"></i>
+            </a>
+          </figure>
+        </div>
+      </div>
 
+      <!-- CUSTOM DATERANGE -->
+      <div class="row spacer-top-sm">
+        <div class="col-md-8">
 
-     <div class="row spacer-top-sm">
-       <div class="col-md-5">
-         <figure>
-           <figcaption>Date Range Picker with Auto Apply Option</figcaption>
-           <div class="input-group">
-             <input class="form-control" date-range-picker ng-model="inputs.daterangepicker2.date" options="inputs.daterangepicker2.options" type="text"/>
-             <span class="input-group-addon">
-               <i class="fa fa-fw fa-calendar"></i>
-             </span>
-           </div>
-         </figure>
-       </div>
-     </div>
+          <figure>
+            <figcaption>Custom Date Range with Single Date Pickers</figcaption>
+            <div class="input-group custom-daterange">
 
+              <div class="input-group-btn">
 
-     <div class="row spacer-top-sm">
-       <div class="col-md-8">
-         <figure>
-           <figcaption>Button Range Picker with Formatted Labels</figcaption>
-             <a href="" date-range-picker class="btn btn-link" ng-model="inputs.daterangepicker3.date" options="inputs.daterangepicker3.options">
-               <i class="fa fa-fw fa-calendar"></i> {{inputs.daterangepicker3.displayDate()}} <i class="fa fa-angle-down"></i>
-             </a>
-         </figure>
-       </div>
-     </div>
+                <button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+                  {{inputs.customRange.selected.label}}
+                  <i class="fa fa-angle-down"></i>
+                </button>
 
+                <ul class="dropdown-menu">
+                  <li ng-init="inputs.customRange.init()" ng-repeat="item in inputs.customRange.items">
+                    <a href="" ng-click="inputs.customRange.click(item)">{{item.label}}</a>
+                  </li>
+                </ul>
 
-     <!-- CUSTOM DATERANGE -->
-     <div class="row spacer-top-sm">
-       <div class="col-md-8">
+              </div>
 
-         <figure>
-           <figcaption>Custom Date Range with Single Date Pickers</figcaption>
-           <div class="input-group custom-daterange">
+              <div class="custom-daterange-container">
+                <div class="custom-daterange-labels" ng-show="!inputs.customRange.selected.isCustom">
+                  <span>{{inputs.customRange.selected.start | amDateFormat: 'MM/DD/YYYY'}}
+                    <span ng-show="inputs.customRange.selected.isRange">-
+                      {{inputs.customRange.selected.end | amDateFormat: 'MM/DD/YYYY'}}</span>
+                  </span>
+                </div>
 
-             <div class="input-group-btn">
+                <div class="custom-daterange-inputs" ng-show="inputs.customRange.selected.isCustom">
+                  <label>From</label>
+                  <input date-range-picker ng-model="inputs.customRange.start.date" options="inputs.customRange.start.options" readonly type="text">
+                  <label>To</label>
+                  <input date-range-picker ng-model="inputs.customRange.end.date" options="inputs.customRange.end.options" readonly type="text">
+                </div>
+              </div>
 
-               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 {{inputs.customRange.selected.label}} <i class="fa fa-angle-down"></i>
-               </button>
+              <div class="input-group-addon">
+                <i class="fa fa-fw fa-calendar"></i>
+              </div>
 
-               <ul class="dropdown-menu">
-                 <li ng-init="inputs.customRange.init()" ng-repeat="item in inputs.customRange.items">
-                   <a href="" ng-click="inputs.customRange.click(item)">{{item.label}}</a>
-                 </li>
-               </ul>
+            </div>
+          </figure>
 
-             </div>
+        </div>
+      </div>
 
-             <div class="custom-daterange-container">
-               <div ng-show="!inputs.customRange.selected.isCustom" class="custom-daterange-labels">
-                 <span>{{inputs.customRange.selected.start | amDateFormat: 'MM/DD/YYYY'}} <span ng-show="inputs.customRange.selected.isRange">- {{inputs.customRange.selected.end | amDateFormat: 'MM/DD/YYYY'}}</span></span>
-               </div>
+    </div>
+  </div>
 
-               <div class="custom-daterange-inputs" ng-show="inputs.customRange.selected.isCustom">
-                 <label>From</label>
-                 <input type="text" ng-model="inputs.customRange.start.date" date-range-picker options="inputs.customRange.start.options" readonly>
-                 <label>To</label>
-                 <input type="text" ng-model="inputs.customRange.end.date" date-range-picker options="inputs.customRange.end.options" readonly>
-               </div>
-             </div>
-
-             <div class="input-group-addon">
-               <i class="fa fa-fw fa-calendar"></i>
-             </div>
-
-           </div>
-         </figure>
-
-       </div>
-     </div>
-
-   </div>
- </div>
-
-
-
-
-
-
-
-
-
- <!-- SWITCHES -->
+  <!-- SWITCHES -->
   <div class="row">
     <div class="col-md-8">
       <h1 class="doc-head" id="switches">Switches</h1>
@@ -1159,8 +1196,6 @@
     </div>
   </div>
 
-
-
   <div class="row">
     <div class="col-md-8">
       <h1 class="doc-head" id="writing">Writing for UI Controls</h1>
@@ -1198,6 +1233,5 @@
       </ul>
     </div>
   </div>
-
 
 </div>
