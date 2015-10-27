@@ -79,7 +79,7 @@ The Design System is now available via [Bower](http://bower.io). See the [bower-
 ```
 
 
-######Wesite changes
+######Website changes
 - added web and mobile roadmaps in embeded iframes
 - upgrade angular ui-select to v13.2
 - upgrade angular-bootstrap to v14.3
