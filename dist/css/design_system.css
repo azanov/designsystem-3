@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.1.1
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Mon Oct 26 2015 13:03:00 GMT-0400 (EDT) 
+ * Built Tue Oct 27 2015 14:10:42 GMT-0400 (EDT) 
  */
 .container-fluid {
   padding-left: 40px;
@@ -319,6 +319,12 @@ ul, ol {
 
 .fa-lg {
   font-size: 1.5em; }
+
+.pb-lg {
+  font-size: 1.4em;
+  line-height: .5;
+  display: inline-block;
+  vertical-align: -3px; }
 
 .transition-all {
   transition: all .2s ease-in-out; }
@@ -1870,7 +1876,7 @@ select.form-control {
 .control {
   position: relative;
   display: inline-block;
-  padding-left: 20px;
+  padding-left: 25px;
   color: #555;
   cursor: pointer; }
 
@@ -1882,18 +1888,18 @@ select.form-control {
 
 .control-indicator {
   position: absolute;
-  top: 2px;
+  top: 0;
   left: 0;
   display: block;
-  width: 15px;
-  height: 15px;
-  line-height: 15px;
-  font-size: 65%;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  font-size: 100%;
   color: #eee;
   border: 1px solid #9b9b9b;
   text-align: center;
   background-color: #fff;
-  background-size: 65% 65%;
+  background-size: 50% 50%;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-user-select: none;
@@ -1905,7 +1911,7 @@ select.form-control {
 
 // Focus */
 .control input:focus ~ .control-indicator {
-  box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #8b98c8; }
+  box-shadow: 0 0 0 .08rem #fff, 0 0 0 .2rem #8b98c8; }
 
 .control input:checked ~ .control-indicator {
   color: #3E53A4;
@@ -1936,7 +1942,7 @@ select.form-control {
   border-radius: 50%; }
 
 .radio input:checked ~ .control-indicator {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgNiA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0zIDBjLTEuNyAwLTMgMS4zLTMgM3MxLjMgMyAzIDMgMy0xLjMgMy0zLTEuMy0zLTMtM3oiIGZpbGw9IiMzRTUzQTQiLz48L3N2Zz4="); }
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgNiA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxjaXJjbGUgZmlsbD0iIzNFNTNBNCIgY3g9IjMiIGN5PSIzIiByPSIzIi8+PC9zdmc+"); }
 
 .controls-stacked {
   margin: 15px 0; }
@@ -1950,8 +1956,11 @@ select.form-control {
 .controls-inline {
   margin: 15px 0; }
 
+.form-inline .controls-inline .control.radio {
+  padding-left: 10px; }
+
 .controls-inline .control {
-  display: inline-block;
+  display: inline;
   height: 15px; }
 
 .controls-inline .control + .control {
@@ -4562,6 +4571,14 @@ td.centered, th.centered {
 .landing h3 {
   color: #2e2e2e; }
 
+.splitview a, .splitview-three .leftnav .list-group-section a.list-group-item {
+  font-size: 14px;
+  color: #717171; }
+.splitview a:hover, .splitview-three .leftnav .list-group-section a.list-group-item:hover {
+  background-color: #eaedf8; }
+.splitview a:active, .splitview-three .leftnav .list-group-section a.list-group-item:active, .splitview a.active, .splitview-three .leftnav .list-group-section a.active.list-group-item {
+  background-color: #c5cbe3; }
+
 .splitview footer {
   margin: 0; }
 .splitview .two-col-wrapper {
@@ -4573,77 +4590,81 @@ td.centered, th.centered {
       -ms-flex-align: stretch;
           align-items: stretch; }
 .splitview .two-col-wrapper .main-content {
-  padding-top: 90px; }
-.splitview .leftnav {
+  padding-top: 90px;
+  margin-left: 25px; }
+.splitview .two-col-wrapper .leftnav {
   padding: 90px 0 0;
-  min-height: 100%;
-  margin: 0 30px 0 0; }
-.splitview .leftnav-gray {
+  min-height: 100%; }
+
+.splitview-one .leftnav {
   background-color: #f8f8f8;
   border-left: 1px solid #e8e8e8;
   border-right: 1px solid #e8e8e8; }
-.splitview .leftnav-white {
+
+.splitview-two {
+  background-color: #f0f0f0; }
+.splitview-two .leftnav {
   background-color: #fff;
   border-left: 1px solid #e8e8e8;
   border-right: 1px solid #e8e8e8; }
-.splitview .leftnav a {
-  font-size: 14px;
-  color: #2e2e2e; }
-.splitview .leftnav a:hover {
-  background-color: #eaedf8; }
-.splitview .leftnav a:active, .splitview .leftnav a.active {
-  background-color: #c5cbe3; }
-.splitview .leftnav .list-group-section:not(:first-child) {
+.splitview-two .two-col-wrapper {
+  background-color: #fff; }
+
+.splitview-three .leftnav {
+  border-right: 1px solid #e8e8e8;
+  background-color: #fff; }
+.splitview-three .leftnav .list-group-section:not(:first-child) {
   border-top: 1px solid #e8e8e8; }
-.splitview .leftnav .list-group-section:last-child {
+.splitview-three .leftnav .list-group-section:last-child {
   border-bottom: 1px solid #e8e8e8; }
-.splitview .leftnav .list-group-section h3 {
-  font-size: 16px;
+.splitview-three .leftnav .list-group-section h3 {
+  font-size: 14px;
   padding: 10px 15px;
   margin-bottom: 0; }
-.splitview .leftnav .list-group-section .list-group {
+.splitview-three .leftnav .list-group-section .list-group {
   margin-bottom: 10px; }
-.splitview .leftnav .nav-list .nav-header {
+
+.splitview-four .leftnav .nav-list .nav-header {
   margin-top: 10px;
   padding-top: 10px; }
-.splitview .leftnav .nav-list .nav-header:not(:first-child) {
+.splitview-four .leftnav .nav-list .nav-header:not(:first-child) {
   border-top: 1px solid #e8e8e8; }
-.splitview .leftnav .nav-list .nav-header:last-child {
+.splitview-four .leftnav .nav-list .nav-header:last-child {
   border-bottom: 1px solid #e8e8e8; }
-.splitview .leftnav .nav-list .nav-header label {
+.splitview-four .leftnav .nav-list .nav-header label {
   cursor: pointer;
   font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   color: #2e2e2e;
   padding-left: 10px; }
-.splitview .leftnav .nav-list .nav-header i {
+.splitview-four .leftnav .nav-list .nav-header i {
   float: right;
   margin-right: 10px;
   margin-top: 2px;
   color: #2e2e2e;
   transition: -webkit-transform .2s linear;
   transition: transform .2s linear; }
-.splitview .leftnav .nav-list .nav-header.open i {
+.splitview-four .leftnav .nav-list .nav-header.open i {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   margin-right: 10px; }
-.splitview .leftnav .nav-list .nav-header a {
+.splitview-four .leftnav .nav-list .nav-header a {
   font-size: inherit;
   display: block; }
-.splitview .leftnav .nav-list .nav-header a:hover {
+.splitview-four .leftnav .nav-list .nav-header a:hover {
   text-decoration: none; }
-.splitview .leftnav .nav-list .tree {
+.splitview-four .leftnav .nav-list .tree {
   padding: 0; }
-.splitview .leftnav .nav-list .tree li {
+.splitview-four .leftnav .nav-list .tree li {
   padding-left: 0; }
-.splitview .leftnav .nav-list .tree li a {
+.splitview-four .leftnav .nav-list .tree li a {
   font-size: 14px;
   padding: 10px;
   color: #2e2e2e;
   display: block; }
-.splitview .leftnav .nav-list .tree li a:hover {
+.splitview-four .leftnav .nav-list .tree li a:hover {
   background-color: #eaedf8; }
-.splitview .leftnav .nav-list .tree li a:active, .splitview .leftnav .nav-list .tree li a.active {
+.splitview-four .leftnav .nav-list .tree li a:active, .splitview-four .leftnav .nav-list .tree li a.active {
   background-color: #c5cbe3; }
 
 .framed {

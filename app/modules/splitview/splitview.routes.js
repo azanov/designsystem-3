@@ -24,9 +24,9 @@
       url: '/splitview/one',
       templateUrl: 'modules/splitview/templates/splitview-one.html',
       data: {
-        pageTitle: 'Split Views',
+        pageTitle: 'Split Views - One',
         access: 'public',
-        bodyClass: 'splitview'
+        bodyClass: 'splitview splitview-one'
       }
     })
 
@@ -34,9 +34,9 @@
       url: '/splitview/two',
       templateUrl: 'modules/splitview/templates/splitview-two.html',
       data: {
-        pageTitle: 'Split Views',
+        pageTitle: 'Split Views - Two',
         access: 'public',
-        bodyClass: 'splitview'
+        bodyClass: 'splitview splitview-two'
       }
     })
 
@@ -44,9 +44,9 @@
       url: '/splitview/three',
       templateUrl: 'modules/splitview/templates/splitview-three.html',
       data: {
-        pageTitle: 'Split Views',
+        pageTitle: 'Split Views - Three',
         access: 'public',
-        bodyClass: 'splitview'
+        bodyClass: 'splitview splitview-three'
       }
     })
 
@@ -54,9 +54,9 @@
       url: '/splitview/four',
       templateUrl: 'modules/splitview/templates/splitview-four.html',
       data: {
-        pageTitle: 'Split Views',
+        pageTitle: 'Split Views - Four',
         access: 'public',
-        bodyClass: 'splitview'
+        bodyClass: 'splitview splitview-four'
       }
     });
 

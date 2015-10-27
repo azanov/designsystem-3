@@ -1,75 +1,112 @@
 // scss-lint:disable SelectorDepth
+%leftnav-links {
+  font-size: 14px;
+  color: $text-color;
 
+  &:hover {
+    background-color: $bg-hover;
+  }
+
+  &:active,
+  &.active {
+    background-color: $bg-active;
+  }
+}
+
+//globals, all variations
 .splitview {
   footer {
     margin: 0;
   }
+
   .two-col-wrapper {
     min-height: 100vh;
     display: flex;
     align-items: stretch;
+
     .main-content {
       padding-top: 90px;
+      margin-left: 25px;
+    }
+
+    .leftnav {
+      padding: 90px 0 0;
+      min-height: 100%;
     }
   }
 
+  a {
+    @extend %leftnav-links;
+  }
+}
 
+.splitview-one {
+  .leftnav {
+    background-color: $pb-bg2;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+  }
+}
+
+.splitview-two {
+  background-color: $pb-bg1;
 
   .leftnav {
-    padding: 90px 0 0;
-    min-height: 100%;
-    margin: 0 30px 0 0;
+    background-color: #fff;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+  }
 
-    &-gray {
-      background-color: $pb-bg2;
-      border-left: 1px solid #e8e8e8;
-      border-right: 1px solid #e8e8e8;
-    }
-    &-white {
-      background-color: #fff;
-      border-left: 1px solid #e8e8e8;
-      border-right: 1px solid #e8e8e8;
-    }
-    a {
-      font-size: 14px;
-      color: $pb-gray-700;
-      &:hover {
-        background-color: $bg-hover;
-      }
-      &:active,
-      &.active {
-        background-color: $bg-active;
-      }
-    }
+  .two-col-wrapper {
+    background-color: #fff;
+  }
+}
+
+.splitview-three {
+  .leftnav {
+    border-right: 1px solid #e8e8e8;
+    background-color: #fff;
 
     .list-group-section {
       &:not(:first-child) {
         border-top: 1px solid #e8e8e8;
       }
+
       &:last-child {
         border-bottom: 1px solid #e8e8e8;
       }
+
       h3 {
-        font-size: 16px;
+        font-size: 14px;
         padding: 10px 15px;
         margin-bottom: 0;
       }
+
       .list-group {
         margin-bottom: 10px;
       }
-    }
 
-    // collapsible ones
+      a.list-group-item {
+        @extend %leftnav-links;
+      }
+    }
+  }
+}
+
+.splitview-four {
+  .leftnav {
     .nav-list {
       .nav-header {
         &:not(:first-child) {
           border-top: 1px solid #e8e8e8;
         }
+
         &:last-child {
           border-bottom: 1px solid #e8e8e8;
         }
         margin-top: 10px;
         padding-top: 10px;
+
         label {
           cursor: pointer;
           font-family: $font-family-ps-regular;
@@ -96,23 +133,29 @@
         a {
           font-size: inherit;
           display: block;
+
           &:hover {
             text-decoration: none;
           }
         }
       }
+
       .tree {
         padding: 0;
+
         li {
           padding-left: 0;
+
           a {
             font-size: 14px;
             padding: 10px;
             color: $pb-gray-700;
             display: block;
+
             &:hover {
               background-color: $bg-hover;
             }
+
             &:active,
             &.active {
               background-color: $bg-active;

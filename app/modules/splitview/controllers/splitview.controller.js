@@ -7,85 +7,70 @@
     var _this = this;
 
     _this.leftnav =  [{
-       "label": "Foundations",
-       "value": "",
-       "toggle": "dropdown",
-       "children": [{
-         "label": "Color",
-         "value": "foundation.color"
+       'label': 'Appetizers',
+       'value': '',
+       'toggle': 'dropdown',
+       'children': [{
+         'label': 'Hot Wings',
+         'value': ''
        }, {
-         "label": "Typography",
-         "value": "foundation.typography"
+         'label': 'Nachos',
+         'value': ''
        }, {
-         "label": "Grid",
-         "value": "foundation.grid"
+         'label': 'Bruscheta',
+         'value': ''
        }, {
-         "label": "Writing",
-         "value": "foundation.writing.page"
-       }, {
-         "label": "Iconography",
-         "value": "foundation.iconography"
-       }, {
-         "label": "Helpers",
-         "value": "helpers"
+         'label': 'Chicken Fingers',
+         'value': ''
        }]
      }, {
-       "label": "Elements",
-       "value": "",
-       "toggle": "dropdown",
-       "children": [{
-         "label": "UI Controls",
-         "value": "elements.uicontrols"
+       'label': 'Salads',
+       'value': '',
+       'toggle': 'dropdown',
+       'children': [{
+         'label': 'Cobb',
+         'value': ''
        }, {
-         "label": "Buttons",
-         "value": "elements.buttons"
+         'label': 'Chef',
+         'value': ''
        }, {
-         "label": "Containers",
-         "value": "elements.containers.page"
+         'label': 'American',
+         'value': ''
        }, {
-         "label": "Modals & Popovers",
-         "value": "elements.popovers",
-         "className": "popovers"
+         'label': 'Greek',
+         'value': '',
+         'className': 'popovers'
        }, {
-         "label": "User Feedback",
-         "value": "feedback.page"
-       }, {
-         "label": "Tables",
-         "value": "tables.datatable.page"
-       }, {
-         "label": "Charts",
-         "value": "graphs.page"
+         'label': 'Tomato Basil',
+         'value': ''
        }]
      }, {
-       "label": "Patterns",
-       "value": "",
-       "toggle": "dropdown",
-       "children": [{
-         "label": "Headers & Footers",
-         "value": "patterns.headersfooters"
+       'label': 'Desserts',
+       'value': '',
+       'toggle': 'dropdown',
+       'children': [{
+         'label': 'Ice Cream',
+         'value': ''
        }, {
-         "label": "Sign In & Sign Up",
-         "value": "patterns.signinup"
+         'label': 'Rice Pudding',
+         'value': ''
        }, {
-         "label": "Dashboards",
-         "value": "patterns.dashboards"
+         'label': 'Creme Brulee',
+         'value': ''
        }, {
-         "label": "Split Views",
-         "value": "patterns.splitview"
+         'label': 'Sorbet',
+         'value': ''
        }, {
-         "label": "Getting Started",
-         "value": "patterns.gettingstarted"
+         'label': 'Cake',
+         'value': ''
        }, {
-         "label": "Welcome",
-         "value": "patterns.welcome"
+         'label': 'Yodels',
+         'value': ''
        }, {
-         "label": "Page Errors",
-         "value": "patterns.errorpages"
-       }, {
-         "label": "Form Samples",
-         "value": "patterns.forms"
+         'label': 'Cannoli',
+         'value': ''
        }]
-     }]
+     }];
 
 
   });
