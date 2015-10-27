@@ -85,9 +85,12 @@
             "label": "Welcome",
             "value": "patterns.welcome"
           }, {
-            "label": "Page Errors",
-            "value": "patterns.errorpages"
+            "label": "Split Views",
+            "value": "splitview.page"
           }, {
+           "label": "Page Errors",
+           "value": "patterns.errorpages"
+         }, {
             "label": "Form Samples",
             "value": "patterns.forms"
           }]
