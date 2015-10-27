@@ -1,17 +1,3 @@
-// scss-lint:disable SelectorDepth
-%leftnav-links {
-  font-size: 14px;
-  color: $text-color;
-
-  &:hover {
-    background-color: $bg-hover;
-  }
-
-  &:active,
-  &.active {
-    background-color: $bg-active;
-  }
-}
 
 //globals, all variations
 .splitview {
@@ -40,7 +26,8 @@
   }
 }
 
-.splitview-one {
+// gray navbar / white bg / 2 rules
+.splitview-filled {
   .leftnav {
     background-color: $pb-bg2;
     border-left: 1px solid #e8e8e8;
@@ -48,7 +35,8 @@
   }
 }
 
-.splitview-two {
+// white navbar / gray bg / 3 rules
+.splitview-white {
   background-color: $pb-bg1;
 
   .leftnav {
@@ -56,116 +44,43 @@
     border-left: 1px solid #e8e8e8;
     border-right: 1px solid #e8e8e8;
   }
-
   .two-col-wrapper {
     background-color: #fff;
+    border-right: 1px solid #e8e8e8;
   }
 }
 
-.splitview-three {
+
+// white navbar / white bg / 3 rules
+.splitview-white-filled{
+  .leftnav {
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+  }
+  .two-col-wrapper {
+    border-right: 1px solid #e8e8e8;
+  }
+}
+
+
+// white navbar / white bg / 1 rule
+.splitview-white-open {
   .leftnav {
     border-right: 1px solid #e8e8e8;
-    background-color: #fff;
-
-    .list-group-section {
-      &:not(:first-child) {
-        border-top: 1px solid #e8e8e8;
-      }
-
-      &:last-child {
-        border-bottom: 1px solid #e8e8e8;
-      }
-
-      h3 {
-        font-size: 14px;
-        padding: 10px 15px;
-        margin-bottom: 0;
-      }
-
-      .list-group {
-        margin-bottom: 10px;
-      }
-
-      a.list-group-item {
-        @extend %leftnav-links;
-      }
-    }
   }
 }
 
-.splitview-four {
+.splitview-white-open-fluid {
   .leftnav {
-    .nav-list {
-      .nav-header {
-        &:not(:first-child) {
-          border-top: 1px solid #e8e8e8;
-        }
-
-        &:last-child {
-          border-bottom: 1px solid #e8e8e8;
-        }
-        margin-top: 10px;
-        padding-top: 10px;
-
-        label {
-          cursor: pointer;
-          font-family: $font-family-ps-regular;
-          font-size: 16px;
-          color: #2e2e2e;
-          padding-left: 10px;
-        }
-
-        i {
-          float: right;
-          margin-right: 10px;
-          margin-top: 2px;
-          color: #2e2e2e;
-          transition: transform .2s linear;
-        }
-
-        &.open {
-          i {
-            transform: rotate(90deg);
-            margin-right: 10px;
-          }
-        }
-
-        a {
-          font-size: inherit;
-          display: block;
-
-          &:hover {
-            text-decoration: none;
-          }
-        }
-      }
-
-      .tree {
-        padding: 0;
-
-        li {
-          padding-left: 0;
-
-          a {
-            font-size: 14px;
-            padding: 10px;
-            color: $pb-gray-700;
-            display: block;
-
-            &:hover {
-              background-color: $bg-hover;
-            }
-
-            &:active,
-            &.active {
-              background-color: $bg-active;
-            }
-          }
-        }
-      }
-    }
+    border-right: 1px solid #e8e8e8;
   }
 }
+//NOTE: set container-fluid in html container tag
+
+
+
+
+
 
 .framed {
   border: 1px solid $pb-light-gray;
