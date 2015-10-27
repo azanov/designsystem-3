@@ -1,21 +1,32 @@
-<div class="container-fluid">
+<div class="container">
   <div class="row two-col-wrapper">
     <div class="col-md-2 leftnav">
 
+    <div class="list-group-section">
+        <h3>Section One</h3>
+        <div class="list-group">
+        <a class="list-group-item active" href="">Validate Address</a>
+        <a class="list-group-item" href="">Get Postal Codes</a>
+        <a class="list-group-item" href="">Get City/State/Province</a>
 
+      </div>
+    </div>
 
-    <ul class="nav nav-list">
-      <li ng-repeat="n in splitview.leftnav" ng-class="{ 'open': showDetails }"  class="nav-header" ng-click="showDetails = !showDetails">
-        <label class="tree-toggle" >
-          {{n.label}}
-        </label>
-        <i class="fa fa-angle-right"></i>
+    <div class="list-group-section">
+        <h3>Section Two</h3>
+        <div class="list-group">
+        <a class="list-group-item" href="">Get Candidate Address</a>
+        <a class="list-group-item" href="">Auto Complete</a>
+      </div>
+    </div>
 
-        <ul class="nav nav-list tree" collapse="!showDetails">
-          <li ng-repeat="s in n.children"><a href="" ui-sref-active="active">{{s.label}}</a></li>
-        </ul>
-      </li>
-    </ul>
+    <div class="list-group-section">
+        <h3>Section Three</h3>
+        <div class="list-group">
+        <a class="list-group-item" href="">Open the Pod Bay Doors</a>
+        <a class="list-group-item" href="">Ship Parcel</a>
+      </div>
+    </div>
 
     </div>
     <div class="col-md-10 main-content">

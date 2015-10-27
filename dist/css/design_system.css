@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.1.1
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Tue Oct 27 2015 14:10:42 GMT-0400 (EDT) 
+ * Built Tue Oct 27 2015 14:57:25 GMT-0400 (EDT) 
  */
 .container-fluid {
   padding-left: 40px;
@@ -4571,12 +4571,12 @@ td.centered, th.centered {
 .landing h3 {
   color: #2e2e2e; }
 
-.splitview a, .splitview-three .leftnav .list-group-section a.list-group-item {
+.splitview a, .splitview-whiteopen .leftnav .list-group-section a.list-group-item {
   font-size: 14px;
   color: #717171; }
-.splitview a:hover, .splitview-three .leftnav .list-group-section a.list-group-item:hover {
+.splitview a:hover, .splitview-whiteopen .leftnav .list-group-section a.list-group-item:hover {
   background-color: #eaedf8; }
-.splitview a:active, .splitview-three .leftnav .list-group-section a.list-group-item:active, .splitview a.active, .splitview-three .leftnav .list-group-section a.active.list-group-item {
+.splitview a:active, .splitview-whiteopen .leftnav .list-group-section a.list-group-item:active, .splitview a.active, .splitview-whiteopen .leftnav .list-group-section a.active.list-group-item {
   background-color: #c5cbe3; }
 
 .splitview footer {
@@ -4596,75 +4596,82 @@ td.centered, th.centered {
   padding: 90px 0 0;
   min-height: 100%; }
 
-.splitview-one .leftnav {
+.splitview-filled .leftnav {
   background-color: #f8f8f8;
   border-left: 1px solid #e8e8e8;
   border-right: 1px solid #e8e8e8; }
 
-.splitview-two {
+.splitview-white {
   background-color: #f0f0f0; }
-.splitview-two .leftnav {
+.splitview-white .leftnav {
   background-color: #fff;
   border-left: 1px solid #e8e8e8;
   border-right: 1px solid #e8e8e8; }
-.splitview-two .two-col-wrapper {
+.splitview-white .two-col-wrapper {
   background-color: #fff; }
 
 .splitview-three .leftnav {
+  background-color: #fff;
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8; }
+
+.splitview-whiteopen .leftnav {
   border-right: 1px solid #e8e8e8;
   background-color: #fff; }
-.splitview-three .leftnav .list-group-section:not(:first-child) {
+.splitview-whiteopen .leftnav .list-group-section:not(:first-child) {
   border-top: 1px solid #e8e8e8; }
-.splitview-three .leftnav .list-group-section:last-child {
+.splitview-whiteopen .leftnav .list-group-section:last-child {
   border-bottom: 1px solid #e8e8e8; }
-.splitview-three .leftnav .list-group-section h3 {
+.splitview-whiteopen .leftnav .list-group-section h3 {
   font-size: 14px;
   padding: 10px 15px;
   margin-bottom: 0; }
-.splitview-three .leftnav .list-group-section .list-group {
+.splitview-whiteopen .leftnav .list-group-section .list-group {
   margin-bottom: 10px; }
 
-.splitview-four .leftnav .nav-list .nav-header {
+.splitview-whiteopenfluid .leftnav {
+  border-right: 1px solid #e8e8e8; }
+.splitview-whiteopenfluid .leftnav .nav-list .nav-header {
   margin-top: 10px;
   padding-top: 10px; }
-.splitview-four .leftnav .nav-list .nav-header:not(:first-child) {
+.splitview-whiteopenfluid .leftnav .nav-list .nav-header:not(:first-child) {
   border-top: 1px solid #e8e8e8; }
-.splitview-four .leftnav .nav-list .nav-header:last-child {
+.splitview-whiteopenfluid .leftnav .nav-list .nav-header:last-child {
   border-bottom: 1px solid #e8e8e8; }
-.splitview-four .leftnav .nav-list .nav-header label {
+.splitview-whiteopenfluid .leftnav .nav-list .nav-header label {
   cursor: pointer;
   font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   color: #2e2e2e;
   padding-left: 10px; }
-.splitview-four .leftnav .nav-list .nav-header i {
+.splitview-whiteopenfluid .leftnav .nav-list .nav-header i {
   float: right;
   margin-right: 10px;
   margin-top: 2px;
   color: #2e2e2e;
   transition: -webkit-transform .2s linear;
   transition: transform .2s linear; }
-.splitview-four .leftnav .nav-list .nav-header.open i {
+.splitview-whiteopenfluid .leftnav .nav-list .nav-header.open i {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   margin-right: 10px; }
-.splitview-four .leftnav .nav-list .nav-header a {
+.splitview-whiteopenfluid .leftnav .nav-list .nav-header a {
   font-size: inherit;
   display: block; }
-.splitview-four .leftnav .nav-list .nav-header a:hover {
+.splitview-whiteopenfluid .leftnav .nav-list .nav-header a:hover {
   text-decoration: none; }
-.splitview-four .leftnav .nav-list .tree {
+.splitview-whiteopenfluid .leftnav .nav-list .tree {
   padding: 0; }
-.splitview-four .leftnav .nav-list .tree li {
+.splitview-whiteopenfluid .leftnav .nav-list .tree li {
   padding-left: 0; }
-.splitview-four .leftnav .nav-list .tree li a {
+.splitview-whiteopenfluid .leftnav .nav-list .tree li a {
   font-size: 14px;
   padding: 10px;
   color: #2e2e2e;
   display: block; }
-.splitview-four .leftnav .nav-list .tree li a:hover {
+.splitview-whiteopenfluid .leftnav .nav-list .tree li a:hover {
   background-color: #eaedf8; }
-.splitview-four .leftnav .nav-list .tree li a:active, .splitview-four .leftnav .nav-list .tree li a.active {
+.splitview-whiteopenfluid .leftnav .nav-list .tree li a:active, .splitview-whiteopenfluid .leftnav .nav-list .tree li a.active {
   background-color: #c5cbe3; }
 
 .framed {

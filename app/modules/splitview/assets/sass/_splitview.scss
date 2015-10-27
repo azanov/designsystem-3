@@ -40,7 +40,11 @@
   }
 }
 
-.splitview-one {
+// there are 5 variations
+
+//first
+// gray navbar / white bg / 2 rules
+.splitview-filled {
   .leftnav {
     background-color: $pb-bg2;
     border-left: 1px solid #e8e8e8;
@@ -48,7 +52,10 @@
   }
 }
 
-.splitview-two {
+
+// second
+// white navbar / gray bg / 3 rules
+.splitview-white {
   background-color: $pb-bg1;
 
   .leftnav {
@@ -56,13 +63,28 @@
     border-left: 1px solid #e8e8e8;
     border-right: 1px solid #e8e8e8;
   }
-
   .two-col-wrapper {
     background-color: #fff;
+    border-right: 1px solid #e8e8e8;
   }
 }
 
-.splitview-three {
+
+// third
+// white navbar / white bg / 3 rules
+.splitview-white-filled{
+  .leftnav {
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+  }
+  .two-col-wrapper {
+    border-right: 1px solid #e8e8e8;
+  }
+}
+
+// fourth
+// white bar, bg, 1 rule dividing only
+.splitview-whiteopen {
   .leftnav {
     border-right: 1px solid #e8e8e8;
     background-color: #fff;
@@ -93,10 +115,17 @@
   }
 }
 
-.splitview-four {
+// fifth
+// white bar, bg, 1 rule dividing only, container fluid
+// container-fluid must be set separately in the html
+.splitview-whiteopenfluid {
   .leftnav {
+    border-right: 1px solid #e8e8e8;
+
     .nav-list {
       .nav-header {
+        margin-top: 10px;
+        padding-top: 10px;
         &:not(:first-child) {
           border-top: 1px solid #e8e8e8;
         }
@@ -104,8 +133,6 @@
         &:last-child {
           border-bottom: 1px solid #e8e8e8;
         }
-        margin-top: 10px;
-        padding-top: 10px;
 
         label {
           cursor: pointer;
@@ -166,6 +193,8 @@
     }
   }
 }
+
+
 
 .framed {
   border: 1px solid $pb-light-gray;

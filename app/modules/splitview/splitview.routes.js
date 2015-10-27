@@ -14,7 +14,7 @@
       url: '/page',
       templateUrl: 'modules/splitview/templates/splitview-page.html',
       data: {
-        pageTitle: 'Split Views',
+        pageTitle: 'Split Views - Overview',
         access: 'public',
         bodyClass: ''
       }
@@ -24,9 +24,9 @@
       url: '/splitview/one',
       templateUrl: 'modules/splitview/templates/splitview-one.html',
       data: {
-        pageTitle: 'Split Views - One',
+        pageTitle: 'Split Views',
         access: 'public',
-        bodyClass: 'splitview splitview-one'
+        bodyClass: 'splitview splitview-filled'
       }
     })
 
@@ -34,9 +34,9 @@
       url: '/splitview/two',
       templateUrl: 'modules/splitview/templates/splitview-two.html',
       data: {
-        pageTitle: 'Split Views - Two',
+        pageTitle: 'Split Views',
         access: 'public',
-        bodyClass: 'splitview splitview-two'
+        bodyClass: 'splitview splitview-white'
       }
     })
 
@@ -44,9 +44,9 @@
       url: '/splitview/three',
       templateUrl: 'modules/splitview/templates/splitview-three.html',
       data: {
-        pageTitle: 'Split Views - Three',
+        pageTitle: 'Split Views - three',
         access: 'public',
-        bodyClass: 'splitview splitview-three'
+        bodyClass: 'splitview splitview-white-filled'
       }
     })
 
@@ -56,7 +56,17 @@
       data: {
         pageTitle: 'Split Views - Four',
         access: 'public',
-        bodyClass: 'splitview splitview-four'
+        bodyClass: 'splitview splitview-whiteopen'
+      }
+    })
+
+    .state('splitview.five', {
+      url: '/splitview/five',
+      templateUrl: 'modules/splitview/templates/splitview-five.html',
+      data: {
+        pageTitle: 'Split Views',
+        access: 'public',
+        bodyClass: 'splitview splitview-whiteopenfluid'
       }
     });
 
