@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.1.1
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Tue Oct 27 2015 16:18:43 GMT-0400 (EDT) 
+ * Built Wed Oct 28 2015 09:46:33 GMT-0400 (EDT) 
  */
 .container-fluid {
   padding-left: 40px;
@@ -1358,8 +1358,8 @@ div.accordion-group .panel.active .panel-title:before {
 .btn-link:active, .btn-link.active, .open > .btn-link.dropdown-toggle {
   background-image: none; }
 .btn-link.disabled, .btn-link.disabled:hover, .btn-link.disabled.hover, .btn-link.disabled:focus, .btn-link.disabled.focus, .btn-link.disabled:active, .btn-link.disabled.active, .btn-link[disabled], .btn-link[disabled]:hover, .btn-link[disabled].hover, .btn-link[disabled]:focus, .btn-link[disabled].focus, .btn-link[disabled]:active, .btn-link[disabled].active, fieldset[disabled] .btn-link, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link.hover, fieldset[disabled] .btn-link:focus, fieldset[disabled] .btn-link.focus, fieldset[disabled] .btn-link:active, fieldset[disabled] .btn-link.active {
-  background-color: #f8f8f8;
-  border-color: #4e4e4e;
+  background-color: transparent;
+  border-color: transparent;
   color: #4e4e4e; }
 .btn-link .badge {
   color: #fff;
@@ -4575,9 +4575,11 @@ td.centered, th.centered {
   font-size: 14px;
   color: #717171; }
 .leftnav-sectioned .list-group-section a.list-group-item:hover, .splitview a:hover {
-  background-color: #eaedf8; }
+  background-color: #eaedf8;
+  color: #2e2e2e; }
 .leftnav-sectioned .list-group-section a.list-group-item:active, .splitview a:active, .leftnav-sectioned .list-group-section a.active.list-group-item, .splitview a.active {
-  background-color: #c5cbe3; }
+  background-color: #c5cbe3;
+  color: #2e2e2e; }
 
 .leftnav-sectioned .list-group-section:not(:first-child) {
   border-top: 1px solid #e8e8e8; }

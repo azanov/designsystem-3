@@ -5,25 +5,37 @@
 
 // $fg, $bg, $border, $disabled-fg, $disabled-bg, $hover-fg:$fg, $hover-bg:$bg
 .btn-primary {
-  @include button-variant(#fff, $button-primary, $button-primary, $pb-gray-500, $pb-bg3, #fff, $pb-blue-700);
+  @include button-variant(
+                          #fff, $button-primary, $button-primary,
+                          $pb-gray-500, $pb-bg3, $pb-gray-500,
+                          #fff, $pb-blue-700);
 }
 
 .btn-default,
 .btn-cancel,
 .btn-group .btn-default,
 .btn-group-vertical .btn-default {
-  @include button-variant($button-primary, transparent, $button-primary, $pb-gray-500, transparent, $button-primary, #d9dced);
+  @include button-variant(
+                          $button-primary, transparent, $button-primary,
+                          $pb-gray-500, transparent, $pb-gray-500,
+                          $button-primary, #d9dced);
 }
 
 .btn-link {
-  @include button-variant($button-primary, transparent, transparent, $pb-gray-500, $pb-bg2, $button-primary, #d9dced);
+  @include button-variant(
+                $button-primary, transparent, transparent,
+                $pb-gray-500, transparent, transparent,
+                $button-primary, #d9dced);
   &:hover {
     text-decoration: none;
   }
 }
 
 .btn-group-borderless .btn-default {
-  @include button-variant($button-primary, transparent, $button-primary, $button-primary, $pb-blue-300, $pb-gray-300, $pb-bg2);
+  @include button-variant(
+                          $button-primary, transparent, $button-primary,
+                          $button-primary, $pb-blue-300, $button-primary,
+                          $pb-gray-300, $pb-bg2);
 }
 
 .btn-right {
@@ -75,22 +87,31 @@
 
 
 
+// $fg, $bg, $border, $disabled-fg, $disabled-bg, $hover-fg:$fg, $hover-bg:$bg
 
 // bootstrap buttons
 .btn-success {
-  @include button-variant(#fff, $brand-success, $brand-success, $pb-gray-300, $pb-bg2);
+  @include button-variant(
+                          #fff, $brand-success, $brand-success,
+                          $pb-gray-300, $pb-bg2, $pb-gray-300);
 }
 
 .btn-info {
-  @include button-variant(#fff, $brand-info, $brand-info, $pb-gray-300, $pb-bg2);
+  @include button-variant(
+                          #fff, $brand-info, $brand-info,
+                          $pb-gray-300, $pb-bg2, $pb-gray-300);
 }
 
 .btn-warning {
-  @include button-variant(#fff, $brand-warning, $brand-warning, $pb-gray-300, $pb-bg2);
+  @include button-variant(
+                          #fff, $brand-warning, $brand-warning,
+                          $pb-gray-300, $pb-bg2, $pb-gray-300);
 }
 
 .btn-danger {
-  @include button-variant(#fff, $brand-danger, $brand-danger, $pb-gray-300, $pb-bg2);
+  @include button-variant(
+                          #fff, $brand-danger, $brand-danger,
+                          $pb-gray-300, $pb-bg2, $pb-gray-300);
 }
 
 
@@ -111,6 +132,9 @@
 .btn-xs {
   @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $border-radius-small);
 }
+
+
+
 ///** bs overrides **//
 // i give up, bootstrap, here you go
 .open>.dropdown-toggle.btn-default {
