@@ -1,6 +1,15 @@
 // scss-lint:disable VendorPrefix, MergeableSelector
 
 /////////////////////////
+/// Bootstrsp fixes
+/////////////////////////
+
+.form-inline .checkbox input[type="checkbox"] {
+    position: absolute;
+}
+
+
+/////////////////////////
 /// Checkboxes and radios
 /////////////////////////
 
