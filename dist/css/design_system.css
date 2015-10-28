@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.1.1
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Wed Oct 28 2015 09:46:33 GMT-0400 (EDT) 
+ * Built Wed Oct 28 2015 10:02:10 GMT-0400 (EDT) 
  */
 .container-fluid {
   padding-left: 40px;
@@ -1872,6 +1872,9 @@ select.form-control {
   padding: 15px;
   border: 1px solid #9b9b9b;
   box-shadow: none; }
+
+.form-inline .checkbox input[type="checkbox"] {
+  position: absolute; }
 
 .control {
   position: relative;
