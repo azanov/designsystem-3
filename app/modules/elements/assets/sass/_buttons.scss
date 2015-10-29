@@ -7,7 +7,7 @@
 .btn-primary {
   @include button-variant(
                           #fff, $button-primary, $button-primary,
-                          $pb-gray-500, $pb-bg3, $pb-gray-500,
+                          #fff, #c0c0c0, #c0c0c0,
                           #fff, $pb-blue-700);
 }
 
@@ -17,14 +17,14 @@
 .btn-group-vertical .btn-default {
   @include button-variant(
                           $button-primary, transparent, $button-primary,
-                          $pb-gray-500, transparent, $pb-gray-500,
+                          #c0c0c0, transparent, #c0c0c0,
                           $button-primary, #d9dced);
 }
 
 .btn-link {
   @include button-variant(
                 $button-primary, transparent, transparent,
-                $pb-gray-500, transparent, transparent,
+                #c0c0c0, transparent, transparent,
                 $button-primary, #d9dced);
   &:hover {
     text-decoration: none;
@@ -190,7 +190,7 @@ fieldset[disabled] .btn {
   pointer-events: none;
   cursor: not-allowed;
   box-shadow: none;
-  opacity: 0.35;
+  // opacity: 0.35;
 }
 .btn-group-justified {
   display: table;
