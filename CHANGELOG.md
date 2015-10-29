@@ -61,6 +61,7 @@ The Design System is now available via [Bower](http://bower.io). See the [bower-
 
 
 **NON-BREAKING CHANGES**
+- fa-lg issue with pb-font icons (fixes [#35](https://github.com/PBGUX/designsystem/issues/35))
 - primary button disabled state fill slightly darkened
 - secondary disabled button now has no fill color
 - .site-content calc() correctly calculates footer placement
@@ -71,16 +72,28 @@ The Design System is now available via [Bower](http://bower.io). See the [bower-
 - adjusted header menu items for consistency
   - mega menu: removed item animation, indent titles and items to left align
   - single menu: reduce vertical padding
-- .tile-button no longer has image embeded in css (.logo-button-usps removed), the image should be added in markup
+- .tile-button no longer has image embedded in css (.logo-button-usps removed), the image should be added in markup
 ```html
 <button type="button" name="button" class="btn btn-default tile-button">
   <img src="assets/images/logo-usps.png" alt="">
 </button>
 ```
 
+**ADDITIONS**
+- added Web > Patterns > Splitviews:  5 design styles with 3 variations
+- added styling to default Bootstrap breadcrumbs in Web > Buttons > Breadcrumbs, example markup:
+```html
+<ol class="breadcrumb">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Library</a></li>
+  <li class="active">Data</li>
+</ol>
+```
+
 
 ######Website changes
-- added web and mobile roadmaps in embeded iframes
+- added web and mobile roadmaps in embedded iframes
+- added Resources > Gallery with InVision link for images of application samples
 - upgrade angular ui-select to v13.2
 - upgrade angular-bootstrap to v14.3
 - fixed references to bootstrap to use bower_components
@@ -100,7 +113,7 @@ The Design System is now available via [Bower](http://bower.io). See the [bower-
 - fix download links for personas under resources > strategy; one link missing file extension (.pdf), "+" character causing issue in some browsers
 
 ######Thanks to the following contributors and bug reporters:
-Luke Daugherty, Nick Roberts, Nisha Rana, dustin2524, Ron Cianfaglione, Sam Swartz, Jim Norris
+Luke Daugherty, Nick Roberts, Nisha Rana, dustin2524, Ron Cianfaglione, Sam Swartz, Jim Norris, Ania Mastriano
 
 
 ###2.1.1 -- October 2015 update
