@@ -113,7 +113,7 @@ The Design System is now available via [Bower](http://bower.io). See the [bower-
 - fix download links for personas under resources > strategy; one link missing file extension (.pdf), "+" character causing issue in some browsers
 
 ######Thanks to the following contributors and bug reporters:
-Luke Daugherty, Nick Roberts, Nisha Rana, dustin2524, Ron Cianfaglione, Sam Swartz, Jim Norris, Ania Mastriano
+Luke Daugherty, Nick Roberts, Rick Dukeshier, Nisha Rana, dustin2524, Ron Cianfaglione, Rick Cole, Sam Swartz, Jim Norris, Ania Mastriano
 
 
 ###2.1.1 -- October 2015 update
