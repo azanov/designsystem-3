@@ -123,7 +123,7 @@ The Design System is now available via [Bower](http://bower.io). See the [bower-
 
 
 ######Thanks to the following contributors and bug reporters:
-Luke Daugherty, Nick Roberts, Rick Dukeshier, Nisha Rana, dustin2524, Ron Cianfaglione, Rick Cole, Sam Swartz, Jim Norris, Ania Mastriano, Cameron Chu
+Luke Daugherty, Nick Roberts, Rick Dukeshier, Nisha Rana, dustin2524, Joan Doutney, Ron Cianfaglione, Rick Cole, Sam Swartz, Jim Norris, Ania Mastriano, Cameron Chu
 
 
 ###2.1.1 -- October 2015 update
