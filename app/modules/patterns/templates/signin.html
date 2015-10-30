@@ -17,10 +17,12 @@
           <input class="form-control" name="pwd" ng-model="myForm.data.pwd" required type="password">
           <span class="help-block" ng-show="myForm.pwd.$error.required && myForm.pwd.$dirty">Password is required.</span>
         </div>
-        <div class="checkbox checkbox-enhanced spacer-top-sm spacer-bottom-sm">
-          <input id="check4" type="checkbox">
-          <label for="check4">Remember me</label>
-        </div>
+
+        <label class="control checkbox">
+          <input type="checkbox">
+          <span class="control-indicator"></span>
+          Remember me
+        </label>
 
         <button class="btn btn-primary btn-block btn-lg spacer-top-xs" ng-click="login()" type="submit">Sign In</button>
       </form>
