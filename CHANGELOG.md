@@ -112,6 +112,16 @@ The Design System is now available via [Bower](http://bower.io). See the [bower-
   - Change Error Color from #E70600 to #DC0000
 - fix download links for personas under resources > strategy; one link missing file extension (.pdf), "+" character causing issue in some browsers
 
+
+
+######Sketch
+- updated template fonts
+- update breadcrumbs
+- add underline tabs
+- add datatable drawer
+
+
+
 ######Thanks to the following contributors and bug reporters:
 Luke Daugherty, Nick Roberts, Rick Dukeshier, Nisha Rana, dustin2524, Ron Cianfaglione, Rick Cole, Sam Swartz, Jim Norris, Ania Mastriano, Cameron Chu
 
