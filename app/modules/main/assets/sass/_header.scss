@@ -187,7 +187,7 @@ a.app-launcher {
   }
 
   .navbar-nav >li >a:focus {
-    color: rgba(255, 255, 255, .75);
+    color: rgba(255, 255, 255, 1);
   }
 
   .navbar-toggle {
@@ -294,7 +294,7 @@ a.app-launcher {
     >li {
       &.section-head {
         font-family: $font-family-ps-regular;
-        margin: 12px 20px 12px;
+        margin: 12px 20px;
         color: $pb-gray-700;
         padding-bottom: 5px;
         border-bottom: 1px solid $pb-light-gray;
@@ -328,6 +328,7 @@ a.app-launcher {
     padding-left: 10px;
     margin-bottom: 10px;
     border-bottom: 1px solid $pb-light-gray;
+    cursor: default;
   }
   .menu-items {
     li {
