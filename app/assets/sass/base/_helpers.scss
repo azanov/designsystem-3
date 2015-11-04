@@ -40,6 +40,11 @@ $directions: (top, bottom);
 //   clip: rect(0 0 0 0);
 // }
 
+// override bootstrap text colors for bg variants
+.bg-info, .bg-danger, .bg-warning, .bg-success {
+  color: #4e4e4e;
+}
+
 
 .no-margin-top, .nmt {
   margin-top: 0;
