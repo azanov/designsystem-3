@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.2.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Mon Nov 02 2015 11:52:13 GMT-0500 (EST) 
+ * Built Wed Nov 04 2015 14:28:19 GMT-0500 (EST) 
  */
 .container-fluid {
   padding-left: 40px;
@@ -465,6 +465,9 @@ small, .text-small, .small {
   .spacer-bottom-xl {
     margin-bottom: 37.5px; } }
 
+.bg-info, .bg-danger, .bg-warning, .bg-success {
+  color: #4e4e4e; }
+
 .no-margin-top, .nmt {
   margin-top: 0; }
 
@@ -496,7 +499,7 @@ small, .text-small, .small {
   color: #eaedf8; }
 
 .text-bg4 {
-  color: #e4e6fa; }
+  color: #d8dbf1; }
 
 .text-bg5 {
   color: #c5cbe3; }
@@ -667,7 +670,7 @@ small, .text-small, .small {
   background-color: #eaedf8; }
 
 .bg-pb-bg4 {
-  background-color: #e4e6fa; }
+  background-color: #d8dbf1; }
 
 .bg-pb-bg5 {
   background-color: #c5cbe3; }
@@ -3087,7 +3090,7 @@ a.app-launcher {
 .navbar-default .navbar-nav > li > a:hover {
   color: white; }
 .navbar-default .navbar-nav > li > a:focus {
-  color: rgba(255, 255, 255, 0.75); }
+  color: white; }
 .navbar-default .navbar-toggle {
   border-color: #fff;
   background-color: rgba(62, 83, 164, 0.5);
@@ -3148,7 +3151,7 @@ a.app-launcher {
   background-color: #9b9b9b; }
 .navbar-default .dropdown-menu > li.section-head {
   font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif;
-  margin: 12px 20px 12px;
+  margin: 12px 20px;
   color: #2e2e2e;
   padding-bottom: 5px;
   border-bottom: 1px solid #e1e1e1; }
@@ -3172,7 +3175,8 @@ a.app-launcher {
   padding-bottom: 5px;
   padding-left: 10px;
   margin-bottom: 10px;
-  border-bottom: 1px solid #e1e1e1; }
+  border-bottom: 1px solid #e1e1e1;
+  cursor: default; }
 .yamm-content .menu-items li {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
@@ -3550,7 +3554,7 @@ th {
 .table .table {
   background-color: #fff; }
 .table .table-row-selected td {
-  background-color: #e4e6fa; }
+  background-color: #d8dbf1; }
 .table .table-details td {
   padding: 0;
   background-color: #f0f0f0;
@@ -4573,13 +4577,13 @@ td.centered, th.centered {
 .landing h3 {
   color: #2e2e2e; }
 
-.leftnav-sectioned .list-group-section a.list-group-item, .splitview a {
+.leftnav-sectioned .list-group-section a.list-group-item, .splitview .two-col-wrapper .leftnav a {
   font-size: 14px;
   color: #717171; }
-.leftnav-sectioned .list-group-section a.list-group-item:hover, .splitview a:hover {
+.leftnav-sectioned .list-group-section a.list-group-item:hover, .splitview .two-col-wrapper .leftnav a:hover {
   background-color: #eaedf8;
   color: #2e2e2e; }
-.leftnav-sectioned .list-group-section a.list-group-item:active, .splitview a:active, .leftnav-sectioned .list-group-section a.active.list-group-item, .splitview a.active {
+.leftnav-sectioned .list-group-section a.list-group-item:active, .splitview .two-col-wrapper .leftnav a:active, .leftnav-sectioned .list-group-section a.active.list-group-item, .splitview .two-col-wrapper .leftnav a.active {
   background-color: #c5cbe3;
   color: #2e2e2e; }
 
