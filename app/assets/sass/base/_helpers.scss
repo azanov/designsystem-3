@@ -3,6 +3,7 @@ $spacers: (xs: 10px,sm: 20px, md: 30px, lg: 40px, xl: 50px);
 $directions: (top, bottom);
 
 // added smartphone MQ, reduced each spacer size to 75% for that
+/// Creates spacer helper
 @each $direction in $directions {
   @each $spacer, $amt in $spacers {
     .spacer-#{$direction}-#{$spacer} {
@@ -40,7 +41,7 @@ $directions: (top, bottom);
 //   clip: rect(0 0 0 0);
 // }
 
-// override bootstrap text colors for bg variants
+// override bootstrap text colors for bg variants for accessibility
 .bg-info, .bg-danger, .bg-warning, .bg-success {
   color: #4e4e4e;
 }
