@@ -1,6 +1,17 @@
 .alert {
   border-radius: 0;
 
+  // hide the close button, ui-bootstrap templates add it dynamically
+  // close icon is added in each alert modifier below
+  .close {
+    width: 21px;
+    height: 21px;
+    
+    span:not(.sr-only) {
+      display: none;
+    }
+  }
+
   &.alert-danger {
     color: $state-danger-text;
     background-color: $state-danger-bg;
@@ -45,11 +56,6 @@
     text-decoration: underline;
     font-weight: inherit;
     color: inherit;
-  }
-
-  .close {
-    width: 21px;
-    height: 21px;
   }
 
 }
