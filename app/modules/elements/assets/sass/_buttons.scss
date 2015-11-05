@@ -3,40 +3,183 @@
 
 // scss-lint:disable MergeableSelector ImportantRule
 
-// $fg, $bg, $border, $disabled-fg, $disabled-bg, $hover-fg:$fg, $hover-bg:$bg
+// for simplicity's sake in endlessly tweaking button colors
+// i have abandoned the Bootstrap mixin "button-variant"
+// and all of the mixin is hard-coded below for each button type
+// Mazel Tov!
+
 .btn-primary {
-  @include button-variant(
-                          #fff, $button-primary, $button-primary,
-                          #fff, #c0c0c0, #c0c0c0,
-                          #fff, $pb-blue-700);
-}
+  color: #fff;
+  background-color: $pb-blue;
+  border-color: $pb-blue;
 
-.btn-default,
-.btn-cancel,
-.btn-group .btn-default,
-.btn-group-vertical .btn-default {
-  @include button-variant(
-                          $button-primary, transparent, $button-primary,
-                          #c0c0c0, transparent, #c0c0c0,
-                          $button-primary, #d9dced);
-}
+  //hover
+  &:hover, &.hover, &:focus, &.focus, &:active, &.active,
+  .open >&.dropdown-toggle {
+    color: #fff;
+    background-color: #314183;
+    border-color: #314183;
+  }
 
-.btn-link {
-  @include button-variant(
-                $button-primary, transparent, transparent,
-                #c0c0c0, transparent, transparent,
-                $button-primary, #d9dced);
-  &:hover {
-    text-decoration: none;
+  // bootstrap no idea why
+  &:active,
+  &.active,
+  .open >&.dropdown-toggle {
+    background-image: none;
+  }
+
+  //disabled
+  &.disabled, &[disabled], fieldset[disabled] & {
+    &,
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: #c0c0c0;
+      border-color: #c0c0c0;
+      color: #fff;
+      opacity: 1;
+
+    }
+  }
+  // badge in a button - doesn't happen often
+  .badge {
+    color: #fff;
+    background-color: $pb-magenta;
+    margin-left: 10px;
   }
 }
 
-.btn-group-borderless .btn-default {
-  @include button-variant(
-                          $button-primary, transparent, $button-primary,
-                          $button-primary, $pb-blue-300, $button-primary,
-                          $pb-gray-300, $pb-bg2);
+
+.btn-default, .btn-cancel, .btn-group .btn-default, .btn-group-vertical .btn-default  {
+  color: $pb-blue;
+  background-color: transparent;
+  border-color: $pb-blue;
+
+  &:hover, &.hover, &:focus, &.focus, &:active, &.active,
+  .open >&.dropdown-toggle {
+    color: #314183;
+    background-color: #d9dced;
+    border-color: #314183;
+  }
+
+  &:active,
+  &.active,
+  .open >&.dropdown-toggle {
+    background-image: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      color: #c0c0c0;
+      background-color: transparent;
+      border-color: #c0c0c0;
+      opacity: 1;
+    }
+  }
+
+  .badge {
+    color: #fff;
+    background-color: $pb-magenta;
+    margin-left: 10px;
+  }
 }
+
+
+.btn-group-borderless .btn-default  {
+  color: $pb-blue;
+  background-color: transparent;
+  border-color: transparent;
+
+  &:hover, &.hover, &:focus, &.focus, &:active, &.active,
+  .open >&.dropdown-toggle {
+    color: #314183;
+    background-color: #d9dced;
+    border-color: transparent;
+  }
+
+  &:active,
+  &.active,
+  .open >&.dropdown-toggle {
+    background-image: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      color: #c0c0c0;
+      background-color: transparent;
+      border-color: transparent;
+      opacity: 1;
+    }
+  }
+
+  .badge {
+    color: #fff;
+    background-color: $pb-magenta;
+    margin-left: 10px;
+  }
+}
+
+
+
+.btn-link {
+  color: $pb-blue;
+  background-color: transparent;
+  border-color: transparent;
+
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $pb-blue;
+    background-color: #d9dced;
+    border-color: #d9dced;
+  }
+  &:active,
+  &.active,
+  .open >&.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      color: #c0c0c0;
+      background-color: transparent;
+      border-color: transparent;
+      opacity: 1;
+    }
+  }
+}
+
+
 
 .btn-right {
   border-top-left-radius: 0;
@@ -51,23 +194,49 @@
 
 //"tertiary", or pill-shaped buttons
 
-@mixin btn-pill($label, $bg, $bdr) {
-  color: $label;
-  background-color: $bg;
+.btn-pill-ko {
+  color: $pb-blue;
+  background-color: #fff;
   border-radius: 40px !important;
-  border: 1px solid $bdr;
+  border: 1px solid #fff;
   padding: $padding-base-vertical $padding-large-horizontal;
   min-width: 120px;
 
   &:disabled {
-    color: $bg;
+    color: #c0c0c0;
     background-color: transparent;
-    opacity: 0.5;
+    border: 1px solid #c0c0c0;
+  }
+  &:hover, &.hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: $pb-blue;
+  }
+  &:active, &.active {
+    opacity: 0.8;
+  }
+}
+
+
+.btn-pill-brand {
+  color: #fff;
+  background-color: $pb-blue;
+  border-radius: 40px !important;
+  border: 1px solid $pb-blue;
+  padding: $padding-base-vertical $padding-large-horizontal;
+  min-width: 120px;
+
+  &:disabled {
+    color: #fff;
+    background-color: #c0c0c0;
+    border: 1px solid #c0c0c0;
+    opacity: 1;
   }
 
   &:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    color: $label;
+    color: #fff;
+    background-color: $pb-blue;
+    border: 1px solid $pb-blue;
   }
 
   &:active {
@@ -76,12 +245,6 @@
 
 }
 
-.btn-pill-ko {
-  @include btn-pill($pb-blue, #fff, #fff);
-}
-.btn-pill-brand {
-  @include btn-pill(#fff, $pb-blue, $pb-blue);
-}
 
 
 
@@ -246,6 +409,11 @@ fieldset[disabled] .btn {
   &.active {
     border-width: 2px;
     background-color: #fff;
+    &:hover {
+      border-width: 2px;
+      background-color: #fff;
+      border-color: $pb-blue;
+    }
   }
   &.disabled, &[disabled] {
     img {
