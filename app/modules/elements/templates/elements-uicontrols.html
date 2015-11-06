@@ -636,6 +636,8 @@
 
       <p>
         <a class="more-info plugin" href="https://github.com/angular-ui/ui-select" target="_blank">angular ui-select v0.13.2</a>
+
+        <a class="more-info plugin" href="https://github.com/mbenford/ngTagsInput" target="_blank">ng-tags-input v3.0.0</a>
       </p>
 
       <!-- <p class="small spacer-top-md"><em>ui-select v0.12.1 has a known issue with webkit browsers displaying as a dropup. See this Github <a href="https://github.com/angular-ui/ui-select/issues/1016" target="blank">issue</a> and <a href="https://github.com/pulse14/ui-select/commit/f788aa555d10453d8ba455c0aaa97a4f4e832c72" target="blank">pending fix</a> on github. Downgrading to a previous version may be required as an interim solution.</em></p> -->
@@ -666,7 +668,7 @@
             <div class="form-group">
               <label>Text label</label>
               <ui-select multiple  ng-model="inputs.countrySelect.multipleSelected" theme="bootstrap">
-                <ui-select-match placeholder="">{{$item.name}}</ui-select-match>
+                <ui-select-match placeholder="Add a tag">{{$item.name}}</ui-select-match>
                 <ui-select-choices repeat="item in inputs.countrySelect.countries | filter: $select.search">
                   <div ng-bind-html="item.name | highlight: $select.search"></div>
                 </ui-select-choices>
@@ -688,10 +690,13 @@
             </div>
           </figure>
 
-          <h4>NG-Tags-Input Examples</h4>
+          <h4>Ng-Tags-Input Example</h4>
+
           <figure>
             <figcaption>  Multi-select with Tokens</figcaption>
-            <tags-input ng-model="inputs.tags"></tags-input>
+            <tags-input ng-model="inputs.tags" display-property="name" key-property="code">
+              <auto-complete source="inputs.loadTags($query)" ></auto-complete>
+            </tags-input>
           </figure>
 
         </div>
