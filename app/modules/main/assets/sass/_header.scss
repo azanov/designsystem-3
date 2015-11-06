@@ -195,23 +195,48 @@ a.app-launcher {
     background-color: transparentize($pb-blue, .5);
     border-radius: 0;
     .icon-bar {
-      background-color: #fff;
+      background-color: hsla(0, 0, 100%, .5);
+    }
+    &:hover, &:focus {
+      background-color: transparentize($pb-blue, .5);
+      .icon-bar {
+        background-color: hsla(0, 0, 100%, 1);
+      }
     }
   }
 
+  @media (max-width: $screen-xs-max){
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+      color: #fff;
+}
+}
+
 
   .navbar-nav {
+    margin-top: 0;
+    margin-bottom: 0;
+
     .divider-vertical {
       height: 30px;
       margin: 10px 5px;
       border-left: 1px solid hsla(0, 255, 100%, .3);
     }
 
-    >li >a {
-      color: rgba(255, 255, 255, 1);
-      font-size: 14px;
-      font-family: $font-family-ps-regular;
-      font-weight: normal;
+    >li {
+      @media (max-width: $screen-xs-max) {
+        &:last-child > a {
+          border-bottom: 0;
+        }
+      }
+        > a {
+          color: rgba(255, 255, 255, 1);
+          font-size: 14px;
+          font-family: $font-family-ps-regular;
+          font-weight: normal;
+          @media (max-width: $screen-xs-max) {
+            border-bottom: 1px solid hsla(0, 255, 100%, .3);
+        }
+      }
     }
     >.open >a {
       &,
@@ -227,6 +252,8 @@ a.app-launcher {
     // .nav-link-first {
     //   @include navbar-divider('left');
     // }
+    @media (max-width: $screen-xs-max) {
+    }
   }
 
 
@@ -385,6 +412,10 @@ a.app-launcher {
   }
 }
 
+.navbar-collapse.collapse.in {
+  box-shadow: 0 3px 12px hsla(0, 0, 0, .4);
+
+}
 
 // for header that slides up/down on scroll
 // .headroom {
