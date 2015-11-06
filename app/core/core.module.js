@@ -30,7 +30,8 @@
     'xeditable',
     'angularChart',
     'duScroll',
-    'ui.select'
+    'ui.select',
+    'ngTagsInput'
   ]);
 
 })();

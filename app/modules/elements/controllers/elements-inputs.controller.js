@@ -116,6 +116,19 @@
     };
 
 
+    //ngTagsInput
+    _this.tags = [
+      { text: 'just' },
+      { text: 'some' },
+      { text: 'cool' },
+      { text: 'tags' }
+    ];
+
+    _this.loadTags = function(query) {
+      return $http.get('/tags?query=' + query);
+    };
+
+
     // SWITCHES
     _this.switchStatus1 = false;
     _this.switchStatus2 = false;
