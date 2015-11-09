@@ -75,3 +75,8 @@
 
 @import '../../modules/splitview/assets/sass/leftnav';
 @import '../../modules/splitview/assets/sass/splitview';
+@media (max-width: $screen-xs-max) {
+  .navbar-default .navbar-nav .open .dropdown-menu >li >a {
+    color: #fff;
+  }
+}

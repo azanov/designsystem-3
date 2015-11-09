@@ -204,13 +204,9 @@ a.app-launcher {
       }
     }
   }
-
-  @media (max-width: $screen-xs-max){
-    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
-      color: #fff;
-}
-}
-
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #fff;
+  }
 
   .navbar-nav {
     margin-top: 0;
