@@ -255,71 +255,73 @@
         </li>
         <li><strong>Currencies and numbers.</strong> Displaying correct currency formats is especially critical. You can use predefined currency symbols (such as the European Euro <code>€</code> or the U.S. Dollar <code>$</code>) or recognized acronyms for those currencies (such as <code>GPB</code> for the British Pound or <code>USD</code> for the U.S. Dollar). Also note that numbers are represented in various different ways around the world. The presence and location of a comma or decimal point can vary wildly from country to country in terms of what it means in terms of real numerical value.
 
-          <table class="table table-bordered">
-            <thead>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Special Cases</th>
+                  <th>Comment</th>
+                  <th>Country</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
               <tr>
-                <th>Special Cases</th>
-                <th>Comment</th>
-                <th>Country</th>
-                <th>Example</th>
+                <td rowspan="3">Thousands seperator character</td>
+                <td rowspan="3">&ldquo;One thousand and twenty five&rdquo;</td>
+                <td>U.S.</td>
+                <td>1,025</td>
               </tr>
-            </thead>
-            <tr>
-              <td rowspan="3">Thousands seperator character</td>
-              <td rowspan="3">&ldquo;One thousand and twenty five&rdquo;</td>
-              <td>U.S.</td>
-              <td>1,025</td>
-            </tr>
-            <tr>
-              <td>Germany</td>
-              <td>1.025</td>
-            </tr>
-            <tr>
-              <td>Sweden</td>
-              <td>1 025</td>
-            </tr>
+              <tr>
+                <td>Germany</td>
+                <td>1.025</td>
+              </tr>
+              <tr>
+                <td>Sweden</td>
+                <td>1 025</td>
+              </tr>
 
-            <tr>
-              <td rowspan="2">Decimal seperator character</td>
-              <td rowspan="2">&ldquo;One and a half&rdquo;</td>
-              <td>U.S.</td>
-              <td>1.5</td>
-            </tr>
-            <tr>
-              <td>Germany</td>
-              <td>1,5</td>
-            </tr>
+              <tr>
+                <td rowspan="2">Decimal seperator character</td>
+                <td rowspan="2">&ldquo;One and a half&rdquo;</td>
+                <td>U.S.</td>
+                <td>1.5</td>
+              </tr>
+              <tr>
+                <td>Germany</td>
+                <td>1,5</td>
+              </tr>
 
-            <tr>
-              <td rowspan="2">Digit grouping</td>
-              <td rowspan="2">Different placement of the thousands separator</td>
-              <td>U.S.</td>
-              <td>123,456,789,00</td>
-            </tr>
-            <tr>
-              <td>Hindi</td>
-              <td>12,34,56,789.00</td>
-            </tr>
+              <tr>
+                <td rowspan="2">Digit grouping</td>
+                <td rowspan="2">Different placement of the thousands separator</td>
+                <td>U.S.</td>
+                <td>123,456,789,00</td>
+              </tr>
+              <tr>
+                <td>Hindi</td>
+                <td>12,34,56,789.00</td>
+              </tr>
 
-            <tr>
-              <td rowspan="4">Percent Sign</td>
-              <td rowspan="4">Don&rsquo;t hard code the % sign</td>
-              <td>U.S.</td>
-              <td>98%</td>
-            </tr>
-            <tr>
-              <td>France</td>
-              <td>98 %</td>
-            </tr>
-            <tr>
-              <td>Abbreviation</td>
-              <td>98 pct / 98 pc</td>
-            </tr>
-            <tr>
-              <td>Turkey, Euskadi</td>
-              <td>%98</td>
-            </tr>
-          </table>
+              <tr>
+                <td rowspan="4">Percent Sign</td>
+                <td rowspan="4">Don&rsquo;t hard code the % sign</td>
+                <td>U.S.</td>
+                <td>98%</td>
+              </tr>
+              <tr>
+                <td>France</td>
+                <td>98 %</td>
+              </tr>
+              <tr>
+                <td>Abbreviation</td>
+                <td>98 pct / 98 pc</td>
+              </tr>
+              <tr>
+                <td>Turkey, Euskadi</td>
+                <td>%98</td>
+              </tr>
+            </table>
+          </div>
 
         </li>
         <li><strong>Measurements.</strong> If your product displays size, weight, volume or other measurement-related information, chances are good that your non-U.S. audience is among the 95% of the world&rsquo;s population who are using the metric system. You&rsquo;ll probably want to use metric for these users, but still offer them the option of using the imperial (U.S.) system.</li>

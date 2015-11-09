@@ -7,6 +7,9 @@
 @import 'base/typography';
 
 
+@import 'documentation/docpage-header';
+
+
 // home page
 
 
@@ -232,105 +235,6 @@
 // }
 //
 
-
-//DOCUMENTATION PAGES
-
-.doc-hero {
-  background: linear-gradient(90deg, #4c4ca2 0%, #872e96 42%, #872e96 48%, #c90d8b 100%);
-  height: 300px;
-  border-top: 1px solid rgba(255, 255, 255, .2);
-  margin-top: 50px; // height of navbar
-  position: relative;
-  .hero-header {
-    margin-top: 115px;
-    .eyebrow {
-      font-family: $font-family-ps-regular;
-      font-size: 16px;
-      color: rgba(255, 255, 255, .5);
-    }
-    h1 {
-      font-size: 40px;
-      color: #fff;
-      font-family: $font-family-ps-light; //NOTE: global spec for h1.ko is reg not light
-      margin-top: 5px;
-    }
-  }
-  .jump-bar {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    background-color: rgba(0, 0, 0, .1);
-    color: rgba(255, 255, 255, 1);
-    font-family: $font-family-ps-regular;
-    z-index: 4;
-    .jump-menu {
-      padding: 15px 0 0;
-      li {
-        font-size: 1em;
-        margin-right: 1.5%;
-        transition: all .3s linear;
-        @media (min-width: 1200px) {
-          font-size: 1.2em;
-          margin-right: 4%;
-        }
-        a {
-          color: inherit;
-        }
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-    }
-  }
-}
-
-
-//tertiary button states
-.btn-default-ko {
-  &.hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
-  }
-  &.active {
-    opacity: .8;
-  }
-}
-
-
-
-.sub-header.jump-bar {
-  background: linear-gradient(90deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)),
-  linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%);
-
-
-  // not docked
-  &.headroom-top {
-    // position: relative;
-    height: 50px;
-    top: 250px;
-  }
-
-  //docked
-  &.headroom-not-top {
-    height: 50px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
-    top: 50px;
-    position: fixed;
-    ul {
-      padding-top: 15px;
-    }
-  }
-}
-
-.modal-demo {
-  border: 1px solid #c0c0c0;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, .2);
-  margin-bottom: 15px;
-  +.btn {
-    min-width: 120px;
-    margin-bottom: 40px;
-  }
-}
 
 
 // DOCS TYPOGRAPHY differs from DS

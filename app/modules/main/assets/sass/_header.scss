@@ -442,6 +442,12 @@ a.app-launcher {
   }
 }
 
+@include breakpoint(screen-xs) {
+    .navbar-nav .dropdown.open .dropdown-menu {
+      background: #712276;
+    }
+}
+
 // put bottom to ensure override
 @media (max-width: $screen-xs-max) {
   .navbar-default .navbar-nav .open .dropdown-menu >li >a {
