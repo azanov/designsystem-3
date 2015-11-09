@@ -17,10 +17,14 @@
     align-items: center;
     justify-content: center;
     height: 500px;
+    @include breakpoint(screen-xs) {
+        flex-direction: column;
+        padding: 20px;
+    }
   }
 
   p.versions {
-    font-size: 12px !important;
+    font-size: 12px;
     a {
       font-size: 12px;
       color: hsl(0, 0%, 90%);
@@ -31,11 +35,21 @@
   .diptych {
     display: flex;
     align-items: center;
+
+    @include breakpoint(screen-xs) {
+        flex-direction: column;
+        padding: 0 20px;
+
+    }
+
+
+
     > div:first-child {
       padding-right: 20px;
       transition: padding .5s ease;
     }
     transition: padding .5s ease;
+
   }
 
   .title-unit {
@@ -44,6 +58,9 @@
       font-size: 32px;
       font-family: $font-family-ps-regular;
       margin-top: 5px;
+      @include breakpoint(screen-xs) {
+          font-size: 24px;
+      }
     }
     .eyebrow {
       color: inherit;
@@ -54,11 +71,17 @@
       color: inherit;
       font-size: 16px;
       line-height: 1.5;
+      &.versions {
+        font-size: 12px;
+        @include breakpoint(screen-xs) {
+            font-size: 14px;
+        }
+      }
     }
   }
   //
   .hero-main {
-    background: #3E53A4 url('../images/hero-bg.jpg') top right 0 no-repeat;
+    background: #8c4ca5 url('../images/hero-bg.jpg') top right 0 no-repeat;
     border-top: 1px solid rgba(255, 255, 255, .2);
     color: #fff;
     position: relative;
@@ -103,6 +126,12 @@
         color: #fff;
       }
     }
+    @include breakpoint(screen-xs) {
+        img {
+          max-width: 90%;
+          margin: 20px 0 0;
+        }
+    }
   }
 
   //
@@ -114,6 +143,12 @@
       .eyebrow {
         color: rgba(207, 9, 137, .65);
       }
+    }
+    @include breakpoint(screen-xs) {
+        img {
+          max-width: 60%;
+          margin: 20px 0 0 20px;
+        }
     }
   }
 
@@ -192,6 +227,10 @@
 
 }
 
+// .home .title-unit p.versions {
+//   font-size: 12px;
+// }
+//
 
 
 //DOCUMENTATION PAGES

@@ -1,4 +1,4 @@
-// scss-lint:disable MergeableSelector
+// scss-lint:disable MergeableSelector SelectorDepth
 
 #header,
 header {
@@ -439,5 +439,12 @@ a.app-launcher {
 @media (max-width: $screen-xs-max) {
   .activity {
     display: inline-block;
+  }
+}
+
+// put bottom to ensure override
+@media (max-width: $screen-xs-max) {
+  .navbar-default .navbar-nav .open .dropdown-menu >li >a {
+    color: #fff;
   }
 }
