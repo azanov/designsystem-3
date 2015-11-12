@@ -86,12 +86,13 @@ gulp.task('sass-dist', function() {
 
     .pipe(header(banner, { pkg: pkg }))
 
-    .pipe(gulp.dest('./build/assets/css'))
+    //.pipe(gulp.dest('./build/assets/css'))
     .pipe(cssfilter)
-    .pipe(gulp.dest('./dist/css'));
+    .pipe(gulp.dest('./dist/css')
+   
+   );
 
 });
-
 
 
 //usemin
@@ -99,12 +100,13 @@ gulp.task('usemin', function() {
   gulp.src('./app/index.html')
     .pipe(usemin({
       // css: [minifyCss()],
+      css: [minifyCss, rev],
       // html: [minifyHtml({
       //   empty: true
       // })],
       vendorjs: [uglify({
         mangle: true
-      })],
+      }), rev],
       appjs: [
         replace('debug: true', 'debug: false'),
         ngAnnotate({
@@ -114,7 +116,8 @@ gulp.task('usemin', function() {
         }),
         uglify({
           mangle: true
-        })
+        }),
+        rev
       ]
     }))
     .pipe(gulp.dest('./build'));
