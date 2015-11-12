@@ -88,10 +88,11 @@ gulp.task('sass-dist', function() {
 
     //.pipe(gulp.dest('./build/assets/css'))
     .pipe(cssfilter)
-    .pipe(gulp.dest('./dist/css'));
+    .pipe(gulp.dest('./dist/css')
+   
+   );
 
 });
-
 
 
 //usemin
@@ -99,7 +100,7 @@ gulp.task('usemin', function() {
   gulp.src('./app/index.html')
     .pipe(usemin({
       // css: [minifyCss()],
-      css: [rev],
+      css: [minifyCss, rev],
       // html: [minifyHtml({
       //   empty: true
       // })],
