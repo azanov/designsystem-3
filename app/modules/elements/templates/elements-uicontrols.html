@@ -632,11 +632,27 @@
   </div>
   <div class="row">
     <div class="col-md-3">
-      <p>You can use these advanced menu types to augment our standard dropdown menus. “Multi-select with tokens” is a good alternative to the multi-section types above, as it allows users to create a persistent list of selections that they can easily edit.</p>
+      <p>You can use these advanced menu types to augment our standard dropdown menus. “Multi-select with tokens” is a good alternative to the multi-section types above, as it allows users to create a persistent list of selections that they can easily edit.</p
 
+      <p>Note that you have your choice of two multi-select menu controls: UI-Select and Ng-Tags-Input.</p>
+
+      <p><strong>UI-Select:</strong></p>
+      <ul>
+        <li>???</li>
+        <li>???</li>
+        <li>???</li>
+      </ul>
       <p>
         <a class="more-info plugin" href="https://github.com/angular-ui/ui-select" target="_blank">angular ui-select v0.13.2</a>
+      </p>
 
+      <p><strong>Ng-Tags-Input:</strong></p>
+      <ul>
+        <li>???</li>
+        <li>???</li>
+        <li>???</li>
+      </ul>
+      <p>
         <a class="more-info plugin" href="https://github.com/mbenford/ngTagsInput" target="_blank">ng-tags-input v3.0.0</a>
       </p>
 
@@ -648,7 +664,7 @@
       <div class="row">
         <div class="col-md-10">
 
-          <h4>UI-Select Examples</h4>
+          <h4>UI-Select Options</h4>
 
           <figure>
             <figcaption>Single-Select with Type-Ahead</figcaption>
@@ -656,19 +672,6 @@
               <label>Text label</label>
               <ui-select ng-model="inputs.countrySelect.singleSelected" theme="bootstrap">
                 <ui-select-match placeholder="">{{$select.selected.name}}</ui-select-match>
-                <ui-select-choices repeat="item in inputs.countrySelect.countries | filter: $select.search">
-                  <div ng-bind-html="item.name | highlight: $select.search"></div>
-                </ui-select-choices>
-              </ui-select>
-            </div>
-          </figure>
-
-          <figure>
-            <figcaption>Multi-Select with Tokens</figcaption>
-            <div class="form-group">
-              <label>Text label</label>
-              <ui-select multiple  ng-model="inputs.countrySelect.multipleSelected" theme="bootstrap">
-                <ui-select-match placeholder="Add a tag">{{$item.name}}</ui-select-match>
                 <ui-select-choices repeat="item in inputs.countrySelect.countries | filter: $select.search">
                   <div ng-bind-html="item.name | highlight: $select.search"></div>
                 </ui-select-choices>
@@ -690,10 +693,23 @@
             </div>
           </figure>
 
-          <h4>Ng-Tags-Input Example</h4>
+          <figure>
+            <figcaption>Multi-Select with Tokens</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <ui-select multiple  ng-model="inputs.countrySelect.multipleSelected" theme="bootstrap">
+                <ui-select-match placeholder="Add a tag">{{$item.name}}</ui-select-match>
+                <ui-select-choices repeat="item in inputs.countrySelect.countries | filter: $select.search">
+                  <div ng-bind-html="item.name | highlight: $select.search"></div>
+                </ui-select-choices>
+              </ui-select>
+            </div>
+          </figure>
+
+          <h4>Ng-Tags-Input Option</h4>
 
           <figure>
-            <figcaption>  Multi-select with Tokens</figcaption>
+            <figcaption>Multi-select with Tokens</figcaption>
             <tags-input ng-model="inputs.tags" display-property="name" key-property="code">
               <auto-complete source="inputs.loadTags($query)" ></auto-complete>
             </tags-input>
