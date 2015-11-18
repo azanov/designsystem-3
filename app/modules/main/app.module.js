@@ -28,8 +28,6 @@
   //angular scroll configuration
   angular.module('app').value('duScrollDuration', 750);
   angular.module('app').value('duScrollOffset', 125);
-  angular.module('app').value('duScrollGreedy', true);
-
 
   //configure debugging
   angular.module('app').config(function($logProvider, config) {
@@ -128,7 +126,7 @@
 
 
 
-  angular.module('app').run(function($log, $rootScope, $translate, $document, $timeout, $location) {
+  angular.module('app').run(function($log, $rootScope, $state, $translate, $document) {
 
 
     //refresh as parts are added in controllers
@@ -150,72 +148,42 @@
     });
 
 
-    //STATE CHANGE ERROR
     $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {
       $log.debug('$stateChangeError: ', error);
     });
 
-
-    //STATE NOT FOUND
     $rootScope.$on('$stateNotFound', function(unfoundState) {
       $log.debug('$stateNotFound: ', unfoundState);
     });
 
-
-    //ROUTE CHANGE SUCCESS
     $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
 
     });
 
-
-    //ROUTE CHANGE START
     $rootScope.$on('$routeChangeStart', function(newRoute, oldRoute) {
 
     });
 
-
-    //STATE CHANGE SUCCESS
+    //scroll to top of the page, this makes the transitions wonky and needs more research
     $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
 
     });
 
-
-    //VIEW CONTENT LOADING
-    $rootScope.$on('$viewContentLoading', function(event) {
-      $document.duScrollTo(0, 0);
-    });
-
-
-    //VIEW CONTENT LOADED
     $rootScope.$on('$viewContentLoaded', function(event) {
-      
-      //convert urlencoded #
-      $location.url($location.url().replace('%23', '#'));
-      
-      if ($location.$$hash) {
-        $log.debug('VIEW CONTENT LOADED WITH $$hash', $location);
-        hashScroll($location.$$hash);
-      }
-      
-      
-      function hashScroll(hash) {
-        if (hash){  
-          var element = angular.element(document.getElementById(hash));
-          $log.debug('ELEMENT', element);
-          
-          if (element.length > 0) {
-            $timeout(function() {
-              $document.duScrollToElementAnimated(element);
-            }, 300);
-          }
-          
-        }
-        
-      }
-      
-      
 
-    });
+      if ($state.params['#']) {
+        $log.debug($state.params['#']);
+
+        var element = angular.element(document.getElementById($state.params['#']));
+        $log.debug('ELEMENT', element);
+
+        $document.duScrollToElementAnimated(element);
+      }
+      else {
+        $document.duScrollTo(0, 0);
+      }
+
+    })
 
   });
 
