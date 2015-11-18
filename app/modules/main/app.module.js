@@ -126,7 +126,7 @@
 
 
 
-  angular.module('app').run(function($rootScope, $state, $stateParams, $log, $translate, $anchorScroll, $location, $window) {
+  angular.module('app').run(function($log, $rootScope, $state, $translate, $document) {
 
 
     //refresh as parts are added in controllers
@@ -141,8 +141,6 @@
         'From state:', fromState
       );
 
-      $anchorScroll();
-
       if (!toState || !toState.data) {
         return;
       }
@@ -150,7 +148,7 @@
     });
 
 
-    $rootScope.$on('$stateChangeError', function(event, toState, tpParams, fromState, fromParams, error) {
+    $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {
       $log.debug('$stateChangeError: ', error);
     });
 
@@ -159,32 +157,33 @@
     });
 
     $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
-      //if ($location.hash()) {$anchorScroll();}
-      $anchorScroll();
+
     });
 
     $rootScope.$on('$routeChangeStart', function(newRoute, oldRoute) {
-      //if ($location.hash()) {$anchorScroll();}
-      //$anchorScroll();
+
     });
 
     //scroll to top of the page, this makes the transitions wonky and needs more research
-    $rootScope.$on('$stateChangeSuccess', function() {
-      //document.body.scrollTop = document.documentElement.scrollTop = 0;
+    $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+
     });
 
+    $rootScope.$on('$viewContentLoaded', function(event) {
 
-    // hack to scroll to top when navigating to new URLS but not back/forward
-    // var wrap = function(method) {
-    //   var orig = $window.window.history[method];
-    //   $window.window.history[method] = function() {
-    //     var retval = orig.apply(this, Array.prototype.slice.call(arguments));
-    //     $anchorScroll();
-    //     return retval;
-    //   };
-    // };
-    // wrap('pushState');
-    // wrap('replaceState');
+      if ($state.params['#']) {
+        $log.debug($state.params['#']);
+
+        var element = angular.element(document.getElementById($state.params['#']));
+        $log.debug('ELEMENT', element);
+
+        $document.duScrollToElementAnimated(element);
+      }
+      else {
+        $document.duScrollTo(0, 0);
+      }
+
+    })
 
   });
 
