@@ -183,6 +183,7 @@
         $log.debug('ELEMENT', element, duScrollOffset);
 
         //$uiViewScroll(element);
+        //$document.duScrollToElementAnimated(element);
 
         $timeout(function() {
           $document.duScrollToElementAnimated(element);
