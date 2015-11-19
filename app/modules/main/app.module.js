@@ -187,7 +187,7 @@
         $timeout(function() {
           $document.duScrollToElementAnimated(element);
           //$document.duScrollToElement(element, 300);
-        }, 0);
+        }, 300);
 
       }
 

@@ -722,7 +722,7 @@ h2.table-header.specifications {
 // }
 
 .view-animate {
-  transition: all .3s;
+  transition: opacity .3s;
 
   &.ng-enter,
   &.ng-leave {
@@ -732,8 +732,8 @@ h2.table-header.specifications {
   &.ng-enter,
   &.ng-leave-active,
   &.ng-hide {
-    height: 0;
     opacity: 0;
+
   }
 }
 //* experimental block grid code, will not work in IE8
