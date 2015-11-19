@@ -128,7 +128,7 @@
 
 
 
-  angular.module('app').run(function($log, $rootScope, $state, $translate, $document, $timeout, $uiViewScroll, duScrollOffset) {
+  angular.module('app').run(function($log, $rootScope, $state, $translate, $document, $timeout) {
 
 
     //refresh as parts are added in controllers
@@ -171,6 +171,7 @@
     });
 
     $rootScope.$on('$viewContentLoading', function(event) {
+      $log.debug('VIEW CONTENT LOADING', $state);
       $document.duScrollTo(0, 0);
     });
 
@@ -180,14 +181,11 @@
         $log.debug($state);
 
         var element = angular.element(document.getElementById($state.params['#']));
-        $log.debug('ELEMENT', element, duScrollOffset);
-
-        //$uiViewScroll(element);
-        //$document.duScrollToElementAnimated(element);
+        $log.debug('ELEMENT', element);
 
         $timeout(function() {
           $document.duScrollToElementAnimated(element);
-          //$document.duScrollToElement(element, 300);
+
         }, 300);
 
       }
