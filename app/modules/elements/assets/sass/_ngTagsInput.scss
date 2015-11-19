@@ -67,6 +67,15 @@ tags-input {
       em {
         font-size: inherit;
       }
+      
+      &.selected {
+        background-color: $pb-bg3;
+        
+        em {
+          background-color: transparent;
+        }
+        
+      }
 
     }
 

@@ -1,6 +1,19 @@
 .ui-select-bootstrap {
+  .ui-select-match > .btn:hover {
+    background-color: #fff;
+    border-color: $pb-gray-300;
+  }
+  
   .ui-select-choices {
     margin-top: 5px;
+  }
+  .ui-select-choices-row {
+    > a:hover {
+      background-color: $pb-bg3;
+    }
+    &.active > a {
+      background-color: $pb-bg4;
+    }
   }
 }
 
