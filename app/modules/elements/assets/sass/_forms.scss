@@ -201,6 +201,9 @@ select {
   &.form-control {
     padding-right: 22px;
   }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .ui-select-bootstrap .ui-select-choices-row.active > a {
