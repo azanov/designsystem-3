@@ -28,6 +28,8 @@
   //angular scroll configuration
   angular.module('app').value('duScrollDuration', 750);
   angular.module('app').value('duScrollOffset', 125);
+  angular.module('app').value('duScrollGreedy', true);
+
 
   //configure debugging
   angular.module('app').config(function($logProvider, config) {
@@ -126,7 +128,7 @@
 
 
 
-  angular.module('app').run(function($log, $rootScope, $state, $translate, $document) {
+  angular.module('app').run(function($log, $rootScope, $state, $translate, $document, $timeout, $uiViewScroll, duScrollOffset) {
 
 
     //refresh as parts are added in controllers
@@ -164,23 +166,29 @@
 
     });
 
-    //scroll to top of the page, this makes the transitions wonky and needs more research
     $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
 
+    });
+
+    $rootScope.$on('$viewContentLoading', function(event) {
+      $document.duScrollTo(0, 0);
     });
 
     $rootScope.$on('$viewContentLoaded', function(event) {
 
       if ($state.params['#']) {
-        $log.debug($state.params['#']);
+        $log.debug($state);
 
         var element = angular.element(document.getElementById($state.params['#']));
-        $log.debug('ELEMENT', element);
+        $log.debug('ELEMENT', element, duScrollOffset);
 
-        $document.duScrollToElementAnimated(element);
-      }
-      else {
-        $document.duScrollTo(0, 0);
+        //$uiViewScroll(element);
+
+        $timeout(function() {
+          $document.duScrollToElementAnimated(element);
+          //$document.duScrollToElement(element, 300);
+        }, 0);
+
       }
 
     })
