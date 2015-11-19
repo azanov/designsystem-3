@@ -695,10 +695,13 @@
           <h4 class="spacer-top-lg">Ng-Tags-Input Option</h4>
 
           <figure>
-            <figcaption>Multi-select with Tokens</figcaption>
-            <tags-input ng-model="inputs.tags" display-property="name" key-property="code">
-              <auto-complete source="inputs.loadTags($query)" ></auto-complete>
-            </tags-input>
+            <figcaption>Multi-Select with Tokens</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <tags-input ng-model="inputs.tags" display-property="name" key-property="code">
+                <auto-complete source="inputs.loadTags($query)" ></auto-complete>
+              </tags-input>
+            </div>
           </figure>
 
         </div>
