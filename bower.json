@@ -22,7 +22,7 @@
     "angular-rangeslider": "0.0.13",
     "angular-resource": "1.4.5",
     "angular-sanitize": "1.4.5",
-    "angular-scroll": "0.7.3",
+    "angular-scroll": "1.0.0",
     "angular-toastr": "1.4.1",
     "angular-translate": "2.8.1",
     "angular-translate-loader-partial": "2.8.1",
