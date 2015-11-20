@@ -66,6 +66,10 @@ footer {
         a {
           color: $pb-gray-500;
           transition: 0.2s all;
+          display: inline-block;
+          vertical-align: middle;
+          height: 2em;
+          line-height: 2em;
 
           &:hover {
             transform: scale(1.3);
