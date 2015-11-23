@@ -95,7 +95,7 @@
           </tr>
           <tr ng-repeat-start="item in datatable.table.dataFiltered = (datatable.table.data | orderBy:datatable.table.sort.type:datatable.table.sort.reverse | filter: datatable.table.search | daterange:datatable.table.daterangepicker.date.startDate:datatable.table.daterangepicker.date.endDate | limitTo: datatable.table.limit )" ng-class="{'row-open': item.showDetails}">
             <td>
-              <a href="" ng-init="item.showDetails = false" ng-click="item.showDetails = !item.showDetails">
+              <a href="" class="table-row-toggle" ng-init="item.showDetails = false" ng-click="item.showDetails = !item.showDetails">
                 <i class="fa fa-fw fa-lg fa-angle-right transition-all" ng-class="{'fa-rotate-90': item.showDetails}"></i>
               </a>
             </td>

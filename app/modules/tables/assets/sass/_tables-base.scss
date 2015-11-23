@@ -79,6 +79,10 @@ th {
   .table {
     background-color: $body-bg;
   }
+  
+  .table-row-toggle {
+    color: $pb-gray-700;
+  }
 
   .table-row-selected {
     td {
