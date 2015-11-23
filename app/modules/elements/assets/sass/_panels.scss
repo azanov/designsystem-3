@@ -58,7 +58,11 @@
   @include panel-variant($panel-default-border, #2E2E2E, $panel-default-heading-bg, $panel-default-border);
 }
 .panel-filled-heading {
-  @include panel-variant($panel-default-border, #2E2E2E, rgba(200, 200, 200, .2), transparent);
+  @include panel-variant($panel-default-border, #2E2E2E, none, transparent);
+
+  &.panel-default > .panel-heading {
+    background-color: rgba(200, 200, 200, .2);
+  }
 }
 
 
