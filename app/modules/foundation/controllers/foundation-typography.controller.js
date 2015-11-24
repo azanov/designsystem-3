@@ -40,11 +40,15 @@
     ];
 
     _this.formsInputs = [
-      { desc: 'Field Labels', color: '#717171'},
-      { desc: 'Radio button labels', color: '#717171'},
-      { desc: 'Radio button labels (active)', color: '#3E53A4'},
-      { desc: 'Check Box labels', color: '#717171'},
-      { desc: 'Check Box labels (active)', color: '#3E53A4'}
+      { desc: 'Field Labels', font: 'Helvetica Neue Regular 14', color: '#717171'},
+      { desc: 'Input field text entered', font: 'Helvetica Neue Regular 14', color: '#3e53a4'},
+      { desc: 'Input field text placeholder', font: 'Helvetica Neue Regular 14', color: '#9b9b9b'},
+      { desc: 'Input field text disabled (if applicable)', font: 'Helvetica Neue Regular 14', color: '#c0c0c0'},
+      { desc: 'Input field text readonly', font: 'Helvetica Neue Regular 14', color: '#4e4e4e'},
+      { desc: 'Radio button labels', font: 'Helvetica Neue Regular 14', color: '#717171'},
+      //{ desc: 'Radio button labels (active)', color: '#3E53A4'},
+      { desc: 'Check Box labels', font: 'Helvetica Neue Regular 14', color: '#717171'}
+      //{ desc: 'Check Box labels (active)', color: '#3E53A4'}
     ];
 
     _this.buttons = [
