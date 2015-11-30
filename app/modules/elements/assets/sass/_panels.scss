@@ -66,6 +66,43 @@
 }
 
 
+//panel states
+//TODO: make this is a mixin/extend or use the panel variant above... these need to be simplified
+.panel-primary {
+  .panel-heading {
+    color: #fff;
+    background-color: $pb-blue;
+  }
+}
+.panel-success {
+  .panel-heading {
+    color: $state-success-text;
+    background-color: $state-success-bg;
+  }
+}
+
+.panel-warning {
+  .panel-heading {
+    color: $state-warning-text;
+    background-color: $state-warning-bg;
+  }
+}
+
+.panel-danger {
+  .panel-heading {
+    color: $state-danger-text;
+    background-color: $state-danger-bg;
+  }
+}
+
+.panel-info {
+  .panel-heading {
+    color: $state-info-text;
+    background-color: $state-info-bg;
+  }
+}
+
+
 
 
 // draggable /
