@@ -128,12 +128,22 @@
 
 
 
-  angular.module('app').run(function($log, $rootScope, $translate, $document, $timeout, $location) {
+  angular.module('app').run(function($log, $rootScope, $translate, $document, $timeout, $location, $state) {
 
 
     //refresh as parts are added in controllers
     $rootScope.$on('$translatePartialLoaderStructureChanged', function() {
       $translate.refresh();
+    });
+    
+    //LOCATION CHANGE START
+    $rootScope.$on('$locationChangeStart', function(event, newUrl) {
+      
+      if ($location.$$hash) {
+        $log.debug('LOCATION CHANGE START WITH $$hash', $location);
+        hashScroll($location.$$hash);
+      }
+ 
     });
 
 
@@ -173,7 +183,7 @@
 
     });
 
-
+    
     //STATE CHANGE SUCCESS
     $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
 
@@ -194,28 +204,38 @@
       
       if ($location.$$hash) {
         $log.debug('VIEW CONTENT LOADED WITH $$hash', $location);
-        hashScroll($location.$$hash);
+        hashScroll($location.$$hash, true);
       }
       
+    });
+    
+    
+    //handle scrolling to updated hash
+    //@param timeout : boolean, if true use timeout for view animation delay
+    function hashScroll(hash, timeout) {
+        timeout = timeout || false;
+        $log.debug(timeout);
       
-      function hashScroll(hash) {
         if (hash){  
           var element = angular.element(document.getElementById(hash));
-          $log.debug('ELEMENT', element);
           
           if (element.length > 0) {
-            $timeout(function() {
+            
+            if (timeout) {
+              $timeout(function() {
+                $document.duScrollToElementAnimated(element);
+              }, 300);
+            }
+            else {
               $document.duScrollToElementAnimated(element);
-            }, 300);
+            }
+            
           }
           
         }
         
       }
       
-      
-
-    });
 
   });
 
