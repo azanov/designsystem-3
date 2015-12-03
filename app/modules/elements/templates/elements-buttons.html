@@ -16,16 +16,16 @@
         <div class="col-md-12">
           <ul class="list-unstyled list-inline jump-menu">
             <li>
-              <a du-smooth-scroll="action" href="">Action</a>
+              <a ui-sref="elements.buttons({'#':'action'})">Action</a>
             </li>
             <li>
-              <a du-smooth-scroll="link" href="">Link</a>
+              <a ui-sref="elements.buttons({'#': 'link'})">Link</a>
             </li>
             <li>
-              <a du-smooth-scroll="tile" href="">Tiles</a>
+              <a ui-sref="elements.buttons({'#':'tile'})">Tiles</a>
             </li>
             <li>
-              <a du-smooth-scroll="breadcrumbs" href="">Breadcrumbs</a>
+              <a ui-sref="elements.buttons({'#':'breadcrumbs'})">Breadcrumbs</a>
             </li>
           </ul>
         </div>
@@ -732,6 +732,8 @@
       <p>Keep word counts to three words or fewer if possible. If you need to use more than three words, use the smallest number of words for conveying the button’s call to action.</p>
 
       <p>Use action verbs (“get,” “see,” “filter,” “send,” “download,” “go to,” “share,” etc.) and make sure that the terminology you’re using is customer-facing and consistent with the rest of your product.</p>
+      
+      <p>See also: <a href="" ui-sref="foundation.writing.page">writing</a></p>
 
     </div>
   </div>
@@ -787,6 +789,8 @@
         <li>Use sentence capitalization</li>
         <li>Never conclude with punctuation unless they are formed as questions</li>
       </ul>
+      
+      <p>See also: <a href="" ui-sref="foundation.writing.page">writing</a></p>
     </div>
   </div>
 
@@ -906,9 +910,9 @@
   </div>
 
 
-  <div class="row spacer-top-xl" id="breadcrumbs">
+  <div class="row spacer-top-xl" >
     <div class="col-md-12">
-      <h1>Breadcrumbs</h1>
+      <h1 id="breadcrumbs">Breadcrumbs</h1>
     </div>
   </div>
 
