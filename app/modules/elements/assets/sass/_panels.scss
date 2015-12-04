@@ -34,6 +34,10 @@
   + .panel-body {
     padding-top: 20px;
   }
+
+  &.panel-toggle {
+    cursor: pointer;
+  }
 }
 // Within heading, strip any `h*` tag of its default margins for spacing.
 .panel-title {
@@ -67,7 +71,7 @@
 
 
 //panel states
-//TODO: make this is a mixin/extend or use the panel variant above... these need to be simplified
+//NOTE: these classes are not recommended to use in applications, but the styling is matched to DS just in case the BS classes are used
 .panel-primary {
   .panel-heading {
     color: #fff;

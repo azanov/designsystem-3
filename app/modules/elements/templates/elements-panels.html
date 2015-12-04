@@ -54,102 +54,58 @@
       </figure>
     </div>
   </div>
-  
+
   <div class="row">
     <div class="col-sm-4">
       <figure>
-        <figcaption>Panel with Contextual Alternate Header</figcaption>
-        <div class="panel panel-filled-heading panel-success">
-          <div class="panel-heading">Shipping Address</div>
-          <div class="panel-body">
-            <p><b>Melanine Ann Daniels <br>
-            Company Name</b></p>
-            <p>42 Main Street, Suite 516<br>
-            Bodega Bay, CA, 11021 USA</p>
+        <figcaption>Collapsible Panel with Error Message</figcaption>
+        <div class="panel panel-filled-heading panel-default">
+          <div class="panel-heading panel-toggle" ng-click="panels.error.open = !panels.error.open">Shipping Address <i class="fa fa-fw fa-exclamation-circle text-danger"></i> <i class="fa fa-angle-right pull-right transition-all" ng-class="{'fa-rotate-90': !panels.error.open}"></i></div>
+          <div uib-collapse="panels.error.open">
+            <div class="panel-body">
+              <div class="alert alert-danger">
+                We couldn’t complete your request. Please try again in a moment.
+              </div>
 
-            <p><a href="mailto:mdaniels@gmail.com">mdaniels@gmail.com</a><br>
-            212-201-2018</p>
+              <p><b>Melanine Ann Daniels <br>
+              Company Name</b></p>
+              <p>42 Main Street, Suite 516<br>
+              Bodega Bay, CA, 11021 USA</p>
+
+              <p><a href="mailto:mdaniels@gmail.com">mdaniels@gmail.com</a><br>
+              212-201-2018</p>
+            </div>
           </div>
         </div>
       </figure>
     </div>
-    
+
     <div class="col-sm-4">
       <figure>
-        <figcaption>Panel with Contextual Alternate Header</figcaption>
-        <div class="panel panel-filled-heading panel-warning">
-          <div class="panel-heading">Shipping Address</div>
-          <div class="panel-body">
-            <p><b>Melanine Ann Daniels <br>
-            Company Name</b></p>
-            <p>42 Main Street, Suite 516<br>
-            Bodega Bay, CA, 11021 USA</p>
+        <figcaption>Collapsible Panel with Error Message</figcaption>
+        <div class="panel panel-filled-heading panel-default">
+          <div class="panel-heading panel-toggle" ng-click="panels.success.open = !panels.success.open">Shipping Address <i class="fa fa-fw fa-check-circle text-success"></i> <i class="fa fa-angle-right pull-right transition-all" ng-class="{'fa-rotate-90': !panels.success.open}"></i></div>
+          <div uib-collapse="panels.success.open">
+            <div class="panel-body">
+              <div class="alert alert-success">
+                <strong>Success!</strong> Your new address was imported.
+              </div>
 
-            <p><a href="mailto:mdaniels@gmail.com">mdaniels@gmail.com</a><br>
-            212-201-2018</p>
-          </div>
-        </div>
-      </figure>
-    </div>
-    
-    <div class="col-sm-4">
-      <figure>
-        <figcaption>Panel with Contextual Alternate Header</figcaption>
-        <div class="panel panel-filled-heading panel-danger">
-          <div class="panel-heading">Shipping Address</div>
-          <div class="panel-body">
-            <p><b>Melanine Ann Daniels <br>
-            Company Name</b></p>
-            <p>42 Main Street, Suite 516<br>
-            Bodega Bay, CA, 11021 USA</p>
+              <p><b>Melanine Ann Daniels <br>
+              Company Name</b></p>
+              <p>42 Main Street, Suite 516<br>
+              Bodega Bay, CA, 11021 USA</p>
 
-            <p><a href="mailto:mdaniels@gmail.com">mdaniels@gmail.com</a><br>
-            212-201-2018</p>
+              <p><a href="mailto:mdaniels@gmail.com">mdaniels@gmail.com</a><br>
+              212-201-2018</p>
+            </div>
           </div>
         </div>
       </figure>
     </div>
   </div>
-  
-  
-  
-    <div class="row">
-    <div class="col-sm-4">
-      <figure>
-        <figcaption>Panel with Contextual Alternate Header</figcaption>
-        <div class="panel panel-filled-heading panel-info">
-          <div class="panel-heading">Shipping Address</div>
-          <div class="panel-body">
-            <p><b>Melanine Ann Daniels <br>
-            Company Name</b></p>
-            <p>42 Main Street, Suite 516<br>
-            Bodega Bay, CA, 11021 USA</p>
 
-            <p><a href="mailto:mdaniels@gmail.com">mdaniels@gmail.com</a><br>
-            212-201-2018</p>
-          </div>
-        </div>
-      </figure>
-    </div>
-    
-    <div class="col-sm-4">
-      <figure>
-        <figcaption>Panel with Contextual Alternate Header</figcaption>
-        <div class="panel panel-filled-heading panel-primary">
-          <div class="panel-heading">Shipping Address</div>
-          <div class="panel-body">
-            <p><b>Melanine Ann Daniels <br>
-            Company Name</b></p>
-            <p>42 Main Street, Suite 516<br>
-            Bodega Bay, CA, 11021 USA</p>
 
-            <p><a href="mailto:mdaniels@gmail.com">mdaniels@gmail.com</a><br>
-            212-201-2018</p>
-          </div>
-        </div>
-      </figure>
-    </div>
-  </div>
 
 
   <div class="row spacer-top-xl">
