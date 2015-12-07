@@ -347,20 +347,30 @@ a.app-launcher {
   background-color: transparent;
 }
 
+
+// phone menus --------------------
 // misc stubborn MQs
 @include breakpoint(screen-xs) {
+  // active menu item on phone
   .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     background-color: #c7cde6;
     color: $text-color;
   }
+  // main menu item on phone
   .navbar-default .navbar-nav > li > a {
     background-color: #fff;
     color: $text-color;
     border-bottom: 1px solid $pb-gray-50;
   }
+  // secondary menu on phone
+  .navbar-nav .dropdown.open .dropdown-menu {
+      background: #f1f1f1;
+    }
 }
 
-/// mega menu
+
+
+/// mega menu --------------------
 .mega-offset {
   margin-left: 140px;
 }
@@ -462,12 +472,7 @@ a.app-launcher {
   }
 }
 
-@include breakpoint(screen-xs) {
-  .navbar-nav .dropdown.open .dropdown-menu {
-    background: #fff;
 
-  }
-}
 
 // put bottom to ensure override
 @media (max-width: $screen-xs-max) {
