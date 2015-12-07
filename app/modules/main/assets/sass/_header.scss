@@ -192,13 +192,16 @@ a.app-launcher {
 
   .navbar-toggle {
     border-color: #fff;
-    background-color: transparentize($pb-blue, .5);
+   //background-color: transparentize($pb-blue, .5);
     border-radius: 0;
+    border:0;
+    padding-left: 0;
+    padding-right: 0;
     .icon-bar {
-      background-color: hsla(0, 0, 100%, .5);
+      background-color: hsla(0, 0, 100%, .8);
     }
     &:hover, &:focus {
-      background-color: transparentize($pb-blue, .5);
+      //background-color: transparentize($pb-blue, .5);
       .icon-bar {
         background-color: hsla(0, 0, 100%, 1);
       }
@@ -453,4 +456,35 @@ a.app-launcher {
   .navbar-default .navbar-nav .open .dropdown-menu >li >a {
     color: #fff;
   }
+}
+
+
+//  - TOP NAVBAR WITH HAMBURGER ON LEFT
+
+.custom-navbar .fa {font-size:25px}
+
+@media (max-width:767px) { 
+	.custom-navbar .navbar-right {
+	    float: right;
+	    padding-right: 15px;
+	}
+	.custom-navbar .nav.navbar-nav.navbar-right li {
+	    float: right;
+	}
+  	.custom-navbar .nav.navbar-nav.navbar-right li > a {
+	    padding:8px 5px;
+	}
+	.custom-navbar .navbar-toggle {
+	    float: left;
+      margin-right: 0;
+      margin-left: 15px;
+	}
+	.custom-navbar .navbar-header {
+	    float: left;
+	    width: auto!important;
+	}
+	.custom-navbar .navbar-collapse {
+	    clear: both;
+	    float: none;
+	}
 }
