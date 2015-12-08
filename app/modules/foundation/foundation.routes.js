@@ -95,6 +95,34 @@
           templateUrl: 'modules/foundation/templates/foundation-writing-terminology.html'
         }
       }
+    })
+
+    .state('foundation.animation', {
+      abstract: true,
+      url: '/animation',
+      templateUrl: 'modules/foundation/templates/foundation-animation.html',
+      //controller: 'AnimationsController as animations',
+      data: {
+        pageTitle: 'Foundation - Animation'
+      }
+    })
+
+    .state('foundation.animation.page', {
+      url: '',
+      views: {
+        link1: {
+          templateUrl: 'modules/foundation/templates/foundation-animation-link1.html'
+        } //,
+        // link2: {
+        //   templateUrl: 'modules/foundation/templates/foundation-animations-link2.html'
+        // },
+        // link3: {
+        //   templateUrl: 'modules/foundation/templates/foundation-animations-link3.html'
+        // },
+        // link4: {
+        //   templateUrl: 'modules/foundation/templates/foundation-animations-link4.html'
+        // }
+      }
     });
 
   });
