@@ -804,6 +804,14 @@ h2.table-header.specifications {
 
 .panel-download {
 
+  .illustrator {
+    background-color: #DA1F26;
+
+    svg {
+      max-height: 80px;
+    }
+  }
+
   .panel-body {
     min-height: 425px;
     transition: all .3s ease-in-out;
