@@ -10,3 +10,5 @@ npm-debug.log
 scss-lint.log
 .idea
 build
+app/assets/css/documentation.css
+app/assets/css/design_system.css
