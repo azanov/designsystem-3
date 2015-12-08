@@ -502,7 +502,12 @@ a.app-launcher {
   .custom-navbar .navbar-toggle {
     float: left;
     margin-right: 0;
-    margin-left: 15px;
+    margin: 0;
+    padding: 18px;
+    border-right: 1px solid rgba(255, 255, 255, .3);
+    &:not(.collapsed) {
+      background-color: #383e87;
+    }
   }
   .custom-navbar .navbar-header {
     float: left;
