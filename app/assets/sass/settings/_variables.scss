@@ -385,6 +385,13 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
   padding-right: 40px;
   margin-left: auto;
   margin-right: auto;
+  // which needs to be re-set for phone
+  .container-fluid {
+  @include breakpoint(screen-xs) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
 }
 
 

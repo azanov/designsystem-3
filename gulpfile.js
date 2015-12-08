@@ -218,8 +218,7 @@ gulp.task('browser-sync', function() {
   browserSync.init({
     server: {
       baseDir: './app'
-    },
-    browser: 'google chrome'
+    }
   });
 });
 
@@ -229,8 +228,7 @@ gulp.task('serve-build', [], function() {
   browserSync.init({
     server: {
       baseDir: './build'
-    },
-    browser: 'google chrome'
+    }
   });
 });
 

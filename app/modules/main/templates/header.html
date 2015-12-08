@@ -1,10 +1,10 @@
 
-  <div class="navbar yamm navbar-default" role="navigation">
+  <div class="navbar yamm navbar-default custom-navbar" role="navigation">
     <div class="container">
 
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -14,14 +14,16 @@
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse">
+      <div class="collapse navbar-collapse" id="main-navbar">
 
         <ul class="nav navbar-nav">
-          <li class="divider-vertical"></li>
+          <li class="divider-vertical hidden-xs"></li>
           <li>
             <a href="" ui-sref="principles.page">Principles</a>
           </li>
-          <li class="dropdown yamm-fw">
+
+          <!-- mega1 -->
+          <li class="dropdown yamm-fw hidden-xs">
             <a href="" class="dropdown-toggle" data-target="" data-toggle="dropdown">Web</a>
             <ul class="dropdown-menu pb-animate-menu">
               <li>
@@ -65,7 +67,9 @@
               </li>
             </ul>
           </li>
-          <li class="dropdown yamm-fw">
+
+          <!-- mega 2 -->
+          <li class="dropdown yamm-fw hidden-xs">
             <a href="" class="dropdown-toggle" data-target="" data-toggle="dropdown">Mobile</a>
             <ul class="dropdown-menu pb-animate-menu">
               <li>
@@ -109,9 +113,12 @@
               </li>
             </ul>
           </li>
-          <li>
-            <a href="" ui-sref="globalization.page">Globalization</a>
-          </li>
+
+          <!-- these 2 items only on phones -->
+          <li class="visible-xs-block"><a href="" ui-sref="weblanding">Web</a></li>
+          <li class="visible-xs-block"><a href="" ui-sref="mobilelanding">Mobile</a></li>
+
+          <li><a href="" ui-sref="globalization.page">Globalization</a></li>
 
           <li class="dropdown">
              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources</a>
