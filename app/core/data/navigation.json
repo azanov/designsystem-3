@@ -36,6 +36,10 @@
             }, {
               "label": "Helpers",
               "value": "helpers"
+            },
+            {
+              "label": "Animation",
+              "value": "foundation.animation.page"
             }
           ]
         }, {
