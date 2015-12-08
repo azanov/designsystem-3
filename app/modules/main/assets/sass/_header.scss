@@ -361,6 +361,11 @@ a.app-launcher {
     background-color: #fff;
     color: $text-color;
     border-bottom: 1px solid $pb-gray-50;
+    &:hover, &:focus {
+      background-color: #fff;
+      color: $text-color;
+
+    }
   }
   // secondary menu on phone
   .navbar-nav .dropdown.open .dropdown-menu {
