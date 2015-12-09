@@ -386,12 +386,10 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
   margin-left: auto;
   margin-right: auto;
   // which needs to be re-set for phone
-
-  // @include breakpoint(screen-xs) {
-  //     padding-left: 15px;
-  //     padding-right: 15px;
-  //   }
-
+  @media (max-width: $screen-sm) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
 }
 
 
