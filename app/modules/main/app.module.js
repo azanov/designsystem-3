@@ -22,7 +22,8 @@
     'pb.ds.tables',
     'pb.ds.writing',
     'pb.settings',
-    'pb.ds.splitview'
+    'pb.ds.splitview',
+    'pb.ds.help'
   ]);
 
   //angular scroll configuration
@@ -135,15 +136,15 @@
     $rootScope.$on('$translatePartialLoaderStructureChanged', function() {
       $translate.refresh();
     });
-    
+
     //LOCATION CHANGE START
     $rootScope.$on('$locationChangeStart', function(event, newUrl) {
-      
+
       if ($location.$$hash) {
         $log.debug('LOCATION CHANGE START WITH $$hash', $location);
         hashScroll($location.$$hash);
       }
- 
+
     });
 
 
@@ -183,7 +184,7 @@
 
     });
 
-    
+
     //STATE CHANGE SUCCESS
     $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
 
@@ -198,29 +199,29 @@
 
     //VIEW CONTENT LOADED
     $rootScope.$on('$viewContentLoaded', function(event) {
-      
+
       //convert urlencoded #
       $location.url($location.url().replace('%23', '#'));
-      
+
       if ($location.$$hash) {
         $log.debug('VIEW CONTENT LOADED WITH $$hash', $location);
         hashScroll($location.$$hash, true);
       }
-      
+
     });
-    
-    
+
+
     //handle scrolling to updated hash
     //@param timeout : boolean, if true use timeout for view animation delay
     function hashScroll(hash, timeout) {
         timeout = timeout || false;
         $log.debug(timeout);
-      
-        if (hash){  
+
+        if (hash){
           var element = angular.element(document.getElementById(hash));
-          
+
           if (element.length > 0) {
-            
+
             if (timeout) {
               $timeout(function() {
                 $document.duScrollToElementAnimated(element);
@@ -229,13 +230,13 @@
             else {
               $document.duScrollToElementAnimated(element);
             }
-            
+
           }
-          
+
         }
-        
+
       }
-      
+
 
   });
 
