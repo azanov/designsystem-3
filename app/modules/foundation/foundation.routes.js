@@ -110,18 +110,24 @@
     .state('foundation.animation.page', {
       url: '',
       views: {
-        link1: {
-          templateUrl: 'modules/foundation/templates/foundation-animation-link1.html'
-        } //,
-        // link2: {
-        //   templateUrl: 'modules/foundation/templates/foundation-animations-link2.html'
-        // },
-        // link3: {
-        //   templateUrl: 'modules/foundation/templates/foundation-animations-link3.html'
-        // },
-        // link4: {
-        //   templateUrl: 'modules/foundation/templates/foundation-animations-link4.html'
-        // }
+        principles: {
+          templateUrl: 'modules/foundation/templates/foundation-animation-principles.html'
+        },
+        types: {
+          templateUrl: 'modules/foundation/templates/foundation-animation-types.html'
+        },
+        effects: {
+          templateUrl: 'modules/foundation/templates/foundation-animation-effects.html'
+        },
+        timing: {
+          templateUrl: 'modules/foundation/templates/foundation-animation-timing.html'
+        },
+        'ui-elements': {
+          templateUrl: 'modules/foundation/templates/foundation-animation-ui-elements.html'
+        },
+        patterns: {
+          templateUrl: 'modules/foundation/templates/foundation-animation-patterns.html'
+        }
       }
     });
 
