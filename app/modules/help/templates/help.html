@@ -69,6 +69,15 @@
         <li> A second click dismisses the prompt.</li>
       </ul>
     </div>
+    <div class="col-md-4">
+      <figure>
+        <figcaption>Interaction/Placement</figcaption>
+        <div class="form-group">
+          <label class="label-bold">In-memory record limit </label> <i class="fa fa-question-circle" popover-placement="right" uib-popover-template="help.dynamicPopover.templateUrl"></i>
+          <input type="text" name="" id="" class="form-control">
+        </div>
+      </figure>
+    </div>
   </div>
 
   <div class="row">
@@ -96,23 +105,27 @@
 
       <p>Note that the “i” may not be meaningful in some countries. In these cases, we recommend that you use only the question mark icon in your localized product versions.</p>
 
-      <div class="row spacer-top-md">
-        <div class="col-md-3">Interaction/Placement: </div>
-        <div class="col-md-5">In memory record limit <i class="fa fa-question-circle" popover-placement="right" uib-popover="Maximum number of rows held in memory."></i></div>
-      </div>
-      <div class="row spacer-top-md">
-        <div class="col-md-3">Icon/Color options</div>
-        <div class="col-md-2"><i class="fa fa-question-circle"></i>&nbsp;&nbsp;<i class="fa fa-info-circle"></i><br>
-        <i class="fa fa-question-circle" style="color:#3e53a4"></i>&nbsp;&nbsp;<i class="fa fa-info-circle" style="color:#3e53a4"></i></div>
-        <div class="col-md-6">
-          <p>
-            Grey icons are <code>$text-color</code>(#717171)<br>
-            Blue icons are <code>$pb-blue-500</code> (#3e53a4)
-          </p>
+    </div>
+    <div class="col-md-4">
+      <figure>
+        <figcaption>Icon/Color Options</figcaption>
+        <div class="row">
+          <div class="col-md-2"><i class="fa fa-question-circle"></i>&nbsp;&nbsp;<i class="fa fa-info-circle"></i><br>
+          <i class="fa fa-question-circle" style="color:#3e53a4"></i>&nbsp;&nbsp;<i class="fa fa-info-circle" style="color:#3e53a4"></i></div>
+          <div class="col-md-10">
+            <p>
+              Grey icons are <code>$text-color</code>(#717171)<br>
+              Blue icons are <code>$pb-blue-500</code> (#3e53a4)
+            </p>
+          </div>
+
         </div>
-      </div>
+      </figure>
+
 
     </div>
+
+
   </div>
 
   <div class="row">
@@ -146,18 +159,39 @@
 
   <div class="row">
     <div class="col-md-8">
-      <h2 class="doc-sectionhead">Style</h2>
+      <h2 class="doc-sectionhead">Examples</h2>
     </div>
   </div>
   <div class="row">
     <div class="col-md-8">
-      <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
 
-<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+<figure>
+  <figcaption>On Links in Text</figcaption>
+  <p>
+    Pellentesque <a href="#" tooltip-placement="top" uib-tooltip="On Top!">on top</a>,
+    sit amet venenatis urna cursus eget nunc scelerisque viverra mauris, in
+    aliquam. Tincidunt lobortis feugiat vivamus at
+    <a href="#" tooltip-placement="left" uib-tooltip="On the Left!">left</a> eget
+    arcu dictum varius duis at consectetur lorem. Vitae elementum curabitur
+    <a href="#" tooltip-placement="right" uib-tooltip="On the Right!">right</a>
+    nunc sed velit dignissim sodales ut eu sem integer vitae. Turpis egestas
+    <a href="#" tooltip-placement="bottom" uib-tooltip="On the Bottom!">bottom</a>
+    pharetra convallis posuere morbi leo urna,
+    <a href="#" tooltip-animation="false" uib-tooltip="I don't fade. :-(">fading</a>
+    at elementum eu, facilisis sed odio morbi quis commodo odio.
+  </p>
+</figure>
 
-<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+<figure class="spacer-top-lg">
+  <figcaption>On Buttons</figcaption>
+  <p>
+    <button class="btn btn-primary" tooltip-placement="right" uib-tooltip="Click Me for Untold Riches!">I am a button</button>
+  </p>
+  </figure>
 
-<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+
+
+
     </div>
   </div>
 
