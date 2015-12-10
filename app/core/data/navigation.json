@@ -59,6 +59,9 @@
             "label": "User Feedback",
             "value": "feedback.page"
           }, {
+            "label": "Help Prompts",
+            "value": "help"
+          }, {
             "label": "Tables",
             "value": "tables.datatable.page"
           }, {
