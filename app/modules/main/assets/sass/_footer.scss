@@ -9,12 +9,14 @@
 
 
 
-
 // wrapper box for edge-to-edge color
 .footer-wrapper {
   background-color: $pb-gray-50;
-  margin-top: 40px;
   width: 100vw;
+    margin-top: 40px;
+  &.demo {
+    margin-top: 0;
+  }
 }
 
 // "actual" footer is inside container
@@ -34,7 +36,7 @@ footer {
   justify-content: flex-start;
   padding: 10px 0;
   > div {
-    padding: 0 10px 0 0;
+    padding: 0 20px 0 0;
   }
 
   @include breakpoint(screen-xs) {
