@@ -95,6 +95,40 @@
           templateUrl: 'modules/foundation/templates/foundation-writing-terminology.html'
         }
       }
+    })
+
+    .state('foundation.animation', {
+      abstract: true,
+      url: '/animation',
+      templateUrl: 'modules/foundation/templates/foundation-animation.html',
+      //controller: 'AnimationsController as animations',
+      data: {
+        pageTitle: 'Foundation - Animation'
+      }
+    })
+
+    .state('foundation.animation.page', {
+      url: '',
+      views: {
+        principles: {
+          templateUrl: 'modules/foundation/templates/foundation-animation-principles.html'
+        },
+        types: {
+          templateUrl: 'modules/foundation/templates/foundation-animation-types.html'
+        },
+        effects: {
+          templateUrl: 'modules/foundation/templates/foundation-animation-effects.html'
+        },
+        timing: {
+          templateUrl: 'modules/foundation/templates/foundation-animation-timing.html'
+        },
+        'ui-elements': {
+          templateUrl: 'modules/foundation/templates/foundation-animation-ui-elements.html'
+        },
+        patterns: {
+          templateUrl: 'modules/foundation/templates/foundation-animation-patterns.html'
+        }
+      }
     });
 
   });
