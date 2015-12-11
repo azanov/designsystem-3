@@ -1,5 +1,23 @@
 ##Release Notes
 
+###2.3.0 -- December 15, 2015
+
+######CSS changes
+**BREAKING CHANGES**
+- footer html structure has changed to support mobile layouts. Please see the following structure and examples on the Web > Headers and Footers
+```html
+FOOTER HTML HERE
+```
+
+
+######Thanks to the following contributors and bug reporters:
+Jayachandra Madarapu, Dustin Clark, ni10go, jrodguitar, James Crisp, Sikhar Jyoti Saikia, Sam Swartz, Cameron Chu, Ron Cianfaglione, Andy Grossman, Cassie Gunn, Yuka Kurihara, Andrew Wong, Adam Czarnik, Ania Mastriano
+
+
+
+
+
+
 ###2.2.0 -- October 30, 2015
 The Design System is now available via [Bower](http://bower.io). See the [bower-designsystem](https://github.com/PBGUX/bower-designsystem) repo for more information and installation.
 
