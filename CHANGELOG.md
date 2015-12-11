@@ -6,9 +6,80 @@
 **BREAKING CHANGES**
 - footer html structure has changed to support mobile layouts. Please see the following structure and examples on the Web > Headers and Footers
 ```html
-FOOTER HTML HERE
+<div class="footer-wrapper">
+  <div class="container">
+    <footer>
+
+    <div>
+      <a href="http://www.pb.com"><i class="pb-footer-logo gradient"></i></a><span class="copyright">© 2015 Pitney Bowes Inc. All rights reserved.</span>
+    </div>
+
+    <!-- Legal -->
+    <div>
+      <ul class="list-unstyled list-inline legal">
+        <li><a href="" target="_blank">Terms &amp; Conditions</a></li>
+        <li><a href="" target="_blank">Privacy Policy</a></li>
+        <li><a href="" target="_blank">Link</a></li>
+        <li><a href="" target="_blank">Link</a></li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div>
+      <ul class="list-unstyled list-inline social">
+        <li><a class="twitter" href="https://twitter.com/pitneybowes" target="_blank"><svg>...</svg></a></li>
+        <li><a class="facebook" href="http://www.facebook.com/pitneybowes" target="_blank"><svg>...</svg></a></li>
+        <li><a class="linkedin" href="http://www.linkedin.com/company/pitney-bowes" target="_blank"><svg>...</svg></a></li>
+        <li><a class="google-plus" href="http://www.youtube.com/user/PitneyBowesInc" target="_blank"><svg>...</svg></a></li>
+      </ul>
+    </div>
+
+
+  </footer>
+  </div>
+</div>
 ```
 
+**NON-BREAKING CHANGES**
+- fixed active hover state of tile buttons
+- fixed focus state of nav items, should be white
+- tertiary (pill) buttons include all states
+- fixed default Bootstrap mobile menu (updated icon and menu styling), now fully responsive
+- fixed panel headers, added guidance for panel alerts in Web > Elements > User Feedback (NOTE: default Bootstrap contextual alternative classes should not be used with panels) (closes [#47](https://github.com/PBGUX/designsystem/issues/47))
+- fix table drawer caret color (closes [#51](https://github.com/PBGUX/designsystem/issues/51))
+-change text color to #4e4e4e on Contextual Backgrounds section - #717171 does not have high enough contrast, see Web > Foundation > Helpers (closes [#42](https://github.com/PBGUX/designsystem/issues/42))
+- fixed ui-bootstrap alerts, was showing double close icons (closes [#38](https://github.com/PBGUX/designsystem/issues/38))
+
+
+**ADDTIONS**
+- added guidance for help tooltips and popovers in Web > Elements > Help Prompts
+- added ngTagsInput control, see Web > Elements > UI Controls > Dropdowns > Advanced Select Menus
+
+######Other Tools
+Illustrator
+- updated Illustrator DS UI Kit to 2.3.0, see Resources > Tools
+
+######Website changes
+- page HTML title tag changed to Design System (removed 2.0)
+- update gulp usemin v0.3.15
+- update angular-dynamic-locale 0.1.28
+- update angular-datatables v0.5.1
+- update angular-utils-pagination v0.9.2
+- update angular-daterangepicker to v0.2.1
+- update angular-hilightjs to v0.5.1
+- update hilightjs to v8.9.1
+- add cache busting for css/js in gulp build
+- Web > Foundation >Writing > Resources: update title caps guidance
+- Add link to [titlecapitalization.com](http://titlecapitalization.com) under Resources > Tools > Other Resources
+- updated images with copy changes in Web > Patterns > Error Pages
+- revised jump menus to link to anchor tags, will enable deep linking for future updates
+- added guidance for spot alert placements, see Web > Elements > User Feedback > Alert Positioning
+- update dropdown menu capitalization to follow guidance under Web > Headers and Footers (closes [#58](https://github.com/PBGUX/designsystem/issues/58))
+- fix Capitalization copy error (closes [#57](https://github.com/PBGUX/designsystem/issues/57))
+- fix green color hex code (closes [#48](https://github.com/PBGUX/designsystem/issues/48))
+- update typography specifications (closes [#52](https://github.com/PBGUX/designsystem/issues/52))
+- use correct icons in spot alerts on Web > Elements > User Feedback > Spot Alerts (closes [#49](https://github.com/PBGUX/designsystem/issues/49))
+- update bg-4 hex color code on Web > Foundation > Color (closes [#43](https://github.com/PBGUX/designsystem/issues/43))
 
 ######Thanks to the following contributors and bug reporters:
 Jayachandra Madarapu, Dustin Clark, ni10go, jrodguitar, James Crisp, Sikhar Jyoti Saikia, Sam Swartz, Cameron Chu, Ron Cianfaglione, Andy Grossman, Cassie Gunn, Yuka Kurihara, Andrew Wong, Adam Czarnik, Ania Mastriano, Nisha Rana
