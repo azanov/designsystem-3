@@ -34,13 +34,13 @@
     })
 
     .state('patterns.signinup', {
-      url: '/patterns/signinup',
+      url: '/signinup',
       templateUrl: 'modules/patterns/templates/sign-in-sign-up.html'
     })
 
     //this is the signin example page
     .state('patterns.signin', {
-      url: '/patterns/signin',
+      url: '/signin',
       templateUrl: 'modules/patterns/templates/signin.html',
       controller: 'SignInController as signin',
       data: {
@@ -50,7 +50,7 @@
 
     //this is the reset password example page
     .state('patterns.reset-password', {
-      url: '/patterns/resetpassword',
+      url: '/resetpassword',
       templateUrl: 'modules/patterns/templates/reset-password.html',
       data: {
         bodyClass: 'signin'
@@ -59,7 +59,7 @@
 
     //this is the reset password example page
     .state('patterns.sign-up', {
-      url: '/patterns/signup',
+      url: '/signup',
       templateUrl: 'modules/patterns/templates/sign-up.html',
       controller: 'SignInController as signin',
       data: {
@@ -69,7 +69,7 @@
 
     //this is the reset password example page
     .state('patterns.youre-invited', {
-      url: '/patterns/youreinvited',
+      url: '/youreinvited',
       templateUrl: 'modules/patterns/templates/your-invited.html',
       controller: 'SignInController as signin',
       data: {
@@ -78,12 +78,12 @@
     })
 
     .state('patterns.dashboards', {
-      url: '/patterns/dashboards',
+      url: '/dashboards',
       templateUrl: 'modules/patterns/templates/dashboards.html'
     })
 
     .state('patterns.gettingstarted', {
-      url: '/patterns/gettingstarted',
+      url: '/gettingstarted',
       templateUrl: 'modules/patterns/templates/getting-started.html'
     })
 
@@ -93,12 +93,12 @@
     })
 
     .state('patterns.errorpages', {
-      url: '/patterns/errorpages',
+      url: '/errorpages',
       templateUrl: 'modules/patterns/templates/error-pages.html'
     })
 
     .state('patterns.forms', {
-      url: '/patterns/forms',
+      url: '/forms',
       templateUrl: 'modules/patterns/templates/forms-containers.html'
     })
 

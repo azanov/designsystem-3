@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.ds.elements').controller('InputsController', function($log, CountriesResolve, PeopleResolve, moment) {
+  angular.module('pb.ds.elements').controller('InputsController', function($log, CountriesResolve, PeopleResolve, moment, $http) {
 
     var _this = this;
 
@@ -113,6 +113,27 @@
       },
       selected: {},
       countries: CountriesResolve
+    };
+
+
+    //ngTagsInput
+    // _this.tags = [
+    //   { text: 'just' },
+    //   { text: 'some' },
+    //   { text: 'cool' },
+    //   { text: 'tags' }
+    // ];
+
+    _this.loadTags = function($query) {
+      //return $http.get('/tags?query=' + query);
+      //return $http.get('core/data/countries.json');
+
+      return $http.get('core/data/countries.json', { cache: true}).then(function(response) {
+        var countries = response.data;
+        return countries.filter(function(country) {
+          return country.name.toLowerCase().indexOf($query.toLowerCase()) != -1;
+        });
+      });
     };
 
 

@@ -33,7 +33,7 @@
     <div class="col-md-8">
       <p>We have four levels of alerts:</p>
       <ul>
-        <li>Error: an application error has occurred.</li>
+        <li>Error: an application error has occurred; this can be due to system issues or insufficient input from the user.</li>
         <li>Warning: the user is about to perform an irreversible or destructive action; or the result of an action is unexpected, but is not an error.</li>
         <li>Success: confirmation that the application was able to complete a user’s action or request.</li>
         <li>Info: the application has non-critical — but helpful — information to share.</li>
@@ -54,6 +54,13 @@
         <figcaption>Error</figcaption>
         <div class="alert alert-danger">
           We couldn’t complete your request. Please try again in a moment.
+        </div>
+      </figure>
+
+      <figure>
+        <figcaption>Error</figcaption>
+        <div class="alert alert-danger">
+          You’ll need to provide more information about your shipment.
         </div>
       </figure>
 
@@ -101,21 +108,37 @@
       <figure>
         <figcaption>Error</figcaption>
         <div class="alert alert-danger">
-          <i class="fa fa-fw fa-info-circle fa-lg"></i> <strong>Sorry.</strong> We couldn’t complete your request. Please try again in a moment.
+          <i class="fa fa-fw fa-exclamation-circle fa-lg"></i> <strong>Sorry.</strong> We couldn’t complete your request. Please try again in a moment.
+        </div>
+
+        <div class="alert alert-danger">
+          <i class="fa fa-fw fa-exclamation-circle fa-lg"></i> <strong>Almost there.</strong> You’ll need to provide more information about your shipment.
+        </div>
+
+        <div class="alert alert-danger">
+          <i class="fa fa-fw fa-exclamation-circle fa-lg"></i> <strong>Check your connection.</strong> We can’t recognize your scale.
+        </div>
+
+        <div class="alert alert-danger">
+          <i class="fa fa-fw fa-exclamation-circle fa-lg"></i> <strong>Too heavy.</strong> Your shipment’s weight exceeds the maximum allowed for this service class.
         </div>
       </figure>
 
       <figure>
         <figcaption>Warning</figcaption>
         <div class="alert alert-warning">
-          <i class="fa fa-fw fa-exclamation-circle fa-lg"></i> <strong>Warning!</strong> You are about to erase all of your addresses.
+          <i class="fa fa-fw fa-exclamation-triangle fa-lg"></i> <strong>Warning!</strong> You are about to delete all of your addresses.
         </div>
       </figure>
 
       <figure>
         <figcaption>Success</figcaption>
         <div class="alert alert-success">
-          <i class="fa fa-fw fa-exclamation-triangle fa-lg"></i> <strong>Success!</strong> Your new address was imported.
+          <i class="fa fa-fw fa-check-circle fa-lg"></i> <strong>Success!</strong> Your new address was imported.
+        </div>
+
+        <div class="alert alert-success">
+          <i class="fa fa-fw fa-check-circle fa-lg"></i> <strong>All set!</strong> You’re ready to start shipping with UPS.
         </div>
       </figure>
 
@@ -123,6 +146,14 @@
         <figcaption>Info</figcaption>
         <div class="alert alert-info">
           <i class="fa fa-fw fa-info-circle fa-lg"></i> <strong>Tip:</strong> You can find more options under the Settings menu.
+        </div>
+
+        <div class="alert alert-info">
+          <i class="fa fa-fw fa-info-circle fa-lg"></i> <strong>Note:</strong> You’ll need to get this sticker from the Post Office.
+        </div>
+
+        <div class="alert alert-info">
+          <i class="fa fa-fw fa-question-circle fa-lg"></i> <strong>Help:</strong> Get help with using <a href="" class="alert-link">Cost Accounts</a>.
         </div>
       </figure>
 
@@ -173,11 +204,115 @@
 
       <figure>
         <figcaption>Angular ui-bootstrap example</figcaption>
-          <uib-alert type="warning" ng-if="!alerts.uibootstrap" close="alerts.uibootstrap = true">UI bootstrap test</uib-alert>
+          <uib-alert type="warning" ng-if="!alerts.uibootstrap" close="alerts.uibootstrap = true">Enter a valid date using mm/dd/yyyy.</uib-alert>
       </figure>
     </div>
 
   </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Panel Alerts</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <figure>
+        <figcaption>Collapsible Panel with Error Message</figcaption>
+        <div class="panel panel-filled-heading panel-default">
+          <div class="panel-heading panel-toggle" ng-click="alerts.error.open = !alerts.error.open"><i class="fa fa-fw fa-exclamation-circle text-danger"></i> Shipping Address <i class="fa fa-angle-right pull-right transition-all" ng-class="{'fa-rotate-90': !alerts.error.open}"></i></div>
+          <div uib-collapse="alerts.error.open">
+            <div class="panel-body">
+              <div class="alert alert-danger">
+                We couldn’t complete your request. Please try again in a moment.
+              </div>
+
+              <p><b>Melanine Ann Daniels <br>
+              Company Name</b></p>
+              <p>42 Main Street, Suite 516<br>
+              Bodega Bay, CA, 11021 USA</p>
+
+              <p><a href="mailto:mdaniels@gmail.com">mdaniels@gmail.com</a><br>
+              212-201-2018</p>
+            </div>
+          </div>
+        </div>
+      </figure>
+    </div>
+
+    <div class="col-sm-4">
+      <figure>
+        <figcaption>Collapsible Panel with Success Message</figcaption>
+        <div class="panel panel-filled-heading panel-default">
+          <div class="panel-heading panel-toggle" ng-click="alerts.success.open = !alerts.success.open"><i class="fa fa-fw fa-check-circle text-success"></i> Shipping Address <i class="fa fa-angle-right pull-right transition-all" ng-class="{'fa-rotate-90': !alerts.success.open}"></i></div>
+          <div uib-collapse="alerts.success.open">
+            <div class="panel-body">
+              <div class="alert alert-success">
+                <strong>Success!</strong> Your new address was imported.
+              </div>
+
+              <p><b>Melanine Ann Daniels <br>
+              Company Name</b></p>
+              <p>42 Main Street, Suite 516<br>
+              Bodega Bay, CA, 11021 USA</p>
+
+              <p><a href="mailto:mdaniels@gmail.com">mdaniels@gmail.com</a><br>
+              212-201-2018</p>
+            </div>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Alert Positioning</h2>
+    </div>
+  </div>
+
+ <div class="row">
+   <div class="col-xs-12 col-md-4">
+     <figure>
+       <figcaption>Page Level Alert Position</figcaption>
+       <img class="img-responsive" src="modules/feedback/assets/images/page-level-alert.png" alt="" />
+     </figure>
+   </div>
+
+   <div class="col-xs-12 col-md-4">
+     <figure>
+       <figcaption>Container Level (Tabs) Alert Position</figcaption>
+       <img class="img-responsive" src="modules/feedback/assets/images/container-level-tabs-alert.png" alt="" />
+     </figure>
+   </div>
+
+   <div class="col-xs-12 col-md-3">
+     <figure>
+       <figcaption>Container Level (Modal) Alert Position</figcaption>
+       <img class="img-responsive" src="modules/feedback/assets/images/container-level-modal-alert.png" alt="" />
+     </figure>
+   </div>
+ </div>
+
+
+ <div class="row spacer-top-xl">
+   <div class="col-xs-12 col-md-6">
+     <figure>
+       <figcaption>Container Level (Accordion) Alert Position</figcaption>
+       <img class="img-responsive" src="modules/feedback/assets/images/container-level-accordion-alert.png" alt="" />
+     </figure>
+   </div>
+
+   <div class="col-xs-12 col-md-6">
+     <figure>
+       <figcaption>Container Level (Panel) Alert Position</figcaption>
+       <img class="img-responsive" src="modules/feedback/assets/images/container-level-panel-alert.png" alt="" />
+     </figure>
+   </div>
+ </div>
 
 
   <div class="row">
@@ -224,6 +359,7 @@
         <li>Focus on what the user most needs to know.</li>
         <li>Provide solutions to a problem where possible.</li>
         <li>Construct short sentences, written in plain language.</li>
+        <li>Use word choices that fit the scenario. The examples above show different ways to describe errors, tips, etc.</li>
       </ul>
 
       <h3>Capitalization</h3>
@@ -232,7 +368,7 @@
       <h3>Punctuation</h3>
       <ul>
         <li>Conclude your alert copy with a period.</li>
-        <li>Don’t phrase your alert copy as a question.</li>
+        <li>Don’t phrase your alert copy as a question. If you need a response from the user, use a modal.</li>
         <li>You can include exclamation points in success alerts. For warning alerts, reserve their use when alerting users to critical information, not to everyday alerts. Never include an exclamation point in an error alert.</li>
       </ul>
 

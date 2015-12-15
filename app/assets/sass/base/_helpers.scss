@@ -178,3 +178,11 @@ $directions: (top, bottom);
 .bg-pb-yellow-300      { background-color : $pb-yellow-300;}
 .bg-pb-yellow-500      { background-color : $pb-yellow-500;}
 .bg-pb-yellow-700      { background-color : $pb-yellow-700;}
+
+
+//contextual backgrounds
+.bg-primary      { background-color :$pb-blue;}
+.bg-success      { background-color :$state-success-bg;}
+.bg-danger      { background-color :$state-danger-bg;}
+.bg-warning      { background-color :$state-warning-bg;}
+.bg-info      { background-color :$state-info-bg;}

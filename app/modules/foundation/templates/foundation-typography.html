@@ -15,11 +15,11 @@
       <div class="row">
         <div class="col-md-12">
           <ul class="list-unstyled list-inline jump-menu">
-            <li><a href="" du-smooth-scroll="headers-body">Headers &amp; Body </a></li>
-            <li><a href="" du-smooth-scroll="tabs-tables">Tabs &amp; Tables</a></li>
-            <li><a href="" du-smooth-scroll="navigation">Navigation</a></li>
-            <li><a href="" du-smooth-scroll="ui-controls">UI Controls</a></li>
-            <li><a href="" du-smooth-scroll="lists">Lists</a></li>
+            <li><a ui-sref="foundation.typography({'#':'headers-body'})">Headers &amp; Body </a></li>
+            <li><a ui-sref="foundation.typography({'#':'tabs-tables'})">Tabs &amp; Tables</a></li>
+            <li><a ui-sref="foundation.typography({'#':'navigation'})">Navigation</a></li>
+            <li><a ui-sref="foundation.typography({'#':'ui-controls'})">UI Controls</a></li>
+            <li><a ui-sref="foundation.typography({'#':'lists'})">Lists</a></li>
           </ul>
         </div>
       </div>
@@ -392,7 +392,7 @@
         </thead>
         <tr ng-repeat="item in type.formsInputs">
           <td class="psr14">{{item.desc}}</td>
-          <td>Precision Sans Regular 14px</td>
+          <td>{{item.font}}</td>
           <td>
             <span class="swatch" ng-if="item.color != '#FFFFFF'" ng-style="{'background-color':item.color, 'color':'#fff'}">{{item.color}}</span>
             <span class="swatch" ng-if="item.color == '#FFFFFF'" style="background-color:#fff; color:#2e2e2e">#FFFFFF</span>

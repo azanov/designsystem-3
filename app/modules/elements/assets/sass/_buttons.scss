@@ -100,20 +100,17 @@
   color: $pb-blue;
   background-color: transparent;
   border-color: transparent;
-
   &:hover, &.hover, &:focus, &.focus, &:active, &.active,
   .open >&.dropdown-toggle {
     color: #314183;
     background-color: #d9dced;
     border-color: transparent;
   }
-
   &:active,
   &.active,
   .open >&.dropdown-toggle {
     background-image: none;
   }
-
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
@@ -130,7 +127,6 @@
       opacity: 1;
     }
   }
-
   .badge {
     color: #fff;
     background-color: $pb-magenta;
@@ -245,36 +241,21 @@
 
 }
 
-
-
-
-
-
-// $fg, $bg, $border, $disabled-fg, $disabled-bg, $hover-fg:$fg, $hover-bg:$bg
-
-// bootstrap buttons
-.btn-success {
-  @include button-variant(
-                          #fff, $brand-success, $brand-success,
-                          $pb-gray-300, $pb-bg2, $pb-gray-300);
-}
-
-.btn-info {
-  @include button-variant(
-                          #fff, $brand-info, $brand-info,
-                          $pb-gray-300, $pb-bg2, $pb-gray-300);
-}
-
-.btn-warning {
-  @include button-variant(
-                          #fff, $brand-warning, $brand-warning,
-                          $pb-gray-300, $pb-bg2, $pb-gray-300);
-}
-
-.btn-danger {
-  @include button-variant(
-                          #fff, $brand-danger, $brand-danger,
-                          $pb-gray-300, $pb-bg2, $pb-gray-300);
+.btn-success, .btn-info, .btn-warning, .btn-danger {
+  &.disabled, &[disabled], fieldset[disabled] & {
+    &,
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: #c0c0c0;
+      border-color: #c0c0c0;
+      color: #fff;
+      opacity: 1;
+    }
+  }
 }
 
 
@@ -319,6 +300,12 @@
   text-decoration: none;
   background-color: $pb-bg3;
 }
+// there was unneeded 5px padding top and bottom
+.dropdown-menu {
+  padding: 0;
+}
+
+
 // font awesome icon size overrides in button groups
 .btn-group {
   &-sm {

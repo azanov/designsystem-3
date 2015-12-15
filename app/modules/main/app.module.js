@@ -22,12 +22,15 @@
     'pb.ds.tables',
     'pb.ds.writing',
     'pb.settings',
-    'pb.ds.splitview'
+    'pb.ds.splitview',
+    'pb.ds.help'
   ]);
 
   //angular scroll configuration
   angular.module('app').value('duScrollDuration', 750);
   angular.module('app').value('duScrollOffset', 125);
+  angular.module('app').value('duScrollGreedy', true);
+
 
   //configure debugging
   angular.module('app').config(function($logProvider, config) {
@@ -126,12 +129,22 @@
 
 
 
-  angular.module('app').run(function($rootScope, $state, $stateParams, $log, $translate, $anchorScroll, $location, $window) {
+  angular.module('app').run(function($log, $rootScope, $translate, $document, $timeout, $location, $state) {
 
 
     //refresh as parts are added in controllers
     $rootScope.$on('$translatePartialLoaderStructureChanged', function() {
       $translate.refresh();
+    });
+
+    //LOCATION CHANGE START
+    $rootScope.$on('$locationChangeStart', function(event, newUrl) {
+
+      if ($location.$$hash) {
+        $log.debug('LOCATION CHANGE START WITH $$hash', $location);
+        hashScroll($location.$$hash);
+      }
+
     });
 
 
@@ -141,8 +154,6 @@
         'From state:', fromState
       );
 
-      $anchorScroll();
-
       if (!toState || !toState.data) {
         return;
       }
@@ -150,41 +161,82 @@
     });
 
 
-    $rootScope.$on('$stateChangeError', function(event, toState, tpParams, fromState, fromParams, error) {
+    //STATE CHANGE ERROR
+    $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {
       $log.debug('$stateChangeError: ', error);
     });
 
+
+    //STATE NOT FOUND
     $rootScope.$on('$stateNotFound', function(unfoundState) {
       $log.debug('$stateNotFound: ', unfoundState);
     });
 
+
+    //ROUTE CHANGE SUCCESS
     $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
-      //if ($location.hash()) {$anchorScroll();}
-      $anchorScroll();
+
     });
 
+
+    //ROUTE CHANGE START
     $rootScope.$on('$routeChangeStart', function(newRoute, oldRoute) {
-      //if ($location.hash()) {$anchorScroll();}
-      //$anchorScroll();
-    });
 
-    //scroll to top of the page, this makes the transitions wonky and needs more research
-    $rootScope.$on('$stateChangeSuccess', function() {
-      //document.body.scrollTop = document.documentElement.scrollTop = 0;
     });
 
 
-    // hack to scroll to top when navigating to new URLS but not back/forward
-    // var wrap = function(method) {
-    //   var orig = $window.window.history[method];
-    //   $window.window.history[method] = function() {
-    //     var retval = orig.apply(this, Array.prototype.slice.call(arguments));
-    //     $anchorScroll();
-    //     return retval;
-    //   };
-    // };
-    // wrap('pushState');
-    // wrap('replaceState');
+    //STATE CHANGE SUCCESS
+    $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+
+    });
+
+
+    //VIEW CONTENT LOADING
+    $rootScope.$on('$viewContentLoading', function(event) {
+      $document.duScrollTo(0, 0);
+    });
+
+
+    //VIEW CONTENT LOADED
+    $rootScope.$on('$viewContentLoaded', function(event) {
+
+      //convert urlencoded #
+      $location.url($location.url().replace('%23', '#'));
+
+      if ($location.$$hash) {
+        $log.debug('VIEW CONTENT LOADED WITH $$hash', $location);
+        hashScroll($location.$$hash, true);
+      }
+
+    });
+
+
+    //handle scrolling to updated hash
+    //@param timeout : boolean, if true use timeout for view animation delay
+    function hashScroll(hash, timeout) {
+        timeout = timeout || false;
+        $log.debug(timeout);
+
+        if (hash){
+          var element = angular.element(document.getElementById(hash));
+
+          if (element.length > 0) {
+
+            if (timeout) {
+              $timeout(function() {
+                $document.duScrollToElementAnimated(element);
+              }, 300);
+            }
+            else {
+              $document.duScrollToElementAnimated(element);
+            }
+
+          }
+
+        }
+
+      }
+
 
   });
 

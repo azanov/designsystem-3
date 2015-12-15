@@ -16,28 +16,28 @@
         <div class="col-md-12">
           <ul class="list-unstyled list-inline jump-menu">
             <li>
-              <a du-smooth-scroll="inputfields" href="">Input Fields</a>
+              <a ui-sref="elements.uicontrols({'#':'inputfields'})">Input Fields</a>
             </li>
             <li>
-              <a du-smooth-scroll="dropdowns" href="">Dropdowns</a>
+              <a ui-sref="elements.uicontrols({'#':'dropdowns'})">Dropdowns</a>
             </li>
             <li>
-              <a du-smooth-scroll="checkboxes" href="">Checkboxes</a>
+              <a ui-sref="elements.uicontrols({'#':'checkboxes'})">Checkboxes</a>
             </li>
             <li>
-              <a du-smooth-scroll="radios" href="">Radio Buttons</a>
+              <a ui-sref="elements.uicontrols({'#':'radios'})">Radio Buttons</a>
             </li>
             <li>
-              <a du-smooth-scroll="steppers" href="">Steppers</a>
+              <a ui-sref="elements.uicontrols({'#':'steppers'})">Steppers</a>
             </li>
             <li>
-              <a du-smooth-scroll="datepickers" href="">Date Picker</a>
+              <a ui-sref="elements.uicontrols({'#':'datepickers'})">Date Picker</a>
             </li>
             <li>
-              <a du-smooth-scroll="switches" href="">Switches</a>
+              <a ui-sref="elements.uicontrols({'#':'switches'})">Switches</a>
             </li>
             <li>
-              <a du-smooth-scroll="writing" href="">Writing</a>
+              <a ui-sref="elements.uicontrols({'#':'writing'})">Writing</a>
             </li>
           </ul>
         </div>
@@ -632,38 +632,32 @@
   </div>
   <div class="row">
     <div class="col-md-3">
-      <p>You can use these advanced menu types to augment our standard dropdown menus. “Multi-select with tokens” is a good alternative to the multi-section types above, as it allows users to create a persistent list of selections that they can easily edit.</p>
+      <p>You can use these advanced menu types to augment our standard dropdown menus. “Multi-select with tokens” is a good alternative to the multi-section types above, as it allows users to create a persistent list of selections that they can easily edit.</p
+
+      <p>Note that you have your choice of two multi-select menu controls: ui-select and ngTagsInput. Both offer various options for customizing behavior and appearance — refer to the plugin documentation for those details.</p>
 
       <p>
-        <a class="more-info plugin" href="https://github.com/angular-ui/ui-select" target="_blank">angular ui-select v0.13.2</a>
+        <a class="more-info plugin" href="https://github.com/angular-ui/ui-select" target="_blank">angular-ui-select v0.13.2</a>
       </p>
 
-      <!-- <p class="small spacer-top-md"><em>ui-select v0.12.1 has a known issue with webkit browsers displaying as a dropup. See this Github <a href="https://github.com/angular-ui/ui-select/issues/1016" target="blank">issue</a> and <a href="https://github.com/pulse14/ui-select/commit/f788aa555d10453d8ba455c0aaa97a4f4e832c72" target="blank">pending fix</a> on github. Downgrading to a previous version may be required as an interim solution.</em></p> -->
+      <p>
+        <a class="more-info plugin" href="https://github.com/mbenford/ngTagsInput" target="_blank">ng-tags-input v3.0.0</a>
+      </p>
     </div>
 
     <div class="col-md-7 col-md-offset-1">
 
       <div class="row">
         <div class="col-md-10">
+
+          <h4>UI-Select Options</h4>
+
           <figure>
             <figcaption>Single-Select with Type-Ahead</figcaption>
             <div class="form-group">
               <label>Text label</label>
               <ui-select ng-model="inputs.countrySelect.singleSelected" theme="bootstrap">
                 <ui-select-match placeholder="">{{$select.selected.name}}</ui-select-match>
-                <ui-select-choices repeat="item in inputs.countrySelect.countries | filter: $select.search">
-                  <div ng-bind-html="item.name | highlight: $select.search"></div>
-                </ui-select-choices>
-              </ui-select>
-            </div>
-          </figure>
-
-          <figure>
-            <figcaption>Multi-Select with Tokens</figcaption>
-            <div class="form-group">
-              <label>Text label</label>
-              <ui-select multiple  ng-model="inputs.countrySelect.multipleSelected" theme="bootstrap">
-                <ui-select-match placeholder="">{{$item.name}}</ui-select-match>
                 <ui-select-choices repeat="item in inputs.countrySelect.countries | filter: $select.search">
                   <div ng-bind-html="item.name | highlight: $select.search"></div>
                 </ui-select-choices>
@@ -684,11 +678,38 @@
               </ui-select>
             </div>
           </figure>
+
+          <figure>
+            <figcaption>Multi-Select with Tokens</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <ui-select multiple  ng-model="inputs.countrySelect.multipleSelected" theme="bootstrap">
+                <ui-select-match placeholder="Add a tag">{{$item.name}}</ui-select-match>
+                <ui-select-choices repeat="item in inputs.countrySelect.countries | filter: $select.search">
+                  <div ng-bind-html="item.name | highlight: $select.search"></div>
+                </ui-select-choices>
+              </ui-select>
+            </div>
+          </figure>
+
+          <h4 class="spacer-top-lg">Ng-Tags-Input Option</h4>
+
+          <figure>
+            <figcaption>Multi-Select with Tokens</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <tags-input ng-model="inputs.tags" display-property="name" key-property="code">
+                <auto-complete source="inputs.loadTags($query)" ></auto-complete>
+              </tags-input>
+            </div>
+          </figure>
+
         </div>
       </div>
 
     </div>
   </div>
+
 
   <div class="row">
     <div class="col-md-8">

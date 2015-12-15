@@ -31,7 +31,6 @@
     <!-- build:css assets/css/design_system.css -->
     <!-- <link rel="stylesheet" href="bower_components/animate.css/animate.min.css"> -->
     <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/Numeric-Stepper/stepper/jquery.stepper.css">
     <link rel="stylesheet" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css">
     <link rel="stylesheet" href="bower_components/selectize/dist/css/selectize.bootstrap3.css">
@@ -45,6 +44,8 @@
     <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css" />
     <link rel="stylesheet" href="bower_components/yamm3/yamm/yamm.css">
     <link rel="stylesheet" href="bower_components/ui-select/dist/select.css">
+    <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.css">
+    <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.bootstrap.css">
     <link rel="stylesheet" href="assets/css/design_system.css">
     <!-- endbuild  -->
 
@@ -80,7 +81,7 @@
     <header pb-ds-header pb-fixed-navbar></header>
 
     <!-- content -->
-    <div ui-view="" class="view-animate site-content" autoscroll="false"></div>
+    <div ui-view="" class="view-animate site-content"></div>
 
     <!-- FOOTER -->
     <footer ng-if="app.footer" pb-ds-footer></footer>
@@ -90,6 +91,7 @@
     <!-- build:vendorjs js/vendor.js -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="core/directives/pb-auto-collapse-menu.js"></script>
     <script src="bower_components/jquery-ui/ui/core.js"></script>
     <script src="bower_components/jquery-ui/ui/widget.js"></script>
     <script src="bower_components/jquery-ui/ui/mouse.js"></script>
@@ -149,6 +151,8 @@
     <script src="bower_components/angular-morris-chart/src/angular-morris-chart.js"></script>
 
     <script src="bower_components/ui-select/dist/select.js"></script>
+
+    <script src="bower_components/ng-tags-input/ng-tags-input.js"></script>
     <!-- endbuild  -->
 
     <!-- build:appjs js/app.js -->
@@ -262,6 +266,10 @@
     <script src="modules/helpers/helpers.module.js"></script>
     <script src="modules/helpers/helpers.routes.js"></script>
     <script src="modules/helpers/controllers/helpers.controller.js"></script>
+
+    <script src="modules/help/help.module.js"></script>
+    <script src="modules/help/help.routes.js"></script>
+    <script src="modules/help/controllers/help.controller.js"></script>
 
     <script src="modules/landing/landing.module.js"></script>
     <script src="modules/landing/landing.routes.js"></script>
