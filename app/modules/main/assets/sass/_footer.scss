@@ -13,7 +13,8 @@
 .footer-wrapper {
   background-color: $pb-gray-50;
   width: 100vw;
-    margin-top: 40px;
+  margin-top: 40px;
+  padding: 10px 0;
   &.demo {
     margin-top: 0;
   }
@@ -34,7 +35,6 @@ footer {
   align-items: baseline;
   width: 100%;
   justify-content: space-between;
-  padding: 10px 0;
   > div {
     padding: 0 20px 0 0;
   }
