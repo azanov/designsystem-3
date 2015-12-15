@@ -83,7 +83,7 @@
 - added cache busting for css/js in gulp build
 
 ####Thanks to the following contributors and bug reporters:
-Jayachandra Madarapu, Dustin Clark, ni10go, jrodguitar, James Crisp, Sikhar Jyoti Saikia, Sam Swartz, Cameron Chu, Ron Cianfaglione, Andy Grossman, Cassie Gunn, Yuka Kurihara, Andrew Wong, Adam Czarnik, Ania Mastriano, Nisha Rana
+Jayachandra Madarapu, Dustin Clark, ni10go, jrodguitar, James Crisp, Lim Norris, Sikhar Jyoti Saikia, Sam Swartz, Cameron Chu, Ron Cianfaglione, Andy Grossman, Cassie Gunn, Yuka Kurihara, Andrew Wong, Adam Czarnik, Ania Mastriano, Nisha Rana, John Winkelman
 
 
 
