@@ -46,7 +46,7 @@
 - fixed default Bootstrap mobile menu (updated icon and menu styling), now fully responsive
 - fixed panel headers, added guidance for panel alerts in Web > Elements > User Feedback (NOTE: default Bootstrap contextual alternative classes should not be used with panels) (closes [#47](https://github.com/PBGUX/designsystem/issues/47))
 - fixed table drawer caret color (closes [#51](https://github.com/PBGUX/designsystem/issues/51))
--changed text color to #4e4e4e on Contextual Backgrounds section - #717171 does not have high enough contrast, see Web > Foundation > Helpers (closes [#42](https://github.com/PBGUX/designsystem/issues/42))
+- changed text color to #4e4e4e on Contextual Backgrounds section - #717171 does not have high enough contrast, see Web > Foundation > Helpers (closes [#42](https://github.com/PBGUX/designsystem/issues/42))
 - fixed ui-bootstrap alerts, was showing double close icons (closes [#38](https://github.com/PBGUX/designsystem/issues/38))
 
 
@@ -83,7 +83,7 @@
 - added cache busting for css/js in gulp build
 
 ####Thanks to the following contributors and bug reporters:
-Jayachandra Madarapu, Dustin Clark, ni10go, jrodguitar, James Crisp, Lim Norris, Sikhar Jyoti Saikia, Sam Swartz, Cameron Chu, Ron Cianfaglione, Andy Grossman, Cassie Gunn, Yuka Kurihara, Andrew Wong, Adam Czarnik, Ania Mastriano, Nisha Rana, John Winkelman
+Jayachandra Madarapu, Dustin Clark, ni10go, jrodguitar, James Crisp, Jim Norris, Sikhar Jyoti Saikia, Sam Swartz, Cameron Chu, Ron Cianfaglione, Andy Grossman, Cassie Gunn, Yuka Kurihara, Andrew Wong, Adam Czarnik, Ania Mastriano, Nisha Rana, John Winkelman
 
 
 
