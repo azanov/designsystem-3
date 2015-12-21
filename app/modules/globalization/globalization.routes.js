@@ -31,8 +31,9 @@
             templateUrl: 'modules/globalization/templates/globalization-angular-translate.html',
             controller: 'AngularTranslateController as translate',
             resolve: {
-              translate: function($translatePartialLoader) {
+              translate: function($translatePartialLoader, $translate) {
                 $translatePartialLoader.addPart('modules/globalization/i18n');
+                return $translate.refresh(); //returns a promise see https://github.com/angular-translate/angular-translate/issues/197
               },
               languages: function(languageFactory) {
                 return languageFactory.get();
