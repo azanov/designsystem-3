@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row two-col-wrapper">
-    <div class="col-md-2 leftnav">
+    <div class="col-md-3 leftnav">
       
 
 
@@ -44,8 +44,8 @@
                 <label class="control checkbox" 
                   ng-show="(item | countGroups:'groups':faceted.table.dataFiltered)"
                   ng-repeat="item in faceted.facet.groups | orderBy: 'toString()'"
-                  ng-click="faceted.facet.checked(faceted.table.search.group[item], item)" >
-                    <input type="checkbox" ng-model="faceted.table.search.group[item]">
+                  >
+                    <input type="checkbox" ng-model="faceted.table.search.group[item]" ng-change="faceted.facet.checked(faceted.table.search.group[item], item)" >
                     <span class="control-indicator"></span>
                      {{item}} (<span>{{item | countGroups:'groups':faceted.table.dataFiltered}}</span>)
                 </label>
@@ -63,8 +63,8 @@
                 <label class="control checkbox" 
                   ng-show="(item.userType | count:'userType':faceted.table.dataFiltered)"
                   ng-repeat="item in faceted.table.data | unique: 'userType' | orderBy: 'userType'"
-                  ng-click="faceted.facet.checked(faceted.table.search.userType[item.userType], item.userType)" >
-                    <input type="checkbox" ng-model="faceted.table.search.userType[item.userType]">
+                   >
+                    <input type="checkbox" ng-model="faceted.table.search.userType[item.userType]" ng-change="faceted.facet.checked(faceted.table.search.userType[item.userType], item.userType)">
                     <span class="control-indicator"></span>
                      {{item.userType}} (<span>{{item.userType | count:'userType':faceted.table.dataFiltered}}</span>)
                 </label>
@@ -79,7 +79,7 @@
     </div>
 
 
-    <div class="col-md-12 main-content">
+    <div class="col-md-9 main-content">
       <div class="row">
       <div class="col-md-12">
         <h1>Faceted Search</h1>
@@ -186,7 +186,7 @@
 
       <div class="row toolbar toolbar-footer">
 
-        <div class="col-md-2 col-md-push-5 text-center">
+        <div class="col-md-3 col-md-push-4 text-center">
           <form class="form-inline">
             <select class="form-control" ng-model="faceted.table.paging.size" ng-options="size as size for size in faceted.table.paging.sizes"></select> per page
           </form>
