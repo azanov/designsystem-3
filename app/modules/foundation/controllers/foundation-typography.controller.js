@@ -9,7 +9,7 @@
     _this.header = [
       { tag: 'H1', font:'Precision Sans Light 32', use:'Main head', class: '', extraclass: 'h1', color: '\#CF0989', altclass:'.alt', altcolor: '#2E2E2E'},
       { tag: 'H2', font:'Precision Sans Regular 20', use:'Section Header / Product Title', class: '', extraclass: 'h2', color: '#2E2E2E', altclass:'.alt', altcolor: '#4E4E4E'},
-      { tag: 'H3', font:'Precision Sans Bold 18', use:'Sub Section Header', class: '', extraclass: 'h3', color: '#2E2E2E', altclass:'.alt', altcolor: '#4E4E4E'},
+      { tag: 'H3', font:'Precision Sans Regular 18', use:'Sub Section Header', class: '', extraclass: 'h3', color: '#2E2E2E', altclass:'.alt', altcolor: '#4E4E4E'},
       { tag: 'H4', font:'Helvetica Neue Bold 16', use:'Sub Sub Section Header', class: '', extraclass: 'h4', color: '#2E2E2E', altclass:'.alt', altcolor: '#4E4E4E'},
       { tag: 'H5', font:'Helvetica Neue Bold 14', use:'Small Header', class: '', extraclass: 'h5', color: '#2E2E2E', altclass:'.alt', altcolor: '#4E4E4E'},
       { tag: 'H6', font:'Helvetica Neue Bold 12', use:'Extra Small Header', class: '', extraclass: 'h6', color: '#2E2E2E', altclass:'.alt', altcolor: '#4E4E4E'}
