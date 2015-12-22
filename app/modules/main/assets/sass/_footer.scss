@@ -1,22 +1,19 @@
 //style footer to always be at bottom of screen
 .site-content {
-
   // scss-lint:disable DuplicateProperty
   min-height: 550px; //fallback, just in case
   min-height: calc(100vh - (50px + 40px + 44px)); //50 for nav height, 40 footer margin, 44 footer height
 }
 
-
-
-
 // wrapper box for edge-to-edge color
 .footer-wrapper {
   background-color: $pb-gray-50;
-  width: 100vw;
   margin-top: 40px;
+  width: 100vw;
   padding: 10px 0;
   &.demo {
     margin-top: 0;
+    width: auto;
   }
 }
 
@@ -33,7 +30,6 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  width: 100%;
   justify-content: space-between;
   > div {
     padding: 0 20px 0 0;
