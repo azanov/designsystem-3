@@ -172,7 +172,7 @@
                 <td><a href="#" ng-click="faceted.table.selectEmail(item, $event)">{{::item.email}}</a></td>
                 <td><span class="text-nowrap">{{::item.country}}</span></td>
                 <td>{{::item.date.created | date:'MM/dd/yyyy'}}</td>
-                <td><i class="fa fa-fw" ng-class="{'fa-user': item.userType === 'user', 'fa-user-secret': item.userType === 'admin'}"></i></td>
+                <td><i class="" ng-class="{'fa fa-fw fa-user': item.userType === 'user', 'pb-font fa fa-fw pb-admin': item.userType === 'admin'}"></i></td>
                 <td>
                   <span ng-repeat="group in (item.groups | orderBy: group | limitTo: item.limit || faceted.table.groups.min) track by $index">
                     {{::group}}<span ng-if="!$last">, </span>
