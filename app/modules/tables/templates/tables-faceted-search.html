@@ -10,7 +10,7 @@
         <ul class="list-group list-group-divided">
 
           <li class="list-group-item" ng-if="faceted.facet.list.length">
-            <p>Refined by <a class="pull-right" href="" ng-click="faceted.facet.clear()">Reset</a></p>
+            <div class="list-group-item-heading">Refined by <a class="pull-right" href="" ng-click="faceted.facet.clear()">Reset</a></div>
             <ul class="list-unstyled">
               <li ng-repeat="item in faceted.facet.list">
                 <a class="badge badge-gray-text" href="">{{item}} <i class="fa fa-times-circle fa-reverse" ng-click="faceted.facet.clearBadge(item, $event)"></i></a>
@@ -19,13 +19,14 @@
           </li>
 
           <li class="list-group-item">
-            <div>
-              <a class="section-accordion" ng-click="faceted.show = !faceted.show">Countries <i class="fa fa-angle-right transition-all pull-right" ng-class="{'fa-rotate-90': !faceted.show}"></i></a>
-            </div>
+            
+            <a href="" class="list-group-item-heading" ng-click="faceted.show = !faceted.show">
+              Countries <i class="fa fa-angle-right transition-all pull-right" ng-class="{'fa-rotate-90': !faceted.show}"></i>
+            </a>
 
-            <div collapse="faceted.show" class="collapse" style="height: auto;">
+            <div collapse="faceted.show" class="collapse">
 
-              <div class="spacer-top-xs">
+              <div class="spacer-bottom-xs">
                 <select class="form-control input-sm" ng-change="faceted.facet.selectChange()" ng-model="faceted.table.search.country" ng-options="item.country as item.country for item in faceted.table.data | unique: 'country' | orderBy: 'country'">
                   <option value="">Show all</option>
                 </select>
@@ -35,35 +36,40 @@
           </li>
 
           <li class="list-group-item">
-            <div><a style="display: block;" href="" ng-click="facetedGroups.show = !facetedGroups.show">Groups <i class="fa fa-angle-right transition-all pull-right" ng-class="{'fa-rotate-90': !facetedGroups.show}"></i></a></div>
             
-
-            <div collapse="facetedGroups.show" class="collapse" style="height: auto;">
+            <a href="" class="list-group-item-heading" ng-click="facetedGroups.show = !facetedGroups.show">
+              Groups <i class="fa fa-angle-right transition-all pull-right" ng-class="{'fa-rotate-90': !facetedGroups.show}"></i>
+            </a>
+            
+            <div collapse="facetedGroups.show" class="collapse">
              
-              <div class="controls-stacked" >
-                <label class="control checkbox" 
-                  ng-show="(item | countGroups:'groups':faceted.table.dataFiltered)"
-                  ng-repeat="item in faceted.facet.groups | orderBy: 'toString()'"
-                  >
-                    <input type="checkbox" ng-model="faceted.table.search.group[item]" ng-change="faceted.facet.checked(faceted.table.search.group[item], item)" >
-                    <span class="control-indicator"></span>
-                     {{item}} (<span>{{item | countGroups:'groups':faceted.table.dataFiltered}}</span>)
-                </label>
+              <div class="list-group-item-text">
+                <div class="controls-stacked" >
+                  <label class="control checkbox" 
+                    ng-show="(item | countGroups:'groups':faceted.table.dataFiltered)"
+                    ng-repeat="item in faceted.facet.groups | orderBy: 'toString()'">
+                      <input type="checkbox" ng-model="faceted.table.search.group[item]" ng-change="faceted.facet.checked(faceted.table.search.group[item], item)" >
+                      <span class="control-indicator"></span>
+                      {{item}} (<span>{{item | countGroups:'groups':faceted.table.dataFiltered}}</span>)
+                  </label>
+                </div>
               </div>
               
             </div>
           </li>
 
           <li class="list-group-item">
-            <div><a style="display: block;" href="" ng-click="facetedType.show = !facetedType.show">User type <i class="fa fa-angle-right transition-all pull-right" ng-class="{'fa-rotate-90': facetedType.show}"></i></a></div>
-
-            <div collapse="!facetedType.show" class="collapse" style="height: auto;">
+            
+            <a href="" class="list-group-item-heading" ng-click="facetedType.show = !facetedType.show">
+              User type <i class="fa fa-angle-right transition-all pull-right" ng-class="{'fa-rotate-90': facetedType.show}"></i>
+            </a>
+           
+            <div collapse="!facetedType.show" class="collapse">
               
               <div class="controls-stacked" >
                 <label class="control checkbox" 
                   ng-show="(item.userType | count:'userType':faceted.table.dataFiltered)"
-                  ng-repeat="item in faceted.table.data | unique: 'userType' | orderBy: 'userType'"
-                   >
+                  ng-repeat="item in faceted.table.data | unique: 'userType' | orderBy: 'userType'">
                     <input type="checkbox" ng-model="faceted.table.search.userType[item.userType]" ng-change="faceted.facet.checked(faceted.table.search.userType[item.userType], item.userType)">
                     <span class="control-indicator"></span>
                      {{item.userType}} (<span>{{item.userType | count:'userType':faceted.table.dataFiltered}}</span>)
@@ -101,7 +107,7 @@
 
             <div class="form-group dropdown">
               <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-fw fa-filter"></i> {{faceted.table.sort.selected}} <i class="fa fa-angle-down"></i>
+                <i class="fa fa-fw fa-sort"></i> {{faceted.table.sort.selected}} <i class="fa fa-angle-down"></i>
               </button>
               <ul class="dropdown-menu" role="menu">
                 <li ng-repeat="item in faceted.table.sort.data">
