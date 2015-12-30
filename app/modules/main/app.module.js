@@ -23,6 +23,7 @@
     'pb.ds.writing',
     'pb.settings',
     'pb.ds.splitview',
+    'pb.ds.buildanimations',
     'pb.ds.help'
   ]);
 

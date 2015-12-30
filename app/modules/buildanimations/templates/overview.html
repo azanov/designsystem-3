@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+	    <h1>Supported Animations</h1>
+	    <p>This library handles different <em>types</em> of animations. At the moment, this library is only compatable with Angular.JS. In order to use this library, make sure you have the <code>ng-animate</code> module included in your app.</p>
+	    <h3>Queue Based Animations</h3>
+	    <h3>Focus Grabbing Animations</h3>
+	    <p>Most people will be primarily focussed on <b>queue</b> based animations. These animations are used for <b>entrances</b> and <b>exits</b>, and can do a great deal to smooth out the overall fluidity of an application.</p>
+	    <p>Less commonly used are <b>focus grabbing</b> animations. These come into play when you think a user might be stuck on what step comes next.</p>
+
+			<p>Any animations applied should not interfere with a current animation that is running on an object. This means that these animations will only take place if angular events are fired. These events will work with either
+				<code>ng-if</code>,
+				<code>ng-show</code> or
+				<code>ng-hide</code>. There are no restrictions on how these data attributes are added. If you would prefer to prefix your attributes with
+				<code>data-</code> that will not interfere with the animations.</p>
+
+
+			<p>The <code>pb-</code>animate classes can be applied in two ways. You can quickly develop your code by adding classes directly to the HTML class attribute. However, for the sake of readability and template management, it is recommended that once you are satisfied with your final product that you move your classes into an
+				<code>@extend</code> in Sass.</p>
+		</div>
+	</div>
+</div>

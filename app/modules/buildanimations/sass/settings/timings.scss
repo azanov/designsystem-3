@@ -1,0 +1,15 @@
+//starting to set up variables
+
+//**********TIMING VARIABLES*********//
+//timing goes up by .66% each instance (2/3 increase)
+$very-slow: 1240ms;
+$slow: 690ms;
+$medium: 415ms;
+$fast: 250ms;
+$very-fast: 150ms;
+$lightning: 80ms;
+$immediate: 0ms;
+
+
+//animation style types
+//Would probably be good to combine keyframes and animation "style" - that way we won't have someone putting a cubic bezier on a fade in or something weird like that

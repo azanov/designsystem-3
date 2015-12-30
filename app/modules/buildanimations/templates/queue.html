@@ -1,0 +1,150 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<h4>Entrance/Exit ng- if/show/hide</h4>
+
+			<h5>Entrance/Exit class names*</h5>
+      <p>Entrances and exits come in different flavors. These are some basic ones.</p>
+			<ul>
+				<li>
+					<code>pb-fade</code>: This is a catch all - this will work for any case, whether it be a pb-fade out or in.
+				</li>
+				<li>
+					<code>pb-fadeIn</code>: This will only work with
+					<code>ng-show</code> or the
+					<em>entrance</em> of an
+					<code>ng-if</code> animation.
+				</li>
+				<li>
+					<code>pb-fadeOut</code>: This will only work with <code>ng-hide</code> or the <em>exit</em> of an <code>ng-if</code> animation.
+				</li>
+			</ul>
+
+			<div class="text-small">* Prefix these class names with a <code>.</code> in your Sass file if using in an <code>@extend</code>.</div>
+
+
+		</div>
+	</div>
+
+
+	<hr>
+
+
+	<div class="row pb-fade-demo" ng-class="{'on': vm.animateOn}">
+		<div class="col-xs-12">
+			<h4>Add Aditional Animation Case</h4>
+
+			<p>This is to show how you can layer animations on the object your animating. By turning both animations on, you can see how you can start to build more complex animations.</p>
+
+			<div class="btn-group form-group" data-toggle="buttons">
+				<label ng-click="vm.animateOn = false" class="btn btn-default active">
+					<input type="radio" name="options" id="option2" autocomplete="off" ng-checked="!vm.animateOn">Fade animation only
+				</label>
+				<label ng-click="vm.animateOn = true" class="btn btn-default">
+					<input type="radio" name="options" id="option1" autocomplete="off" ng-checked="vm.animateOn">Fade animation & additional animation
+				</label>
+			</div>
+		</div>
+
+		<div class="col-xs-12">
+
+			<button class="btn btn-default" ng-click="vm.hideFade = !vm.hideFade">Toggle Fade</button>
+<!--
+			<div class="row spacer-top-md">
+				<div class="col-xs-4"> -->
+					<span class="object pb-fade" ng-if="!vm.hideFade"></span>
+				<!-- </div>
+				<div class="col-xs-8">
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active"><a href="#html" aria-controls="html" role="tab" data-toggle="tab">HTML (Markup)</a></li>
+						<li role="presentation"><a href="#sass" aria-controls="sass" role="tab" data-toggle="tab">Sass (Styles)</a></li>
+					</ul>
+
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane" id="html">
+<pre class="prettyprint lang-html">
+<span class="object pb-fade" ng-hide="vm.hideFade"></span>
+</pre>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="sass">
+<pre class="prettyprint">
+.object {
+@extend .pb-fade;
+}
+</pre>
+						</div>
+					</div>
+
+
+				</div>
+			</div> -->
+		</div>
+
+		<!--***** ng-hide case *****-->
+		<div class="col-xs-12">
+			<button class="btn btn-default" ng-click="vm.hideThis = !vm.hideThis">Toggle ng-hide</button>
+
+			<span class="object pb-fadeOut" ng-if="!vm.hideThis"></span>
+		</div>
+		<!--***** end ng-hide case *****-->
+
+
+
+
+		<!--***** ng-show case *****-->
+		<div class="col-xs-12">
+			<button class="btn btn-default" ng-click="vm.showMe = !vm.showMe">Toggle ng-show</button>
+
+			<span class="object pb-fadeIn" ng-if="vm.showMe"></span>
+		</div>
+		<!--***** end ng-show case *****-->
+	</div>
+
+	<hr>
+
+	<!--Handle Displacement Cases-->
+
+	<div class="row">
+		<div class="col-xs-12">
+			<h4>Displacement Issues - Cross Fading</h4>
+			<div class="help-text">There are quite a few cases when we want to simultaneously pb-fade a piece of our UI out of view while fading something else in. Unfortunately, this is a bit challenging to achieve. This solution we propose isn't a true "cross-pb-fade", but it's very close. But first, let's illustrate the problem we're trying to prevent.</div>
+		</div>
+
+		<div class="col-xs-12">
+			<h5>Problem</h5>
+			<p>In this example we'll <code>pb-fade</code> between two different <code>div</code>s. Notice how this causes some displacement of the content and the two circles vertically stack.</p>
+			<button class="btn btn-default" ng-click="vm.displace = !vm.displace">Switch circles</button>
+
+			<span class="object pb-fade" ng-if="!vm.displace"></span>
+			<span class="object green pb-fade" ng-if="vm.displace"></span>
+		</div>
+
+		<div class="col-xs-12">
+			<h5>Solution</h5>
+			<p>In this example we've removed <code>pb-fade</code> and added <code>pb-crossFade</code> on both our <code>div</code>s. Now our circles appear to overlap.</p>
+			<p class="help-text">Example uses ng-if and <code>pb-crossFade</code>.</p>
+			<button class="btn btn-default" ng-click="vm.fixedDisplace = !vm.fixedDisplace">Switch circles</button>
+
+			<span class="object pb-crossFade" ng-if="!vm.fixedDisplace"></span>
+			<span class="object green pb-crossFade" ng-if="vm.fixedDisplace"></span>
+		</div>
+
+		<div class="col-xs-12">
+			<p>If you have a more fancy transition in mind, you can use any of the "in" animation classes with <code>pb-preventDisplacement</code>. This example uses <code>pb-zoomIn</code> & <code>pb-preventDisplacement</code>.</p>
+			<button class="btn btn-default" ng-click="vm.displaceShow = !vm.displaceShow">Switch circles</button>
+
+			<span class="object pb-zoomIn pb-preventDisplacement" ng-hide="vm.displaceShow"></span>
+			<span class="object green pb-zoomIn pb-preventDisplacement" ng-hide="!vm.displaceShow"></span>
+		</div>
+
+		<div class="col-xs-12">
+			<p>Example uses ng-show and <code>pb-flipInX</code> with <code>pb-preventDisplacement</code>.</p>
+			<button class="btn btn-default" ng-click="vm.displaceShowIn = !vm.displaceShowIn">Switch circles</button>
+
+			<span class="object pb-flipInX pb-preventDisplacement" ng-show="vm.displaceShowIn"></span>
+			<span class="object green pb-flipInX pb-preventDisplacement" ng-show="!vm.displaceShowIn"></span>
+		</div>
+	</div>
+
+
+</div>
