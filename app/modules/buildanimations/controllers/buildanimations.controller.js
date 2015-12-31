@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('pb.ds.buildanimations').controller('BuildAnimationsController', function($log) {
+  angular.module('pb.ds.buildanimations').controller('BuildAnimationsController', function($log, $http) {
 
     var _this = this;
 
@@ -16,6 +16,12 @@
       'Hershey\'s bar'
 		];
 
+    _this.animationNames = function(){
+      $http.get('modules/buildanimations/data/animations.json').then(function(response) {
+        _this.animationClasses = response.data;
+      });
+    };
+    _this.animationNames();
 
 
   });

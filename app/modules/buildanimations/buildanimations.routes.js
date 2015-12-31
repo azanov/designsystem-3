@@ -21,6 +21,9 @@
           overview: {
             templateUrl: 'modules/buildanimations/templates/overview.html'
           },
+          sandbox: {
+            templateUrl: 'modules/buildanimations/templates/sandbox.html'
+          },
           queue: {
             templateUrl: 'modules/buildanimations/templates/queue.html'
           },

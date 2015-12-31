@@ -12,11 +12,65 @@
 	}
 }
 
-.row {
-	margin-top: 15px;
-	margin-bottom: 15px;
-}
-
 .pb-fade-demo.on .object {
 	@extend .pb-rubberBand;
+}
+
+.sandbox-wrapper {
+	margin: 0;
+	border: solid 1px $pb-bg3;
+	background-color: #FFF;
+	.controls {
+		background-color: $pb-bg2;
+		padding-top: 10px;
+		height: 49px;
+		border-top: solid 1px $pb-bg3;
+		border-right: solid 1px $pb-bg3;
+		.btn-group {
+			margin-bottom: 0;
+		}
+	}
+	.panel-group {
+		height: 400px;
+		overflow-y: scroll;
+	}
+	.more-info {
+		text-transform: inherit;
+	}
+}
+
+.stage-wrapper {
+	padding-left: 0;
+	padding-right: 0;
+	pre {
+		height: 49px;
+		margin-bottom: 0;
+		border-radius: 0;
+		line-height: 28px;
+		border: 0;
+		background-color: $pb-bg2;
+		border-top: solid 1px $pb-bg3;
+	}
+}
+
+.stage {
+	padding: 20px;
+	height: 400px;
+	background-color: #fff;
+}
+
+.panel-group {
+	margin-bottom: 0;
+		.panel .panel-heading {
+		padding-left: 15px;
+		font-size: 14px;
+		label {
+			margin-bottom: 0;
+		}
+	}
+}
+.more-info.selected {
+	background-color: #2e2e2e;
+	text-decoration: none;
+	color: #FFF;
 }

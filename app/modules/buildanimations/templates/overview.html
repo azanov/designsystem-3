@@ -1,22 +1,28 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12">
-	    <h1>Supported Animations</h1>
-	    <p>This library handles different <em>types</em> of animations. At the moment, this library is only compatable with Angular.JS. In order to use this library, make sure you have the <code>ng-animate</code> module included in your app.</p>
-	    <h3>Queue Based Animations</h3>
-	    <h3>Focus Grabbing Animations</h3>
-	    <p>Most people will be primarily focussed on <b>queue</b> based animations. These animations are used for <b>entrances</b> and <b>exits</b>, and can do a great deal to smooth out the overall fluidity of an application.</p>
-	    <p>Less commonly used are <b>focus grabbing</b> animations. These come into play when you think a user might be stuck on what step comes next.</p>
-
-			<p>Any animations applied should not interfere with a current animation that is running on an object. This means that these animations will only take place if angular events are fired. These events will work with either
-				<code>ng-if</code>,
-				<code>ng-show</code> or
-				<code>ng-hide</code>. There are no restrictions on how these data attributes are added. If you would prefer to prefix your attributes with
-				<code>data-</code> that will not interfere with the animations.</p>
+	    <h1>Overview</h1>
+			<p class="doc-lede">PB-Animate has been built to handle different kinds of animations. Most people will be primarily focussed on entrance/exit animations. These animations do a great deal to smooth out the overall fluidity of an application. Emphasis animations should be less commonly used. These come into play when you think a user might be stuck on what step comes next, or need to guide their eye to something in your UI.</p>
 
 
-			<p>The <code>pb-</code>animate classes can be applied in two ways. You can quickly develop your code by adding classes directly to the HTML class attribute. However, for the sake of readability and template management, it is recommended that once you are satisfied with your final product that you move your classes into an
-				<code>@extend</code> in Sass.</p>
+			<h2 class="doc-sectionhead">Coding with PB-Animate</h2>
+
+	    <p>Design System custom animations are built for Angular projects. In order to use these animations, make sure you have the <a class="link" target="_blank" href="https://docs.angularjs.org/api/ngAnimate"><code>ng-animate</code></a> module included in your app. Any additional animations applied with PB-Animate should not interfere with a non-angular animations.</p>
+
+			<h2>Compatable Angular Attributes</h2>
+			<p>The following angular directives will work with PB-Animate classes.
+				<ul>
+					<li><code>ng-if</code></li>
+					<li><code>ng-show</code></li>
+					<li><code>ng-hide</code></li>
+					<li><code>ng-repeat</code></li>
+					<li><code>ng-class</code> (coming soon)</li>
+				</ul>
+			<p>There are no restrictions on how these data attributes are added in the HTML template. If you would prefer to prefix your attributes with <code>data-</code> that will not interfere with the animations.</p>
+
+
+			<h2>Crafting Animations with PB-Animate</h2>
+				<p>The <code>pb-</code>animate classes can be applied in two ways. The simplest is to add PB-Animate classes directly to the HTML element. This is useful for rapid prototyping. However, it is recommended that once you are satisfied with your final product that you move your classes into an <code>@extend</code> in Sass so your templates are easier to manage.</p>
 		</div>
 	</div>
 </div>
