@@ -365,10 +365,10 @@
         </thead>
         <tr ng-repeat="item in type.navigationItems">
           <td class="psr14">{{item.desc}}</td>
-          <td>Precision Sans Regular 14px</td>
+          <td>{{item.font}}</td>
           <td>
-            <span class="swatch" ng-if="item.color != '#FFFFFF'" ng-style="{'background-color':item.color, 'color':'#fff'}">{{item.color}}</span>
-            <span class="swatch" ng-if="item.color == '#FFFFFF'" style="background-color:#fff; color:#2e2e2e">#FFFFFF</span>
+            <span class="swatch" ng-if="item.color !== '#FFFFFF'" ng-style="{'background-color':item.color, 'color':'#fff'}">{{item.color}}</span>
+            <span class="swatch" ng-if="item.color === '#FFFFFF'" style="background-color:#fff; color:#2e2e2e">#FFFFFF</span>
           </td>
         </tr>
       </table>
