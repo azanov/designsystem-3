@@ -22,7 +22,7 @@
 	background-color: #FFF;
 	.controls {
 		background-color: $pb-bg2;
-		padding-top: 10px;
+		padding-top: 8px;
 		height: 49px;
 		border-top: solid 1px $pb-bg3;
 		border-right: solid 1px $pb-bg3;
@@ -36,6 +36,14 @@
 	}
 	.more-info {
 		text-transform: inherit;
+		&.selected {
+			background-color: #2e2e2e;
+			text-decoration: none;
+			color: #FFF;
+		}
+		&:hover:not(.selected) {
+			background-color: $pb-gray-500;
+		}
 	}
 }
 
@@ -68,9 +76,4 @@
 			margin-bottom: 0;
 		}
 	}
-}
-.more-info.selected {
-	background-color: #2e2e2e;
-	text-decoration: none;
-	color: #FFF;
 }

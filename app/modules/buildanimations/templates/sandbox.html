@@ -15,8 +15,8 @@
                   <label><i class="fa fa-caret-right" ng-class="{'fa-rotate-90': vm.showEntrance}"></i>&nbsp;&nbsp;Entrances</label>
                 </div>
                 <div class="panel-collapse" ng-show="vm.showEntrance">
-                  <div class="panel-body" ng-model="vm.selectedEntrance">
-                    <span ng-repeat="entrance in vm.animationClasses" class="more-info" ng-click="vm.selectedEntrance = entrance.name" ng-class="{'selected': vm.selectedEntrance === entrance.name}" ng-if="entrance.type === 'entrance'">{{entrance.name}}
+                  <div class="panel-body">
+                    <span ng-repeat="entrance in vm.animationClasses" class="more-info" ng-click="vm.pickEntrance(entrance.name)" ng-class="{'selected': vm.selectedEntrance === entrance.name}" ng-if="entrance.type === 'entrance'">{{entrance.name}}
                     </span>
                   </div>
                 </div>
@@ -26,19 +26,19 @@
                   <label><i class="fa fa-caret-right" ng-class="{'fa-rotate-90': vm.showExit}"></i>&nbsp;&nbsp;Exits</label>
                 </div>
                 <div class="panel-collapse" ng-show="vm.showExit">
-                  <div class="panel-body" ng-model="vm.selectedExit">
-                    <span ng-repeat="exit in vm.animationClasses" class="more-info" ng-click="vm.selectedExit = exit.name" ng-class="{'selected': vm.selectedExit === exit.name}" ng-if="exit.type === 'exit'">{{exit.name}}
+                  <div class="panel-body">
+                    <span ng-repeat="exit in vm.animationClasses" class="more-info" ng-click="vm.pickExit(exit.name)" ng-class="{'selected': vm.selectedExit === exit.name}" ng-if="exit.type === 'exit'">{{exit.name}}
                     </span>
                   </div>
                 </div>
               </div>
               <div class="panel panel-default">
                 <div class="panel-heading" ng-click="vm.showAccent = !vm.showAccent">
-                  <label><i class="fa fa-caret-right" ng-class="{'fa-rotate-90': vm.showExit}"></i>&nbsp;&nbsp;Emphasis</label>
+                  <label><i class="fa fa-caret-right" ng-class="{'fa-rotate-90': vm.showAccent}"></i>&nbsp;&nbsp;Emphasis</label>
                 </div>
                 <div class="panel-collapse" ng-show="vm.showAccent">
                   <div class="panel-body">
-                    <span ng-repeat="accent in vm.animationClasses" class="more-info" ng-click="vm.selectedAccent = accent.name" ng-class="{'selected': vm.selectedAccent === accent.name}" ng-if="accent.type === 'accent'">{{accent.name}}
+                    <span ng-repeat="accent in vm.animationClasses" class="more-info" ng-click="vm.pickAccent(accent.name)" ng-class="{'selected': vm.selectedAccent === accent.name}" ng-if="accent.type === 'accent'">{{accent.name}}
                     </span>
                   </div>
                 </div>
@@ -60,7 +60,7 @@
                     <input type="radio" name="ng-repeat" id="ng-repeat" autocomplete="off" ng-checked="vm.angularDirective === 'ng-repeat'" checked="checked">ng-repeat
                   </label>
                 </div>
-                <div class="btn btn-success pull-right" ng-click="vm.turnOn = !vm.turnOn" ng-init="vm.turnOn = true">Toggle</div>
+                <div ng-hide="vm.angularDirective === 'ng-repeat'" class="btn btn-success pull-right" ng-click="vm.turnOn = !vm.turnOn" ng-init="vm.turnOn = true">Toggle</div>
               </div>
             </div>
           </div>
@@ -87,10 +87,21 @@
               </div>
             </div>
 
+            <div ng-if="vm.angularDirective === 'ng-repeat'" class="pb-crossFade">
+              <div class="form-group">
+                <input class="form-control" placeholder="Filter to animate" ng-model="vm.filterList">
+              </div>
+              <table class="table">
+                <tr class="pb-stagger {{vm.selectedEntrance}} {{vm.selectedExit}} {{vm.selectedAccent}}" ng-repeat="movie in vm.movies | filter:vm.filterList as results">
+                  <td>{{movie}}</td>
+                </tr>
+              </table>
+            </div>
+
           </div>
 
           <div>
-            <pre><span ng-if="vm.selectedEntrance">.</span>{{vm.selectedEntrance}} <span ng-if="vm.selectedExit">.</span>{{vm.selectedExit}} <span ng-if="vm.selectedAccent">.</span>{{vm.selectedAccent}}</pre>
+            <pre><span ng-if="vm.angularDirective === 'ng-repeat'">.pb-stagger </span><span ng-if="vm.selectedEntrance">.</span>{{vm.selectedEntrance}} <span ng-if="vm.selectedExit">.</span>{{vm.selectedExit}} <span ng-if="vm.selectedAccent">.</span>{{vm.selectedAccent}}</pre>
           </div>
 
         </div>

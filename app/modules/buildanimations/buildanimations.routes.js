@@ -25,7 +25,7 @@
             templateUrl: 'modules/buildanimations/templates/sandbox.html'
           },
           queue: {
-            templateUrl: 'modules/buildanimations/templates/queue.html'
+            templateUrl: 'modules/buildanimations/templates/angular-animations.html'
           },
           stagger: {
             templateUrl: 'modules/buildanimations/templates/stagger.html'
