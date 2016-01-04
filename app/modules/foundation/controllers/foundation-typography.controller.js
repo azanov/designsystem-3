@@ -26,18 +26,23 @@
     ];
 
     _this.navigationItems = [
-      { desc: 'Basic Nav items', color: '#FFFFFF'},
-      { desc: 'Tiered Dropdown Nav items', color: '#FFFFFF'},
-      { desc: 'Tiered Dropdown Nav item (active)', color: '#3E53A4'},
-      { desc: 'Tiered Dropdown Section Header (within dropdown)', color: '#2E2E2E'},
-      { desc: 'Side Nav items', color: '#717171'},
-      { desc: 'Side Nav Items (hover)', color: '#2E2E2E'},
-      { desc: 'Side Nav Items (active)', color: '#3E53A4'},
-      { desc: 'Tab Text', color: '#717171'},
-      { desc: 'Tab Tex (active)', color: '#2E2E2E'},
-      { desc: 'Breadcrumbs', color: '#717171'},
-      { desc: 'Breadcrumbs (hover)', color: '#2E2E2E'}
+      { desc: 'Basic Nav items', color: '#FFFFFF', font: 'Precision Sans Regular 14'},
+      { desc: 'Section Headers (in dropdown)', color: '#2e2e2e', font: 'Precision Sans 14pt Reg'},
+      { desc: 'Tiered Dropdown Nav items', color: '#717171', font: 'Helvetica Neue 12pt Reg'},
+      { desc: 'Tiered Dropdown Nav item (active)', color: '#2e2e2e', font: 'Helvetica Neue 12pt Reg'},
+      { desc: 'Tiered Dropdown Section Header (within dropdown)', color: '#2E2E2E', font: 'Precision Sans Regular 14'},
+      { desc: 'Side Nav Section Header', color: '#2e2e2e', font: 'Precision Sans 18pt Reg'},
+      { desc: 'Side Nav item', color: '#717171', font: 'Precision Sans 14pt Reg'},
+      { desc: 'Side Nav hover item', color: '#2e2e2e', font: 'Precision Sans 14pt Reg'},
+      { desc: 'Side Nav active item', color: '#2e2e2e', font: 'Precision Sans 14pt Reg'},
+      { desc: 'Tab Text', color: '#717171', font: 'Precision Sans Regular 14'},
+      { desc: 'Tab Text (active)', color: '#2E2E2E', font: 'Precision Sans Regular 14'},
+      { desc: 'Breadcrumbs', color: '#717171', font: 'Precision Sans Regular 14'},
+      { desc: 'Breadcrumbs (hover)', color: '#2E2E2E', font: 'Precision Sans Regular 14'},
+      { desc: 'Breadcrumbs (previous pages - Link)', color: '#0072B8', font: 'Helvetica Neue 14pt Reg'},
+      { desc: 'Breadcrumbs (current page)', color: '#C0C0C0', font: 'Helvetica Neue 14pt Reg'}
     ];
+
 
     _this.formsInputs = [
       { desc: 'Field Labels', font: 'Helvetica Neue Regular 14', color: '#717171'},
