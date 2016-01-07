@@ -13,3 +13,6 @@ $immediate: 0ms;
 
 //animation style types
 //Would probably be good to combine keyframes and animation "style" - that way we won't have someone putting a cubic bezier on a fade in or something weird like that
+//Custom timing variables for different patterns of movement
+// $pop: cubic-bezier(.17, .67, .32, 1.75);
+$pop: cubic-bezier(.05, .94, .76, 1.6);

@@ -1,6 +1,6 @@
 @import "keyframes/accent";
-@import "keyframes/in-queue";
-@import "keyframes/out-queue";
+@import "keyframes/entrances";
+@import "keyframes/exits";
 
 @import "settings/timings";
 @import "settings/mixins";
@@ -56,6 +56,11 @@
   transform-origin: center;
 }
 
+.pb-pop {
+  @extend .pb-animation-base;
+  animation-name: pop;
+}
+
 .pb-pulse {
   @extend .pb-animation-base;
   animation-name: pulse;
@@ -64,6 +69,25 @@
 .pb-rubberBand {
   @extend .pb-animation-base;
   animation-name: rubberBand;
+}
+
+.pb-scaleDown {
+  backface-visibility: visible;
+  @extend .pb-animation-base;
+  animation-duration: $very-fast;
+  animation-name: scaleDown;
+}
+
+.pb-scaleUp {
+  backface-visibility: visible;
+  @extend .pb-animation-base;
+  animation-name: scaleUp;
+}
+
+.pb-scaleUpPop {
+  backface-visibility: visible;
+  @extend .pb-animation-base;
+  animation-name: scaleUpPop;
 }
 
 .pb-shake {

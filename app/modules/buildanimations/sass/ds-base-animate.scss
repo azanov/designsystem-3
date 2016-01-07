@@ -1,0 +1,101 @@
+//This file hold all of the "Out of the Box" Animations that DS would provide
+
+
+
+
+//** Adding in cases discussed in animation meetings **//
+
+
+
+//Add small fades on all btn bg color changes
+.btn {
+  transition: background-color .1s linear;
+  @extend .pb-zoomIn, .pb-fadeOut;
+}
+
+.btn-primary:not(.disabled):not([disabled]) {
+  //animation that fires when there is any kind of switch from disabled to enabled
+  @extend .pb-pop;
+}
+
+
+//make tiles scale up
+.tile, .tile-button {
+  @extend .pb-scaleDown;
+  &:hover {
+    @extend .pb-scaleUpPop;
+  }
+}
+.control input ~ .control-indicator {
+  transition: box-shadow $lightning linear;
+}
+.control input:focus ~ .control-indicator {
+  transition: box-shadow $very-fast linear $very-fast;
+}
+
+// radio pop animation
+.radio input ~ .control-indicator {
+  background-image: none;
+  &:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50px;
+    display: block;
+    position: absolute;
+    background-color: $pb-blue;
+    top: calc(50% - 4px);
+    left: calc(50% - 4px);
+    backface-visibility: visible;
+    transform: scale3d(0, 0, 0);
+    transition: transform $lightning linear;
+  }
+}
+//radio when checked
+.radio input:checked ~ .control-indicator {
+  background-image: none;
+  &:after {
+    transition-timing-function: $pop;
+    transition-duration: $medium;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+// checkbox animation
+.checkbox input ~ .control-indicator {
+  background-image: none;
+  //removing background image here because I don't want to directly animate background sizes
+  &:after {
+    content: '';
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgOSA4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik03LjIyMSAwbC0uNzkuNzktMy4xNTkgMy4xNTktLjkwMy0uOTAzLS43OS0uNzktMS41NzkgMS41NzkuNzkuNzkgMS42OTIgMS42OTIuNzkuNzkuNzktLjc5IDMuOTQ5LTMuOTQ5Ljc5LS43OS0xLjU3OS0xLjU3OXoiIGZpbGw9IiMzRTUzQTQiLz48L3N2Zz4=");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: calc(50% - 4px);
+    left: calc(50% - 4px);
+    backface-visibility: visible;
+    transform: scale3d(0, 0, 0);
+    transition: transform $lightning linear;
+  }
+}
+//radio when checked
+.checkbox input:checked ~ .control-indicator {
+  background-image: none;
+  &:after {
+    transition-timing-function: linear;
+    transition-duration: $very-fast;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+
+.button-controls {
+  .btn {
+    opacity: 1;
+  }
+}
