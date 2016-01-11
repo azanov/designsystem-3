@@ -11,7 +11,8 @@
     box-shadow: 0px 3px 7px rgba(0,0,0,0.05);
 
     .panel-footer {
-      background-color: #EAEDF8;
+      //background-color: #EAEDF8;
+      background-position: 0 100%;
     }
   }
 
@@ -23,6 +24,12 @@
   .panel-footer {
     padding: 15px 20px;
     border-top: transparent;
+
+    //background-image: linear-gradient(to top, #EAEDF8, #EAEDF8 50%, #F0F0F0 50%, #F0F0F0);
+    background-image: linear-gradient(to top, $bg-active, $bg-active 50%, #F0F0F0 50%, #F0F0F0);
+    background-position: 200% 0%;
+    background-size: 100% 200%;
+    transition: all .25s ease-in;
 
     .category-widget-title {
       margin: 0 0 5px 0;
