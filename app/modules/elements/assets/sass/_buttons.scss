@@ -41,9 +41,15 @@
       border-color: #c0c0c0;
       color: #fff;
       opacity: 1;
-
     }
   }
+
+  &.disabled.loading, &[disabled].loading {
+    color: #fff;
+    background-color: $pb-blue;
+    border-color: $pb-blue;
+  }
+
   // badge in a button - doesn't happen often
   .badge {
     color: #fff;
