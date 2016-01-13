@@ -1,5 +1,7 @@
 
-//globals, all variations
+// globals, all variations
+// apply "splitview" as a body class
+// then also add one the major variants
 .splitview {
   footer {
     margin: 0;
@@ -27,7 +29,10 @@
 
 }
 
-// gray navbar / white bg / 2 rules
+
+
+
+// VARIANT: gray navbar / white bg / 2 rules
 .splitview-filled {
   .leftnav {
     background-color: $pb-bg2;
@@ -36,7 +41,10 @@
   }
 }
 
-// white navbar / gray bg / 3 rules
+
+
+
+// VARIANT: white navbar / gray bg / 3 rules
 .splitview-white {
   background-color: $pb-bg1;
 
@@ -52,8 +60,8 @@
 }
 
 
-// white navbar / white bg / 3 rules
-.splitview-white-filled{
+// VARIANT: white navbar / white bg / 3 rules
+.splitview-white-filled {
   .leftnav {
     border-left: 1px solid #e8e8e8;
     border-right: 1px solid #e8e8e8;
@@ -64,7 +72,7 @@
 }
 
 
-// white navbar / white bg / 1 rule
+// VARIANT: white navbar / white bg / 1 rule
 .splitview-white-open {
   .leftnav {
     border-right: 1px solid #e8e8e8;
@@ -82,19 +90,24 @@
   }
 }
 
+
+// for any of the above variants as a fluid grid
+// then set "container-fluid" in html container tag
 .splitview-white-open-fluid {
   .leftnav {
     border-right: 1px solid #e8e8e8;
   }
 }
 
-//NOTE: set container-fluid in html container tag
+
+// .leftnav {
+//   .list-group {
+//     position: fixed;
+//   }
+// }
 
 
-
-
-
-
+// framed images for the overview page
 .framed {
   border: 1px solid $pb-light-gray;
 }
