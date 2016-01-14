@@ -94,6 +94,12 @@
     }
   }
 
+  &.disabled.loading, &[disabled].loading {
+    color: $pb-blue;
+    background-color: transparent;
+    border-color: $pb-blue;
+  }
+
   .badge {
     color: #fff;
     background-color: $pb-magenta;
