@@ -14,25 +14,32 @@
 
   <div class="row">
     <div class="col-md-12">
+
+      <p>
+        <a class="more-info plugin" href="https://github.com/devmark/angular-slick-carousel" target="_blank">Angular Slick Carousel v3.1.4</a>
+      </p>
+
       <slick
         infinite="true"
         slides-to-show="4"
-        slides-to-scroll="1"
+        slides-to-scroll="4"
         dots="true"
-        responsive="[{breakpoint: 767, settings: {slidesToShow: 1}}]">
-        <div class="panel panel-default category-widget bg-pb-bg1" ng-repeat="i in [1,2,3,4,5]">
+        responsive="[{breakpoint: 767, settings: {slidesToShow: 1}}]"
+      >
+
+        <div class="panel panel-default category-widget bg-pb-bg1" ng-repeat="i in [1,2,3,4,5,6,7,8,9,10,11,12]">
           <div class="panel-body category-widget-icon">
             <i class="fa fa-fw fa-picture-o"></i>
           </div>
         </div>
-    </slick>
+      </slick>
     </div>
   </div>
 
-  <div class="row spacer-top-lg">
+  <!-- <div class="row spacer-top-lg">
     <div class="col-md-10">
       <img class="img-responsive" src="modules/elements/assets/images/gallery.png" alt="" />
     </div>
-  </div>
+  </div> -->
 
 </div>
