@@ -50,7 +50,8 @@
     "ui-router": "0.2.15",
     "ui-select": "angular-ui-select#0.13.2",
     "yamm3": "1.1.0",
-    "ng-tags-input": "3.0.0"
+    "ng-tags-input": "3.0.0",
+    "angular-slick-carousel": "~3.1.4"
   },
   "resolutions": {
     "angular": "1.4.5"

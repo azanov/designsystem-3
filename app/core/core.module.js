@@ -31,7 +31,8 @@
     'angularChart',
     'duScroll',
     'ui.select',
-    'ngTagsInput'
+    'ngTagsInput',
+    'slickCarousel'
   ]);
 
 })();
