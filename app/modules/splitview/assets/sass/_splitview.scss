@@ -3,7 +3,7 @@
 // apply "splitview" as a body class
 // then also add one the major variants
 .splitview {
-  footer {
+  .footer-wrapper {
     margin: 0;
   }
 
@@ -98,6 +98,8 @@
     border-right: 1px solid #e8e8e8;
   }
 }
+
+//NOTE: set container-fluid in html container tag
 
 
 // .leftnav {
