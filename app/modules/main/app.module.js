@@ -138,14 +138,14 @@
     });
 
     //LOCATION CHANGE START
-    $rootScope.$on('$locationChangeStart', function(event, newUrl) {
-
-      if ($location.$$hash) {
-        $log.debug('LOCATION CHANGE START WITH $$hash', $location);
-        hashScroll($location.$$hash);
-      }
-
-    });
+    // $rootScope.$on('$locationChangeStart', function(event, newUrl) {
+    //
+    //   if ($location.$$hash) {
+    //     $log.debug('LOCATION CHANGE START WITH $$hash', $location);
+    //     hashScroll($location.$$hash);
+    //   }
+    //
+    // });
 
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
@@ -198,17 +198,17 @@
 
 
     //VIEW CONTENT LOADED
-    $rootScope.$on('$viewContentLoaded', function(event) {
-
-      //convert urlencoded #
-      $location.url($location.url().replace('%23', '#'));
-
-      if ($location.$$hash) {
-        $log.debug('VIEW CONTENT LOADED WITH $$hash', $location);
-        hashScroll($location.$$hash, true);
-      }
-
-    });
+    // $rootScope.$on('$viewContentLoaded', function(event) {
+    //
+    //   //convert urlencoded #
+    //   $location.url($location.url().replace('%23', '#'));
+    //
+    //   if ($location.$$hash) {
+    //     $log.debug('VIEW CONTENT LOADED WITH $$hash', $location);
+    //     hashScroll($location.$$hash, true);
+    //   }
+    //
+    // });
 
 
     //handle scrolling to updated hash
