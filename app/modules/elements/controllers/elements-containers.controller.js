@@ -7,25 +7,75 @@
     var _this = this;
 
     _this.imageGallery = {
-      items: [1,2,3,4,5,6,7,8,9,10,11,12],
+      items: [
+        {
+          imageName: 'pb_cls_box_157317098'
+        },
+        {
+          imageName: 'pb_cls_box_170998595'
+        },
+        {
+          imageName: 'pb_cls_bzwoman_107430284'
+        },
+        {
+          imageName: 'pb_cls_file_92123815'
+        },
+        {
+          imageName: 'pb_cls_fingr_178480834'
+        },
+        {
+          imageName: 'pb_cls_locatr_175275675'
+        },
+        {
+          imageName: 'pb_cls_man_180408767'
+        },
+        {
+          imageName: 'pb_cls_plan_112156668'
+        },
+        {
+          imageName: 'pb_cls_ship_158636570'
+        },
+        {
+          imageName: 'pb_cls_slots_87144177'
+        },
+        {
+          imageName: 'pb_cls_smbz_143922755'
+        },
+        {
+          imageName: 'pb_cls_sneakrs_501199841'
+        },
+        {
+          imageName: 'pb_cls_string_79342872'
+        },
+        {
+          imageName: 'pb_cls_type_494310307'
+        },
+        {
+          imageName: 'pb_cls_women_175138169'
+        }
+      ],
+      selectedImage: 'test',
+      click: function(item) {
+        _this.imageGallery.selectedImage = item.imageName;
+      },
       settings: {
         infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 6,
+        slidesToScroll: 6,
         dots: true,
         responsive: [
           {
             breakpoint: 767,
             settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
+              slidesToShow: 2,
+              slidesToScroll: 2
             }
           },
           {
             breakpoint: 991,
             settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3
+              slidesToShow: 4,
+              slidesToScroll: 4
             }
           }
         ]

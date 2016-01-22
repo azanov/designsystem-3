@@ -23,11 +23,18 @@
     </div>
 
     <div class="col-md-12 spacer-top-xl">
+
+      <div class="row spacer-bottom-md">
+        <div class="col-lg-6 col-lg-offset-3">
+          <img class="img-responsive" ng-src="modules/elements/assets/images/gallery/{{containers.imageGallery.selectedImage}}.jpg" />
+        </div>
+      </div>
+
       <slick settings="containers.imageGallery.settings">
-        <div class="panel panel-default category-widget bg-pb-bg1" ng-repeat="i in containers.imageGallery.items">
-          <div class="panel-body category-widget-icon">
-            <i class="fa fa-fw fa-picture-o"></i>
-          </div>
+        <div class="" ng-repeat="i in containers.imageGallery.items">
+          <a href="" ng-click="containers.imageGallery.click(i)">
+            <img class="img-responsive" ng-src="modules/elements/assets/images/gallery/{{i.imageName}}_thumb.jpg" />
+          </a>
         </div>
       </slick>
     </div>
