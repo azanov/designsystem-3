@@ -54,9 +54,11 @@
           imageName: 'pb_cls_women_175138169'
         }
       ],
-      selectedImage: 'test',
-      click: function(item) {
+      selected: 0,
+      selectedImage: 'pb_cls_box_157317098',
+      click: function(item, index) {
         _this.imageGallery.selectedImage = item.imageName;
+        _this.imageGallery.selected = index;
       },
       settings: {
         infinite: true,

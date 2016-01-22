@@ -12,7 +12,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row doc-gallery">
     <div class="col-md-12">
       <p>
         <a class="more-info plugin" href="http://kenwheeler.github.io/slick/" target="_blank">Slick v1.5.9</a>
@@ -26,15 +26,13 @@
 
       <div class="row spacer-bottom-md">
         <div class="col-lg-6 col-lg-offset-3">
-          <img class="img-responsive" ng-src="modules/elements/assets/images/gallery/{{containers.imageGallery.selectedImage}}.jpg" />
+          <img class="img-responsive thumbnail" ng-src="modules/elements/assets/images/gallery/{{containers.imageGallery.selectedImage}}.jpg" />
         </div>
       </div>
 
       <slick settings="containers.imageGallery.settings">
-        <div class="" ng-repeat="i in containers.imageGallery.items">
-          <a href="" ng-click="containers.imageGallery.click(i)">
+        <div class="image-gallery-item thumbnail" ng-class="{'active': containers.imageGallery.selected === $index}" ng-repeat="i in containers.imageGallery.items" ng-click="containers.imageGallery.click(i, $index)">
             <img class="img-responsive" ng-src="modules/elements/assets/images/gallery/{{i.imageName}}_thumb.jpg" />
-          </a>
         </div>
       </slick>
     </div>
