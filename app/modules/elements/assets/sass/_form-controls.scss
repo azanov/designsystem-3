@@ -129,8 +129,10 @@
 }
 
 // for case when the controls are used in a form-horizontal class
-.form-horizontal .radio, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline {
-  padding-top: 0;
+.form-horizontal {
+  &.radio, .checkbox, .radio-inline, .checkbox-inline {
+     padding-top: 0;
+   }
 }
 
 .controls-inline .control {
