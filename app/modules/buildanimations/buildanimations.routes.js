@@ -5,7 +5,7 @@
   angular.module('pb.ds.buildanimations').config(function($stateProvider) {
     $stateProvider.state('buildanimations', {
         abstract: true,
-        url: '/buildanimations',
+        url: '',
         templateUrl: 'modules/buildanimations/templates/buildanimations.html',
         controller: 'BuildAnimationsController as vm',
         data: {
@@ -16,7 +16,7 @@
       })
 
       .state('buildanimations.page', {
-        url: '',
+        url: '/animations',
         views: {
           overview: {
             templateUrl: 'modules/buildanimations/templates/overview.html'
@@ -29,10 +29,12 @@
           },
           stagger: {
             templateUrl: 'modules/buildanimations/templates/stagger.html'
+          },
+          base: {
+            templateUrl: 'modules/buildanimations/templates/baseanimations.html'
           }
         }
       });
-
 
   });
 })();

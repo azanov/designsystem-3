@@ -1,0 +1,330 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="doc-head" id="base">Base Animations</h1>
+      <p>These are all of the out-of-the-box animations.</p>
+      <div>
+
+        <div class="col-xs-12">
+          <h2 class="doc-sectionhead">Buttons</h2>
+          <ul>
+            <li>Background color transitions (hover)</li>
+            <li>Disabled to enabled state</li>
+          </ul>
+
+          <ul class="list-inline spacer-top-sm">
+            <li>
+              <button class="btn btn-default" ng-click="vm.hidebtn = !vm.hidebtn">Toggle Primary</button>
+            </li>
+            <li>
+              <button class="btn btn-primary" ng-init="vm.hidebtn = true" ng-hide="vm.hidebtn">
+                Example
+              </button>
+            </li>
+          </ul>
+
+					<ul class="list-inline spacer-top-sm">
+            <li>
+              <button class="btn btn-default" ng-click="vm.hidebtnDefault = !vm.hidebtnDefault">Toggle Secondary</button>
+            </li>
+            <li>
+              <button class="btn btn-default" ng-init="vm.hidebtnDefault = true" ng-hide="vm.hidebtnDefault">
+                Example
+              </button>
+            </li>
+          </ul>
+
+					<ul class="list-inline spacer-top-sm">
+            <li>
+              <button class="btn btn-default" ng-click="vm.hidebtns = !vm.hidebtns">Toggle Primary & Secondary</button>
+            </li>
+						<li>
+              <button class="btn btn-primary" ng-init="vm.hidebtns = true" ng-hide="vm.hidebtns">
+                Example
+              </button>
+            </li>
+						<li>
+              <button class="btn btn-default" ng-init="vm.hidebtns = true" ng-hide="vm.hidebtns">
+                Example
+              </button>
+            </li>
+						<li>
+              <button class="btn btn-default" ng-init="vm.hidebtns = true" ng-hide="vm.hidebtns">
+                Example
+              </button>
+            </li>
+          </ul>
+
+					<p class="spacer-top-md">This is still undergoing development</p>
+					<ul class="list-inline">
+						<li>
+							<button class="btn btn-default" ng-click="vm.disabled = !vm.disabled">Toggle Disabled</button>
+						</li>
+						<li>
+							<button class="btn btn-primary" ng-init="vm.disabled = true" ng-disabled="vm.disabled">
+								Example
+							</button>
+						</li>
+					</ul>
+        </div>
+
+
+        <div class="col-xs-12">
+          <h2 class="doc-sectionhead">Links</h2>
+          <ul>
+            <li>Color transitions (hover)</li>
+          </ul>
+
+          <a href="">My Link</a> &nbsp;&nbsp;&nbsp;
+          <button class="btn btn-link">Btn Link example</button>
+
+          <p class="spacer-top-md">Fancy links</p>
+          <a href="" class="link link-fancy">My Link</a>
+
+        </div>
+
+
+        <div class="col-xs-12">
+
+          <h2 class="doc-sectionhead">Tiles</h2>
+          <ul>
+            <li>Hover animation</li>
+          </ul>
+          <div class="row spacer-bottom-md">
+            <div class="col-sm-3">
+              <button type="button" name="button" class="btn btn-default tile-button">
+                <img src="assets/images/logo-usps.png" alt="">
+              </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+							<ul class="list-inline">
+								<li>
+		              <button type="button" name="button" class="btn btn-default tile-button">
+		                <img src="assets/images/logo-usps.png" alt="">
+		              </button>
+								</li>
+								<li>
+		              <button type="button" name="button" class="btn btn-default tile-button">
+		                <img src="assets/images/logo-usps.png" alt="">
+		              </button>
+								</li>
+								<li>
+		              <button type="button" name="button" class="btn btn-default tile-button">
+		                <img src="assets/images/logo-usps.png" alt="">
+		              </button>
+								</li>
+								<li>
+		              <button type="button" name="button" class="btn btn-default tile-button">
+		                <img src="assets/images/logo-usps.png" alt="">
+		              </button>
+								</li>
+							</ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12">
+          <h2 class="doc-sectionhead">Checkboxes</h2>
+
+          <div class="controls-stacked">
+            <label class="control checkbox">
+              <input type="checkbox">
+              <span class="control-indicator"></span>
+              Check this custom checkbox
+            </label>
+            <label class="control checkbox">
+              <input type="checkbox">
+              <span class="control-indicator"></span>
+              Check this custom checkbox
+            </label>
+            <label class="control checkbox">
+              <input type="checkbox">
+              <span class="control-indicator"></span>
+              Check this custom checkbox
+            </label>
+            <label class="control checkbox">
+              <!-- you can disabled to the label (class=control) only, or to both it and the input -->
+              <input type="checkbox">
+              <span class="control-indicator"></span>
+              But not this custom checkbox
+            </label>
+          </div>
+        </div>
+
+        <div class="col-xs-12">
+          <h2 class="doc-sectionhead">Radio Buttons</h2>
+          <div class="controls-stacked">
+            <label class="control radio">
+              <input id="radio1" name="radio" type="radio">
+              <span class="control-indicator"></span>
+              Toggle this custom radio
+            </label>
+            <label class="control radio">
+              <input id="radio2" name="radio" type="radio">
+              <span class="control-indicator"></span>
+              Or toggle this other custom radio
+            </label>
+            <label class="control radio">
+              <input id="radio3" name="radio" type="radio">
+              <span class="control-indicator"></span>
+              Or toggle this other custom radio
+            </label>
+          </div>
+        </div>
+
+				<div class="col-xs-12 spacer-bottom-lg">
+					<h2 class="doc-sectionhead">Dropdown</h2>
+					<p>This is currently still in progress - this is not the final effect</p>
+					<div class="btn-group">
+						<button class="btn btn-default btn dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+							Button
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu pb-forwardStagger-5" role="menu">
+							<li>
+								<a href="#">Action</a>
+							</li>
+							<li>
+								<a href="#">Another action</a>
+							</li>
+							<li>
+								<a href="#">Something else here</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#">Separated link</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+
+        <div class="col-xs-12">
+          <h2 class="doc-sectionhead">Inputs</h2>
+          <div class="form-group">
+            <label>Text label</label>
+            <input class="form-control" name="text1" placeholder="Optional placeholder text" type="text">
+          </div>
+        </div>
+
+        <div class="col-xs-12">
+          <h2 class="doc-sectionhead">Popovers</h2>
+          <p>Popover on click</p>
+          <ul class="list-inline">
+            <li>
+              <button popover-placement="top" uib-popover="My text" type="button" class="btn btn-default">Popover top</button>
+            </li>
+            <li>
+              <button popover-placement="right" uib-popover="My text" type="button" class="btn btn-default">Popover right</button>
+            </li>
+            <li>
+              <button popover-placement="bottom" uib-popover="My text" type="button" class="btn btn-default">Popover bottom</button>
+            </li>
+            <li>
+              <button popover-placement="left" uib-popover="My text" type="button" class="btn btn-default">Popover left</button>
+            </li>
+          </ul>
+
+          <p class="spacer-top-sm">Popover on hover <strong>Option 1: radiate outwards</strong></p>
+
+          <ul class="list-inline">
+            <li>
+              <button uib-popover="I appeared on mouse enter!" popover-trigger="mouseenter" type="button" class="btn btn-default">Popover Top</button>
+            </li>
+            <li>
+              <button popover-placement="right" uib-popover="I appeared on mouse enter!" popover-trigger="mouseenter" type="button" class="btn btn-default">Popover Right</button>
+            </li>
+            <li>
+              <button popover-placement="bottom" uib-popover="I appeared on mouse enter!" popover-trigger="mouseenter" type="button" class="btn btn-default">Popover Bottom</button>
+            </li>
+            <li>
+              <button popover-placement="left" uib-popover="I appeared on mouse enter!" popover-trigger="mouseenter" type="button" class="btn btn-default">Popover Left</button>
+            </li>
+          </ul>
+
+          <p class="spacer-top-sm">Popover on hover <strong>Option 2: drawn inwards</strong></p>
+					<ul class="list-inline">
+            <li>
+              <button uib-popover="I appeared on mouse enter!" popover-trigger="mouseenter" type="button" class="magnet btn btn-default">Popover Top</button>
+            </li>
+            <li>
+              <button popover-placement="right" uib-popover="I appeared on mouse enter!" popover-trigger="mouseenter" type="button" class="magnet btn btn-default">Popover Right</button>
+            </li>
+            <li>
+              <button popover-placement="bottom" uib-popover="I appeared on mouse enter!" popover-trigger="mouseenter" type="button" class="magnet btn btn-default">Popover Bottom</button>
+            </li>
+            <li>
+              <button popover-placement="left" uib-popover="I appeared on mouse enter!" popover-trigger="mouseenter" type="button" class="magnet btn btn-default">Popover Left</button>
+            </li>
+          </ul>
+
+          <p class="spacer-top-md text-small help-text">These animations will only work if
+            <code>popover-append-to-body</code> is kept as
+            <code>false</code>
+          </p>
+        </div>
+
+				<!--Tooltips -->
+				<div class="col-xs-12">
+          <h2 class="doc-sectionhead">Tooltips</h2>
+          <!-- <p>Tooltip on click</p>
+          <ul class="list-inline">
+            <li>
+              <button tooltip-placement="top" uib-tooltip="My text" type="button" class="btn btn-default">Tooltip top</button>
+            </li>
+            <li>
+              <button tooltip-placement="right" uib-tooltip="My text" type="button" class="btn btn-default">Tooltip right</button>
+            </li>
+            <li>
+              <button tooltip-placement="bottom" uib-tooltip="My text" type="button" class="btn btn-default">Tooltip bottom</button>
+            </li>
+            <li>
+              <button tooltip-placement="left" uib-tooltip="My text" type="button" class="btn btn-default">Tooltip left</button>
+            </li>
+          </ul> -->
+
+          <p class="spacer-top-sm">Tooltip on hover <strong>Option 1: radiate outwards</strong></p>
+
+          <ul class="list-inline">
+            <li>
+              <button uib-tooltip="I appeared on mouse enter!" tooltip-trigger="mouseenter" type="button" class="btn btn-default">Tooltip Top</button>
+            </li>
+            <li>
+              <button tooltip-placement="right" uib-tooltip="I appeared on mouse enter!" tooltip-trigger="mouseenter" type="button" class="btn btn-default">Tooltip Right</button>
+            </li>
+            <li>
+              <button tooltip-placement="bottom" uib-tooltip="I appeared on mouse enter!" tooltip-trigger="mouseenter" type="button" class="btn btn-default">Tooltip Bottom</button>
+            </li>
+            <li>
+              <button tooltip-placement="left" uib-tooltip="I appeared on mouse enter!" tooltip-trigger="mouseenter" type="button" class="btn btn-default">Tooltip Left</button>
+            </li>
+          </ul>
+
+          <p class="spacer-top-sm">Tooltip on hover <strong>Option 2: drawn inwards</strong></p>
+					<ul class="list-inline">
+            <li>
+              <button uib-tooltip="I appeared on mouse enter!" tooltip-trigger="mouseenter" type="button" class="magnet btn btn-default">Tooltip Top</button>
+            </li>
+            <li>
+              <button tooltip-placement="right" uib-tooltip="I appeared on mouse enter!" tooltip-trigger="mouseenter" type="button" class="magnet btn btn-default">Tooltip Right</button>
+            </li>
+            <li>
+              <button tooltip-placement="bottom" uib-tooltip="I appeared on mouse enter!" tooltip-trigger="mouseenter" type="button" class="magnet btn btn-default">Tooltip Bottom</button>
+            </li>
+            <li>
+              <button tooltip-placement="left" uib-tooltip="I appeared on mouse enter!" tooltip-trigger="mouseenter" type="button" class="magnet btn btn-default">Tooltip Left</button>
+            </li>
+          </ul>
+
+          <p class="spacer-top-md text-small help-text">These animations will only work if
+            <code>popover-append-to-body</code> is kept as
+            <code>false</code>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

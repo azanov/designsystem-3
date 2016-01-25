@@ -1,31 +1,41 @@
 //This file hold all of the "Out of the Box" Animations that DS would provide
 
 
-
-
 //** Adding in cases discussed in animation meetings **//
-
-
+//*********BUTTONS & LINKS******//
+link, a {
+  transition: color linear $very-fast;
+  &.link-fancy {
+    text-decoration: none;
+    box-shadow: 0 9px 0 -7px transparent, 0 9px 0 -7px transparent;
+    transition: box-shadow $lightning linear;
+    &:hover {
+      box-shadow: -7px 9px 0 -7px $link-hover, 7px 9px 0 -7px $link-hover;
+    }
+  }
+}
 
 //Add small fades on all btn bg color changes
 .btn {
   transition: background-color .1s linear;
-  @extend .pb-zoomIn, .pb-fadeOut;
+  @extend .pb-fade;
 }
-
 .btn-primary:not(.disabled):not([disabled]) {
   //animation that fires when there is any kind of switch from disabled to enabled
-  @extend .pb-pop;
+  @extend .pb-bounceIn, .pb-fadeOut;
 }
 
 
-//make tiles scale up
-.tile, .tile-button {
-  @extend .pb-scaleDown;
-  &:hover {
-    @extend .pb-scaleUpPop;
-  }
+
+//*********INPUTS******//
+//TODO: Find this in the original design system and figure out where to put it
+//TODO: Make sure this works with selectize inputs
+.form-control {
+  transition: border-color $very-fast linear, box-shadow $very-fast linear $lightning;
+  box-shadow: none;  //overrides inline box-shadow which makes the transition feel wrong
 }
+
+//Handle focus states for checkboxes & radios
 .control input ~ .control-indicator {
   transition: box-shadow $lightning linear;
 }
@@ -56,7 +66,7 @@
   background-image: none;
   &:after {
     transition-timing-function: $pop;
-    transition-duration: $medium;
+    transition-duration: $fast;
     transform: scale3d(1, 1, 1);
   }
 }
@@ -92,10 +102,138 @@
   }
 }
 
-
-
-.button-controls {
-  .btn {
-    opacity: 1;
+//*********DROPDOWN MENU********//
+//dropdown menus that start with "pb" & contain "stagger"
+.dropdown-menu {
+  opacity: 0;
+  transition: opacity $very-fast linear, transform $very-fast ease-out;
+  li {
+    opacity: 0;
+    animation-delay: $very-fast;
+    animation-name: fadeInDown;
+    // animation-name: fadeIn;
+    animation-duration: $very-fast;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
   }
+}
+.open > .dropdown-menu {
+  transition-delay: $very-slow;
+  opacity: 1;
+}
+
+
+//*********TILES/CONTAINERS********//
+//make tiles bounce up on hover and then shrink down once hover is removed
+
+.tile, .tile-button {
+  z-index: 0;
+  background-color: #fff; //need this so tiles in a row don't overlap one another
+  @extend .pb-scaleDown;
+  &:hover {
+    z-index: 100;
+    @extend .pb-scaleUpPop;
+  }
+}
+
+
+
+//*********POPOVERS/TOOLTIPS********//
+
+//Popovers
+//seleect all popovers except for those with the custom attribute "popover trigger" that's equal to "mouseenter"
+//added unprefixed regular "popover" style so this is backwards compatible
+[uib-popover]:not([popover-trigger="mouseenter"]) + [uib-popover-popup],
+[popover]:not([popover-trigger="mouseenter"]) + [popover-popup] {
+    @extend .pb-pop;
+    //need to set fill mode back to initial so original fade transition supplied by bootstrap can take affect on the animation out
+    animation-fill-mode: initial;
+}
+
+//Hover Top, radiating out from button
+[uib-popover][popover-trigger="mouseenter"] + [uib-popover-popup],
+[popover][popover-trigger="mouseenter"] + [popover-popup],
+[uib-tooltip] + [uib-tooltip-popup],  //don't need to call out mouseenter since it's default behavior for tooltip
+[tooltip] + [tooltip-popup] {
+    transform: translate3d(0, 10px, 0);
+    transition: transform $very-fast linear, opacity $lightning linear;
+    &.in {
+      transform: translate3d(0, 0, 0);
+    }
+    //FIXME: Need either a method to handle all potential directions or different CSS rules
+}
+//Hover right, radiating out from button
+[uib-popover][popover-trigger="mouseenter"][popover-placement="right"] + [uib-popover-popup],
+[popover][popover-trigger="mouseenter"][popover-placement="right"] + [popover-popup],
+[uib-tooltip][tooltip-placement="right"] + [uib-tooltip-popup],  //don't need to call out mouseenter since it's default behavior
+[tooltip][tooltip-placement="right"] + [tooltip-popup]
+ {
+    transform: translate3d(-10px, 0, 0);
+    &.in {
+      transform: translate3d(0, 0, 0);
+    }
+}
+//Hover bottom, radiating out from button
+[uib-popover][popover-trigger="mouseenter"][popover-placement="bottom"] + [uib-popover-popup],
+[popover][popover-trigger="mouseenter"][popover-placement="bottom"] + [popover-popup],
+[uib-tooltip][tooltip-placement="bottom"] + [uib-tooltip-popup],  //don't need to call out mouseenter since it's default behavior
+[tooltip][tooltip-placement="bottom"] + [tooltip-popup] {
+    transform: translate3d(0, -10px, 0);
+    &.in {
+      transform: translate3d(0, 0, 0);
+    }
+}
+//Hover left, radiating out from button
+.magnet[uib-popover][popover-trigger="mouseenter"][popover-placement="left"] + [uib-popover-popup],
+.magnet[popover][popover-trigger="mouseenter"][popover-placement="left"] + [popover-popup],
+.magnet[uib-tooltip][tooltip-placement="left"] + [uib-tooltip-popup],
+.magnet[tooltip][tooltip-placement="left"] + [tooltip-popup] {
+    transform: translate3d(10px, 0, 0);
+    &.in {
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+
+//***SECOND TOOTLIP/POPOVER OPTON***//
+
+.magnet[uib-popover][popover-trigger="mouseenter"] + [uib-popover-popup],
+.magnet[popover][popover-trigger="mouseenter"] + [popover-popup],
+.magnet[uib-tooltip] + [uib-tooltip-popup],
+.magnet[tooltip] + [tooltip-popup] {
+    transform: translate3d(0, -10px, 0);
+    transition: transform $very-fast linear, opacity $lightning linear;
+    &.in {
+      transform: translate3d(0, 0, 0);
+    }
+}
+//Hover right, pulling in towards button
+.magnet[uib-popover][popover-trigger="mouseenter"][popover-placement="right"] + [uib-popover-popup],
+.magnet[popover][popover-trigger="mouseenter"][popover-placement="right"] + [popover-popup],
+.magnet[uib-tooltip][tooltip-placement="right"] + [uib-tooltip-popup],
+.magnet[tooltip][tooltip-placement="right"] + [tooltip-popup] {
+    transform: translate3d(10px, 0, 0);
+    &.in {
+      transform: translate3d(0, 0, 0);
+    }
+}
+//Hover bottom, pulling in towards button
+.magnet[uib-popover][popover-trigger="mouseenter"][popover-placement="bottom"] + [uib-popover-popup],
+.magnet[popover][popover-trigger="mouseenter"][popover-placement="bottom"] + [popover-popup],
+.magnet[uib-tooltip][tooltip-placement="bottom"] + [uib-tooltip-popup],
+.magnet[tooltip][tooltip-placement="bottom"] + [tooltip-popup]  {
+    transform: translate3d(0, 10px, 0);
+    &.in {
+      transform: translate3d(0, 0, 0);
+    }
+}
+//Hover left, pulling in towards button
+.magnet[uib-popover][popover-trigger="mouseenter"][popover-placement="left"] + [uib-popover-popup],
+.magnet[popover][popover-trigger="mouseenter"][popover-placement="left"] + [popover-popup],
+.magnet[uib-tooltip][tooltip-placement="left"] + [uib-tooltip-popup],
+.magnet[tooltip][tooltip-placement="left"] + [tooltip-popup] {
+    transform: translate3d(-10px, 0, 0);
+    &.in {
+      transform: translate3d(0, 0, 0);
+    }
 }
