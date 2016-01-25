@@ -1,18 +1,15 @@
 #loading-bar {
 
   .bar {
-    background: #fff;
-    height: 1px;
+    background: #f4d466;
+    height: 2px;
   }
 
   .peg {
-    -moz-box-shadow: #29d 1px 0 6px 1px;
-    -ms-box-shadow: #29d 1px 0 6px 1px;
-    -webkit-box-shadow: #29d 1px 0 6px 1px;
-    box-shadow: #29d 1px 0 6px 1px;
-    height: 1px;
+    box-shadow: hsla(201, 79%, 15%, .5) 1px 0 6px 1px;
+    height: 2px;
   }
-  
+
 }
 
 #loading-bar-spinner {
@@ -26,8 +23,8 @@
 #loading-bar-spinner {
 
   .spinner-icon {
-    border-top-color:  #fff;
-    border-left-color: #fff;
+    border-top-color:  #f4d466;
+    border-left-color: #f4d466;
   }
 
 }
