@@ -138,6 +138,7 @@
     });
 
     //LOCATION CHANGE START
+<<<<<<< HEAD
     $rootScope.$on('$locationChangeStart', function(event, newUrl) {
 
       if ($location.$$hash) {
@@ -146,6 +147,16 @@
       }
 
     });
+=======
+    // $rootScope.$on('$locationChangeStart', function(event, newUrl) {
+    //
+    //   if ($location.$$hash) {
+    //     $log.debug('LOCATION CHANGE START WITH $$hash', $location);
+    //     hashScroll($location.$$hash);
+    //   }
+    //
+    // });
+>>>>>>> 3d47242454b7daf5bba03452abe6048e9508f711
 
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
@@ -198,6 +209,7 @@
 
 
     //VIEW CONTENT LOADED
+<<<<<<< HEAD
     $rootScope.$on('$viewContentLoaded', function(event) {
 
       //convert urlencoded #
@@ -209,6 +221,19 @@
       }
 
     });
+=======
+    // $rootScope.$on('$viewContentLoaded', function(event) {
+    //
+    //   //convert urlencoded #
+    //   $location.url($location.url().replace('%23', '#'));
+    //
+    //   if ($location.$$hash) {
+    //     $log.debug('VIEW CONTENT LOADED WITH $$hash', $location);
+    //     hashScroll($location.$$hash, true);
+    //   }
+    //
+    // });
+>>>>>>> 3d47242454b7daf5bba03452abe6048e9508f711
 
 
     //handle scrolling to updated hash
