@@ -1,15 +1,14 @@
 #loading-bar {
-
+  z-index: 10002;
+  
   .bar {
-    background: #f4d466;
+    background-color: #fff !important;
     height: 2px;
   }
-
   .peg {
     box-shadow: hsla(201, 79%, 15%, .5) 1px 0 6px 1px;
     height: 2px;
   }
-
 }
 
 #loading-bar-spinner {
@@ -18,13 +17,8 @@
   z-index: 10002;
   top: 10px;
   left: 10px;
-}
-
-#loading-bar-spinner {
-
   .spinner-icon {
-    border-top-color:  #f4d466;
-    border-left-color: #f4d466;
+    border-top-color: #fff;
+    border-left-color: #fff;
   }
-
 }
