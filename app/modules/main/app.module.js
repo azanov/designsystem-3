@@ -141,11 +141,12 @@
     $rootScope.$on('$locationChangeStart', function(event, newUrl) {
 
       if ($location.$$hash) {
-        $log.debug('LOCATION CHANGE START WITH $$hash', $location);
+        //$log.debug('LOCATION CHANGE START WITH $$hash', $location);
         hashScroll($location.$$hash);
       }
 
     });
+
 
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
@@ -204,7 +205,7 @@
       $location.url($location.url().replace('%23', '#'));
 
       if ($location.$$hash) {
-        $log.debug('VIEW CONTENT LOADED WITH $$hash', $location);
+        //$log.debug('VIEW CONTENT LOADED WITH $$hash', $location);
         hashScroll($location.$$hash, true);
       }
 
@@ -217,7 +218,7 @@
         timeout = timeout || false;
         $log.debug(timeout);
 
-        if (hash){
+        if (hash) {
           var element = angular.element(document.getElementById(hash));
 
           if (element.length > 0) {
