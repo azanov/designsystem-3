@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.3.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Mon Jan 25 2016 15:30:51 GMT-0500 (EST) 
+ * Built Tue Jan 26 2016 10:15:50 GMT-0500 (EST) 
  */
 .container-fluid {
   padding-left: 40px;
@@ -1968,13 +1968,14 @@ a.list-group-item.active .badge {
   color: #fff;
   background-color: #3e53a4; }
 
+#loading-bar {
+  z-index: 10002; }
 #loading-bar .bar {
-  background: #fff;
-  height: 1px; }
+  background-color: #fff !important;
+  height: 2px; }
 #loading-bar .peg {
-  -ms-box-shadow: #29d 1px 0 6px 1px;
-  box-shadow: #29d 1px 0 6px 1px;
-  height: 1px; }
+  box-shadow: rgba(8, 47, 68, 0.5) 1px 0 6px 1px;
+  height: 2px; }
 
 #loading-bar-spinner {
   display: block;
@@ -1982,7 +1983,6 @@ a.list-group-item.active .badge {
   z-index: 10002;
   top: 10px;
   left: 10px; }
-
 #loading-bar-spinner .spinner-icon {
   border-top-color: #fff;
   border-left-color: #fff; }
@@ -3623,18 +3623,6 @@ a.app-launcher {
 
 .progress-bar {
   background-color: #3e53a4; }
-
-#loading-bar .bar {
-  background: pbcolor(#3e53a4);
-  height: 2px; }
-
-#loading-bar-spinner .spinner-icon {
-  border-top-color: pbcolor(#3e53a4);
-  border-left-color: pbcolor(#3e53a4); }
-
-/* Fancy blur effect */
-#loading-bar .peg {
-  box-shadow: pbcolor(#3e53a4) 1px 0 6px 1px; }
 
 .progress-bar-success {
   background-color: #008500; }
