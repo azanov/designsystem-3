@@ -27,18 +27,15 @@
 
     _this.navigationItems = [
       { desc: 'Basic Nav items', color: '#FFFFFF', font: 'Precision Sans Regular 14px'},
-      { desc: 'Section Headers (in dropdown)', color: '#2e2e2e', font: 'Precision Sans Regular 14px'},
+      { desc: 'Tiered Dropdown Section Header (within dropdown)', color: '#2E2E2E', font: 'Precision Sans Regular 14px'},
       { desc: 'Tiered Dropdown Nav items', color: '#717171', font: 'Helvetica Neue Regular 12px'},
       { desc: 'Tiered Dropdown Nav item (active)', color: '#2e2e2e', font: 'Helvetica Neue Regular 12px'},
-      { desc: 'Tiered Dropdown Section Header (within dropdown)', color: '#2E2E2E', font: 'Precision Sans Regular 14px'},
       { desc: 'Side Nav Section Header', color: '#2e2e2e', font: 'Precision Sans Regular 18px'},
       { desc: 'Side Nav item', color: '#717171', font: 'Helvetica Neue Regular 14px'},
       { desc: 'Side Nav hover item', color: '#2e2e2e', font: 'Helvetica Neue Regular 14px'},
       { desc: 'Side Nav active item', color: '#2e2e2e', font: 'Helvetica Neue Regular 14px'},
       { desc: 'Tab Text', color: '#717171', font: 'Precision Sans Regular 14px'},
       { desc: 'Tab Text (active)', color: '#2E2E2E', font: 'Precision Sans Regular 14px'},
-      { desc: 'Breadcrumbs', color: '#717171', font: 'Precision Sans Regular 14px'},
-      { desc: 'Breadcrumbs (hover)', color: '#2E2E2E', font: 'Precision Sans Regular 14px'},
       { desc: 'Breadcrumbs (previous pages - Link)', color: '#0072B8', font: 'Helvetica Neue Regular 14px'},
       { desc: 'Breadcrumbs (current page)', color: '#C0C0C0', font: 'Helvetica Neue Regular 14px'}
     ];
