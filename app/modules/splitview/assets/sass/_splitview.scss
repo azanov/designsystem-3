@@ -1,4 +1,7 @@
 
+$leftbar-width: 15%;
+
+
 // globals, all variations
 // apply "splitview" as a body class
 // then also add one the major variants
@@ -10,21 +13,23 @@
   .two-col-wrapper {
     min-height: 100vh;
     display: flex;
-    align-items: stretch;
+    flex-direction: row;
 
     .main-content {
-      padding-top: 90px;
-      margin-left: 25px;
+      padding-top: 90px 25px;
+      flex-grow: 1;
+      margin-left: 30px;
     }
 
-    .leftnav {
+    .leftbar {
       padding: 90px 0 0;
-      min-height: 100%;
+      flex: 0 2 180px;
       a {
         @extend %leftnav-links;
       }
     }
   }
+}
 
 
 }cd 
@@ -34,7 +39,7 @@
 
 // VARIANT: gray navbar / white bg / 2 rules
 .splitview-filled {
-  .leftnav {
+  .leftbar {
     background-color: $pb-bg2;
     border-left: 1px solid #e8e8e8;
     border-right: 1px solid #e8e8e8;
@@ -48,7 +53,7 @@
 .splitview-white {
   background-color: $pb-bg1;
 
-  .leftnav {
+  .leftbar {
     background-color: #fff;
     border-left: 1px solid #e8e8e8;
     border-right: 1px solid #e8e8e8;
@@ -62,7 +67,7 @@
 
 // VARIANT: white navbar / white bg / 3 rules
 .splitview-white-filled {
-  .leftnav {
+  .leftbar {
     border-left: 1px solid #e8e8e8;
     border-right: 1px solid #e8e8e8;
   }
@@ -74,14 +79,14 @@
 
 // VARIANT: white navbar / white bg / 1 rule
 .splitview-white-open {
-  .leftnav {
+  .leftbar {
     border-right: 1px solid #e8e8e8;
     li:first-child {
       margin-top: 0;
       padding-top: 0;
       border-right: 0;
     }
-    .leftnav-tree {
+    .leftbar-tree {
       border-right: 0;
     }
   }
@@ -94,7 +99,7 @@
 // for any of the above variants as a fluid grid
 // then set "container-fluid" in html container tag
 .splitview-white-open-fluid {
-  .leftnav {
+  .leftbar {
     border-right: 1px solid #e8e8e8;
   }
 }
