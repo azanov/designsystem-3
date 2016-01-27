@@ -1,59 +1,46 @@
 
-$leftbar-width: 15%;
-
-
-// globals, all variations
-// apply "splitview" as a body class
-// then also add one the major variants
+//globals, all variations
 .splitview {
-  footer {
+  .footer-wrapper {
     margin: 0;
   }
 
   .two-col-wrapper {
     min-height: 100vh;
     display: flex;
-    flex-direction: row;
+    align-items: stretch;
 
     .main-content {
-      padding-top: 90px 25px;
-      flex-grow: 1;
-      margin-left: 30px;
+      padding-top: 90px;
+      margin-left: 25px;
     }
 
-    .leftbar {
+    .leftnav {
       padding: 90px 0 0;
-      flex: 0 2 180px;
+      min-height: 100%;
       a {
         @extend %leftnav-links;
       }
     }
   }
+
+
 }
 
-
-}cd 
-
-
-
-
-// VARIANT: gray navbar / white bg / 2 rules
+// gray navbar / white bg / 2 rules
 .splitview-filled {
-  .leftbar {
+  .leftnav {
     background-color: $pb-bg2;
     border-left: 1px solid #e8e8e8;
     border-right: 1px solid #e8e8e8;
   }
 }
 
-
-
-
-// VARIANT: white navbar / gray bg / 3 rules
+// white navbar / gray bg / 3 rules
 .splitview-white {
   background-color: $pb-bg1;
 
-  .leftbar {
+  .leftnav {
     background-color: #fff;
     border-left: 1px solid #e8e8e8;
     border-right: 1px solid #e8e8e8;
@@ -65,9 +52,9 @@ $leftbar-width: 15%;
 }
 
 
-// VARIANT: white navbar / white bg / 3 rules
-.splitview-white-filled {
-  .leftbar {
+// white navbar / white bg / 3 rules
+.splitview-white-filled{
+  .leftnav {
     border-left: 1px solid #e8e8e8;
     border-right: 1px solid #e8e8e8;
   }
@@ -77,16 +64,16 @@ $leftbar-width: 15%;
 }
 
 
-// VARIANT: white navbar / white bg / 1 rule
+// white navbar / white bg / 1 rule
 .splitview-white-open {
-  .leftbar {
+  .leftnav {
     border-right: 1px solid #e8e8e8;
     li:first-child {
       margin-top: 0;
       padding-top: 0;
       border-right: 0;
     }
-    .leftbar-tree {
+    .leftnav-tree {
       border-right: 0;
     }
   }
@@ -95,24 +82,19 @@ $leftbar-width: 15%;
   }
 }
 
-
-// for any of the above variants as a fluid grid
-// then set "container-fluid" in html container tag
 .splitview-white-open-fluid {
-  .leftbar {
+  .leftnav {
     border-right: 1px solid #e8e8e8;
   }
 }
 
-
-// .leftnav {
-//   .list-group {
-//     position: fixed;
-//   }
-// }
+//NOTE: set container-fluid in html container tag
 
 
-// framed images for the overview page
+
+
+
+
 .framed {
   border: 1px solid $pb-light-gray;
 }
