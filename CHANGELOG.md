@@ -6,30 +6,34 @@
 
 **BREAKING CHANGES**
 
-* None.
+- None.
 
 **Non-breaking Changes**
 
-* Enhanced checkboxes were mis-aligned in "form-horizontal." Our _first pull request_, this bug  was fixed by Nisha Ranna. 
-* Some bugs in the display of Split Views have been fixed.  Note that split views are desktop only.
-* Progress-spinner buttons now correct retain "normal" appearance whilst "waiting" although the button is actually disabled during this time. (they used to appear "disabled")
-* Remove alert type "tip" from User Feedback.
-* Linear gradients have been moved from "background" attribute to "background-image" attribute to work correctly.  The old way used to work but was technically incorrect.
+- fixed enhanced checkboxes misaligned in `.form-horizontal`. Our _first pull request_ by Nisha Rana (closes [#62](https://github.com/PBGUX/designsystem/issues/62)).
+- fixed Web > Foundation > Split Views margin space above footer, vertical spacing and double lines showing on last 2 examples. Note that Split Views are desktop only.
+- changed linear gradients from CSS "background" to "background-image", old way worked but was technically incorrect
 
 **Additions**
 
-* Several items in "Containers," that previously were images, have been converted to live code.
-* A gallery/slider/carousel has been added to Containers.
-* There is now an animated SVG "spinner".
+- added items in Web > Elements > Containers that previously were images, have been converted to live code
+  - Gallery
+  - Cards
+  - Widgets: Data Styles
+  - Widgets: Category Styles
+- added animated SVG "spinner" in Web > Elements > User Feedback > Process Indicators
 
 #### Website Changes
 
-* Some incorrect color values were fixed in the Typography/Navigation table.
-* A FAQ has been added.
-* Progress indicators have been updated and copy has been revised and expanded.
-* Added more descriptive copy to the Grid page
-* Updated libraries:
-  * angular-loading-bar v0.8.0
+- fixed incorrect color values in the Web > Foundation > Typography > Navigation table.
+- added [FAQ section](https://github.com/PBGUX/designsystem/wiki) to Github and link on homepage.
+- Web > Elements > User Feedback > Process Indicators:
+  - updated and copy has been revised and expanded
+  - changed progress spinner buttons to correctly retain "normal" appearance whilst "waiting" although the button is actually disabled during this time. (they used to appear "disabled")
+- added descriptive copy to the Web > Foundation > Grid
+- removed alert type "tip" from Web > Elements > User Feedback due to Globalization requirements, use Note or Help examples as an alternative
+- updated libraries:
+  - angular-loading-bar v0.8.0
 
 
 
@@ -40,16 +44,16 @@
 **BREAKING CHANGES**
 
 - footer html structure has been simplified and now correctly supports mobile view. Please see the following structure and examples on the Web > Headers and Footers
-  
+
   ``` html
   <div class="footer-wrapper">
   <div class="container">
     <footer>
-  
+
     <div>
       <a href="http://www.pb.com"><i class="pb-footer-logo gradient"></i></a><span class="copyright">© 2015 Pitney Bowes Inc. All rights reserved.</span>
     </div>
-  
+
     <!-- Legal -->
     <div>
       <ul class="list-unstyled list-inline legal">
@@ -59,7 +63,7 @@
         <li><a href="" target="_blank">Link</a></li>
       </ul>
     </div>
-  
+
     <!-- Social -->
     <div>
       <ul class="list-unstyled list-inline social">
@@ -69,7 +73,7 @@
         <li><a class="google-plus" href="http://www.youtube.com/user/PitneyBowesInc" target="_blank"><svg>...</svg></a></li>
       </ul>
     </div>
-  
+
   </footer>
   </div>
   </div>
@@ -142,9 +146,9 @@ The Design System is now available via [Bower](http://bower.io). See the [bower-
 **BREAKING CHANGES**
 
 - updated angular-daterange-picker to v0.2.0 and now supports Bootstrap Daterangepicker v2+ (prior versions of CSS is not supported)
-  
+
 - Enhanced input and radio buttons use [WTF forms](http://wtfforms.com/) as a base to support accessibility keyboard interaction and focus states. The markup structure and class names have changed as follows:
-  
+
   ​
 
 
@@ -155,7 +159,7 @@ The Design System is now available via [Bower](http://bower.io). See the [bower-
 
   <label class="control checkbox">
 
-``` 
+```
 <input type="checkbox">
 
 <span class="control-indicator"></span> Check this custom checkbox
@@ -165,7 +169,7 @@ The Design System is now available via [Bower](http://bower.io). See the [bower-
 
   <label class="control checkbox disabled">
 
-``` 
+```
 <input type="checkbox" disabled="disabled">
 
 <span class="control-indicator"></span> But not this custom checkbox
@@ -248,42 +252,42 @@ The Design System is now available via [Bower](http://bower.io). See the [bower-
 **NON-BREAKING CHANGES**
 
 - fa-lg issue with pb-font icons (fixes [#35](https://github.com/PBGUX/designsystem/issues/35))
-  
+
 - primary button disabled state fill slightly darkened
-  
+
 - secondary disabled button now has no fill color
-  
+
 - .site-content calc() correctly calculates footer placement
-  
+
 - color changes:
-  
+
   - cyan 300 from #66C3EC to #66C4D9
   - cyan 700 from #007CB2 to #007D99
   - yellow 500 from #EEB700 to #EDB700
-  
+
 - adjusted header menu items for consistency
-  
+
   - mega menu: removed item animation, indent titles and items to left align
   - single menu: reduce vertical padding
-  
+
 - .tile-button no longer has image embedded in css (.logo-button-usps removed), the image should be added in markup
-  
+
   ​```html
-  
+
   <button type="button" name="button" class="btn btn-default tile-button">
-  
+
   <img src="assets/images/logo-usps.png" alt="">
-  
+
   </button>
-  
+
   \```
 
 **ADDITIONS**
 
 - added Web > Patterns > Splitviews:  5 design styles with 3 variations
-  
+
 - added styling to default Bootstrap breadcrumbs in Web > Buttons > Breadcrumbs, example markup:
-  
+
   ``` html
   <ol class="breadcrumb">
   <li><a href="#">Home</a></li>
@@ -358,49 +362,49 @@ Nick Roberts, Nisha Rana
 ### 2.1.0 -- September 29, 2015
 
 - modal dialogs no longer need an inline close icon in the `modal-header`, remove the markup from the html indicated by the NO ICON HERE in the example below. The icon is added by the CSS with an SVG image to the button.
-  
+
   ``` html
   <div class="modal-header">
   <button type="button" class="close" ng-click="close()"><!-- NO ICON HERE --><span aria-hidden="true"></span><span class="sr-only">Close</span></button>
   <h4 class="modal-title">Simple Dialog Box</h4>
   </div>
   ```
-  
+
 - added daterange picker examples, revised styling with new hover/selected states
-  
+
 - revised color values for accessibility
-  
+
 - updated pb-font to latest version
-  
+
 - added table variations
-  
-  ``` 
+
+  ```
   - `table-unstyled` removes all borders
   - `table-open` removes all vertical borders
   ```
-  
+
 - fixed `table-condensed` styling
-  
+
 - button font changed to PrecisionSans Regular
-  
+
 - colors page is no longer an image to allow copy/paste of hex codes
-  
+
 - revised all hover and active colors
-  
+
 - added dropdown menus to header examples (including sign out), also fixed [#22](https://github.com/PBGUX/designsystem/issues/22)
-  
+
 - fixed all welcome pages to work in IE10
-  
+
 - changed selectize menus to use ui-select plugin
-  
+
 - added `::ms-expand` to remove extra arrow in IE dropdowns (fixes [#25](https://github.com/PBGUX/designsystem/issues/25))
-  
+
 - fixed misaligned prepended inputs; fixes [#26](https://github.com/PBGUX/designsystem/issues/26)
-  
+
 - input group buttons on right side missing border (fixes [#29](https://github.com/PBGUX/designsystem/issues/29))
-  
+
 - various revisions and improvements to the Design System website (copy changes, styling changes, image revisions, etc)
-  
+
 - revised gulp tasks, updated plugins
 
 ---
@@ -519,15 +523,15 @@ Rick Dukeshier, Shawn Sharifi, Luke Daugherty, Nick Roberts, Nisha Rana, Sam Swa
 ##### Upgrading to 1.0.0 from previous versions
 
 - Copy `/build/css/design_system.css` and overwrite your project design system CSS file
-  
+
 - Remove `<head>` links to fonts hosted at Google, for example:
-  
+
   ``` html
   <link href="http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   ```
-  
+
 - Copy all PrecisionSans fonts from `/build/fonts` to your project fonts folder
-  
+
 - Replace the copyright column in the footer with the following markup:
 
 ``` html
@@ -629,71 +633,71 @@ Rick Dukeshier, Shawn Sharifi, Luke Daugherty, Nick Roberts, Nisha Rana, Sam Swa
 ### 0.5 - June 27, 2014
 
 - Removed Font Awesome from Bower, using CDN instead.
-  
+
 - Alerts:
-  
-  ``` 
+
+  ```
   - updated modal dialogs
   - finalized colors and layout
   - removed cancel buttons from dialogs
   ```
-  
+
 - Inputs
-  
-  ``` 
+
+  ```
   - fixed angular toggle switches
   - prepended checkbox field
   - updated calendar picker
   - reorganized page and support text
   ```
-  
+
 - Icons
-  
-  ``` 
+
+  ```
   - Updated page layout
   ```
-  
+
 - Buttons
-  
-  ``` 
+
+  ```
   - Updated page layout
   ```
 
 ### 0.4 - June 17, 2014
 
 - Colors:
-  
-  ``` 
+
+  ```
   - Added extended color palette, with colors for charts
   ```
-  
+
 - Alerts:
-  
+
   - Added modal alert boxes and dialog boxes
-  
+
 - Inputs:
-  
-  ``` 
+
+  ```
   - made clear prepended and appended icons the default
   - changed button type in prepend/append to primary
   - Added **Select2** menu and multi-picker
   ```
-  
+
 - Icons:
-  
-  ``` 
+
+  ```
   - organized FA icons by type
   - added "pb-folder-add" icon
   ```
-  
+
 - Added **Isotope** image gallery
-  
+
 - Cleaned up home page and used chart colors for charts
 
 ### 0.3 - May 29, 2014
 
 - Inputs:
-  
+
   - removed inner shadows
   - added date/time picker
   - fixed error color
@@ -701,37 +705,37 @@ Rick Dukeshier, Shawn Sharifi, Luke Daugherty, Nick Roberts, Nisha Rana, Sam Swa
   - added "clear" prepended and appended form fields
   - added small and large field sizes
   - added link to the page for the date/time picker plugin docs
-  
+
 - Alerts
-  
-  ``` 
+
+  ```
   - normalized color palette
   - added simple contextual color backgrounds
   - added disconnected transitory alert (more options coming)
   ```
-  
+
 - Tables
-  
-  ``` 
+
+  ```
   - added "extra compressed" variant
   ```
-  
+
 - Text
-  
-  ``` 
+
+  ```
   - added contextual colors
   ```
-  
+
 - Accordions
-  
-  ``` 
+
+  ```
   - replaced Angular accordion with simple Bootstrap one
   - added "compact" variant with no space between
   - added a simple collapsing div
   - separated tabs onto their own page
   ```
-  
+
 - Tabs
-  
+
   - switched to Bootstrap tabs
   - added better vertical variant
