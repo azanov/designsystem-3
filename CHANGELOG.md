@@ -35,6 +35,10 @@
 - updated libraries:
   - angular-loading-bar v0.8.0
 
+#### Thanks to the following contributors and bug reporters:
+
+Globalization Team, Joan Doutney, Nick Roberts, Nisha Rana, Jayachandra Madarapu, Sam Swartz, Adam Czarnik, Andy Grossman, Cassie Gunn, Jim Norris
+
 
 
 ### 2.3.0 -- December 15, 2015
