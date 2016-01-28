@@ -35,6 +35,9 @@
 - updated libraries:
   - angular-loading-bar v0.8.0
 
+#### Other Tools
+- updated Sketch and Illustrator UI Kits to 2.4.0, see Resources > Tools
+
 #### Thanks to the following contributors and bug reporters:
 
 Globalization Team, Joan Doutney, Nick Roberts, Nisha Rana, Jayachandra Madarapu, Sam Swartz, Adam Czarnik, Andy Grossman, Cassie Gunn, Jim Norris
