@@ -1,19 +1,55 @@
-##Release Notes
+## Release Notes
 
-###2.3.0 -- December 15, 2015
+### 2.4.0 -- January 29, 2015
 
-####CSS changes
+#### CSS changes
+
 **BREAKING CHANGES**
+
+* None.
+
+**Non-breaking Changes**
+
+* Enhanced checkboxes were mis-aligned in "form-horizontal." Our _first pull request_, this bug  was fixed by Nisha Ranna. 
+* Some bugs in the display of Split Views have been fixed.  Note that split views are desktop only.
+* Progress-spinner buttons now correct retain "normal" appearance whilst "waiting" although the button is actually disabled during this time. (they used to appear "disabled")
+* Remove alert type "tip" from User Feedback.
+* Linear gradients have been moved from "background" attribute to "background-image" attribute to work correctly.  The old way used to work but was technically incorrect.
+
+**Additions**
+
+* Several items in "Containers," that previously were images, have been converted to live code.
+* A gallery/slider/carousel has been added to Containers.
+* There is now an animated SVG "spinner".
+
+#### Website Changes
+
+* Some incorrect color values were fixed in the Typography/Navigation table.
+* A FAQ has been added.
+* Progress indicators have been updated and copy has been revised and expanded.
+* Added more descriptive copy to the Grid page
+* Updated libraries:
+  * angular-loading-bar v0.8.0
+
+
+
+### 2.3.0 -- December 15, 2015
+
+#### CSS changes
+
+**BREAKING CHANGES**
+
 - footer html structure has been simplified and now correctly supports mobile view. Please see the following structure and examples on the Web > Headers and Footers
-```html
-<div class="footer-wrapper">
+  
+  ``` html
+  <div class="footer-wrapper">
   <div class="container">
     <footer>
-
+  
     <div>
       <a href="http://www.pb.com"><i class="pb-footer-logo gradient"></i></a><span class="copyright">© 2015 Pitney Bowes Inc. All rights reserved.</span>
     </div>
-
+  
     <!-- Legal -->
     <div>
       <ul class="list-unstyled list-inline legal">
@@ -23,7 +59,7 @@
         <li><a href="" target="_blank">Link</a></li>
       </ul>
     </div>
-
+  
     <!-- Social -->
     <div>
       <ul class="list-unstyled list-inline social">
@@ -33,13 +69,14 @@
         <li><a class="google-plus" href="http://www.youtube.com/user/PitneyBowesInc" target="_blank"><svg>...</svg></a></li>
       </ul>
     </div>
-
+  
   </footer>
   </div>
-</div>
-```
+  </div>
+  ```
 
 **Non-breaking changes**
+
 - fixed active hover state of tile buttons
 - fixed focus state of nav items, should be white
 - tertiary (pill) buttons include all states
@@ -49,17 +86,19 @@
 - changed text color to #4e4e4e on Contextual Backgrounds section - #717171 does not have high enough contrast, see Web > Foundation > Helpers (closes [#42](https://github.com/PBGUX/designsystem/issues/42))
 - fixed ui-bootstrap alerts, was showing double close icons (closes [#38](https://github.com/PBGUX/designsystem/issues/38))
 
-
 **Additions**
+
 - added animation principles under Web > Foundation > Animation
 - added guidance for help tooltips and popovers in Web > Elements > Help Prompts
 - added ngTagsInput control, see Web > Elements > UI Controls > Dropdowns > Advanced Select Menus
 
-####Other Tools
+#### Other Tools
+
 - Illustrator
   - updated Illustrator DS UI Kit to 2.3.0, see Resources > Tools
 
-####Website changes
+#### Website changes
+
 - Web > Foundation >Writing > Resources: update title caps guidance
 - added link to [titlecapitalization.com](http://titlecapitalization.com) under Resources > Tools > Other Resources
 - updated images with copy changes in Web > Patterns > Error Pages
@@ -82,7 +121,8 @@
   - hilightjs to v8.9.1
 - added cache busting for css/js in gulp build
 
-####Thanks to the following contributors and bug reporters:
+#### Thanks to the following contributors and bug reporters:
+
 Jayachandra Madarapu, Dustin Clark, ni10go, jrodguitar, James Crisp, Jim Norris, Sikhar Jyoti Saikia, Sam Swartz, Cameron Chu, Ron Cianfaglione, Andy Grossman, Cassie Gunn, Yuka Kurihara, Andrew Wong, Adam Czarnik, Ania Mastriano, Nisha Rana, John Winkelman
 
 
@@ -90,98 +130,170 @@ Jayachandra Madarapu, Dustin Clark, ni10go, jrodguitar, James Crisp, Jim Norris,
 
 
 
-###2.2.0 -- October 30, 2015
+
+### 2.2.0 -- October 30, 2015
+
 The Design System is now available via [Bower](http://bower.io). See the [bower-designsystem](https://github.com/PBGUX/bower-designsystem) repo for more information and installation.
 
 
-######CSS changes
+
+###### CSS changes
+
 **BREAKING CHANGES**
+
 - updated angular-daterange-picker to v0.2.0 and now supports Bootstrap Daterangepicker v2+ (prior versions of CSS is not supported)
+  
 - Enhanced input and radio buttons use [WTF forms](http://wtfforms.com/) as a base to support accessibility keyboard interaction and focus states. The markup structure and class names have changed as follows:
-```html
-<!-- Stacked checkboxes -->
-<div class="controls-stacked">
+  
+  ​
+
+
+
+  <!-- Stacked checkboxes -->
+
+  <div class="controls-stacked">
+
   <label class="control checkbox">
-    <input type="checkbox">
-    <span class="control-indicator"></span> Check this custom checkbox
+
+``` 
+<input type="checkbox">
+
+<span class="control-indicator"></span> Check this custom checkbox
+```
+
   </label>
+
   <label class="control checkbox disabled">
-    <input type="checkbox" disabled="disabled">
-    <span class="control-indicator"></span> But not this custom checkbox
+
+``` 
+<input type="checkbox" disabled="disabled">
+
+<span class="control-indicator"></span> But not this custom checkbox
+```
+
   </label>
+
+  </div>
+
+<div class="controls-inline">
+
+  <label class="control checkbox">
+
+<input type="checkbox">
+
+<span class="control-indicator"></span> Custom checkbox
+
+  </label>
+
+  <label class="control checkbox">
+
+<input type="checkbox">
+
+<span class="control-indicator"></span> Custom checkbox
+
+  </label>
+
 </div>
 
-<!-- Inline checkboxes -->
-<div class="controls-inline">
-  <label class="control checkbox">
-    <input type="checkbox">
-    <span class="control-indicator"></span> Custom checkbox
-  </label>
-  <label class="control checkbox">
-    <input type="checkbox">
-    <span class="control-indicator"></span> Custom checkbox
-  </label>
-</div>
 
 
 <!-- Stacked radio buttons -->
+
 <div class="controls-stacked">
+
   <label class="control radio">
-    <input id="radio1" name="radio" type="radio">
-    <span class="control-indicator"></span> Toggle this custom radio
+
+<input id="radio1" name="radio" type="radio">
+
+<span class="control-indicator"></span> Toggle this custom radio
+
   </label>
+
   <label class="control radio disabled">
-    <input id="radio2" name="radio" type="radio">
-    <span class="control-indicator"></span> Or toggle this other custom radio
+
+<input id="radio2" name="radio" type="radio">
+
+<span class="control-indicator"></span> Or toggle this other custom radio
+
+
+
   </label>
+
 </div>
 
 <!-- Inline radio buttons -->
+
 <div class="controls-inline">
+
   <label class="control radio">
-    <input id="radio11" name="radio" type="radio">
-    <span class="control-indicator"></span> Custom radio
+
+<input id="radio11" name="radio" type="radio">
+
+<span class="control-indicator"></span> Custom radio
+
   </label>
+
   <label class="control radio">
-    <input id="radio22" name="radio" type="radio">
-    <span class="control-indicator"></span> Or Custom radio
+
+<input id="radio22" name="radio" type="radio">
+
+<span class="control-indicator"></span> Or Custom radio
+
   </label>
+
 </div>
-```
+
 
 
 **NON-BREAKING CHANGES**
+
 - fa-lg issue with pb-font icons (fixes [#35](https://github.com/PBGUX/designsystem/issues/35))
+  
 - primary button disabled state fill slightly darkened
+  
 - secondary disabled button now has no fill color
+  
 - .site-content calc() correctly calculates footer placement
+  
 - color changes:
+  
   - cyan 300 from #66C3EC to #66C4D9
   - cyan 700 from #007CB2 to #007D99
   - yellow 500 from #EEB700 to #EDB700
+  
 - adjusted header menu items for consistency
+  
   - mega menu: removed item animation, indent titles and items to left align
   - single menu: reduce vertical padding
+  
 - .tile-button no longer has image embedded in css (.logo-button-usps removed), the image should be added in markup
-```html
-<button type="button" name="button" class="btn btn-default tile-button">
+  
+  ​```html
+  
+  <button type="button" name="button" class="btn btn-default tile-button">
+  
   <img src="assets/images/logo-usps.png" alt="">
-</button>
-```
+  
+  </button>
+  
+  \```
 
 **ADDITIONS**
+
 - added Web > Patterns > Splitviews:  5 design styles with 3 variations
+  
 - added styling to default Bootstrap breadcrumbs in Web > Buttons > Breadcrumbs, example markup:
-```html
-<ol class="breadcrumb">
+  
+  ``` html
+  <ol class="breadcrumb">
   <li><a href="#">Home</a></li>
   <li><a href="#">Library</a></li>
   <li class="active">Data</li>
-</ol>
-```
+  </ol>
+  ```
 
+###### Website changes
 
-######Website changes
 - added web and mobile roadmaps in embedded iframes
 - added Resources > Gallery with InVision link for images of application samples
 - upgrade angular ui-select to v13.2
@@ -204,7 +316,8 @@ The Design System is now available via [Bower](http://bower.io). See the [bower-
 
 
 
-######Sketch
+###### Sketch
+
 - updated template fonts
 - update breadcrumbs
 - add underline tabs
@@ -212,19 +325,22 @@ The Design System is now available via [Bower](http://bower.io). See the [bower-
 
 
 
-######Thanks to the following contributors and bug reporters:
+###### Thanks to the following contributors and bug reporters:
+
 Luke Daugherty, Nick Roberts, Rick Dukeshier, Nisha Rana, dustin2524, Joan Doutney, Ron Cianfaglione, Rick Cole, Sam Swartz, Jim Norris, Ania Mastriano, Cameron Chu
 
 
-###2.1.1 -- October 2015 update
-######CSS changes
+
+### 2.1.1 -- October 2015 update
+
+###### CSS changes
 
 - added version header to CSS (closes [#32](https://github.com/PBGUX/designsystem/issues/32))
 - fixed header magnify glass icon in FF, was cut off on right side
 - header links changed to solid white for accessibility compliance
 
+###### Website changes
 
-######Website changes
 - updated Resources > Strategy section, added Personas content
 - fixed table selected state examples, used incorrect color
 - added header dropdown examples with section heads
@@ -233,36 +349,58 @@ Luke Daugherty, Nick Roberts, Rick Dukeshier, Nisha Rana, dustin2524, Joan Doutn
 - updated select-ui to v0.13.1 (fixes webkit dropup issue)
 - updated angular-scroll to v0.7.3
 
-######Thanks to the following contributors and bug reporters:
+###### Thanks to the following contributors and bug reporters:
 
 Nick Roberts, Nisha Rana
 
 
-###2.1.0 -- September 29, 2015
+
+### 2.1.0 -- September 29, 2015
+
 - modal dialogs no longer need an inline close icon in the `modal-header`, remove the markup from the html indicated by the NO ICON HERE in the example below. The icon is added by the CSS with an SVG image to the button.
-```html
-<div class="modal-header">
+  
+  ``` html
+  <div class="modal-header">
   <button type="button" class="close" ng-click="close()"><!-- NO ICON HERE --><span aria-hidden="true"></span><span class="sr-only">Close</span></button>
   <h4 class="modal-title">Simple Dialog Box</h4>
-</div>
-```
+  </div>
+  ```
+  
 - added daterange picker examples, revised styling with new hover/selected states
+  
 - revised color values for accessibility
+  
 - updated pb-font to latest version
+  
 - added table variations
-	- `table-unstyled` removes all borders
-	- `table-open` removes all vertical borders
+  
+  ``` 
+  - `table-unstyled` removes all borders
+  - `table-open` removes all vertical borders
+  ```
+  
 - fixed `table-condensed` styling
+  
 - button font changed to PrecisionSans Regular
+  
 - colors page is no longer an image to allow copy/paste of hex codes
+  
 - revised all hover and active colors
+  
 - added dropdown menus to header examples (including sign out), also fixed [#22](https://github.com/PBGUX/designsystem/issues/22)
+  
 - fixed all welcome pages to work in IE10
+  
 - changed selectize menus to use ui-select plugin
+  
 - added `::ms-expand` to remove extra arrow in IE dropdowns (fixes [#25](https://github.com/PBGUX/designsystem/issues/25))
+  
 - fixed misaligned prepended inputs; fixes [#26](https://github.com/PBGUX/designsystem/issues/26)
+  
 - input group buttons on right side missing border (fixes [#29](https://github.com/PBGUX/designsystem/issues/29))
+  
 - various revisions and improvements to the Design System website (copy changes, styling changes, image revisions, etc)
+  
 - revised gulp tasks, updated plugins
 
 ---
@@ -271,20 +409,23 @@ __Thanks to the following contributors and bug reporters:__
 
 Rick Dukeshier, Shawn Sharifi, Luke Daugherty, Nick Roberts, Nisha Rana, Sam Swartz, Ania Mastriano, Joan Doutney, Renee Barsoum, Andy Grossman, Steve King, Andrea Greggo-McManus
 
-###2.0.0 -- August 31, 2015
+### 2.0.0 -- August 31, 2015
+
 - dropped support for IE8/9, following industry standards
 - SVG embedded graphics used for resolution independence
 - CSS3 Flexbox used in places for layout and alignment
 - Updates to header and footer, see below
 
-######Header
+###### Header
+
 - Use the `<header>` tag in place of a div with a class or id
 
-######Footer
+###### Footer
+
 - Use the `<footer>` tag in place of a div with a class or id
 - uses flexbox and does not need Bootstrap classes
 
-```html
+``` html
 <footer>
 	<div class="footer-wrapper">
 	  <div  class="container">
@@ -311,23 +452,29 @@ Rick Dukeshier, Shawn Sharifi, Luke Daugherty, Nick Roberts, Nisha Rana, Sam Swa
 </footer>
 ```
 
-###1.2.0 Feb 20,2015
+### 1.2.0 Feb 20,2015
+
 - Added "sign-in screen"
 - fixed button hovers to lighten button instead of darken
 
-###1.1.5 Feb 19, 2015
+### 1.1.5 Feb 19, 2015
+
 - bug in default button hover state fixed
 
-###1.1.4 Feb 19, 2015
+### 1.1.4 Feb 19, 2015
+
 - renamed spacer classes.  2-letter sizes now: xs, sm, md, lg, xl. If you have used these, you will need to find/replace.
 
-###1.1.3 Feb 18, 2015
+### 1.1.3 Feb 18, 2015
+
 - fixed modal backdrop
 
-###1.1.2 Feb. 17, 2015
+### 1.1.2 Feb. 17, 2015
+
 - fixed alert links to aways be underlined
 
-###1.10 February 12, 2015
+### 1.10 February 12, 2015
+
 - re-organized and simplified color variables
 - reverted alert and callout colors to Bootstrap defaults
 - reverted functional colors (except Danger) to Bootstrap defaults
@@ -336,16 +483,18 @@ Rick Dukeshier, Shawn Sharifi, Luke Daugherty, Nick Roberts, Nisha Rana, Sam Swa
 - changed buttons to use 4th color in chord (active chord = pb-purple)
 - a great deal of scss code cleaned up
 
-###1.05 February 11, 2015
+### 1.05 February 11, 2015
+
 - fixed , hopefully for good, button text color on open dropdown buttons
 - added PB favicons.  They are in `/images/favicons`, so to use them upload this directory and copy the code in head of `index.html`
 
-###1.04 February 6, 2015
+### 1.04 February 6, 2015
+
 - Added "spacer" classes to add margins above and/or below objects.
 - Use `spacer-top.xsm`, `spacer-top.sm`, `spacer-top.med`, `spacer-top.lg`, `spacer-top.xlg` (or `-bottom-`) to add margin of 10, 20, 30, 40, or 50 pixels, respectively.
 
+### 1.03 February 4, 2015
 
-###1.03 February 4, 2015
 - Updated variables to match Bootstrap 3.32 structure
 - Updated Bootstrap CDN to 3.32
 - Updated Font Awesome CDN to 4.3.0
@@ -354,27 +503,34 @@ Rick Dukeshier, Shawn Sharifi, Luke Daugherty, Nick Roberts, Nisha Rana, Sam Swa
 - cleaned up Sass files for readability
 - clarified alert link text does not need separate class
 
-###1.01 February 3, 2015
+### 1.01 February 3, 2015
+
 - Fixed space above DT (Issue #7)
 - Fixed functional colors hex labels
 
-###1.0 January 14, 2015
+### 1.0 January 14, 2015
+
 - Incorporates color and typography changes for new branding
 - Switched build system from Grunt to Gulp
 - Simplified folder structure
 
 ----------------
-#####Upgrading to 1.0.0 from previous versions
+
+##### Upgrading to 1.0.0 from previous versions
 
 - Copy `/build/css/design_system.css` and overwrite your project design system CSS file
+  
 - Remove `<head>` links to fonts hosted at Google, for example:
-```html
-<link href="http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-```
+  
+  ``` html
+  <link href="http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  ```
+  
 - Copy all PrecisionSans fonts from `/build/fonts` to your project fonts folder
+  
 - Replace the copyright column in the footer with the following markup:
 
-```html
+``` html
 <!-- Copyright -->
 <div class="col-md-6">
 	<a href="http://www.pb.com"><i class="pb-footer-logo gradient"></i></a>&copy; 2015 Pitney Bowes Inc. All rights reserved.
@@ -384,18 +540,23 @@ Rick Dukeshier, Shawn Sharifi, Luke Daugherty, Nick Roberts, Nisha Rana, Sam Swa
 ----------------
 
 <br/>
-###0.9.6.1
+
+### 0.9.6.1
+
 - fixed color bug in button dropdown
 
-###0.9.6
+### 0.9.6
+
 - updated Miller Columns to not respond to window resizing.  As indicated on page, they are desktop-only at this point; they will now resize up to a point, but will not stack.
 
-###0.9.5 December 18, 2014
+### 0.9.5 December 18, 2014
+
 - Updated PB Font to use new icons from Beth and created via IcoMoon. Please replace your pbfonts with thse and replace the design_system.css file.
 
 
 
-###0.8.8  September 23, 2014
+### 0.8.8  September 23, 2014
+
 - Refactored Sass into separate files using manifest files.  Will be easier to locate specific sass for a page
 - Updates and improvements to gruntfile
 - Updated bower and npm packages to latest versions
@@ -409,31 +570,35 @@ Rick Dukeshier, Shawn Sharifi, Luke Daugherty, Nick Roberts, Nisha Rana, Sam Swa
 - Reversed show/hide password in control
 - Text color slightly darker
 
-###0.85 August 12, 2014
+### 0.85 August 12, 2014
+
 - Separated Kendo UI and UI-Bootstrap into their own CSS files
 - Fixed Knockout button bug
 
-###0.8 August 11, 2014
+### 0.8 August 11, 2014
+
 - Fixes to Colors page, added sample charts in all colors
 
-###0.75 August 5, 2014
+### 0.75 August 5, 2014
+
 - Converted project to use SASS instead of LESS.  Updated Gruntfile to compile SASS files, removed LESS code.  Please be sure to run npm install if downloading entire package.
 - This **does not affect** the CSS file in /dist
 - Made some other fixes to clean up paths
 
-###0.73 July 29,2014
+### 0.73 July 29,2014
+
 - Fixed styling buf on home page of live preview
 - updated Grunt serve command to inject css on recompile rather than force a reload.  Finally.
 
-###0.72 July 29, 2014
+### 0.72 July 29, 2014
 
 - Updates to fix a couple of styling bugs introduced when changing the Gray color.
 
-###0.71 July 28,2014
+### 0.71 July 28,2014
 
 - Small update to fix the CSS file from Bootstrap UI not being compiled into vendor.css
 
-###0.7 July 28, 2014
+### 0.7 July 28, 2014
 
 - Updates to color palette for accessibility
   - Eliminated "gray-mid" and moved some text objects, such as labels, to "gray-text".
@@ -445,8 +610,7 @@ Rick Dukeshier, Shawn Sharifi, Luke Daugherty, Nick Roberts, Nisha Rana, Sam Swa
 - Clarified Alerts pages a bit more
 - Most, if not all, JS code converted to Angular JS directives
 
-
-###0.6 - July 18, 2014
+### 0.6 - July 18, 2014
 
 - Updated to use Bootstrap 3.2
 - Added Kendo UI splitter
@@ -462,43 +626,74 @@ Rick Dukeshier, Shawn Sharifi, Luke Daugherty, Nick Roberts, Nisha Rana, Sam Swa
 - Updated the angular code for the prepended checkbox
 - Much cleanup done to the Live Preview
 
-###0.5 - June 27, 2014
+### 0.5 - June 27, 2014
 
 - Removed Font Awesome from Bower, using CDN instead.
+  
 - Alerts:
-	- updated modal dialogs
-	- finalized colors and layout
-	- removed cancel buttons from dialogs
+  
+  ``` 
+  - updated modal dialogs
+  - finalized colors and layout
+  - removed cancel buttons from dialogs
+  ```
+  
 - Inputs
-	- fixed angular toggle switches
-	- prepended checkbox field
-	- updated calendar picker
-	- reorganized page and support text
+  
+  ``` 
+  - fixed angular toggle switches
+  - prepended checkbox field
+  - updated calendar picker
+  - reorganized page and support text
+  ```
+  
 - Icons
-	- Updated page layout
+  
+  ``` 
+  - Updated page layout
+  ```
+  
 - Buttons
-	- Updated page layout
+  
+  ``` 
+  - Updated page layout
+  ```
 
-
-###0.4 - June 17, 2014
+### 0.4 - June 17, 2014
 
 - Colors:
-	- Added extended color palette, with colors for charts
+  
+  ``` 
+  - Added extended color palette, with colors for charts
+  ```
+  
 - Alerts:
-    - Added modal alert boxes and dialog boxes
+  
+  - Added modal alert boxes and dialog boxes
+  
 - Inputs:
-	- made clear prepended and appended icons the default
-	- changed button type in prepend/append to primary
-	- Added **Select2** menu and multi-picker
+  
+  ``` 
+  - made clear prepended and appended icons the default
+  - changed button type in prepend/append to primary
+  - Added **Select2** menu and multi-picker
+  ```
+  
 - Icons:
-	- organized FA icons by type
-	- added "pb-folder-add" icon
+  
+  ``` 
+  - organized FA icons by type
+  - added "pb-folder-add" icon
+  ```
+  
 - Added **Isotope** image gallery
+  
 - Cleaned up home page and used chart colors for charts
 
-###0.3 - May 29, 2014
+### 0.3 - May 29, 2014
 
 - Inputs:
+  
   - removed inner shadows
   - added date/time picker
   - fixed error color
@@ -506,19 +701,37 @@ Rick Dukeshier, Shawn Sharifi, Luke Daugherty, Nick Roberts, Nisha Rana, Sam Swa
   - added "clear" prepended and appended form fields
   - added small and large field sizes
   - added link to the page for the date/time picker plugin docs
+  
 - Alerts
-	- normalized color palette
-	- added simple contextual color backgrounds
-	- added disconnected transitory alert (more options coming)
+  
+  ``` 
+  - normalized color palette
+  - added simple contextual color backgrounds
+  - added disconnected transitory alert (more options coming)
+  ```
+  
 - Tables
-	- added "extra compressed" variant
+  
+  ``` 
+  - added "extra compressed" variant
+  ```
+  
 - Text
-	- added contextual colors
+  
+  ``` 
+  - added contextual colors
+  ```
+  
 - Accordions
-  	- replaced Angular accordion with simple Bootstrap one
-  	- added "compact" variant with no space between
-  	- added a simple collapsing div
-  	- separated tabs onto their own page
+  
+  ``` 
+  - replaced Angular accordion with simple Bootstrap one
+  - added "compact" variant with no space between
+  - added a simple collapsing div
+  - separated tabs onto their own page
+  ```
+  
 - Tabs
-   - switched to Bootstrap tabs
-   - added better vertical variant
+  
+  - switched to Bootstrap tabs
+  - added better vertical variant
