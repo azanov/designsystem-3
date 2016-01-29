@@ -1,6 +1,6 @@
 {
   "name": "DesignSystem",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "dependencies": {
     "Chart.js": "1.0.2",
     "Numeric-Stepper": "*",
@@ -16,7 +16,7 @@
     "angular-dynamic-locale": "0.1.28",
     "angular-highlightjs": "0.5.1",
     "angular-i18n": "1.4.5",
-    "angular-loading-bar": "0.6.0",
+    "angular-loading-bar": "0.8.0",
     "angular-moment": "0.10.1",
     "angular-morris-chart": "1.0.2",
     "angular-rangeslider": "0.0.13",
@@ -50,7 +50,8 @@
     "ui-router": "0.2.15",
     "ui-select": "angular-ui-select#0.13.2",
     "yamm3": "1.1.0",
-    "ng-tags-input": "3.0.0"
+    "ng-tags-input": "3.0.0",
+    "angular-slick-carousel": "~3.1.4"
   },
   "resolutions": {
     "angular": "1.4.5"

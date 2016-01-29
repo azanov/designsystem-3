@@ -1,7 +1,7 @@
 
 //globals, all variations
 .splitview {
-  footer {
+  .footer-wrapper {
     margin: 0;
   }
 
@@ -68,6 +68,17 @@
 .splitview-white-open {
   .leftnav {
     border-right: 1px solid #e8e8e8;
+    li:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-right: 0;
+    }
+    .leftnav-tree {
+      border-right: 0;
+    }
+  }
+  h3 {
+    margin-top: 0;
   }
 }
 
@@ -76,6 +87,7 @@
     border-right: 1px solid #e8e8e8;
   }
 }
+
 //NOTE: set container-fluid in html container tag
 
 

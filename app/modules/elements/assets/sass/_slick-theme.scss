@@ -1,0 +1,38 @@
+.slick-prev,
+.slick-next {
+
+  &:before {
+    font-size: 42px;
+    line-height: 0;
+  }
+
+  &:hover {
+    &:before {
+      color: $pb-gray-300;
+    }
+  }
+
+}
+
+
+.slick-prev {
+  left: -40px;
+}
+
+.slick-next {
+  right: -40px;
+}
+
+.slick-slider {
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.slick-slide {
+  margin: 0 10px;
+}
+
+.slick-dots li {
+  margin: 0;
+  width: 15px;
+}
