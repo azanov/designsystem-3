@@ -873,13 +873,13 @@ figure .modal-dialog {
 
     &:hover {
       cursor: pointer;
-      box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.1);
+      box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .1);
       transform: scale(1.05);
     }
 
     &.active {
       border-color: $pb-blue;
-      box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.1);
+      box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .1);
     }
   }
 

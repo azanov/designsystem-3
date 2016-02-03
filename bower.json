@@ -52,6 +52,7 @@
     "yamm3": "1.1.0",
     "ng-tags-input": "3.0.0",
     "angular-slick-carousel": "3.1.4"
+    "Snap.svg": "snap.svg#~0.4.1"
   },
   "resolutions": {
     "angular": "1.4.9"
