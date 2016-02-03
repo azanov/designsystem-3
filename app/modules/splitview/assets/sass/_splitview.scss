@@ -6,6 +6,10 @@ $leftbar-width: 15%;
 // apply "splitview" as a body class
 // then also add one the major variants
 .splitview {
+
+  h1 {
+    margin-top: 0;
+  }
   .footer-wrapper {
     margin: 0;
   }
