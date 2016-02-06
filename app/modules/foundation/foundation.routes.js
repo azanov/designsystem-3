@@ -45,6 +45,16 @@
       }
     })
 
+    .state('foundation.nucleo', {
+      url: '/nucleo',
+      templateUrl: 'modules/foundation/templates/foundation-nucleo.html',
+      controller: 'TypographyController as type',
+      data: {
+        pageTitle: 'Foundation - Nucleo'
+      }
+    })
+
+
     .state('foundation.iconography', {
       url: '/iconography',
       templateUrl: 'modules/foundation/templates/foundation-iconography.html',
