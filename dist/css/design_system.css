@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.4.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Mon Feb 08 2016 09:13:48 GMT-0500 (EST) 
+ * Built Mon Feb 08 2016 13:19:00 GMT-0500 (EST) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -860,8 +860,7 @@ Created using IcoMoon - icomoon.io
 -------------------------*/
 .nc-icon-outline {
   display: inline-block;
-  font: normal normal normal 14px / 1 "Nucleo Outline";
-  font-size: inherit;
+  font: normal normal normal 16px / 1 "Nucleo Outline";
   speak: none;
   text-transform: none;
   /* Better Font Rendering */
@@ -887,10 +886,17 @@ Created using IcoMoon - icomoon.io
 .nc-icon-outline.square, .nc-icon-outline.circle {
   padding: 0.33333em;
   vertical-align: -16%;
-  background-color: #eee; }
+  background-color: rgba(128, 128, 128, 0.5); }
 
 .nc-icon-outline.circle {
   border-radius: 50%; }
+
+/*----------------------------------
+  fixed width
+-----------------------------------*/
+.nc-icon-outline.fw {
+  width: 1.28571em;
+  text-align: center; }
 
 /*------------------------
   list icons
