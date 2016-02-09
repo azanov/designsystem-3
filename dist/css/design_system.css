@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.4.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Fri Jan 29 2016 08:39:46 GMT-0500 (EST) 
+ * Built Mon Feb 08 2016 13:42:42 GMT-0500 (EST) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -3834,6 +3834,29 @@ a.app-launcher {
 .progress-bar {
   background-color: #3e53a4; }
 
+.spinner {
+  -webkit-animation: fa-spin .7s infinite linear;
+          animation: fa-spin .7s infinite linear; }
+.spinner-lg {
+  font-size: 36px; }
+.spinner-ko {
+  color: #efefef; }
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg); } }
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg); } }
 .progress-bar-success {
   background-color: #008500; }
 
