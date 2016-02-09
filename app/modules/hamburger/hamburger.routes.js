@@ -29,6 +29,7 @@
         bodyClass: 'hamburger hamburger-slide'
       }
     })
+
     .state('hamburger.push', {
       url: '/push',
       templateUrl: 'modules/hamburger/templates/hamburger-push.html',
@@ -38,6 +39,7 @@
         bodyClass: 'hamburger hamburger-push'
       }
     })
+
     .state('hamburger.auto', {
       url: '/auto',
       templateUrl: 'modules/hamburger/templates/hamburger-auto.html',
