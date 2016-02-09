@@ -2,7 +2,6 @@
 
   'use strict';
 
-<<<<<<< f7d819aa25f0227aa9da8664def14ee5bc033900
   angular.module('pb.ds.splitview').controller('HamburgerController', function($log) {
 
     var _this = this;
