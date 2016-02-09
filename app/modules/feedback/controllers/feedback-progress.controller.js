@@ -15,7 +15,7 @@
       cfpLoadingBar.start();
       $timeout(function() {
         cfpLoadingBar.complete();
-      }, 400000);
+      }, 4000);
     };
 
 

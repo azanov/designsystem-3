@@ -1,8 +1,10 @@
+$loading-bar-color: hsla(0, 255, 100%, 1);
+
 #loading-bar {
   z-index: 10002;
-  
+
   .bar {
-    background-color: #fff !important;
+    background-color: $loading-bar-color !important;
     height: 2px;
   }
   .peg {
@@ -15,6 +17,7 @@
   display: block;
   position: fixed;
   z-index: 10002;
+  color: $loading-bar-color;
   top: 10px;
   left: 10px;
   .spinner-icon {
