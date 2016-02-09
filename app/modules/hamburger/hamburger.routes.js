@@ -7,7 +7,11 @@
       abstract: true,
       url: '/hamburger',
       templateUrl: 'modules/hamburger/templates/hamburger.html',
+<<<<<<< f7d819aa25f0227aa9da8664def14ee5bc033900
       controller: 'HamburgerController as burger'
+=======
+      controller: 'SplitviewController as hamburger'
+>>>>>>> Added pageslide directive & burger menu section
     })
 
     .state('hamburger.overview', {
