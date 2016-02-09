@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="two-col-wrapper">
-    <div class="leftnav hamburger" ps-side="left">
+    <div class="leftnav pageslide" ps-side="left">
       <div class="list-group">
         <a class="list-group-item active" href="">Validate Address</a>
         <a class="list-group-item" href="">Get Postal Codes</a>
@@ -15,7 +15,10 @@
 
     <div class="main-content">
 
-      <div ng-include="'modules/splitview/templates/includes/fpo-content.html'"></div>
+
+      <div ng-include="'modules/hamburger/templates/includes/fpo-content.html'"></div>
+
+      <button ng-click="burger.toggle()">Open me</button>
 
 
     </div><!-- end main content -->
