@@ -49,10 +49,10 @@
     });
   });
 
-  angular.module('app')
-    .config(function(cfpLoadingBarProvider) {
-      cfpLoadingBarProvider.spinnerTemplate = '<div><i class="fa fa-circle-o-notch spinner spinner-lg"></i></div>';
-    });
+  angular.module('app').config(function(cfpLoadingBarProvider) {
+    cfpLoadingBarProvider.includeSpinner = true;
+    cfpLoadingBarProvider.spinnerTemplate = '<div id="loading-bar-spinner"><i class="fa fa-circle-o-notch spinner-icon" style="border: none; color: #fff;"></i></div>';
+  });
 
   // UI ROUTER CONFIG
   angular.module('app').config(function($stateProvider) {
