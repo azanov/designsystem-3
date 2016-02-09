@@ -7,7 +7,7 @@
       abstract: true,
       url: '/hamburger',
       templateUrl: 'modules/hamburger/templates/hamburger.html',
-      controller: 'HamburgerController as burger'
+      controller: 'SplitviewController as hamburger'
     })
 
     .state('hamburger.overview', {
