@@ -51,7 +51,7 @@
 
   angular.module('app')
     .config(function(cfpLoadingBarProvider) {
-      cfpLoadingBarProvider.spinnerTemplate = '<div id="loading-bar-spinner"><i class="fa fa-circle-o-notch fa-spin fa-2x spinner"></i></div>';
+      cfpLoadingBarProvider.spinnerTemplate = '<div id="loading-bar-spinner"><i class="fa fa-circle-o-notch fa-spin fa-lg spinner"></i></div>';
     });
 
   // UI ROUTER CONFIG
