@@ -5,11 +5,11 @@ $loading-bar-color: hsla(0, 255, 100%, 1);
 
   .bar {
     background-color: $loading-bar-color !important;
-    height: 2px;
+    height: 3px;
   }
   .peg {
     box-shadow: hsla(201, 79%, 15%, .5) 1px 0 6px 1px;
-    height: 2px;
+    height: 3px;
   }
 }
 
