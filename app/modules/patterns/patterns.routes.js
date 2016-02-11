@@ -141,6 +141,12 @@
       url: '/patterns/404',
       templateUrl: 'modules/patterns/templates/404.html',
       controller: '404Controller'
+    })
+
+    .state('patterns.hamburger', {
+      url: '/hamburger',
+      templateUrl: 'modules/patterns/templates/hamburger-overview.html',
+      controller: 'HamburgerController'
     });
 
 
