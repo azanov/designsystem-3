@@ -1,3 +1,4 @@
+// scss-lint:disable VendorPrefix
 /* --------------------------------
 
 Nucleo Mini Web Font - nucleoapp.com/
@@ -7,6 +8,7 @@ Created using IcoMoon - icomoon.io
 -------------------------------- */
 @import "variables";
 @import "mixins";
+@import "pb";
 
 @font-face {
   font-family: 'Nucleo Mini';
@@ -30,10 +32,12 @@ Created using IcoMoon - icomoon.io
   //font-size: inherit;
   speak: none;
   text-transform: none;
-  vertical-align: -2px;
   /* Better Font Rendering */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  .btn & {
+    vertical-align: -2px;
+  }
 
 }
 
@@ -83,19 +87,19 @@ Created using IcoMoon - icomoon.io
 
   > li > .#{$nc-css-prefix}-mini {
     position: absolute;
-    left: -$nc-li-width/2 - 0.5em;
+    left: -$nc-li-width / 2 - 0.5em;
     top: (2em / 14);
     text-align: center;
 
     &.lg {
       top: 0;
-      left: -$nc-li-width/2 - (4em / 14);
+      left: -$nc-li-width / 2 - (4em / 14);
     }
 
     &.circle,
     &.square {
       top: (2em / 14) - $nc-padding-width;
-      left: -$nc-li-width/2 - 0.5em - $nc-padding-width;
+      left: -$nc-li-width / 2 - 0.5em - $nc-padding-width;
     }
   }
 }

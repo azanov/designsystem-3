@@ -31,6 +31,11 @@ section {
   }
 }
 
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 
 ul::after {
   clear: both;
@@ -38,8 +43,7 @@ ul::after {
   display: table;
 }
 ul li {
-  width: 25%;
-  float: left;
+
   padding: 16px 0;
   text-align: center;
   border-radius: .25em;
@@ -52,10 +56,11 @@ ul li:hover {
 }
 ul p, ul em  {
   display: inline-block;
-  font-size: 1rem;
+  font-size: .8em;
   color: #454545;
+  font-family: menlo, consolas, monospace;
   user-select: auto;
-  white-space: nowrap;
+//  white-space: nowrap;
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -99,7 +104,7 @@ icons
 -------------------------------- */
 .nc-icon-mini {
   display: inline-block;
-  font: normal normal normal 14px/1 'Nucleo Mini';
+  font: normal normal normal 24px/1 'Nucleo Mini';
   speak: none;
   text-transform: none;
   /* Better Font Rendering */
