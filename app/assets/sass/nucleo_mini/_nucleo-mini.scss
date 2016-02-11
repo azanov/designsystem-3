@@ -1,6 +1,6 @@
-/* --------------------------------
+/* -------------------------------- 
 
-Nucleo Outline Web Font - nucleoapp.com/
+Nucleo Mini Web Font - nucleoapp.com/
 License - nucleoapp.com/license/
 Created using IcoMoon - icomoon.io
 
@@ -9,13 +9,13 @@ Created using IcoMoon - icomoon.io
 @import "mixins";
 
 @font-face {
-  font-family: 'Nucleo Outline';
-  src: url('#{$nc-font-path}/nucleo-outline.eot');
-  src: url('#{$nc-font-path}/nucleo-outline.eot') format('embedded-opentype'),
-    url('#{$nc-font-path}/nucleo-outline.woff2') format('woff2'),
-    url('#{$nc-font-path}/nucleo-outline.woff') format('woff'),
-    url('#{$nc-font-path}/nucleo-outline.ttf') format('truetype'),
-    url('#{$nc-font-path}/nucleo-outline.svg') format('svg');
+  font-family: 'Nucleo Mini';
+  src: url('#{$nc-font-path}/nucleo-mini.eot');
+  src: url('#{$nc-font-path}/nucleo-mini.eot') format('embedded-opentype'),
+    url('#{$nc-font-path}/nucleo-mini.woff2') format('woff2'),
+    url('#{$nc-font-path}/nucleo-mini.woff') format('woff'),
+    url('#{$nc-font-path}/nucleo-mini.ttf') format('truetype'),
+    url('#{$nc-font-path}/nucleo-mini.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,10 +24,10 @@ Created using IcoMoon - icomoon.io
 	base class definition
 -------------------------*/
 
-.#{$nc-css-prefix}-outline {
+.#{$nc-css-prefix}-mini {
   display: inline-block;
-  font: normal normal normal #{$nc-font-size-base} / 1 'Nucleo Outline';
-  //font-size: inherit;
+  font: normal normal normal #{$nc-font-size-base}/1 'Nucleo Mini';
+  //font-size: inherit; 
   speak: none;
   text-transform: none;
   /* Better Font Rendering */
@@ -40,40 +40,31 @@ Created using IcoMoon - icomoon.io
   change icon size
 -------------------------*/
 
-.#{$nc-css-prefix}-outline.lg {
+.#{$nc-css-prefix}-mini.lg {
 	font-size: 1.33333333em;
   	vertical-align: -16%;
 }
 
-.#{$nc-css-prefix}-outline.x2 {
-	font-size: 2em;
+.#{$nc-css-prefix}-mini.x2 { 
+	font-size: 2em; 
 }
 
-.#{$nc-css-prefix}-outline.x3 {
-	font-size: 3em;
+.#{$nc-css-prefix}-mini.x3 { 
+	font-size: 3em; 
 }
 
 /*----------------------------------
   add a square/circle background
 -----------------------------------*/
-.#{$nc-css-prefix}-outline.square,
-.#{$nc-css-prefix}-outline.circle {
+.#{$nc-css-prefix}-mini.square,
+.#{$nc-css-prefix}-mini.circle {
   padding: $nc-padding-width;
   vertical-align: -16%;
   background-color: $nc-background-color;
-  //mix-blend-mode: multiply;
 }
 
-.#{$nc-css-prefix}-outline.circle {
+.#{$nc-css-prefix}-mini.circle {
   border-radius: 50%;
-}
-
-/*----------------------------------
-  fixed width
------------------------------------*/
-.#{$nc-css-prefix}-outline.fw {
-  width: (18em / 14);
-  text-align: center;
 }
 
 /*------------------------
@@ -84,26 +75,26 @@ Created using IcoMoon - icomoon.io
   padding-left: 0;
   margin-left: $nc-li-width;
   list-style-type: none;
-
-  > li {
-    position: relative;
+  
+  > li { 
+    position: relative; 
   }
 
-  > li > .#{$nc-css-prefix}-outline {
+  > li > .#{$nc-css-prefix}-mini {
     position: absolute;
-    left: -$nc-li-width / 2 - 0.5em;
+    left: -$nc-li-width/2 - 0.5em;
     top: (2em / 14);
     text-align: center;
 
     &.lg {
       top: 0;
-      left: -$nc-li-width / 2 - (4em / 14);
+      left: -$nc-li-width/2 - (4em / 14);
     }
 
-    &.circle,
+    &.circle, 
     &.square {
       top: (2em / 14) - $nc-padding-width;
-      left: -$nc-li-width / 2 - 0.5em - $nc-padding-width;
+      left: -$nc-li-width/2 - 0.5em - $nc-padding-width;
     }
   }
 }
@@ -112,7 +103,7 @@ Created using IcoMoon - icomoon.io
   spinning icons
 -------------------------*/
 
-.#{$nc-css-prefix}-outline.spin {
+.#{$nc-css-prefix}-mini.spin {
   -webkit-animation: nc-icon-spin 2s infinite linear;
   -moz-animation: nc-icon-spin 2s infinite linear;
   animation: nc-icon-spin 2s infinite linear;
@@ -155,23 +146,23 @@ Created using IcoMoon - icomoon.io
   rotated/flipped icons
 -------------------------*/
 
-.#{$nc-css-prefix}-outline.rotate-90  {
-	@include nc-rotate(90deg, 1);
+.#{$nc-css-prefix}-mini.rotate-90  { 
+	@include nc-rotate(90deg, 1);  
 }
 
-.#{$nc-css-prefix}-outline.rotate-180 {
-	@include nc-rotate(180deg, 2);
+.#{$nc-css-prefix}-mini.rotate-180 { 
+	@include nc-rotate(180deg, 2); 
 }
 
-.#{$nc-css-prefix}-outline.rotate-270 {
-	@include nc-rotate(270deg, 3);
+.#{$nc-css-prefix}-mini.rotate-270 { 
+	@include nc-rotate(270deg, 3); 
 }
 
-.#{$nc-css-prefix}-outline.flip-y {
-	@include nc-flip(-1, 1, 0);
+.#{$nc-css-prefix}-mini.flip-y { 
+	@include nc-flip(-1, 1, 0); 
 }
-.#{$nc-css-prefix}-outline.flip-x {
-	@include nc-flip(1, -1, 2);
+.#{$nc-css-prefix}-mini.flip-x { 
+	@include nc-flip(1, -1, 2); 
 }
 
 @import "icons";

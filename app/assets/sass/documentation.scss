@@ -5,14 +5,14 @@
 @import 'settings/mixins';
 @import 'base/helpers';
 @import 'base/typography';
-@import 'nucleo/demo';
+@import 'nucleo_mini/demo';
 
 
 @import 'documentation/docpage-header';
 
 
 // home page
-
+// scss-lint:disable MergeableSelector
 
 .home {
   // all hero divs

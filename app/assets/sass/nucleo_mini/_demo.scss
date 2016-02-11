@@ -53,7 +53,7 @@ ul li:hover {
 ul p, ul em  {
   display: inline-block;
   font-size: 1rem;
-  color: #999;
+  color: #454545;
   user-select: auto;
   white-space: nowrap;
   width: 100%;
@@ -97,9 +97,9 @@ ul em::after {
 icons
 
 -------------------------------- */
-.nc-icon-outline {
+.nc-icon-mini {
   display: inline-block;
-  font: normal normal normal 32px/1 'Nucleo Outline';
+  font: normal normal normal 14px/1 'Nucleo Mini';
   speak: none;
   text-transform: none;
   /* Better Font Rendering */
@@ -107,4 +107,4 @@ icons
   -moz-osx-font-smoothing: grayscale;
 }
 
-}
+ }
