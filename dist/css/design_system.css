@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.4.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Thu Feb 11 2016 09:44:18 GMT-0500 (EST) 
+ * Built Thu Feb 11 2016 12:33:57 GMT-0500 (EST) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -842,7 +842,7 @@ small, .text-small, .small {
 .bg-info {
   background-color: #EBEDF5; }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Nucleo Mini Web Font - nucleoapp.com/
 License - nucleoapp.com/license/
@@ -863,6 +863,7 @@ Created using IcoMoon - icomoon.io
   font: normal normal normal 14px/1 "Nucleo Mini";
   speak: none;
   text-transform: none;
+  vertical-align: -2px;
   /* Better Font Rendering */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
