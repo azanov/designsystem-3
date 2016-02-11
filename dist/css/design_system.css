@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.4.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Wed Feb 10 2016 12:20:44 GMT-0500 (EST) 
+ * Built Thu Feb 11 2016 14:23:51 GMT-0500 (EST) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -1972,7 +1972,7 @@ a.list-group-item.active .badge {
 #loading-bar {
   z-index: 10002; }
 #loading-bar .bar {
-  background-color: white !important;
+  background-color: #26C6DA !important;
   height: 3px; }
 #loading-bar .peg {
   box-shadow: rgba(8, 47, 68, 0.5) 1px 0 6px 1px;
@@ -1982,7 +1982,7 @@ a.list-group-item.active .badge {
   display: block;
   position: fixed;
   z-index: 10002;
-  color: white;
+  color: #fff;
   top: 10px;
   left: 10px; }
 #loading-bar-spinner .spinner-icon {
