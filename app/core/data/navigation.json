@@ -80,6 +80,9 @@
             "label": "Headers & Footers",
             "value": "patterns.headersfooters"
           }, {
+            "label": "'Hamburger' Menu",
+            "value": "patterns.hamburger"
+          }, {
             "label": "Sign In & Sign Up",
             "value": "patterns.signinup"
           }, {
