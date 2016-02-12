@@ -683,6 +683,18 @@ h2.table-header.specifications {
   }
 }
 
+.pb-icons {
+  li {
+    font-family: $font-family-monospace;
+
+  }
+  i {
+    font-size: 30px;
+    padding: 5px;
+    display: inline-block;
+  }
+}
+
 //* experimental block grid code, will not work in IE8
 // used to display icons on icons page
 [class*='block-grid-'] {

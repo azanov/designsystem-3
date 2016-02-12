@@ -29,14 +29,14 @@ Created using IcoMoon - icomoon.io
 .#{$nc-css-prefix}-mini {
   display: inline-block;
   font: normal normal normal #{$nc-font-size-base}/1 'Nucleo Mini';
-  //font-size: inherit;
+  font-size: inherit;
   speak: none;
   text-transform: none;
   /* Better Font Rendering */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   .btn & {
-    vertical-align: -2px;
+    font-size: 12px;
   }
 
 }

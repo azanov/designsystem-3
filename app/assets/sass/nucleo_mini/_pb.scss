@@ -1,4 +1,8 @@
-.#{$nc-css-prefix}-fw {
+.#{$nc-css-prefix}-fw, .nc-fw {
   width: (18em / 14);
   text-align: center;
+}
+
+.nc-lg {
+  @extend .#{$nc-css-prefix}-mini.lg;
 }
