@@ -6,3 +6,16 @@
 .nc-lg {
   @extend .#{$nc-css-prefix}-mini.lg;
 }
+
+
+.#{$nc-css-prefix}-mini.x4 {
+	font-size: 4em;
+}
+
+.#{$nc-css-prefix}-mini.x5 {
+	font-size: 5em;
+}
+
+.#{$nc-css-prefix}-mini.x6 {
+	font-size: 6em;
+}

@@ -21,7 +21,7 @@
           <li class="list-group-item" ng-if="faceted.facet.list.length">
             <p>Refined by <a class="pull-right" href="" ng-click="faceted.facet.clear()">Reset</a></p>
             <ul class="list-unstyled">
-              <li ng-repeat="item in faceted.facet.list"><a class="badge badge-gray-text" href="">{{item}} <i class="fa fa-times-circle fa-reverse" ng-click="faceted.facet.clearBadge(item, $event)"></i></a></li>
+              <li ng-repeat="item in faceted.facet.list"><a class="badge badge-gray-text" href="">{{item}} <i class="nc-icon-mini ui-1_circle-remove" ng-click="faceted.facet.clearBadge(item, $event)"></i></a></li>
             </ul>
           </li>
 
