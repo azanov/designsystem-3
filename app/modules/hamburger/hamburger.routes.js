@@ -24,9 +24,18 @@
       url: '/slide',
       templateUrl: 'modules/hamburger/templates/hamburger-slide.html',
       data: {
-        pageTitle: 'Split Views',
+        pageTitle: 'Hamburger Menu - Slide',
         access: 'public',
         bodyClass: 'hamburger hamburger-slide'
+      }
+    })
+    .state('hamburger.push', {
+      url: '/push',
+      templateUrl: 'modules/hamburger/templates/hamburger-push.html',
+      data: {
+        pageTitle: 'Hamburger Menu - Push',
+        access: 'public',
+        bodyClass: 'hamburger hamburger-push'
       }
     });
 

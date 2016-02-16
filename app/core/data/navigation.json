@@ -81,7 +81,7 @@
             "value": "patterns.headersfooters"
           }, {
             "label": "'Hamburger' Menu",
-            "value": "patterns.hamburger"
+            "value": "hamburger.overview"
           }, {
             "label": "Sign In & Sign Up",
             "value": "patterns.signinup"

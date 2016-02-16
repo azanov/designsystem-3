@@ -9,6 +9,7 @@
 
     _this.header = 'fixed';
     _this.footer = true;
+    _this.showHeader = true;
 
     _this.rtl = 'ltr';
 
