@@ -4,26 +4,9 @@
 Main components
 
 -------------------------------- */
-header {
-  text-align: center;
-  padding: 120px 0 0;
-  h1 {
-    font-size: 2rem;
-  }
-  p {
-    font-size: 1.4rem;
-    margin-top: .6em;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-}
 
 
 section {
-  width: 90%;
-  max-width: 1200px;
-  margin: 50px auto;
   h2 {
     border-bottom: 1px solid #e2e2e2;
     padding: 0 0 1em .2em;
@@ -34,33 +17,22 @@ section {
 ul {
   display: flex;
   flex-wrap: wrap;
+  li {
+    padding: 16px 0;
+    text-align: center;
+    border-radius: .25em;
+    transition: background 0.2s;
+    user-select: none;
+    overflow: hidden;
+  }
 }
 
-
-ul::after {
-  clear: both;
-  content: "";
-  display: table;
-}
-ul li {
-
-  padding: 16px 0;
-  text-align: center;
-  border-radius: .25em;
-  transition: background 0.2s;
-  user-select: none;
-  overflow: hidden;
-}
-ul li:hover {
-  background: #dbdbdb;
-}
 ul p, ul em  {
   display: inline-block;
   font-size: .8em;
   color: #454545;
   font-family: menlo, consolas, monospace;
   user-select: auto;
-//  white-space: nowrap;
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
