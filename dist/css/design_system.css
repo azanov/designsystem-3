@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.4.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Thu Feb 18 2016 09:37:36 GMT-0500 (EST) 
+ * Built Tue Feb 16 2016 14:46:33 GMT-0500 (EST) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -841,342 +841,6 @@ small, .text-small, .small {
 
 .bg-info {
   background-color: #EBEDF5; }
-
-.fill-white {
-  fill: #fff; }
-
-.fill-bk {
-  fill: #000; }
-
-.fill-bg1 {
-  fill: #f0f0f0; }
-
-.fill-bg2 {
-  fill: #f8f8f8; }
-
-.fill-bg3 {
-  fill: #eaedf8; }
-
-.fill-bg4 {
-  fill: #d8dbf1; }
-
-.fill-bg5 {
-  fill: #c5cbe3; }
-
-.fill-blue {
-  fill: #3e53a4; }
-
-.fill-blue-300 {
-  fill: #8b98c8; }
-
-.fill-blue-500 {
-  fill: #3e53a4; }
-
-.fill-blue-700 {
-  fill: #314183; }
-
-.fill-cyan {
-  fill: #009dbf; }
-
-.fill-cyan-300 {
-  fill: #66C4D9; }
-
-.fill-cyan-500 {
-  fill: #009dbf; }
-
-.fill-cyan-700 {
-  fill: #007D99; }
-
-.fill-dark-green {
-  fill: #00a740; }
-
-.fill-dark-green-300 {
-  fill: #66ca8c; }
-
-.fill-dark-green-500 {
-  fill: #00a740; }
-
-.fill-dark-green-700 {
-  fill: #008500; }
-
-.fill-dark-orange {
-  fill: #ee6700; }
-
-.fill-dark-orange-300 {
-  fill: #f5a466; }
-
-.fill-dark-orange-500 {
-  fill: #ee6700; }
-
-.fill-dark-orange-700 {
-  fill: #be5000; }
-
-.fill-danger {
-  fill: #dc0000; }
-
-.fill-error {
-  fill: #dc0000; }
-
-.fill-gray {
-  fill: #c0c0c0; }
-
-.fill-gray-50 {
-  fill: #e1e1e1; }
-
-.fill-gray-300 {
-  fill: #9b9b9b; }
-
-.fill-gray-400 {
-  fill: #717171; }
-
-.fill-gray-500 {
-  fill: #4e4e4e; }
-
-.fill-gray-700 {
-  fill: #2e2e2e; }
-
-.fill-green {
-  fill: #72bf44; }
-
-.fill-green-300 {
-  fill: #aad88f; }
-
-.fill-green-500 {
-  fill: #72bf44; }
-
-.fill-green-700 {
-  fill: #5a9836; }
-
-.fill-magenta {
-  fill: #cf0989; }
-
-.fill-magenta-300 {
-  fill: #e26bb8; }
-
-.fill-magenta-500 {
-  fill: #cf0989; }
-
-.fill-magenta-700 {
-  fill: #a5076e; }
-
-.fill-medium-blue {
-  fill: #0072b8; }
-
-.fill-medium-blue-300 {
-  fill: #66aad4; }
-
-.fill-medium-blue-500 {
-  fill: #0072b8; }
-
-.fill-medium-blue-700 {
-  fill: #005a93; }
-
-.fill-orange {
-  fill: #ef8200; }
-
-.fill-orange-300 {
-  fill: #f5a66d; }
-
-.fill-orange-500 {
-  fill: #ef8200; }
-
-.fill-orange-700 {
-  fill: #bf6800; }
-
-.fill-purple {
-  fill: #a03f9b; }
-
-.fill-purple-300 {
-  fill: #c68cc3; }
-
-.fill-purple-500 {
-  fill: #a03f9b; }
-
-.fill-purple-700 {
-  fill: #80327c; }
-
-.fill-warning {
-  fill: #be5000; }
-
-.fill-yellow {
-  fill: #edb700; }
-
-.fill-yellow-300 {
-  fill: #f4d466; }
-
-.fill-yellow-500 {
-  fill: #edb700; }
-
-.fill-yellow-700 {
-  fill: #bd9100; }
-
-.stroke-white {
-  stroke: #fff; }
-
-.stroke-bk {
-  stroke: #000; }
-
-.stroke-bg1 {
-  stroke: #f0f0f0; }
-
-.stroke-bg2 {
-  stroke: #f8f8f8; }
-
-.stroke-bg3 {
-  stroke: #eaedf8; }
-
-.stroke-bg4 {
-  stroke: #d8dbf1; }
-
-.stroke-bg5 {
-  stroke: #c5cbe3; }
-
-.stroke-blue {
-  stroke: #3e53a4; }
-
-.stroke-blue-300 {
-  stroke: #8b98c8; }
-
-.stroke-blue-500 {
-  stroke: #3e53a4; }
-
-.stroke-blue-700 {
-  stroke: #314183; }
-
-.stroke-cyan {
-  stroke: #009dbf; }
-
-.stroke-cyan-300 {
-  stroke: #66C4D9; }
-
-.stroke-cyan-500 {
-  stroke: #009dbf; }
-
-.stroke-cyan-700 {
-  stroke: #007D99; }
-
-.stroke-dark-green {
-  stroke: #00a740; }
-
-.stroke-dark-green-300 {
-  stroke: #66ca8c; }
-
-.stroke-dark-green-500 {
-  stroke: #00a740; }
-
-.stroke-dark-green-700 {
-  stroke: #008500; }
-
-.stroke-dark-orange {
-  stroke: #ee6700; }
-
-.stroke-dark-orange-300 {
-  stroke: #f5a466; }
-
-.stroke-dark-orange-500 {
-  stroke: #ee6700; }
-
-.stroke-dark-orange-700 {
-  stroke: #be5000; }
-
-.stroke-danger {
-  stroke: #dc0000; }
-
-.stroke-error {
-  stroke: #dc0000; }
-
-.stroke-gray {
-  stroke: #c0c0c0; }
-
-.stroke-gray-50 {
-  stroke: #e1e1e1; }
-
-.stroke-gray-300 {
-  stroke: #9b9b9b; }
-
-.stroke-gray-400 {
-  stroke: #717171; }
-
-.stroke-gray-500 {
-  stroke: #4e4e4e; }
-
-.stroke-gray-700 {
-  stroke: #2e2e2e; }
-
-.stroke-green {
-  stroke: #72bf44; }
-
-.stroke-green-300 {
-  stroke: #aad88f; }
-
-.stroke-green-500 {
-  stroke: #72bf44; }
-
-.stroke-green-700 {
-  stroke: #5a9836; }
-
-.stroke-magenta {
-  stroke: #cf0989; }
-
-.stroke-magenta-300 {
-  stroke: #e26bb8; }
-
-.stroke-magenta-500 {
-  stroke: #cf0989; }
-
-.stroke-magenta-700 {
-  stroke: #a5076e; }
-
-.stroke-medium-blue {
-  stroke: #0072b8; }
-
-.stroke-medium-blue-300 {
-  stroke: #66aad4; }
-
-.stroke-medium-blue-500 {
-  stroke: #0072b8; }
-
-.stroke-medium-blue-700 {
-  stroke: #005a93; }
-
-.stroke-orange {
-  stroke: #ef8200; }
-
-.stroke-orange-300 {
-  stroke: #f5a66d; }
-
-.stroke-orange-500 {
-  stroke: #ef8200; }
-
-.stroke-orange-700 {
-  stroke: #bf6800; }
-
-.stroke-purple {
-  stroke: #a03f9b; }
-
-.stroke-purple-300 {
-  stroke: #c68cc3; }
-
-.stroke-purple-500 {
-  stroke: #a03f9b; }
-
-.stroke-purple-700 {
-  stroke: #80327c; }
-
-.stroke-warning {
-  stroke: #be5000; }
-
-.stroke-yellow {
-  stroke: #edb700; }
-
-.stroke-yellow-300 {
-  stroke: #f4d466; }
-
-.stroke-yellow-500 {
-  stroke: #edb700; }
-
-.stroke-yellow-700 {
-  stroke: #bd9100; }
 
 .miller-columns {
   margin-bottom: 20px; }
@@ -2308,17 +1972,16 @@ a.list-group-item.active .badge {
 #loading-bar {
   z-index: 10002; }
 #loading-bar .bar {
-  background-color: #26C6DA !important;
-  height: 3px; }
+  background-color: #fff !important;
+  height: 2px; }
 #loading-bar .peg {
   box-shadow: rgba(8, 47, 68, 0.5) 1px 0 6px 1px;
-  height: 3px; }
+  height: 2px; }
 
 #loading-bar-spinner {
   display: block;
   position: fixed;
   z-index: 10002;
-  color: #fff;
   top: 10px;
   left: 10px; }
 #loading-bar-spinner .spinner-icon {
@@ -3627,7 +3290,7 @@ tags-input .autocomplete .suggestion-item.selected em {
   outline: none; }
 
 #header, header {
-  background-image: linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%); }
+  background-image: linear-gradient(90deg, #3e53a4 0%, #cf0989 100%); }
 #header .navbar, header .navbar {
   margin-bottom: 0; }
 #header .navbar li.first a, header .navbar li.first a {
@@ -4189,29 +3852,6 @@ a.app-launcher {
 .progress-bar {
   background-color: #3e53a4; }
 
-.spinner {
-  -webkit-animation: fa-spin .7s infinite linear;
-          animation: fa-spin .7s infinite linear; }
-.spinner-lg {
-  font-size: 36px; }
-.spinner-ko {
-  color: #efefef; }
-
-@-webkit-keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg); } }
-
-@keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg); } }
 .progress-bar-success {
   background-color: #008500; }
 
