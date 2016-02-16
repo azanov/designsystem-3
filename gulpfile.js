@@ -164,6 +164,20 @@ gulp.task('copy:json-core-data', [], function() {
     .pipe(gulp.dest('./build/core/data/'));
 });
 
+
+//copy angular-i18n files from bower_components to module folder
+gulp.task('copy:angular-i18n', [], function() {
+  gulp.src([
+      './app/bower_components/angular-i18n/angular-locale_en-us.js',
+      './app/bower_components/angular-i18n/angular-locale_es-us.js',
+      './app/bower_components/angular-i18n/angular-locale_fr-fr.js',
+      './app/bower_components/angular-i18n/angular-locale_ja-jp.js',
+      './app/bower_components/angular-i18n/angular-locale_pt-br.js'
+    ])
+    .pipe(gulp.dest('./app/modules/i18n/angular-i18n'));
+});
+
+
 //copy localization json
 gulp.task('copy:json-i18n-data', [], function() {
   gulp.src([
@@ -234,7 +248,7 @@ gulp.task('serve-build', [], function() {
 
 
 //build
-gulp.task('build', ['sass-dist', 'clean:dist'], function() {
+gulp.task('build', ['sass-dist', 'clean:dist', 'copy:angular-i18n'], function() {
   runSequence(
     'usemin',
     'copy:modules',
@@ -253,7 +267,7 @@ gulp.task('build', ['sass-dist', 'clean:dist'], function() {
 gulp.task('default', ['watch'], function() {});
 
 // Watch
-gulp.task('watch', ['browser-sync', 'sass'], function() {
+gulp.task('watch', ['browser-sync', 'sass', 'copy:angular-i18n'], function() {
 
   gulp.watch(['app/assets/sass/**/*.scss', 'app/modules/**/*.scss'], {interval: 500}, ['sass']);
 
