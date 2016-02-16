@@ -141,7 +141,7 @@
       url: '/patterns/404',
       templateUrl: 'modules/patterns/templates/404.html',
       controller: '404Controller'
-    })
+    });
 
 
 
