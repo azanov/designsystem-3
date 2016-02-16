@@ -14,19 +14,19 @@
       url: '/overview',
       templateUrl: 'modules/hamburger/templates/hamburger-overview.html',
       data: {
-        pageTitle: 'Full-Time Hamburger Menu - Overview',
+        pageTitle: 'Hamburger Menu - Overview',
         access: 'public',
         bodyClass: ''
       }
     })
 
-    .state('hamburger.seven', {
-      url: '/hamburger/seven',
-      templateUrl: 'modules/hamburger/templates/hamburger-seven.html',
+    .state('hamburger.slide', {
+      url: '/slide',
+      templateUrl: 'modules/hamburger/templates/hamburger-slide.html',
       data: {
-        pageTitle: 'Full-Time Hamburger Menu',
+        pageTitle: 'Split Views',
         access: 'public',
-        bodyClass: 'hamburger hamburger-white-open'
+        bodyClass: 'hamburger hamburger-slide'
       }
     });
 
