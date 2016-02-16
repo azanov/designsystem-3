@@ -32,8 +32,7 @@
     'duScroll',
     'ui.select',
     'ngTagsInput',
-    'slickCarousel',
-    'pageslide-directive'
+    'slickCarousel'
   ]);
 
 })();

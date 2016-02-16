@@ -6,11 +6,7 @@
 
     var _this = this;
 
-    _this.toggle = function () {
-      $log.debug('clicked');
-    };
-
-
+    _this.showHeaderFooter = false;
 
   });
 
