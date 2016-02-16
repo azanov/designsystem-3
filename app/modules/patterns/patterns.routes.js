@@ -143,13 +143,6 @@
       controller: '404Controller'
     })
 
-    .state('patterns.hamburger', {
-      url: '/hamburger',
-      templateUrl: 'modules/patterns/templates/hamburger-overview.html',
-      controller: 'HamburgerController'
-    });
-
-
 
 
 
