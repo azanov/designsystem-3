@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.4.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Thu Feb 11 2016 12:33:57 GMT-0500 (EST) 
+ * Built Tue Feb 16 2016 14:27:28 GMT-0500 (EST) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -849,6 +849,19 @@ License - nucleoapp.com/license/
 Created using IcoMoon - icomoon.io
 
 -------------------------------- */
+.nc-icon-fw, .nc-fw {
+  width: 1.28571em;
+  text-align: center; }
+
+.nc-icon-mini.x4 {
+  font-size: 4em; }
+
+.nc-icon-mini.x5 {
+  font-size: 5em; }
+
+.nc-icon-mini.x6 {
+  font-size: 6em; }
+
 @font-face {
   font-family: 'Nucleo Mini';
   src: url("../fonts/nucleo-mini.eot");
@@ -860,18 +873,20 @@ Created using IcoMoon - icomoon.io
 -------------------------*/
 .nc-icon-mini {
   display: inline-block;
-  font: normal normal normal 14px/1 "Nucleo Mini";
+  font: normal normal normal 12px/1 "Nucleo Mini";
+  font-size: inherit;
   speak: none;
   text-transform: none;
-  vertical-align: -2px;
   /* Better Font Rendering */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+.btn .nc-icon-mini {
+  font-size: 12px; }
 
 /*------------------------
   change icon size
 -------------------------*/
-.nc-icon-mini.lg {
+.nc-icon-mini.lg, .nc-lg {
   font-size: 1.33333333em;
   vertical-align: -16%; }
 
@@ -906,7 +921,7 @@ Created using IcoMoon - icomoon.io
   left: -1.57143em;
   top: 0.14286em;
   text-align: center; }
-.nc-icon-ul > li > .nc-icon-mini.lg {
+.nc-icon-ul > li > .nc-icon-mini.lg, .nc-icon-ul > li > .nc-lg {
   top: 0;
   left: -1.35714em; }
 .nc-icon-ul > li > .nc-icon-mini.circle, .nc-icon-ul > li > .nc-icon-mini.square {
@@ -7527,7 +7542,7 @@ tags-input .autocomplete .suggestion-item.selected em {
   outline: none; }
 
 #header, header {
-  background-image: linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%); }
+  background-image: linear-gradient(90deg, #3e53a4 0%, #cf0989 100%); }
 #header .navbar, header .navbar {
   margin-bottom: 0; }
 #header .navbar li.first a, header .navbar li.first a {
@@ -8722,6 +8737,8 @@ td.centered, th.centered {
   line-height: 1.42857;
   height: 30px;
   font-size: 12px; }
+.toolbar .btn .nc-icon-mini {
+  font-size: 11px; }
 .toolbar select {
   font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.42857;
