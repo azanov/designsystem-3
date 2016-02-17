@@ -16,6 +16,11 @@
     border: 0;
     border-radius: 0;
     border-bottom: 0;
+
+  }
+
+  .offcanvas.sliding {
+    box-shadow: 3px 0 10px hsla(0, 0, 0, .3);
   }
 
   .navbar-toggle {
@@ -51,7 +56,7 @@
     left: 0;
     z-index: 1040;
     background-color: hsla(0, 0, 0, 0);
-    &.canvas-slid {
+    &.canvas-slid, ~ .canvas-slid {
       display: block;
       background-color: hsla(0, 0, 0, .5);
       visibility: visible;
