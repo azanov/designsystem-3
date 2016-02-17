@@ -8,6 +8,10 @@
 
     _this.showHeaderFooter = false;
 
+    _this.show.bs.offcanvas	= function () {
+      $log.debug('shown');
+    };
+
   });
 
 })();
