@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.4.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Tue Feb 16 2016 14:46:33 GMT-0500 (EST) 
+ * Built Wed Feb 17 2016 15:11:16 GMT-0500 (EST) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -3623,7 +3623,6 @@ a.app-launcher {
     clear: both;
     float: none; } }
 .site-content {
-  min-height: 550px;
   min-height: calc(100vh - (50px + 40px + 44px)); }
 
 .footer-wrapper {
@@ -5134,3 +5133,59 @@ td.centered, th.centered {
 
 .framed {
   border: 1px solid #e1e1e1; }
+
+@media (min-width: 992px) {
+  body.hamburger-auto {
+    padding: 30px 0 0 300px; } }
+.hamburger header {
+  display: none; }
+.hamburger .close-burger {
+  margin: 10px; }
+.hamburger .site-content {
+  min-height: calc(100vh - (40px + 44px)); }
+.hamburger .navbar-default {
+  background-color: #af4343;
+  background-image: linear-gradient(90deg, #3e53a4 0%, #cf0989 100%);
+  border: 0;
+  border-radius: 0;
+  border-bottom: 0; }
+.hamburger .offcanvas.sliding {
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3); }
+.hamburger .navbar-toggle {
+  display: inline-block;
+  position: relative;
+  float: left;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-left: 15px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px; }
+.hamburger .navbar-brand.brand-text {
+  font-family: 'PrecisionSans_W_Rg', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: normal; }
+.hamburger.hamburger-auto .navmenu .list-group {
+  margin-top: 60px; }
+.hamburger .burger-backdrop {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity .2s linear;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #000; }
+.hamburger .burger-backdrop.canvas-slid {
+  display: block;
+  background-color: #000;
+  visibility: visible;
+  opacity: .5; }
+
+body.hamburger.hamburger-slide[style="overflow: hidden;"] .burger-backdrop {
+  background-color: #000;
+  visibility: visible;
+  opacity: .5; }
