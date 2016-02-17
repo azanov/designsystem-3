@@ -14,7 +14,7 @@
       url: '/overview',
       templateUrl: 'modules/hamburger/templates/hamburger-overview.html',
       data: {
-        pageTitle: 'Hamburger Menu - Overview',
+        pageTitle: 'Overview: Hamburger Menu',
         access: 'public',
         bodyClass: ''
       }
@@ -24,7 +24,7 @@
       url: '/slide',
       templateUrl: 'modules/hamburger/templates/hamburger-slide.html',
       data: {
-        pageTitle: 'Hamburger Menu - Slide',
+        pageTitle: 'Slide Hamburger Menu',
         access: 'public',
         bodyClass: 'hamburger hamburger-slide'
       }
@@ -33,9 +33,18 @@
       url: '/push',
       templateUrl: 'modules/hamburger/templates/hamburger-push.html',
       data: {
-        pageTitle: 'Hamburger Menu - Push',
+        pageTitle: 'Push Hamburger Menu',
         access: 'public',
         bodyClass: 'hamburger hamburger-push'
+      }
+    })
+    .state('hamburger.auto', {
+      url: '/auto',
+      templateUrl: 'modules/hamburger/templates/hamburger-auto.html',
+      data: {
+        pageTitle: 'Auto Hamburger Menu',
+        access: 'public',
+        bodyClass: 'hamburger hamburger-auto'
       }
     });
 
