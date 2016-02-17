@@ -159,17 +159,17 @@
 
 
 
-    $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
-      $log.debug(
-        'To State:', toState,
-        'From state:', fromState
-      );
-
-      if (!toState || !toState.data) {
-        return;
-      }
-
-    });
+    // $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+    //   $log.debug(
+    //     'To State:', toState,
+    //     'From state:', fromState
+    //   );
+    //
+    //   if (!toState || !toState.data) {
+    //     return;
+    //   }
+    //
+    // });
 
 
     //STATE CHANGE ERROR
