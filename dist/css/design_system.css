@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.4.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Thu Feb 18 2016 09:37:36 GMT-0500 (EST) 
+ * Built Thu Feb 18 2016 12:32:43 GMT-0500 (EST) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -2089,7 +2089,6 @@ select:hover {
   border-width: 2px;
   border-color: #3e53a4; }
 .logo-button-usps.disabled {
-  background-image: url("../images/logo-usps-disabled.png");
   cursor: not-allowed; }
 .logo-button-usps.disabled:hover {
   border: 1px solid #9b9b9b;
@@ -3998,6 +3997,7 @@ a.app-launcher {
             flex-direction: column;
     -webkit-align-items: center;
         -ms-flex-align: center;
+                -ms-grid-row-align: center;
             align-items: center;
     -webkit-justify-content: space-around;
         -ms-flex-pack: distribute;
@@ -5256,6 +5256,7 @@ td.centered, th.centered {
           flex-direction: row;
   -webkit-align-items: center;
       -ms-flex-align: center;
+              -ms-grid-row-align: center;
           align-items: center; }
 .landing header {
   border-bottom: solid 1px rgba(255, 255, 255, 0.15); }
