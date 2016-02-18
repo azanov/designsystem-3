@@ -6,7 +6,7 @@
 
     var _this = this;
 
-
+    _this.year = new Date().getFullYear();
 
   });
 
