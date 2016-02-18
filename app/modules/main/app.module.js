@@ -50,6 +50,11 @@
     });
   });
 
+  angular.module('app')
+    .config(function(cfpLoadingBarProvider) {
+      cfpLoadingBarProvider.spinnerTemplate = '<div id="loading-bar-spinner"><i class="fa fa-circle-o-notch fa-spin spinner"></i></div>';
+    });
+
   // UI ROUTER CONFIG
   angular.module('app').config(function($stateProvider) {
     $stateProvider.state('weblanding', {
