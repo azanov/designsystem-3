@@ -1,0 +1,14 @@
+<svg class="nc-icon glyph" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16"><g>
+<g transform="rotate(225 7.5 7.5)" fill="#444444" class="nc-dots-06-group">
+<circle fill="#444444" cx="7.5" cy="1.5" r="1.5"></circle>
+<circle fill="#444444" cx="7.5" cy="13.5" r="1.5" style="opacity: 0.4;"></circle>
+<circle fill="#444444" cx="1.5" cy="7.5" r="1.5" style="opacity: 0.6;"></circle>
+<circle fill="#444444" cx="13.5" cy="7.5" r="1.5" style="opacity: 0.4;"></circle>
+<circle fill="#444444" cx="11.7426405" cy="3.2573593" r="1.5" style="opacity: 0.4;"></circle>
+<circle fill="#444444" cx="3.2573593" cy="11.7426405" r="1.5" style="opacity: 0.4;"></circle>
+<circle fill="#444444" cx="3.2573593" cy="3.2573593" r="1.5" style="opacity: 0.8;"></circle>
+<circle fill="#444444" cx="11.7426405" cy="11.7426405" r="1.5" style="opacity: 0.4;"></circle>
+</g>
+</g>
+<script>function dots6Step(t){startDots6||(startDots6=t);var e=t-startDots6,a=parseInt(Math.min(e/100,8));if(8==a)(a=0);var r=45*a;800&gt;e||(startDots6+=800);if(groupDots6[0]){window.requestAnimationFrame(dots6Step);for(j = 0;  groupDots6Number &gt; j ; j++) {groupDots6[j].setAttribute("transform","rotate("+r+" 7.5 7.5)")}}}!function(){var t=0;window.requestAnimationFrame||(window.requestAnimationFrame=function(e){var a=(new Date).getTime(),r=Math.max(0,16-(a-t)),n=window.setTimeout(function(){e(a+r)},r);return t=a+r,n})}();var groupDots6=document.getElementsByClassName("nc-dots-06-group"),startDots6=null,groupDots6Number = groupDots6.length;window.requestAnimationFrame(dots6Step);</script>
+</svg>

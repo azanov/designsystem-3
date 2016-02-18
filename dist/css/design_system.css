@@ -2308,16 +2308,17 @@ a.list-group-item.active .badge {
 #loading-bar {
   z-index: 10002; }
 #loading-bar .bar {
-  background-color: #fff !important;
-  height: 2px; }
+  background-color: #26C6DA !important;
+  height: 3px; }
 #loading-bar .peg {
   box-shadow: rgba(8, 47, 68, 0.5) 1px 0 6px 1px;
-  height: 2px; }
+  height: 3px; }
 
 #loading-bar-spinner {
   display: block;
   position: fixed;
   z-index: 10002;
+  color: #fff;
   top: 10px;
   left: 10px; }
 #loading-bar-spinner .spinner-icon {
@@ -4188,6 +4189,29 @@ a.app-launcher {
 .progress-bar {
   background-color: #3e53a4; }
 
+.spinner {
+  -webkit-animation: fa-spin .7s infinite linear;
+          animation: fa-spin .7s infinite linear; }
+.spinner-lg {
+  font-size: 36px; }
+.spinner-ko {
+  color: #efefef; }
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg); } }
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg); } }
 .progress-bar-success {
   background-color: #008500; }
 
