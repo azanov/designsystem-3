@@ -33,7 +33,7 @@
     'ui.select',
     'ngTagsInput',
     'slickCarousel',
-    'dndLists'
+    angularDragula(angular)
   ]);
 
 })();
