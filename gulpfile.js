@@ -3,24 +3,13 @@
 
 var gulp       = require('gulp'),
   browserSync  = require('browser-sync').create(),
-  cache        = require('gulp-cache'),
-  concat       = require('gulp-concat'),
   del          = require('del'),
   filter       = require('gulp-filter'),
-  gutil        = require('gulp-util'),
   header       = require('gulp-header'),
-  imagemin     = require('gulp-imagemin'),
-  jshint       = require('gulp-jshint'),
-  minifyCss    = require('gulp-minify-css'),
-  minifyHtml   = require('gulp-minify-html'),
+  cssnano      = require('gulp-cssnano'),
   ngAnnotate   = require('gulp-ng-annotate'),
-  notify       = require('gulp-notify'),
-  plumber      = require('gulp-plumber'),
-  postcss      = require('gulp-postcss'),
   autoprefixer = require('gulp-autoprefixer'),
-  printfiles   = require('gulp-print'),
   reload       = browserSync.reload,
-  rename       = require('gulp-rename'),
   replace      = require('gulp-replace'),
   rev          = require('gulp-rev'),
   runSequence  = require('run-sequence'),
@@ -51,23 +40,13 @@ gulp.task('clean:dist', function(cb) {
 gulp.task('sass', function() {
   return sass('./app/assets/sass/**/*', { sourcemap: true })
     .on('error', sass.logError)
-
     .pipe(autoprefixer({
       browsers: ['last 2 versions']
     }))
     // For inline sourcemaps
     .pipe(sourcemaps.write())
-
-
-    // For file sourcemaps
-    // .pipe(sourcemaps.write('maps', {
-    //   includeContent: false,
-    //   sourceRoot: 'source'
-    // }))
     .pipe(header(banner, { pkg: pkg }))
-
     .pipe(gulp.dest('./app/assets/css'))
-
     .pipe(browserSync.stream());
 });
 
@@ -83,10 +62,7 @@ gulp.task('sass-dist', function() {
     .pipe(autoprefixer({
       browsers: ['last 2 versions']
     }))
-
     .pipe(header(banner, { pkg: pkg }))
-
-    //.pipe(gulp.dest('./build/assets/css'))
     .pipe(cssfilter)
     .pipe(gulp.dest('./dist/css')
    
@@ -99,24 +75,18 @@ gulp.task('sass-dist', function() {
 gulp.task('usemin', function() {
   gulp.src('./app/index.html')
     .pipe(usemin({
-      // css: [minifyCss()],
-      css: [minifyCss, rev],
-      // html: [minifyHtml({
-      //   empty: true
-      // })],
-      vendorjs: [uglify({
-        mangle: true
-      }), rev],
+      css: [
+        cssnano, 
+        rev
+      ],
+      vendorjs: [
+        uglify({mangle: true}),
+        rev
+      ],
       appjs: [
         replace('debug: true', 'debug: false'),
-        ngAnnotate({
-          remove: true,
-          add: true,
-          single_quotes: true
-        }),
-        uglify({
-          mangle: true
-        }),
+        ngAnnotate({remove: true, add: true, single_quotes: true}),
+        uglify({mangle: true}),
         rev
       ]
     }))
