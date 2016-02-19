@@ -44,6 +44,9 @@ link, a {
   transition: border-color $very-fast linear, box-shadow $very-fast linear $lightning;
   box-shadow: none;  //overrides inline box-shadow which makes the transition feel wrong
 }
+.ats-switch {
+  transition: border-color $very-fast linear, box-shadow $very-fast linear $lightning;
+}
 
 //Handle focus states for checkboxes & radios
 .control input ~ .control-indicator {
@@ -114,7 +117,7 @@ link, a {
 
 //*********DROPDOWN MENU********//
 //dropdown menus that start with "pb" & contain "stagger"
-.dropdown-menu {
+.dropdown-menu:not(.pb-animate-menu) {
   //TODO: Need to discuss this with Dan & Steve
   //There's a display: block; attribute on this from bootstrap which shows & hides this
   //This is great when there's no animations, but I can't animate display properties, and I can't
@@ -125,19 +128,25 @@ link, a {
   //**************//
   opacity: 0;
   animation: fadeOut $very-fast linear forwards;
-  li {
+  a { //to transition highlighted list items
+    transition: background-color $very-fast linear;
+  }
+  &[class*="pb-forwardStagger"] li {
     opacity: 0;
   }
+
 }
-.open > .dropdown-menu {
+.open > .dropdown-menu:not(.pb-animate-menu) {
   pointer-events: auto;
   animation: fadeInDownMini $very-fast ease-out forwards;
-  li {
+  &[class*="pb-forwardStagger"] li {
+    //forcing this to include pb forward stagger so this only affects
+    //staggered input - the effect would be odd otherwise
     animation-name: slideInRightSmall;
     animation-duration: $very-fast;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-    //divider is so we don't end up animating this along with our menu items
+    //so we don't end up animating this along with our menu items
     &.divider {
       animation-name: fadeIn;
     }
