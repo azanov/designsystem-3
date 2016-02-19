@@ -11,7 +11,7 @@
   animation-iteration-count: infinite;
 }
 
-.pb-animation-base {
+%pb-animation-base {
   animation-duration: $medium;
   animation-fill-mode: both;
   animation-timing-function: linear;
@@ -22,92 +22,92 @@
 //******** Accent animation names *********//
 
 .pb-bounce {
-  @extend .pb-animation-base;
+  @extend %pb-animation-base;
   animation-name: bounce;
   transform-origin: center bottom;
 }
 
 .pb-flash {
-  @extend .pb-animation-base;
+  @extend %pb-animation-base;
   animation-name: flash;
 }
 
 .pb-flip {
-  @extend .pb-animation-base;
+  @extend %pb-animation-base;
   backface-visibility: visible;
   animation-name: flip;
 }
 
 .pb-headShake {
-  @extend .pb-animation-base;
+  @extend %pb-animation-base;
   animation-timing-function: ease-in-out;
   animation-name: headShake;
 }
 
 .pb-hinge {
-  @extend .pb-animation-base;
+  @extend %pb-animation-base;
   animation-name: hinge;
   animation-duration: 2s;
 }
 
 .pb-jello {
-  @extend .pb-animation-base;
+  @extend %pb-animation-base;
   animation-name: jello;
   transform-origin: center;
 }
 
 .pb-pop {
-  @extend .pb-animation-base;
+  @extend %pb-animation-base;
   animation-name: pop;
 }
 
 .pb-pulse {
-  @extend .pb-animation-base;
+  @extend %pb-animation-base;
   animation-name: pulse;
 }
 
 .pb-rubberBand {
-  @extend .pb-animation-base;
+  @extend %pb-animation-base;
   animation-name: rubberBand;
 }
 
 .pb-scaleDown {
   backface-visibility: visible;
-  @extend .pb-animation-base;
+  @extend %pb-animation-base;
   animation-duration: $very-fast;
   animation-name: scaleDown;
 }
 
 .pb-scaleUp {
   backface-visibility: visible;
-  @extend .pb-animation-base;
+  @extend %pb-animation-base;
   animation-name: scaleUp;
 }
 
 .pb-scaleUpPop {
   backface-visibility: visible;
-  @extend .pb-animation-base;
+  @extend %pb-animation-base;
   animation-name: scaleUpPop;
 }
 
 .pb-shake {
-  @extend .pb-animation-base;
+  @extend %pb-animation-base;
   animation-name: shake;
 }
 
 .pb-swing {
-  @extend .pb-animation-base;
+  @extend %pb-animation-base;
   transform-origin: top center;
   animation-name: swing;
 }
 
 .pb-tada {
-  @extend .pb-animation-base;
+  @extend %pb-animation-base;
   animation-name: tada;
 }
 
 .pb-wobble {
-  @extend .pb-animation-base;
+  @extend %pb-animation-base;
   animation-name: wobble;
 }
 
@@ -194,6 +194,14 @@
 
 .pb-fadeOutDown {
 	@include pb-animate('fadeOutDown', $fast, 'linear');
+}
+
+.pb-fadeInDown {
+	@include pb-animate('fadeInDown', $fast, 'linear');
+}
+
+.pb-fadeOutDownMini {
+	@include pb-animate('fadeInDownMini', $fast, 'linear');
 }
 
 .pb-fadeOutDownBig {

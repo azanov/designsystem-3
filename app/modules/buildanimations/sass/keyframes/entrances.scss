@@ -162,6 +162,31 @@
 }
 
 
+@keyframes fadeInDownMini {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDownSubtle {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -491,10 +516,12 @@
   from {
     transform: translate3d(20%, 0, 0);
     visibility: visible;
+    opacity: 0;
   }
 
   to {
     transform: translate3d(0, 0, 0);
+    opacity: 1;
   }
 }
 
@@ -521,6 +548,10 @@
   }
 
   50% {
+    opacity: 1;
+  }
+
+  to {
     opacity: 1;
   }
 }

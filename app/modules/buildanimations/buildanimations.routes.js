@@ -4,7 +4,6 @@
 
   angular.module('pb.ds.buildanimations').config(function($stateProvider) {
     $stateProvider.state('buildanimations', {
-        abstract: true,
         url: '',
         templateUrl: 'modules/buildanimations/templates/buildanimations.html',
         controller: 'BuildAnimationsController as vm',
