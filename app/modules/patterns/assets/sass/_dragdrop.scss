@@ -1,83 +1,78 @@
-.drag-item {
-  
-  
-  &:hover {
-    background-color: green;
-    cursor: pointer;
-  }
-  
-  &:active {
-    cursor: grab;
-    background-color: $pb-gray-300;
-  }
-  
-  //
-  &.gu-transit {
-    color: red;
-    background-color: blue;
-    border: 2px dashed orange;
-  }
-  
-  &.gu-mirror {
-    cursor: grabbing;
-    opacity: 0.8;
-    background-color: $pb-gray-300;
-    transition: opacity 0.4s ease-in-out;
-    box-shadow: 0px 5px 10px -5px rgba(0,0,0,.5);
-  }
-}
-
-
-/*
- * note that styling gu-mirror directly is a bad practice because it's too generic.
- * you're better off giving the draggable elements a unique class and styling that directly!
+  /**
+ * For the correct positioning of the placeholder element, the dnd-list and
+ * it's children must have position: relative
  */
-
-
-.ex-moved {
-  background-color: #e74c3c;
-}
-.ex-over {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-.handle {
-  padding: 0 5px;
-  margin-right: 5px;
-  background-color: rgba(0, 0, 0, 0.4);
-  cursor: move;
+ul[dnd-list],
+ul[dnd-list] > li {
+	position: relative;
 }
 
+/**
+ * The dnd-list should always have a min-height,
+ * otherwise you can't drop to it once it's empty
+ */
+ul[dnd-list] {
+    min-height: 42px;
+    padding-left: 0px;
+}
 
-/* DOCUMENTATION TO BE MOVED */
-.table-dragdrop {
-  border: 0;
-  font-size: 10px;
-  
-  thead tr.category th {
-    font-weight: bold;
-    color: #000;
-  }
-  
-  thead tr th {
-    border: 0;
-    background-color: transparent;    
-  }
-  
-  .column {
-    width: 100px;
-    vertical-align: top;
-  }
-  
-  tbody tr td {
-    
-    &.no-border {
-      border: 0;
-      vertical-align: middle;
-    }
-    
-    &:empty {
-      background-color: #f2f2f2;  
-    }
-    
-  }
+ul[dnd-list] .dndDragging {
+    color: green;
+    box-shadow: 0px 5px 5px -5px rgba(0,0,0,.5);
+    opacity: 1.0;
+    transform: rotate(-1deg);
+    cursor: -webkit-grab;
+    overflow: visible;
+    display: block;
+    cursor: grabbing;
+    color: yellow;
+      
+      &.selected {
+        height: 100px;
+      }
+}
+
+/**
+ * The dndDraggingSource class will be applied to
+ * the source element of a drag operation. It makes
+ * sense to hide it to give the user the feeling
+ * that he's actually moving it.
+ */
+ul[dnd-list] .dndDraggingSource {
+    display: none;
+}
+
+/**
+ * An element with .dndPlaceholder class will be
+ * added to the dnd-list while the user is dragging
+ * over it.
+ */
+ul[dnd-list] .dndPlaceholder {
+    display: block;
+    background-color: #ddd;
+    border: 1px dotted #000;
+    min-height: 42px;
+}
+
+/**
+ * The dnd-lists's child elements currently MUST have
+ * position: relative. Otherwise we can not determine
+ * whether the mouse pointer is in the upper or lower
+ * half of the element we are dragging over. In other
+ * browsers we can use event.offsetY for this.
+ */
+ul[dnd-list] li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+}
+
+/**
+ * Show selected elements in green
+ */
+ul[dnd-list] li.selected {
+    background-color: #dff0d8;
+    color: #3c763d;
 }
