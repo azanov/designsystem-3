@@ -26,6 +26,17 @@
         bodyClass: 'patterns'
       }
     })
+    
+    .state('patterns.dragdrop', {
+      url: '/dragdrop',
+      templateUrl: 'modules/patterns/templates/drag-drop.html',
+      controller: 'DragDropController',
+      data: {
+        pageTitle: 'Patterns - Drag Drop',
+        access: 'public',
+        bodyClass: 'patterns'
+      }
+    })
 
     .state('patterns.welcome', {
       url: '/welcome',
@@ -276,7 +287,6 @@
       templateUrl: 'modules/patterns/templates/forgot-password.html',
       controller: 'ForgotPasswordController as forgot'
     })
-
 
 
     .state('patterns.registration', {
