@@ -1,209 +1,26 @@
-<div class="doc-hero">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="hero-header">
-          <div class="eyebrow">Patterns</div>
-          <h1>Drag and Drop</h1>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="container spacer-top-xl">
-  
-  <div class="row">
-    <div class="col-xs-12">
-    
-      <table class="table table-dragdrop">
-        <thead>
-          <tr class="category">
-            <th></th>
-            <th></th>
-            <th class="column">What does the page contain to indicate drag and drop?</th>
-            <th class="column">What happens when the mouse hovers over the draggable object?</th>
-            <th class="column">What happens when the mouse is pressed on the draggable object but dragging has not initiated?</th>
-            <th class="column">What happens when drag starts?</th>
-            <th class="column">What happens when I drag over a valid drop target?</th>
-            <th class="column">What happens when I drag over an invalid drop target?</th>
-            <th class="column">What happens when I drag back to the original position?</th>
-            <th class="column">What happens when the drop is accepted?</th>
-            <th class="column">What happens when the drop is rejected?</th>
-            <th class="column">What happens when dropped over the original position?</th>
-          </tr>
-          <tr>
-            <th></th>
-            <th></th>
-            <th colspan="10" class="text-center">
-              <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380.1 10">
-                <style>
-                  .st0{fill:none;stroke:#cf0989;stroke-width:0.5;stroke-miterlimit:10;} .st1{fill:none;stroke:#cf0989;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:1.9952,1.9952;} .st2{fill:#cf0989;} .st3{fill:#FFFFFF;} .st4{fill:none;} .st5{font-family:&apos;Helvetica&apos;;} .st6{font-size:6px;}
-                </style>
-                <path class="st0" d="M2.5 5h1"/>
-                <path class="st1" d="M5.5 5h370.1"/>
-                <path class="st0" d="M376.6 5h1"/>
-                <path class="st2" d="M3 6.7L0 5l3-1.8zm374.1 0l3-1.7-3-1.8z"/>
-                <path class="st3" d="M174.8 0h30.5v10h-30.5z"/>
-                <path class="st4" d="M164.6 2.2h50.9v5.5h-50.9z"/>
-                <text transform="translate(178.73 6.55)" class="st2 st5 st6">
-                  ACTION
-                </text>
-              </svg>
-            </th>
-          </tr>
-          <tr>
-            <th></th>
-            <th></th>
-            <th class="text-center">Page Load</th>
-            <th class="text-center">Mouse Hover</th>
-            <th class="text-center">Mouse Down</th>
-            <th class="text-center">Drag Initiated</th>
-            <th class="text-center">Drag Over Valid Target</th>
-            <th class="text-center">Drag Over Invalid Target</th>
-            <th class="text-center">Drag Over Original Position</th>
-            <th class="text-center">Drop Accepted</th>
-            <th class="text-center">Drop Rejected</th>
-            <th class="text-center">Drop On Original Position</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td rowspan="7" class="no-border text-center text-magenta">Objects</td>
-            <td class="no-border text-right">Page</td>
-            <td>messaging indicating drag an drop functionality, if necessary</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td class="no-border text-right">Cursor</td>
-            <td><i class="fa fa-mouse-pointer"></i></td>
-            <td><i class="fa fa-hand-pointer-o"></i></td>
-            <td><i class="fa fa-hand-rock-o"></i></td>
-            <td><i class="fa fa-hand-rock-o"></i></td>
-            <td><i class="fa fa-hand-rock-o"></i></td>
-            <td><i class="fa fa-hand-rock-o"></i></td>
-            <td><i class="fa fa-hand-rock-o"></i></td>
-            <td><i class="fa fa-mouse-pointer"></i></td>
-            <td><i class="fa fa-mouse-pointer"></i></td>
-            <td><i class="fa fa-mouse-pointer"></i></td>
-          </tr>
-          
-          <tr>
-            <td class="no-border text-right">Tooltip</td>
-            <td></td>
-            <td>click and hold to drag</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td class="no-border text-right">Drag Object</td>
-            <td>normal</td>
-            <td>thumb/gripper control may appears on certain objects</td>
-            <td>object turns gray by 10%</td>
-            <td>object changes to 80% opacity, drop shadow appears behind object</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>returns to full opacity </td>
-            <td>snaps back to original position and returns to full opacity</td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td class="no-border text-right">Drag Object Original Position</td>
-            <td>normal</td>
-            <td></td>
-            <td></td>
-            <td>background turns gray and maintains position until cursor is no longer over container, then adjacent objects move up to fill</td>
-            <td></td>
-            <td></td>
-            <td>background maintains gray and position</td>
-            <td>returns to original background color</td>
-            <td>returns to original background color</td>
-            <td>returns to original background color</td>
-          </tr>
-          
-          <tr>
-            <td class="no-border text-right">Drop Target</td>
-            <td>normal</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>adjacent objects shift to make room for new drag object, target area appears with a black 5% opacity background and a black 10% opacity dotted line; any text, image or button inside of drag target does not darken</td>
-            <td></td>
-            <td>adjacent objects shift to make room for new drag object, target area appears with a black 5% opacity background and a black 10% opacity dotted line; any text, image or button inside of drag target does not darken</td>
-            <td>returns to original background color</td>
-            <td></td>
-            <td></td>
-          </tr>
-          
-          <tr>
-            <td class="no-border text-right">Animation</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>target grows by 110% (use grow animation with ease in</td>
-            <td></td>
-            <td></td>
-            <td>target shrinks down to original size (use shrink animation with ease out)</td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    
-    </div>
-  </div>
-  
   <div class="row">
 
-    <div class="col-md-6">
-      <div class="panel panel-default drag-container">
-        <div class="panel-body" dragula="'first-bag'" dragula-model="dragdrop.items.unselected">
-          <div class="drag-item" ng-repeat="item in dragdrop.items.unselected track by item.id" uib-tooltip="Click and hold to drag." tooltip-enable="dragdrop.tooltip.isEnabled">
-            {{::item.label}}
-          </div>
+    <div ng-repeat="(listName, list) in models.lists" class="col-md-6 ng-scope">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{listName}}</h3>
         </div>
-      </div>
-    </div>
-    
-    <div class="col-md-6">
-      <div class="panel panel-default">
-        <div class="panel-body" dragula="'first-bag'" dragula-model="dragdrop.items.selected" >
-          <div class="drag-item" ng-repeat="item in dragdrop.items.selected track by item.id" uib-tooltip="Click and hold to drag." tooltip-enable="dragdrop.tooltip.isEnabled">
-            {{::item.label}}
-          </div>
+
+        <div class="panel-body">
+          <!-- The dnd-list directive allows to drop elements into it. The dropped data will be added to the referenced list -->
+          <ul dnd-list="list" class="ng-scope">
+            <!-- The dnd-draggable directive makes an element draggable and will transfer the object that was assigned to it. If an element was dragged away, you have to remove it from the original list yourself using the dnd-moved attribute -->
+            <li ng-repeat="item in list" dnd-draggable="item" dnd-moved="list.splice($index, 1)" dnd-effect-allowed="move" dnd-selected="models.selected = item" ng-class="{'selected': models.selected === item}" draggable="true">
+              {{item.label}}
+            </li>
+          </ul>
         </div>
       </div>
     </div>
 
-  </div>
-  
-  <div class="row">
-    <div class="col-md-6">
-      <pre>{{dragdrop.items.unselected | json}}</pre>
-    </div>
-    
-    <div class="col-md-6">
-      <pre>{{dragdrop.items.selected | json}}</pre>
-    </div>
+    <pre>{{ models | json}}</pre>
+
   </div>
 
 </div>

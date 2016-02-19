@@ -30,7 +30,7 @@
     .state('patterns.dragdrop', {
       url: '/dragdrop',
       templateUrl: 'modules/patterns/templates/drag-drop.html',
-      controller: 'DragDropController as dragdrop',
+      controller: 'DragDropController',
       data: {
         pageTitle: 'Patterns - Drag Drop',
         access: 'public',
@@ -265,7 +265,7 @@
     })
 
     .state('patterns.facetedsearch', {
-      url: '/facetedsearch',
+      url: '/patterns/facetedsearch',
       templateUrl: 'modules/patterns/templates/faceted-search.html'
     })
 

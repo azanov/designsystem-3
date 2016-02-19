@@ -4,42 +4,23 @@
 
   angular.module('pb.ds.patterns').controller('DragDropController', function($log, $scope) {
 
-    var _this = this;
+
     
-    _this.items = {
-      unselected: [
-        {
-          id: 0,
-          label: 'Lorem'
-        },
-        {
-          id: 1,
-          label: 'Ipsum'
-        },
-        {
-          id: 2,
-          label: 'Dolor'
-        }
-      ],
-      selected: [
-        {
-          id: 3,
-          label: 'Sit'
-        }
-      ]
+    $scope.models = {
+        selected: null,
+        lists: {"A": [], "B": []}
     };
-    
-    _this.tooltip = {
-      isEnabled: true
-    };
-    
-    $scope.$on('first-bag.drag', function(e, el, container) {
-      _this.tooltip.isEnabled = !_this.tooltip.isEnabled;
-    });
-    
-    $scope.$on('first-bag.drop', function(e, el, container) {
-      _this.tooltip.isEnabled = !_this.tooltip.isEnabled;
-    });
+
+    // Generate initial model
+    for (var i = 1; i <= 3; ++i) {
+        $scope.models.lists.A.push({label: "Item A" + i});
+        $scope.models.lists.B.push({label: "Item B" + i});
+    }
+
+    // Model to JSON for demo purpose
+    $scope.$watch('models', function(model) {
+        $scope.modelAsJson = angular.toJson(model, true);
+    }, true);
 
   });
 
