@@ -40,6 +40,16 @@
       }
     })
 
+    .state('hamburger.collapse', {
+      url: '/collapse',
+      templateUrl: 'modules/hamburger/templates/hamburger-collapse.html',
+      data: {
+        pageTitle: 'Collapsing Hamburger Menu',
+        access: 'public',
+        bodyClass: 'hamburger hamburger-collapse'
+      }
+    })
+
     .state('hamburger.auto', {
       url: '/auto',
       templateUrl: 'modules/hamburger/templates/hamburger-auto.html',
