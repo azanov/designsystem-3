@@ -1,20 +1,15 @@
 
 <div class="collapse-wrapper">
-  <div class="nav-left">
-    <ul class="list-unstyled menu" pb-left-nav>
+  <div class="nav-left" ng-class="{open : burger.open}">
+    <ul class="list-unstyled menu">
       <li>
         <a class="menu-heading"><i class="fa fa-cog fa-fw fa-lg"></i><span class="menu-title">Modules</span></a>
-        <ul class="list-unstyled menu-content">
-          <li><a href="#/leftnav?section=Module One">Module One</a></li>
-          <li><a href="#/leftnav?section=Module Two">Module Two</a></li>
-          <li><a href="#/leftnav?section=Module Three">Module Three</a></li>
-        </ul>
       </li>
     </ul>
   </div>
 
   <div class="navbar navbar-default navbar-fixed-top">
-    <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+    <button type="button" class="navbar-toggle" ng-click="burger.open = !burger.open">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>

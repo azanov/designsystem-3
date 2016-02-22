@@ -2,15 +2,14 @@
 
   'use strict';
 
-  angular.module('pb.ds.splitview').controller('HamburgerController', function($log) {
+  angular.module('pb.ds.hamburger').controller('HamburgerController', function($log) {
 
     var _this = this;
 
     _this.showHeaderFooter = false;
+    _this.open = true;
 
-    _this.show.bs.offcanvas	= function () {
-      $log.debug('shown');
-    };
+
 
   });
 
