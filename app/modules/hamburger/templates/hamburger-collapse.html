@@ -1,24 +1,25 @@
+<!-- NOTE: we have hidden the default header and this is used instead -->
+<div class="navbar navbar-default navbar-fixed-top">
+  <button type="button" class="navbar-toggle" ng-click="burger.open = !burger.open">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="navbar-brand brand-text" href="#/">Product Name</a>
+</div>
 
-<div class="collapse-wrapper">
   <div class="nav-left" ng-class="{open : burger.open}">
     <ul class="list-unstyled menu">
       <li>
-        <a class="menu-heading"><i class="fa fa-cog fa-fw fa-lg"></i><span class="menu-title">Modules</span></a>
+        <a class="menu-heading">
+          <i class="fa fa-cog fa-fw fa-lg"></i>
+          <span class="menu-title">Modules</span>
+        </a>
       </li>
     </ul>
   </div>
 
-  <div class="navbar navbar-default navbar-fixed-top">
-    <button type="button" class="navbar-toggle" ng-click="burger.open = !burger.open">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand brand-text" href="#/">Product Name</a>
-  </div>
-
-
-  <div class="container">
+  <div class="container-fluid">
     <div class="burger-backdrop"></div>
     <div class="row">
       <div class="col-md-12">
@@ -26,6 +27,4 @@
         <div ng-include="'modules/hamburger/templates/includes/fpo-content.html'"></div>
       </div>
     </div>
-
   </div>
-</div>

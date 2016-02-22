@@ -9,13 +9,10 @@
 .hamburger {
   // hide the ds header
   //TODO: find an angular way
-  header {
+  header, #header {
     display: none;
   }
 
-  .close-burger {
-    margin: 10px;
-  }
 
   .site-content {
     min-height: calc(100vh - (40px + 44px)); // 40 footer margin, 44 footer height
@@ -30,6 +27,7 @@
     border-bottom: 0;
   }
 
+
   /* Navigation Menu - Background */
   .offcanvas.sliding {
     box-shadow: 3px 0 10px hsla(0, 0, 0, .3);
@@ -41,9 +39,7 @@
     position: relative;
     float: left;
     padding: 9px 10px;
-    margin-top: 8px;
-    margin-left: 15px;
-    margin-bottom: 8px;
+    margin: 8px 0 8px 8px;
     background-color: transparent;
     background-image: none;
     border: 1px solid transparent;
@@ -53,6 +49,7 @@
   .navbar-brand.brand-text {
     font-family: 'PrecisionSans_W_Rg', 'Helvetica Neue', Arial, sans-serif;
     font-weight: normal;
+    margin-left: 0;
   }
   &.hamburger-auto .navmenu .list-group {
     margin-top: 60px;
@@ -83,18 +80,37 @@
     overflow-x: hidden;
   }
 
+  &.hamburger-push {
+    .navbar-toggle {
+      margin-left: 30px;
+    }
+    .close-burger {
+      margin: 10px;
+    }
+
+  }
+
+// collapsing version
   &.hamburger-collapse {
+
+    .container-fluid {
+      margin-left: 70px;
+    }
+    .footer-wrapper {
+      z-index: 110;
+    }
+
     .nav-left {
       position: absolute;
       width: 260px;
-      height: calc(100vh - (55px + 50px));
+      min-height: calc(100vh - (50px + 44px));
       top: 50px;
       padding: 10px;
       z-index: 100;
-      background-color: #eee;
-      box-shadow: 3px 3px 6px hsla(0, 0, 0, .5);
+      background-color: #fff;
+      box-shadow: 3px 0 6px hsla(0, 0, 0, .3);
       transition: width .8s;
-      transition-delay: width .3s;
+      transition-delay: .3s;
       .minified & {
         width: 50px;
       }
@@ -157,7 +173,9 @@
       .menu-heading {
         white-space: nowrap;
         padding: 5px 3px;
-        color: $text-color;
+        font-family: $font-family-ps-regular;
+        font-size: 14px;
+        color: $brand-primary;
         text-decoration: none;
         display: block;
         cursor: pointer;
@@ -168,7 +186,7 @@
         }
 
         &:hover {
-          background-color: transparent;
+          background-color: $bg-hover;
           transition: all .3s;
           color: $brand-primary;
         }
