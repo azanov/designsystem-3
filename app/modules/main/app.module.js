@@ -21,7 +21,6 @@
     'pb.ds.resources',
     'pb.ds.tables',
     'pb.ds.writing',
-    'pb.settings',
     'pb.ds.splitview',
     'pb.ds.help',
     'pb.ds.hamburger'
