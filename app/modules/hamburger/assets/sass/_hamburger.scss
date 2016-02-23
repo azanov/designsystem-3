@@ -1,4 +1,4 @@
-@media (min-width: 992px) {
+@media (min-width: 1400px) {
   body.hamburger-auto {
     padding: 30px 0 0 300px;
   }
@@ -7,10 +7,23 @@
 
 
 .hamburger {
+  overflow-x: hidden;
   // hide the ds header
   //TODO: find an angular way
   header, #header {
     display: none;
+  }
+
+  .container-fluid {
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+  .footer-wrapper .container {
+    width: auto;
+    padding-left: 65px;
+    padding-right: 65px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 
@@ -38,11 +51,12 @@
     display: inline-block;
     position: relative;
     float: left;
-    padding: 9px 10px;
-    margin: 8px 0 8px 8px;
+    padding: 17px 12px 17px 10px;
+    margin: 0 0 0 8px;
     background-color: transparent;
     background-image: none;
     border: 1px solid transparent;
+    border-right: 1px solid hsla(0, 0, 100%, .3);
     border-radius: 4px;
     // z-index: 2000;
   }
@@ -50,9 +64,7 @@
     font-family: 'PrecisionSans_W_Rg', 'Helvetica Neue', Arial, sans-serif;
     font-weight: normal;
     margin-left: 0;
-  }
-  &.hamburger-auto .navmenu .list-group {
-    margin-top: 60px;
+    padding-left: 12px;
   }
 
   .burger-backdrop {
@@ -74,20 +86,36 @@
     }
   }
 
-
-  body {
-    /* Without this, the body has excess horizontal scroll when the menu is open */
-    overflow-x: hidden;
+  &.hamburger-auto .navmenu .list-group {
+    margin-top: 60px;
   }
-
+  &.hamburger-slide .navmenu .list-group {
+    margin-top: 25px;
+  }
   &.hamburger-push {
-    .navbar-toggle {
-      margin-left: 30px;
+    .navmenu .list-group {
+      margin-top: 20px;
+    }
+    .main-content {
+      margin-top: 50px;
     }
     .close-burger {
-      margin: 10px;
+      cursor: pointer;
+      margin: 10px 15px;
+      width: 21px;
+      height: 21px;
+      color: #3e53a4;
+      background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9 Im5vIj8+Cjxzdmcgd2lkdGg9IjE3cHgiIGhlaWdodD0iMTdweCIgdmlld0JveD0i MCAwIDE3IDE3IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9y Zy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkv eGxpbmsiPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ry b2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVs ZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpv aW49InJvdW5kIj4KICAgICAgICA8ZyBpZD0iaWNvbi1iaXRzIiB0cmFuc2Zvcm09 InRyYW5zbGF0ZSgtMTYxLjAwMDAwMCwgLTE1OC4wMDAwMDApIiBzdHJva2U9IiMz RTUzQTQiIHN0cm9rZS13aWR0aD0iMiI+CiAgICAgICAgICAgIDxnIGlkPSJjbG9z ZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTY5LjUwMDAwMCwgMTY2LjUwMDAwMCkg cm90YXRlKC00NS4wMDAwMDApIHRyYW5zbGF0ZSgtMTY5LjUwMDAwMCwgLTE2Ni41 MDAwMDApIHRyYW5zbGF0ZSgxNTkuMDAwMDAwLCAxNTYuMDAwMDAwKSI+CiAgICAg ICAgICAgICAgICA8cGF0aCBkPSJNMjAsMTAuNSBMMS4xMjI2NTc1MmUtMTIsMTAu NSIgaWQ9IkxpbmUiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0x MCwwLjUgTDEwLDIwLjUiIGlkPSJMaW5lIj48L3BhdGg+CiAgICAgICAgICAgIDwv Zz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==') center center no-repeat;
     }
-
+    &.canvas-slid {
+      .navbar-toggle {
+        // margin-left: 30px;
+        display: none;
+      }
+      .navbar-brand.brand-text {
+        padding-left: 65px;
+      }
+    }
   }
 
 // collapsing version
@@ -250,6 +278,8 @@
       }
     }
   }
+
+
 }// end hamburger
 
 
