@@ -77,7 +77,7 @@
             "label": "Headers & Footers",
             "value": "patterns.headersfooters"
           }, {
-            "label": "'Hamburger' Menu",
+            "label": "Hamburger Menu",
             "value": "hamburger.overview"
           }, {
             "label": "Sign In & Sign Up",

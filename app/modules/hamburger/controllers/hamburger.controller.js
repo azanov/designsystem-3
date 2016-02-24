@@ -7,7 +7,7 @@
     var _this = this;
 
     _this.showHeaderFooter = false;
-    _this.open = true;
+    _this.open = false;
 
 
 

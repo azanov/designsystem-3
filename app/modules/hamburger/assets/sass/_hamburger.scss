@@ -133,6 +133,9 @@
 
   // collapsing version
   &.hamburger-collapse {
+    .navbar-toggle {
+      margin: 0 0 0 4px;
+    }
     .container-fluid {
       margin-left: 70px;
     }
@@ -142,30 +145,31 @@
 
     .nav-left {
       position: absolute;
-      width: 260px;
+      width: 50px;
       min-height: calc(100vh - (50px + 44px));
       top: 50px;
       padding: 10px;
       z-index: 100;
       background-color: #fff;
-      box-shadow: 3px 0 6px hsla(0, 0, 0, .3);
-      transition: width .8s;
-      transition-delay: .3s;
-      .minified & {
-        width: 50px;
+      box-shadow: 1px 0 4px hsla(0, 0, 0, .3);
+      transition: width .8s, box-shadow .2s;
+      &.open {
+        width: 260px;
+        box-shadow: 3px 0 6px hsla(0, 0, 0, .3);
+
       }
     }
 
-    .nav-container {
-      margin-left: 275px;
-      padding-left: 30px;
-      transition: margin-left .6s;
-      transition-delay: margin-left .5s;
-
-      .minified & {
-        margin-left: 70px;
-      }
-    }
+    // .nav-container {
+    //   margin-left: 275px;
+    //   padding-left: 30px;
+    //   transition: margin-left .6s;
+    //   transition-delay: margin-left .5s;
+    //
+    //   .minified & {
+    //     margin-left: 70px;
+    //   }
+    // }
 
     .menu {
       $indent: 10px;
@@ -279,12 +283,6 @@
           i.fa {
             transition: all .3s;
             transform: rotate(180deg);
-          }
-          // ie8
-          .no-csstransforms & {
-            i.fa:before {
-              content: '\f0a9';
-            }
           }
         }
       }
