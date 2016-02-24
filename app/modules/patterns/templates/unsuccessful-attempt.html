@@ -14,7 +14,7 @@
     <div class="signin-box spacer-bottom-md">
 
       <h1 class="prod-name text-center">Product Name<sup>&trade;</sup></h1>
-      <h5 class="prod-tag-line text-center">Online shipping solution</h5>
+      <h5 class="prod-tag-line text-center">Product tag line</h5>
 
       <form autocomplete="off" name="myForm"  class="spacer-top-md" novalidate>
         <div class="form-group" ng-class="{'has-error': myForm.name.$error.required  && myForm.name.$dirty}">
@@ -30,7 +30,7 @@
 
         <div class="alert alert-info">
           <p>On the next unsuccessful attempt to sign in, your account will be locked.</p>
-          <p>To prevent this we recommend that you reset your password now.</p>
+          <p>To prevent this we recommend that you <a href="">reset your password now.</a> </p>
         </div>
 
         <label class="control checkbox">
@@ -39,7 +39,7 @@
           Remember me
         </label>
 
-        <button class="btn btn-primary btn-block btn-lg spacer-top-xs sign-in-button" ng-click="login()" type="submit">Sign In</button>
+        <button class="btn btn-primary btn-block btn-lg spacer-top-xs btn-pill-brand" ng-click="login()" type="submit">Sign In</button>
       </form>
 
       <p class="text-center spacer-top-md">Forgot your <a href="">password</a>?</p>
