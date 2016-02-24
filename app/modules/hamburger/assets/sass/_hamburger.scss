@@ -148,28 +148,53 @@
       width: 50px;
       min-height: calc(100vh - (50px + 44px));
       top: 50px;
-      padding: 10px;
       z-index: 100;
       background-color: #fff;
       box-shadow: 1px 0 4px hsla(0, 0, 0, .3);
       transition: width .8s, box-shadow .2s;
+      .menu {
+        list-style: none;
+        margin-top: 30px;
+        .list-group-item {
+          white-space: nowrap;
+          font-family: $font-family-ps-regular;
+          font-size: 14px;
+          color: $brand-primary;
+          text-decoration: none;
+          display: block;
+          cursor: pointer;
+          position: relative;
+
+          i.fa {
+            margin-right: 10px;
+          }
+          .menu-title {
+            visibility: hidden;
+            transition: all .5s;
+            transition-delay: .3s;
+            opacity: 0;
+          }
+
+          &:hover {
+            background-color: $bg-hover;
+            transition: all .3s;
+            color: $brand-primary;
+          }
+        }
+      }
+
+
       &.open {
         width: 260px;
         box-shadow: 3px 0 6px hsla(0, 0, 0, .3);
-
+        .list-group-item {
+          .menu-title {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
       }
-    }
-
-    // .nav-container {
-    //   margin-left: 275px;
-    //   padding-left: 30px;
-    //   transition: margin-left .6s;
-    //   transition-delay: margin-left .5s;
-    //
-    //   .minified & {
-    //     margin-left: 70px;
-    //   }
-    // }
+    } // end nav-left
 
     .menu {
       $indent: 10px;
@@ -181,108 +206,6 @@
               transition: all .3s;
               color: $brand-primary;
             }
-          }
-        }
-
-        .minified & {
-          &:hover {
-            .menu-heading {
-              transition: none;
-              background-color: $pb-bg2;
-              width: 200px;
-            }
-
-            .menu-title {
-              display: inline-block !important;
-              background-color: $pb-bg2;
-              font-weight: 700;
-            }
-            .menu-content {
-              transition: all .3s;
-              background-color: $pb-bg2;
-              position: absolute;
-              width: 165px;
-              left: 45px;
-              display: block !important;
-              li {
-                a {
-                  padding: 5px;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .menu-heading {
-        white-space: nowrap;
-        padding: 5px 3px;
-        font-family: $font-family-ps-regular;
-        font-size: 14px;
-        color: $brand-primary;
-        text-decoration: none;
-        display: block;
-        cursor: pointer;
-        position: relative;
-
-        i.fa {
-          margin-right: $indent;
-        }
-
-        &:hover {
-          background-color: $bg-hover;
-          transition: all .3s;
-          color: $brand-primary;
-        }
-      }
-
-      .menu-content {
-        display: none;
-        li {
-          white-space: nowrap;
-          &:hover {
-            background: $pb-bg2;
-            color: $brand-primary;
-          }
-          a {
-            color: $text-color;
-            text-decoration: none;
-            padding-left: $indent + 31px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            display: block;
-            cursor: pointer;
-            &:hover {
-              color: $brand-primary;
-            }
-            &.active {
-              color: $brand-primary;
-            }
-          }
-        }
-      }
-
-      .menu-collapse {
-        cursor: default;
-        padding-left: 3px;
-        // the icon itself
-        i.fa {
-          cursor: pointer;
-          transition: all .3s;
-
-          &:hover {
-            transition: all .3s;
-            color: $brand-primary;
-          }
-          &:before {
-            content: '\f0a8';
-          }
-        }
-
-        .minified & {
-          i.fa {
-            transition: all .3s;
-            transform: rotate(180deg);
           }
         }
       }
