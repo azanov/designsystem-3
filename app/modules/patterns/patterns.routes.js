@@ -48,10 +48,117 @@
       }
     })
 
+    //this is the signin invalid email page
+    .state('patterns.invalidemail', {
+      url: '/invalidemail',
+      templateUrl: 'modules/patterns/templates/signin-invalid-email.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'signin'
+      }
+    })
+
+    //this is the password email don't match page
+    .state('patterns.invalidpassword', {
+      url: '/invalidpassword',
+      templateUrl: 'modules/patterns/templates/signin-invalid-password.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'signin'
+      }
+    })
+
+    //this is the complete registration example page
+    .state('patterns.completeregistration', {
+      url: '/completeregistration',
+      templateUrl: 'modules/patterns/templates/complete-registration.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'signin'
+      }
+    })
+
+    //this is the unsuccessful attempt page
+    .state('patterns.unsuccessfulattempt', {
+      url: '/unsuccessfulattempt',
+      templateUrl: 'modules/patterns/templates/unsuccessful-attempt.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'signin'
+      }
+    })
+
+
+    //this is the account locked live chat example page
+    .state('patterns.accountlockedchat', {
+      url: '/accountlockedchat',
+      templateUrl: 'modules/patterns/templates/account-locked-live-chat.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'signin'
+      }
+    })
+
+    //this is the account locked no chat example page
+    .state('patterns.accountlocked', {
+      url: '/accountlocked',
+      templateUrl: 'modules/patterns/templates/account-locked-no-chat.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'signin'
+      }
+    })
+
     //this is the reset password example page
     .state('patterns.reset-password', {
       url: '/resetpassword',
       templateUrl: 'modules/patterns/templates/reset-password.html',
+      data: {
+        bodyClass: 'signin'
+      }
+    })
+
+    //this is the Forgot Password - Email sent feedback
+    .state('patterns.emailsent', {
+      url: '/emailsent',
+      templateUrl: 'modules/patterns/templates/email-sent.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'signin'
+      }
+    })
+
+    //this is the Change Password  - Confirm password
+    .state('patterns.changepassword', {
+      url: '/changepassword',
+      templateUrl: 'modules/patterns/templates/change-password.html',
+      data: {
+        bodyClass: 'signin'
+      }
+    })
+
+    //this is the Change Password  - No security questions needed
+    .state('patterns.changepassword-noquestion', {
+      url: '/changepassword-noquestion',
+      templateUrl: 'modules/patterns/templates/change-password-no-question.html',
+      data: {
+        bodyClass: 'signin'
+      }
+    })
+
+    //this is the Change Password  - No security questions needed
+    .state('patterns.changepassword-confirmpassword', {
+      url: '/changepassword-confirmpassword',
+      templateUrl: 'modules/patterns/templates/change-password-confirm-password.html',
+      data: {
+        bodyClass: 'signin'
+      }
+    })
+
+    //this is the Change Password  - No security questions needed
+    .state('patterns.passwordreset-success', {
+      url: '/passwordreset-success',
+      templateUrl: 'modules/patterns/templates/password-reset-success.html',
       data: {
         bodyClass: 'signin'
       }
@@ -136,11 +243,6 @@
       templateUrl: 'modules/patterns/templates/404.html',
       controller: '404Controller'
     });
-
-
-
-
-
 
 
   });

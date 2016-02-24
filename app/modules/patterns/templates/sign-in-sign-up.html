@@ -16,7 +16,7 @@
         <div class="col-md-12">
           <ul class="list-unstyled list-inline jump-menu">
             <li><a ui-sref="patterns.signinup({'#':'sign-in'})">Sign in</a></li>
-            <li><a ui-sref="patterns.signinup({'#':'forgot-password'})">Password</a></li>
+            <!-- <li><a ui-sref="patterns.signinup({'#':'forgot-password'})">Password</a></li> -->
             <li><a ui-sref="patterns.signinup({'#':'sign-up'})">Sign Up</a></li>
           </ul>
         </div>
@@ -39,11 +39,10 @@
     </div>
   </div>
 
-
-
+  <!-- SIGN IN : Email -->
   <div class="row">
     <div class="col-md-12">
-      <h2 class="doc-sectionhead">Sign In: Email or Username</h2>
+      <h2 class="doc-sectionhead">Sign In: Email</h2>
     </div>
   </div>
 
@@ -54,29 +53,172 @@
     </div>
   </div>
 
-
-  <!-- PASSWORD -->
-  <div class="row" >
-    <div class="col-md-8">
-      <h1 id="forgot-password" class="doc-head">Password</h1>
+  <!-- SIGN IN : Invalid Email -->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Sign In: Invalid Email</h2>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Request Password Reset Link</h2>
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.invalidemail" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/sign_in.png" /></a>
     </div>
   </div>
 
-  <div class="row ">
+  <!-- SIGN IN : Invalid Password -->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Sign In: Password and Email don't match</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.invalidpassword" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/sign_in.png" /></a>
+    </div>
+  </div>
+
+  <!--Sign In Page - Email identified but account not registered-->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Sign In: Email identified but account not registered</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.completeregistration" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/sign_in.png" /></a>
+    </div>
+  </div>
+
+   <!-- Sign In Page - Warning that the next unsuccessful atempt will lock your account-->
+   <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Sign In: Warning that the next unsuccessful atempt will lock your account</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.unsuccessfulattempt" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/sign_in.png" /></a>
+    </div>
+  </div>
+
+  <!--Account locked with live chat-->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Account locked with live chat</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.accountlockedchat" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/sign_in.png" /></a>
+    </div>
+  </div>
+
+
+  <!--Account locked with no chat-->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Account locked with no chat</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.accountlocked" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/sign_in.png" /></a>
+    </div>
+  </div>
+
+  <!--Forgot Password Page  - With return to sign in-->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Forgot Password Page  - With return to sign in</h2>
+    </div>
+  </div>
+
+  <div class="row">
     <div class="col-md-6">
       <a href="" ui-sref="patterns.reset-password" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/youre_invited.png" /></a>
     </div>
   </div>
 
+  <!--Forgot Password - Email sent feedback-->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Forgot Password - Email sent feedback</h2>
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.emailsent" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/sign_in.png" /></a>
+    </div>
+  </div>
+
+ <!--Change Password  - Confirm password-->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Change Password - Confirm Password</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.changepassword" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/youre_invited.png" /></a>
+    </div>
+  </div>
+
+  <!--Change Password  - No security questions needed-->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Change Password  - No security questions needed</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.changepassword-noquestion" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/youre_invited.png" /></a>
+    </div>
+  </div>
+
+  <!--Change Password  - No security questions needed-->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Change Password  - No security questions needed</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.changepassword-confirmpassword" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/youre_invited.png" /></a>
+    </div>
+  </div>
+
+  <!--Change Password  - Password reset success-->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Sign In Page - Email</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.passwordreset-success" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/youre_invited.png" /></a>
+    </div>
+  </div>
 
   <!-- PASSWORD -->
+<!--   <div class="row" >
+    <div class="col-md-8">
+      <h1 id="forgot-password" class="doc-head">Password</h1>
+    </div>
+  </div> -->
+
+
+  <!-- Sign Up -->
   <div class="row" >
     <div class="col-md-8">
       <h1 id="sign-up" class="doc-head">Sign Up</h1>

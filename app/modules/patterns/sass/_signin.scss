@@ -1,6 +1,5 @@
 // body is assigned class of 'signin' via router
 
-
 .signin {
 
   .bg {
@@ -10,9 +9,7 @@
     @extend %gradient;
     background-size: cover;
     background-repeat: no-repeat;
-
     margin: 0;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,21 +24,40 @@
   .centered-box {
     width: 400px;
     // can be replaced with min/max to be more flexible if needed
+    flex: 1;
   }
 
   .signin-box {
     background-color: #fff;
     padding: 40px;
-    box-shadow: 0 17px 26px -9px rgba(0, 0, 0, 0.5);
   }
 
   .sign-in-title {
     margin-top: 0;
   }
 
+  .pb-logo img{
+    background: url('../images/pb-logo.png') center center no-repeat;
+    height: 50px;
+  }
   .prod-name {
-    color: #fff;
+    color: $pb-gray-500;
     margin-top: 0;
+    margin-bottom: 0;
+
+    sup{
+      font-size: 0.65em;
+    }
+  }
+
+  .prod-tag-line {
+    color: $pb-gray-500;
+    margin-top: 5px;
+    font-weight: normal;
+  }
+
+  .sign-in-button {
+    border-radius: 24px;
   }
 
   .signin-footer {
@@ -53,10 +69,24 @@
       font-size: 11px;
       a {
         color: inherit;
-
       }
     }
 
   }
 
+  //Media query for phones. This will be moved to a sepearte file if it grows beyond size.
+  @media only screen and (max-device-width: 480px) {
+    .bg {
+      height: 100%;
+    }
+
+    .signin-box {
+      padding: 20px 40px;
+    }
+
+    .centered-box {
+       width: auto;
+    }
+
+  }
 }
