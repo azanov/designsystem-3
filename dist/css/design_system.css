@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.4.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Tue Feb 23 2016 16:37:14 GMT-0500 (EST) 
+ * Built Wed Feb 24 2016 15:20:57 GMT-0500 (EST) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -5489,53 +5489,37 @@ td.centered, th.centered {
   display: none; }
 .hamburger.hamburger-push.canvas-slid .navbar-brand.brand-text {
   padding-left: 65px; }
+.hamburger.hamburger-collapse .navbar-toggle {
+  margin: 0 0 0 6px;
+  padding: 17px 16px 17px 10px; }
+.hamburger.hamburger-collapse .burger-backdrop {
+  display: block;
+  background-color: #000;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 100;
+  transition: all .6s; }
+.hamburger.hamburger-collapse .burger-backdrop.shown {
+  visibility: visible;
+  opacity: .5; }
 .hamburger.hamburger-collapse .container-fluid {
   margin-left: 70px; }
 .hamburger.hamburger-collapse .footer-wrapper {
-  z-index: 110; }
+  z-index: 1600; }
 .hamburger.hamburger-collapse .nav-left {
   position: absolute;
-  width: 260px;
-  min-height: calc(100vh - (50px + 44px));
+  width: 55px;
+  min-height: 100vh;
   top: 50px;
-  padding: 10px;
-  z-index: 100;
+  z-index: 1500;
   background-color: #fff;
-  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.3);
-  transition: width .8s;
-  transition-delay: .3s; }
-.minified .hamburger.hamburger-collapse .nav-left {
-  width: 50px; }
-.hamburger.hamburger-collapse .nav-container {
-  margin-left: 275px;
-  padding-left: 30px;
-  transition: margin-left .6s;
-  transition-delay: margin-left .5s; }
-.minified .hamburger.hamburger-collapse .nav-container {
-  margin-left: 70px; }
-.hamburger.hamburger-collapse .menu > li.open .menu-heading i, .hamburger.hamburger-collapse .menu > li.open .menu-heading .menu-title, .hamburger.hamburger-collapse .menu > li.open .menu-heading b {
-  transition: all .3s;
-  color: #3e53a4; }
-.minified .hamburger.hamburger-collapse .menu > li:hover .menu-heading {
-  transition: none;
-  background-color: #f8f8f8;
-  width: 200px; }
-.minified .hamburger.hamburger-collapse .menu > li:hover .menu-title {
-  display: inline-block !important;
-  background-color: #f8f8f8;
-  font-weight: 700; }
-.minified .hamburger.hamburger-collapse .menu > li:hover .menu-content {
-  transition: all .3s;
-  background-color: #f8f8f8;
-  position: absolute;
-  width: 165px;
-  left: 45px;
-  display: block !important; }
-.minified .hamburger.hamburger-collapse .menu > li:hover .menu-content li a {
-  padding: 5px; }
-.hamburger.hamburger-collapse .menu .menu-heading {
+  box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3);
+  transition: width .8s, box-shadow .2s; }
+.hamburger.hamburger-collapse .nav-left .menu {
+  list-style: none;
+  margin-top: 30px; }
+.hamburger.hamburger-collapse .nav-left .menu .list-group-item {
   white-space: nowrap;
-  padding: 5px 3px;
   font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif;
   font-size: 14px;
   color: #3e53a4;
@@ -5543,48 +5527,21 @@ td.centered, th.centered {
   display: block;
   cursor: pointer;
   position: relative; }
-.hamburger.hamburger-collapse .menu .menu-heading i.fa {
-  margin-right: 10px; }
-.hamburger.hamburger-collapse .menu .menu-heading:hover {
+.hamburger.hamburger-collapse .nav-left .menu .list-group-item .menu-title {
+  visibility: hidden;
+  transition: all .5s;
+  transition-delay: .3s;
+  opacity: 0; }
+.hamburger.hamburger-collapse .nav-left .menu .list-group-item:hover {
   background-color: #eaedf8;
   transition: all .3s;
   color: #3e53a4; }
-.hamburger.hamburger-collapse .menu .menu-content {
-  display: none; }
-.hamburger.hamburger-collapse .menu .menu-content li {
-  white-space: nowrap; }
-.hamburger.hamburger-collapse .menu .menu-content li:hover {
-  background: #f8f8f8;
-  color: #3e53a4; }
-.hamburger.hamburger-collapse .menu .menu-content li a {
-  color: #717171;
-  text-decoration: none;
-  padding-left: 41px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  display: block;
-  cursor: pointer; }
-.hamburger.hamburger-collapse .menu .menu-content li a:hover {
-  color: #3e53a4; }
-.hamburger.hamburger-collapse .menu .menu-content li a.active {
-  color: #3e53a4; }
-.hamburger.hamburger-collapse .menu .menu-collapse {
-  cursor: default;
-  padding-left: 3px; }
-.hamburger.hamburger-collapse .menu .menu-collapse i.fa {
-  cursor: pointer;
-  transition: all .3s; }
-.hamburger.hamburger-collapse .menu .menu-collapse i.fa:hover {
-  transition: all .3s;
-  color: #3e53a4; }
-.hamburger.hamburger-collapse .menu .menu-collapse i.fa:before {
-  content: '\f0a8'; }
-.minified .hamburger.hamburger-collapse .menu .menu-collapse i.fa {
-  transition: all .3s;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg); }
-.no-csstransforms .minified .hamburger.hamburger-collapse .menu .menu-collapse i.fa:before {
-  content: '\f0a9'; }
+.hamburger.hamburger-collapse .nav-left.open {
+  width: 260px;
+  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.3); }
+.hamburger.hamburger-collapse .nav-left.open .list-group-item .menu-title {
+  visibility: visible;
+  opacity: 1; }
 
 body.hamburger.hamburger-slide[style='overflow: hidden;'] .burger-backdrop {
   background-color: #000;
