@@ -300,12 +300,8 @@ fieldset[disabled] .form-control.timepicker {
 
 
   &.disabled {
-    background-image: url('../images/logo-#{$logo}-disabled.png');
     cursor: not-allowed;
 
-    // @include hidpi(1.5) {
-    //   background-image: url('../images/logo-usps-disabled@2x.png');
-    // }
     &:hover {
       border: 1px solid $input-border;
       box-shadow: none;
@@ -433,10 +429,6 @@ fieldset[disabled] .form-control.timepicker {
       background-image: url('../images/box-disabled.png');
     }
 
-
-    // @include hidpi(1.5) {
-    //   background-image: url('../images/logo-usps-disabled@2x.png');
-    // }
     &:hover {
       padding: 15px;
       border: 1px solid $input-border;
