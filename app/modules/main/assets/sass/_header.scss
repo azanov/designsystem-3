@@ -1,4 +1,4 @@
-// scss-lint:disable MergeableSelector SelectorDepth
+// scss-lint:disable MergeableSelector SelectorDepth ImportantRule
 
 #header,
 header {
@@ -180,7 +180,7 @@ a.app-launcher {
 @media (min-width: 1200px) {
   .navbar-nav >li >a {
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 11px;
     padding-right: 21px;
     padding-left: 21px;
   }
@@ -554,7 +554,7 @@ a.app-launcher {
 // header 2.5+
 
 .bell {
-  position: relative;
+ position: relative;
   .badge {
     position: absolute;
     top: 11px;
