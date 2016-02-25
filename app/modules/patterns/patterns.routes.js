@@ -164,25 +164,78 @@
       }
     })
 
-    //this is the reset password example page
-    .state('patterns.sign-up', {
-      url: '/signup',
-      templateUrl: 'modules/patterns/templates/sign-up.html',
+
+    //this is the Email invitation with payment info needed  - create password
+    .state('patterns.invitation-withoutpayment', {
+      url: '/invitation-without-payment',
+      templateUrl: 'modules/patterns/templates/invitation-without-payment.html',
       controller: 'SignInController as signin',
       data: {
         bodyClass: 'signin'
       }
     })
 
-    //this is the reset password example page
-    .state('patterns.youre-invited', {
-      url: '/youreinvited',
-      templateUrl: 'modules/patterns/templates/your-invited.html',
+    //this is Email invitation with payment info needed  - create password
+    .state('patterns.invitation-withpayment', {
+      url: '/invitation-with-payment',
+      templateUrl: 'modules/patterns/templates/invitation-with-payment.html',
       controller: 'SignInController as signin',
       data: {
         bodyClass: 'signin'
       }
     })
+
+    //this is Email invitation with payment info needed  - purchase power account selection if there are more than one Purchase Power account
+    .state('patterns.signup-purchasepower', {
+      url: '/signup-purchase-power',
+      templateUrl: 'modules/patterns/templates/signup-purchase-power.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'signin'
+      }
+    })
+
+    //this is Invitation Sign up  - Admin invitation
+    .state('patterns.signup-admininvite', {
+      url: '/signup-admininvite',
+      templateUrl: 'modules/patterns/templates/signup-admin-invite.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'signin'
+      }
+    })
+
+    //this is Invitation Sign up  - PB Invitation with existing account
+    .state('patterns.signup-excistingaccount', {
+      url: '/signup-excisting-account',
+      templateUrl: 'modules/patterns/templates/signup-excisting-account.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'signin'
+      }
+    })
+
+    //this is Invitation Sign up  - PB Invitation with existing account + Payment is required
+    .state('patterns.signup-withpayment', {
+      url: '/signup-with-payment',
+      templateUrl: 'modules/patterns/templates/signup-with-payment.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'signin'
+      }
+    })
+
+    //this is Sign In Page -  post registration complete
+     .state('patterns.signup-postregistration', {
+      url: '/signup-post-registration',
+      templateUrl: 'modules/patterns/templates/signup-post-registration.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'signin'
+      }
+    })
+
+
 
     .state('patterns.dashboards', {
       url: '/dashboards',
