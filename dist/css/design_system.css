@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.4.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Wed Feb 24 2016 15:20:57 GMT-0500 (EST) 
+ * Built Thu Feb 25 2016 15:15:39 GMT-0500 (EST) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -2191,13 +2191,14 @@ select:hover {
 
 a.list-group-item {
   font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
   font-size: 16px;
   border: 0;
   border-radius: 0;
   transition: background-color .3s, color .2s;
   background-color: transparent; }
 a.list-group-item:hover {
-  color: #005a93;
+  color: #2e2e2e;
   background-color: #eaedf8; }
 a.list-group-item:first-child {
   border-top-left-radius: 0;
@@ -2205,11 +2206,11 @@ a.list-group-item:first-child {
 a.list-group-item.active {
   background-color: #c5cbe3;
   border-color: #c5cbe3;
-  color: #0072b8; }
+  color: #2e2e2e; }
 a.list-group-item.active:hover, a.list-group-item.active:focus {
   background-color: #e1e1e1;
   border-color: #e1e1e1;
-  color: #005a93; }
+  color: #2e2e2e; }
 a.list-group-item.active .badge {
   color: #fff;
   background-color: #3e53a4; }
@@ -3855,11 +3856,8 @@ a.app-launcher {
   .custom-navbar .navbar-toggle {
     float: left;
     margin-right: 0;
-    margin: 0;
-    padding: 18px;
+    padding: 9px 12px;
     border-right: 1px solid rgba(255, 255, 255, 0.3); }
-  .custom-navbar .navbar-toggle:not(.collapsed) {
-    background-color: #383e87; }
 
   .custom-navbar .navbar-header {
     float: left;
@@ -5408,18 +5406,26 @@ td.centered, th.centered {
 @media (min-width: 992px) {
   body.hamburger-auto {
     padding: 30px 0 0 300px; } }
+.navmenu-fixed-left, .navbar-offcanvas.navmenu-fixed-left {
+  border-width: 0; }
+
 .hamburger {
   overflow-x: hidden;
   /* Navigation Menu - Background */ }
 .hamburger header, .hamburger #header {
   display: none; }
+.hamburger .navmenu-default, .hamburger .navbar-default .navbar-offcanvas {
+  background-color: #fff;
+  border-color: #fff; }
 .hamburger .container-fluid {
-  padding-left: 65px;
-  padding-right: 65px; }
+  padding-left: 50px;
+  padding-right: 50px; }
+.hamburger .main-content {
+  margin-top: 50px; }
 .hamburger .footer-wrapper .container {
   width: auto;
-  padding-left: 65px;
-  padding-right: 65px;
+  padding-left: 50px;
+  padding-right: 50px;
   margin-left: auto;
   margin-right: auto; }
 .hamburger .site-content {
@@ -5436,8 +5442,7 @@ td.centered, th.centered {
   display: inline-block;
   position: relative;
   float: left;
-  padding: 17px 12px 17px 10px;
-  margin: 0 0 0 8px;
+  padding: 9px 12px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -5447,7 +5452,7 @@ td.centered, th.centered {
   font-family: 'PrecisionSans_W_Rg', 'Helvetica Neue', Arial, sans-serif;
   font-weight: normal;
   margin-left: 0;
-  padding-left: 12px; }
+  padding-left: 0; }
 .hamburger .burger-backdrop {
   visibility: hidden;
   opacity: 0;
@@ -5468,22 +5473,22 @@ td.centered, th.centered {
   margin-top: 30px; }
 .hamburger.hamburger-auto .navmenu .list-group {
   margin-top: 60px; }
+.hamburger.hamburger-slide .footer-wrapper {
+  z-index: 5000; }
 .hamburger.hamburger-slide .main-content {
   margin-top: 80px; }
 .hamburger.hamburger-slide .navmenu .list-group {
-  margin-top: 25px; }
+  margin-top: 21px; }
 .hamburger.hamburger-slide .navmenu .list-group .main-content {
   margin-top: 100px; }
 .hamburger.hamburger-push .navmenu .list-group {
   margin-top: 20px; }
-.hamburger.hamburger-push .main-content {
-  margin-top: 50px; }
 .hamburger.hamburger-push .close-burger {
   cursor: pointer;
   margin: 10px 15px;
   width: 21px;
   height: 21px;
-  color: #3e53a4;
+  color: #717171;
   background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9 Im5vIj8+Cjxzdmcgd2lkdGg9IjE3cHgiIGhlaWdodD0iMTdweCIgdmlld0JveD0i MCAwIDE3IDE3IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9y Zy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkv eGxpbmsiPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ry b2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVs ZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpv aW49InJvdW5kIj4KICAgICAgICA8ZyBpZD0iaWNvbi1iaXRzIiB0cmFuc2Zvcm09 InRyYW5zbGF0ZSgtMTYxLjAwMDAwMCwgLTE1OC4wMDAwMDApIiBzdHJva2U9IiMz RTUzQTQiIHN0cm9rZS13aWR0aD0iMiI+CiAgICAgICAgICAgIDxnIGlkPSJjbG9z ZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTY5LjUwMDAwMCwgMTY2LjUwMDAwMCkg cm90YXRlKC00NS4wMDAwMDApIHRyYW5zbGF0ZSgtMTY5LjUwMDAwMCwgLTE2Ni41 MDAwMDApIHRyYW5zbGF0ZSgxNTkuMDAwMDAwLCAxNTYuMDAwMDAwKSI+CiAgICAg ICAgICAgICAgICA8cGF0aCBkPSJNMjAsMTAuNSBMMS4xMjI2NTc1MmUtMTIsMTAu NSIgaWQ9IkxpbmUiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0x MCwwLjUgTDEwLDIwLjUiIGlkPSJMaW5lIj48L3BhdGg+CiAgICAgICAgICAgIDwv Zz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==") center center no-repeat; }
 .hamburger.hamburger-push.canvas-slid .navbar-toggle {
   display: none; }
@@ -5504,8 +5509,6 @@ td.centered, th.centered {
   opacity: .5; }
 .hamburger.hamburger-collapse .container-fluid {
   margin-left: 70px; }
-.hamburger.hamburger-collapse .footer-wrapper {
-  z-index: 1600; }
 .hamburger.hamburger-collapse .nav-left {
   position: absolute;
   width: 55px;
