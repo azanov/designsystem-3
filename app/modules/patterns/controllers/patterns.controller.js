@@ -8,6 +8,8 @@
 
     _this.year = new Date().getFullYear();
 
+    _this.userInitials = 'RH';
+
   });
 
 })();

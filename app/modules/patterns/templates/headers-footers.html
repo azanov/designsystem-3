@@ -208,7 +208,6 @@
       <div class="col-md-12"><figcaption>Navigation Bar with 4 Categories, 3 Utility Items, and 2 sample menus</figcaption></div>
     </div>
   </div>
-
   <figure>
     <header class="demo">
     <div class="navbar  navbar-default custom-navbar" role="navigation">
@@ -230,7 +229,6 @@
             <li><a href="">Item One</a></li>
             <li><a href="">Item Two </a></li>
             <li><a href="" class="dropdown-toggle" data-toggle="dropdown">Item Three</a>
-
               <ul class="dropdown-menu">
                 <li class="section-head">Section Header</li>
                 <li><a href="">Action</a></li>
@@ -244,36 +242,56 @@
 
             </li>
             <li><a href="" class="dropdown-toggle" data-toggle="dropdown">Item Four</a>
-
-
               <ul class="dropdown-menu" role="menu">
                 <li><a href="">My Account</a></li>
                 <li><a href="">Dashboard</a></li>
                 <li><a href="">Settings</a></li>
               </ul>
-
-
             </li>
-
           </ul>
+
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="">Apps</a></li>
             <li class="divider-vertical"></li>
-            <!-- <li><form class="magic-search"><input type="search" placeholder="Search"></form></li> -->
+
+            <!-- Search menu -->
             <li><a href="" class="dropdown-toggle" data-toggle="dropdown">
-                <span class="fa-stack-1x help-icon">
-                  <i class="fa fa-circle fa-stack-1x"></i>
-                  <i class="fa fa-question fa-stack-1x"></i>
-                </span>
+                <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgSearch" x="0" y="0" /></svg>
               </a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="">Help</a></li>
                 <li><a href="">More Help</a></li>
                 <li><a href="">Still More Help</a></li>
               </ul>
-          </li>
+            </li>
 
-            <li><a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-lg fa-cog"></i></a>
+            <!-- Apps menu -->
+            <li><a href="" class="dropdown-toggle" data-toggle="dropdown">
+                <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgApps" x="0" y="0" /></svg>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="">Help</a></li>
+                <li><a href="">More Help</a></li>
+                <li><a href="">Still More Help</a></li>
+              </ul>
+            </li>
+
+            <!-- Help menu -->
+            <li>
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgHelp" x="0" y="0" /></svg>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="">Help</a></li>
+                <li><a href="">More Help</a></li>
+                <li><a href="">Still More Help</a></li>
+              </ul>
+            </li>
+
+            <!-- Settings menu -->
+            <li>
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                  <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgSettings" x="0" y="0" /></svg>
+                </a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="">Preferences</a></li>
                 <li><a href="">Settings</a></li>
@@ -281,12 +299,10 @@
               </ul>
             </li>
 
-            <li class="user-menu"><a href="" class="dropdown-toggle" data-toggle="dropdown">
-              <span class="fa-stack-1x">
-                <i class="fa fa-circle fa-stack-1x"></i>
-              </span>
-              <span class="initials">MH</span>
-            </a>
+            <li class="user-menu">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgUserInitials" x="0" y="0" /></svg>
+              </a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="">My Account</a></li>
               <li><a href="">Profile</a></li>
@@ -579,3 +595,23 @@
       </div>
   </div>
 </figure>
+
+
+<svg>
+  <defs>
+    <g id="svgHelp" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M1 12c0-6.075 4.925-11 11-11s11 4.925 11 11-4.925 11-11 11-11-4.925-11-11z"/>
+      <path d="M11.792 14v-1c1.609 0 3-1.391 3-3s-1.391-3-3-3c-1.194 0-2.342.893-2.792 1.921"/>
+      <path d="M12 17v1"/>
+    </g>
+
+    <g id="svgSettings" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M22 13.409v-3.818h-3.114c-.18-.699-.455-1.357-.813-1.964l2.201-2.201-2.699-2.699-2.201 2.201c-.607-.358-1.266-.633-1.964-.813v-3.114h-3.818v3.114c-.699.18-1.357.455-1.964.813l-2.201-2.201-2.699 2.699 2.201 2.201c-.358.607-.633 1.266-.813 1.964h-3.114v3.818h3.114c.18.699.455 1.357.813 1.964l-2.201 2.201 2.699 2.699 2.201-2.201c.607.358 1.266.633 1.964.813v3.114h3.818v-3.114c.699-.18 1.357-.455 1.964-.813l2.201 2.201 2.699-2.699-2.201-2.201c.358-.607.633-1.266.813-1.964h3.114z"/><path d="M8.636 11.5c0-1.582 1.282-2.864 2.864-2.864 1.582 0 2.864 1.282 2.864 2.864 0 1.582-1.282 2.864-2.864 2.864-1.582 0-2.864-1.282-2.864-2.864z"/>
+    </g>
+
+    <g id="svgApps" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M4.818 4.818h-3.818v-3.818h3.818v3.818z"/><path d="M4.818 13.409h-3.818v-3.818h3.818v3.818z"/><path d="M4.818 22h-3.818v-3.818h3.818v3.818z"/><path d="M13.409 4.818h-3.818v-3.818h3.818v3.818z"/><path d="M13.409 13.409h-3.818v-3.818h3.818v3.818z"/><path d="M13.409 22h-3.818v-3.818h3.818v3.818z"/><path d="M22 4.818h-3.818v-3.818h3.818v3.818z"/><path d="M22 13.409h-3.818v-3.818h3.818v3.818z"/><path d="M22 22h-3.818v-3.818h3.818v3.818z"/>
+    </g>
+    <g id="svgSearch" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M22 22l-5.636-5.636"/><path d="M1 10c0-4.971 4.029-9 9-9s9 4.029 9 9-4.029 9-9 9-9-4.029-9-9z"/></g>
+
+    <g id="svgUserInitials" fill="none"><path d="M1 12c0-6.075 4.925-11 11-11s11 4.925 11 11-4.925 11-11 11-11-4.925-11-11z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"/><text  font-family="Precision Sans W" font-size="12" font-weight="normal" sketch:alignment="middle" fill="#fff" transform="translate(0 0)"><tspan x="4.784" y="15">{{patterns.userInitials}}</tspan></text></g>
+  </defs>
+</svg>
