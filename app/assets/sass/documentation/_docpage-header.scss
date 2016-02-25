@@ -2,7 +2,7 @@
 //DOCUMENTATION PAGES
 
 .doc-hero {
-  background-image: linear-gradient(90deg, $pb-blue 0%, $pb-magenta 100%);
+  @extend %gradient;
   height: 300px;
   border-top: 1px solid rgba(255, 255, 255, .2);
   margin-top: 50px; // height of navbar
