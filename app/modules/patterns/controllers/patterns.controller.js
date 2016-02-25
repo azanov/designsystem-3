@@ -10,6 +10,8 @@
 
     _this.userInitials = 'RH';
 
+    _this.offline = true;
+
   });
 
 })();

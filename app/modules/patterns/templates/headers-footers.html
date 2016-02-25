@@ -220,7 +220,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand brand-text" href="">Product Name</a>
+          <a class="navbar-brand brand-text" href="">SendPro</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse">
@@ -295,8 +295,15 @@
                   <input type="text" name="" id="" class="form-control" placeholder="Search">
                 </li>
                 <li><a href="">Help</a></li>
-                <li><a href="">More Help</a></li>
-                <li><a href="">Still More Help</a></li>
+                <li><a href="">Add Carrier Accounts</a></li>
+                <li><a href="">See All Help Topics</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="" ng-class="{disabled : patterns.offline}"><i class="fa fa-fw fa-comment-o"></i> Chat <span ng-if="patterns.offline">Offline</span></a></li>
+                <li><a href=""><i class="fa fa-fw fa-envelope-o"></i> Email</a></li>
+                <li><a href="" ng-class="{disabled : patterns.offline}"><i class="fa fa-fw fa-phone"></i> 1-800-555-45678</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href=""><i class="fa fa-fw fa-download"></i> Printer/Scale Drivers</a></li>
+
               </ul>
             </li>
 
@@ -322,8 +329,9 @@
 
             <!-- User menu -->
             <li class="user-menu">
-              <a href="" class="dropdown-toggle" data-toggle="dropdown">
+              <a href="" class="dropdown-toggle face" data-toggle="dropdown">
                 <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgUserInitials" x="0" y="0" /></svg>
+                <!-- <img src="modules/patterns/assets/images/128.jpg" alt="User Image"> -->
               </a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="">Profile<br><span class="menu-text-small">Email, Passwords</span></a></li>
