@@ -314,7 +314,7 @@ a.app-launcher {
     box-shadow: 0 3px 3px  rgba(0, 0, 0, .3);
     .divider {
       height: 1px;
-      margin: 9px 20px;
+      margin: 0; //was 9x 20px
       overflow: hidden;
       background-color: $pb-gray-300;
     }
@@ -332,7 +332,7 @@ a.app-launcher {
         font-weight: normal;
         line-height: 1.4;
         color: $text-color;
-        font-size: 12px;
+        font-size: 14px;
         white-space: nowrap;
         font-family: $font-family-sans-serif;
         &:last-child {
@@ -475,6 +475,9 @@ a.app-launcher {
   .activity {
     display: inline-block;
   }
+  .menu-text-small {
+    display: none;
+  }
 }
 
 
@@ -522,4 +525,21 @@ a.app-launcher {
     clear: both;
     float: none;
   }
+}
+
+
+// header 2.5+
+
+.bell {
+  position: relative;
+  .badge {
+    position: absolute;
+    top: 11px;
+    right: 2px;
+    background-color: $pb-orange;
+  }
+}
+
+.menu-text-small {
+  font-size: 11px;
 }

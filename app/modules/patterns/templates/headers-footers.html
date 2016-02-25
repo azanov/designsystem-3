@@ -275,12 +275,25 @@
               </ul>
             </li>
 
+            <!-- Reminders -->
+            <li>
+              <a href="" class="bell">
+                <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgBell" x="0" y="0" /></svg>
+                <span class="badge">14</span>
+              </a>
+
+            </li>
+
             <!-- Help menu -->
             <li>
               <a href="" class="dropdown-toggle" data-toggle="dropdown">
                 <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgHelp" x="0" y="0" /></svg>
               </a>
               <ul class="dropdown-menu" role="menu">
+                <li class="section-head">Help</li>
+                <li class="input-group">
+                  <input type="text" name="" id="" class="form-control" placeholder="Search">
+                </li>
                 <li><a href="">Help</a></li>
                 <li><a href="">More Help</a></li>
                 <li><a href="">Still More Help</a></li>
@@ -293,19 +306,29 @@
                   <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgSettings" x="0" y="0" /></svg>
                 </a>
               <ul class="dropdown-menu" role="menu">
+                <li class="section-head">Application Settings</li>
+                <li><a href="">Carriers</a></li>
+                <li><a href="">Cost Accounts</a></li>
+                <li><a href="">Postage Payment Methods</a></li>
+                <li><a href="">Users</a></li>
+                <li class="section-head">Personal Preferences</li>
+                <li><a href="">Label Options</a></li>
+                <li><a href="">Automatic Emails</a></li>
+                <li><a href="">Presets</a></li>
+                <li><a href="">Return Label</a></li>
                 <li><a href="">Preferences</a></li>
-                <li><a href="">Settings</a></li>
-                <li><a href="">Notifications</a></li>
               </ul>
             </li>
 
+            <!-- User menu -->
             <li class="user-menu">
               <a href="" class="dropdown-toggle" data-toggle="dropdown">
                 <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgUserInitials" x="0" y="0" /></svg>
               </a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="">My Account</a></li>
-              <li><a href="">Profile</a></li>
+              <li><a href="">Profile<br><span class="menu-text-small">Email, Passwords</span></a></li>
+              <li><a href="">Your Account<br><span class="menu-text-small">Financials, Usage, Products, Support</span></a></li>
+              <li role="separator" class="divider"></li>
               <li><a href="">Sign Out</a></li>
             </ul>
           </li>
@@ -612,6 +635,8 @@
     </g>
     <g id="svgSearch" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M22 22l-5.636-5.636"/><path d="M1 10c0-4.971 4.029-9 9-9s9 4.029 9 9-4.029 9-9 9-9-4.029-9-9z"/></g>
 
-    <g id="svgUserInitials" fill="none"><path d="M1 12c0-6.075 4.925-11 11-11s11 4.925 11 11-4.925 11-11 11-11-4.925-11-11z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"/><text  font-family="Precision Sans W" font-size="12" font-weight="normal" sketch:alignment="middle" fill="#fff" transform="translate(0 0)"><tspan x="4.784" y="15">{{patterns.userInitials}}</tspan></text></g>
+    <g id="svgUserInitials" fill="none"><path d="M1 12c0-6.075 4.925-11 11-11s11 4.925 11 11-4.925 11-11 11-11-4.925-11-11z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  /><text  font-family="Precision Sans W" font-size="12" font-weight="normal" sketch:alignment="middle" fill="#fff" transform="translate(0 1)"><tspan x="4.784" y="15">{{patterns.userInitials}}</tspan></text></g>
+
+    <g id="svgBell" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M8.012 19.882l-.012.118c0 1.657 1.343 3 3 3s3-1.343 3-3l-.012-.118"/><path d="M18 11v-3c0-3.905-3.095-7-7-7s-7 3.095-7 7v3c0 3.333-3 4.118-3 6 0 1.674 3.864 3 10 3s10-1.326 10-3c0-1.882-3-2.667-3-6z"/></g>
   </defs>
 </svg>
