@@ -76,8 +76,15 @@
 .alert-flex {
  display: flex;
 
- & .alert-flex-icon {
+ & div {
+   align-self: center;
+ }
+
+ & div:last {
    flex: 1 0 auto;
+ }
+
+ & .alert-flex-icon {
    align-self: center;
    margin-right: 10px;
  }
