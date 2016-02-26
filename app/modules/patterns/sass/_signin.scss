@@ -74,12 +74,13 @@
 
 //should move this to the alert sass, should be globally available
 .alert-flex {
-  display: flex;
+ display: flex;
 
-  & .alert-flex-icon {
-    align-self: center;
-    margin-right: 10px;
-  }
+ & .alert-flex-icon {
+   flex: 1 0 auto;
+   align-self: center;
+   margin-right: 10px;
+ }
 }
 
 
