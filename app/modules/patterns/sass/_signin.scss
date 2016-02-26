@@ -80,8 +80,9 @@
    align-self: center;
  }
 
- & div:last {
-   flex: 1 0 auto;
+ & div:last-child {
+   flex: 1 0;
+   flex-wrap: wrap;
  }
 
  & .alert-flex-icon {
