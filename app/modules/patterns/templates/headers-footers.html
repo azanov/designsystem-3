@@ -144,9 +144,9 @@
                   <li><a href="">Add Carrier Accounts</a></li>
                   <li><a href="">See All Help Topics</a></li>
                   <li role="separator" class="divider"></li>
-                  <li><a href="" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.offlineMessage}}" popover-placement="left" ><i class="fa fa-fw fa-comment-o"></i> Chat <span ng-if="patterns.offline">Offline</span></a></li>
+                  <li><a href="" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.chatOfflineMessage}}" popover-placement="left" ><i class="fa fa-fw fa-comment-o"></i> Chat <span ng-if="patterns.offline">Offline</span></a></li>
                   <li><a href=""><i class="fa fa-fw fa-envelope-o"></i> Email</a></li>
-                  <li><a href="" ng-class="{disabled : patterns.offline}"><i class="fa fa-fw fa-phone"></i> 1-800-555-45678</a></li>
+                  <li><a href="tel:1-800-555-45678" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.phoneOfflineMessage}}" popover-placement="left"><i class="fa fa-fw fa-phone"></i> 1-800-555-45678</a></li>
                   <li role="separator" class="divider"></li>
                   <li><a href=""><i class="fa fa-fw fa-download"></i> Printer/Scale Drivers</a></li>
                 </ul>
@@ -298,9 +298,9 @@
                   <li><a href="">Add Carrier Accounts</a></li>
                   <li><a href="">See All Help Topics</a></li>
                   <li role="separator" class="divider"></li>
-                  <li><a href="" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.offlineMessage}}" popover-placement="left" ><i class="fa fa-fw fa-comment-o"></i> Chat <span ng-if="patterns.offline">Offline</span></a></li>
+                  <li><a href="" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.chatOfflineMessage}}" popover-placement="left" ><i class="fa fa-fw fa-comment-o"></i> Chat <span ng-if="patterns.offline">Offline</span></a></li>
                   <li><a href=""><i class="fa fa-fw fa-envelope-o"></i> Email</a></li>
-                  <li><a href="" ng-class="{disabled : patterns.offline}"><i class="fa fa-fw fa-phone"></i> 1-800-555-45678</a></li>
+                  <li><a href="tel:1-800-555-45678" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.phoneOfflineMessage}}" popover-placement="left"><i class="fa fa-fw fa-phone"></i> 1-800-555-45678</a></li>
                   <li role="separator" class="divider"></li>
                   <li><a href=""><i class="fa fa-fw fa-download"></i> Printer/Scale Drivers</a></li>
                 </ul>
@@ -452,9 +452,9 @@
                   <li><a href="">Add Carrier Accounts</a></li>
                   <li><a href="">See All Help Topics</a></li>
                   <li role="separator" class="divider"></li>
-                  <li><a href="" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.offlineMessage}}" popover-placement="left" ><i class="fa fa-fw fa-comment-o"></i> Chat <span ng-if="patterns.offline">Offline</span></a></li>
+                  <li><a href="" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.chatOfflineMessage}}" popover-placement="left" ><i class="fa fa-fw fa-comment-o"></i> Chat <span ng-if="patterns.offline">Offline</span></a></li>
                   <li><a href=""><i class="fa fa-fw fa-envelope-o"></i> Email</a></li>
-                  <li><a href="" ng-class="{disabled : patterns.offline}"><i class="fa fa-fw fa-phone"></i> 1-800-555-45678</a></li>
+                  <li><a href="tel:1-800-555-45678" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.phoneOfflineMessage}}" popover-placement="left"><i class="fa fa-fw fa-phone"></i> 1-800-555-45678</a></li>
                   <li role="separator" class="divider"></li>
                   <li><a href=""><i class="fa fa-fw fa-download"></i> Printer/Scale Drivers</a></li>
                 </ul>
@@ -605,9 +605,9 @@
                   <li><a href="">Add Carrier Accounts</a></li>
                   <li><a href="">See All Help Topics</a></li>
                   <li role="separator" class="divider"></li>
-                  <li><a href="" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.offlineMessage}}" popover-placement="left" ><i class="fa fa-fw fa-comment-o"></i> Chat <span ng-if="patterns.offline">Offline</span></a></li>
+                  <li><a href="" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.chatOfflineMessage}}" popover-placement="left" ><i class="fa fa-fw fa-comment-o"></i> Chat <span ng-if="patterns.offline">Offline</span></a></li>
                   <li><a href=""><i class="fa fa-fw fa-envelope-o"></i> Email</a></li>
-                  <li><a href="" ng-class="{disabled : patterns.offline}"><i class="fa fa-fw fa-phone"></i> 1-800-555-45678</a></li>
+                  <li><a href="tel:1-800-555-45678" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.phoneOfflineMessage}}" popover-placement="left"><i class="fa fa-fw fa-phone"></i> 1-800-555-45678</a></li>
                   <li role="separator" class="divider"></li>
                   <li><a href=""><i class="fa fa-fw fa-download"></i> Printer/Scale Drivers</a></li>
                 </ul>
@@ -663,7 +663,7 @@
 </div>
 
 
-<div class="footer-examples"></div>
+<div class="footer-examples spacer-top-md">
 
 
 
@@ -684,7 +684,7 @@
               <!-- the logo and copyright have their own flexbox -->
               <div class="logo-copyright">
                 <div class="footer-logo"><a href="http://www.pb.com"><i class="pb-footer-logo gradient"></i></a></div>
-                <div class="copyright">&copy; {{patterns.year}} Pitney Bowes Inc. All rights reserved.</div>
+                <div class="copyright">&copy; {{patterns.year}} Pitney Bowes Inc.</div>
               </div>
               <!-- <div><a href="">Terms and conditions</a></div> -->
             </div>
@@ -711,7 +711,7 @@
               <!-- the logo and copyright have their own flexbox -->
               <div class="logo-copyright">
                 <div class="footer-logo"><a href="http://www.pb.com"><i class="pb-footer-logo gradient"></i></a></div>
-                <div class="copyright">&copy; {{patterns.year}} Pitney Bowes Inc. All rights reserved.</div>
+                <div class="copyright">&copy; {{patterns.year}} Pitney Bowes Inc.</div>
               </div>
               <div><a href="">Terms and conditions</a></div>
             </div>
@@ -721,12 +721,12 @@
   </figure>
 </div>
 
-
-<div class="example-2 spacer-top-xl">
+<!-- example 3 -->
+<div class="example-3 spacer-top-xl">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <figcaption>Pitney Bowes Branded Footer with Copyright, T&amp;C, and Conact us</figcaption>
+        <figcaption>Pitney Bowes Branded Footer with Copyright and Contact us. Click "Contact Us" to Expand.</figcaption>
       </div>
     </div>
   </div>
@@ -740,14 +740,28 @@
                 <!-- the logo and copyright have their own flexbox -->
                 <div class="logo-copyright">
                   <div class="footer-logo"><a href="http://www.pb.com"><i class="pb-footer-logo gradient"></i></a></div>
-                  <div class="copyright">&copy; {{patterns.year}} Pitney Bowes Inc. All rights reserved.</div>
+                  <div class="copyright">&copy; {{patterns.year}} Pitney Bowes Inc.</div>
                 </div>
-                <div><a href="">Terms and conditions</a></div>
+                <div></div>
               </div>
 
 
               <div class="footer-right">
-                <div class="contact-us"><a href="">Contact us</a></div>
+                <div class="contact-us">
+                  <!-- this div shows when contact us is clicked-->
+                  <div class="contact-methods" ng-class="{hidemethods : patterns.hideMethods}">
+                    <div>
+                      <a href="" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.chatOfflineMessage}}"><i class="fa fa-fw fa-comment-o"></i> Chat</a>
+                    </div>
+                    <div>
+                      <a href=""><i class="fa fa-fw fa-envelope-o"></i> Email</a>
+                    </div>
+                    <div>
+                      <a href="tel:1-800-555-45678" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.phoneOfflineMessage}}" ><i class="fa fa-fw fa-phone"></i> 1-800-555-45678</a>
+                    </div>
+                  </div>
+                  <a href="" ng-click="patterns.hideMethods = !patterns.hideMethods" ng-if="patterns.hideMethods">Contact us</a>
+                </div>
               </div>
             </div>
           </div>
@@ -755,7 +769,59 @@
     </div>
   </figure>
 </div>
+<!-- end example 3 -->
 
+<!-- example 4 -->
+<div class="example-3 spacer-top-xl">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <figcaption>Pitney Bowes Branded Footer with Copyright, T&amp;C, and Contact us. Click "Contact Us" to Expand.</figcaption>
+      </div>
+    </div>
+  </div>
+  <figure>
+    <!-- flexbox footer -->
+    <div class="footer-wrapper demo">
+        <footer>
+          <div class="container">
+            <div class="contents">
+              <div class="footer-left">
+                <!-- the logo and copyright have their own flexbox -->
+                <div class="logo-copyright">
+                  <div class="footer-logo"><a href="http://www.pb.com"><i class="pb-footer-logo gradient"></i></a></div>
+                  <div class="copyright">&copy; {{patterns.year}} Pitney Bowes Inc.</div>
+                </div>
+                <div><a href="">Terms and conditions</a></div>
+              </div>
+
+
+              <div class="footer-right">
+                <div class="contact-us">
+                  <!-- this div shows when contact us is clicked-->
+                  <div class="contact-methods" ng-class="{hidemethods : patterns.hideMethods}">
+                    <div>
+                      <a href="" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.chatOfflineMessage}}"><i class="fa fa-fw fa-comment-o"></i> Chat</a>
+                    </div>
+                    <div>
+                      <a href=""><i class="fa fa-fw fa-envelope-o"></i> Email</a>
+                    </div>
+                    <div>
+                      <a href="tel:1-800-555-45678" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.phoneOfflineMessage}}" ><i class="fa fa-fw fa-phone"></i> 1-800-555-45678</a>
+                    </div>
+                  </div>
+                  <a href="" ng-click="patterns.hideMethods = !patterns.hideMethods" ng-if="patterns.hideMethods">Contact us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+    </div>
+  </figure>
+</div>
+<!-- end example 4 -->
+
+</div>
 
 <svg>
   <defs>

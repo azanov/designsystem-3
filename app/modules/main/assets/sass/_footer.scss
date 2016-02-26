@@ -45,7 +45,32 @@
       }
     }
     .contact-us {
+      display: flex;
+      align-items: baseline;
+      .hidemethods {
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s;
+      }
 
+      .contact-methods {
+        display: flex;
+        align-items: baseline;
+        > div {
+          margin-left: 20px;
+        }
+
+        a {
+          color: $pb-medium-blue;
+          &.disabled {
+            color: $pb-gray;
+            &:hover {
+              background-color: transparent;
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
     }
     > div {
       padding: 0 20px 0 0;
@@ -60,6 +85,8 @@
       .logo-copyright {
         flex-direction: column;
         align-items: center;
+        margin-bottom: 10px;
+        
         .footer-logo {
           width: 85px;
           margin: 0 auto;
@@ -70,6 +97,20 @@
         align-items: center;
         .logo-copyright {
           margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+      .footer-right {
+        flex-direction: column;
+        align-items: center;
+        .contact-us {
+          padding-top: 10px;
+          text-align: center;
+          .contact-methods {
+            &.hidemethods {
+            display: none;
+          }
+        }
         }
       }
     }
