@@ -7,6 +7,30 @@
 **BREAKING CHANGES**
 
 * the footer template has been updated to use the new "Branded Footer with Copyright" version on the [Headers and Footers page](http://guxstaging.pbi.global.pvt/design_system/#/patterns/headersfooters). It is also now updated for proper display on phones. There are updated alfternate header and footer designs there as well.
+* all "busy" spinners have been synchroized to use the Font Awesome "slotted circle".  This includes progress buttons and spinners, See [Web > User Feedback](http://guxstaging.pbi.global.pvt/design_system/#/feedback#process) for samples. This requires you to use the updates directive at `app/core/directives/pb-button-progress.directive.js` if you use one of these buttons.
+* The signin pages and its children have been updated with a new layout, approved footer/copyright line (you will need to add the correct links to your privacy policy and T&C) and new HTML structure, below. See [Web > Patterns > Sign In & Sign Up](http://guxstaging.pbi.global.pvt/design_system/#/patterns/signinup)
+
+```html
+<body class="site fullscreen signin">
+  <div class="signin-wrapper">
+
+    <div class="signin-body">
+      <a class="signin-pb-logo" href="http://www.pb.com"></a>
+
+      <div class="signin-box">
+        <h1 class="signin-heading">Product Name<sup>™</sup></h1>
+        <h5 class="signin-subheading">Product tag line</h5>
+        <!-- your sign in content here -->
+      </div>
+    </div>
+
+    <div class="signin-footer">
+      Pitney Bowes Inc. the Corporate Logo and Product Name<sup>™</sup> are trademarks of Pitney Bowes Inc. or a subsidiary. All other marks are the intellectual property of their respective owners. <a href="">Privacy</a>&nbsp;|&nbsp;<a href="">Terms and Conditions</a>&nbsp;<a>© 2016 Pitney Bowes Inc. All rights reserved.</a>
+    </div>
+  </div>
+</body>
+```
+
 
 **Non-breaking Changes**
 
@@ -17,15 +41,46 @@
   background-image: linear-gradient(90deg, $pb-blue 0%, $pb-magenta 100%);
 }
 ```
+* Footer copyright updated to 2016
+* The "angular loading bar" plugin has been updated to 0.8.0, and the loading bar itself has been changed from white to turquoise in the css. See [Web > User Feedback](http://guxstaging.pbi.global.pvt/design_system/#/feedback#process).
+* We are now on Angular JS 1.4.9.  See below for all other library updates.
+* The "hamburger menu" on the phone version of the CSS has been updated to have a tranparent background. This is consistent with the new headers and the new hamburger menu module described below.
+
+
+
 **Additions**
 
 * There are [new designs for the headers](http://guxstaging.pbi.global.pvt/design_system/#/patterns/headersfooters) that include revised content and iconography for the Utility menus (on the right).
 * There are also new footer alternatives that include the approved layouts for terms & conditions and "contact us". Contact Us is  a link that reveals alternate contact methods. There is logic provided for offline hours display.
+* A hamburger menu module has been added. See samples under Web > Patterns > Hamburger Menu. There is a "slide" version and a "push" version. 
 
 ####Website Changes
 
+* Unneeded images have been removed from the Design System file system
+* Content has been promoted to the top-level navigation bar, and new copy has been added
+* Several libraries have been updated in `bower.json`
+
+####Updated Libraries
+* angular-chart.js (0.8.8)
+* highlightjs (9.1.0)
+* angular-daterangepicker (0.2.2)
+* browser-sync 2.10.1
+* angular-loading-bar (0.8.0)
+* angular-utils-pagination (0.10.0)
+* angular-bootstrap (1.1.1)
+* angular 1.4.9
+* angular-translate-storage-cookie 2.9.0
+* angular-translate-loader-partial 2.9.0
+* angular-translate-storage-local 2.9.0
+* angular-dynamic-locale 1.3.0
+* angular-ui-select 0.14.1
+* angular-toaster 1.7.0
+
 #### Other Tools
 - updated Sketch and Illustrator UI Kits to 2.4.0, see [Resources > Tools](http://guxstaging.pbi.global.pvt/design_system/#/resources/tools)
+
+#### Thanks to the following contributors and bug reporters:
+Andy Grossman, Ania Mastriano, Cameron Chu, Erik Balisi, Gaurav Varshney , Henry Rogando , Joan Doutney, Kathy Belleau, Kevin Bodie , Kyle Pause , Manish Kukreja, Sara Conklin
 
 ### 2.4.0 -- January 29, 2016
 
