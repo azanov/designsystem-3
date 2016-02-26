@@ -41,7 +41,7 @@
     padding: 40px;
   }
   
-  .product-name {
+  .signin-heading {
     color: $pb-gray-500;
     margin: 0;
     text-align: center;
@@ -51,21 +51,11 @@
     }
   }
 
-  .product-tagline {
+  .signin-subheading {
     color: $pb-gray-500;
     margin-top: 5px;
     font-weight: normal;
     text-align: center;
-  }
-
-  .flex-alert {
-    display: flex;
-
-    & .flex-alert-icon {
-      display: flex;
-      align-items: center;
-      padding-right: 10px;
-    }
   }
   
   .signin-footer {
@@ -84,6 +74,17 @@
 
   }
 
+}
+
+//should move this to the alert sass, should be globally available
+.alert-flex {
+  display: flex;
+
+  & .alert-flex-icon {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+  }
 }
 
 
