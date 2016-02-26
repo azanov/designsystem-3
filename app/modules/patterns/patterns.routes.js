@@ -54,7 +54,7 @@
       templateUrl: 'modules/patterns/templates/signin-invalid-email.html',
       controller: 'SignInController as signin',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
@@ -64,7 +64,7 @@
       templateUrl: 'modules/patterns/templates/signin-invalid-password.html',
       controller: 'SignInController as signin',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
@@ -74,7 +74,7 @@
       templateUrl: 'modules/patterns/templates/complete-registration.html',
       controller: 'SignInController as signin',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
@@ -84,7 +84,7 @@
       templateUrl: 'modules/patterns/templates/unsuccessful-attempt.html',
       controller: 'SignInController as signin',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
@@ -95,7 +95,7 @@
       templateUrl: 'modules/patterns/templates/account-locked-live-chat.html',
       controller: 'SignInController as signin',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
@@ -105,7 +105,7 @@
       templateUrl: 'modules/patterns/templates/account-locked-no-chat.html',
       controller: 'SignInController as signin',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
@@ -114,7 +114,7 @@
       url: '/resetpassword',
       templateUrl: 'modules/patterns/templates/reset-password.html',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
@@ -124,7 +124,7 @@
       templateUrl: 'modules/patterns/templates/email-sent.html',
       controller: 'SignInController as signin',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
@@ -133,7 +133,7 @@
       url: '/changepassword',
       templateUrl: 'modules/patterns/templates/change-password.html',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
@@ -142,7 +142,7 @@
       url: '/changepassword-noquestion',
       templateUrl: 'modules/patterns/templates/change-password-no-question.html',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
@@ -151,7 +151,7 @@
       url: '/changepassword-confirmpassword',
       templateUrl: 'modules/patterns/templates/change-password-confirm-password.html',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
@@ -160,7 +160,7 @@
       url: '/passwordreset-success',
       templateUrl: 'modules/patterns/templates/password-reset-success.html',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
@@ -171,7 +171,7 @@
       templateUrl: 'modules/patterns/templates/invitation-without-payment.html',
       controller: 'SignInController as signin',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
@@ -181,7 +181,7 @@
       templateUrl: 'modules/patterns/templates/invitation-with-payment.html',
       controller: 'SignInController as signin',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
@@ -191,7 +191,7 @@
       templateUrl: 'modules/patterns/templates/signup-purchase-power.html',
       controller: 'SignInController as signin',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
@@ -201,7 +201,7 @@
       templateUrl: 'modules/patterns/templates/signup-admin-invite.html',
       controller: 'SignInController as signin',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
@@ -211,7 +211,7 @@
       templateUrl: 'modules/patterns/templates/signup-excisting-account.html',
       controller: 'SignInController as signin',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
@@ -221,7 +221,7 @@
       templateUrl: 'modules/patterns/templates/signup-with-payment.html',
       controller: 'SignInController as signin',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
@@ -231,7 +231,7 @@
       templateUrl: 'modules/patterns/templates/signup-post-registration.html',
       controller: 'SignInController as signin',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
