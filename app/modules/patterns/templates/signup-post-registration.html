@@ -4,10 +4,15 @@
 
     <a class="signin-pb-logo" href="http://www.pb.com"></a>
 
+
     <div class="signin-box">
 
-      <h1 class="signin-heading">Product Name<sup>&trade;</sup></h1>
-      <h5 class="signin-subheading">Product tag line</h5>
+      <div class="alert alert-success alert-flex">
+        <div class="alert-flex-icon">
+          <img src="assets/images/nucleo-check-small.png" alt="" class="image-responsive">
+        </div>
+        <div>You’ve completed your registration. Sign in to start using Product Name.</div>
+      </div>
 
       <form autocomplete="off" name="myForm"  class="spacer-top-md" novalidate>
         <div class="form-group" ng-class="{'has-error': myForm.name.$error.required  && myForm.name.$dirty}">
@@ -30,7 +35,7 @@
         <button class="btn btn-primary btn-block btn-lg spacer-top-xs btn-pill-brand" ng-click="login()" type="submit">Sign In</button>
       </form>
 
-      <p class="text-center spacer-top-md">Forgot your <a href="">password</a>?</p>
+      <p class="text-center spacer-top-md"><a href="">Forgot your password</a>?</p>
         <p class="text-center">Not a registered user?
           <a href="">Sign up now</a>
         </p>
