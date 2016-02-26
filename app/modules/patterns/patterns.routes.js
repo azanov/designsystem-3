@@ -44,7 +44,68 @@
       templateUrl: 'modules/patterns/templates/signin.html',
       controller: 'SignInController as signin',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
+      }
+    })
+
+    //this is the signin invalid email page
+    .state('patterns.invalidemail', {
+      url: '/invalidemail',
+      templateUrl: 'modules/patterns/templates/signin-invalid-email.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'fullscreen signin'
+      }
+    })
+
+    //this is the password email don't match page
+    .state('patterns.invalidpassword', {
+      url: '/invalidpassword',
+      templateUrl: 'modules/patterns/templates/signin-invalid-password.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'fullscreen signin'
+      }
+    })
+
+    //this is the complete registration example page
+    .state('patterns.completeregistration', {
+      url: '/completeregistration',
+      templateUrl: 'modules/patterns/templates/complete-registration.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'fullscreen signin'
+      }
+    })
+
+    //this is the unsuccessful attempt page
+    .state('patterns.unsuccessfulattempt', {
+      url: '/unsuccessfulattempt',
+      templateUrl: 'modules/patterns/templates/unsuccessful-attempt.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'fullscreen signin'
+      }
+    })
+
+
+    //this is the account locked live chat example page
+    .state('patterns.accountlockedchat', {
+      url: '/accountlockedchat',
+      templateUrl: 'modules/patterns/templates/account-locked-live-chat.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'fullscreen signin'
+      }
+    })
+
+    //this is the account locked no chat example page
+    .state('patterns.accountlocked', {
+      url: '/accountlocked',
+      templateUrl: 'modules/patterns/templates/account-locked-no-chat.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'fullscreen signin'
       }
     })
 
@@ -53,29 +114,128 @@
       url: '/resetpassword',
       templateUrl: 'modules/patterns/templates/reset-password.html',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
-    //this is the reset password example page
-    .state('patterns.sign-up', {
-      url: '/signup',
-      templateUrl: 'modules/patterns/templates/sign-up.html',
+    //this is the Forgot Password - Email sent feedback
+    .state('patterns.emailsent', {
+      url: '/emailsent',
+      templateUrl: 'modules/patterns/templates/email-sent.html',
       controller: 'SignInController as signin',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
-    //this is the reset password example page
-    .state('patterns.youre-invited', {
-      url: '/youreinvited',
-      templateUrl: 'modules/patterns/templates/your-invited.html',
-      controller: 'SignInController as signin',
+    //this is the Change Password  - Confirm password
+    .state('patterns.changepassword', {
+      url: '/changepassword',
+      templateUrl: 'modules/patterns/templates/change-password.html',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
+
+    //this is the Change Password  - No security questions needed
+    .state('patterns.changepassword-noquestion', {
+      url: '/changepassword-noquestion',
+      templateUrl: 'modules/patterns/templates/change-password-no-question.html',
+      data: {
+        bodyClass: 'fullscreen signin'
+      }
+    })
+
+    //this is the Change Password  - No security questions needed
+    .state('patterns.changepassword-confirmpassword', {
+      url: '/changepassword-confirmpassword',
+      templateUrl: 'modules/patterns/templates/change-password-confirm-password.html',
+      data: {
+        bodyClass: 'fullscreen signin'
+      }
+    })
+
+    //this is the Change Password  - No security questions needed
+    .state('patterns.passwordreset-success', {
+      url: '/passwordreset-success',
+      templateUrl: 'modules/patterns/templates/password-reset-success.html',
+      data: {
+        bodyClass: 'fullscreen signin'
+      }
+    })
+
+
+    //this is the Email invitation with payment info needed  - create password
+    .state('patterns.invitation-withoutpayment', {
+      url: '/invitation-without-payment',
+      templateUrl: 'modules/patterns/templates/invitation-without-payment.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'fullscreen signin'
+      }
+    })
+
+    //this is Email invitation with payment info needed  - create password
+    .state('patterns.invitation-withpayment', {
+      url: '/invitation-with-payment',
+      templateUrl: 'modules/patterns/templates/invitation-with-payment.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'fullscreen signin'
+      }
+    })
+
+    //this is Email invitation with payment info needed  - purchase power account selection if there are more than one Purchase Power account
+    .state('patterns.signup-purchasepower', {
+      url: '/signup-purchase-power',
+      templateUrl: 'modules/patterns/templates/signup-purchase-power.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'fullscreen signin'
+      }
+    })
+
+    //this is Invitation Sign up  - Admin invitation
+    .state('patterns.signup-admininvite', {
+      url: '/signup-admininvite',
+      templateUrl: 'modules/patterns/templates/signup-admin-invite.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'fullscreen signin'
+      }
+    })
+
+    //this is Invitation Sign up  - PB Invitation with existing account
+    .state('patterns.signup-excistingaccount', {
+      url: '/signup-excisting-account',
+      templateUrl: 'modules/patterns/templates/signup-excisting-account.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'fullscreen signin'
+      }
+    })
+
+    //this is Invitation Sign up  - PB Invitation with existing account + Payment is required
+    .state('patterns.signup-withpayment', {
+      url: '/signup-with-payment',
+      templateUrl: 'modules/patterns/templates/signup-with-payment.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'fullscreen signin'
+      }
+    })
+
+    //this is Sign In Page -  post registration complete
+     .state('patterns.signup-postregistration', {
+      url: '/signup-post-registration',
+      templateUrl: 'modules/patterns/templates/signup-post-registration.html',
+      controller: 'SignInController as signin',
+      data: {
+        bodyClass: 'fullscreen signin'
+      }
+    })
+
+
 
     .state('patterns.dashboards', {
       url: '/dashboards',
@@ -136,11 +296,6 @@
       templateUrl: 'modules/patterns/templates/404.html',
       controller: '404Controller'
     });
-
-
-
-
-
 
 
   });
