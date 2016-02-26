@@ -17,8 +17,15 @@
   background-image: linear-gradient(90deg, $pb-blue 0%, $pb-magenta 100%);
 }
 ```
+**Additions**
+
 * There are [new designs for the headers](http://guxstaging.pbi.global.pvt/design_system/#/patterns/headersfooters) that include revised content and iconography for the Utility menus (on the right).
-  *
+* There are also new footer alternatives that include the approved layouts for terms & conditions and "contact us". Contact Us is  a link that reveals alternate contact methods. There is logic provided for offline hours display.
+
+####Website Changes
+
+#### Other Tools
+- updated Sketch and Illustrator UI Kits to 2.4.0, see [Resources > Tools](http://guxstaging.pbi.global.pvt/design_system/#/resources/tools)
 
 ### 2.4.0 -- January 29, 2016
 

@@ -23,7 +23,8 @@
     'pb.ds.writing',
     'pb.ds.splitview',
     'pb.ds.help',
-    'pb.ds.hamburger'
+    'pb.ds.hamburger',
+    'pb.ds.content'
   ]);
 
   //angular scroll configuration
