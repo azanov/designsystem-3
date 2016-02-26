@@ -558,13 +558,18 @@ a.app-launcher {
 .bell {
  position: relative;
  margin: 0;
- padding: 0 0 5px;
+
   .badge {
     position: absolute;
     top: 11px;
     right: 2px;
     background-color: $pb-orange;
   }
+}
+
+// don't ask
+.navbar-default .navbar-nav > li > a.bell {
+  padding-bottom: 5px;
 }
 
 .menu-text-small {
