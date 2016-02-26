@@ -19,26 +19,43 @@
 
 // "actual" footer is inside container
 // id kept for legacy reasons
-#footer,
-footer {
+#footer, footer {
+  .container {
+    color: $text-color;
+    font-size: 12px;
+    font-family: $font-family-sans-serif;
+    z-index: 10;
 
-  color: $text-color;
-  font-size: 12px;
-  font-family: $font-family-sans-serif;
-  z-index: 10;
-
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: space-between;
-  > div {
-    padding: 0 20px 0 0;
+    .contents {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+    .logo-copyright {
+      display: flex;
+      flex-basis: 1;
+      align-items: baseline;
+    }
+    > div {
+      padding: 0 20px 0 0;
+    }
   }
 
   @include breakpoint(screen-xs) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    .container .contents {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .logo-copyright {
+      flex-direction: column;
+      align-items: center;
+      .footer-logo {
+        margin: 0 auto;
+      }
+    }
 
     > div {
       padding: 0 0 5px;
@@ -61,6 +78,8 @@ footer {
 
 
 
+
+
   // reset lists in footer to have no annoying margin
   ul {
     margin: 0;
@@ -75,7 +94,7 @@ footer {
 
         a {
           color: $pb-gray-500;
-          transition: 0.2s all;
+          transition: .2s all;
           display: inline-block;
           vertical-align: middle;
           height: 2em;
@@ -120,5 +139,4 @@ footer {
   .xs-text-right {
     text-align: right;
   }
-
 }
