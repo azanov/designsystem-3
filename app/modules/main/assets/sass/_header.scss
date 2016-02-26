@@ -507,11 +507,12 @@ a.app-launcher {
   .custom-navbar .navbar-toggle {
     float: left;
     margin-right: 0;
-    margin: 0;
-    padding: 18px;
+    padding: 9px 12px;
+    
+
     border-right: 1px solid rgba(255, 255, 255, .3);
     &:not(.collapsed) {
-      background-color: #383e87;
+      //background-color: #383e87;
     }
   }
   .custom-navbar .navbar-header {

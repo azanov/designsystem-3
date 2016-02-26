@@ -1,0 +1,30 @@
+<!-- NOTE: we have hidden the default header and this is used instead -->
+<div class="navbar navbar-default navbar-fixed-top">
+  <button type="button" class="navbar-toggle" ng-click="burger.open = !burger.open">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="navbar-brand brand-text" href="#/">Product Name</a>
+</div>
+
+  <div class="nav-left" ng-class="{open : burger.open}">
+    <div class="list-group menu">
+      <a class="list-group-item" href=""><i class="fa fa-cog fa-fw fa-lg"></i> <span class="menu-title">Validate Address</span></a>
+      <a class="list-group-item" href=""><i class="fa fa-cloud fa-fw fa-lg"></i> <span class="menu-title">Get Postal Codes</span></a>
+      <a class="list-group-item" href=""><i class="fa fa-envelope fa-fw fa-lg"></i> <span class="menu-title">Get City/State/Province</span></a>
+      <a class="list-group-item" href=""><i class="fa fa-flag fa-fw fa-lg"></i> <span class="menu-title">Get Candidate Address</span></a>
+      <a class="list-group-item" href=""><i class="fa fa-globe fa-fw fa-lg"></i> <span class="menu-title">Auto Complete</span></a>
+    </div>
+  </div>
+
+
+  <div class="container-fluid">
+    <div class="burger-backdrop" ng-class="{shown : burger.open}"></div>
+    <div class="row">
+      <div class="col-md-12">
+        <label for="nav-trigger"></label>
+        <div ng-include="'modules/hamburger/templates/includes/fpo-content.html'"></div>
+      </div>
+    </div>
+  </div>

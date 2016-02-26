@@ -1,7 +1,7 @@
 //style footer to always be at bottom of screen
 .site-content {
   // scss-lint:disable DuplicateProperty
-  min-height: 550px; //fallback, just in case
+//  min-height: 550px; //fallback, just in case
   min-height: calc(100vh - (50px + 40px + 44px)); //50 for nav height, 40 footer margin, 44 footer height
 }
 

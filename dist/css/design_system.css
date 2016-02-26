@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.4.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Wed Feb 24 2016 15:47:02 GMT-0500 (EST) 
+ * Built Thu Feb 25 2016 15:15:39 GMT-0500 (EST) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -1381,96 +1381,6 @@ small, .text-small, .small {
 .fullscreen header, .fullscreen #header, .fullscreen footer, .fullscreen #footer {
   display: none; }
 
-.nav-left {
-  position: absolute;
-  width: 275px;
-  top: 80px;
-  padding: 10px;
-  z-index: 100;
-  transition: width .8s;
-  transition-delay: width .3s; }
-.minified .nav-left {
-  width: 50px; }
-
-.nav-container {
-  margin-left: 275px;
-  padding-left: 30px;
-  transition: margin-left .6s;
-  transition-delay: margin-left .5s; }
-.minified .nav-container {
-  margin-left: 70px; }
-
-.menu > li.open .menu-heading i, .menu > li.open .menu-heading .menu-title, .menu > li.open .menu-heading b {
-  transition: all .3s;
-  color: #3e53a4; }
-.minified .menu > li:hover .menu-heading {
-  transition: none;
-  background-color: #f8f8f8;
-  width: 200px; }
-.minified .menu > li:hover .menu-title {
-  display: inline-block !important;
-  background-color: #f8f8f8;
-  font-weight: 700; }
-.minified .menu > li:hover .menu-content {
-  transition: all .3s;
-  background-color: #f8f8f8;
-  position: absolute;
-  width: 165px;
-  left: 45px;
-  display: block !important; }
-.minified .menu > li:hover .menu-content li a {
-  padding: 5px; }
-.menu .menu-heading {
-  white-space: nowrap;
-  padding: 5px 3px;
-  color: #717171;
-  text-decoration: none;
-  display: block;
-  cursor: pointer;
-  position: relative; }
-.menu .menu-heading i.fa {
-  margin-right: 10px; }
-.menu .menu-heading:hover {
-  background-color: transparent;
-  transition: all .3s;
-  color: #3e53a4; }
-.menu .menu-content {
-  display: none; }
-.menu .menu-content li {
-  white-space: nowrap; }
-.menu .menu-content li:hover {
-  background: #f8f8f8;
-  color: #3e53a4; }
-.menu .menu-content li a {
-  color: #717171;
-  text-decoration: none;
-  padding-left: 41px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  display: block;
-  cursor: pointer; }
-.menu .menu-content li a:hover {
-  color: #3e53a4; }
-.menu .menu-content li a.active {
-  color: #3e53a4; }
-.menu .menu-collapse {
-  cursor: default;
-  padding-left: 3px; }
-.menu .menu-collapse i.fa {
-  cursor: pointer;
-  transition: all .3s; }
-.menu .menu-collapse i.fa:hover {
-  transition: all .3s;
-  color: #3e53a4; }
-.menu .menu-collapse i.fa:before {
-  content: '\f0a8'; }
-.minified .menu .menu-collapse i.fa {
-  transition: all .3s;
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg); }
-.no-csstransforms .minified .menu .menu-collapse i.fa:before {
-  content: '\f0a9'; }
-
 .nav.nav-list.tree-menu a {
   padding: 3px;
   color: #717171; }
@@ -2281,13 +2191,14 @@ select:hover {
 
 a.list-group-item {
   font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
   font-size: 16px;
   border: 0;
   border-radius: 0;
   transition: background-color .3s, color .2s;
   background-color: transparent; }
 a.list-group-item:hover {
-  color: #005a93;
+  color: #2e2e2e;
   background-color: #eaedf8; }
 a.list-group-item:first-child {
   border-top-left-radius: 0;
@@ -2295,11 +2206,11 @@ a.list-group-item:first-child {
 a.list-group-item.active {
   background-color: #c5cbe3;
   border-color: #c5cbe3;
-  color: #0072b8; }
+  color: #2e2e2e; }
 a.list-group-item.active:hover, a.list-group-item.active:focus {
   background-color: #e1e1e1;
   border-color: #e1e1e1;
-  color: #005a93; }
+  color: #2e2e2e; }
 a.list-group-item.active .badge {
   color: #fff;
   background-color: #3e53a4; }
@@ -3626,7 +3537,7 @@ tags-input .autocomplete .suggestion-item.selected em {
   outline: none; }
 
 #header, header {
-  background-image: linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%); }
+  background-image: linear-gradient(90deg, #3e53a4 0%, #cf0989 100%); }
 #header .navbar, header .navbar {
   margin-bottom: 0; }
 #header .navbar li.first a, header .navbar li.first a {
@@ -3945,11 +3856,8 @@ a.app-launcher {
   .custom-navbar .navbar-toggle {
     float: left;
     margin-right: 0;
-    margin: 0;
-    padding: 18px;
+    padding: 9px 12px;
     border-right: 1px solid rgba(255, 255, 255, 0.3); }
-  .custom-navbar .navbar-toggle:not(.collapsed) {
-    background-color: #383e87; }
 
   .custom-navbar .navbar-header {
     float: left;
@@ -3959,7 +3867,6 @@ a.app-launcher {
     clear: both;
     float: none; } }
 .site-content {
-  min-height: 550px;
   min-height: calc(100vh - (50px + 40px + 44px)); }
 
 .footer-wrapper {
@@ -5526,3 +5433,151 @@ td.centered, th.centered {
 
 .framed {
   border: 1px solid #e1e1e1; }
+
+@media (min-width: 992px) {
+  body.hamburger-auto {
+    padding: 30px 0 0 300px; } }
+.navmenu-fixed-left, .navbar-offcanvas.navmenu-fixed-left {
+  border-width: 0; }
+
+.hamburger {
+  overflow-x: hidden;
+  /* Navigation Menu - Background */ }
+.hamburger header, .hamburger #header {
+  display: none; }
+.hamburger .navmenu-default, .hamburger .navbar-default .navbar-offcanvas {
+  background-color: #fff;
+  border-color: #fff; }
+.hamburger .container-fluid {
+  padding-left: 50px;
+  padding-right: 50px; }
+.hamburger .main-content {
+  margin-top: 50px; }
+.hamburger .footer-wrapper .container {
+  width: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto; }
+.hamburger .site-content {
+  min-height: calc(100vh - (40px + 44px)); }
+.hamburger .navbar-default {
+  background-color: #af4343;
+  background-image: linear-gradient(90deg, #3e53a4 0%, #cf0989 100%);
+  border: 0;
+  border-radius: 0;
+  border-bottom: 0; }
+.hamburger .offcanvas.sliding {
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3); }
+.hamburger .navbar-toggle {
+  display: inline-block;
+  position: relative;
+  float: left;
+  padding: 9px 12px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px; }
+.hamburger .navbar-brand.brand-text {
+  font-family: 'PrecisionSans_W_Rg', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: normal;
+  margin-left: 0;
+  padding-left: 0; }
+.hamburger .burger-backdrop {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity .2s linear;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #000; }
+.hamburger .burger-backdrop.canvas-slid {
+  display: block;
+  background-color: #000;
+  visibility: visible;
+  opacity: .5; }
+.hamburger.hamburger-auto .main-content {
+  margin-top: 30px; }
+.hamburger.hamburger-auto .navmenu .list-group {
+  margin-top: 60px; }
+.hamburger.hamburger-slide .footer-wrapper {
+  z-index: 5000; }
+.hamburger.hamburger-slide .main-content {
+  margin-top: 80px; }
+.hamburger.hamburger-slide .navmenu .list-group {
+  margin-top: 21px; }
+.hamburger.hamburger-slide .navmenu .list-group .main-content {
+  margin-top: 100px; }
+.hamburger.hamburger-push .navmenu .list-group {
+  margin-top: 20px; }
+.hamburger.hamburger-push .close-burger {
+  cursor: pointer;
+  margin: 10px 15px;
+  width: 21px;
+  height: 21px;
+  color: #717171;
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9 Im5vIj8+Cjxzdmcgd2lkdGg9IjE3cHgiIGhlaWdodD0iMTdweCIgdmlld0JveD0i MCAwIDE3IDE3IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9y Zy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkv eGxpbmsiPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ry b2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVs ZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpv aW49InJvdW5kIj4KICAgICAgICA8ZyBpZD0iaWNvbi1iaXRzIiB0cmFuc2Zvcm09 InRyYW5zbGF0ZSgtMTYxLjAwMDAwMCwgLTE1OC4wMDAwMDApIiBzdHJva2U9IiMz RTUzQTQiIHN0cm9rZS13aWR0aD0iMiI+CiAgICAgICAgICAgIDxnIGlkPSJjbG9z ZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTY5LjUwMDAwMCwgMTY2LjUwMDAwMCkg cm90YXRlKC00NS4wMDAwMDApIHRyYW5zbGF0ZSgtMTY5LjUwMDAwMCwgLTE2Ni41 MDAwMDApIHRyYW5zbGF0ZSgxNTkuMDAwMDAwLCAxNTYuMDAwMDAwKSI+CiAgICAg ICAgICAgICAgICA8cGF0aCBkPSJNMjAsMTAuNSBMMS4xMjI2NTc1MmUtMTIsMTAu NSIgaWQ9IkxpbmUiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0x MCwwLjUgTDEwLDIwLjUiIGlkPSJMaW5lIj48L3BhdGg+CiAgICAgICAgICAgIDwv Zz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==") center center no-repeat; }
+.hamburger.hamburger-push.canvas-slid .navbar-toggle {
+  display: none; }
+.hamburger.hamburger-push.canvas-slid .navbar-brand.brand-text {
+  padding-left: 65px; }
+.hamburger.hamburger-collapse .navbar-toggle {
+  margin: 0 0 0 6px;
+  padding: 17px 16px 17px 10px; }
+.hamburger.hamburger-collapse .burger-backdrop {
+  display: block;
+  background-color: #000;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 100;
+  transition: all .6s; }
+.hamburger.hamburger-collapse .burger-backdrop.shown {
+  visibility: visible;
+  opacity: .5; }
+.hamburger.hamburger-collapse .container-fluid {
+  margin-left: 70px; }
+.hamburger.hamburger-collapse .nav-left {
+  position: absolute;
+  width: 55px;
+  min-height: 100vh;
+  top: 50px;
+  z-index: 1500;
+  background-color: #fff;
+  box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3);
+  transition: width .8s, box-shadow .2s; }
+.hamburger.hamburger-collapse .nav-left .menu {
+  list-style: none;
+  margin-top: 30px; }
+.hamburger.hamburger-collapse .nav-left .menu .list-group-item {
+  white-space: nowrap;
+  font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  color: #3e53a4;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  position: relative; }
+.hamburger.hamburger-collapse .nav-left .menu .list-group-item .menu-title {
+  visibility: hidden;
+  transition: all .5s;
+  transition-delay: .3s;
+  opacity: 0; }
+.hamburger.hamburger-collapse .nav-left .menu .list-group-item:hover {
+  background-color: #eaedf8;
+  transition: all .3s;
+  color: #3e53a4; }
+.hamburger.hamburger-collapse .nav-left.open {
+  width: 260px;
+  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.3); }
+.hamburger.hamburger-collapse .nav-left.open .list-group-item .menu-title {
+  visibility: visible;
+  opacity: 1; }
+
+body.hamburger.hamburger-slide[style='overflow: hidden;'] .burger-backdrop {
+  background-color: #000;
+  visibility: visible;
+  opacity: .5; }
