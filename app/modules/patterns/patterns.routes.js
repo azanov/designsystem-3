@@ -44,7 +44,7 @@
       templateUrl: 'modules/patterns/templates/signin.html',
       controller: 'SignInController as signin',
       data: {
-        bodyClass: 'signin'
+        bodyClass: 'fullscreen signin'
       }
     })
 
