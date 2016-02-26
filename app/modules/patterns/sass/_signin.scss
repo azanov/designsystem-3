@@ -13,14 +13,14 @@
     justify-content: space-between;
     align-content: stretch;
   }
-  
+
   .signin-body {
     min-width: 400px;
     max-width: 400px;
     // can be replaced with min/max to be more flexible if needed
-    flex: 1;
+    flex: 1 0 auto;
   }
-  
+
   .signin-pb-logo {
     margin-top: 50px;
     margin-bottom: 30px;
@@ -36,7 +36,7 @@
     background-color: #fff;
     padding: 40px;
   }
-  
+
   .signin-heading {
     color: $pb-gray-500;
     margin: 0;
@@ -53,7 +53,7 @@
     font-weight: normal;
     text-align: center;
   }
-  
+
   .signin-footer {
     color: #fff;
     line-height: 1.5em;
@@ -63,7 +63,7 @@
     font-size: 11px;
     margin: 30px 0;
     padding: 0 15px;
-      
+
     a {
       color: inherit;
     }
@@ -77,9 +77,8 @@
   display: flex;
 
   & .alert-flex-icon {
-    display: flex;
-    align-items: center;
-    padding-right: 10px;
+    align-self: center;
+    margin-right: 10px;
   }
 }
 
@@ -87,26 +86,26 @@
 //Media query for phones. This will be moved to a separate file if it grows beyond size.
 @include breakpoint(screen-xs) {
   .signin {
-    
+
     .signin-pb-logo {
       margin-top: 20px;
       margin-bottom: 20px;
       height: 40px;
     }
-    
+
     .signin-box {
       padding: 20px 40px;
     }
-    
+
     .signin-body {
       max-width: 90%;
       min-width: 90%;
     }
-    
+
     .signin-footer {
       margin-top: 20px;
       margin-bottom: 20px;
     }
-    
+
   }
 }
