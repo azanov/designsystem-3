@@ -36,17 +36,26 @@
       display: flex;
       flex-basis: 1;
       align-items: baseline;
+      .copyright {
+        white-space: nowrap;
+      }
     }
+    .t-and-c {
+      white-space: nowrap;
+    }
+
     .footer-left {
       display: flex;
       align-items: baseline;
       .logo-copyright {
         margin-right: 40px;
+
       }
     }
     .contact-us {
       display: flex;
       align-items: baseline;
+      white-space: nowrap;
       .hidemethods {
         visibility: hidden;
         opacity: 0;
@@ -86,7 +95,7 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: 10px;
-        
+
         .footer-logo {
           width: 85px;
           margin: 0 auto;
@@ -108,9 +117,9 @@
           text-align: center;
           .contact-methods {
             &.hidemethods {
-            display: none;
+              display: none;
+            }
           }
-        }
         }
       }
     }
@@ -123,9 +132,7 @@
       margin: 0;
     }
 
-    .copyright {
-      font-size: 11px;
-    }
+
   }
 
   a {
