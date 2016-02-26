@@ -41,7 +41,7 @@ gulp.task('sass', function() {
   return sass('./app/assets/sass/**/*', { sourcemap: true })
     .on('error', sass.logError)
     .pipe(autoprefixer({
-      browsers: ['last 2 versions']
+      browsers: ['last 2 versions', 'Safari <= 6'] // NOTE: support safari 5 for C+
     }))
     // For inline sourcemaps
     .pipe(sourcemaps.write())
