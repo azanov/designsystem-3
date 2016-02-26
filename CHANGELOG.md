@@ -1,6 +1,27 @@
 ## Release Notes
 
-### 2.4.0 -- January 29, 2015
+### 2.5.0 -- February 29, 2016
+
+#### CSS Changes
+
+**BREAKING CHANGES**
+
+* the footer template has been updated to use the new "Branded Footer with Copyright" version on the [Headers and Footers page] [1]. It is also now updated for proper display on phones. There are updated alfternate header and footer designs there as well.
+
+**Non-breaking Changes**
+
+* Updated all magenta gradients (such as the header) to a 2-color header, PB Blue to PB Magenta. There is now an extend mixin you can use when you need the gradient in `_mixins.scss`
+
+```scss
+%gradient {
+  background-image: linear-gradient(90deg, $pb-blue 0%, $pb-magenta 100%);
+}
+```
+
+[1]: http://guxstaging.pbi.global.pvt/design_system/#/patterns/headersfooters
+
+
+### 2.4.0 -- January 29, 2016
 
 #### CSS changes
 
@@ -157,8 +178,6 @@ The Design System is now available via [Bower](http://bower.io). See the [bower-
 - Enhanced input and radio buttons use [WTF forms](http://wtfforms.com/) as a base to support accessibility keyboard interaction and focus states. The markup structure and class names have changed as follows:
 
   ​
-
-
 
   <!-- Stacked checkboxes -->
 
@@ -325,16 +344,12 @@ The Design System is now available via [Bower](http://bower.io). See the [bower-
   - Change Error Color from #E70600 to #DC0000
 - fix download links for personas under resources > strategy; one link missing file extension (.pdf), "+" character causing issue in some browsers
 
-
-
 ###### Sketch
 
 - updated template fonts
 - update breadcrumbs
 - add underline tabs
 - add datatable drawer
-
-
 
 ###### Thanks to the following contributors and bug reporters:
 
@@ -563,8 +578,6 @@ Rick Dukeshier, Shawn Sharifi, Luke Daugherty, Nick Roberts, Nisha Rana, Sam Swa
 ### 0.9.5 December 18, 2014
 
 - Updated PB Font to use new icons from Beth and created via IcoMoon. Please replace your pbfonts with thse and replace the design_system.css file.
-
-
 
 ### 0.8.8  September 23, 2014
 

@@ -168,8 +168,8 @@ a.app-launcher {
   .navbar-nav > li > a {
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-right: 21px;
-    padding-left: 21px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 
@@ -535,6 +535,7 @@ a.app-launcher {
 
   .badge {
     position: absolute;
+    font-size: 10px;
     top: 11px;
     right: 2px;
     background-color: $pb-orange;
@@ -564,11 +565,11 @@ a.app-launcher {
 }
 
 .user-menu .face img {
-  $size: 24px;
+  $size: 32px;
   width: $size;
   height: $size;
   border-radius: 50%;
-  border: solid 2px #fff;
+  // border: solid 1px #fff;
   display: inline-block;
   position: relative;
   top: 50%;
