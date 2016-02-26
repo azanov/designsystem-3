@@ -122,8 +122,14 @@
 
             <!-- Reminders -->
             <li>
-              <a href="" class="bell">
-                <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgBell" x="0" y="0" /></svg>
+              <a href=""  class="bell">
+                <!-- <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgBell" x="0" y="0" /></svg> -->
+                <svg class="nc-icon outline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24"><g transform="translate(0, 0)">
+<path data-cap="butt" data-color="color-2" fill="none" stroke="#fff" stroke-width="2" stroke-miterlimit="10" d="M9,19.9c0,0,0,0.1,0,0.1
+	c0,1.7,1.3,3,3,3s3-1.3,3-3c0,0,0-0.1,0-0.1" stroke-linejoin="miter" stroke-linecap="butt"></path>
+<path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M19,11c0-1.6,0-3,0-3
+	c0-3.9-3.1-7-7-7S5,4.1,5,8c0,0,0,1.4,0,3c0,3.3-3,4.1-3,6c0,1.7,3.9,3,10,3s10-1.3,10-3C22,15.1,19,14.3,19,11z" stroke-linejoin="miter"></path>
+</g></svg>
                 <span class="badge">14</span>
               </a>
             </li>
@@ -142,7 +148,7 @@
                 <li><a href="">Add Carrier Accounts</a></li>
                 <li><a href="">See All Help Topics</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="" ng-class="{disabled : patterns.offline}"><i class="fa fa-fw fa-comment-o"></i> Chat <span ng-if="patterns.offline">Offline</span></a></li>
+                <li><a href="" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.offlineMessage}}" popover-placement="left" ><i class="fa fa-fw fa-comment-o"></i> Chat <span ng-if="patterns.offline">Offline</span></a></li>
                 <li><a href=""><i class="fa fa-fw fa-envelope-o"></i> Email</a></li>
                 <li><a href="" ng-class="{disabled : patterns.offline}"><i class="fa fa-fw fa-phone"></i> 1-800-555-45678</a></li>
                 <li role="separator" class="divider"></li>
@@ -489,6 +495,6 @@
 
     <g id="svgUserInitials" fill="none"><path d="M1 12c0-6.075 4.925-11 11-11s11 4.925 11 11-4.925 11-11 11-11-4.925-11-11z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  /><text  font-family="Precision Sans W" font-size="12" font-weight="normal" sketch:alignment="middle" fill="#fff" transform="translate(0 1)"><tspan x="4.784" y="15">{{patterns.userInitials}}</tspan></text></g>
 
-    <g id="svgBell" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M8.012 19.882l-.012.118c0 1.657 1.343 3 3 3s3-1.343 3-3l-.012-.118"/><path d="M18 11v-3c0-3.905-3.095-7-7-7s-7 3.095-7 7v3c0 3.333-3 4.118-3 6 0 1.674 3.864 3 10 3s10-1.326 10-3c0-1.882-3-2.667-3-6z"/></g>
+
   </defs>
 </svg>
