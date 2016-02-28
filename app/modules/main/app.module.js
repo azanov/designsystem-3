@@ -24,8 +24,12 @@
     'pb.ds.splitview',
     'pb.ds.help',
     'pb.ds.hamburger',
-    'pb.ds.content'
+    'pb.ds.content',
+    'templates'
   ]);
+  
+  //this will hold the compiled templates in the build
+  angular.module('templates', []);
 
   //angular scroll configuration
   angular.module('app').value('duScrollDuration', 750);
@@ -159,17 +163,17 @@
 
 
 
-    // $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
-    //   $log.debug(
-    //     'To State:', toState,
-    //     'From state:', fromState
-    //   );
-    //
-    //   if (!toState || !toState.data) {
-    //     return;
-    //   }
-    //
-    // });
+    $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+      $log.debug(
+        'To State:', toState,
+        'From state:', fromState
+      );
+    
+      if (!toState || !toState.data) {
+        return;
+      }
+    
+    });
 
 
     //STATE CHANGE ERROR
@@ -249,6 +253,5 @@
 
 
   });
-
 
 })();

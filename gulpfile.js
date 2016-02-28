@@ -1,23 +1,28 @@
 /*jshint strict:false */
 /*jshint node:true */
 
-var gulp       = require('gulp'),
-  browserSync  = require('browser-sync').create(),
-  del          = require('del'),
-  filter       = require('gulp-filter'),
-  header       = require('gulp-header'),
-  cssnano      = require('gulp-cssnano'),
-  ngAnnotate   = require('gulp-ng-annotate'),
-  autoprefixer = require('gulp-autoprefixer'),
-  reload       = browserSync.reload,
-  replace      = require('gulp-replace'),
-  rev          = require('gulp-rev'),
-  runSequence  = require('run-sequence'),
-  sass         = require('gulp-ruby-sass'),
-  sourcemaps   = require('gulp-sourcemaps'),
-  uglify       = require('gulp-uglify'),
-  usemin       = require('gulp-usemin'),
-  sassdoc      = require('sassdoc');
+var gulp        = require('gulp'),
+  browserSync   = require('browser-sync').create(),
+  del           = require('del'),
+  filter        = require('gulp-filter'),
+  header        = require('gulp-header'),
+  cssnano       = require('gulp-cssnano'),
+  ngAnnotate    = require('gulp-ng-annotate'),
+  autoprefixer  = require('gulp-autoprefixer'),
+  reload        = browserSync.reload,
+  replace       = require('gulp-replace'),
+  rev           = require('gulp-rev'),
+  runSequence   = require('run-sequence'),
+  sass          = require('gulp-ruby-sass'),
+  sourcemaps    = require('gulp-sourcemaps'),
+  uglify        = require('gulp-uglify'),
+  usemin        = require('gulp-usemin'),
+  sassdoc       = require('sassdoc'),
+  templatecache = require('gulp-angular-templatecache'),
+  addstream     = require('add-stream'),
+  concat        = require('gulp-concat'),
+  htmlmin        = require('gulp-htmlmin'),
+  imagemin        = require('gulp-imagemin');
 
 var today = new Date();
 var pkg = require('./package.json');
@@ -30,11 +35,10 @@ var banner = ['/**',
   ''
 ].join('\n');
 
-// clean dist folder
-gulp.task('clean:dist', function(cb) {
-  return del(['./build'], cb);
+// clean folders
+gulp.task('clean', function() {
+  return del(['./build', './dist']);
 });
-
 
 
 gulp.task('sass', function() {
@@ -51,21 +55,17 @@ gulp.task('sass', function() {
 });
 
 
-
-
 gulp.task('sass-dist', function() {
   var cssfilter = filter('design_system.css', {restore:true});
 
   return sass('./app/assets/sass/**/*', { sourcemap: false, style: 'condensed' })
     .on('error', sass.logError)
-
     .pipe(autoprefixer({
       browsers: ['last 2 versions']
     }))
     .pipe(header(banner, { pkg: pkg }))
     .pipe(cssfilter)
     .pipe(gulp.dest('./dist/css')
-   
    );
 
 });
@@ -85,6 +85,8 @@ gulp.task('usemin', function() {
       ],
       appjs: [
         replace('debug: true', 'debug: false'),
+        addstream.obj(templatePrep()),
+        concat('js/app.js'),
         ngAnnotate({remove: true, add: true, single_quotes: true}),
         uglify({mangle: true}),
         rev
@@ -104,19 +106,14 @@ gulp.task('fontrelease', function() {
 gulp.task('copy:modules', [], function() {
   gulp.src([
       './app/modules/**/i18n/*',
-      './app/modules/**/templates/**',
       './app/modules/**/assets/images/**/*.*'
     ])
+    .pipe(imagemin({
+        progressive: true
+    }))
     .pipe(gulp.dest('./build/modules'));
 });
 
-//copy core templates views
-gulp.task('copy:core-templates', [], function() {
-  gulp.src([
-      './app/core/templates/*'
-    ])
-    .pipe(gulp.dest('./build/core/templates'));
-});
 
 //copy modules data json
 gulp.task('copy:json-data', [], function() {
@@ -172,6 +169,9 @@ gulp.task('copy:images', [], function() {
   gulp.src([
       './app/assets/images/**/*'
     ])
+    .pipe(imagemin({
+        progressive: true
+    }))
     .pipe(gulp.dest('./build/assets/images'));
 });
 
@@ -183,10 +183,6 @@ gulp.task('copy:core-config', [], function() {
     .pipe(gulp.dest('build/core/config'));
 });
 
-gulp.task('clean', function(cb) {
-  del(['build/**/*'], cb);
-});
-
 
 gulp.task('sassdoc', function() {
   return gulp.src('./app/assets/sass/**/*')
@@ -194,7 +190,17 @@ gulp.task('sassdoc', function() {
 });
 
 
-
+//compile all templates into $templateCache, see usemin task 
+function templatePrep(){
+   return gulp.src(['./app/modules/**/*.html'])
+    .pipe(htmlmin({
+        removeComments: true,
+        collapseWhitespace: true
+    }))
+    .pipe(templatecache({
+        root: 'modules/'
+    }))
+}
 
 
 // browser-sync task for starting the server.
@@ -218,11 +224,10 @@ gulp.task('serve-build', [], function() {
 
 
 //build
-gulp.task('build', ['sass-dist', 'clean:dist', 'copy:angular-i18n'], function() {
+gulp.task('build', ['clean', 'sass-dist', 'copy:angular-i18n'], function() {
   runSequence(
     'usemin',
     'copy:modules',
-    'copy:core-templates',
     'copy:json-data',
     'copy:json-core-data',
     'copy:images',
@@ -238,11 +243,7 @@ gulp.task('default', ['watch'], function() {});
 
 // Watch
 gulp.task('watch', ['browser-sync', 'sass', 'copy:angular-i18n'], function() {
-
   gulp.watch(['app/assets/sass/**/*.scss', 'app/modules/**/*.scss'], {interval: 500}, ['sass']);
-
   gulp.watch(['app/core/**/*.js', 'app/modules/**/*.js', 'app/core/**/*.json', '!app/modules/i18n/angular-i18n/*.js'], {interval: 500}, reload);
-
   gulp.watch(['app/core/**/*.html', 'app/modules/**/*.html'], {interval: 500}, reload);
-
 });
