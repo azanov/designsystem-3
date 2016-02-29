@@ -7,7 +7,13 @@
 **BREAKING CHANGES**
 
 * the footer template has been updated to use the new "Branded Footer with Copyright" version on the [Headers and Footers page](http://guxstaging.pbi.global.pvt/design_system/#/patterns/headersfooters). It is also now updated for proper display on phones. There are updated alfternate header and footer designs there as well.
-* all "busy" spinners have been synchroized to use the Font Awesome "slotted circle".  This includes progress buttons and spinners, See [Web > User Feedback](http://guxstaging.pbi.global.pvt/design_system/#/feedback#process) for samples. This requires you to use the updates directive at `app/core/directives/pb-button-progress.directive.js` if you use one of these buttons.
+* all "busy" spinners have been synchroized to use the Font Awesome "slotted circle".  This includes progress buttons and spinners, See [Web > User Feedback](http://guxstaging.pbi.global.pvt/design_system/#/feedback#process) for samples. This requires you to use the updates directive at `app/core/directives/pb-button-progress.directive.js` if you use one of these buttons. The code below will add the correct spinner to the [angular-loading-bar](http://chieffancypants.github.io/angular-loading-bar/) via the spinnerTemplate:
+```javascript
+angular.module('app')
+  .config(function(cfpLoadingBarProvider) {
+    cfpLoadingBarProvider.spinnerTemplate = '<div id="loading-bar-spinner"><i class="fa fa-circle-o-notch fa-spin spinner"></i></div>';
+  });
+```
 * The signin pages and its children have been updated with a new layout, approved footer/copyright line (you will need to add the correct links to your privacy policy and T&C) and new HTML structure, below. See [Web > Patterns > Sign In & Sign Up](http://guxstaging.pbi.global.pvt/design_system/#/patterns/signinup)
 
 ```html
@@ -41,7 +47,7 @@
   background-image: linear-gradient(90deg, $pb-blue 0%, $pb-magenta 100%);
 }
 ```
-* Footer copyright updated to 2016
+* Footer copyright updated to 2016 via `new Date()`, no more manual updates
 * The "angular loading bar" plugin has been updated to 0.8.0, and the loading bar itself has been changed from white to turquoise in the css. See [Web > User Feedback](http://guxstaging.pbi.global.pvt/design_system/#/feedback#process).
 * We are now on Angular JS 1.4.9.  See below for all other library updates.
 * The "hamburger menu" on the phone version of the CSS has been updated to have a tranparent background. This is consistent with the new headers and the new hamburger menu module described below.
@@ -52,12 +58,12 @@
 
 * There are [new designs for the headers](http://guxstaging.pbi.global.pvt/design_system/#/patterns/headersfooters) that include revised content and iconography for the Utility menus (on the right).
 * There are also new footer alternatives that include the approved layouts for terms & conditions and "contact us". Contact Us is  a link that reveals alternate contact methods. There is logic provided for offline hours display.
-* A hamburger menu module has been added. See samples under Web > Patterns > Hamburger Menu. There is a "slide" version and a "push" version. 
+* A hamburger menu module has been added. See samples under Web > Patterns > Hamburger Menu. There is a "slide" version and a "push" version.
 
 ####Website Changes
 
-* Unneeded images have been removed from the Design System file system
-* Content has been promoted to the top-level navigation bar, and new copy has been added
+* Unused images have been removed from the Design System file system
+* Content has been promoted to the top-level navigation bar and new copy has been added
 * Several libraries have been updated in `bower.json`
 
 ####Updated Libraries
@@ -77,10 +83,10 @@
 * angular-toaster 1.7.0
 
 #### Other Tools
-- updated Sketch and Illustrator UI Kits to 2.4.0, see [Resources > Tools](http://guxstaging.pbi.global.pvt/design_system/#/resources/tools)
+- updated Sketch UI Kit to 2.5.0, see [Resources > Tools](http://guxstaging.pbi.global.pvt/design_system/#/resources/tools)
 
 #### Thanks to the following contributors and bug reporters:
-Andy Grossman, Ania Mastriano, Cameron Chu, Erik Balisi, Gaurav Varshney , Henry Rogando , Joan Doutney, Kathy Belleau, Kevin Bodie , Kyle Pause , Manish Kukreja, Sara Conklin
+Andy Grossman, Ania Mastriano, Cameron Chu, Erik Balisi, Gaurav Varshney, Henry Rogando, Jim Norris, Joan Doutney, Kathy Belleau, Kevin Bodie, Kyle Pause, Manish Kukreja, Rob Woods, Sara Conklin
 
 ### 2.4.0 -- January 29, 2016
 
@@ -146,7 +152,7 @@ Globalization Team, Joan Doutney, Nick Roberts, Nisha Rana, Jayachandra Madarapu
     <!-- Legal -->
     <div>
       <ul class="list-unstyled list-inline legal">
-        <li><a href="" target="_blank">Terms &amp; Conditions</a></li>
+        <li><a href="" target="_blank">Terms and Conditions</a></li>
         <li><a href="" target="_blank">Privacy Policy</a></li>
         <li><a href="" target="_blank">Link</a></li>
         <li><a href="" target="_blank">Link</a></li>
@@ -525,7 +531,7 @@ Rick Dukeshier, Shawn Sharifi, Luke Daugherty, Nick Roberts, Nisha Rana, Sam Swa
 		    <!-- Legal -->
 		    <div>
 		      <ul class="list-unstyled list-inline legal">
-		        <li><a href="" target="_blank">Terms &amp; Conditions</a></li>
+		        <li><a href="" target="_blank">Terms and Conditions</a></li>
 		        <li><a href="" target="_blank">Privacy Policy</a></li>
 		      </ul>
 		    </div>
