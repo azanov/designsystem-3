@@ -33,14 +33,14 @@
     max-width: 600px;
   }
 
-  footer {
+  .footer-wrapper, footer {
     margin-top: 0;
   }
 
 
   // some have specialized backgrounds
   &.landing-bgimage {
-    background-image: linear-gradient(90deg, $pb-blue 0%, $pb-magenta 100%), url('../images/bg-imageDemo.png');
+    background-image: linear-gradient(90deg, hsla(228, 44%, 44%, .9) 0%, hsla(321, 91%, 42%, .9) 100%), url('../images/bg-imageDemo.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
