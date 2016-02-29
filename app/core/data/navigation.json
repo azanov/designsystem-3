@@ -28,9 +28,6 @@
               "label": "Grid",
               "value": "foundation.grid"
             }, {
-              "label": "Writing",
-              "value": "foundation.writing.page"
-            }, {
               "label": "Iconography",
               "value": "foundation.iconography"
             }, {
@@ -79,6 +76,9 @@
           "children": [{
             "label": "Headers & Footers",
             "value": "patterns.headersfooters"
+          }, {
+            "label": "Hamburger Menu",
+            "value": "hamburger.overview"
           }, {
             "label": "Sign In & Sign Up",
             "value": "patterns.signinup"

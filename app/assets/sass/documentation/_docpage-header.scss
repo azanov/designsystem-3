@@ -2,7 +2,7 @@
 //DOCUMENTATION PAGES
 
 .doc-hero {
-  background-image: linear-gradient(90deg, #4c4ca2 0%, #872e96 42%, #872e96 48%, #c90d8b 100%);
+  @extend %gradient;
   height: 300px;
   border-top: 1px solid rgba(255, 255, 255, .2);
   margin-top: 50px; // height of navbar
@@ -74,7 +74,8 @@
 }
 .sub-header.jump-bar {
   background-image: linear-gradient(90deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)),
-  linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%);
+  linear-gradient(90deg, $pb-blue 0%, $pb-magenta 100%);
+
 
 
   // not docked
