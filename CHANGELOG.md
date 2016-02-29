@@ -152,7 +152,7 @@ Globalization Team, Joan Doutney, Nick Roberts, Nisha Rana, Jayachandra Madarapu
     <!-- Legal -->
     <div>
       <ul class="list-unstyled list-inline legal">
-        <li><a href="" target="_blank">Terms &amp; Conditions</a></li>
+        <li><a href="" target="_blank">Terms and Conditions</a></li>
         <li><a href="" target="_blank">Privacy Policy</a></li>
         <li><a href="" target="_blank">Link</a></li>
         <li><a href="" target="_blank">Link</a></li>
@@ -531,7 +531,7 @@ Rick Dukeshier, Shawn Sharifi, Luke Daugherty, Nick Roberts, Nisha Rana, Sam Swa
 		    <!-- Legal -->
 		    <div>
 		      <ul class="list-unstyled list-inline legal">
-		        <li><a href="" target="_blank">Terms &amp; Conditions</a></li>
+		        <li><a href="" target="_blank">Terms and Conditions</a></li>
 		        <li><a href="" target="_blank">Privacy Policy</a></li>
 		      </ul>
 		    </div>
