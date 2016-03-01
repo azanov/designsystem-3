@@ -30,7 +30,7 @@
     .state('patterns.dragdrop', {
       url: '/dragdrop',
       templateUrl: 'modules/patterns/templates/drag-drop.html',
-      controller: 'DragDropController',
+      controller: 'DragDropController as dragdrop',
       data: {
         pageTitle: 'Patterns - Drag Drop',
         access: 'public',
