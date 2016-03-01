@@ -1,14 +1,21 @@
-
 <div class="container spacer-top-xl">
   <div class="row">
 
-
-    <div dragula=''>
-      
+    <div class="panel panel-default drag-container">
+      <div class="panel-body" dragula="first-bag" dragula-model="dragdrop.items.unselected">
+        <div class="drag-item" ng-repeat="item in dragdrop.items.unselected track by item.id">
+          {{::item.label}}
+        </div>
+      </div>
     </div>
-
-
-    <pre>{{ models | json}}</pre>
+    
+    <div class="panel panel-default panel-drag-container">
+      <div class="panel-body" dragula="first-bag" dragula-model="dragdrop.items.selected" >
+        <div ng-repeat="item in dragdrop.items.selected track by item.id">
+          {{::item.label}}
+        </div>
+      </div>
+    </div>
 
   </div>
 
