@@ -3,8 +3,8 @@
 
     <div class="col-md-6">
       <div class="panel panel-default drag-container">
-        <div class="panel-body" dragula="first-bag" dragula-model="dragdrop.items.unselected">
-          <div class="drag-item" ng-repeat="item in dragdrop.items.unselected track by item.id" tooltip="Click and hold to drag.">
+        <div class="panel-body" dragula="'first-bag'" dragula-model="dragdrop.items.unselected">
+          <div class="drag-item" ng-repeat="item in dragdrop.items.unselected track by item.id" uib-tooltip="Click and hold to drag." tooltip-enable="dragdrop.tooltip.isEnabled">
             {{::item.label}}
           </div>
         </div>
@@ -13,8 +13,8 @@
     
     <div class="col-md-6">
       <div class="panel panel-default">
-        <div class="panel-body" dragula="first-bag" dragula-model="dragdrop.items.selected" >
-          <div class="drag-item" ng-repeat="item in dragdrop.items.selected track by item.id">
+        <div class="panel-body" dragula="'first-bag'" dragula-model="dragdrop.items.selected" >
+          <div class="drag-item" ng-repeat="item in dragdrop.items.selected track by item.id" uib-tooltip="Click and hold to drag." tooltip-enable="dragdrop.tooltip.isEnabled">
             {{::item.label}}
           </div>
         </div>
