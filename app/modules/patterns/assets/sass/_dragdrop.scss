@@ -46,3 +46,37 @@
   background-color: rgba(0, 0, 0, 0.4);
   cursor: move;
 }
+
+
+/* DOCUMENTATION TO BE MOVED */
+.table-dragdrop {
+  border: 0;
+  font-size: 10px;
+  
+  thead tr.category th {
+    font-weight: bold;
+    color: #000;
+  }
+  
+  thead tr th {
+    border: 0;
+    background-color: transparent;    
+  }
+  
+  .column {
+    width: 100px;
+  }
+  
+  tbody tr td {
+    
+    &.no-border {
+      border: 0;
+      vertical-align: middle;
+    }
+    
+    &:empty {
+      background-color: #f2f2f2;  
+    }
+    
+  }
+}
