@@ -1,23 +1,29 @@
-.panel-drag-container {
-  background-color: #dddedf;
-}
-
 .drag-item {
-  cursor: grab;
+  
+  
+  &:hover {
+    background-color: green;
+    cursor: pointer;
+  }
   
   &:active {
-    background-color: purple;
+    cursor: grab;
+    background-color: $pb-gray-300;
   }
   
   //
   &.gu-transit {
+    color: red;
     background-color: blue;
+    border: 2px dashed orange;
   }
   
   &.gu-mirror {
     cursor: grabbing;
-    background-color: rgba(255, 0, 0, 0.8);
+    opacity: 0.8;
+    background-color: $pb-gray-300;
     transition: opacity 0.4s ease-in-out;
+    box-shadow: 0px 5px 10px -5px rgba(0,0,0,.5);
   }
 }
 
