@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.5.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Mon Feb 29 2016 12:57:16 GMT-0500 (EST) 
+ * Built Wed Mar 02 2016 08:52:13 GMT-0500 (EST) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -1703,6 +1703,18 @@ div.accordion-group .panel.active .panel-title:before {
   border-color: #c0c0c0;
   color: #fff;
   opacity: 1; }
+
+.btn-success {
+  background-color: #008500; }
+
+.btn-info {
+  background-color: #3e53a4; }
+
+.btn-warning {
+  background-color: #be5000; }
+
+.btn-danger {
+  background-color: #dc0000; }
 
 .btn {
   padding: 6px 12px;
@@ -5607,7 +5619,7 @@ td.centered, th.centered {
   background-image: none;
   border: 1px solid transparent;
   border-right: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px; }
+  border-radius: 0; }
 .hamburger .navbar-brand.brand-text {
   font-family: 'PrecisionSans_W_Rg', 'Helvetica Neue', Arial, sans-serif;
   font-weight: normal;
