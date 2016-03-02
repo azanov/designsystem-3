@@ -8,12 +8,12 @@
 
 * the footer template has been updated to use the new "Branded Footer with Copyright" version on the [Headers and Footers page](http://guxstaging.pbi.global.pvt/design_system/#/patterns/headersfooters). It is also now updated for proper display on phones. There are updated alfternate header and footer designs there as well.
 * all "busy" spinners have been synchroized to use the Font Awesome "slotted circle".  This includes progress buttons and spinners, See [Web > User Feedback](http://guxstaging.pbi.global.pvt/design_system/#/feedback#process) for samples. This requires you to use the updates directive at `app/core/directives/pb-button-progress.directive.js` if you use one of these buttons. The code below will add the correct spinner to the [angular-loading-bar](http://chieffancypants.github.io/angular-loading-bar/) via the spinnerTemplate:
-```javascript
-angular.module('app')
+  ```javascript
+  angular.module('app')
   .config(function(cfpLoadingBarProvider) {
     cfpLoadingBarProvider.spinnerTemplate = '<div id="loading-bar-spinner"><i class="fa fa-circle-o-notch fa-spin spinner"></i></div>';
   });
-```
+  ```
 * The signin pages and its children have been updated with a new layout, approved footer/copyright line (you will need to add the correct links to your privacy policy and T&C) and new HTML structure, below. See [Web > Patterns > Sign In & Sign Up](http://guxstaging.pbi.global.pvt/design_system/#/patterns/signinup)
 
 ```html
@@ -51,7 +51,6 @@ angular.module('app')
 * The "angular loading bar" plugin has been updated to 0.8.0, and the loading bar itself has been changed from white to turquoise in the css. See [Web > User Feedback](http://guxstaging.pbi.global.pvt/design_system/#/feedback#process).
 * We are now on Angular JS 1.4.9.  See below for all other library updates.
 * The "hamburger menu" on the phone version of the CSS has been updated to have a tranparent background. This is consistent with the new headers and the new hamburger menu module described below.
-
 
 
 **Additions**
