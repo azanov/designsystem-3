@@ -224,32 +224,38 @@
   }
 }
 
+// add this class to existing buttons, like btn-primary, to make a pill shape
+.btn-pill {
+  border-radius: 40px !important;
+  //TODO: add other radii for sm and lg buttons
+}
+
 
 .btn-pill-brand {
-  color: #fff;
-  background-color: $pb-blue;
+  //color: #fff;
+  //background-color: $pb-blue;
   border-radius: 40px !important;
-  border: 1px solid $pb-blue;
-  padding: $padding-base-vertical $padding-large-horizontal;
-  min-width: 120px;
+  //border: 1px solid $pb-blue;
+  //padding: $padding-base-vertical $padding-large-horizontal;
+  //min-width: 120px;
 
-  &:disabled {
-    color: #fff;
-    background-color: #c0c0c0;
-    border: 1px solid #c0c0c0;
-    opacity: 1;
-  }
+  // &:disabled {
+  //   color: #fff;
+  //   background-color: #c0c0c0;
+  //   border: 1px solid #c0c0c0;
+  //   opacity: 1;
+  // }
 
-  &:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    color: #fff;
-    background-color: $pb-blue;
-    border: 1px solid $pb-blue;
-  }
+  // &:hover {
+  //   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  //   color: #fff;
+  //   background-color: $pb-blue;
+  //   border: 1px solid $pb-blue;
+  // }
 
-  &:active {
-    opacity: 0.8;
-  }
+  // &:active {
+  //   opacity: 0.8;
+  // }
 
 }
 
@@ -268,6 +274,19 @@
       opacity: 1;
     }
   }
+}
+
+.btn-success {
+  background-color: $brand-success;
+}
+.btn-info {
+  background-color: $brand-info;
+}
+.btn-warning {
+  background-color: $brand-warning;
+}
+.btn-danger {
+  background-color: $brand-danger;
 }
 
 

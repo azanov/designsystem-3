@@ -1,23 +1,14 @@
 <div class="footer-wrapper">
-  <div class="container">
     <footer>
-
-        <div>
-          <a href="http://www.pb.com"><i class="pb-footer-logo gradient"></i></a>    <span class="copyright">
-            &copy; {{::footer.year}} Pitney Bowes Inc. All rights reserved.
-        </span>
+      <div class="container">
+        <div class="contents">
+          <!-- the logo and copyright have their own flexbox -->
+          <div class="logo-copyright">
+            <div class="footer-logo"><a href="http://www.pb.com"><i class="pb-footer-logo gradient"></i></a></div>
+            <div class="copyright">&copy; {{footer.year}} Pitney Bowes Inc.</div>
+          </div>
+          <!-- <div class="t-and-c"><a href="">Terms and conditions</a></div> -->
         </div>
-
-     
-        <!-- place other items in block-level containers here -->
-        <!-- on desktop, items are flush left with 20px right margin -->
-        <!-- if you want the items spaced evenly left-to-right, see _footer.scss and change "justify-content" to "space-between" -->
-
-
-        <!-- <div>
-          Lorem ipsum dolor sit amet.
-        </div> -->
-
+      </div>
     </footer>
-  </div>
 </div>

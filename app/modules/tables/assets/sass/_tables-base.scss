@@ -79,7 +79,7 @@ th {
   .table {
     background-color: $body-bg;
   }
-  
+
   .table-row-toggle {
     color: $pb-gray-700;
   }
@@ -98,7 +98,7 @@ th {
     }
 
     >td {
-      background-image: linear-gradient(to bottom, rgba(203, 203, 203, 1) -5%, rgba(240, 240, 240, 1) 6%, rgba(240, 240, 240, 1) 100%);
+      background-image: linear-gradient(to bottom, hsl(0, 0%, 79%) -5%, hsl(0, 0%, 94%) 6%, hsl(0, 0%, 94%) 100%);
     }
 
 
