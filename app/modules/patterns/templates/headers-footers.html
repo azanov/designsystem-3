@@ -589,13 +589,14 @@
                   <!-- this div shows when contact us is clicked-->
                   <div class="contact-methods" ng-class="{hidemethods : patterns.hideMethods}">
                     <div>
-                      <a href="" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.chatOfflineMessage}}"><i class="fa fa-fw fa-comment-o"></i> Chat</a>
+                      <i class="fa fa-fw fa-comment-o link-icon" ng-class="{disabled : patterns.offline}"></i>
+                      <a href="" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.chatOfflineMessage}}">Chat</a>
                     </div>
                     <div>
-                      <a href=""><i class="fa fa-fw fa-envelope-o"></i> Email</a>
+                      <i class="fa fa-fw fa-envelope-o link-icon"></i> <a href="">Email</a>
                     </div>
                     <div>
-                        <a href="tel:1-800-555-45678" ><i class="fa fa-fw fa-phone"></i> 1-800-555-45678</a>
+                      <i class="fa fa-fw fa-phone link-icon"></i> <a href="tel:1-800-555-45678" >1-800-555-45678</a>
                     </div>
                   </div>
                   <a href="" ng-click="patterns.hideMethods = !patterns.hideMethods" ng-if="patterns.hideMethods">Contact us</a>
@@ -639,13 +640,14 @@
                   <!-- this div shows when contact us is clicked-->
                   <div class="contact-methods" ng-class="{hidemethods : patterns.hideMethods}">
                     <div>
-                      <a href="" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.chatOfflineMessage}}"><i class="fa fa-fw fa-comment-o"></i> Chat</a>
+                      <i class="fa fa-fw fa-comment-o link-icon" ng-class="{disabled : patterns.offline}"></i>
+                      <a href="" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.chatOfflineMessage}}">Chat</a>
                     </div>
                     <div>
-                      <a href=""><i class="fa fa-fw fa-envelope-o"></i> Email</a>
+                      <i class="fa fa-fw fa-envelope-o link-icon"></i> <a href="">Email</a>
                     </div>
                     <div>
-                      <a href="tel:1-800-555-45678" ><i class="fa fa-fw fa-phone"></i> 1-800-555-45678</a>
+                      <i class="fa fa-fw fa-phone link-icon"></i> <a href="tel:1-800-555-45678" >1-800-555-45678</a>
                     </div>
                   </div>
                   <a href="" ng-click="patterns.hideMethods = !patterns.hideMethods" ng-if="patterns.hideMethods">Contact us</a>
