@@ -36,8 +36,9 @@
     };
 
     // for the date picker with calendar button working
-    _this.openPicker = function () {
-     $('#button-picker').data('daterangepicker').show();
+    _this.openPicker = function (which) {
+      var item = '#' + which;
+     $(item).data('daterangepicker').show();
     };
 
 
