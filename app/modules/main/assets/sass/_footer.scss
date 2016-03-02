@@ -68,6 +68,12 @@
         > div {
           margin-left: 20px;
         }
+        .link-icon {
+          color: $pb-medium-blue;
+          &.disabled {
+            color: $pb-gray;
+          }
+        }
 
         a {
           color: $pb-medium-blue;
@@ -76,6 +82,7 @@
             &:hover {
               background-color: transparent;
               cursor: not-allowed;
+              text-decoration: none;
             }
           }
         }

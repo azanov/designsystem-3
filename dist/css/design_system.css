@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.5.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Wed Mar 02 2016 08:52:13 GMT-0500 (EST) 
+ * Built Tue Mar 01 2016 16:48:43 GMT-0500 (EST) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -1703,18 +1703,6 @@ div.accordion-group .panel.active .panel-title:before {
   border-color: #c0c0c0;
   color: #fff;
   opacity: 1; }
-
-.btn-success {
-  background-color: #008500; }
-
-.btn-info {
-  background-color: #3e53a4; }
-
-.btn-warning {
-  background-color: #be5000; }
-
-.btn-danger {
-  background-color: #dc0000; }
 
 .btn {
   padding: 6px 12px;
