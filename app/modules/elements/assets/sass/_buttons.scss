@@ -224,10 +224,12 @@
   }
 }
 
-
+// add this class to existing buttons, like btn-primary, to make a pill shape
 .btn-pill {
   border-radius: 40px !important;
+  //TODO: add other radii for sm and lg buttons
 }
+
 
 .btn-pill-brand {
   //color: #fff;
@@ -272,6 +274,19 @@
       opacity: 1;
     }
   }
+}
+
+.btn-success {
+  background-color: $brand-success;
+}
+.btn-info {
+  background-color: $brand-info;
+}
+.btn-warning {
+  background-color: $brand-warning;
+}
+.btn-danger {
+  background-color: $brand-danger;
 }
 
 
