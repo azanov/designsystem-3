@@ -1,8 +1,8 @@
 /**
  * DesignSystem - 
- * @version v2.5.0
+ * @version v2.5.2
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Tue Mar 01 2016 16:48:43 GMT-0500 (EST) 
+ * Built Wed Mar 02 2016 11:31:47 GMT-0500 (EST) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -3964,13 +3964,18 @@ a.app-launcher {
           align-items: baseline; }
 #footer .container .contact-us .contact-methods > div, footer .container .contact-us .contact-methods > div {
   margin-left: 20px; }
+#footer .container .contact-us .contact-methods .link-icon, footer .container .contact-us .contact-methods .link-icon {
+  color: #0072b8; }
+#footer .container .contact-us .contact-methods .link-icon.disabled, footer .container .contact-us .contact-methods .link-icon.disabled {
+  color: #c0c0c0; }
 #footer .container .contact-us .contact-methods a, footer .container .contact-us .contact-methods a {
   color: #0072b8; }
 #footer .container .contact-us .contact-methods a.disabled, footer .container .contact-us .contact-methods a.disabled {
   color: #c0c0c0; }
 #footer .container .contact-us .contact-methods a.disabled:hover, footer .container .contact-us .contact-methods a.disabled:hover {
   background-color: transparent;
-  cursor: not-allowed; }
+  cursor: not-allowed;
+  text-decoration: none; }
 #footer .container > div, footer .container > div {
   padding: 0 20px 0 0; }
 @media (max-width: 767px) {
