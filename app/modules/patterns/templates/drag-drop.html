@@ -36,18 +36,19 @@
             <th></th>
             <th></th>
             <th colspan="10" class="text-center">
-              <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380.1 10">
-                <style>
-                  .st0{fill:none;stroke:#cf0989;stroke-width:0.5;stroke-miterlimit:10;} .st1{fill:none;stroke:#cf0989;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:1.9952,1.9952;} .st2{fill:#cf0989;} .st3{fill:#FFFFFF;} .st4{fill:none;} .st5{font-family:&apos;Helvetica&apos;;} .st6{font-size:6px;}
-                </style>
-                <path class="st0" d="M2.5 5h1"/>
-                <path class="st1" d="M5.5 5h370.1"/>
-                <path class="st0" d="M376.6 5h1"/>
-                <path class="st2" d="M3 6.7L0 5l3-1.8zm374.1 0l3-1.7-3-1.8z"/>
-                <path class="st3" d="M174.8 0h30.5v10h-30.5z"/>
-                <path class="st4" d="M164.6 2.2h50.9v5.5h-50.9z"/>
-                <text transform="translate(178.73 6.55)" class="st2 st5 st6">
-                  ACTION
+              <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980.15 14.15">
+                <defs>
+                  <style>
+                    .cls-1,.cls-2{fill:none;stroke:#662d91;stroke-miterlimit:10;stroke-width:0.75px;}.cls-2{stroke-dasharray:2 2;}.cls-3,.cls-5{fill:#662d91;}.cls-4{fill:#fff;}.cls-5{font-size:10px;font-family:Helvetica;}
+                  </style>
+                </defs>
+                <path class="cls-1" d="M5.38 5.78h1"/>
+                <path class="cls-2" d="M8.39 5.78h964.38"/>
+                <path class="cls-1" d="M973.77 5.78h1"/>
+                <path class="cls-3" d="M6.48 9.52L0 5.78l6.48-3.74v7.48zm967.2 0l6.47-3.74-6.47-3.74v7.48z"/>
+                <path class="cls-4" d="M464.62 0h50.91v11.55h-50.91z"/>
+                <text class="cls-5" transform="translate(467.85 9.34)">
+                  ACTIONS
                 </text>
               </svg>
             </th>
@@ -69,7 +70,23 @@
         </thead>
         <tbody>
           <tr>
-            <td rowspan="7" class="no-border text-center text-magenta">Objects</td>
+            <td rowspan="7" class="no-border text-center" style="width: 70px;">
+              <svg id="Layer_2" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.15 645.33">
+                <defs>
+                  <style>
+                    .cls-1,.cls-2{fill:none;stroke:#662d91;stroke-miterlimit:10;stroke-width:0.75px;}.cls-2{stroke-dasharray:2 2;}.cls-3,.cls-5{fill:#662d91;}.cls-4{fill:#fff;}.cls-5{font-size:10px;font-family:Helvetica;}
+                  </style>
+                </defs>
+                <path class="cls-1" d="M25.57 5.38v1"/>
+                <path class="cls-2" d="M25.57 8.38v629.57"/>
+                <path class="cls-1" d="M25.57 638.95v1"/>
+                <path class="cls-3" d="M21.83 6.48L25.57 0l3.74 6.48h-7.48zm0 632.38l3.74 6.47 3.74-6.47h-7.48z"/>
+                <path class="cls-4" d="M.12 309.25h50.91v11.55H.12z"/>
+                <text class="cls-5" transform="translate(2.51 318.59)">
+                  OBJECTS
+                </text>
+              </svg>
+            </td>
             <td class="no-border text-right">Page</td>
             <td>messaging indicating drag an drop functionality, if necessary</td>
             <td></td>
@@ -85,16 +102,16 @@
           
           <tr>
             <td class="no-border text-right">Cursor</td>
-            <td><i class="fa fa-mouse-pointer"></i></td>
-            <td><i class="fa fa-hand-pointer-o"></i></td>
-            <td><i class="fa fa-hand-rock-o"></i></td>
-            <td><i class="fa fa-hand-rock-o"></i></td>
-            <td><i class="fa fa-hand-rock-o"></i></td>
-            <td><i class="fa fa-hand-rock-o"></i></td>
-            <td><i class="fa fa-hand-rock-o"></i></td>
-            <td><i class="fa fa-mouse-pointer"></i></td>
-            <td><i class="fa fa-mouse-pointer"></i></td>
-            <td><i class="fa fa-mouse-pointer"></i></td>
+            <td class="text-center"><i class="fa fa-mouse-pointer"></i></td>
+            <td class="text-center"><i class="fa fa-hand-pointer-o"></i></td>
+            <td class="text-center"><i class="fa fa-hand-rock-o"></i></td>
+            <td class="text-center"><i class="fa fa-hand-rock-o"></i></td>
+            <td class="text-center"><i class="fa fa-hand-rock-o"></i></td>
+            <td class="text-center"><i class="fa fa-hand-rock-o"></i></td>
+            <td class="text-center"><i class="fa fa-hand-rock-o"></i></td>
+            <td class="text-center"><i class="fa fa-mouse-pointer"></i></td>
+            <td class="text-center"><i class="fa fa-mouse-pointer"></i></td>
+            <td class="text-center"><i class="fa fa-mouse-pointer"></i></td>
           </tr>
           
           <tr>
@@ -178,7 +195,7 @@
       <div class="panel panel-default drag-container">
         <div class="panel-body" dragula="'first-bag'" dragula-model="dragdrop.items.unselected">
           <div class="drag-item" ng-repeat="item in dragdrop.items.unselected track by item.id" uib-tooltip="Click and hold to drag." tooltip-enable="dragdrop.tooltip.isEnabled">
-            {{::item.label}}
+            <span>{{::item.label}}</span>
           </div>
         </div>
       </div>
@@ -188,7 +205,7 @@
       <div class="panel panel-default">
         <div class="panel-body" dragula="'first-bag'" dragula-model="dragdrop.items.selected" >
           <div class="drag-item" ng-repeat="item in dragdrop.items.selected track by item.id" uib-tooltip="Click and hold to drag." tooltip-enable="dragdrop.tooltip.isEnabled">
-            {{::item.label}}
+            <span>{{::item.label}}</span>
           </div>
         </div>
       </div>

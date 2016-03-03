@@ -40,6 +40,14 @@
     $scope.$on('first-bag.drop', function(e, el, container) {
       _this.tooltip.isEnabled = !_this.tooltip.isEnabled;
     });
+    
+    // $scope.$on('first-bag.over', function(e, el, container) {
+    //   el.addClass('over');
+    // });
+    
+    // $scope.$on('first-bag.out', function(e, el, container) {
+    //   el.removeClass('over');
+    // });
 
   });
 
