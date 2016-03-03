@@ -1,29 +1,34 @@
 .drag-item {
-  
+  padding: 10px;
+  border: 1px solid transparent;
+  transition: all .3s;
   
   &:hover {
-    background-color: green;
+    background-color: $pb-bg3;
     cursor: pointer;
   }
   
   &:active {
     cursor: grab;
-    background-color: $pb-gray-300;
+    background-color: $pb-bg5;
   }
   
-  //
+  //the drop container
   &.gu-transit {
-    color: red;
-    background-color: blue;
-    border: 2px dashed orange;
+    background-color: $pb-bg3;
+    border: 1px dashed $pb-bg5;
+    opacity: 1;
   }
   
+  //the dragged element
   &.gu-mirror {
     cursor: grabbing;
     opacity: 0.8;
-    background-color: $pb-gray-300;
+    background-color: $pb-bg5;
     transition: opacity 0.4s ease-in-out;
     box-shadow: 0px 5px 10px -5px rgba(0,0,0,.5);
+    transform: scale(1.1);
+    transition: all 1s;
   }
 }
 
@@ -34,18 +39,18 @@
  */
 
 
-.ex-moved {
-  background-color: #e74c3c;
-}
-.ex-over {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-.handle {
-  padding: 0 5px;
-  margin-right: 5px;
-  background-color: rgba(0, 0, 0, 0.4);
-  cursor: move;
-}
+// .ex-moved {
+//   background-color: #e74c3c;
+// }
+// .ex-over {
+//   background-color: rgba(255, 255, 255, 0.3);
+// }
+// .handle {
+//   padding: 0 5px;
+//   margin-right: 5px;
+//   background-color: rgba(0, 0, 0, 0.4);
+//   cursor: move;
+// }
 
 
 /* DOCUMENTATION TO BE MOVED */
@@ -69,6 +74,7 @@
   }
   
   tbody tr td {
+    border-color: $pb-light-gray;
     
     &.no-border {
       border: 0;
