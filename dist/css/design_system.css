@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.5.3
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Wed Mar 02 2016 15:31:14 GMT-0500 (EST) 
+ * Built Thu Mar 03 2016 14:09:07 GMT-0500 (EST) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -1860,6 +1860,9 @@ label .optional {
   color: #dc0000; }
 
 .help-block.text-error, .help-block.text-danger {
+  color: #dc0000; }
+
+.has-error .help-block {
   color: #dc0000; }
 
 .read-only-data label {
