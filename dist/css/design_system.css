@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.5.3
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Wed Mar 02 2016 15:31:14 GMT-0500 (EST) 
+ * Built Mon Mar 07 2016 14:58:10 GMT-0500 (EST) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -1862,6 +1862,9 @@ label .optional {
 .help-block.text-error, .help-block.text-danger {
   color: #dc0000; }
 
+.has-error .help-block {
+  color: #dc0000; }
+
 .read-only-data label {
   margin: 5px 0 0; }
 .read-only-data label + p {
@@ -2189,6 +2192,17 @@ select:hover {
 
 .controls-inline .control + .control {
   margin-left: 15px; }
+
+.search-clear {
+  position: absolute;
+  padding-right: 3px;
+  padding-left: 0;
+  right: 0;
+  z-index: 4;
+  border: 0;
+  opacity: 1;
+  color: silver;
+  transition: all .3s ease-in-out; }
 
 a.list-group-item {
   font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif;
@@ -5802,3 +5816,47 @@ body.hamburger.hamburger-slide[style='overflow: hidden;'] .burger-backdrop {
   background-color: #000;
   visibility: visible;
   opacity: .5; }
+
+.errors .main {
+  margin-top: 200px; }
+.errors .site-content {
+  min-height: calc(100vh - (50px + 35px)); }
+.errors.errors-centered .main {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+.errors.errors-centered .main h1 {
+  margin-bottom: 0; }
+.errors.errors-centered .search-field {
+  width: 500px; }
+.errors.errors-centered .search-field .input-group {
+  margin-bottom: 15px; }
+.errors.errors-centered .text {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+.errors.errors-centered .text > div {
+  margin: 0 20px; }
+@media (max-width: 767px) {
+  .errors.errors-centered .main {
+    margin-top: 80px; }
+  .errors.errors-centered .main h1 {
+    text-align: center; }
+  .errors.errors-centered .search-field {
+    width: auto; }
+  .errors.errors-centered .text {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .errors.errors-centered .text h2 {
+    margin-top: 20px;
+    margin-bottom: 5px; } }
