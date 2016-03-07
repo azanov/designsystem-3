@@ -1,5 +1,4 @@
-// scss-lint:disable VendorPrefix
-/* --------------------------------
+/* -------------------------------- 
 
 Nucleo Mini Web Font - nucleoapp.com/
 License - nucleoapp.com/license/
@@ -8,7 +7,6 @@ Created using IcoMoon - icomoon.io
 -------------------------------- */
 @import "variables";
 @import "mixins";
-@import "pb";
 
 @font-face {
   font-family: 'Nucleo Mini';
@@ -29,15 +27,12 @@ Created using IcoMoon - icomoon.io
 .#{$nc-css-prefix}-mini {
   display: inline-block;
   font: normal normal normal #{$nc-font-size-base}/1 'Nucleo Mini';
-  font-size: inherit;
+  font-size: inherit; 
   speak: none;
   text-transform: none;
   /* Better Font Rendering */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  .btn & {
-    font-size: 12px;
-  }
 
 }
 
@@ -50,12 +45,12 @@ Created using IcoMoon - icomoon.io
   	vertical-align: -16%;
 }
 
-.#{$nc-css-prefix}-mini.x2 {
-	font-size: 2em;
+.#{$nc-css-prefix}-mini.x2 { 
+	font-size: 2em; 
 }
 
-.#{$nc-css-prefix}-mini.x3 {
-	font-size: 3em;
+.#{$nc-css-prefix}-mini.x3 { 
+	font-size: 3em; 
 }
 
 /*----------------------------------
@@ -80,26 +75,26 @@ Created using IcoMoon - icomoon.io
   padding-left: 0;
   margin-left: $nc-li-width;
   list-style-type: none;
-
-  > li {
-    position: relative;
+  
+  > li { 
+    position: relative; 
   }
 
   > li > .#{$nc-css-prefix}-mini {
     position: absolute;
-    left: -$nc-li-width / 2 - 0.5em;
+    left: -$nc-li-width/2 - 0.5em;
     top: (2em / 14);
     text-align: center;
 
     &.lg {
       top: 0;
-      left: -$nc-li-width / 2 - (4em / 14);
+      left: -$nc-li-width/2 - (4em / 14);
     }
 
-    &.circle,
+    &.circle, 
     &.square {
       top: (2em / 14) - $nc-padding-width;
-      left: -$nc-li-width / 2 - 0.5em - $nc-padding-width;
+      left: -$nc-li-width/2 - 0.5em - $nc-padding-width;
     }
   }
 }
@@ -151,23 +146,23 @@ Created using IcoMoon - icomoon.io
   rotated/flipped icons
 -------------------------*/
 
-.#{$nc-css-prefix}-mini.rotate-90  {
-	@include nc-rotate(90deg, 1);
+.#{$nc-css-prefix}-mini.rotate-90  { 
+	@include nc-rotate(90deg, 1);  
 }
 
-.#{$nc-css-prefix}-mini.rotate-180 {
-	@include nc-rotate(180deg, 2);
+.#{$nc-css-prefix}-mini.rotate-180 { 
+	@include nc-rotate(180deg, 2); 
 }
 
-.#{$nc-css-prefix}-mini.rotate-270 {
-	@include nc-rotate(270deg, 3);
+.#{$nc-css-prefix}-mini.rotate-270 { 
+	@include nc-rotate(270deg, 3); 
 }
 
-.#{$nc-css-prefix}-mini.flip-y {
-	@include nc-flip(-1, 1, 0);
+.#{$nc-css-prefix}-mini.flip-y { 
+	@include nc-flip(-1, 1, 0); 
 }
-.#{$nc-css-prefix}-mini.flip-x {
-	@include nc-flip(1, -1, 2);
+.#{$nc-css-prefix}-mini.flip-x { 
+	@include nc-flip(1, -1, 2); 
 }
 
 @import "icons";
