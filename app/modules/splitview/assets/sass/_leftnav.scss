@@ -12,6 +12,10 @@
     background-color: $bg-active;
     color: $pb-gray-700;
   }
+  &.badge {
+    color: #fff;
+    font-weight: normal;
+  }
 }
 
 
@@ -40,6 +44,7 @@
     a.list-group-item {
       @extend %leftnav-links;
     }
+
   }
 }
 
