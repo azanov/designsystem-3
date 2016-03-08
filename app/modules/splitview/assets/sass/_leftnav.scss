@@ -2,12 +2,10 @@
 %leftnav-links {
   font-size: 14px;
   color: $text-color;
-
   &:hover {
     background-color: $bg-hover;
     color: $pb-gray-700;
   }
-
   &:active, &.active {
     background-color: $bg-active;
     color: $pb-gray-700;
@@ -18,8 +16,23 @@
   }
 }
 
+.controls-stacked {
+  margin: 0 0 15px;
+  .control {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
 
-
+.list-group-divided {
+  .list-group-item-heading {
+    padding: 10px 0;
+    font-weight: bold;
+    i {
+      padding-top: 5px;
+    }
+  }
+}
 
 .leftnav-sectioned {
   .list-group-section {

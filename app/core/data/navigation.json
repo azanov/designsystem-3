@@ -80,6 +80,9 @@
             "label": "Error Pages",
             "value": "patterns.errorpages"
           }, {
+            "label": "Faceted Search",
+            "value": "patterns.facetedsearch"
+          }, {
             "label": "Form Samples",
             "value": "patterns.forms"
           }, {

@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.5.3
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Wed Mar 02 2016 15:31:14 GMT-0500 (EST) 
+ * Built Tue Mar 08 2016 11:22:20 GMT-0500 (EST) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -1860,6 +1860,9 @@ label .optional {
   color: #dc0000; }
 
 .help-block.text-error, .help-block.text-danger {
+  color: #dc0000; }
+
+.has-error .help-block {
   color: #dc0000; }
 
 .read-only-data label {
@@ -4994,6 +4997,17 @@ td.centered, th.centered {
   background-color: #3e53a4;
   color: #fff; }
 
+.list-group-divided .list-group-item {
+  border-radius: 0;
+  border: 0;
+  border-top: 1px solid #e1e1e1;
+  padding: 5px 10px 5px 0; }
+.list-group-divided .list-group-item .list-group-item-heading {
+  display: block;
+  text-decoration: none; }
+.list-group-divided .list-group-item .list-group-item-heading:hover {
+  background: none !important; }
+
 /**
 * A stylesheet for use with Bootstrap 3.x
 * @author: Dan Grossman http://www.dangrossman.info/
@@ -5462,6 +5476,21 @@ td.centered, th.centered {
 .leftnav-sectioned .list-group-section a.list-group-item:active, .splitview .two-col-wrapper .leftnav a:active, .leftnav-sectioned .list-group-section a.active.list-group-item, .splitview .two-col-wrapper .leftnav a.active {
   background-color: #c5cbe3;
   color: #2e2e2e; }
+.leftnav-sectioned .list-group-section a.badge.list-group-item, .splitview .two-col-wrapper .leftnav a.badge {
+  color: #fff;
+  font-weight: normal; }
+
+.controls-stacked {
+  margin: 0 0 15px; }
+.controls-stacked .control {
+  margin-top: 0;
+  margin-bottom: 10px; }
+
+.list-group-divided .list-group-item-heading {
+  padding: 10px 0;
+  font-weight: bold; }
+.list-group-divided .list-group-item-heading i {
+  padding-top: 5px; }
 
 .leftnav-sectioned .list-group-section:not(:first-child) {
   border-top: 1px solid #e8e8e8; }
