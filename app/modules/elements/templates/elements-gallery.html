@@ -12,9 +12,54 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-10">
-      <img class="img-responsive" src="modules/elements/assets/images/gallery.png" alt="" />
+  <div class="doc-gallery">
+
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          <a class="more-info plugin" href="http://kenwheeler.github.io/slick/" target="_blank">Slick v1.5.9</a>
+        </p>
+        <p>
+          <a class="more-info plugin" href="https://github.com/devmark/angular-slick-carousel" target="_blank">Angular Slick Carousel v3.1.4</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="row spacer-top-xl">
+      <div class="col-md-12">
+
+        <div class="row spacer-bottom-md">
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+            <img class="img-responsive thumbnail" ng-src="modules/elements/assets/images/gallery/{{containers.imageGallery.selectedImage}}.jpg" />
+          </div>
+        </div>
+
+        <slick settings="containers.imageGallery.settings">
+          <div class="image-gallery-item thumbnail" ng-class="{'active': containers.imageGallery.selected === $index}" ng-repeat="i in containers.imageGallery.items" ng-click="containers.imageGallery.click(i, $index)">
+              <img class="img-responsive" ng-src="modules/elements/assets/images/gallery/{{i.imageName}}_thumb.jpg" />
+          </div>
+        </slick>
+      </div>
+    </div>
+
+    <div class="row spacer-top-xl">
+      <div class="col-md-12">
+        <slick settings="containers.itemGallery.settings">
+          <div class="panel panel-default category-widget" ng-repeat="i in ::containers.itemGallery.items">
+            <div class="panel-body category-widget-icon">
+              <i class="fa fa-fw {{i.icon}} text-blue"></i>
+            </div>
+            <div class="panel-footer">
+              <h3>{{i.title}}</h3>
+              <p>
+                {{i.description}}
+              </p>
+            </div>
+          </div>
+        </slick>
+      </div>
+    </div>
+
     </div>
   </div>
 

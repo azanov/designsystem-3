@@ -1,0 +1,41 @@
+.panel.category-widget {
+  border-radius: 2px;
+  transition: all .5s;
+
+  &:hover {
+    background-color: $pb-bg3;
+    border-color: $pb-bg5;
+    cursor: pointer;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, .05);
+
+    .panel-footer {
+      //background-color: #EAEDF8;
+      background-position: 0 100%;
+    }
+  }
+
+  .category-widget-icon {
+    font-size: 5em;
+    text-align: center;
+  }
+
+  .panel-footer {
+    padding: 15px 20px;
+    border-top: transparent;
+    background-position: 200% 0;
+    background-size: 100% 200%;
+    transition: all .25s ease-in;
+    background-image: linear-gradient(to top, $pb-bg4, $pb-bg4 50%, #F0F0F0 50%, #F0F0F0);
+
+    .category-widget-title {
+      margin: 0 0 5px;
+      padding: 0;
+      line-height: normal;
+      font-weight: normal;
+    }
+    .category-widget-description {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

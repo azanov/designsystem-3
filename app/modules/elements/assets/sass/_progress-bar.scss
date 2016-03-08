@@ -1,6 +1,6 @@
 .sequence-map {
   .complete {
-    color:$brand-success;
+    color: $brand-success;
     fill: $brand-success;
   }
   .dot {
@@ -12,31 +12,31 @@
 
 @mixin progress-bar-variant($color) {
   background-color: $color;
-
 }
 
 .progress-bar {
   background-color: $pb-blue;
 }
 
-// for angular-loading-bar
-
-#loading-bar .bar {
-  background: pbcolor($pb-blue);
-  height: 2px;
+// spinners
+.spinner {
+  animation: fa-spin .7s infinite linear;
+  &-lg {
+    font-size: 36px;
+  }
+  &-ko {
+    color: #efefef;
+  }
 }
 
-#loading-bar-spinner .spinner-icon {
-  border-top-color:  pbcolor($pb-blue);
-  border-left-color: pbcolor($pb-blue);
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
 }
-
-/* Fancy blur effect */
-#loading-bar .peg {
-  box-shadow: pbcolor($pb-blue) 1px 0 6px 1px;
-}
-
-
 
 
 // Variations

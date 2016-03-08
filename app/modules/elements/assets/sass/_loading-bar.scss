@@ -1,33 +1,26 @@
+
 #loading-bar {
+  z-index: 10002;
 
   .bar {
-    background: #fff;
-    height: 1px;
+    background-color: #26C6DA !important;
+    height: 2px;
   }
-
   .peg {
-    -moz-box-shadow: #29d 1px 0 6px 1px;
-    -ms-box-shadow: #29d 1px 0 6px 1px;
-    -webkit-box-shadow: #29d 1px 0 6px 1px;
-    box-shadow: #29d 1px 0 6px 1px;
-    height: 1px;
+    box-shadow: hsla(201, 79%, 15%, .5) 1px 0 6px 1px;
+    height: 3px;
   }
-  
 }
 
 #loading-bar-spinner {
   display: block;
   position: fixed;
   z-index: 10002;
+  color: #fff;
   top: 10px;
   left: 10px;
-}
-
-#loading-bar-spinner {
-
   .spinner-icon {
-    border-top-color:  #fff;
+    border-top-color: #fff;
     border-left-color: #fff;
   }
-
 }

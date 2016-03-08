@@ -26,6 +26,7 @@
 
     <!-- build:bs assets/css/bootstrap.min.css -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet">
     <!-- endbuild  -->
 
     <!-- build:css assets/css/design_system.css -->
@@ -44,8 +45,8 @@
     <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css" />
     <link rel="stylesheet" href="bower_components/yamm3/yamm/yamm.css">
     <link rel="stylesheet" href="bower_components/ui-select/dist/select.css">
-    <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.css">
-    <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.bootstrap.css">
+    <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.min.css">
+    <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/design_system.css">
     <!-- endbuild  -->
 
@@ -78,7 +79,7 @@
 
   <div class="site">
     <!-- header -->
-    <header pb-ds-header pb-fixed-navbar></header>
+    <header pb-ds-header pb-fixed-navbar ng-if="app.showHeader"></header>
 
     <!-- content -->
     <div ui-view="" class="view-animate site-content"></div>
@@ -91,6 +92,7 @@
     <!-- build:vendorjs js/vendor.js -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
     <script src="core/directives/pb-auto-collapse-menu.js"></script>
     <script src="bower_components/jquery-ui/ui/core.js"></script>
     <script src="bower_components/jquery-ui/ui/widget.js"></script>
@@ -152,7 +154,10 @@
 
     <script src="bower_components/ui-select/dist/select.js"></script>
 
-    <script src="bower_components/ng-tags-input/ng-tags-input.js"></script>
+    <script src="bower_components/ng-tags-input/ng-tags-input.min.js"></script>
+
+    <script src="bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="bower_components/angular-slick-carousel/dist/angular-slick.min.js"></script>
     <!-- endbuild  -->
 
     <!-- build:appjs js/app.js -->
@@ -163,7 +168,7 @@
     <script src="modules/main/controllers/header.controller.js"></script>
     <script src="modules/main/directives/header.directive.js"></script>
     <script src="modules/main/directives/footer.directive.js"></script>
-
+    <script src="modules/main/controllers/footer.controller.js"></script>
 
 
     <script src="modules/forms/forms.module.js"></script>
@@ -215,10 +220,6 @@
     <script src="modules/elements/controllers/elements-modal-comment-form.controller.js"></script>
     <script src="modules/elements/controllers/elements-modal-with-copy.controller.js"></script>
     <script src="modules/elements/controllers/elements-modal.controller.js"></script>
-
-    <script src="modules/settings/settings.module.js"></script>
-    <script src="modules/settings/settings.router.js"></script>
-    <script src="modules/settings/controllers/settings.controller.js"></script>
 
 
     <script src="modules/tables/tables.module.js"></script>
@@ -279,6 +280,10 @@
     <script src="modules/splitview/splitview.routes.js"></script>
     <script src="modules/splitview/controllers/splitview.controller.js"></script>
 
+    <script src="modules/hamburger/hamburger.module.js"></script>
+    <script src="modules/hamburger/hamburger.routes.js"></script>
+    <script src="modules/hamburger/controllers/hamburger.controller.js"></script>
+
     <script src="modules/mobile/mobile.module.js"></script>
     <script src="modules/mobile/mobile.routes.js"></script>
     <script src="modules/mobile/controllers/mobile.controller.js"></script>
@@ -286,6 +291,10 @@
     <script src="modules/writing/writing.module.js"></script>
     <script src="modules/writing/writing.routes.js"></script>
     <script src="modules/writing/controllers/writing.controller.js"></script>
+
+    <script src="modules/content/content.module.js"></script>
+    <script src="modules/content/content.routes.js"></script>
+    <script src="modules/content/controllers/content.controller.js"></script>
 
     <script src="modules/principles/principles.module.js"></script>
     <script src="modules/principles/principles.routes.js"></script>
@@ -296,6 +305,7 @@
     <script src="modules/patterns/controllers/patterns.controller.js"></script>
     <script src="modules/patterns/controllers/welcome.controller.js"></script>
     <script src="modules/patterns/controllers/signin.controller.js"></script>
+    <script src="modules/patterns/controllers/hamburger.controller.js"></script>
 
     <script src="modules/resources/resources.module.js"></script>
     <script src="modules/resources/resources.routes.js"></script>

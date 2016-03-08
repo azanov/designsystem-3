@@ -1,7 +1,7 @@
 //style footer to always be at bottom of screen
 .site-content {
   // scss-lint:disable DuplicateProperty
-  min-height: 550px; //fallback, just in case
+//  min-height: 550px; //fallback, just in case
   min-height: calc(100vh - (50px + 40px + 44px)); //50 for nav height, 40 footer margin, 44 footer height
 }
 
@@ -9,7 +9,7 @@
 .footer-wrapper {
   background-color: $pb-gray-50;
   margin-top: 40px;
-  width: 100vw;
+  // width: 100vw;
   padding: 10px 0;
   &.demo {
     margin-top: 0;
@@ -19,44 +19,140 @@
 
 // "actual" footer is inside container
 // id kept for legacy reasons
-#footer,
-footer {
+#footer, footer {
+  .container {
+    color: $text-color;
+    font-size: 12px;
+    font-family: $font-family-sans-serif;
+    z-index: 10;
 
-  color: $text-color;
-  font-size: 12px;
-  font-family: $font-family-sans-serif;
-  z-index: 10;
+    .contents {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+    .logo-copyright {
+      display: flex;
+      flex-basis: 1;
+      align-items: baseline;
+      .copyright {
+        white-space: nowrap;
+      }
+    }
+    .t-and-c {
+      white-space: nowrap;
+    }
 
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: space-between;
-  > div {
-    padding: 0 20px 0 0;
+    .footer-left {
+      display: flex;
+      align-items: baseline;
+      .logo-copyright {
+        margin-right: 40px;
+
+      }
+    }
+    .contact-us {
+      display: flex;
+      align-items: baseline;
+      white-space: nowrap;
+      .hidemethods {
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s;
+      }
+
+      .contact-methods {
+        display: flex;
+        align-items: baseline;
+        > div {
+          margin-left: 20px;
+        }
+        .link-icon {
+          color: $pb-medium-blue;
+          &.disabled {
+            color: $pb-gray;
+          }
+        }
+
+        a {
+          color: $pb-medium-blue;
+          &.disabled {
+            color: $pb-gray;
+            &:hover {
+              background-color: transparent;
+              cursor: not-allowed;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    > div {
+      padding: 0 20px 0 0;
+    }
   }
 
   @include breakpoint(screen-xs) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    .container .contents {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      .logo-copyright {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .footer-logo {
+          width: 85px;
+          margin: 0 auto;
+        }
+      }
+      .footer-left {
+        flex-direction: column;
+        align-items: center;
+        .logo-copyright {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+      .footer-right {
+        flex-direction: column;
+        align-items: center;
+        .contact-us {
+          padding-top: 10px;
+          text-align: center;
+          .contact-methods {
+            &.hidemethods {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+
+
 
     > div {
       padding: 0 0 5px;
       margin: 0;
     }
 
-    .copyright {
-      font-size: 11px;
-    }
+
   }
 
-  a {
-    color: $pb-gray-500;
-  }
+  // links are all link color now
+  // a {
+  //   //color: $pb-gray-500;
+  //   color: $text-color;
+  // }
 
   &.demo {
     margin-top: 0;
   }
+
+
 
 
 
@@ -75,7 +171,7 @@ footer {
 
         a {
           color: $pb-gray-500;
-          transition: 0.2s all;
+          transition: .2s all;
           display: inline-block;
           vertical-align: middle;
           height: 2em;
@@ -120,5 +216,4 @@ footer {
   .xs-text-right {
     text-align: right;
   }
-
 }
