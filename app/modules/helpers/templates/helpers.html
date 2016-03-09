@@ -231,6 +231,7 @@
   <p class="bg-header-color"></p>
   <p class="bg-header-color-alt"></p>
   <p class="bg-white"></p>
+  <p class="bg-black"></p>
   <p class="bg-pb-medium-blue-300"></p>
   <p class="bg-pb-medium-blue"></p>
   <p class="bg-pb-medium-blue-700"></p>
@@ -294,13 +295,15 @@
 
   <div class="row">
     <div class="col-md-8">
-      <p ng-repeat="fg in helpers.foregrounds" ng-class="fg">This is some text.</p>
+      <p ng-repeat="fg in helpers.foregrounds" ng-class="fg">This is class '{{fg}}'.</p>
     </div>
   </div>
 
 </div>
 
-<div class="preview-code" hljs language="xml">
+<div class="preview-code" hljs language="html">
+  <p class="text-white"></p>
+  <p class="text-black"></p>
   <p class="text-medium-blue-300"></p>
   <p class="text-medium-blue"></p>
   <p class="text-medium-blue-700"></p>

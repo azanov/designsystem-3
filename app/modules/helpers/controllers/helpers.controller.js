@@ -65,6 +65,8 @@
     ];
 
     _this.foregrounds = [
+      'text-white',
+      'text-black',
       'text-medium-blue-300',
       'text-medium-blue',
       'text-medium-blue-700',
