@@ -27,10 +27,7 @@
             }, {
               "label": "Typography",
               "value": "foundation.typography"
-            },  {
-              "label": "Nucleo Icon Font",
-              "value": "foundation.nucleo"
-            },{
+            }, {
               "label": "Grid",
               "value": "foundation.grid"
             }, {
