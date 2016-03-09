@@ -22,6 +22,7 @@
       'bg-header-color',
       'bg-header-color-alt',
       'bg-white',
+      'bg-black',
       'bg-pb-medium-blue-300',
       'bg-pb-medium-blue',
       'bg-pb-medium-blue-700',
