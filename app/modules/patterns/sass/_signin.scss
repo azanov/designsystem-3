@@ -9,9 +9,12 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
     align-content: stretch;
+  }
+  .signin-center{
+    display: flex;
+    align-items: center;
   }
 
   .signin-body {
