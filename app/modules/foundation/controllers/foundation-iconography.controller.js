@@ -39,6 +39,25 @@
       'admin'
     ];
 
+    _this.ncIcons = [
+      'ui-1_analytics-88',
+      'ui-1_analytics-89',
+      'ui-1_attach-86',
+      'ui-1_attach-87',
+      'ui-1_bell-53',
+      'ui-1_bell-54',
+      'ui-1_bell-55',
+      'ui-1_bold-add',
+      'ui-1_bold-delete',
+      'ui-1_bold-remove',
+      'ui-1_bookmark-add',
+      'ui-1_bookmark-remove',
+      'ui-1_bookmark-calendar-57',
+      'ui-1_bookmark-calendar-60',
+      'ui-1_bookmark-calendar-59',
+      'ui-1_bookmark-calendar-62'
+    ];
+
   });
 
 })();
