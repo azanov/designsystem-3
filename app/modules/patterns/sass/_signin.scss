@@ -8,13 +8,10 @@
     height: 100vh;
     margin: 0;
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: space-between;
     align-content: stretch;
-  }
-  .signin-center{
-    display: flex;
-    align-items: center;
   }
 
   .signin-body {
