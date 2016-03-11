@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.5.3
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Thu Mar 10 2016 09:32:05 GMT-0500 (EST) 
+ * Built Fri Mar 11 2016 14:50:22 GMT-0500 (EST) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -451,6 +451,12 @@ Created using IcoMoon - icomoon.io
 
 .nc-icon-mini.x3 {
   font-size: 3em; }
+
+.nc-icon-mini.x4 {
+  font-size: 4em; }
+
+.nc-icon-mini.x5 {
+  font-size: 5em; }
 
 /*----------------------------------
   add a square/circle background
@@ -4862,7 +4868,7 @@ Created using IcoMoon - icomoon.io
 .nc-icon-mini.nature_wood:before {
   content: "\ee5b"; }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Nucleo Outline Web Font - nucleoapp.com/
 License - nucleoapp.com/license/
@@ -4900,6 +4906,12 @@ Created using IcoMoon - icomoon.io
 
 .nc-icon-outline.x3 {
   font-size: 3em; }
+
+.nc-icon-outline.x4 {
+  font-size: 4em; }
+
+.nc-icon-outline.x5 {
+  font-size: 5em; }
 
 /*----------------------------------
   add a square/circle background
