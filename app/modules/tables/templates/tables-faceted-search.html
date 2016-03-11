@@ -10,7 +10,7 @@
         <ul class="list-group list-group-divided">
 
           <li class="list-group-item" ng-if="faceted.facet.list.length">
-            <div class="list-group-item-heading">Refined by <a class="pull-right" href="" ng-click="faceted.facet.clear()">Reset</a></div>
+            <div class="list-group-item-heading">Refined by <a class="pull-right reset-link btn btn-default btn-xs" href="" ng-click="faceted.facet.clear()">Reset</a></div>
             <ul class="list-unstyled">
               <li ng-repeat="item in faceted.facet.list">
                 <a class="badge" href="">{{item}} <i class="fa fa-times-circle fa-reverse" ng-click="faceted.facet.clearBadge(item, $event)"></i></a>

@@ -13,6 +13,11 @@
   &.badge {
     color: #fff;
     font-weight: normal;
+    font-size: 11px;
+    background-color: $pb-magenta;
+    &:hover {
+      background-color: darken($pb-magenta, 10%);
+    }
   }
 }
 
@@ -22,6 +27,12 @@
     margin-top: 0;
     margin-bottom: 10px;
   }
+}
+
+.reset-link {
+  font-weight: normal !important;
+  color: $link-color !important;
+  font-size: 12px !important;
 }
 
 .list-group-divided {
