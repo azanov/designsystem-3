@@ -40,18 +40,18 @@
     ];
 
     _this.ncIcons = [
-      'ui-1_analytics-88',
-      'ui-1_analytics-89',
-      'ui-1_attach-86',
-      'ui-1_attach-87',
+      'arrows-1_cloud-upload-96',
+      'arrows-2_square-upload',
+      'arrows-2_square-download',
       'ui-1_bell-53',
-      'ui-1_bell-54',
-      'ui-1_bell-55',
+      'tech_print-round',
+      'ui-2_alert-circle',
       'ui-1_bold-add',
       'ui-1_bold-delete',
       'ui-1_bold-remove',
-      'ui-1_bookmark-add',
-      'ui-1_bookmark-remove'
+      'shopping_cart',
+      'ui-1_pencil',
+      'ui-1_settings-gear-64'
     ];
 
   });
