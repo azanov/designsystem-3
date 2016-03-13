@@ -206,7 +206,7 @@
     })
 
     //this is Invitation Sign up  - PB Invitation with existing account
-    .state('patterns.signup-existingaccount', {
+    .state('patterns.signup-excistingaccount', {
       url: '/signup-existing-account',
       templateUrl: 'modules/patterns/templates/signup-existing-account.html',
       controller: 'SignInController as signin',
