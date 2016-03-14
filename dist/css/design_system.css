@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.5.3
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Wed Mar 02 2016 15:31:14 GMT-0500 (EST) 
+ * Built Mon Mar 14 2016 15:54:36 GMT-0400 (EDT) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -1860,6 +1860,9 @@ label .optional {
   color: #dc0000; }
 
 .help-block.text-error, .help-block.text-danger {
+  color: #dc0000; }
+
+.has-error .help-block {
   color: #dc0000; }
 
 .read-only-data label {
@@ -3914,12 +3917,12 @@ a.app-launcher {
   margin-top: 0;
   width: auto; }
 
-#footer .container, footer .container {
+#footer .container, #footer .container-fluid, footer .container, footer .container-fluid {
   color: #717171;
   font-size: 12px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   z-index: 10; }
-#footer .container .contents, footer .container .contents {
+#footer .container .contents, #footer .container-fluid .contents, footer .container .contents, footer .container-fluid .contents {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -3932,7 +3935,7 @@ a.app-launcher {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between; }
-#footer .container .logo-copyright, footer .container .logo-copyright {
+#footer .container .logo-copyright, #footer .container-fluid .logo-copyright, footer .container .logo-copyright, footer .container-fluid .logo-copyright {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -3942,20 +3945,20 @@ a.app-launcher {
   -webkit-align-items: baseline;
       -ms-flex-align: baseline;
           align-items: baseline; }
-#footer .container .logo-copyright .copyright, footer .container .logo-copyright .copyright {
+#footer .container .logo-copyright .copyright, #footer .container-fluid .logo-copyright .copyright, footer .container .logo-copyright .copyright, footer .container-fluid .logo-copyright .copyright {
   white-space: nowrap; }
-#footer .container .t-and-c, footer .container .t-and-c {
+#footer .container .t-and-c, #footer .container-fluid .t-and-c, footer .container .t-and-c, footer .container-fluid .t-and-c {
   white-space: nowrap; }
-#footer .container .footer-left, footer .container .footer-left {
+#footer .container .footer-left, #footer .container-fluid .footer-left, footer .container .footer-left, footer .container-fluid .footer-left {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-align-items: baseline;
       -ms-flex-align: baseline;
           align-items: baseline; }
-#footer .container .footer-left .logo-copyright, footer .container .footer-left .logo-copyright {
+#footer .container .footer-left .logo-copyright, #footer .container-fluid .footer-left .logo-copyright, footer .container .footer-left .logo-copyright, footer .container-fluid .footer-left .logo-copyright {
   margin-right: 40px; }
-#footer .container .contact-us, footer .container .contact-us {
+#footer .container .contact-us, #footer .container-fluid .contact-us, footer .container .contact-us, footer .container-fluid .contact-us {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -3963,32 +3966,32 @@ a.app-launcher {
       -ms-flex-align: baseline;
           align-items: baseline;
   white-space: nowrap; }
-#footer .container .contact-us .hidemethods, footer .container .contact-us .hidemethods {
+#footer .container .contact-us .hidemethods, #footer .container-fluid .contact-us .hidemethods, footer .container .contact-us .hidemethods, footer .container-fluid .contact-us .hidemethods {
   visibility: hidden;
   opacity: 0;
   transition: all .3s; }
-#footer .container .contact-us .contact-methods, footer .container .contact-us .contact-methods {
+#footer .container .contact-us .contact-methods, #footer .container-fluid .contact-us .contact-methods, footer .container .contact-us .contact-methods, footer .container-fluid .contact-us .contact-methods {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-align-items: baseline;
       -ms-flex-align: baseline;
           align-items: baseline; }
-#footer .container .contact-us .contact-methods > div, footer .container .contact-us .contact-methods > div {
+#footer .container .contact-us .contact-methods > div, #footer .container-fluid .contact-us .contact-methods > div, footer .container .contact-us .contact-methods > div, footer .container-fluid .contact-us .contact-methods > div {
   margin-left: 20px; }
-#footer .container .contact-us .contact-methods .link-icon, footer .container .contact-us .contact-methods .link-icon {
+#footer .container .contact-us .contact-methods .link-icon, #footer .container-fluid .contact-us .contact-methods .link-icon, footer .container .contact-us .contact-methods .link-icon, footer .container-fluid .contact-us .contact-methods .link-icon {
   color: #0072b8; }
-#footer .container .contact-us .contact-methods .link-icon.disabled, footer .container .contact-us .contact-methods .link-icon.disabled {
+#footer .container .contact-us .contact-methods .link-icon.disabled, #footer .container-fluid .contact-us .contact-methods .link-icon.disabled, footer .container .contact-us .contact-methods .link-icon.disabled, footer .container-fluid .contact-us .contact-methods .link-icon.disabled {
   color: #c0c0c0; }
-#footer .container .contact-us .contact-methods a, footer .container .contact-us .contact-methods a {
+#footer .container .contact-us .contact-methods a, #footer .container-fluid .contact-us .contact-methods a, footer .container .contact-us .contact-methods a, footer .container-fluid .contact-us .contact-methods a {
   color: #0072b8; }
-#footer .container .contact-us .contact-methods a.disabled, footer .container .contact-us .contact-methods a.disabled {
+#footer .container .contact-us .contact-methods a.disabled, #footer .container-fluid .contact-us .contact-methods a.disabled, footer .container .contact-us .contact-methods a.disabled, footer .container-fluid .contact-us .contact-methods a.disabled {
   color: #c0c0c0; }
-#footer .container .contact-us .contact-methods a.disabled:hover, footer .container .contact-us .contact-methods a.disabled:hover {
+#footer .container .contact-us .contact-methods a.disabled:hover, #footer .container-fluid .contact-us .contact-methods a.disabled:hover, footer .container .contact-us .contact-methods a.disabled:hover, footer .container-fluid .contact-us .contact-methods a.disabled:hover {
   background-color: transparent;
   cursor: not-allowed;
   text-decoration: none; }
-#footer .container > div, footer .container > div {
+#footer .container > div, #footer .container-fluid > div, footer .container > div, footer .container-fluid > div {
   padding: 0 20px 0 0; }
 @media (max-width: 767px) {
   #footer .container .contents, footer .container .contents {
@@ -4296,32 +4299,38 @@ a.app-launcher {
   background-color: #254d9d;
   background-image: linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%); }
 .signin .signin-wrapper {
-  height: 100vh;
   margin: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+@media (min-width: 768px) {
+  .signin .signin-wrapper {
+    height: 100vh; } }
+.signin .signin-body-top {
+  -webkit-flex-grow: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  width: 400px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-align-content: stretch;
-      -ms-flex-line-pack: stretch;
-          align-content: stretch; }
-.signin .signin-body {
-  min-width: 400px;
-  max-width: 400px;
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto; }
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+@media (max-width: 767px) {
+  .signin .signin-body-top {
+    width: 100%; } }
 .signin .signin-pb-logo {
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   display: block;
   height: 56px;
   background-position: center;
@@ -4331,13 +4340,13 @@ a.app-launcher {
 .signin .signin-box {
   background-color: #fff;
   padding: 40px; }
-.signin .signin-heading {
+.signin .signin-box .signin-heading {
   color: #4e4e4e;
   margin: 0;
   text-align: center; }
-.signin .signin-heading sup {
-  font-size: 0.65em; }
-.signin .signin-subheading {
+.signin .signin-box .signin-heading sup {
+  font-size: .65em; }
+.signin .signin-box .signin-subheading {
   color: #4e4e4e;
   margin-top: 5px;
   font-weight: normal;
@@ -4350,9 +4359,53 @@ a.app-launcher {
   font-weight: normal;
   font-size: 11px;
   margin: 30px 0;
-  padding: 0 15px; }
+  padding: 0 15px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 .signin .signin-footer a {
   color: inherit; }
+@media (min-width: 768px) {
+  .signin .signin-footer {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center; }
+  .signin .signin-footer > div {
+    margin-bottom: 10px; }
+  .signin .signin-footer a {
+    text-decoration: underline; } }
+@media (max-width: 767px) {
+  .signin .signin-footer {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center; }
+  .signin .signin-footer > div {
+    margin-bottom: 10px; }
+  .signin .signin-footer a {
+    text-decoration: underline; } }
+@media (min-width: 992px) {
+  .signin .signin-footer {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+                -ms-grid-row-align: baseline;
+            align-items: baseline; }
+  .signin .signin-footer > div {
+    margin-right: 10px; }
+  .signin .signin-footer > div.copyright {
+    margin-right: 0; }
+  .signin .signin-footer a {
+    text-decoration: none; } }
 
 .alert-flex {
   display: -webkit-flex;
