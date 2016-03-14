@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.5.3
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Fri Mar 11 2016 14:50:22 GMT-0500 (EST) 
+ * Built Mon Mar 14 2016 10:15:48 GMT-0400 (EDT) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -452,18 +452,13 @@ Created using IcoMoon - icomoon.io
 .nc-icon-mini.x3 {
   font-size: 3em; }
 
-.nc-icon-mini.x4 {
-  font-size: 4em; }
-
-.nc-icon-mini.x5 {
-  font-size: 5em; }
-
 /*----------------------------------
   add a square/circle background
 -----------------------------------*/
 .nc-icon-mini.square, .nc-icon-mini.circle {
   padding: 0.33333em;
-  vertical-align: -16%; }
+  vertical-align: -16%;
+  background-color: #eee; }
 
 .nc-icon-mini.circle {
   border-radius: 50%; }
@@ -539,6 +534,18 @@ Created using IcoMoon - icomoon.io
 /*------------------------
 	font icons
 -------------------------*/
+.nc-icon-mini.loader_circle-04:before {
+  content: "\eea3"; }
+
+.nc-icon-mini.loader_dots-06:before {
+  content: "\eea4"; }
+
+.nc-icon-mini.loader_gear:before {
+  content: "\eea5"; }
+
+.nc-icon-mini.loader_refresh:before {
+  content: "\eea6"; }
+
 .nc-icon-mini.ui-1_analytics-88:before {
   content: "\ea0f"; }
 
@@ -4868,7 +4875,7 @@ Created using IcoMoon - icomoon.io
 .nc-icon-mini.nature_wood:before {
   content: "\ee5b"; }
 
-/* --------------------------------
+/* -------------------------------- 
 
 Nucleo Outline Web Font - nucleoapp.com/
 License - nucleoapp.com/license/
@@ -4906,12 +4913,6 @@ Created using IcoMoon - icomoon.io
 
 .nc-icon-outline.x3 {
   font-size: 3em; }
-
-.nc-icon-outline.x4 {
-  font-size: 4em; }
-
-.nc-icon-outline.x5 {
-  font-size: 5em; }
 
 /*----------------------------------
   add a square/circle background
@@ -4995,6 +4996,18 @@ Created using IcoMoon - icomoon.io
 /*------------------------
 	font icons
 -------------------------*/
+.nc-icon-outline.loader_circle-04:before {
+  content: "\edc7"; }
+
+.nc-icon-outline.loader_dots-06:before {
+  content: "\edc8"; }
+
+.nc-icon-outline.loader_gear:before {
+  content: "\edc9"; }
+
+.nc-icon-outline.loader_refresh:before {
+  content: "\edca"; }
+
 .nc-icon-outline.ui-1_analytics-88:before {
   content: "\ecd6"; }
 
@@ -11172,6 +11185,45 @@ Created using IcoMoon - icomoon.io
 .stroke-yellow-700 {
   stroke: #bd9100; }
 
+/*-----------------------------
+	PB Nucleo font extras
+-------------------------------*/
+.nc-icon-mini.lg, .nc-icon-outline.lg {
+  font-size: 1.5em;
+  vertical-align: 0; }
+
+.nc-icon-fw, .nc-fw {
+  width: 1.28571em;
+  text-align: center; }
+
+.nc-icon-mini.x4, .nc-icon-outline.x4 {
+  font-size: 4em; }
+
+.nc-icon-mini.x5, .nc-icon-outline.x5 {
+  font-size: 5em; }
+
+.nc-icon-mini.x6, .nc-icon-outline.x6 {
+  font-size: 6em; }
+
+.nc-spin {
+  -webkit-animation: nc-spin 2s infinite linear;
+          animation: nc-spin 2s infinite linear; }
+
+@-webkit-keyframes nc-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg); } }
+
+@keyframes nc-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg); } }
 .miller-columns {
   margin-bottom: 20px; }
 .miller-columns .panel {
@@ -15338,6 +15390,10 @@ td.centered, th.centered {
       -ms-flex-align: center;
               -ms-grid-row-align: center;
           align-items: center; }
+.landing .arrow-btn {
+  color: #fff; }
+.landing .arrow-btn:hover {
+  color: #e6e6e6; }
 .landing header {
   border-bottom: solid 1px rgba(255, 255, 255, 0.15); }
 .landing .main-block {
@@ -15349,7 +15405,7 @@ td.centered, th.centered {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
-.landing h1, .landing h2, .landing h3, .landing h4, .landing h5, .landing h6, .landing p, .landing strong, .landing em, .landing label, .landing .fa {
+.landing h1, .landing h2, .landing h3, .landing h4, .landing h5, .landing h6, .landing p, .landing strong, .landing em, .landing label, .landing .fa .nc-icon-mini, .landing .nc-icon-outline {
   color: #fff; }
 .landing .mock-slider {
   display: -webkit-flex;
