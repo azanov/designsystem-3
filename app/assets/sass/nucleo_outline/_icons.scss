@@ -2,6 +2,18 @@
 	font icons
 -------------------------*/
 
+.nc-icon-outline.loader_circle-04:before {
+    content: "\edc7";
+}
+.nc-icon-outline.loader_dots-06:before {
+    content: "\edc8";
+}
+.nc-icon-outline.loader_gear:before {
+    content: "\edc9";
+}
+.nc-icon-outline.loader_refresh:before {
+    content: "\edca";
+}
 .nc-icon-outline.ui-1_analytics-88:before {
     content: "\ecd6";
 }
@@ -725,7 +737,6 @@
 .nc-icon-outline.ui-3_widget:before {
     content: "\edc6";
 }
-
 .nc-icon-outline.envir_bulb-saver:before {
     content: "\ecc4";
 }
