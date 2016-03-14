@@ -816,17 +816,18 @@ h2.table-header.specifications {
   margin-right: 3px;
 }
 
-.panel-download {
+.resources {
 
-  .illustrator {
-    background-color: #DA1F26;
-
-    svg {
-      max-height: 80px;
-    }
+  h2 {
+    margin-top: 20px;
   }
-
-  .panel-body {
+  .panel-download {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 0;
+    color: #fff;
+    text-align: center;
     min-height: 425px;
     transition: all .3s ease-in-out;
 
@@ -835,23 +836,37 @@ h2.table-header.specifications {
         margin-bottom: 8px;
       }
     }
+    a {
+      color: #fff;
+      font-weight: 200;
+
+      &:hover {
+        color: #fff;
+        //text-decoration: none;
+      }
+    }
 
     &:hover {
       box-shadow: 0 11px 20px -5px rgba(0, 0, 0, .5);
       transition: all .3s ease-in-out;
     }
 
-  }
+    &.illustrator {
+      background-color: #DA1F26;
 
-  a {
-    color: #fff;
-    font-weight: 200;
+      svg {
+        max-height: 80px;
+      }
 
-    &:hover {
-      color: #fff;
-      //text-decoration: none;
-    }
   }
+}
+
+
+
+
+
+
+
 
   hr {
     width: 50%;
