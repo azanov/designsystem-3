@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.5.3
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Mon Mar 14 2016 10:15:48 GMT-0400 (EDT) 
+ * Built Mon Mar 14 2016 16:58:50 GMT-0400 (EDT) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -11189,8 +11189,7 @@ Created using IcoMoon - icomoon.io
 	PB Nucleo font extras
 -------------------------------*/
 .nc-icon-mini.lg, .nc-icon-outline.lg {
-  font-size: 1.5em;
-  vertical-align: 0; }
+  font-size: 1.5em; }
 
 .nc-icon-fw, .nc-fw {
   width: 1.28571em;
