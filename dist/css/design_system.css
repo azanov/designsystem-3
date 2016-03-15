@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.5.3
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Mon Mar 14 2016 15:54:36 GMT-0400 (EDT) 
+ * Built Tue Mar 15 2016 14:43:32 GMT-0400 (EDT) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -15,7 +15,7 @@
     padding-left: 15px;
     padding-right: 15px; } }
 
-#header, header, .landing .bg {
+#header, header, .signin, .landing .bg {
   background-image: linear-gradient(90deg, #3e53a4 0%, #cf0989 100%); }
 
 @font-face {
@@ -4296,8 +4296,7 @@ a.app-launcher {
   background-color: #c5cbe4; }
 
 .signin {
-  background-color: #254d9d;
-  background-image: linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%); }
+  background-color: #254d9d; }
 .signin .signin-wrapper {
   margin: 0;
   display: -webkit-flex;
@@ -4328,7 +4327,7 @@ a.app-launcher {
           justify-content: center; }
 @media (max-width: 767px) {
   .signin .signin-body-top {
-    width: 100%; } }
+    width: 90%; } }
 .signin .signin-pb-logo {
   margin-bottom: 20px;
   display: block;
@@ -4351,6 +4350,11 @@ a.app-launcher {
   margin-top: 5px;
   font-weight: normal;
   text-align: center; }
+@media (max-width: 767px) {
+  .signin .signin-box {
+    padding: 20px 30px; }
+  .signin .signin-box .signin-heading {
+    font-size: 30px; } }
 .signin .signin-footer {
   color: #fff;
   line-height: 1.5em;
@@ -4359,25 +4363,19 @@ a.app-launcher {
   font-weight: normal;
   font-size: 11px;
   margin: 30px 0;
-  padding: 0 15px;
+  padding: 20px 0;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row; }
 .signin .signin-footer a {
   color: inherit; }
-@media (min-width: 768px) {
-  .signin .signin-footer {
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-                -ms-grid-row-align: center;
-            align-items: center; }
-  .signin .signin-footer > div {
-    margin-bottom: 10px; }
-  .signin .signin-footer a {
-    text-decoration: underline; } }
+.signin .signin-footer > div {
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row; }
 @media (max-width: 767px) {
   .signin .signin-footer {
     -webkit-flex-direction: column;
@@ -4386,12 +4384,45 @@ a.app-launcher {
     -webkit-align-items: center;
         -ms-flex-align: center;
                 -ms-grid-row-align: center;
-            align-items: center; }
+            align-items: center;
+    margin: 40px 20px 0;
+    padding: 0; }
+  .signin .signin-footer > div {
+    margin-bottom: 10px; }
+  .signin .signin-footer a {
+    text-decoration: underline; } }
+@media (min-width: 768px) {
+  .signin .signin-footer {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+    width: 400px;
+    margin: 40px 20px 0; }
   .signin .signin-footer > div {
     margin-bottom: 10px; }
   .signin .signin-footer a {
     text-decoration: underline; } }
 @media (min-width: 992px) {
+  .signin .signin-footer {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+    width: 400px; }
+  .signin .signin-footer > div {
+    margin-right: 10px; }
+  .signin .signin-footer > div.copyright {
+    margin-right: 0; }
+  .signin .signin-footer a {
+    text-decoration: underline; } }
+@media (min-width: 1200px) {
   .signin .signin-footer {
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
@@ -4399,13 +4430,8 @@ a.app-launcher {
     -webkit-align-items: baseline;
         -ms-flex-align: baseline;
                 -ms-grid-row-align: baseline;
-            align-items: baseline; }
-  .signin .signin-footer > div {
-    margin-right: 10px; }
-  .signin .signin-footer > div.copyright {
-    margin-right: 0; }
-  .signin .signin-footer a {
-    text-decoration: none; } }
+            align-items: baseline;
+    width: auto; } }
 
 .alert-flex {
   display: -webkit-flex;
@@ -4431,16 +4457,8 @@ a.app-launcher {
 @media (max-width: 767px) {
   .signin .signin-pb-logo {
     margin-top: 20px;
-    margin-bottom: 20px;
-    height: 40px; }
-  .signin .signin-box {
-    padding: 20px 40px; }
-  .signin .signin-body {
-    max-width: 90%;
-    min-width: 90%; }
-  .signin .signin-footer {
-    margin-top: 20px;
-    margin-bottom: 20px; } }
+    margin-bottom: 10px;
+    height: 40px; } }
 table {
   background-color: #fff; }
 

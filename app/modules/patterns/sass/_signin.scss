@@ -3,7 +3,7 @@
 
 .signin {
   background-color: #254d9d;
-  background-image: linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%);
+  @extend %gradient;
 
   // this is the outermost box.  holds the floating unit of the logo/box in one div and the footer in the second
   .signin-wrapper {
@@ -25,7 +25,7 @@
     flex-direction: column;
     justify-content: center;
     @include breakpoint(screen-xs) {
-      width: 100%;
+      width: 90%;
     }
   }
 
@@ -60,6 +60,13 @@
       font-weight: normal;
       text-align: center;
     }
+    @include breakpoint(screen-xs) {
+      padding: 20px 30px;
+      .signin-heading {
+        font-size: 30px;
+      }
+    }
+
   }
 
 
@@ -72,14 +79,21 @@
     font-weight: normal;
     font-size: 11px;
     margin: 30px 0;
-    padding: 0 15px;
+    padding: 20px 0;
     display: flex;
+    flex-direction: row;
     a {
       color: inherit;
     }
-    @include breakpoint(screen-sm) {
+    > div {
+      flex-direction: row;
+    }
+
+    @include breakpoint(screen-xs) {
       flex-direction: column;
       align-items: center;
+      margin: 40px 20px 0;
+      padding: 0;
       > div {
         margin-bottom: 10px;
       }
@@ -87,9 +101,12 @@
         text-decoration: underline;
       }
     }
-    @include breakpoint(screen-xs) {
+    @include breakpoint(screen-sm) {
       flex-direction: column;
       align-items: center;
+      width: 400px;
+      margin: 40px 20px 0;
+
       > div {
         margin-bottom: 10px;
       }
@@ -98,8 +115,10 @@
       }
     }
     @include breakpoint(screen-md) {
-      flex-direction: row;
-      align-items: baseline;
+      flex-direction: column;
+      align-items: center;
+      width: 400px;
+
       > div {
         margin-right: 10px;
         &.copyright {
@@ -107,8 +126,13 @@
         }
       }
       a {
-        text-decoration: none;
+        text-decoration: underline;;
       }
+    }
+    @include breakpoint(screen-lg) {
+      flex-direction: row;
+      align-items: baseline;
+      width: auto;
     }
   }
 }
@@ -133,27 +157,12 @@
 }
 
 
-//Media query for phones. This will be moved to a separate file if it grows beyond size.
 @include breakpoint(screen-xs) {
   .signin {
     .signin-pb-logo {
       margin-top: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       height: 40px;
-    }
-
-    .signin-box {
-      padding: 20px 40px;
-    }
-
-    .signin-body {
-      max-width: 90%;
-      min-width: 90%;
-    }
-
-    .signin-footer {
-      margin-top: 20px;
-      margin-bottom: 20px;
     }
   }
 }
