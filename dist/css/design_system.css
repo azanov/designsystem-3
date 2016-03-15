@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.5.3
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Thu Mar 03 2016 14:11:02 GMT-0500 (EST) 
+ * Built Tue Mar 15 2016 09:58:08 GMT-0400 (EDT) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -15,7 +15,7 @@
     padding-left: 15px;
     padding-right: 15px; } }
 
-#header, header, .landing .bg {
+#header, header, .signin, .landing .bg {
   background-image: linear-gradient(90deg, #3e53a4 0%, #cf0989 100%); }
 
 @font-face {
@@ -3956,12 +3956,12 @@ a.app-launcher {
   margin-top: 0;
   width: auto; }
 
-#footer .container, footer .container {
+#footer .container, #footer .container-fluid, footer .container, footer .container-fluid {
   color: #717171;
   font-size: 12px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   z-index: 10; }
-#footer .container .contents, footer .container .contents {
+#footer .container .contents, #footer .container-fluid .contents, footer .container .contents, footer .container-fluid .contents {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -3974,7 +3974,7 @@ a.app-launcher {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between; }
-#footer .container .logo-copyright, footer .container .logo-copyright {
+#footer .container .logo-copyright, #footer .container-fluid .logo-copyright, footer .container .logo-copyright, footer .container-fluid .logo-copyright {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -3984,20 +3984,20 @@ a.app-launcher {
   -webkit-align-items: baseline;
       -ms-flex-align: baseline;
           align-items: baseline; }
-#footer .container .logo-copyright .copyright, footer .container .logo-copyright .copyright {
+#footer .container .logo-copyright .copyright, #footer .container-fluid .logo-copyright .copyright, footer .container .logo-copyright .copyright, footer .container-fluid .logo-copyright .copyright {
   white-space: nowrap; }
-#footer .container .t-and-c, footer .container .t-and-c {
+#footer .container .t-and-c, #footer .container-fluid .t-and-c, footer .container .t-and-c, footer .container-fluid .t-and-c {
   white-space: nowrap; }
-#footer .container .footer-left, footer .container .footer-left {
+#footer .container .footer-left, #footer .container-fluid .footer-left, footer .container .footer-left, footer .container-fluid .footer-left {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-align-items: baseline;
       -ms-flex-align: baseline;
           align-items: baseline; }
-#footer .container .footer-left .logo-copyright, footer .container .footer-left .logo-copyright {
+#footer .container .footer-left .logo-copyright, #footer .container-fluid .footer-left .logo-copyright, footer .container .footer-left .logo-copyright, footer .container-fluid .footer-left .logo-copyright {
   margin-right: 40px; }
-#footer .container .contact-us, footer .container .contact-us {
+#footer .container .contact-us, #footer .container-fluid .contact-us, footer .container .contact-us, footer .container-fluid .contact-us {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -4005,32 +4005,32 @@ a.app-launcher {
       -ms-flex-align: baseline;
           align-items: baseline;
   white-space: nowrap; }
-#footer .container .contact-us .hidemethods, footer .container .contact-us .hidemethods {
+#footer .container .contact-us .hidemethods, #footer .container-fluid .contact-us .hidemethods, footer .container .contact-us .hidemethods, footer .container-fluid .contact-us .hidemethods {
   visibility: hidden;
   opacity: 0;
   transition: all .3s; }
-#footer .container .contact-us .contact-methods, footer .container .contact-us .contact-methods {
+#footer .container .contact-us .contact-methods, #footer .container-fluid .contact-us .contact-methods, footer .container .contact-us .contact-methods, footer .container-fluid .contact-us .contact-methods {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-align-items: baseline;
       -ms-flex-align: baseline;
           align-items: baseline; }
-#footer .container .contact-us .contact-methods > div, footer .container .contact-us .contact-methods > div {
+#footer .container .contact-us .contact-methods > div, #footer .container-fluid .contact-us .contact-methods > div, footer .container .contact-us .contact-methods > div, footer .container-fluid .contact-us .contact-methods > div {
   margin-left: 20px; }
-#footer .container .contact-us .contact-methods .link-icon, footer .container .contact-us .contact-methods .link-icon {
+#footer .container .contact-us .contact-methods .link-icon, #footer .container-fluid .contact-us .contact-methods .link-icon, footer .container .contact-us .contact-methods .link-icon, footer .container-fluid .contact-us .contact-methods .link-icon {
   color: #0072b8; }
-#footer .container .contact-us .contact-methods .link-icon.disabled, footer .container .contact-us .contact-methods .link-icon.disabled {
+#footer .container .contact-us .contact-methods .link-icon.disabled, #footer .container-fluid .contact-us .contact-methods .link-icon.disabled, footer .container .contact-us .contact-methods .link-icon.disabled, footer .container-fluid .contact-us .contact-methods .link-icon.disabled {
   color: #c0c0c0; }
-#footer .container .contact-us .contact-methods a, footer .container .contact-us .contact-methods a {
+#footer .container .contact-us .contact-methods a, #footer .container-fluid .contact-us .contact-methods a, footer .container .contact-us .contact-methods a, footer .container-fluid .contact-us .contact-methods a {
   color: #0072b8; }
-#footer .container .contact-us .contact-methods a.disabled, footer .container .contact-us .contact-methods a.disabled {
+#footer .container .contact-us .contact-methods a.disabled, #footer .container-fluid .contact-us .contact-methods a.disabled, footer .container .contact-us .contact-methods a.disabled, footer .container-fluid .contact-us .contact-methods a.disabled {
   color: #c0c0c0; }
-#footer .container .contact-us .contact-methods a.disabled:hover, footer .container .contact-us .contact-methods a.disabled:hover {
+#footer .container .contact-us .contact-methods a.disabled:hover, #footer .container-fluid .contact-us .contact-methods a.disabled:hover, footer .container .contact-us .contact-methods a.disabled:hover, footer .container-fluid .contact-us .contact-methods a.disabled:hover {
   background-color: transparent;
   cursor: not-allowed;
   text-decoration: none; }
-#footer .container > div, footer .container > div {
+#footer .container > div, #footer .container-fluid > div, footer .container > div, footer .container-fluid > div {
   padding: 0 20px 0 0; }
 @media (max-width: 767px) {
   #footer .container .contents, footer .container .contents {
@@ -4335,8 +4335,7 @@ a.app-launcher {
   background-color: #c5cbe4; }
 
 .signin {
-  background-color: #254d9d;
-  background-image: linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%); }
+  background-color: #254d9d; }
 .signin .signin-wrapper {
   height: 100vh;
   margin: 0;
@@ -5522,8 +5521,8 @@ td.centered, th.centered {
   background-color: #cf0989; }
 .leftnav-sectioned .list-group-section a.badge.list-group-item:hover, .splitview .two-col-wrapper .leftnav a.badge:hover {
   background-color: #9e0769; }
-.controls-stacked {
 
+.controls-stacked {
   margin: 0 0 15px; }
 .controls-stacked .control {
   margin-top: 0;
