@@ -137,6 +137,9 @@
       flex-direction: row;
       align-items: baseline;
       width: auto;
+      > div {
+        white-space: nowrap;
+      }
     }
   }
 }
