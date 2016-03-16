@@ -9,3 +9,504 @@
       </div>
     </div>
   </div>
+
+  <div headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-unstyled list-inline jump-menu">
+            <li>
+              <a ui-sref="content.emails({'#':'template'})">Template</a>
+            </li>
+            <li>
+              <a ui-sref="content.emails({'#':'scenarios'})">Scenarios</a>
+            </li>
+            <li>
+              <a ui-sref="content.emails({'#':'global-support'})">Global Support Copy Options</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="template" class="doc-head">Sample Email Template</h1>
+      <p class="doc-lede">A generic template used for transactional emails within products.</p>
+    </div>
+  </div>
+
+
+  <div class="row spacer-top-lg">
+    <div class="col-md-4">
+      <p>
+        The scenarios outlined below can be used as a guidline for copy within the email template. Be sure to make the following changes within the copy blocks, here are some tips:
+      </p>
+      <ul>
+        <li>
+          Replace all occurances of bracketed content, such as <code>[[PRODUCT NAME]]</code> with the appropriate copy and links
+        </li>
+        <li>
+          Pay attention to indications of register and trade marks
+        </li>
+        <li>
+          Refer to the Global support copy options at the end of this document, replace all occurances of <code>[[GLOBAL SUPPORT COPY OPTION]]</code> with your selected option
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-7 col-md-offset-1">
+      <img class="img-responsive" src="modules/content/assets/images/email_template.png" alt=""/>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="scenarios" class="doc-head">Scenarios</h1>
+    </div>
+  </div>
+
+  <div class="row spacer-top-lg">
+    <div class="col-md-8">
+      <p>These are emails.</p>
+      <ol>
+        <li>User has an email account and a password already (generic)</li>
+        <li>Same as first scenario, showing detailed steps</li>
+        <li>Same as first scenario, showing marketing bullets</li>
+        <li>User has an email account but needs to complete additional steps to register</li>
+        <li>User needs to complete additional steps to register and invite other users</li>
+        <li>User has received an invitation to register, needs to complete additional steps</li>
+        <li>User has requested a password reset</li>
+        <li>The password has been successfully reset by the user</li>
+      </ol>
+
+      <p>
+        Global support copy options appear at the end of this document.
+      </p>
+
+      <p>
+        Global legal copy appears at the end of this document.
+      </p>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-5">
+      <h2 class="doc-sectionhead">1. User has an email account and a password already (generic)</h2>
+      <figure>
+        <figcaption>Email Subject Line</figcaption>
+        <p>Get started with [[PRODUCT NAME]]</p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Header Product Name</figcaption>
+        <p>[[PRODUCT NAME INCLUDING ™ or ®]]</p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Body</figcaption>
+        <p>Welcome! Let’s get you started.</p>
+        <p>Your [[PRODUCT NAME]] registration is complete. All you need to do is sign in with your email address: [[EMAIL ADDRESS]]</p>
+        <p>Sign In Now</p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Footer</figcaption>
+        <p>[[Global support copy choice]]</p>
+        <p>This email is an auto-generated message from an unmonitored email account. To get in touch with Pitney Bowes,
+          <a href="mailto:">email us</a>.</p>
+        <p>
+          This message was distributed by Pitney Bowes Inc., World Headquarters, 3001 Summer St., Stamford CT 06926. Pitney Bowes, the Corporate Logo and [[PRODUCT NAME INCLUDING ™ or ®]] are trademarks of Pitney Bowes Inc. or a subsidiary. All other marks are the intellectual property of their respective owners. Use of your email address is governed by the Pitney Bowes Privacy Policy.
+        </p>
+        <p>
+          ©[[CURRENT YEAR]] Pitney Bowes Inc. All rights reserved.
+        </p>
+      </figure>
+
+    </div>
+
+    <div class="col-md-5 col-md-offset-2">
+      <h2 class="doc-sectionhead">2. Same as first scenario, showing detailed steps</h2>
+      <figure>
+        <figcaption>Email Subject Line</figcaption>
+        <p>Get started with [[PRODUCT NAME]]</p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Header Product Name</figcaption>
+        <p>[[PRODUCT NAME INCLUDING ™ or ®]]</p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Body</figcaption>
+        <p>Welcome! Let’s get you started.</p>
+        <p>Your [[PRODUCT NAME]] registration is complete. All you need to do is sign in with your email address: [[EMAIL ADDRESS]]</p>
+        <p>Sign In Now</p>
+        <h5>
+          Header copy for step-based process.
+        </h5>
+        <p>
+          Here’s what you need to do next:
+        </p>
+        <ol>
+          <li>Description of first step for user to take.</li>
+          <li>Description of second step for user to take — this sentence is slightly longer to show a more detailed step.</li>
+          <li>Description of third step for user to take, with a little more copy to show length variation.</li>
+          <li>Description of fourth step, with an example of an inline link.</li>
+        </ol>
+        <p>
+          Summary copy with a call to action
+          <a href="">link</a>.
+        </p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Footer</figcaption>
+        <p>[[Global support copy choice]]</p>
+        <p>This email is an auto-generated message from an unmonitored email account. To get in touch with Pitney Bowes,
+          <a href="mailto:">email us</a>.</p>
+        <p>
+          This message was distributed by Pitney Bowes Inc., World Headquarters, 3001 Summer St., Stamford CT 06926. Pitney Bowes, the Corporate Logo and [[PRODUCT NAME INCLUDING ™ or ®]] are trademarks of Pitney Bowes Inc. or a subsidiary. All other marks are the intellectual property of their respective owners. Use of your email address is governed by the Pitney Bowes Privacy Policy.
+        </p>
+        <p>
+          ©[[CURRENT YEAR]] Pitney Bowes Inc. All rights reserved.
+        </p>
+      </figure>
+
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">3. Same as first scenario, showing marketing bullets</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <figure>
+        <figcaption>Email Subject Line</figcaption>
+        <p>Get started with [[PRODUCT NAME]]</p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Header Product Name</figcaption>
+        <p>[[PRODUCT NAME INCLUDING ™ or ®]]</p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Body</figcaption>
+        <p>Welcome! Let’s get you started.</p>
+        <p>Your [[PRODUCT NAME]] registration is complete. All you need to do is sign in with your email address: [[EMAIL ADDRESS]]</p>
+        <p>Sign In Now</p>
+        <h5>
+          Header copy for marketing messaging.
+        </h5>
+        <p>
+          [[PRODUCT NAME]] offers you these benefits:
+        </p>
+        <ol>
+          <li>Description of a key product feature or benefit (try to keep these concise).</li>
+          <li>Description of a key product feature or benefit (focus on benefits to the user).</li>
+          <li>Description of a key product feature or benefit, with an inline link (link to highly relevant content and keep additional links to a minimum).</li>
+        </ol>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Footer</figcaption>
+        <p>[[Global support copy choice]]</p>
+        <p>This email is an auto-generated message from an unmonitored email account. To get in touch with Pitney Bowes,
+          <a href="mailto:">email us</a>.</p>
+        <p>
+          This message was distributed by Pitney Bowes Inc., World Headquarters, 3001 Summer St., Stamford CT 06926. Pitney Bowes, the Corporate Logo and [[PRODUCT NAME INCLUDING ™ or ®]] are trademarks of Pitney Bowes Inc. or a subsidiary. All other marks are the intellectual property of their respective owners. Use of your email address is governed by the Pitney Bowes Privacy Policy.
+        </p>
+        <p>
+          ©[[CURRENT YEAR]] Pitney Bowes Inc. All rights reserved.
+        </p>
+      </figure>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">4. User has an email account but needs to complete additional steps to register</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <figure>
+        <figcaption>Email Subject Line</figcaption>
+        <p>Register for [[PRODUCT NAME]]</p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Header Product Name</figcaption>
+        <p>[[PRODUCT NAME INCLUDING ™ or ®]]</p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Body</figcaption>
+        <p>Welcome! Let’s get you registered.</p>
+        <p>You’re almost ready to start using [[PRODUCT NAME]].</p>
+        <p>Complete your registration using this email address: [[EMAIL ADDRESS]]</p>
+        <p>Complete Registration Now</p>
+        <p>
+          For security reasons, this invitation will expire at
+          [[EXPIRATION DATE AND TIME]].
+        </p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Footer</figcaption>
+        <p>[[Global support copy choice]]</p>
+        <p>This email is an auto-generated message from an unmonitored email account. To get in touch with Pitney Bowes,
+          <a href="mailto:">email us</a>.</p>
+        <p>
+          This message was distributed by Pitney Bowes Inc., World Headquarters, 3001 Summer St., Stamford CT 06926. Pitney Bowes, the Corporate Logo and [[PRODUCT NAME INCLUDING ™ or ®]] are trademarks of Pitney Bowes Inc. or a subsidiary. All other marks are the intellectual property of their respective owners. Use of your email address is governed by the Pitney Bowes Privacy Policy.
+        </p>
+        <p>
+          ©[[CURRENT YEAR]] Pitney Bowes Inc. All rights reserved.
+        </p>
+      </figure>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">5. User needs to complete additional steps to register and invite other users</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <figure>
+        <figcaption>Email Subject Line</figcaption>
+        <p>Get started with [[PRODUCT NAME]]</p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Header Product Name</figcaption>
+        <p>[[PRODUCT NAME INCLUDING ™ or ®]]</p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Body</figcaption>
+        <p>Welcome! Let’s get you registered.</p>
+        <p>You’re almost ready to start using [[PRODUCT NAME]].</p>
+        <p>Complete your registration using this email address: [[EMAIL ADDRESS]]</p>
+        <p>Complete Registration Now</p>
+        <h5>
+          Will others need to use [[PRODUCT NAME]]?
+        </h5>
+        <p>
+          They’ll need their own usernames and passwords to complete installation and access training. Once you’ve completed your own registration, you can add additional users.
+        </p>
+        <p>
+          For security reasons, this invitation will expire at [[EXPIRATION DATE AND TIME]].
+        </p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Footer</figcaption>
+        <p>[[Global support copy choice]]</p>
+        <p>This email is an auto-generated message from an unmonitored email account. To get in touch with Pitney Bowes,
+          <a href="mailto:">email us</a>.</p>
+        <p>
+          This message was distributed by Pitney Bowes Inc., World Headquarters, 3001 Summer St., Stamford CT 06926. Pitney Bowes, the Corporate Logo and [[PRODUCT NAME INCLUDING ™ or ®]] are trademarks of Pitney Bowes Inc. or a subsidiary. All other marks are the intellectual property of their respective owners. Use of your email address is governed by the Pitney Bowes Privacy Policy.
+        </p>
+        <p>
+          ©[[CURRENT YEAR]] Pitney Bowes Inc. All rights reserved.
+        </p>
+      </figure>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">6. User has received an invitation to register (system knows email and first/last name)</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <figure>
+        <figcaption>Email Subject Line</figcaption>
+        <p>You’re invited to get started with [[PRODUCT NAME]]</p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Header Product Name</figcaption>
+        <p>[[PRODUCT NAME INCLUDING ™ or ®]]</p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Body</figcaption>
+        <p>You’re invited!</p>
+        <p>You’ve been invited to use [[PRODUCT NAME]]. Completing your registration takes just few minutes.</p>
+        <p>Complete your registration using this email address: [[EMAIL ADDRESS]]</p>
+        <p>Complete Registration Now</p>
+        <p>
+          For security reasons, this invitation will expire at [[EXPIRATION DATE AND TIME]].
+        </p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Footer</figcaption>
+        <p>[[Global support copy choice]]</p>
+        <p>This email is an auto-generated message from an unmonitored email account. To get in touch with Pitney Bowes,
+          <a href="mailto:">email us</a>.</p>
+        <p>
+          This message was distributed by Pitney Bowes Inc., World Headquarters, 3001 Summer St., Stamford CT 06926. Pitney Bowes, the Corporate Logo and [[PRODUCT NAME INCLUDING ™ or ®]] are trademarks of Pitney Bowes Inc. or a subsidiary. All other marks are the intellectual property of their respective owners. Use of your email address is governed by the Pitney Bowes Privacy Policy.
+        </p>
+        <p>
+          ©[[CURRENT YEAR]] Pitney Bowes Inc. All rights reserved.
+        </p>
+      </figure>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">7. User has requested a password reset</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <figure>
+        <figcaption>Email Subject Line</figcaption>
+        <p>Let’s reset your password for [[PRODUCT NAME]]</p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Header Product Name</figcaption>
+        <p>[[PRODUCT NAME INCLUDING ™ or ®]]</p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Body</figcaption>
+        <p>Let’s reset your password.</p>
+        <p>Hi, [[FIRST NAME]],</p>
+        <p>We received a request to reset your password. So let’s do that right now.</p>
+        <p>Reset Password Now</p>
+        <p>
+          For security reasons, this reset link will expire at [[EXPIRATION DATE AND TIME]]. If your original request has expired, you can make another password reset request.
+        </p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Footer</figcaption>
+        <p>[[Global support copy choice]]</p>
+        <p>This email is an auto-generated message from an unmonitored email account. To get in touch with Pitney Bowes,
+          <a href="mailto:">email us</a>.</p>
+        <p>
+          This message was distributed by Pitney Bowes Inc., World Headquarters, 3001 Summer St., Stamford CT 06926. Pitney Bowes, the Corporate Logo and [[PRODUCT NAME INCLUDING ™ or ®]] are trademarks of Pitney Bowes Inc. or a subsidiary. All other marks are the intellectual property of their respective owners. Use of your email address is governed by the Pitney Bowes Privacy Policy.
+        </p>
+        <p>
+          ©[[CURRENT YEAR]] Pitney Bowes Inc. All rights reserved.
+        </p>
+      </figure>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">8. The password has been successfully reset by the user</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <figure>
+        <figcaption>Email Subject Line</figcaption>
+        <p>Your password for
+          [[PRODUCT NAME]]
+          has been reset</p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Header Product Name</figcaption>
+        <p>[[PRODUCT NAME INCLUDING ™ or ®]]</p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Body</figcaption>
+        <p>Your password has been reset.</p>
+        <p>Hi, [[FIRST NAME]],</p>
+        <p>We just wanted to let you know we’ve successfully reset your password.</p>
+        <p>If you requested this reset, you can ignore this email. However, if you didn’t request a change to your password, please contact us just to make sure that your account is secure.</p>
+        <p>
+          Call us at [[PHONE NUMBER]] or visit our support area. Or you can chat with a representative M-F 8am-8pm ET.
+        </p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Email Footer</figcaption>
+        <p>This email is an auto-generated message from an unmonitored email account. To get in touch with Pitney Bowes,
+          <a href="mailto:">email us</a>.</p>
+        <p>
+          This message was distributed by Pitney Bowes Inc., World Headquarters, 3001 Summer St., Stamford CT 06926. Pitney Bowes, the Corporate Logo and [[PRODUCT NAME INCLUDING ™ or ®]] are trademarks of Pitney Bowes Inc. or a subsidiary. All other marks are the intellectual property of their respective owners. Use of your email address is governed by the Pitney Bowes Privacy Policy.
+        </p>
+        <p>
+          ©[[CURRENT YEAR]] Pitney Bowes Inc. All rights reserved.
+        </p>
+      </figure>
+
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="global-support" class="doc-head">Global support copy options</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <figure>
+        <figcaption>Option 1: Phone</figcaption>
+        <p>Need help? Call
+          [[PHONE NUMBER]].</p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Option 2: Phone + Email</figcaption>
+        <p>Need help? Call
+          [[PHONE NUMBER]]
+          or email us.</p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Option 3: Phone + Web Support</figcaption>
+        <p>
+          Need help? Call us at
+          [[PHONE NUMBER]]
+          or visit our support area.
+        </p>
+      </figure>
+
+      <figure class="spacer-top-md">
+        <figcaption>Option 4: Chat</figcaption>
+        <p>Need help? Chat with a representative M-F 8am-8pm ET.</p>
+      </figure>
+
+    </div>
+  </div>
+
+</div>
