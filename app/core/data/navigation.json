@@ -25,9 +25,6 @@
               "label": "Color",
               "value": "foundation.color"
             }, {
-              "label": "Typography",
-              "value": "foundation.typography"
-            }, {
               "label": "Grid",
               "value": "foundation.grid"
             }, {
