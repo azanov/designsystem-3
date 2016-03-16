@@ -65,7 +65,7 @@ gulp.task('sass-dist', function() {
     .pipe(header(banner, { pkg: pkg }))
     .pipe(cssfilter)
     .pipe(gulp.dest('./dist/css')
-    .pipe(gulp.dest('./build/css'))
+    .pipe(gulp.dest('./build/assets/css'))
 
    );
 
