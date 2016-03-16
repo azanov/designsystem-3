@@ -41,7 +41,7 @@
     @include breakpoint(screen-xs) {
         margin-top: 30px;
         margin-bottom: 20px;
-        height: 40px;
+        height: 50px;
     }
   }
 
@@ -53,7 +53,6 @@
       color: $pb-gray-500;
       margin: 0;
       text-align: center;
-
       sup {
         font-size: .65em;
       }
@@ -68,7 +67,7 @@
     @include breakpoint(screen-xs) {
       padding: 20px 30px;
       .signin-heading {
-        font-size: 30px;
+        font-size: 26px;
       }
     }
 
@@ -158,16 +157,5 @@
   .alert-flex-icon {
     align-self: center;
     margin-right: 10px;
-  }
-}
-
-
-@include breakpoint(screen-xs) {
-  .signin {
-    .signin-pb-logo {
-      margin-top: 30px;
-      margin-bottom: 20px;
-      height: 40px;
-    }
   }
 }
