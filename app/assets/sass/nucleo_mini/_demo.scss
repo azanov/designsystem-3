@@ -1,3 +1,5 @@
+// scss-lint:disable MergeableSelector
+
 .nucleo-demo {
   /* --------------------------------
 
@@ -17,6 +19,7 @@ Main components
   ul {
     display: flex;
     flex-wrap: wrap;
+    padding-left: 0;
     li {
       padding: 16px 0;
       text-align: center;
@@ -24,6 +27,12 @@ Main components
       transition: background .2s;
       user-select: none;
       overflow: hidden;
+      width: 180px;
+      @include breakpoint(screen-xs) {
+        width: 150px;
+        font-size: 11px;
+        margin-right: 20px;
+      }
     }
   }
 

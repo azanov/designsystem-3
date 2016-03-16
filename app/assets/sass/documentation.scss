@@ -920,4 +920,32 @@ figure .modal-dialog {
   margin-top: 20px;
   margin-left: 0;
   padding-left: 0;
+  @include breakpoint(screen-xs) {
+    column-count: 2;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+ul.icon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
+  li {
+    width: 180px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 12px;
+    i {
+      padding-bottom: 10px;
+    }
+    @include breakpoint(screen-xs) {
+      width: 150px;
+      font-size: 11px;
+      margin-right: 20px;
+    }
+  }
+
 }
