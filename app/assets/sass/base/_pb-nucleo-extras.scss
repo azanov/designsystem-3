@@ -42,3 +42,11 @@
     transform: rotate(359deg);
   }
 }
+
+
+.link-icon {
+	color: $pb-medium-blue;
+	&.disabled {
+		color: $pb-gray;
+	}
+}
