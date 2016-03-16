@@ -65,7 +65,8 @@ gulp.task('sass-dist', function() {
     .pipe(header(banner, { pkg: pkg }))
     .pipe(cssfilter)
     .pipe(gulp.dest('./dist/css')
-   
+    .pipe(gulp.dest('./build/css'))
+
    );
 
 });
@@ -76,7 +77,7 @@ gulp.task('usemin', function() {
   gulp.src('./app/index.html')
     .pipe(usemin({
       css: [
-        cssnano, 
+        cssnano,
         rev
       ],
       vendorjs: [
