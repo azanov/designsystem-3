@@ -19,11 +19,12 @@
 
   // this holds the floating box of the logo/white box and keeps it vertical centered
   .signin-body-top {
-    flex-grow: 2; // this makes it take up all extra space and pushes footer to bottom
+    //flex-grow: 2; // this makes it take up all extra space and pushes footer to bottom
     width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex: 1 0 auto;
     @include breakpoint(screen-xs) {
       width: 90%;
     }

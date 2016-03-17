@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.5.3
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Wed Mar 16 2016 15:21:56 GMT-0400 (EDT) 
+ * Built Wed Mar 16 2016 16:22:42 GMT-0400 (EDT) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -4312,9 +4312,6 @@ a.app-launcher {
   .signin .signin-wrapper {
     height: 100vh; } }
 .signin .signin-body-top {
-  -webkit-flex-grow: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
   width: 400px;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4324,7 +4321,10 @@ a.app-launcher {
           flex-direction: column;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto; }
 @media (max-width: 767px) {
   .signin .signin-body-top {
     width: 90%; } }
