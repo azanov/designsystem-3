@@ -35,28 +35,18 @@
           <tr>
             <th></th>
             <th></th>
-            <th colspan="10" class="text-center">
-              <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980.15 14.15">
-                <path class="cls-1" d="M5.38 5.78h1"/>
-                <path class="cls-2" d="M8.39 5.78h964.38"/>
-                <path class="cls-1" d="M973.77 5.78h1"/>
-                <path class="cls-3" d="M6.48 9.52L0 5.78l6.48-3.74v7.48zm967.2 0l6.47-3.74-6.47-3.74v7.48z"/>
-                <path class="cls-4" d="M464.62 0h50.91v11.55h-50.91z"/>
-                <text class="cls-5" transform="translate(467.85 9.34)">
-                  ACTIONS
-                </text>
-              </svg>
-              <svg width="995" height="50" viewBox="0 0 995 50" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                      <marker id="arrowUp" markerWidth="25" markerHeight="25" refX="10" refY="2">
-                        <path fill="#662D91" d="M10 0l10 20h-20z"/>
-                      </marker>
-                      <marker id="arrowDown" markerWidth="25" markerHeight="25" refX="10" refY="4">
-                        <path d="M0,0 L20,0 L10,20 L0,0 Z" id="arrow-down" fill="#662D91"></path>
-                      </marker>
-                  </defs>
-                  <path d="M0 0h9950" stroke="#662D91" stroke-width=".75" stroke-dasharray="5,2" fill="#000" marker-start="url(#arrowUp)" marker-end="url(#arrowDown)"/>
-                  <text transform="translate(3 320)">OBJECTS</text>
+            <th colspan="10" class="text-center" style="padding:0">
+              <svg width="1400" height="50" viewBox="0 0 1400 50" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <marker id="arrowLeft" markerWidth="25" markerHeight="25" refX="0" refY="12.5">
+                      <path fill="#662D91" d="M0 12.5l25-12.5v25z"/>
+                    </marker>
+                    <marker id="arrowRight" markerWidth="25" markerHeight="25" refX="15" refY="12.5">
+                      <path d="M0 25v-25l25 12.5-25 12.5z" fill="#662D91"/>
+                    </marker>
+                </defs>
+                <path d="M0 0h1390" stroke="#662D91" stroke-width=".75" stroke-dasharray="5,2" fill="#000" marker-start="url(#arrowLeft)" marker-end="url(#arrowRight)" transform="translate(0,25)" />
+                <text class="arrow-labels" transform="translate(300 25)">ACTIONS</text>
               </svg>
             </th>
           </tr>
@@ -88,7 +78,7 @@
                       </marker>
                   </defs>
                   <path d="M25 0v600" stroke="#662D91" stroke-width=".75" stroke-dasharray="5,2" fill="#000" marker-start="url(#arrowUp)" marker-end="url(#arrowDown)"/>
-                  <text transform="translate(3 320)">OBJECTS</text>
+                  <text class="arrow-labels" transform="translate(3 320)">OBJECTS</text>
               </svg>
             </td>
             <td class="no-border text-right">Page</td>
