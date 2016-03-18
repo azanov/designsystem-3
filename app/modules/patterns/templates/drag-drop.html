@@ -9,12 +9,31 @@
       </div>
     </div>
   </div>
+
+  <div headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-unstyled list-inline jump-menu">
+            <li><a ui-sref="patterns.signinup({'#':'lists'})">Drag Between Lists</a></li>
+            <li><a ui-sref="patterns.signinup({'#':'interactions'})">Interactions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
 
 
 <div class="container spacer-top-xl">
+
+  <div class="row spacer-bottom-lg">
+    <div class="col-md-8">
+      <h1 class="doc-head" id="lists">Drag Between Lists</h1>
+    </div>
+  </div>
 
   <div class="row">
 
@@ -50,15 +69,25 @@
     </div>
   </div>
 
-</div>
 
-<div class="container-fluid spacer-top-xl">
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="table-responsive">
-        <!-- moved to an include to make this page easier to work with -->
-        <div ng-include="'modules/patterns/templates/includes/drag-drop-table.html'"></div>
-      </div>
+  <div class="row spacer-bottom-lg">
+    <div class="col-md-8">
+      <!-- <div ng-include="'modules/patterns/templates/includes/drag-drop-table.html'"></div> -->
+      <h1 class="doc-head" id="interactions">Drag and Drop Interactions</h1>
+      <p class="lede ">For use with Images, Containers, Grid Rows, Grid Columns, Lists</p>
+
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+
+
+      <a href="modules/patterns/assets/images/drag-interaction-worksheet.pdf" target="_blank">
+        <img src="modules/patterns/assets/images/drag-interaction-worksheet.png"
+             srcset="modules/patterns/assets/images/drag-interaction-worksheet.png 1x, modules/patterns/assets/images/drag-interaction-worksheet@2x.png 2x"
+             alt="Drag Drop Interactions" class="img-responsive">
+      </a>
+      <p><a href="modules/patterns/assets/images/drag-interaction-worksheet.pdf" target="_blank">Download PDF of Chart</a></p>
     </div>
   </div>
 </div>
