@@ -15,7 +15,7 @@
 
   <div class="row">
     <div class="col-xs-12">
-
+      <div class="table-responsive">
       <table class="table table-dragdrop">
         <thead>
           <tr class="category">
@@ -46,7 +46,7 @@
                     </marker>
                 </defs>
                 <path d="M0 0h1390" stroke="#662D91" stroke-width=".75" stroke-dasharray="5,2" fill="#000" marker-start="url(#arrowLeft)" marker-end="url(#arrowRight)" transform="translate(0,25)" />
-                <text class="arrow-labels" transform="translate(300 25)">ACTIONS</text>
+                <text class="arrow-labels" transform="translate(300 25)" fill="#662D91">ACTIONS</text>
               </svg>
             </th>
           </tr>
@@ -67,8 +67,8 @@
         </thead>
         <tbody>
           <tr>
-            <td rowspan="7" class="no-border text-center" style="width: 70px;">
-              <svg width="70" height="650" viewBox="0 0 70 650" xmlns="http://www.w3.org/2000/svg">
+            <td rowspan="7" class="no-border text-center" style="width: 50px;">
+              <svg width="50" height="650" viewBox="0 0 50 650" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                       <marker id="arrowUp" markerWidth="25" markerHeight="25" refX="10" refY="2">
                         <path fill="#662D91" d="M10 0l10 20h-20z"/>
@@ -77,8 +77,8 @@
                         <path d="M0,0 L20,0 L10,20 L0,0 Z" id="arrow-down" fill="#662D91"></path>
                       </marker>
                   </defs>
-                  <path d="M25 0v600" stroke="#662D91" stroke-width=".75" stroke-dasharray="5,2" fill="#000" marker-start="url(#arrowUp)" marker-end="url(#arrowDown)"/>
-                  <text class="arrow-labels" transform="translate(3 320)">OBJECTS</text>
+                  <path d="M25 0v600" stroke="#662D91" stroke-width="1" stroke-dasharray="5,2" fill="#000" marker-start="url(#arrowUp)" marker-end="url(#arrowDown)"/>
+                  <text class="arrow-labels" transform="translate(10 280)" style="writing-mode: tb;" fill="#662D91">OBJECTS</text>
               </svg>
             </td>
             <td class="no-border text-right">Page</td>
@@ -179,6 +179,7 @@
           </tr>
         </tbody>
       </table>
+      </div>
 
     </div>
   </div>
