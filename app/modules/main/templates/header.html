@@ -138,7 +138,7 @@
 
         <ul class="nav navbar-nav navbar-right">
 
-          <li class="divider-vertical"></li>
+          <li class="divider-vertical hidden-xs"></li>
 
           <!-- Search menu -->
           <!-- <li class="menu-search"><a href="" class="dropdown-toggle" data-toggle="dropdown">
@@ -153,9 +153,10 @@
           </li> -->
 
           <!-- Apps menu -->
-          <li class="menu-apps">
-            <a href="" class="dropdown-toggle" data-toggle="dropdown">
-              <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgApps" x="0" y="0" /></svg>
+          <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <svg class="hidden-xs" width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgApps" x="0" y="0" /></svg>
+              <span class="visible-xs-inline"><i class="nc-icon-mini ui-2_grid-48"></i>Applications</span>
             </a>
             <ul class="dropdown-menu" role="menu">
               <li class="section-head">Your Apps</li>
@@ -167,17 +168,20 @@
           </li>
 
           <!-- Reminders -->
-          <li class="menu-notifications">
+          <li>
             <a href=""  class="bell">
-              <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgBell" x="0" y="0" /></svg>
+              <svg class="hidden-xs" width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgBell" x="0" y="0" /></svg>
+              <span class="visible-xs-inline"><i class="nc-icon-mini ui-1_bell-53"></i>Notifications</span>
+
               <span class="badge">14</span>
             </a>
           </li>
 
           <!-- Help menu -->
-          <li class="menu-help">
+          <li class="dropdown">
             <a href="" class="dropdown-toggle" data-toggle="dropdown">
-              <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgHelp" x="0" y="0" /></svg>
+              <svg class="hidden-xs" width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgHelp" x="0" y="0" /></svg>
+              <span class="visible-xs-inline"><i class="nc-icon-mini ui-2_alert-circle"></i>Help</span>
             </a>
             <ul class="dropdown-menu" role="menu">
               <li class="section-head">Help</li>
@@ -197,31 +201,33 @@
           </li>
 
           <!-- Settings menu -->
-          <li class="menu-settings">
+          <li class="dropdown">
             <a href="" class="dropdown-toggle" data-toggle="dropdown">
-                <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgSettings" x="0" y="0" /></svg>
-              </a>
-            <ul class="dropdown-menu" role="menu">
-              <li class="section-head">Application Settings</li>
-              <li><a href="">Carriers</a></li>
-              <li><a href="">Cost Accounts</a></li>
-              <li><a href="">Postage Payment Methods</a></li>
-              <li><a href="">Users</a></li>
-              <li class="section-head">Personal Preferences</li>
-              <li><a href="">Label Options</a></li>
-              <li><a href="">Automatic Emails</a></li>
-              <li><a href="">Presets</a></li>
-              <li><a href="">Return Label</a></li>
-              <li><a href="">Preferences</a></li>
-            </ul>
+                <svg class="hidden-xs" width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgSettings" x="0" y="0" /></svg>
+                <span class="visible-xs-inline"><i class="nc-icon-mini ui-1_settings-gear-63"></i>Settings</span>
+            </a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="section-head">Application Settings</li>
+                <li><a href="">Carriers</a></li>
+                <li><a href="">Cost Accounts</a></li>
+                <li><a href="">Postage Payment Methods</a></li>
+                <li><a href="">Users</a></li>
+                <li class="section-head">Personal Preferences</li>
+                <li><a href="">Label Options</a></li>
+                <li><a href="">Automatic Emails</a></li>
+                <li><a href="">Presets</a></li>
+                <li><a href="">Return Label</a></li>
+                <li><a href="">Preferences</a></li>
+              </ul>
           </li>
 
           <!-- User menu -->
-          <li class="menu-user">
+          <li class="dropdown menu-user">
             <a href="" class="dropdown-toggle face" data-toggle="dropdown">
               <!-- <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgUserInitials" x="0" y="0" /></svg> -->
               <!-- <img src="modules/patterns/assets/images/128.jpg" alt="User Image"> -->
-              Roberta Hamilton
+              <span class="hidden-xs">Roberta Hamilton</span>
+              <span class="visible-xs-inline"><i class="nc-icon-mini users_circle-10"></i>Roberta Hamilton</span>
             </a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="">Profile<br><span class="menu-text-small">Email, Passwords</span></a></li>

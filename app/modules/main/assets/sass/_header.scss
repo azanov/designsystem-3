@@ -55,6 +55,9 @@ header:not(.demo) {
 .navbar-right {
   .dropdown-toggle {
     height: 50px;
+    @include breakpoint(screen-xs) {
+      height: 42px;
+    }
   }
   li.open {
     i.fa.fa-circle.fa-stack-1x {
@@ -121,8 +124,6 @@ header:not(.demo) {
   }
 
   .navbar-toggle {
-    border-color: #fff;
-    //background-color: transparentize($pb-blue, .5);
     float: left;
     padding: 9px 12px;
 
@@ -300,7 +301,7 @@ header:not(.demo) {
     }
   }
   // secondary menu on phone
-  .navbar-nav .dropdown.open .dropdown-menu {
+  .navbar-nav .open .dropdown-menu {
     background: #f1f1f1;
   }
 }
@@ -362,7 +363,8 @@ header:not(.demo) {
       transform: scale(0);
       display: block;
       overflow: hidden;
-      transition: opacity .2s linear, max-height .3s cubic-bezier(.190, 1, .220, 1), transform 0s linear .5s;
+      // transition: opacity .2s linear, max-height .3s cubic-bezier(.190, 1, .220, 1), transform 0s linear .5s;
+      transition: opacity .2s linear, max-height .3s ease-out, transform 0s linear .5s;
     }
 
     &.open {
@@ -370,7 +372,7 @@ header:not(.demo) {
         opacity: 1;
         transform: scale(1);
         max-height: 500px;
-        transition: opacity .3s linear, max-height 2s cubic-bezier(.190, 1, .220, 1), transform 0s linear;
+        transition: opacity .3s linear, max-height .5s ease-out, transform 0s linear;
       }
     }
   }
