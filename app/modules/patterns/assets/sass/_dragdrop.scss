@@ -1,4 +1,4 @@
-@keyframes example {
+@keyframes grow {
   from {
     transform: scale(1);
   }
@@ -53,7 +53,7 @@
 }
 
 .dragging.gu-mirror {
-  animation-name: 'example';
+  animation-name: 'grow';
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -79,98 +79,9 @@
 //   cursor: move;
 // }
 
-
-/* DOCUMENTATION TO BE MOVED */
-.table-dragdrop {
-  border: 0;
-  font-size: 11px;
-
-  thead tr.category th {
-    font-weight: bold;
-    color: #000;
+.panel.drag-container {
+  box-shadow: none;
+  .panel-body {
+    padding: 0;
   }
-
-  thead tr th {
-    border: 0;
-    font-weight: bold;
-
-    font-size: 11px;
-
-    font-size: 12px;
-
-    background-color: transparent;
-  }
-
-  .column {
-
-    width: 100px;
-
-    width: 200px;
-
-    vertical-align: top;
-  }
-
-  tbody tr td {
-    border-color: $pb-light-gray;
-
-    &.no-border {
-      border: 0;
-      vertical-align: middle;
-      width: 30px;
-
-
-    &.no-border {
-      border: 0;
-      vertical-align: middle;
-
-    }
-
-    &:empty {
-      background-color: #f2f2f2;
-    }
-  }
-}
-
-
-//svg arrows
-.cls-1, .cls-2 {
-  fill: none;
-  stroke: #662d91;
-  stroke-miterlimit: 10;
-  stroke-width: .75px;
-}
-.cls-2 {
-  stroke-dasharray: 2 2;
-}
-.cls-3, .cls-5 {
-  fill: #662d91;
-}
-.cls-4 {
-  fill: #fff;
-}
-.cls-5 {
-  font-size: 10px;
-  font-family: Helvetica;
-}
-
-// .cls-1a, .cls-2a {
-//   fill: none;
-//   stroke: #662d91;
-//   stroke-miterlimit: 10;
-//   stroke-width: .75px;
-// }
-// .cls-2a {
-//   stroke-dasharray: 2 2;
-// }
-// .cls-3a, .cls-5a {
-//   fill: #662d91;
-// }
-// .cls-4a {
-//   fill: #fff;
-// }
-// .cls-5a {
-//   font-size: 10px;
-//   font-family: Helvetica;
-// }
-
 }
