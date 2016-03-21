@@ -53,12 +53,20 @@ header:not(.demo) {
 
 
 .navbar-right {
+  @include breakpoint(screen-xs) {
+  border-top: 2px solid #e1e1e1;
+}
+
+  .dropdown-menu {
+    right: auto;
+  }
   .dropdown-toggle {
     height: 50px;
     @include breakpoint(screen-xs) {
       height: 42px;
     }
   }
+
   li.open {
     i.fa.fa-circle.fa-stack-1x {
       display: none;
@@ -476,6 +484,13 @@ header:not(.demo) {
     top: 11px;
     right: 2px;
     background-color: $pb-orange;
+    @include breakpoint(screen-xs) {
+      position: relative;
+      display: inline-block;
+      top: -2px;
+      margin-left: 10px;
+
+    }
   }
 }
 
