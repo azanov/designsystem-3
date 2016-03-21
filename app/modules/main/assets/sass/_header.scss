@@ -256,6 +256,9 @@ header:not(.demo) {
       margin: 0; //was 9x 20px
       overflow: hidden;
       background-color: $pb-gray-300;
+      @include breakpoint(screen-xs) {
+        margin: 3px 0 9px;
+      }
     }
     > li {
       &.section-head {
@@ -507,6 +510,11 @@ header:not(.demo) {
   input[type='text'].form-control {
     width: 80%;
     margin: 0 20px;
+    @include breakpoint(screen-xs) {
+      width: 100%;
+      margin: 10px 20px;
+    }
+
   }
 }
 
