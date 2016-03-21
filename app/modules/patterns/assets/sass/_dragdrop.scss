@@ -8,7 +8,7 @@
   }
 }
 
-<<<<<<< HEAD
+
 .arrow-labels {
   font-family: arial, sans-serif;
   font-size: 12px;
@@ -18,8 +18,7 @@
   z-index: 10;
 }
 
-=======
->>>>>>> develop
+
 .drag-item {
   padding: 10px;
   border: 1px solid transparent;
@@ -94,36 +93,36 @@
   thead tr th {
     border: 0;
     font-weight: bold;
-<<<<<<< HEAD
+
     font-size: 11px;
-=======
+
     font-size: 12px;
->>>>>>> develop
+
     background-color: transparent;
   }
 
   .column {
-<<<<<<< HEAD
+
     width: 100px;
-=======
+
     width: 200px;
->>>>>>> develop
+
     vertical-align: top;
   }
 
   tbody tr td {
     border-color: $pb-light-gray;
-<<<<<<< HEAD
-    &.no-border {
-      border: 0;
-      vertical-align: middle;
-      width: 30px;
-=======
 
     &.no-border {
       border: 0;
       vertical-align: middle;
->>>>>>> develop
+      width: 30px;
+
+
+    &.no-border {
+      border: 0;
+      vertical-align: middle;
+
     }
 
     &:empty {
@@ -173,3 +172,5 @@
 //   font-size: 10px;
 //   font-family: Helvetica;
 // }
+
+}
