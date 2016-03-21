@@ -363,8 +363,7 @@ header:not(.demo) {
       transform: scale(0);
       display: block;
       overflow: hidden;
-      // transition: opacity .2s linear, max-height .3s cubic-bezier(.190, 1, .220, 1), transform 0s linear .5s;
-      transition: opacity .2s linear, max-height .3s ease-out, transform 0s linear .5s;
+      transition: opacity .2s linear, max-height .3s cubic-bezier(0.3, 0.34, 0.62, 0.99), transform 0s linear .5s;
     }
 
     &.open {
@@ -372,7 +371,7 @@ header:not(.demo) {
         opacity: 1;
         transform: scale(1);
         max-height: 500px;
-        transition: opacity .3s linear, max-height .5s ease-out, transform 0s linear;
+        transition: opacity .3s linear, max-height .5s cubic-bezier(0.3, 0.34, 0.62, 0.99), transform 0s linear;
       }
     }
   }
