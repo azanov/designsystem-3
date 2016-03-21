@@ -10,21 +10,21 @@
       unselected: [
         {
           id: 0,
-          label: 'Lorem'
+          label: 'Nulla consequat malesuada quam. Proin quis sem sit amet sem malesuada tincidunt.'
         },
         {
           id: 1,
-          label: 'Ipsum'
+          label: 'Vestibulum luctus malesuada nisl, sit amet pharetra lorem malesuada faucibus. Donec ut diam imperdiet, pharetra lacus at, auctor sapien. Proin in imperdiet nulla.'
         },
         {
           id: 2,
-          label: 'Dolor'
+          label: 'Donec mauris ante, scelerisque sed nunc eu, facilisis rutrum nulla.'
         }
       ],
       selected: [
         {
           id: 3,
-          label: 'Sit'
+          label: 'Integer condimentum eget lectus eu aliquam. Morbi at neque velit. Nullam faucibus elit sit amet facilisis faucibus. Maecenas nisl arcu, luctus non orci sed.'
         }
       ]
     };
