@@ -3,7 +3,7 @@
     transform: scale(1);
   }
   to {
-    transform: scale(1.5);
+    transform: scale(1.05);
     animation-play-state: paused;
   }
 }
@@ -22,7 +22,7 @@
 .drag-item {
   padding: 10px;
   border: 1px solid transparent;
-  transition: all 1s;
+  // transition: all .2s;
 
   &:hover {
     background-color: $pb-bg3;
@@ -59,6 +59,21 @@
   animation-fill-mode: forwards;
 }
 
+.panel.drag-container {
+  box-shadow: none;
+  border: 0;
+  .panel-body {
+    border: 1px solid #c5cbe3;
+    padding: 10px;
+    transition: border-color .2s linear;
+    &.ex-over {
+      border-color: $pb-blue;
+      border-width: 1px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
+    }
+  }
+
+
 
 /*
  * note that styling gu-mirror directly is a bad practice because it's too generic.
@@ -79,9 +94,6 @@
 //   cursor: move;
 // }
 
-.panel.drag-container {
-  box-shadow: none;
-  .panel-body {
-    padding: 10px;
-  }
+
+
 }
