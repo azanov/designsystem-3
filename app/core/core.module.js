@@ -33,6 +33,7 @@
     'ui.select',
     'ngTagsInput',
     'slickCarousel',
+    'ngFileUpload',
     angularDragula(angular)
   ]);
 

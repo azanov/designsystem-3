@@ -8,6 +8,12 @@
   }
 }
 
+.dragdrop {
+  h1.doc-head {
+    margin-top: 0;
+  }
+}
+
 
 .arrow-labels {
   font-family: arial, sans-serif;
@@ -72,6 +78,32 @@
       box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
     }
   }
+}
+
+.drop-box {
+  background: #f8f8f8;
+  border: 5px dashed #ddd;
+  text-align: center;
+  padding: 50px 10px;
+  margin-bottom: 20px;
+  &.dragover {
+    border: 5px dashed $pb-blue;
+  }
+  *.dragover-err {
+    border: 5px dashed $pb-error-red;
+  }
+}
+
+.button {
+     -moz-appearance: button;
+  /* Firefox */
+  -webkit-appearance: button;
+  /* Safari and Chrome */
+  padding: 10px;
+  margin: 10px;
+  width: 70px;
+}
+
 
 
 
@@ -93,7 +125,4 @@
 //   background-color: rgba(0, 0, 0, 0.4);
 //   cursor: move;
 // }
-
-
-
-}
+//
