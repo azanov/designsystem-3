@@ -62,12 +62,6 @@ header:not(.demo) {
 
   .dropdown-menu {
     right: auto;
-      //
-      // @include breakpoint(screen-xs) {
-      //   column-count: 2;
-      //
-      // }
-
   }
   .dropdown-toggle {
     height: 50px;
@@ -400,7 +394,7 @@ header:not(.demo) {
         opacity: 1;
         transform: scale(1);
         max-height: 500px;
-        transition: opacity .3s linear, max-height .5s cubic-bezier(.3, .34, .62, .99), transform 0s linear;
+        transition:  max-height .5s cubic-bezier(.3, .34, .62, .99), transform 0s linear;
       }
     }
   }
