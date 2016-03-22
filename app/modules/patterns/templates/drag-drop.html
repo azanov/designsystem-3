@@ -81,14 +81,14 @@
   <div class="row">
     <div class="col-md-6">
       <div ngf-drop ngf-select ng-model="files" class="drop-box"
-          ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-allow-dir="true"
+          ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-allow-dir="true"  ngf-resize="{width: 300, height: 400}" 
           accept="image/*,application/pdf"
-          ngf-pattern="'image/*,application/pdf'">Drop pdfs or images here or click to upload
+          ngf-pattern="'image/*,application/pdf' ">Drop pdfs or images here or click to upload
       </div>
 
       <div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
 
-       <button class="btn btn-default" ngf-select="upload($files)" ngf-multiple="true">Select File(s)</button>
+       <button class="btn btn-default" ngf-select="upload($files)" ngf-multiple="true">Or Click to Select File(s)</button>
 
        <h4 ng-if="files.length">Files Uploaded:</h4>
         <ul>
