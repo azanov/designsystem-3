@@ -45,8 +45,8 @@
     <div class="col-md-6">
       <div class="panel panel-default drag-container">
         <div class="panel-body" dragula="'first-bag'" dragula-model="dragdrop.items.unselected">
-          <!-- <div class="drag-item" ng-repeat="item in dragdrop.items.unselected track by item.id" uib-tooltip="Click and hold to drag." tooltip-enable="dragdrop.tooltip.isEnabled"> -->
-          <div class="drag-item" ng-repeat="item in dragdrop.items.unselected track by item.id">
+          <div class="drag-item" ng-repeat="item in dragdrop.items.unselected track by item.id" uib-tooltip="Click and hold to drag." tooltip-enable="dragdrop.tooltip.isEnabled">
+
             <span>{{::item.label}}</span>
           </div>
         </div>
@@ -56,8 +56,7 @@
     <div class="col-md-6">
       <div class="panel panel-default drag-container">
         <div class="panel-body" dragula="'first-bag'" dragula-model="dragdrop.items.selected" >
-          <!-- <div class="drag-item" ng-repeat="item in dragdrop.items.selected track by item.id" uib-tooltip="Click and hold to drag." tooltip-enable="dragdrop.tooltip.isEnabled"> -->
-          <div class="drag-item" ng-repeat="item in dragdrop.items.selected track by item.id">
+          <div class="drag-item" ng-repeat="item in dragdrop.items.selected track by item.id" uib-tooltip="Click and hold to drag." tooltip-enable="dragdrop.tooltip.isEnabled">
             <span>{{::item.label}}</span>
           </div>
         </div>
