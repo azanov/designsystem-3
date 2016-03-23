@@ -21,10 +21,12 @@
     'pb.ds.resources',
     'pb.ds.tables',
     'pb.ds.writing',
-    'pb.settings',
     'pb.ds.splitview',
     'pb.ds.buildanimations',
-    'pb.ds.help'
+    'pb.ds.help',
+    'pb.ds.hamburger',
+    'pb.ds.content'
+
   ]);
 
   //angular scroll configuration
@@ -50,45 +52,54 @@
     });
   });
 
+  angular.module('app')
+    .config(function(cfpLoadingBarProvider) {
+      cfpLoadingBarProvider.spinnerTemplate = '<div id="loading-bar-spinner"><i class="fa fa-circle-o-notch fa-spin spinner"></i></div>';
+    });
+
   // UI ROUTER CONFIG
   angular.module('app').config(function($stateProvider) {
     $stateProvider.state('weblanding', {
-      url: '/web',
-      templateUrl: 'modules/main/templates/web.html',
-      controller: 'SectionLandingController as SLC',
-      resolve: {
-        NavigationResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'navigation'});
+        url: '/web',
+        templateUrl: 'modules/main/templates/web.html',
+        controller: 'SectionLandingController as SLC',
+        resolve: {
+          NavigationResolve: function($log, MockDataFactory) {
+            return MockDataFactory.query({
+              filename: 'navigation'
+            });
+          }
+        },
+        data: {
+          pageTitle: 'Web',
+          access: 'public',
+          bodyClass: 'web sectionlanding'
         }
-      },
-      data: {
-        pageTitle: 'Web',
-        access: 'public',
-        bodyClass: 'web sectionlanding'
-      }
-    })
-    .state('mobilelanding', {
-      url: '/mobile',
-      templateUrl: 'modules/main/templates/mobile.html',
-      controller: 'SectionLandingController as SLC',
-      resolve: {
-        NavigationResolve: function($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'navigation'});
+      })
+      .state('mobilelanding', {
+        url: '/mobile',
+        templateUrl: 'modules/main/templates/mobile.html',
+        controller: 'SectionLandingController as SLC',
+        resolve: {
+          NavigationResolve: function($log, MockDataFactory) {
+            return MockDataFactory.query({
+              filename: 'navigation'
+            });
+          }
+        },
+        data: {
+          pageTitle: 'Mobile',
+          access: 'public',
+          bodyClass: 'mobile sectionlanding'
         }
-      },
-      data: {
-        pageTitle: 'Mobile',
-        access: 'public',
-        bodyClass: 'mobile sectionlanding'
-      }
-    })
-    .state('otherwise', {
-      url: '*path',
-      template: '',
-      controller: function($state) {
-        $state.go('home');
-      }
-    });
+      })
+      .state('otherwise', {
+        url: '*path',
+        template: '',
+        controller: function($state) {
+          $state.go('home');
+        }
+      });
   });
 
   // highlight.js configuration
@@ -150,17 +161,17 @@
 
 
 
-    $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
-      $log.debug(
-        'To State:', toState,
-        'From state:', fromState
-      );
-
-      if (!toState || !toState.data) {
-        return;
-      }
-
-    });
+    // $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+    //   $log.debug(
+    //     'To State:', toState,
+    //     'From state:', fromState
+    //   );
+    //
+    //   if (!toState || !toState.data) {
+    //     return;
+    //   }
+    //
+    // });
 
 
     //STATE CHANGE ERROR
@@ -216,28 +227,27 @@
     //handle scrolling to updated hash
     //@param timeout : boolean, if true use timeout for view animation delay
     function hashScroll(hash, timeout) {
-        timeout = timeout || false;
-        $log.debug(timeout);
+      timeout = timeout || false;
+      $log.debug(timeout);
 
-        if (hash) {
-          var element = angular.element(document.getElementById(hash));
+      if (hash) {
+        var element = angular.element(document.getElementById(hash));
 
-          if (element.length > 0) {
+        if (element.length > 0) {
 
-            if (timeout) {
-              $timeout(function() {
-                $document.duScrollToElementAnimated(element);
-              }, 300);
-            }
-            else {
+          if (timeout) {
+            $timeout(function() {
               $document.duScrollToElementAnimated(element);
-            }
-
+            }, 300);
+          } else {
+            $document.duScrollToElementAnimated(element);
           }
 
         }
 
       }
+
+    }
 
 
   });

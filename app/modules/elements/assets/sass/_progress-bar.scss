@@ -18,6 +18,25 @@
   background-color: $pb-blue;
 }
 
+// spinners
+.spinner {
+  animation: fa-spin .7s infinite linear;
+  &-lg {
+    font-size: 36px;
+  }
+  &-ko {
+    color: #efefef;
+  }
+}
+
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
 
 
 // Variations

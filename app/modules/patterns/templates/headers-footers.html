@@ -38,544 +38,646 @@
 
 <div class="container">
   <h1 id="headers">Headers</h1>
-  <figure>
-    <figcaption>Default State for a Navigation Bar with 5 Categories</figcaption>
-
-  </figure>
 </div>
 
+<div class="header-examples">
 
-  <figure>
-    <header class="demo">
-    <div class="navbar  navbar-default custom-navbar" role="navigation">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button class="navbar-toggle" data-toggle="collapse" type="button">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand brand-text" href="">Product Name</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="divider-vertical"></li>
-            <li><a href="">Item One</a></li>
-            <li><a href="">Item Two</a></li>
-            <li><a href="">Item Three</a></li>
-            <li><a href="">Item Four</a></li>
-            <li><a href="">Item Five</a></li>
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-        </div>
-      </div>
-    </header>
-  </figure>
-
-
-
-
-
-  <div class="container spacer-top-xl">
-    <div class="row">
-      <div class="col-md-12"><figcaption>Navigation Bar with 4 Categories and 3 Expanded Utility Items</figcaption></div>
+  <div class="example-1">
+    <!-- begin example 1 -->
+    <div class="container spacer-top-sm">
+      <!-- <div class="row">
+        <div class="col-md-12"><figcaption>Navigation Bar with 4 Categories, 3 Utility Items, and 2 sample menus</figcaption></div>
+      </div> -->
     </div>
-  </div>
-
-  <figure>
-    <header class="demo">
-    <div class="navbar  navbar-default custom-navbar" role="navigation">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button class="navbar-toggle" data-toggle="collapse" type="button">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand brand-text" href="">Product Name</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="divider-vertical"></li>
-            <li><a href="">Item One</a></li>
-            <li><a href="">Item Two </a></li>
-            <li><a href="">Item Three</a></li>
-            <li><a href="">Item Four</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="divider-vertical"></li>
-            <li><form class="magic-search"><input type="search" placeholder="Search"></form></li>
-
-            <li><a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-lg fa-cog"></i></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="">Preferences</a></li>
-                <li><a href="">Settings</a></li>
-                <li><a href="">Notifications</a></li>
+    <figure>
+      <header class="demo">
+      <div class="navbar  navbar-default custom-navbar" role="navigation">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand brand-text" href="">Product</a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="divider-vertical"></li>
+              <li><a href="">Item One</a></li>
+              <li><a href="">Item Two </a></li>
+              <li><a href="" class="dropdown-toggle" data-toggle="dropdown">Section Menu</a>
+                <ul class="dropdown-menu">
+                  <li class="section-head">Section Header</li>
+                  <li><a href="">Action</a></li>
+                  <li><a href="">Another Action</a></li>
+                  <li><a href="">Something Else Here</a></li>
+                  <li class="section-head">Section Header</li>
+                  <li><a href="">Action</a></li>
+                  <li><a href="">Another Action</a></li>
+                  <li><a href="">Something Else Here</a></li>
               </ul>
-            </li>
 
+              </li>
+              <li><a href="" class="dropdown-toggle" data-toggle="dropdown">Simple Menu</a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="">My Account</a></li>
+                  <li><a href="">Dashboard</a></li>
+                  <li><a href="">Settings</a></li>
+                </ul>
+              </li>
+            </ul>
 
-            <li><a href="" class="dropdown-toggle" data-toggle="dropdown">Andrew Washington</a>
+            <ul class="nav navbar-nav navbar-right hidden-sm">
+              <li class="divider-vertical"></li>
+
+              <!-- Search menu -->
+              <!-- <li class="menu-search"><a href="" class="dropdown-toggle" data-toggle="dropdown">
+                  <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgSearch" x="0" y="0" /></svg>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li>
+                    <input type="text" name=""  class="form-control" placeholder="Search">
+                  </li>
+
+                </ul>
+              </li> -->
+
+              <!-- Apps menu -->
+              <li><a href="" class="dropdown-toggle" data-toggle="dropdown">
+                  <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgApps" x="0" y="0" /></svg>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li class="section-head">Your Apps</li>
+                  <li><a href="" class="disabled">Product</a></li>
+                  <li><a href="">App 2</a></li>
+                  <li><a href="">App 3</a></li>
+                  <li><a href="">App 4</a></li>
+                </ul>
+              </li>
+
+              <!-- Reminders -->
+              <li>
+                <a href=""  class="bell">
+                  <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgBell" x="0" y="0" /></svg>
+                  <span class="badge">14</span>
+                </a>
+              </li>
+
+              <!-- Help menu -->
+              <li class="menu-help">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                  <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgHelp" x="0" y="0" /></svg>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li class="section-head">Help</li>
+                  <li class="input-group">
+                    <input type="text" name="" id="" class="form-control" placeholder="Search">
+                  </li>
+                  <li><a href="">Help</a></li>
+                  <li><a href="">Add Carrier Accounts</a></li>
+                  <li><a href="">See All Help Topics</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.chatOfflineMessage}}" popover-placement="left" ><i class="fa fa-fw fa-comment-o"></i> Chat <span ng-if="patterns.offline">Offline</span></a></li>
+                  <li><a href=""><i class="fa fa-fw fa-envelope-o"></i> Email</a></li>
+                  <li><a href="tel:1-800-555-45678" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.phoneOfflineMessage}}" popover-placement="left"><i class="fa fa-fw fa-phone"></i> 1-800-555-45678</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href=""><i class="fa fa-fw fa-download"></i> Printer/Scale Drivers</a></li>
+                </ul>
+              </li>
+
+              <!-- Settings menu -->
+              <li>
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                    <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgSettings" x="0" y="0" /></svg>
+                  </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li class="section-head">Application Settings</li>
+                  <li><a href="">Carriers</a></li>
+                  <li><a href="">Cost Accounts</a></li>
+                  <li><a href="">Postage Payment Methods</a></li>
+                  <li><a href="">Users</a></li>
+                  <li class="section-head">Personal Preferences</li>
+                  <li><a href="">Label Options</a></li>
+                  <li><a href="">Automatic Emails</a></li>
+                  <li><a href="">Presets</a></li>
+                  <li><a href="">Return Label</a></li>
+                  <li><a href="">Preferences</a></li>
+                </ul>
+              </li>
+
+              <!-- User menu -->
+              <li class="user-menu">
+                <a href="" class="dropdown-toggle face" data-toggle="dropdown">
+                  <!-- <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgUserInitials" x="0" y="0" /></svg> -->
+                  <!-- <img src="modules/patterns/assets/images/128.jpg" alt="User Image"> -->
+                  Roberta Hamilton
+                </a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="">My Account</a></li>
-                <li><a href="">Profile</a></li>
+                <li><a href="">Profile<br><span class="menu-text-small">Email, Passwords</span></a></li>
+                <li><a href="">Your Account<br><span class="menu-text-small">Financials, Usage, Products, Support</span></a></li>
+                <li role="separator" class="divider"></li>
                 <li><a href="">Sign Out</a></li>
               </ul>
             </li>
-          </ul>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+          </div>
         </div>
-        <!-- /.navbar-collapse -->
-        </div>
-      </div>
-    </header>
-  </figure>
-
-  <div class="container spacer-top-xl">
-    <div class="row">
-      <div class="col-md-12"><figcaption>Navigation Bar with Maximum of 6 Categories</figcaption></div>
-    </div>
+      </header>
+    </figure>
+    <!-- end example 1 -->
   </div>
 
 
-  <figure>
-    <header class="demo">
-    <div class="navbar  navbar-default custom-navbar" role="navigation">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button class="navbar-toggle" data-toggle="collapse" type="button">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand brand-text" href="">Product Name</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="divider-vertical"></li>
-            <li><a href="">Item One</a></li>
-            <li><a href="">Item Two </a></li>
-            <li><a href="">Item Three</a></li>
-            <li><a href="">Item Four</a></li>
-            <li><a href="">Item Five</a></li>
-            <li><a href="">Item Six</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="divider-vertical"></li>
-            <li><form class="magic-search"><input type="search" placeholder="Search"></form></li>
+  <div class="example-2">
+    <!-- begin example 2 -->
+    <div class="container spacer-top-xl">
+      <div class="row">
+        <div class="col-md-12"><figcaption>User Identity - User Initials</figcaption></div>
+      </div>
+    </div>
+    <figure>
+      <header class="demo">
+      <div class="navbar  navbar-default custom-navbar" role="navigation">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand brand-text" href="">Product</a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="divider-vertical"></li>
+              <li><a href="">Item One</a></li>
+              <li><a href="">Item Two </a></li>
+              <li><a href="" class="dropdown-toggle" data-toggle="dropdown">Section Menu</a>
+                <ul class="dropdown-menu">
+                  <li class="section-head">Section Header</li>
+                  <li><a href="">Action</a></li>
+                  <li><a href="">Another Action</a></li>
+                  <li><a href="">Something Else Here</a></li>
+                  <li class="section-head">Section Header</li>
+                  <li><a href="">Action</a></li>
+                  <li><a href="">Another Action</a></li>
+                  <li><a href="">Something Else Here</a></li>
+              </ul>
 
-            <li><a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-lg fa-cog"></i></a>
+              </li>
+              <li><a href="" class="dropdown-toggle" data-toggle="dropdown">Simple Menu</a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="">My Account</a></li>
+                  <li><a href="">Dashboard</a></li>
+                  <li><a href="">Settings</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right hidden-sm">
+              <li class="divider-vertical"></li>
+
+              <!-- Search menu -->
+              <!-- <li class="menu-search"><a href="" class="dropdown-toggle" data-toggle="dropdown">
+                  <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgSearch" x="0" y="0" /></svg>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li>
+                    <input type="text" name=""  class="form-control" placeholder="Search">
+                  </li>
+                </ul>
+              </li> -->
+
+              <!-- Apps menu -->
+              <li><a href="" class="dropdown-toggle" data-toggle="dropdown">
+                  <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgApps" x="0" y="0" /></svg>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li class="section-head">Your Apps</li>
+                  <li><a href="" class="disabled">Product</a></li>
+                  <li><a href="">App 2</a></li>
+                  <li><a href="">App 3</a></li>
+                  <li><a href="">App 4</a></li>
+                </ul>
+              </li>
+
+              <!-- Reminders -->
+              <li>
+                <a href=""  class="bell">
+                  <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgBell" x="0" y="0" /></svg>
+                  <span class="badge">14</span>
+                </a>
+              </li>
+
+              <!-- Help menu -->
+              <li class="menu-help">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                  <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgHelp" x="0" y="0" /></svg>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li class="section-head">Help</li>
+                  <li class="input-group">
+                    <input type="text" name="" id="" class="form-control" placeholder="Search">
+                  </li>
+                  <li><a href="">Help</a></li>
+                  <li><a href="">Add Carrier Accounts</a></li>
+                  <li><a href="">See All Help Topics</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.chatOfflineMessage}}" popover-placement="left" ><i class="fa fa-fw fa-comment-o"></i> Chat <span ng-if="patterns.offline">Offline</span></a></li>
+                  <li><a href=""><i class="fa fa-fw fa-envelope-o"></i> Email</a></li>
+                  <li><a href="tel:1-800-555-45678" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.phoneOfflineMessage}}" popover-placement="left"><i class="fa fa-fw fa-phone"></i> 1-800-555-45678</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href=""><i class="fa fa-fw fa-download"></i> Printer/Scale Drivers</a></li>
+                </ul>
+              </li>
+
+              <!-- Settings menu -->
+              <li>
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                    <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgSettings" x="0" y="0" /></svg>
+                  </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li class="section-head">Application Settings</li>
+                  <li><a href="">Carriers</a></li>
+                  <li><a href="">Cost Accounts</a></li>
+                  <li><a href="">Postage Payment Methods</a></li>
+                  <li><a href="">Users</a></li>
+                  <li class="section-head">Personal Preferences</li>
+                  <li><a href="">Label Options</a></li>
+                  <li><a href="">Automatic Emails</a></li>
+                  <li><a href="">Presets</a></li>
+                  <li><a href="">Return Label</a></li>
+                  <li><a href="">Preferences</a></li>
+                </ul>
+              </li>
+
+              <!-- User menu -->
+              <li class="user-menu">
+                <a href="" class="dropdown-toggle face" data-toggle="dropdown">
+                  <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgUserInitials" x="0" y="0" /></svg>
+                  <!-- <img src="modules/patterns/assets/images/128.jpg" alt="User Image"> -->
+                  <!-- Roberta Hamilton -->
+                </a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="">Preferences</a></li>
-                <li><a href="">Settings</a></li>
-                <li><a href="">Notifications</a></li>
+                <li><a href="">Profile<br><span class="menu-text-small">Email, Passwords</span></a></li>
+                <li><a href="">Your Account<br><span class="menu-text-small">Financials, Usage, Products, Support</span></a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="">Sign Out</a></li>
               </ul>
             </li>
-
-            <li class="user-menu"><a href="" class="dropdown-toggle" data-toggle="dropdown">
-              <span class="fa-stack-1x">
-                <i class="fa fa-circle fa-stack-1x"></i>
-              </span>
-              <span class="initials">MH</span>
-            </a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="">My Account</a></li>
-              <li><a href="">Profile</a></li>
-              <li><a href="">Sign Out</a></li>
             </ul>
-          </li>
-
-          </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+          </div>
         </div>
-        <!-- /.navbar-collapse -->
-        </div>
-      </div>
-    </header>
-  </figure>
-
-
-  <div class="container spacer-top-xl">
-    <div class="row">
-      <div class="col-md-12"><figcaption>Navigation Bar with 4 Categories, 3 Utility Items, and 2 sample menus</figcaption></div>
-    </div>
+      </header>
+    </figure>
+    <!-- end example 2 -->
   </div>
 
-  <figure>
-    <header class="demo">
-    <div class="navbar  navbar-default custom-navbar" role="navigation">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button class="navbar-toggle" data-toggle="collapse" type="button">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand brand-text" href="">Product Name</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="divider-vertical"></li>
-            <li><a href="">Item One</a></li>
-            <li><a href="">Item Two </a></li>
-            <li><a href="" class="dropdown-toggle" data-toggle="dropdown">Item Three</a>
 
-              <ul class="dropdown-menu">
-                <li class="section-head">Section Header</li>
-                <li><a href="">Action</a></li>
-                <li><a href="">Another Action</a></li>
-                <li><a href="">Something Else Here</a></li>
-                <li class="section-head">Section Header</li>
-                <li><a href="">Action</a></li>
-                <li><a href="">Another Action</a></li>
-                <li><a href="">Something Else Here</a></li>
-            </ul>
-
-            </li>
-            <li><a href="" class="dropdown-toggle" data-toggle="dropdown">Item Four</a>
-
-
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="">My Account</a></li>
-                <li><a href="">Dashboard</a></li>
-                <li><a href="">Settings</a></li>
-              </ul>
-
-
-            </li>
-
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="">Apps</a></li>
-            <li class="divider-vertical"></li>
-            <!-- <li><form class="magic-search"><input type="search" placeholder="Search"></form></li> -->
-            <li><a href="" class="dropdown-toggle" data-toggle="dropdown">
-                <span class="fa-stack-1x help-icon">
-                  <i class="fa fa-circle fa-stack-1x"></i>
-                  <i class="fa fa-question fa-stack-1x"></i>
-                </span>
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="">Help</a></li>
-                <li><a href="">More Help</a></li>
-                <li><a href="">Still More Help</a></li>
-              </ul>
-          </li>
-
-            <li><a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-lg fa-cog"></i></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="">Preferences</a></li>
-                <li><a href="">Settings</a></li>
-                <li><a href="">Notifications</a></li>
-              </ul>
-            </li>
-
-            <li class="user-menu"><a href="" class="dropdown-toggle" data-toggle="dropdown">
-              <span class="fa-stack-1x">
-                <i class="fa fa-circle fa-stack-1x"></i>
-              </span>
-              <span class="initials">MH</span>
-            </a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="">My Account</a></li>
-              <li><a href="">Profile</a></li>
-              <li><a href="">Sign Out</a></li>
-            </ul>
-          </li>
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-        </div>
+  <div class="example-4">
+    <!-- begin example 4 -->
+    <div class="container spacer-top-xl">
+      <div class="row">
+        <div class="col-md-12"><figcaption>User Identity - Profile Picture</figcaption></div>
       </div>
-    </header>
-  </figure>
-
-
-
-
-
-  <div class="container spacer-top-xl">
-    <div class="row">
-      <div class="col-md-12"><figcaption>Navigation Bar with 4 Categories, 3 Utility Items and an App Launcher (Icon)</figcaption></div>
     </div>
+    <figure>
+      <header class="demo">
+      <div class="navbar  navbar-default custom-navbar" role="navigation">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand brand-text" href="">Product</a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="divider-vertical"></li>
+              <li><a href="">Item One</a></li>
+              <li><a href="">Item Two </a></li>
+              <li><a href="" class="dropdown-toggle" data-toggle="dropdown">Section Menu</a>
+                <ul class="dropdown-menu">
+                  <li class="section-head">Section Header</li>
+                  <li><a href="">Action</a></li>
+                  <li><a href="">Another Action</a></li>
+                  <li><a href="">Something Else Here</a></li>
+                  <li class="section-head">Section Header</li>
+                  <li><a href="">Action</a></li>
+                  <li><a href="">Another Action</a></li>
+                  <li><a href="">Something Else Here</a></li>
+              </ul>
+
+              </li>
+              <li><a href="" class="dropdown-toggle" data-toggle="dropdown">Simple Menu</a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="">My Account</a></li>
+                  <li><a href="">Dashboard</a></li>
+                  <li><a href="">Settings</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right hidden-sm">
+              <li class="divider-vertical"></li>
+
+              <!-- Search menu -->
+              <!-- <li class="menu-search"><a href="" class="dropdown-toggle" data-toggle="dropdown">
+                  <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgSearch" x="0" y="0" /></svg>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li>
+                    <input type="text" name=""  class="form-control" placeholder="Search">
+                  </li>
+                </ul>
+              </li> -->
+
+              <!-- Apps menu -->
+              <li><a href="" class="dropdown-toggle" data-toggle="dropdown">
+                  <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgApps" x="0" y="0" /></svg>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li class="section-head">Your Apps</li>
+                  <li><a href="" class="disabled">Product</a></li>
+                  <li><a href="">App 2</a></li>
+                  <li><a href="">App 3</a></li>
+                  <li><a href="">App 4</a></li>
+                </ul>
+              </li>
+              <!-- Reminders -->
+
+              <li>
+                <a href=""  class="bell">
+                  <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgBell" x="0" y="0" /></svg>
+                  <span class="badge">14</span>
+                </a>
+              </li>
+
+              <!-- Help menu -->
+              <li class="menu-help">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                  <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgHelp" x="0" y="0" /></svg>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li class="section-head">Help</li>
+                  <li class="input-group">
+                    <input type="text" name="" id="" class="form-control" placeholder="Search">
+                  </li>
+                  <li><a href="">Help</a></li>
+                  <li><a href="">Add Carrier Accounts</a></li>
+                  <li><a href="">See All Help Topics</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.chatOfflineMessage}}" popover-placement="left" ><i class="fa fa-fw fa-comment-o"></i> Chat <span ng-if="patterns.offline">Offline</span></a></li>
+                  <li><a href=""><i class="fa fa-fw fa-envelope-o"></i> Email</a></li>
+                  <li><a href="tel:1-800-555-45678" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.phoneOfflineMessage}}" popover-placement="left"><i class="fa fa-fw fa-phone"></i> 1-800-555-45678</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href=""><i class="fa fa-fw fa-download"></i> Printer/Scale Drivers</a></li>
+                </ul>
+              </li>
+
+              <!-- Settings menu -->
+              <li>
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                    <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgSettings" x="0" y="0" /></svg>
+                  </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li class="section-head">Application Settings</li>
+                  <li><a href="">Carriers</a></li>
+                  <li><a href="">Cost Accounts</a></li>
+                  <li><a href="">Postage Payment Methods</a></li>
+                  <li><a href="">Users</a></li>
+                  <li class="section-head">Personal Preferences</li>
+                  <li><a href="">Label Options</a></li>
+                  <li><a href="">Automatic Emails</a></li>
+                  <li><a href="">Presets</a></li>
+                  <li><a href="">Return Label</a></li>
+                  <li><a href="">Preferences</a></li>
+                </ul>
+              </li>
+
+              <!-- User menu -->
+              <li class="user-menu">
+                <a href="" class="dropdown-toggle face" data-toggle="dropdown">
+                  <!-- <svg width="24" height="24" viewBox="0 0 24 24" ><use xlink:href="#svgUserInitials" x="0" y="0" /></svg> -->
+                  <img src="modules/patterns/assets/images/128.jpg" alt="User Image">
+                </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="">Profile<br><span class="menu-text-small">Email, Passwords</span></a></li>
+                <li><a href="">Your Account<br><span class="menu-text-small">Financials, Usage, Products, Support</span></a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="">Sign Out</a></li>
+              </ul>
+            </li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+          </div>
+        </div>
+      </header>
+    </figure>
+    <!-- end example 4 -->
   </div>
 
-  <figure>
-    <header class="demo">
-    <div class="navbar  navbar-default custom-navbar" role="navigation">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button class="navbar-toggle" data-toggle="collapse" type="button">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand brand-text" href="">Product Name</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="divider-vertical"></li>
-            <li><a href="">Item One</a></li>
-            <li><a href="">Item Two </a></li>
-            <li><a href="">Item Three</a></li>
-            <li><a href="">Item Four</a></li>
+</div>
 
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="divider-vertical"></li>
-            <li><a href="" class="app-launcher"></a></li>
+<div class="container spacer-top-xl">
+  <h1 id="footers">Footers</h1>
+</div>
 
-            <li><a href="" class="dropdown-toggle" data-toggle="dropdown">
-                <span class="fa-stack-1x help-icon">
-                  <i class="fa fa-circle fa-stack-1x"></i>
-                  <i class="fa fa-stack-1x fa-question"></i>
-                </span>
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="">Help</a></li>
-                <li><a href="">More Help</a></li>
-                <li><a href="">Still More Help</a></li>
-              </ul>
-          </li>
 
-            <li><a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-lg fa-cog"></i></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="">Preferences</a></li>
-                <li><a href="">Settings</a></li>
-                <li><a href="">Notifications</a></li>
-              </ul>
-            </li>
+<div class="footer-examples spacer-top-md">
 
-            <li class="user-menu"><a href="" class="dropdown-toggle" data-toggle="dropdown">
-              <span class="fa-stack-1x">
-                <i class="fa fa-circle fa-stack-1x"></i>
-              </span>
-              <span class="initials">MH</span>
-            </a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="">My Account</a></li>
-              <li><a href="">Profile</a></li>
-              <li><a href="">Sign Out</a></li>
-            </ul>
-          </li>
 
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-        </div>
-      </div>
-    </header>
-  </figure>
 
+<div class="example-1">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 id="footers">Footers</h1>
-        <figcaption>Simple Pitney Bowes Branded Footer in Default State</figcaption>
+        <figcaption>Pitney Bowes Branded Footer with Copyright</figcaption>
       </div>
     </div>
   </div>
-
-<figure>
-  <!-- flexbox footer -->
-  <div class="footer-wrapper demo">
-    <div class="container">
-      <footer>
-        <!-- Copyright -->
-        <div>
-          <a href="http://www.pb.com">
-            <i class="pb-footer-logo gradient"></i>
-          </a>
-          <span class="copyright">&copy; 2015 Pitney Bowes Inc. All rights reserved.</span>
-        </div>
-
-        <!-- Legal -->
-        <div>
-          <ul class="list-unstyled list-inline legal">
-            <li>
-              <a href="" target="_blank">Terms &amp; Conditions</a>
-            </li>
-            <li>
-              <a href="" target="_blank">Privacy Policy</a>
-            </li>
-          </ul>
-        </div>
-      </footer>
-    </div>
-  </div>
-</figure>
-
-  <div class="container spacer-top-xl" >
-    <div class="row">
-      <div class="col-md-12">
-        <figcaption>Footer with Branding and No Nav Items</figcaption>
-      </div>
-    </div>
-  </div>
-
-<figure>
-  <!-- flexbox footer -->
-  <div class="footer-wrapper demo">
-      <footer>
-        <div class="container">
-        <div>
-          <a href="http://www.pb.com">
-            <i class="pb-footer-logo gradient"></i>
-          </a>
-          <span class="copyright">&copy; 2015 Pitney Bowes Inc. All rights reserved.</span>
-        </div>
-      </div>
-      </footer>
-  </div>
-</figure>
-
-
-  <div class="container spacer-top-xl">
-    <div class="row">
-      <div class="col-md-12">
-        <figcaption>Footer with Branding and 5 Nav Items</figcaption>
-      </div>
-    </div>
-  </div>
-
-<figure>
-  <div class="footer-wrapper demo">
-    <div class="container">
-      <footer>
-        <div>
-          <a href="http://www.pb.com">
-            <i class="pb-footer-logo gradient"></i>
-          </a>
-          <span class="copyright">&copy; 2015 Pitney Bowes Inc. All rights reserved.</span>
-        </div>
-
-        <!-- Legal -->
-        <div>
-          <ul class="list-unstyled list-inline legal">
-            <li>
-              <a href="" target="_blank">Terms &amp; Conditions</a>
-            </li>
-            <li>
-              <a href="" target="_blank">Privacy Policy</a>
-            </li>
-            <li>
-              <a href="" target="_blank">Link</a>
-            </li>
-            <li>
-              <a href="" target="_blank">Link</a>
-            </li>
-            <li>
-              <a href="" target="_blank">Link</a>
-            </li>
-          </ul>
-        </div>
-    </footer>
-  </div>
-    </div>
-</figure>
-
-  <div class="container spacer-top-xl">
-    <div class="row">
-      <div class="col-md-12">
-        <figcaption>Footer with Branding and 3 Nav Items and Social Media Icons</figcaption>
-      </div>
-    </div>
-  </div>
-
-<figure style="padding-bottom:300px;">
-  <!-- flexbox footer -->
-  <div class="footer-wrapper demo">
-      <div class="container">
+  <figure>
+    <!-- flexbox footer -->
+    <div class="footer-wrapper demo">
         <footer>
+          <div class="container">
+            <div class="contents">
+              <!-- the logo and copyright have their own flexbox -->
+              <div class="logo-copyright">
+                <div class="footer-logo"><a href="http://www.pb.com"><i class="pb-footer-logo gradient"></i></a></div>
+                <div class="copyright">&copy; {{patterns.year}} Pitney Bowes Inc.</div>
+              </div>
+              <!-- <div class="t-and-c"><a href="">Terms and conditions</a></div> -->
+            </div>
+          </div>
+        </footer>
+    </div>
+  </figure>
+</div>
 
-        <div>
-          <a href="http://www.pb.com">
-            <i class="pb-footer-logo gradient"></i>
-          </a>
-          <span class="copyright">&copy; 2015 Pitney Bowes Inc. All rights reserved.</span>
-        </div>
-
-        <!-- Legal -->
-        <div>
-          <ul class="list-unstyled list-inline legal">
-            <li>
-              <a href="" target="_blank">Terms &amp; Conditions</a>
-            </li>
-            <li>
-              <a href="" target="_blank">Privacy Policy</a>
-            </li>
-            <li>
-              <a href="" target="_blank">Link</a>
-            </li>
-            <li>
-              <a href="" target="_blank">Link</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Social -->
-        <div>
-          <ul class="list-unstyled list-inline social">
-            <li>
-              <a class="twitter" href="https://twitter.com/pitneybowes" target="_blank">
-                <!-- <img src="assets/images/social-twitter.svg" alt="Twitter" /> -->
-                <svg height="26" viewbox="0 0 26 26" width="26" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns="http://www.w3.org/2000/svg">
-                  <title>social-twitter</title>
-                  <g fill="none" sketch:type="MSShapeGroup" transform="translate(1 1)"><circle cx="12" cy="12" r="12" stroke-width="2" stroke="#3E53A4"/><path d="M17.701 9.077c-.071-.079-.186-.098-.28-.051l-.299.108c.165-.22.298-.463.357-.683.024-.093-.012-.197-.093-.253-.08-.056-.188-.056-.268 0-.126.089-.739.356-1.126.44-.87-.763-1.901-.843-2.951-.23-.86.505-1.047 1.525-1.01 2.148-1.968-.191-3.192-1.231-3.881-2.092-.049-.056-.128-.089-.199-.084-.077.005-.145.047-.184.113-.327.552-.416 1.16-.261 1.759.085.328.234.618.407.852l-.238-.154c-.07-.057-.166-.07-.248-.029-.081.037-.133.117-.133.211 0 1.072.674 1.732 1.265 2.078-.105-.009-.212-.033-.319-.066-.088-.028-.183-.005-.244.066-.061.07-.075.164-.037.248.338.749.979 1.259 1.773 1.442-.686.407-1.599.598-2.469.496-.111-.014-.215.028-.249.136-.035.102.011.168.108.219 1.153.651 2.319.87 3.465.87h.001c1.717 0 3.325-.631 4.525-1.979 1.126-1.259 1.718-2.761 1.598-4.221.297-.219.742-.627 1.017-1.062.056-.089.046-.206-.025-.281" fill="#3E53A4"/></g>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="facebook" href="http://www.facebook.com/pitneybowes" target="_blank">
-                <!-- <img src="assets/images/social-fb.svg" alt="Faceboook" /> -->
-                <svg height="26" viewbox="0 0 26 26" width="26" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns="http://www.w3.org/2000/svg">
-                  <title>social-fb</title>
-                  <desc>Created with Sketch.</desc>
-                  <g fill="none" sketch:type="MSShapeGroup" transform="translate(1 1)"><circle cx="12" cy="12" r="12" stroke-width="2" stroke="#3E53A4"/><path d="M13.763 7.154h.968c.149 0 .269-.118.269-.269v-1.615c0-.145-.12-.269-.269-.269h-1.586c-1.593 0-2.991 1.271-2.991 2.72v2.126h-1.885c-.148 0-.269.124-.269.269v2.154c0 .151.121.269.269.269h1.885v5.115c0 .151.121.269.269.269h1.615c.149 0 .269-.118.269-.269v-5.115h1.765c.12 0 .225-.081.259-.194l.618-2.154c.024-.08.008-.167-.043-.237-.052-.064-.13-.108-.215-.108h-2.383v-1.664c0-.485.867-1.028 1.455-1.028" fill="#3E53A4"/></g>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="linkedin" href="http://www.linkedin.com/company/pitney-bowes" target="_blank">
-                <!-- <img src="assets/images/social-linked.svg" alt="LinkedIn" /> -->
-                <svg height="26" viewbox="0 0 26 26" width="26" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns="http://www.w3.org/2000/svg">
-                  <title>social-linked</title>
-                  <desc>Created with Sketch.</desc>
-                  <g fill="none" sketch:type="MSShapeGroup" transform="translate(1 1)"><circle cx="12" cy="12" r="12" stroke-width="2" stroke="#3E53A4"/><path d="M16.483 17.587h-9.379c-.61 0-1.104-.494-1.104-1.104v-9.379c0-.61.494-1.104 1.104-1.104h9.379c.61 0 1.104.494 1.104 1.104v9.379c0 .61-.494 1.104-1.104 1.104zm-7.628-9.108c-.475 0-.786.355-.786.821 0 .456.301.821.768.821h.009c.485 0 .787-.365.787-.821-.009-.466-.302-.821-.778-.821zm-.704 7.041h1.57v-4.886h-1.57v4.886zm7.776-2.705c0-1.45-.75-2.258-1.819-2.258-.864 0-1.249.46-1.464.78v-.669h-1.677c.021.442 0 4.851 0 4.851h1.677v-2.635c0-.141.01-.282.053-.383.118-.282.385-.574.834-.574.588 0 .771.433.771 1.067v2.524h1.625v-2.705zm-3.295-1.463l.011-.014v.014h-.011z" fill="#3E53A4"/></g>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="google-plus" href="http://www.youtube.com/user/PitneyBowesInc" target="_blank">
-                <!-- <img src="assets/images/social-youtube.svg" alt="Youtube" /> -->
-                <svg height="26" viewbox="0 0 26 26" width="26" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns="http://www.w3.org/2000/svg">
-                  <title>social-youtube</title>
-                  <desc>Created with Sketch.</desc>
-                  <g fill="none" sketch:type="MSShapeGroup" transform="translate(1 1)"><circle cx="12" cy="12" r="12" stroke-width="2" stroke="#3E53A4"/>
-                    <g><path d="M14.354 11.798l-3.456 1.561-.114.023-.154-.046c-.08-.052-.128-.145-.128-.243v-3.118c0-.099.049-.192.128-.243.08-.052.181-.059.268-.024l3.456 1.562c.103.046.169.151.169.261 0 .116-.066.221-.169.267zm4.187-2.647c-.1-.987-1.014-1.874-1.997-1.933-3.702-.232-4.989-.232-8.691 0-.982.059-1.897.946-1.996 1.933-.21 2.101-.21 3.187-.001 5.283.1.986 1.014 1.874 1.997 1.938 1.852.117 3.11.163 4.346.163 1.236 0 2.495-.046 4.345-.163.984-.064 1.899-.952 1.999-1.938.209-2.095.209-3.181-.002-5.283z" fill="#3E53A4"/><path d="M10.479 13.075l2.659-1.2-2.659-1.194v2.394"/></g>
-                  </g>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-
-      </footer>
+<div class="example-2 spacer-top-xl">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <figcaption>Pitney Bowes Branded Footer with Copyright and T&amp;C</figcaption>
       </div>
+    </div>
   </div>
-</figure>
+  <figure>
+    <!-- flexbox footer -->
+    <div class="footer-wrapper demo">
+        <footer>
+          <div class="container">
+            <div class="contents">
+              <!-- the logo and copyright have their own flexbox -->
+              <div class="logo-copyright">
+                <div class="footer-logo"><a href="http://www.pb.com"><i class="pb-footer-logo gradient"></i></a></div>
+                <div class="copyright">&copy; {{patterns.year}} Pitney Bowes Inc.</div>
+              </div>
+              <div class="t-and-c"><a href="">Terms and conditions</a></div>
+            </div>
+          </div>
+        </footer>
+    </div>
+  </figure>
+</div>
+
+<!-- example 3 -->
+<div class="example-3 spacer-top-xl">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <figcaption>Pitney Bowes Branded Footer with Copyright and Contact us. Click "Contact Us" to Expand.</figcaption>
+      </div>
+    </div>
+  </div>
+  <figure>
+    <!-- flexbox footer -->
+    <div class="footer-wrapper demo">
+        <footer>
+          <div class="container">
+            <div class="contents">
+              <div class="footer-left">
+                <!-- the logo and copyright have their own flexbox -->
+                <div class="logo-copyright">
+                  <div class="footer-logo"><a href="http://www.pb.com"><i class="pb-footer-logo gradient"></i></a></div>
+                  <div class="copyright">&copy; {{patterns.year}} Pitney Bowes Inc.</div>
+                </div>
+                <div></div>
+              </div>
+
+
+              <div class="footer-right">
+                <div class="contact-us">
+                  <!-- this div shows when contact us is clicked-->
+                  <div class="contact-methods" ng-class="{hidemethods : patterns.hideMethods}">
+                    <div>
+                      <i class="fa fa-fw fa-comment-o link-icon" ng-class="{disabled : patterns.offline}"></i>
+                      <a href="" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.chatOfflineMessage}}">Chat</a>
+                    </div>
+                    <div>
+                      <i class="fa fa-fw fa-envelope-o link-icon"></i> <a href="">Email</a>
+                    </div>
+                    <div>
+                      <i class="fa fa-fw fa-phone link-icon"></i> <a href="tel:1-800-555-45678" >1-800-555-45678</a>
+                    </div>
+                  </div>
+                  <a href="" ng-click="patterns.hideMethods = !patterns.hideMethods" ng-if="patterns.hideMethods">Contact us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+    </div>
+  </figure>
+</div>
+<!-- end example 3 -->
+
+<!-- example 4 -->
+<div class="example-3 spacer-top-xl">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <figcaption>Pitney Bowes Branded Footer with Copyright, T&amp;C, and Contact us. Click "Contact Us" to Expand.</figcaption>
+      </div>
+    </div>
+  </div>
+  <figure>
+    <!-- flexbox footer -->
+    <div class="footer-wrapper demo">
+        <footer>
+          <div class="container">
+            <div class="contents">
+              <div class="footer-left">
+                <!-- the logo and copyright have their own flexbox -->
+                <div class="logo-copyright">
+                  <div class="footer-logo"><a href="http://www.pb.com"><i class="pb-footer-logo gradient"></i></a></div>
+                  <div class="copyright">&copy; {{patterns.year}} Pitney Bowes Inc.</div>
+                </div>
+                <div class="t-and-c"><a href="">Terms and conditions</a></div>
+              </div>
+
+
+              <div class="footer-right">
+                <div class="contact-us">
+                  <!-- this div shows when contact us is clicked-->
+                  <div class="contact-methods" ng-class="{hidemethods : patterns.hideMethods}">
+                    <div>
+                      <i class="fa fa-fw fa-comment-o link-icon" ng-class="{disabled : patterns.offline}"></i>
+                      <a href="" ng-class="{disabled : patterns.offline}" popover-trigger="mouseenter" uib-popover="{{patterns.chatOfflineMessage}}">Chat</a>
+                    </div>
+                    <div>
+                      <i class="fa fa-fw fa-envelope-o link-icon"></i> <a href="">Email</a>
+                    </div>
+                    <div>
+                      <i class="fa fa-fw fa-phone link-icon"></i> <a href="tel:1-800-555-45678" >1-800-555-45678</a>
+                    </div>
+                  </div>
+                  <a href="" ng-click="patterns.hideMethods = !patterns.hideMethods" ng-if="patterns.hideMethods">Contact us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+    </div>
+  </figure>
+</div>
+<!-- end example 4 -->
+
+</div>
+
+<svg>
+  <defs>
+
+    <g id="svgHelp" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M11 1c5.523 0 10 4.477 10 10s-4.477 10-10 10-10-4.477-10-10 4.477-10 10-10z"/><path d="M10.811 12.818v-.909c1.463 0 2.727-1.265 2.727-2.727 0-1.463-1.265-2.727-2.727-2.727-1.085 0-2.129.812-2.538 1.746"/><path d="M11 15.545v.909"/></g>
+
+    <g id="svgSettings" stroke-linecap="round" stroke="#fff" stroke-width="1.5" fill="none"><path d="M21 12.818v-3.636h-2.965c-.172-.665-.434-1.293-.775-1.871l2.096-2.096-2.571-2.571-2.096 2.096c-.578-.341-1.205-.603-1.871-.775v-2.965h-3.636v2.965c-.665.172-1.293.434-1.871.775l-2.096-2.096-2.571 2.571 2.096 2.096c-.341.578-.603 1.205-.775 1.871h-2.965v3.636h2.965c.172.665.434 1.293.775 1.871l-2.096 2.096 2.571 2.571 2.096-2.096c.578.341 1.205.603 1.871.775v2.965h3.636v-2.965c.665-.172 1.293-.434 1.871-.775l2.096 2.096 2.571-2.571-2.096-2.096c.341-.578.603-1.205.775-1.871h2.965z"/><path d="M8.273 11c0-1.506 1.221-2.727 2.727-2.727 1.506 0 2.727 1.221 2.727 2.727 0 1.506-1.221 2.727-2.727 2.727-1.506 0-2.727-1.221-2.727-2.727z"/></g>
+
+    <g id="svgApps" stroke-linecap="round" stroke="#fff" stroke-width="1.5" fill="none"><path d="M4.637 4.455h-3.455v-3.455h3.455v3.455z"/><path d="M4.637 12.227h-3.455v-3.455h3.455v3.455z"/><path d="M4.637 20h-3.455v-3.455h3.455v3.455z"/><path d="M12.409 4.455h-3.455v-3.455h3.455v3.455z"/><path d="M12.409 12.227h-3.455v-3.455h3.455v3.455z"/><path d="M12.409 20h-3.455v-3.455h3.455v3.455z"/><path d="M20.182 4.455h-3.455v-3.455h3.455v3.455z"/><path d="M20.182 12.227h-3.455v-3.455h3.455v3.455z"/><path d="M20.182 20h-3.455v-3.455h3.455v3.455z"/></g>
+
+    <g id="svgSearch" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M22 22l-5.636-5.636"/><path d="M1 10c0-4.971 4.029-9 9-9s9 4.029 9 9-4.029 9-9 9-9-4.029-9-9z"/></g>
+
+    <g id="svgUserInitials" fill="none"><path d="M1 12c0-6.075 4.925-11 11-11s11 4.925 11 11-4.925 11-11 11-11-4.925-11-11z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"  /><text  font-family="Precision Sans W" font-size="12" font-weight="normal" sketch:alignment="middle" fill="#fff" transform="translate(0 1)"><tspan x="4.784" y="15">{{patterns.userInitials}}</tspan></text></g>
+
+    <g id="svgBell" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M7.374 18.165l-.011.107c0 1.506 1.221 2.727 2.727 2.727 1.506 0 2.727-1.221 2.727-2.727l-.011-.107"/><path d="M16.455 10.091v-2.727c0-3.55-2.814-6.364-6.364-6.364s-6.364 2.814-6.364 6.364v2.727c0 3.03-2.727 3.744-2.727 5.455 0 1.522 3.513 2.727 9.091 2.727 5.578 0 9.091-1.205 9.091-2.727 0-1.711-2.727-2.425-2.727-5.455z"/></g>
+
+
+  </defs>
+</svg>
