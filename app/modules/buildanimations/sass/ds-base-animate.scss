@@ -128,29 +128,29 @@ link, a {
   //**************//
   opacity: 0;
   animation: fadeOut $very-fast linear forwards;
-  a { //to transition highlighted list items
-    transition: background-color $very-fast linear;
-  }
-  &[class*="pb-forwardStagger"] li {
-    opacity: 0;
-  }
+  // a { //to transition highlighted list items
+  //   transition: background-color $very-fast linear;
+  // }
+  // &[class*="pb-forwardStagger"] li {
+  //   opacity: 0;
+  // }
 
 }
 .open > .dropdown-menu:not(.pb-animate-menu) {
   pointer-events: auto;
   animation: fadeInDownMini $very-fast ease-out forwards;
-  &[class*="pb-forwardStagger"] li {
-    //forcing this to include pb forward stagger so this only affects
-    //staggered input - the effect would be odd otherwise
-    animation-name: slideInRightSmall;
-    animation-duration: $very-fast;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-    //so we don't end up animating this along with our menu items
-    &.divider {
-      animation-name: fadeIn;
-    }
-  }
+  // &[class*="pb-forwardStagger"] li {
+  //   //forcing this to include pb forward stagger so this only affects
+  //   //staggered input - the effect would be odd otherwise
+  //   animation-name: slideInRightSmall;
+  //   animation-duration: $very-fast;
+  //   animation-timing-function: ease-out;
+  //   animation-fill-mode: forwards;
+  //   //so we don't end up animating this along with our menu items
+  //   &.divider {
+  //     animation-name: fadeIn;
+  //   }
+  // }
 }
 
 
