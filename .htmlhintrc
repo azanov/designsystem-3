@@ -8,5 +8,5 @@
     "id-unique": true,
     "src-not-empty": true,
     "attr-no-duplication": true,
-    "style-disabled": true
+    "style-disabled": false
 }
