@@ -1,4 +1,5 @@
 {
+
     "tagname-lowercase": true,
     "attr-lowercase": false,
     "attr-value-double-quotes": true,
@@ -9,4 +10,5 @@
     "src-not-empty": true,
     "attr-no-duplication": true,
     "style-disabled": false
+
 }
