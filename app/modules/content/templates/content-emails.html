@@ -21,9 +21,7 @@
             <li>
               <a ui-sref="content.emails({'#':'scenarios'})">Scenarios</a>
             </li>
-            <li>
-              <a ui-sref="content.emails({'#':'global-support'})">Global Support Copy Options</a>
-            </li>
+    
           </ul>
         </div>
       </div>
@@ -41,7 +39,6 @@
     </div>
   </div>
 
-
   <div class="row spacer-top-lg">
     <div class="col-md-4">
       <p>
@@ -49,14 +46,16 @@
       </p>
       <ul>
         <li>
-          Replace all occurances of bracketed content, such as <code>[[PRODUCT NAME]]</code> with the appropriate copy and links
+          Replace all occurances of bracketed content, such as
+          <code>[[PRODUCT NAME]]</code>
+          with the appropriate copy and links
         </li>
         <li>
           Pay attention to indications of register and trade marks
         </li>
-        <li>
-          Refer to the Global support copy options at the end of this document, replace all occurances of <code>[[GLOBAL SUPPORT COPY OPTION]]</code> with your selected option
-        </li>
+        <li>Refer to the Global support copy options at the end of this document, replace all occurances of
+          <code>[[GLOBAL SUPPORT COPY OPTION]]</code>
+          with your selected option</li>
       </ul>
     </div>
     <div class="col-md-7 col-md-offset-1">
@@ -64,8 +63,16 @@
     </div>
   </div>
 
+
+
 </div>
 <div class="container-fluid spacer-top-lg">
+  <div class="row spacer-bottom-md">
+    <div class="col-md-8">
+      <h1 id="scenarios" class="doc-head">Scenarios</h1>
+      <!-- <p class="doc-lede">A generic template used for transactional emails within products.</p> -->
+    </div>
+  </div>
   <div class="row">
     <div class="col-md-12">
       <div ng-include="'modules/content/templates/includes/email-matrix.html'"></div>
