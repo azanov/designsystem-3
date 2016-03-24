@@ -64,7 +64,8 @@
     <div class="col-md-6">
       <div class="panel panel-default drag-container">
         <div class="panel-body" dragula="'first-bag'" dragula-model="dragdrop.items.unselected">
-          <div class="drag-item" ng-repeat="item in dragdrop.items.unselected track by item.id" uib-tooltip="Click and hold to drag." tooltip-enable="dragdrop.tooltip.isEnabled">
+          <!-- <div class="drag-item" ng-repeat="item in dragdrop.items.unselected track by item.id" uib-tooltip="Click and hold to drag." tooltip-enable="dragdrop.tooltip.isEnabled"> -->
+          <div class="drag-item" ng-repeat="item in dragdrop.items.unselected track by item.id">
             <span>{{::item.label}}</span>
           </div>
         </div>
@@ -74,7 +75,8 @@
     <div class="col-md-6">
       <div class="panel panel-default drag-container">
         <div class="panel-body" dragula="'first-bag'" dragula-model="dragdrop.items.selected">
-          <div class="drag-item" ng-repeat="item in dragdrop.items.selected track by item.id" uib-tooltip="Click and hold to drag." tooltip-enable="dragdrop.tooltip.isEnabled">
+          <!-- <div class="drag-item" ng-repeat="item in dragdrop.items.selected track by item.id" uib-tooltip="Click and hold to drag." tooltip-enable="dragdrop.tooltip.isEnabled"> -->
+          <div class="drag-item" ng-repeat="item in dragdrop.items.selected track by item.id">
             <span>{{::item.label}}</span>
           </div>
         </div>
@@ -107,12 +109,12 @@
       <div ngf-drop ngf-select ng-model="files" class="drop-box"
           ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-allow-dir="true"  ngf-resize="{width: 300, height: 400}"
           accept="image/*,application/pdf"
-          ngf-pattern="'image/*,application/pdf' ">Drop pdfs or images here or click to upload
+          ngf-pattern="'image/*,application/pdf' ">Drag and drop pdfs or images here or <a href="">browse files</a>.
       </div>
 
       <div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
 
-       <button class="btn btn-default" ngf-select="upload($files)" ngf-multiple="true">Or Click to Select File(s)</button>
+       <!-- <button class="btn btn-default" ngf-select="upload($files)" ngf-multiple="true">Or Click to Select File(s)</button> -->
 
        <h4 ng-if="files.length">Files Uploaded:</h4>
         <ul>
