@@ -249,7 +249,7 @@ $input-border-radius-large: $border-radius-large;
 $input-border-radius-small: $border-radius-small;
 
 //** Placeholder text color
-$input-color-placeholder: $pb-light-gray;
+$input-color-placeholder: $pb-gray;
 
 //** Default `.form-control` height
 $input-height-base: ($line-height-computed + ($padding-base-vertical * 2) + 2);
@@ -372,7 +372,7 @@ $grid-columns: 12;
 $grid-gutter-width: 30px;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
-$grid-float-breakpoint: $screen-sm-min;
+$grid-float-breakpoint: $screen-md-min;
 //** Point at which the navbar begins collapsing.
 $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 
