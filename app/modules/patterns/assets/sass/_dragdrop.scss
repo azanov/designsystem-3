@@ -32,7 +32,8 @@
 
   &:hover {
     background-color: $pb-bg3;
-    cursor: pointer;
+    // cursor: pointer;
+    cursor: grab;
   }
 
   &:active {
@@ -43,7 +44,7 @@
   //the drop container
   &.gu-transit {
     background-color: $pb-bg3;
-    border: 1px dashed $pb-bg5;
+    border: 3px dashed $pb-bg5;
     opacity: 1;
   }
 
@@ -69,7 +70,7 @@
   box-shadow: none;
   border: 0;
   .panel-body {
-    border: 1px solid #c5cbe3;
+    border: 1px solid #e1e1e1;
     padding: 10px;
     transition: border-color .2s linear;
     &.ex-over {
@@ -82,7 +83,7 @@
 
 .drop-box {
   background: #f8f8f8;
-  border: 5px dashed #ddd;
+  border: 3px dashed #ddd;
   text-align: center;
   padding: 50px 10px;
   margin-bottom: 20px;
