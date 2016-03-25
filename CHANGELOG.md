@@ -48,18 +48,33 @@
   Samples and a PDF conversion table to aid in converting Font Awesome icons to their Nucleo counterparts can be found at [Web > Foundation > Iconography](http://guxstaging.pbi.global.pvt/design_system/#/foundation/iconography).
 
   The CDN link for Font Awesome (in `index.html`) can still be used for backward compatibility, to avoid breaking icons until you make the switch.
+* Icons in links now have padding to the right, so you should not use a space after the icon.  This is because the space character would get underlined.
+
+  So, instead of 
+
+  `<a href=""><i class="someicon"></i> Click me</a>` 
+
+  use
+
+  `<a href=""><i class="someicon"></i>Click me</a>` (no space before text).
+* Links in the footer have been edited to reflect the above change.
 
 **NON-BREAKING CHANGES**
 
 * Disabled `input` field colors have been changed to #454545 for the text and #F8F8F8 for the background, matching "read-only" `input` fields
+* In response to Github [issue #73](https://github.com/PBGUX/designsystem/issues/73), made the calendar icon next to the date pickers into a button which pops open the datepicker, see [Web > Elements > UI Controls](http://guxstaging.pbi.global.pvt/design_system/#/uicontrols#datepickers)
 
 
 
 ####Site Changes
 
-* Added guidance for email templates, see [Content > Email](http://guxstaging.pbi.global.pvt/design_system/#/content/emails).
-* Added a sample implementation of Miller Columns, see [Web > Elements > Containers](http://guxstaging.pbi.global.pvt/design_system/#/containers#miller).
-* All Font Awesome icons replaced with Nucleo icons.
+* Added guidance for email templates, see [Content > Email](http://guxstaging.pbi.global.pvt/design_system/#/content/emails)
+* Added a sample implementation of Miller Columns, see [Web > Elements > Containers](http://guxstaging.pbi.global.pvt/design_system/#/containers#miller)
+* All Font Awesome icons replaced with Nucleo icons
+* Added Drag and Drop interactions and sample code. See [Web > Patterns > Drag and Drop](http://guxstaging.pbi.global.pvt/design_system/#/patterns/dragdrop)
+* Error pages are now HTML instead of images, [Web > Patterns > Error Pages](http://guxstaging.pbi.global.pvt/design_system/#/patterns/errorpages)
+* Added a Faceted Search sample, [Web > Elements > Tables](http://guxstaging.pbi.global.pvt/design_system/#/tables/datatable#faceted-search)
+* All images in Web section with gradients now correctly show the 2-color gradient
 
 ####Updated Libraries
 
@@ -69,12 +84,17 @@ For version numbers, please see `bower.json` and `package.json`
 * angular-moment
 * angular-rangeslider
 * angular-xeditable
+* angular-translate
 * highlightjs
 * jquery
 * ngInfiniteScroll
 * angular-ui-select
 
 
+
+####Thanks to the following contributors and bug reporters:
+
+Andy Grossman, Jim Norris, Rick Dukeshier, Ron Cianfaglione
 
 ------
 
