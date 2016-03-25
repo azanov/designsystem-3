@@ -2,6 +2,9 @@ table.email-matrix {
   td {
     padding: 5px;
   }
+  th {
+    width: 120px;
+  }
 
   td[colspan='8'] {
     text-align: center;
