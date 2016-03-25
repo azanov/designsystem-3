@@ -1,5 +1,61 @@
 ## Release Notes
 
+### 2.6.0 -- March 31, 2016
+
+#### CSS Changes
+
+**BREAKING CHANGES**
+* The Sign In and Sign up pages and their siblings have been updated using Flexbox.  The white box and logo and now always vertically centered, and the footer will collapse and stack centered on smaller screens.  The conversion of existing pages requires change to only 3 lines of HTML:
+
+  Before, top of page:
+
+  ```html
+  <div class="signin-wrapper">
+  <div class="signin-body">
+    <a class="signin-pb-logo" href="http://www.pb.com"></a>
+    <div class="signin-box">
+  ```
+  After, add opening tag for `floating-unit` div and replace `signin-body` with `signin-body-top` :
+  ```html
+  <div class="signin-wrapper">
+  <div class="signin-body-top">
+    <div class="floating-unit">
+      <a class="signin-pb-logo" href="http://www.pb.com"></a>
+      <!-- begin white box -->
+      <div class="signin-box">
+  ```
+  &nbsp;
+  Before, toward bottom of page:
+  ```html
+  <!-- // end white box -->
+  </div>
+    <div ng-include="'modules/patterns/templates/includes/footer.html'">  </div>
+  </div>
+  ```
+
+  After, just close the new div after the close of the white box:
+  ```html
+  <!-- // end white box --></div>
+  </div>
+    <div ng-include="'modules/patterns/templates/includes/footer.html'"></div>
+  </div>
+  ```
+
+
+* In response to Github [issue #87](https://github.com/PBGUX/designsystem/issues/87), the utility menu items (the header right-side menus) have been made responsive on mobile d.evices using the default Bootstrap mobile menu. Some minor code adjustments to the header will need to be made to enable this, please see the sample file linked from [Web > Patterns > Headers & Footers](http://guxstaging.pbi.global.pvt/design_system/#/patterns/headersfooters).
+
+**NON-BREAKING CHANGES**
+
+* Disabled `input` field colors have been changed to #454545 for the text and #F8F8F8 for the background, matching "read-only" `input` fields
+
+
+
+####Site Changes
+
+* We have added guidance for email templates, see Content > Email.
+
+------
+
 ### 2.5.0 -- February 29, 2016
 
 #### CSS Changes
