@@ -48,6 +48,8 @@
   Samples and a PDF conversion table to aid in converting Font Awesome icons to their Nucleo counterparts can be found at [Web > Foundation > Iconography](http://guxstaging.pbi.global.pvt/design_system/#/foundation/iconography).
 
   The CDN link for Font Awesome (in `index.html`) can still be used for backward compatibility, to avoid breaking icons until you make the switch.
+
+  The fonts files in [/dist/fonts]( https://github.com/PBGUX/designsystem/tree/develop/dist/fonts) must be correctly installed for the new icons to work.
 * Icons in links now have padding to the right, so you should not use a space after the icon.  This is because the space character would get underlined.
 
   So, instead of 
