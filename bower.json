@@ -1,6 +1,6 @@
 {
   "name": "DesignSystem",
-  "version": "2.5.3",
+  "version": "2.6",
   "dependencies": {
     "Chart.js": "1.0.2",
     "Numeric-Stepper": "*",
