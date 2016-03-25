@@ -43,6 +43,11 @@
 
 
 * In response to Github [issue #87](https://github.com/PBGUX/designsystem/issues/87), the utility menu items (the header right-side menus) have been made responsive on mobile d.evices using the default Bootstrap mobile menu. Some minor code adjustments to the header will need to be made to enable this, please see the sample file linked from [Web > Patterns > Headers & Footers](http://guxstaging.pbi.global.pvt/design_system/#/patterns/headersfooters).
+* The icon font Font Awesome has been deprecated.  We now include a new icon font, Nucleo, whose icon style fits better with PB branding. For icons less than 24 pixels in size, such as inline icons and buttons, use _Nucleo Mini_ and for icons 24 pixels or larger, use _Nucleo Outline_.
+
+  Samples and a PDF conversion table to aid in converting Font Awesome icons to their Nucleo counterparts can be found at [Web > Foundation > Iconography](http://guxstaging.pbi.global.pvt/design_system/#/foundation/iconography).
+
+  The CDN link for Font Awesome (in `index.html`) can still be used for backward compatibility, to avoid breaking icons until you make the switch.
 
 **NON-BREAKING CHANGES**
 
@@ -52,7 +57,24 @@
 
 ####Site Changes
 
-* We have added guidance for email templates, see Content > Email.
+* Added guidance for email templates, see [Content > Email](http://guxstaging.pbi.global.pvt/design_system/#/content/emails).
+* Added a sample implementation of Miller Columns, see [Web > Elements > Containers](http://guxstaging.pbi.global.pvt/design_system/#/containers#miller).
+* All Font Awesome icons replaced with Nucleo icons.
+
+####Updated Libraries
+
+For version numbers, please see `bower.json` and `package.json`
+* angular-chart
+* angular-datatables
+* angular-moment
+* angular-rangeslider
+* angular-xeditable
+* highlightjs
+* jquery
+* ngInfiniteScroll
+* angular-ui-select
+
+
 
 ------
 
