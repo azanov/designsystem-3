@@ -17,7 +17,7 @@
           <ul class="list-unstyled list-inline jump-menu">
             <li><a ui-sref="patterns.dragdrop({'#':'interactions'})">Interactions</a></li>
             <li><a ui-sref="patterns.dragdrop({'#':'lists'})">Drag Between Lists</a></li>
-            <li><a ui-sref="patterns.dragdrop({'#':'upload'})">Drag to Upload</a></li>
+            <li><a ui-sref="patterns.dragdrop({'#':'upload'})">Drag and Drop to Upload</a></li>
           </ul>
         </div>
       </div>
@@ -97,7 +97,7 @@
 
   <div class="row spacer-top-xl spacer-bottom-md">
     <div class="col-md-4">
-      <h1 class="doc-head" id="upload">Drag to Upload</h1>
+      <h1 class="doc-head" id="upload">Drag and Drop to Upload</h1>
     </div>
     <div class="col-md-2">
       <a class="more-info plugin" href="https://github.com/danialfarid/ng-file-upload" target="_blank">ng-file-upload</a>
@@ -109,7 +109,7 @@
       <div ngf-drop ngf-select ng-model="files" class="drop-box"
           ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-allow-dir="true"  ngf-resize="{width: 300, height: 400}"
           accept="image/*,application/pdf"
-          ngf-pattern="'image/*,application/pdf' ">Drag and drop pdfs or images here or <a href="">browse files</a>.
+          ngf-pattern="'image/*,application/pdf' ">Drag and drop your files here or <a href="">browse</a>.
       </div>
 
       <div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
