@@ -96,7 +96,7 @@ For version numbers, please see `bower.json` and `package.json`
 
 ####Thanks to the following contributors and bug reporters:
 
-Andy Grossman, Jim Norris, Rick Dukeshier, Ron Cianfaglione
+Andy Grossman, Ania Mastriano, Candice Russell, Colin Brunger, Jim Norris, Joan Doutney, Rajeev Verma, Rick Dukeshier, Ron Cianfaglione, Shawn Sharifi
 
 ------
 
