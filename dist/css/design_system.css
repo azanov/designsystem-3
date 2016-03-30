@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.6.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Wed Mar 30 2016 13:36:27 GMT-0400 (EDT) 
+ * Built Wed Mar 30 2016 14:31:13 GMT-0400 (EDT) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -14211,7 +14211,8 @@ header:not(.demo).shadow {
 .popover {
   box-shadow: none;
   border-radius: 0;
-  background-color: #fff; }
+  background-color: #fff;
+  z-index: 3; }
 .popover.bottom .arrow:after {
   border-bottom-color: #fff; }
 .popover.top .arrow:after {
