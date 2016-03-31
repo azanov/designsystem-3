@@ -66,6 +66,7 @@
 * Disabled `input` field colors have been changed to #454545 for the text and #F8F8F8 for the background, matching "read-only" `input` fields
 * In response to Github [issue #73](https://github.com/PBGUX/designsystem/issues/73), made the calendar icon next to the date pickers into a button which pops open the datepicker, see [Web > Elements > UI Controls](http://guxstaging.pbi.global.pvt/design_system/#/uicontrols#datepickers)
 * Added installation via `npm`:
+
   ```shell
   npm install pb-design-system
   ```
