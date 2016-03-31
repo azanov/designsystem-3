@@ -1,0 +1,47 @@
+.errors {
+
+  .site-content {
+    min-height: calc(100vh - (50px + 35px)); //HACK: why is this different?
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon {
+    text-align: center;
+  }
+
+  .main {
+    margin-top: 100px;
+    align-self: center;
+  }
+
+
+  &.errors-centered {
+
+    .site-content {
+      flex-direction: column;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+  }
+
+
+  @include breakpoint(screen-xs) {
+    .main {
+      margin-top: 80px;
+    }
+
+    .icon {
+      text-align: left;
+    }
+  }
+
+}

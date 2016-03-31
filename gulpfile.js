@@ -32,7 +32,7 @@ var banner = ['/**',
 
 // clean dist folder
 gulp.task('clean:dist', function(cb) {
-  return del(['./build'], cb);
+  return del(['./build', './dist'], cb);
 });
 
 
@@ -45,7 +45,6 @@ gulp.task('sass', function() {
     }))
     // For inline sourcemaps
     .pipe(sourcemaps.write())
-    .pipe(header(banner, { pkg: pkg }))
     .pipe(gulp.dest('./app/assets/css'))
     .pipe(browserSync.stream());
 });
@@ -58,14 +57,15 @@ gulp.task('sass-dist', function() {
 
   return sass('./app/assets/sass/**/*', { sourcemap: false, style: 'condensed' })
     .on('error', sass.logError)
-
     .pipe(autoprefixer({
       browsers: ['last 2 versions']
     }))
+    //.pipe(cssnano())
     .pipe(header(banner, { pkg: pkg }))
+    .pipe(gulp.dest('./app/assets/css'))
     .pipe(cssfilter)
     .pipe(gulp.dest('./dist/css')
-   
+
    );
 
 });
@@ -76,12 +76,10 @@ gulp.task('usemin', function() {
   gulp.src('./app/index.html')
     .pipe(usemin({
       css: [
-        cssnano, 
-        rev
+        //cssnano
       ],
       vendorjs: [
-        uglify({mangle: true}),
-        rev
+        uglify({mangle: true})
       ],
       appjs: [
         replace('debug: true', 'debug: false'),
@@ -218,8 +216,10 @@ gulp.task('serve-build', [], function() {
 
 
 //build
-gulp.task('build', ['sass-dist', 'clean:dist', 'copy:angular-i18n'], function() {
+gulp.task('build', ['clean:dist'], function() {
   runSequence(
+    'sass-dist',
+    'copy:angular-i18n',
     'usemin',
     'copy:modules',
     'copy:core-templates',

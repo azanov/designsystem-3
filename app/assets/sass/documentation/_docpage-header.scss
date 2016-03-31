@@ -9,6 +9,7 @@
   position: relative;
   @include breakpoint(screen-xs) {
     height: 120px;
+    margin-top: 0;
   }
   .hero-header {
     margin-top: 115px;

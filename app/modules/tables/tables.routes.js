@@ -93,7 +93,7 @@
         }
       },
       data: {
-        pageTitle: 'Infinite Scroll',
+        pageTitle: 'Datatables.net',
         access: 'public',
         bodyClass: 'tables fullscreen'
       }
@@ -111,7 +111,7 @@
       data: {
         pageTitle: 'Faceted Search',
         access: 'public',
-        bodyClass: 'tables fullscreen'
+        bodyClass: 'splitview splitview-white-open'
       }
     });
 

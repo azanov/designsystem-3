@@ -32,7 +32,9 @@
     'duScroll',
     'ui.select',
     'ngTagsInput',
-    'slickCarousel'
+    'slickCarousel',
+    'ngFileUpload',
+    angularDragula(angular)
   ]);
 
 })();
