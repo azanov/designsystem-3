@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.6.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Wed Mar 30 2016 15:03:15 GMT-0400 (EDT) 
+ * Built Thu Mar 31 2016 11:17:43 GMT-0400 (EDT) 
  */
 @charset "UTF-8";
 .container-fluid {
@@ -11961,6 +11961,8 @@ fieldset legend {
   border-color: #dbdbdb;
   color: #454545;
   cursor: not-allowed;
+  -webkit-text-fill-color: #454545;
+  -webkit-opacity: 1;
   opacity: 1;
   box-shadow: none; }
 .form-control[readonly] {
