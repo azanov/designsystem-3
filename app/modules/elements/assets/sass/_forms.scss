@@ -138,9 +138,9 @@ a.list-group-item {
   }
 
   .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
-    background-color: #f0f0f0;
+    background-color: #f8f8f8 !important;
     border-color: #dbdbdb;
-    color: #c0c0c0;
+    color: #454545;
     opacity: 1;
 }
 
@@ -152,7 +152,7 @@ a.list-group-item {
 
   &[disabled],
   fieldset[disabled] & {
-    background-color: #f8f8f8;
+    background-color: #f8f8f8 !important;
     border-color: $input-border-disabled;
     color: #454545;
     cursor: $cursor-disabled;
