@@ -42,7 +42,7 @@
   ```
 
 
-* In response to Github [issue #87](https://github.com/PBGUX/designsystem/issues/87), the utility menu items (the header right-side menus) have been made responsive on mobile d.evices using the default Bootstrap mobile menu. Some minor code adjustments to the header will need to be made to enable this, please see the sample file linked from [Web > Patterns > Headers & Footers](http://guxstaging.pbi.global.pvt/design_system/#/patterns/headersfooters).
+* In response to Github [issue #87](https://github.com/PBGUX/designsystem/issues/87), the utility menu items (the header right-side menus) have been made responsive on mobile devices using the default Bootstrap mobile menu. Some minor code adjustments to the header will need to be made to enable this, please see the sample file linked from [Web > Patterns > Headers & Footers](http://guxstaging.pbi.global.pvt/design_system/#/patterns/headersfooters).
 * The icon font Font Awesome has been deprecated.  We now include a new icon font, Nucleo, whose icon style fits better with PB branding. For icons less than 24 pixels in size, such as inline icons and buttons, use _Nucleo Mini_ and for icons 24 pixels or larger, use _Nucleo Outline_.
 
   Samples and a PDF conversion table to aid in converting Font Awesome icons to their Nucleo counterparts can be found at [Web > Foundation > Iconography](http://guxstaging.pbi.global.pvt/design_system/#/foundation/iconography).
