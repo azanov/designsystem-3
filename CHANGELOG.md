@@ -42,7 +42,7 @@
   ```
 
 
-* In response to Github [issue #87](https://github.com/PBGUX/designsystem/issues/87), the utility menu items (the header right-side menus) have been made responsive on mobile d.evices using the default Bootstrap mobile menu. Some minor code adjustments to the header will need to be made to enable this, please see the sample file linked from [Web > Patterns > Headers & Footers](http://guxstaging.pbi.global.pvt/design_system/#/patterns/headersfooters).
+* In response to Github [issue #87](https://github.com/PBGUX/designsystem/issues/87), the utility menu items (the header right-side menus) have been made responsive on mobile devices using the default Bootstrap mobile menu. Some minor code adjustments to the header will need to be made to enable this, please see the sample file linked from [Web > Patterns > Headers & Footers](http://guxstaging.pbi.global.pvt/design_system/#/patterns/headersfooters).
 * The icon font Font Awesome has been deprecated.  We now include a new icon font, Nucleo, whose icon style fits better with PB branding. For icons less than 24 pixels in size, such as inline icons and buttons, use _Nucleo Mini_ and for icons 24 pixels or larger, use _Nucleo Outline_.
 
   Samples and a PDF conversion table to aid in converting Font Awesome icons to their Nucleo counterparts can be found at [Web > Foundation > Iconography](http://guxstaging.pbi.global.pvt/design_system/#/foundation/iconography).
@@ -52,9 +52,9 @@
   The fonts files in [/dist/fonts]( https://github.com/PBGUX/designsystem/tree/develop/dist/fonts) must be correctly installed for the new icons to work.
 * Icons in links now have padding to the right, so you should not use a space after the icon.  This is because the space character would get underlined.
 
-  So, instead of 
+  So, instead of
 
-  `<a href=""><i class="someicon"></i> Click me</a>` 
+  `<a href=""><i class="someicon"></i> Click me</a>`
 
   use
 
@@ -65,7 +65,11 @@
 
 * Disabled `input` field colors have been changed to #454545 for the text and #F8F8F8 for the background, matching "read-only" `input` fields
 * In response to Github [issue #73](https://github.com/PBGUX/designsystem/issues/73), made the calendar icon next to the date pickers into a button which pops open the datepicker, see [Web > Elements > UI Controls](http://guxstaging.pbi.global.pvt/design_system/#/uicontrols#datepickers)
+* Added installation via `npm`:
 
+  ```shell
+  npm install pb-design-system
+  ```
 
 
 ####Site Changes
@@ -96,7 +100,7 @@ For version numbers, please see `bower.json` and `package.json`
 
 ####Thanks to the following contributors and bug reporters:
 
-Andy Grossman, Jim Norris, Rick Dukeshier, Ron Cianfaglione
+Andy Grossman, Ania Mastriano, Candice Russell, Colin Brunger, Jim Norris, Joan Doutney, Rajeev Verma, Rick Dukeshier, Ron Cianfaglione, Shawn Sharifi
 
 ------
 
@@ -116,37 +120,37 @@ Andy Grossman, Jim Norris, Rick Dukeshier, Ron Cianfaglione
   ```
 * The signin pages and its children have been updated with a new layout, approved footer/copyright line (you will need to add the correct links to your privacy policy and T&C) and new HTML structure, below. See [Web > Patterns > Sign In & Sign Up](http://guxstaging.pbi.global.pvt/design_system/#/patterns/signinup)
 
-```html
-<body class="site fullscreen signin">
-  <div class="signin-wrapper">
+  ```html
+  <body class="site fullscreen signin">
+    <div class="signin-wrapper">
 
-    <div class="signin-body">
-      <a class="signin-pb-logo" href="http://www.pb.com"></a>
+      <div class="signin-body">
+        <a class="signin-pb-logo" href="http://www.pb.com"></a>
 
-      <div class="signin-box">
-        <h1 class="signin-heading">Product Name<sup>™</sup></h1>
-        <h5 class="signin-subheading">Product tag line</h5>
-        <!-- your sign in content here -->
+        <div class="signin-box">
+          <h1 class="signin-heading">Product Name<sup>™</sup></h1>
+          <h5 class="signin-subheading">Product tag line</h5>
+          <!-- your sign in content here -->
+        </div>
+      </div>
+
+      <div class="signin-footer">
+        Pitney Bowes Inc. the Corporate Logo and Product Name<sup>™</sup> are trademarks of Pitney Bowes Inc. or a subsidiary. All other marks are the intellectual property of their respective owners. <a href="">Privacy</a>&nbsp;|&nbsp;<a href="">Terms and Conditions</a>&nbsp;<a>© 2016 Pitney Bowes Inc. All rights reserved.</a>
       </div>
     </div>
-
-    <div class="signin-footer">
-      Pitney Bowes Inc. the Corporate Logo and Product Name<sup>™</sup> are trademarks of Pitney Bowes Inc. or a subsidiary. All other marks are the intellectual property of their respective owners. <a href="">Privacy</a>&nbsp;|&nbsp;<a href="">Terms and Conditions</a>&nbsp;<a>© 2016 Pitney Bowes Inc. All rights reserved.</a>
-    </div>
-  </div>
-</body>
-```
+  </body>
+  ```
 
 
 **Non-breaking Changes**
 
 * Updated all magenta gradients (such as the header) to a 2-color header, PB Blue to PB Magenta. There is now an extend mixin you can use when you need the gradient in `_mixins.scss`
 
-```scss
-%gradient {
-  background-image: linear-gradient(90deg, $pb-blue 0%, $pb-magenta 100%);
-}
-```
+  ```scss
+  %gradient {
+    background-image: linear-gradient(90deg, $pb-blue 0%, $pb-magenta 100%);
+  }
+  ```
 * Footer copyright updated to 2016 via `new Date()`, no more manual updates
 * The "angular loading bar" plugin has been updated to 0.8.0, and the loading bar itself has been changed from white to turquoise in the css. See [Web > User Feedback](http://guxstaging.pbi.global.pvt/design_system/#/feedback#process).
 * We are now on Angular JS 1.4.9.  See below for all other library updates.
