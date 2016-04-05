@@ -1,6 +1,6 @@
-(function() {
+(function () {
 
-  'use strict';
+  'use strict'
 
   angular.module('pb.ds.hamburger').config(function($stateProvider) {
     $stateProvider.state('hamburger', {
