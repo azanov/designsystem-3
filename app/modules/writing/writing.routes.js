@@ -1,8 +1,7 @@
-(function() {
+;(function () {
+  'use strict'
 
-  'use strict';
-
-  angular.module('pb.ds.writing').config(function($stateProvider) {
+  angular.module('pb.ds.writing').config(function ($stateProvider) {
     $stateProvider.state('writing', {
       url: '/writing',
       templateUrl: 'modules/writing/templates/writing.html',
@@ -12,9 +11,6 @@
         access: 'public',
         bodyClass: 'writing'
       }
-    });
-
-
-  });
-
-})();
+    })
+  })
+})()

@@ -1,11 +1,7 @@
-(function() {
+;(function () {
+  'use strict'
 
-  'use strict';
-
-  angular.module('pb.ds.elements').controller('AccordionsController', function($log) {
-
-    var _this = this;
-
-  });
-
-})();
+  angular.module('pb.ds.elements').controller('AccordionsController', function ($log) {
+  //  var _this = this
+  })
+})()

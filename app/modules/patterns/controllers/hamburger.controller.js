@@ -1,18 +1,15 @@
-(function() {
+;(function () {
+  'use strict'
 
-  'use strict';
-
-  angular.module('pb.ds.splitview').controller('HamburgerController', function($log) {
-
-    var _this = this;
-
+  angular.module('pb.ds.splitview').controller('HamburgerController', function ($log) {
+    var _this = this
 
     _this.checked = false; // This will be binded using the ps-open attribute
 
-    _this.toggle = function() {
-      _this.checked = !_this.checked;
-      $log.debug('clicked');
-    };
+    _this.toggle = function () {
+      _this.checked = !_this.checked
+      $log.debug('clicked')
+    }
 
     _this.leftnav = [{
       'label': 'Appetizers',
@@ -78,14 +75,10 @@
         'label': 'Cannoli',
         'value': ''
       }]
-    }];
+    }]
+  })
 
-
-  });
-
-  angular.element(document).ready(function() {
-
-  //  c = angular.element(document.querySelector('#controller-demo')).scope();
-  });
-
-})();
+  angular.element(document).ready(function () {
+    //  c = angular.element(document.querySelector('#controller-demo')).scope()
+  })
+})()

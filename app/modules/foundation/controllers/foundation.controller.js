@@ -1,11 +1,6 @@
-(function() {
+;(function () {
+  'use strict'
 
-  'use strict';
-
-  angular.module('pb.ds.foundation').controller('foundationController', function($log) {
-
-    var _this = this;
-
-  });
-
-})();
+  angular.module('pb.ds.foundation').controller('foundationController', function ($log) {
+  })
+})()

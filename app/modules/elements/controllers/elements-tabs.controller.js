@@ -1,9 +1,5 @@
-(function() {
+;(function () {
+  'use strict'
 
-  'use strict';
-
-  angular.module('pb.ds.elements').controller('TabsController', function($log) {
-
-  });
-
-})();
+  angular.module('pb.ds.elements').controller('TabsController', function ($log) {})
+})()

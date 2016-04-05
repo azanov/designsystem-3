@@ -1,8 +1,7 @@
-(function() {
+;(function () {
+  'use strict'
 
-  'use strict';
-
-  angular.module('app').directive('pbTransitoryAlert', function() {
+  angular.module('app').directive('pbTransitoryAlert', function () {
     return {
       restrict: 'A',
       require: 'ngModel',
@@ -11,26 +10,23 @@
       },
       template: '<span ng-transclude></span><span class="btn-response" style="display: none; " ng-class="ngModel.messageClass" ng-bind-html="ngModel.message" ></span>',
       transclude: true,
-      link: function postLink(scope, element, attrs) {
+      link: function postLink (scope, element, attrs) {
+        var fadeIn = scope.ngModel.fadeIn || 500
+        var fadeOut = scope.ngModel.fadeOut || 1000
+        var delay = scope.ngModel.delay || 2000
 
-        var fadeIn = scope.ngModel.fadeIn || 500,
-          fadeOut = scope.ngModel.fadeOut || 1000,
-          delay = scope.ngModel.delay || 2000;
-
-        var $message = element.find('span.btn-response');
+        var $message = element.find('span.btn-response')
 
         element.on({
-          click: function() {
+          click: function () {
             if ($message.is(':visible')) {
-              return false;
+              return false
             } else {
-              $message.fadeIn(fadeIn).delay(delay).fadeOut(fadeOut);
+              $message.fadeIn(fadeIn).delay(delay).fadeOut(fadeOut)
             }
           }
-        });
-
+        })
       }
-    };
-  });
-
-})();
+    }
+  })
+})()

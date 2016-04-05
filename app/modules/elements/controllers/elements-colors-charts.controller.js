@@ -1,12 +1,10 @@
-(function() {
+;(function () {
+  'use strict'
 
-  'use strict';
+  angular.module('pb.ds.elements').controller('ChartColorsController', function ($log, ColorsResolve) {
+    var _this = this
 
-  angular.module('pb.ds.elements').controller('ChartColorsController', function($log, ColorsResolve) {
-
-    var _this = this;
-
-    _this.colorData = ColorsResolve.colors;
+    _this.colorData = ColorsResolve.colors
 
     _this.colors = {
       blues: {
@@ -33,9 +31,6 @@
         $orange: _this.colorData.charts[4].hex,
         $red: _this.colorData.charts[5].hex
       }
-    };
-
-
-  });
-
-})();
+    }
+  })
+})()

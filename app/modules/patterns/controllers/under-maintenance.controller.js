@@ -1,13 +1,9 @@
-(function() {
+;(function () {
+  'use strict'
 
-  'use strict';
+  angular.module('pb.ds.patterns').controller('UnderMaintentanceController', function ($log) {
+    var _this = this
 
-  angular.module('pb.ds.patterns').controller('UnderMaintentanceController', function($log) {
-
-    var _this = this;
-
-    _this.showHeaderFooter = false;
-
-  });
-
-})();
+    _this.showHeaderFooter = false
+  })
+})()

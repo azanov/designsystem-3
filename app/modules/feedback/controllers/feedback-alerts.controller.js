@@ -1,10 +1,8 @@
-(function() {
+;(function () {
+  'use strict'
 
-  'use strict';
-
-  angular.module('pb.ds.feedback').controller('AlertsController', function($log, $uibModal) {
-
-    var _this = this;
+  angular.module('pb.ds.feedback').controller('AlertsController', function ($log, $uibModal) {
+    var _this = this
 
     _this.transitoryAlert = {
       fadeIn: 500,
@@ -12,8 +10,6 @@
       delay: 2000,
       message: '<strong>Success!</strong> Data was saved.',
       messageClass: 'text-success'
-    };
-
-  });
-
-})();
+    }
+  })
+})()

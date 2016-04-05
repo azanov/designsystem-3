@@ -1,15 +1,11 @@
-(function() {
+;(function () {
+  'use strict'
 
-  'use strict';
+  angular.module('app').controller('HeaderController', function ($log, MockDataFactory) {
+    var _this = this
 
-  angular.module('app').controller('HeaderController', function($log, MockDataFactory) {
+    _this.nav = MockDataFactory.query({filename: 'navigation'})
 
-    var _this = this;
-
-    _this.nav = MockDataFactory.query({filename: 'navigation'});
-
-    _this.predicate = 'label';
-
-  });
-
-})();
+    _this.predicate = 'label'
+  })
+})()

@@ -1,12 +1,10 @@
-(function() {
+;(function () {
+  'use strict'
 
-  'use strict';
+  angular.module('pb.ds.graphs').controller('C3Controller', function ($log) {
+    var _this = this
 
-  angular.module('pb.ds.graphs').controller('C3Controller', function($log) {
-
-    var _this = this;
-
-    //COLORS
+    // COLORS
     _this.colors = [
       '#0072B8',
       '#CF0989',
@@ -16,7 +14,7 @@
       '#00B140',
       '#EDB700',
       '#3E53A4'
-    ];
+    ]
 
     _this.mono = [
       '#00436E',
@@ -25,11 +23,9 @@
       '#66AAD4',
       '#CCE3F1',
       '#E5F1F8'
-    ];
+    ]
 
-
-
-    //DONUT
+    // DONUT
     _this.donutColor5 = {
       options: {
         data: [
@@ -74,7 +70,7 @@
           }
         }
       }
-    };
+    }
 
     _this.donutMono5 = {
       options: {
@@ -120,13 +116,9 @@
           }
         }
       }
-    };
+    }
 
-
-
-
-
-    //PIE
+    // PIE
     _this.pieColor5 = {
       options: {
         data: [
@@ -171,8 +163,7 @@
           }
         }
       }
-    };
-
+    }
 
     _this.pieMono5 = {
       options: {
@@ -218,13 +209,9 @@
           }
         }
       }
-    };
+    }
 
-
-
-
-
-    //BAR
+    // BAR
     _this.barColor8 = {
       options: {
         data: [
@@ -294,8 +281,7 @@
           }
         }
       }
-    };
-
+    }
 
     _this.barMono8 = {
       options: {
@@ -366,8 +352,7 @@
           }
         }
       }
-    };
-
+    }
 
     _this.barColor5Multiple = {
       options: {
@@ -431,8 +416,7 @@
           }
         }
       }
-    };
-
+    }
 
     _this.barMono5Multiple = {
       options: {
@@ -496,13 +480,9 @@
           }
         }
       }
-    };
+    }
 
-
-
-
-
-    //GAUGE
+    // GAUGE
     _this.gauge = {
       options: {
         data: [
@@ -529,18 +509,16 @@
             expand: false,
             units: 'Progress',
             label: {
-              format: function(value, ratio) {
-                return value + ' %';
+              format: function (value, ratio) {
+                return value + ' %'
               }
             }
           }
         }
       }
-    };
+    }
 
-
-
-    //AREA
+    // AREA
     _this.area = {
       options: {
         data: [
@@ -589,8 +567,6 @@
           }
         }
       }
-    };
-
-  });
-
-})();
+    }
+  })
+})()

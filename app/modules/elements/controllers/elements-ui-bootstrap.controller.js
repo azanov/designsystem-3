@@ -1,46 +1,44 @@
-(function() {
+;(function () {
+  'use strict'
 
-  'use strict';
-
-  angular.module('pb.ds.elements').controller('UiBootstrapController', function($log, $uibModal, $timeout, $window) {
-
-    var _this = this;
+  angular.module('pb.ds.elements').controller('UiBootstrapController', function ($log, $uibModal, $timeout, $window) {
+    var _this = this
 
     _this.modals = {
-      simple: function() {
+      simple: function () {
         $uibModal.open({
           templateUrl: 'modules/components/modals/elements-simple.html',
           controller: 'BootstrapUiSimpleModalController'
-        });
+        })
       },
-      modal: function() {
+      modal: function () {
         $uibModal.open({
           templateUrl: 'modules/elements/modals/elements-modal.html',
           controller: 'BootstrapUiModalController',
           keyboard: false,
           backdrop: 'static'
-        });
+        })
       },
-      prompt: function() {
+      prompt: function () {
         $uibModal.open({
           templateUrl: 'modules/elements/modals/elements-prompt.html',
           controller: 'BootstrapUiPromptModalController',
           keyboard: false,
           backdrop: 'static'
-        }).result.then(function(fullname) {
-          _this.fullname = fullname;
-        });
+        }).result.then(function (fullname) {
+          _this.fullname = fullname
+        })
       },
-      draggable: function() {
+      draggable: function () {
         $uibModal.open({
           windowTemplateUrl: 'modules/elements/modals/elements-draggable-template.html',
           templateUrl: 'modules/elements/modals/elements-draggable.html',
           controller: 'BootstrapUiDraggableModalController',
           keyboard: false,
           backdrop: 'static'
-        });
+        })
       }
-    };
+    }
 
     _this.calendar = {
       format: 'MMMM dd, yyyy',
@@ -50,18 +48,18 @@
         showWeeks: false,
         showButtonBar: false
       },
-      open: function($event) {
-        $event.preventDefault();
-        $event.stopPropagation();
-        _this.calendar.opened = true;
+      open: function ($event) {
+        $event.preventDefault()
+        $event.stopPropagation()
+        _this.calendar.opened = true
       }
-    };
+    }
 
     _this.time = {
-      menuClick: function(event) {
-        event.preventDefault();
+      menuClick: function (event) {
+        event.preventDefault()
       }
-    };
+    }
 
     _this.tabs = {
       tabset01: [{
@@ -88,13 +86,11 @@
         content: 'Dynamic content B',
         disabled: true
       }],
-      alert: function(event) {
-        $timeout(function() {
-          $window.alert('You\'ve selected the alert tab!');
-        });
+      alert: function (event) {
+        $timeout(function () {
+          $window.alert("You've selected the alert tab!")
+        })
       }
-    };
-
-  });
-
-})();
+    }
+  })
+})()

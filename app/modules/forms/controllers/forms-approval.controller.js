@@ -1,11 +1,7 @@
-(function() {
+;(function () {
+  'use strict'
 
-  'use strict';
-
-  angular.module('pb.ds.forms').controller('ApprovalController', function($log) {
-
-    var _this = this;
-
-  });
-
-})();
+  angular.module('pb.ds.forms').controller('ApprovalController', function ($log) {
+    // var _this = this
+  })
+})()
