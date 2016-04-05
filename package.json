@@ -23,9 +23,13 @@
     "sassdoc": "2.1.20"
   },
   "devDependencies": {
+    "eslint-config-angular": "^0.5.0"
   },
   "engines": {
     "node": ">=0.10.0"
   },
-  "scripts": {}
+  "scripts": {},
+  "standard": {
+    "globals": ["_", "angular", "s"]
+  }
 }

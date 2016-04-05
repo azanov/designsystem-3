@@ -13,3 +13,5 @@ build
 app/modules/i18n/angular-i18n
 app/assets/css/design_system.css
 app/assets/css/documentation.css
+ds.sublime-workspace
+ds.sublime-project
