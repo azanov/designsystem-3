@@ -24,7 +24,7 @@
     'infinite-scroll',
     'datatables',
     'datatables.bootstrap',
-    'datatables.tabletools',
+    'datatables.buttons',
     'xeditable',
     'angularChart',
     'duScroll',

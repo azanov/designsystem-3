@@ -80,40 +80,47 @@
           }
         }
       })
-      .withTableTools('')
-      .withTableToolsButtons([
+      .withButtons([
         {
-          sExtends: 'text',
-          sButtonText: '<i class="nc-icon-mini ui-1_simple-add"></i>',
-          fnClick: function (nButton, oConfig, oFlash) {
+          text: '<i class="nc-icon-mini ui-1_simple-add"></i>',
+          action: function (e, dt, node, config) {
             $window.alert('Handle adding a new record.')
           }
         },
         {
-          sExtends: 'text',
-          sButtonText: '<i class="nc-icon-mini ui-1_trash-simple"></i>',
-          fnClick: function (nButton, oConfig, oFlash) {
-            var selected = []
-
-            angular.forEach(_this.datatable.selected, function (value, key, obj) {
-              if (value) {
-                selected.push(key)
-              }
-            })
-
-            $window.alert('Handle delete of rows: ' + selected.join(','))
-          },
-          fnSelect: function (nButton, oConfig, nRow) {
-            $log.debug(nRow)
-
-            if (nRow.length === 1) {
-              angular.element(nButton).removeClass('hidden')
-            } else {
-              angular.element(nButton).addClass('hidden')
-            }
+          text: '<i class="nc-icon-mini ui-1_trash-simple"></i>',
+          action: function (e, dt, node, config) {
+            $window.alert('Handle deleting a record.')
           }
         }
       ])
+      // .withTableTools('')
+      // .withTableToolsButtons([
+      //   {
+      //     sExtends: 'text',
+      //     sButtonText: '<i class="nc-icon-mini ui-1_trash-simple"></i>',
+      //     fnClick: function (nButton, oConfig, oFlash) {
+      //       var selected = []
+      //
+      //       angular.forEach(_this.datatable.selected, function (value, key, obj) {
+      //         if (value) {
+      //           selected.push(key)
+      //         }
+      //       })
+      //
+      //       $window.alert('Handle delete of rows: ' + selected.join(','))
+      //     },
+      //     fnSelect: function (nButton, oConfig, nRow) {
+      //       $log.debug(nRow)
+      //
+      //       if (nRow.length === 1) {
+      //         angular.element(nButton).removeClass('hidden')
+      //       } else {
+      //         angular.element(nButton).addClass('hidden')
+      //       }
+      //     }
+      //   }
+      // ])
 
     // COLUMNS
     _this.dtColumns = [
