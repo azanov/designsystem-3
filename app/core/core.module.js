@@ -1,7 +1,5 @@
-(function() {
-
+(function () {
   'use strict';
-
   angular.module('pb.core', [
     'ngCookies',
     'ngAnimate',
@@ -36,5 +34,4 @@
     'ngFileUpload',
     angularDragula(angular)
   ]);
-
 })();

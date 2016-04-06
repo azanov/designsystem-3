@@ -1,19 +1,15 @@
-(function() {
-
+(function () {
   'use strict';
 
-  angular.module('pb.ds.elements').controller('BootstrapUiPromptModalController', function($scope, $modalInstance) {
-
+  angular.module('pb.ds.elements').controller('BootstrapUiPromptModalController', function ($scope, $modalInstance) {
     $scope.fullname = '';
 
-    $scope.close = function() {
+    $scope.close = function () {
       $modalInstance.close();
     };
 
-    $scope.save = function() {
+    $scope.save = function () {
       $modalInstance.close($scope.form.fullname.$modelValue);
     };
-
   });
-
 })();

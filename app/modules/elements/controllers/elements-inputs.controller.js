@@ -1,59 +1,51 @@
-(function() {
-
+(function () {
   'use strict';
 
-  angular.module('pb.ds.elements').controller('InputsController', function($log, CountriesResolve, PeopleResolve, moment, $http) {
-
+  angular.module('pb.ds.elements').controller('InputsController', function ($log, CountriesResolve, PeopleResolve, moment, $http) {
     var _this = this;
 
-    //numeric stepper
+    // numeric stepper
     _this.numericStepper = {
       limit: [0],
       wheelStep: 1,
       arrowStep: 1
     };
 
-
     _this.samplePeople = PeopleResolve;
 
     // controls the "add another row" functionality
-    _this.choices1 = [{ id: 'choice1'}];
-    _this.choices2 = [{ id: 'choice1', num: '222-555-3456' }];
-    _this.choices3 = [{ id: 'choice1'}];
-    _this.choices4 = [{ id: 'choice1', num: '222-555-3456' }];
+    _this.choices1 = [{id: 'choice1'}];
+    _this.choices2 = [{id: 'choice1', num: '222-555-3456'}];
+    _this.choices3 = [{id: 'choice1'}];
+    _this.choices4 = [{id: 'choice1', num: '222-555-3456'}];
 
     _this.maxChoices = 3;
 
-    _this.addNewChoice = function(arr) {
+    _this.addNewChoice = function (arr) {
       var newItemNo = arr.length + 1;
       arr.push({
         id: 'choice' + newItemNo
       });
     };
 
-    _this.showAddChoice = function(choice, arr) {
+    _this.showAddChoice = function (choice, arr) {
       return arr.length !== _this.maxChoices;
     };
 
     // for the date picker with calendar button working
     _this.openPicker = function (which) {
       var item = '#' + which;
-     $(item).data('daterangepicker').show();
+      $(item).data('daterangepicker').show();
     };
 
-
-
-
-
-
-    //selectize
+    // selectize
     _this.peopleSelect = {
       options: {
         valueField: 'email',
         labelField: 'name',
         searchField: ['name'],
         render: {
-          option: function(item, escape) {
+          option: function (item, escape) {
             var html = '';
             html += '<div>';
             html += '<div style="font-size: 16px;">' + item.name + '</div>';
@@ -98,7 +90,7 @@
       }]
     };
 
-    //selectize country selects (all on page)
+    // selectize country selects (all on page)
     _this.countrySelect = {
       options: {
         valueField: 'code',
@@ -120,8 +112,7 @@
       countries: CountriesResolve
     };
 
-
-    //ngTagsInput
+    // ngTagsInput
     // _this.tags = [
     //   { text: 'just' },
     //   { text: 'some' },
@@ -129,25 +120,23 @@
     //   { text: 'tags' }
     // ];
 
-    _this.loadTags = function($query) {
-      //return $http.get('/tags?query=' + query);
-      //return $http.get('core/data/countries.json');
+    _this.loadTags = function ($query) {
+      // return $http.get('/tags?query=' + query);
+      // return $http.get('core/data/countries.json');
 
-      return $http.get('core/data/countries.json', { cache: true}).then(function(response) {
+      return $http.get('core/data/countries.json', {cache: true}).then(function (response) {
         var countries = response.data;
-        return countries.filter(function(country) {
-          return country.name.toLowerCase().indexOf($query.toLowerCase()) != -1;
+        return countries.filter(function (country) {
+          return country.name.toLowerCase().indexOf($query.toLowerCase()) !== -1;
         });
       });
     };
-
 
     // SWITCHES
     _this.switchStatus1 = false;
     _this.switchStatus2 = false;
     _this.switchStatus3 = true;
     _this.switchStatus4 = false;
-
 
     _this.singlepicker = {
       date: {
@@ -161,7 +150,6 @@
         }
       }
     };
-
 
     _this.daterangepicker = {
       date: {
@@ -185,7 +173,6 @@
       }
     };
 
-
     _this.daterangepicker2 = {
       date: {
         startDate: moment().startOf('year'),
@@ -205,7 +192,6 @@
       }
     };
 
-
     _this.daterangepicker3 = {
       date: {
         startDate: moment().startOf('day'),
@@ -223,8 +209,7 @@
           'Year to date': [moment().startOf('year'), moment()]
         }
       },
-      displayDate: function(start, end) {
-
+      displayDate: function (start, end) {
         var startDate = start || _this.daterangepicker3.date.startDate;
         var endDate = end || _this.daterangepicker3.date.endDate;
 
@@ -233,11 +218,9 @@
 
         if (dateDiff === 0) {
           result = 'Today ' + moment(startDate).format('MM/DD/YYYY');
-        }
-        else if (dateDiff === 6) {
+        } else if (dateDiff === 6) {
           result = 'Last 7 days';
-        }
-        else {
+        } else {
           result = 'From ' + moment(startDate).format('MM/DD/YYYY') + ' to ' + moment(endDate).format('MM/DD/YYYY');
         }
 
@@ -245,11 +228,7 @@
       }
     };
 
-
-
-
     _this.customRange = {
-
       items: [
         {
           label: 'Today',
@@ -283,8 +262,8 @@
         }
       ],
       selected: null,
-      init: function() {
-        angular.forEach(_this.customRange.items, function(value, index) {
+      init: function () {
+        angular.forEach(_this.customRange.items, function (value, index) {
           if (value.selected === true) {
             _this.customRange.selected = value;
 
@@ -297,9 +276,8 @@
           }
         });
       },
-      click: function(item) {
-
-        angular.forEach(_this.customRange.items, function(value, index) {
+      click: function (item) {
+        angular.forEach(_this.customRange.items, function (value, index) {
           value.selected = false;
         });
 
@@ -331,7 +309,7 @@
           },
           opens: 'center',
           eventHandlers: {
-            'apply.daterangepicker': function(ev, picker) {
+            'apply.daterangepicker': function (ev, picker) {
               // handle when date changed
             }
           }
@@ -350,7 +328,7 @@
           },
           opens: 'center',
           eventHandlers: {
-            'apply.daterangepicker': function(ev, picker) {
+            'apply.daterangepicker': function (ev, picker) {
               // handle when date changed
             }
           }
@@ -358,9 +336,5 @@
       }
 
     };
-
-
-
   });
-
 })();

@@ -1,19 +1,17 @@
-(function() {
-
+(function () {
   'use strict';
 
-  angular.module('pb.ds.elements').controller('UiBootstrapController', function($log, $uibModal, $timeout, $window) {
-
+  angular.module('pb.ds.elements').controller('UiBootstrapController', function ($log, $uibModal, $timeout, $window) {
     var _this = this;
 
     _this.modals = {
-      simple: function() {
+      simple: function () {
         $uibModal.open({
           templateUrl: 'modules/components/modals/elements-simple.html',
           controller: 'BootstrapUiSimpleModalController'
         });
       },
-      modal: function() {
+      modal: function () {
         $uibModal.open({
           templateUrl: 'modules/elements/modals/elements-modal.html',
           controller: 'BootstrapUiModalController',
@@ -21,17 +19,17 @@
           backdrop: 'static'
         });
       },
-      prompt: function() {
+      prompt: function () {
         $uibModal.open({
           templateUrl: 'modules/elements/modals/elements-prompt.html',
           controller: 'BootstrapUiPromptModalController',
           keyboard: false,
           backdrop: 'static'
-        }).result.then(function(fullname) {
+        }).result.then(function (fullname) {
           _this.fullname = fullname;
         });
       },
-      draggable: function() {
+      draggable: function () {
         $uibModal.open({
           windowTemplateUrl: 'modules/elements/modals/elements-draggable-template.html',
           templateUrl: 'modules/elements/modals/elements-draggable.html',
@@ -50,7 +48,7 @@
         showWeeks: false,
         showButtonBar: false
       },
-      open: function($event) {
+      open: function ($event) {
         $event.preventDefault();
         $event.stopPropagation();
         _this.calendar.opened = true;
@@ -58,7 +56,7 @@
     };
 
     _this.time = {
-      menuClick: function(event) {
+      menuClick: function (event) {
         event.preventDefault();
       }
     };
@@ -88,13 +86,11 @@
         content: 'Dynamic content B',
         disabled: true
       }],
-      alert: function(event) {
-        $timeout(function() {
-          $window.alert('You\'ve selected the alert tab!');
+      alert: function (event) {
+        $timeout(function () {
+          $window.alert("You've selected the alert tab!");
         });
       }
     };
-
   });
-
 })();
