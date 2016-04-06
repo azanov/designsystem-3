@@ -1,9 +1,7 @@
-(function() {
-
+(function () {
   'use strict';
 
-  angular.module('pb.ds.feedback').controller('AlertsController', function($log, $uibModal) {
-
+  angular.module('pb.ds.feedback').controller('AlertsController', function ($log, $uibModal) {
     var _this = this;
 
     _this.transitoryAlert = {
@@ -13,7 +11,5 @@
       message: '<strong>Success!</strong> Data was saved.',
       messageClass: 'text-success'
     };
-
   });
-
 })();
