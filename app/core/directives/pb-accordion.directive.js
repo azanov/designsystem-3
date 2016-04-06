@@ -1,23 +1,19 @@
-(function() {
+;(function () {
+  'use strict'
 
-  'use strict';
-
-  angular.module('app').directive('pbAccordion', function() {
+  angular.module('app').directive('pbAccordion', function () {
     return {
       restrict: 'AE',
-      link: function postLink(scope, element) {
-
+      link: function postLink (scope, element) {
         $(element).find('.panel-default').on({
-          'show.bs.collapse': function(event) {
-            $(this).addClass('active');
+          'show.bs.collapse': function (event) {
+            $(this).addClass('active')
           },
-          'hide.bs.collapse': function(event) {
-            $(this).removeClass('active');
+          'hide.bs.collapse': function (event) {
+            $(this).removeClass('active')
           }
-        });
-
+        })
       }
-    };
-  });
-
-})();
+    }
+  })
+})()

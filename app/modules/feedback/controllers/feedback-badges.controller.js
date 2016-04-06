@@ -1,11 +1,7 @@
-(function() {
+;(function () {
+  'use strict'
 
-  'use strict';
-
-  angular.module('pb.ds.feedback').controller('BadgesController', function($log) {
-
-    var _this = this;
-
-  });
-
-})();
+  angular.module('pb.ds.feedback').controller('BadgesController', function ($log) {
+    var _this = this
+  })
+})()

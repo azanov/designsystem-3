@@ -1,16 +1,11 @@
-(function() {
+;(function () {
+  'use strict'
 
-  'use strict';
+  angular.module('app').controller('SectionLandingController', function ($log, NavigationResolve) {
+    var _this = this
 
-  angular.module('app').controller('SectionLandingController', function($log, NavigationResolve) {
+    _this.nav = NavigationResolve
 
-    var _this = this;
-
-    _this.nav = NavigationResolve;
-
-    //$log.debug(_this.nav[1].Web[0].children[0].children[0].children);
-
-
-  });
-
-})();
+    // $log.debug(_this.nav[1].Web[0].children[0].children[0].children)
+  })
+})()

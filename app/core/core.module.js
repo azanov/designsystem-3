@@ -1,7 +1,5 @@
-(function() {
-
-  'use strict';
-
+(function () {
+  'use strict'
   angular.module('pb.core', [
     'ngCookies',
     'ngAnimate',
@@ -35,6 +33,5 @@
     'slickCarousel',
     'ngFileUpload',
     angularDragula(angular)
-  ]);
-
-})();
+  ])
+})()

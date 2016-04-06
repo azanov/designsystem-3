@@ -1,13 +1,7 @@
-(function() {
+;(function () {
+  'use strict'
 
-  'use strict';
-
-  angular.module('pb.ds.principles').controller('PrinciplesController', function($log) {
-
-    var _this = this;
-
-
-
-  });
-
-})();
+  angular.module('pb.ds.principles').controller('PrinciplesController', function ($log) {
+    // var _this = this
+  })
+})()

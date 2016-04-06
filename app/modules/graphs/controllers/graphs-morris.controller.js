@@ -1,10 +1,8 @@
-(function() {
+;(function () {
+  'use strict'
 
-  'use strict';
-
-  angular.module('pb.ds.graphs').controller('MorrisController', function($log) {
-
-    var _this = this;
+  angular.module('pb.ds.graphs').controller('MorrisController', function ($log) {
+    var _this = this
 
     _this.donut = {
       data: [{
@@ -17,7 +15,7 @@
         label: 'Mail-Order Sales',
         value: 20
       }]
-    };
+    }
 
     _this.bar = {
       data: [{
@@ -52,7 +50,7 @@
       barX: 'y',
       barY: ['a', 'b'],
       barLabels: ['Series A', 'Series B']
-    };
+    }
 
     _this.line = {
       data: [{
@@ -87,7 +85,7 @@
       xKey: 'y',
       yKeys: ['a', 'b'],
       labels: ['Serie A', 'Serie B']
-    };
+    }
 
     _this.area = {
       data: [{
@@ -122,8 +120,6 @@
       xKey: 'y',
       yKeys: ['a', 'b'],
       labels: ['Serie A', 'Serie B']
-    };
-
-  });
-
-})();
+    }
+  })
+})()
