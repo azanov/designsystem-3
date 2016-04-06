@@ -40,7 +40,7 @@
     _this.dtOptions = DTOptionsBuilder
       .fromFnPromise(PeopleResolve.$promise)
       .withPaginationType('full_numbers')
-      .withDOM('<"row toolbar spacer-bottom-md"<"col-md-6 table-buttons"T><"col-md-6"f>>t<"row"<"col-md-5"i><"col-md-2 text-center"l><"col-md-5"p>>')
+      .withDOM('<"row toolbar spacer-bottom-md"<"col-md-6 table-buttons"B><"col-md-6"f>>t<"row"<"col-md-5"i><"col-md-2 text-center"l><"col-md-5"p>>')
       .withOption('language', {
         search: 'Search',
         lengthMenu: '_MENU_ per page',
@@ -83,12 +83,14 @@
       .withButtons([
         {
           text: '<i class="nc-icon-mini ui-1_simple-add"></i>',
+          className: 'btn btn-default',
           action: function (e, dt, node, config) {
             $window.alert('Handle adding a new record.')
           }
         },
         {
           text: '<i class="nc-icon-mini ui-1_trash-simple"></i>',
+          className: 'btn btn-default',
           action: function (e, dt, node, config) {
             $window.alert('Handle deleting a record.')
           }
