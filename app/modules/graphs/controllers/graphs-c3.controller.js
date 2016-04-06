@@ -1,12 +1,10 @@
-(function() {
-
+(function () {
   'use strict';
 
-  angular.module('pb.ds.graphs').controller('C3Controller', function($log) {
-
+  angular.module('pb.ds.graphs').controller('C3Controller', function ($log) {
     var _this = this;
 
-    //COLORS
+    // COLORS
     _this.colors = [
       '#0072B8',
       '#CF0989',
@@ -27,9 +25,7 @@
       '#E5F1F8'
     ];
 
-
-
-    //DONUT
+    // DONUT
     _this.donutColor5 = {
       options: {
         data: [
@@ -122,11 +118,7 @@
       }
     };
 
-
-
-
-
-    //PIE
+    // PIE
     _this.pieColor5 = {
       options: {
         data: [
@@ -172,7 +164,6 @@
         }
       }
     };
-
 
     _this.pieMono5 = {
       options: {
@@ -220,11 +211,7 @@
       }
     };
 
-
-
-
-
-    //BAR
+    // BAR
     _this.barColor8 = {
       options: {
         data: [
@@ -295,7 +282,6 @@
         }
       }
     };
-
 
     _this.barMono8 = {
       options: {
@@ -368,7 +354,6 @@
       }
     };
 
-
     _this.barColor5Multiple = {
       options: {
         data: [
@@ -432,7 +417,6 @@
         }
       }
     };
-
 
     _this.barMono5Multiple = {
       options: {
@@ -498,11 +482,7 @@
       }
     };
 
-
-
-
-
-    //GAUGE
+    // GAUGE
     _this.gauge = {
       options: {
         data: [
@@ -529,7 +509,7 @@
             expand: false,
             units: 'Progress',
             label: {
-              format: function(value, ratio) {
+              format: function (value, ratio) {
                 return value + ' %';
               }
             }
@@ -538,9 +518,7 @@
       }
     };
 
-
-
-    //AREA
+    // AREA
     _this.area = {
       options: {
         data: [
@@ -590,7 +568,5 @@
         }
       }
     };
-
   });
-
 })();

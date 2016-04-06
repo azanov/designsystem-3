@@ -1,12 +1,10 @@
-(function() {
-
+(function () {
   'use strict';
 
-  angular.module('pb.ds.graphs').controller('ChartjsController', function($log, $scope) {
-
+  angular.module('pb.ds.graphs').controller('ChartjsController', function ($log, $scope) {
     var _this = this;
 
-    //COLORS
+    // COLORS
     _this.colours = [
       '#0072B8',
       '#CF0989',
@@ -27,10 +25,8 @@
       '#E5F1F8'
     ];
 
-
-    //generate random data
-    _this.random = function RandomArray(max, limit) {
-
+    // generate random data
+    _this.random = function RandomArray (max, limit) {
       var arr = [];
 
       for (var i = 0; i < limit; i++) {
@@ -38,11 +34,9 @@
       }
 
       return arr;
-
     };
 
-
-    //BAR
+    // BAR
     _this.bar = {
       labels: ['2011', '2012', '2013', '2014', '2015'],
       data: [
@@ -54,13 +48,13 @@
       options: {
         scaleShowGridLines: false
       },
-      click: function(points, evt) {
+      click: function (points, evt) {
         _this.bar.data[0] = _this.random(100, 5);
         _this.bar.data[1] = _this.random(100, 5);
       }
     };
 
-    //LINE
+    // LINE
     _this.line = {
       labels: ['2013', '2014', '2015', '2016'],
       data: [
@@ -69,34 +63,31 @@
       ],
       series: ['Category One', 'Category Two'],
       colours: _this.colours,
-      click: function(points, evt) {
+      click: function (points, evt) {
         _this.line.data[0] = _this.random(60, 4);
         _this.line.data[1] = _this.random(90, 4);
       }
     };
 
-
-
-
-    //DONUT
+    // DONUT
     _this.donut = {
       labels: ['Category One', 'Category Two', 'Category Three', 'Category Four', 'Category Five'],
       data: [35, 24, 22, 12, 7],
-      click: function(points, evt) {
+      click: function (points, evt) {
         _this.donut.data = _this.random(100, 5);
       }
     };
 
-    //PIE
+    // PIE
     _this.pie = {
       labels: ['Category One', 'Category Two', 'Category Three', 'Category Four', 'Category Five'],
       data: [35, 24, 22, 12, 7],
-      click: function(points, evt) {
+      click: function (points, evt) {
         _this.pie.data = _this.random(100, 5);
       }
     };
 
-    //RADAR
+    // RADAR
     _this.radar = {
       labels: ['Category One', 'Category Two', 'Category Three', 'Category Four', 'Category Five'],
       data: [
@@ -105,23 +96,21 @@
       ],
       colours: _this.colours,
       series: ['2014', '2015'],
-      click: function(points, evt) {
+      click: function (points, evt) {
         _this.radar.data[0] = _this.random(60, 5);
         _this.radar.data[1] = _this.random(90, 5);
       }
     };
 
-    //POLAR
+    // POLAR
     _this.polar = {
       labels: ['Category One', 'Category Two', 'Category Three', 'Category Four', 'Category Five'],
       data: [65, 59, 90, 81, 56],
       colours: _this.colours,
       series: ['2014', '2015'],
-      click: function(points, evt) {
+      click: function (points, evt) {
         _this.polar.data = _this.random(100, 5);
       }
     };
-
   });
-
 })();

@@ -1,14 +1,12 @@
-(function() {
-
+(function () {
   'use strict';
 
-  angular.module('pb.ds.foundation').controller('IconographyController', function($log, IconsResolve) {
-
+  angular.module('pb.ds.foundation').controller('IconographyController', function ($log, IconsResolve) {
     var _this = this;
 
     _this.faIcons = IconsResolve;
 
-    _this.pbIcons =  [
+    _this.pbIcons = [
       'addressbook',
       'addtocatalog',
       'addtofolder',
@@ -53,7 +51,5 @@
       'ui-1_pencil',
       'ui-1_settings-gear-64'
     ];
-
   });
-
 })();

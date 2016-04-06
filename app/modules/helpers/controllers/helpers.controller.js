@@ -1,9 +1,7 @@
-(function() {
-
+(function () {
   'use strict';
 
-  angular.module('pb.ds.helpers').controller('HelpersController', function($log) {
-
+  angular.module('pb.ds.helpers').controller('HelpersController', function ($log) {
     var _this = this;
 
     _this.spacers = {
@@ -12,11 +10,10 @@
         selected: 'spacer-top-sm (20px)'
       },
       bottom: {
-        values: ['no bottom spacer', 'spacer-bottom-xs (10px)','spacer-bottom-sm (20px)', 'spacer-bottom-md (30px)', 'spacer-bottom-lg (40px)', 'spacer-bottom-xl (50px)'],
+        values: ['no bottom spacer', 'spacer-bottom-xs (10px)', 'spacer-bottom-sm (20px)', 'spacer-bottom-md (30px)', 'spacer-bottom-lg (40px)', 'spacer-bottom-xl (50px)'],
         selected: 'spacer-bottom-sm (20px)'
       }
     };
-
 
     _this.backgrounds = [
       'bg-header-color',
@@ -109,7 +106,5 @@
       'text-bg4',
       'text-bg5'
     ];
-
   });
-
 })();
