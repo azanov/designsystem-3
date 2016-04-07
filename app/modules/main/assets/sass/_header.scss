@@ -62,7 +62,7 @@ header:not(.demo) {
   }
 
   .dropdown-menu {
-    right: auto;
+//    right: auto; // this breaks menus
   }
   .dropdown-toggle {
     height: 50px;
