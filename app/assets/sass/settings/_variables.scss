@@ -387,17 +387,17 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 //== Container sizes
 
 // we have added a 40px margin to the container-fluid
-.container-fluid {
-  padding-left: 40px;
-  padding-right: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  // which needs to be re-set for phone
-  @media (max-width: $screen-sm) {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-}
+// .container-fluid {
+//   padding-left: 40px;
+//   padding-right: 40px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   // which needs to be re-set for phone
+//   @media (max-width: $screen-sm) {
+//       padding-left: 15px;
+//       padding-right: 15px;
+//     }
+// }
 
 
 //## Define the maximum width of `.container` for different screen sizes.

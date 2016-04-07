@@ -1,9 +1,9 @@
 (function () {
   'use strict';
 
-  angular.module('pb.ds.elements').controller('BootstrapUiDraggableModalController', function ($scope, $modalInstance) {
+  angular.module('pb.ds.elements').controller('BootstrapUiDraggableModalController', function ($scope, $uibModalInstance) {
     $scope.close = function () {
-      $modalInstance.close();
+      $uibModalInstance.close();
     };
   });
 })();
