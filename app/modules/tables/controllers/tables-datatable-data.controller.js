@@ -1,9 +1,9 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.tables').controller('TablesDataController',
     function ($log) {
-      var _this = this
+      var _this = this;
 
       _this.rowdata = [
         {
@@ -24,13 +24,13 @@
           status: 'Status',
           amount: 'Amount'
         }
-      ]
+      ];
 
       _this.rowclick = function (item, event) {
-        event.preventDefault()
-        event.stopPropagation()
-        item.selected = !item.selected
-      }
+        event.preventDefault();
+        event.stopPropagation();
+        item.selected = !item.selected;
+      };
 
       _this.xeditable = {
         data: [
@@ -45,6 +45,6 @@
           }
         ],
         carriers: ['USPS', 'FedEx']
-      }
-    })
-})()
+      };
+    });
+})();

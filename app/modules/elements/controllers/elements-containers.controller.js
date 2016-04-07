@@ -1,8 +1,8 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.elements').controller('ContainersController', function ($log) {
-    var _this = this
+    var _this = this;
 
     _this.imageGallery = {
       items: [
@@ -55,8 +55,8 @@
       selected: 0,
       selectedImage: 'pb_cls_box_157317098',
       click: function (item, index) {
-        _this.imageGallery.selectedImage = item.imageName
-        _this.imageGallery.selected = index
+        _this.imageGallery.selectedImage = item.imageName;
+        _this.imageGallery.selected = index;
       },
       settings: {
         infinite: true,
@@ -80,7 +80,7 @@
           }
         ]
       }
-    }
+    };
 
     _this.itemGallery = {
       items: [
@@ -147,6 +147,6 @@
           }
         ]
       }
-    }
-  })
-})()
+    };
+  });
+})();

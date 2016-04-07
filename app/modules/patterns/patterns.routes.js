@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.patterns').config(function ($stateProvider) {
     $stateProvider.state('patterns', {
@@ -324,6 +324,6 @@
         url: '/patterns/404',
         templateUrl: 'modules/patterns/templates/404.html',
         controller: '404Controller'
-      })
-  })
-})()
+      });
+  });
+})();

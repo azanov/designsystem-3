@@ -1,9 +1,9 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.tables').controller('TablesSimpleController', function ($log, PeopleResolve) {
-    var _this = this
+    var _this = this;
 
-    _this.people = PeopleResolve
-  })
-})()
+    _this.people = PeopleResolve;
+  });
+})();

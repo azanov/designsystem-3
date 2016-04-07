@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.helpers').config(function ($stateProvider) {
     $stateProvider.state('helpers', {
@@ -11,6 +11,6 @@
         access: 'public',
         bodyClass: 'helpers'
       }
-    })
-  })
-})()
+    });
+  });
+})();

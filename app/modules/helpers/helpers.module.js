@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
-  angular.module('pb.ds.helpers', ['ui.router'])
-})()
+  angular.module('pb.ds.helpers', ['ui.router']);
+})();

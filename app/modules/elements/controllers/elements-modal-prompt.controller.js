@@ -1,15 +1,15 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
-  angular.module('pb.ds.elements').controller('BootstrapUiPromptModalController', function ($scope, $modalInstance) {
-    $scope.fullname = ''
+  angular.module('pb.ds.elements').controller('BootstrapUiPromptModalController', function ($scope, $uibModalInstance) {
+    $scope.fullname = '';
 
     $scope.close = function () {
-      $modalInstance.close()
-    }
+      $uibModalInstance.close();
+    };
 
     $scope.save = function () {
-      $modalInstance.close($scope.form.fullname.$modelValue)
-    }
-  })
-})()
+      $uibModalInstance.close($scope.form.fullname.$modelValue);
+    };
+  });
+})();

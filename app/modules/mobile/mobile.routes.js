@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.mobile').config(function ($stateProvider) {
     $stateProvider.state('mobile', {
@@ -115,6 +115,6 @@
       .state('mobile.maps', {
         url: '/maps',
         templateUrl: 'modules/mobile/templates/mobile-maps.html'
-      })
-  })
-})()
+      });
+  });
+})();

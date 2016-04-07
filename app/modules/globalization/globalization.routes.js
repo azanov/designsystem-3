@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.globalization').config(function ($stateProvider) {
     $stateProvider.state('globalization', {
@@ -31,15 +31,15 @@
             controller: 'AngularTranslateController as translate',
             resolve: {
               translate: function ($translatePartialLoader, $translate) {
-                $translatePartialLoader.addPart('modules/globalization/i18n')
-                return $translate.refresh() // returns a promise see https://github.com/angular-translate/angular-translate/issues/197
+                $translatePartialLoader.addPart('modules/globalization/i18n');
+                return $translate.refresh(); // returns a promise see https://github.com/angular-translate/angular-translate/issues/197
               },
               languages: function (languageFactory) {
-                return languageFactory.get()
+                return languageFactory.get();
               }
             }
           }
         }
-      })
-  })
-})()
+      });
+  });
+})();

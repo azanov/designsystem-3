@@ -1,8 +1,8 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.splitview').controller('SplitviewController', function ($log) {
-    var _this = this
+    var _this = this;
 
     _this.leftnav = [{
       'label': 'Appetizers',
@@ -68,6 +68,6 @@
         'label': 'Cannoli',
         'value': ''
       }]
-    }]
-  })
-})()
+    }];
+  });
+})();

@@ -1,15 +1,15 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.elements').controller('UiBootstrapController', function ($log, $uibModal, $timeout, $window) {
-    var _this = this
+    var _this = this;
 
     _this.modals = {
       simple: function () {
         $uibModal.open({
           templateUrl: 'modules/components/modals/elements-simple.html',
           controller: 'BootstrapUiSimpleModalController'
-        })
+        });
       },
       modal: function () {
         $uibModal.open({
@@ -17,7 +17,7 @@
           controller: 'BootstrapUiModalController',
           keyboard: false,
           backdrop: 'static'
-        })
+        });
       },
       prompt: function () {
         $uibModal.open({
@@ -26,8 +26,8 @@
           keyboard: false,
           backdrop: 'static'
         }).result.then(function (fullname) {
-          _this.fullname = fullname
-        })
+          _this.fullname = fullname;
+        });
       },
       draggable: function () {
         $uibModal.open({
@@ -36,9 +36,9 @@
           controller: 'BootstrapUiDraggableModalController',
           keyboard: false,
           backdrop: 'static'
-        })
+        });
       }
-    }
+    };
 
     _this.calendar = {
       format: 'MMMM dd, yyyy',
@@ -49,17 +49,17 @@
         showButtonBar: false
       },
       open: function ($event) {
-        $event.preventDefault()
-        $event.stopPropagation()
-        _this.calendar.opened = true
+        $event.preventDefault();
+        $event.stopPropagation();
+        _this.calendar.opened = true;
       }
-    }
+    };
 
     _this.time = {
       menuClick: function (event) {
-        event.preventDefault()
+        event.preventDefault();
       }
-    }
+    };
 
     _this.tabs = {
       tabset01: [{
@@ -88,9 +88,9 @@
       }],
       alert: function (event) {
         $timeout(function () {
-          $window.alert("You've selected the alert tab!")
-        })
+          $window.alert("You've selected the alert tab!");
+        });
       }
-    }
-  })
-})()
+    };
+  });
+})();

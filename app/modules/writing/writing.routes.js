@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.writing').config(function ($stateProvider) {
     $stateProvider.state('writing', {
@@ -11,6 +11,6 @@
         access: 'public',
         bodyClass: 'writing'
       }
-    })
-  })
-})()
+    });
+  });
+})();

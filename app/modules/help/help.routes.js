@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.help').config(function ($stateProvider) {
     $stateProvider.state('help', {
@@ -11,6 +11,6 @@
         access: 'public',
         bodyClass: 'help'
       }
-    })
-  })
-})()
+    });
+  });
+})();

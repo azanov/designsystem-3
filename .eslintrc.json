@@ -2,7 +2,7 @@
     "env": {
       "browser": 1
     },
-    "extends": "standard",
+    "extends": "semistandard",
     "plugins": [
         "standard","angular"
     ],

@@ -1,10 +1,10 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('app').controller('FooterController', function () {
-    var _this = this
+    var _this = this;
 
-    var date = new Date()
-    _this.year = date.getFullYear()
-  })
-})()
+    var date = new Date();
+    _this.year = date.getFullYear();
+  });
+})();

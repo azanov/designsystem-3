@@ -1,5 +1,5 @@
 (function () {
-  'use strict'
+  'use strict';
   angular.module('pb.core', [
     'ngCookies',
     'ngAnimate',
@@ -24,7 +24,7 @@
     'infinite-scroll',
     'datatables',
     'datatables.bootstrap',
-    'datatables.buttons',
+    'datatables.tabletools',
     'xeditable',
     'angularChart',
     'duScroll',
@@ -33,5 +33,5 @@
     'slickCarousel',
     'ngFileUpload',
     angularDragula(angular)
-  ])
-})()
+  ]);
+})();

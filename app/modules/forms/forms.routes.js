@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.forms').config(function ($stateProvider) {
     $stateProvider.state('forms', {
@@ -86,6 +86,6 @@
           access: 'public',
           bodyClass: 'forms help'
         }
-      })
-  })
-})()
+      });
+  });
+})();

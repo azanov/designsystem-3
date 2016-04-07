@@ -1,7 +1,7 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.writing').controller('WritingController', function ($log) {
-    // var _this = this
-  })
-})()
+    // var _this = this;
+  });
+})();

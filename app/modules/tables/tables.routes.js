@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.tables').config(function ($stateProvider) {
     $stateProvider.state('tables', {
@@ -28,7 +28,7 @@
             controller: 'TablesSimpleController as simple',
             resolve: {
               PeopleResolve: function ($log, MockDataFactory) {
-                return MockDataFactory.query({filename: 'people'})
+                return MockDataFactory.query({filename: 'people'});
               }
             }
           },
@@ -55,7 +55,7 @@
         controller: 'TablesDatatableController as datatable',
         resolve: {
           PeopleResolve: function ($log, MockDataFactory) {
-            return MockDataFactory.query({filename: 'ds_users'})
+            return MockDataFactory.query({filename: 'ds_users'});
           }
         },
         data: {
@@ -71,7 +71,7 @@
         controller: 'TablesDatatableInfiniteScrollController as datatable',
         resolve: {
           PeopleResolve: function ($log, MockDataFactory) {
-            return MockDataFactory.query({filename: 'ds_users'})
+            return MockDataFactory.query({filename: 'ds_users'});
           }
         },
         data: {
@@ -87,7 +87,7 @@
         controller: 'TablesDatatablesNetController as datatablesnet',
         resolve: {
           PeopleResolve: function ($log, MockDataFactory) {
-            return MockDataFactory.query({filename: 'ds_users'})
+            return MockDataFactory.query({filename: 'ds_users'});
           }
         },
         data: {
@@ -103,7 +103,7 @@
         controller: 'TablesFacetedSearchController as faceted',
         resolve: {
           PeopleResolve: function ($log, MockDataFactory) {
-            return MockDataFactory.query({filename: 'ds_users'})
+            return MockDataFactory.query({filename: 'ds_users'});
           }
         },
         data: {
@@ -111,6 +111,6 @@
           access: 'public',
           bodyClass: 'splitview splitview-white-open'
         }
-      })
-  })
-})()
+      });
+  });
+})();

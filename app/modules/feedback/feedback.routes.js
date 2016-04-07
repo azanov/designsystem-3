@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.feedback').config(function ($stateProvider) {
     $stateProvider.state('feedback', {
@@ -46,6 +46,6 @@
         url: '/headermessage',
         templateUrl: 'modules/feedback/templates/feedback-header-message.html',
         controller: 'HeaderMessageController as message'
-      })
-  })
-})()
+      });
+  });
+})();

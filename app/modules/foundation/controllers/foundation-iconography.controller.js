@@ -1,10 +1,10 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.foundation').controller('IconographyController', function ($log, IconsResolve) {
-    var _this = this
+    var _this = this;
 
-    _this.faIcons = IconsResolve
+    _this.faIcons = IconsResolve;
 
     _this.pbIcons = [
       'addressbook',
@@ -35,7 +35,7 @@
       'tile',
       'treeview',
       'admin'
-    ]
+    ];
 
     _this.ncIcons = [
       'arrows-1_cloud-upload-96',
@@ -50,6 +50,6 @@
       'shopping_cart',
       'ui-1_pencil',
       'ui-1_settings-gear-64'
-    ]
-  })
-})()
+    ];
+  });
+})();

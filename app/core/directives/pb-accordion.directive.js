@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('app').directive('pbAccordion', function () {
     return {
@@ -7,13 +7,13 @@
       link: function postLink (scope, element) {
         $(element).find('.panel-default').on({
           'show.bs.collapse': function (event) {
-            $(this).addClass('active')
+            $(this).addClass('active');
           },
           'hide.bs.collapse': function (event) {
-            $(this).removeClass('active')
+            $(this).removeClass('active');
           }
-        })
+        });
       }
-    }
-  })
-})()
+    };
+  });
+})();

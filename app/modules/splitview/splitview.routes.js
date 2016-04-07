@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.splitview').config(function ($stateProvider) {
     $stateProvider.state('splitview', {
@@ -87,6 +87,6 @@
           access: 'public',
           bodyClass: 'splitview splitview-white-open'
         }
-      })
-  })
-})()
+      });
+  });
+})();

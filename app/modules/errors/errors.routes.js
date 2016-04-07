@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.errors').config(function ($stateProvider) {
     $stateProvider.state('errors', {
@@ -191,6 +191,6 @@
           access: 'public',
           bodyClass: 'errors errors-unplanned-maintenance errors-centered'
         }
-      })
-  })
-})()
+      });
+  });
+})();

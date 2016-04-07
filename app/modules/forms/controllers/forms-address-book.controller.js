@@ -1,7 +1,7 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.forms').controller('AddressBookController', function ($log) {
-    // var _this = this
-  })
-})()
+    // var _this = this;
+  });
+})();

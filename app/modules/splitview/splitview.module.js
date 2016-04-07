@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
-  angular.module('pb.ds.splitview', ['ui.router'])
-})()
+  angular.module('pb.ds.splitview', ['ui.router']);
+})();

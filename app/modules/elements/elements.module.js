@@ -1,7 +1,7 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
-  angular.module('pb.ds.elements', ['ui.router'])
+  angular.module('pb.ds.elements', ['ui.router']);
 
   // TOASTR CONFIG
   angular.module('pb.ds.elements').config(function (toastrConfig) {
@@ -36,6 +36,6 @@
     // timeOut: 5000,
     // titleClass: 'toast-title',
     // toastClass: 'toast'
-    })
-  })
-})()
+    });
+  });
+})();

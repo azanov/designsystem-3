@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.principles').config(function ($stateProvider) {
     $stateProvider.state('principles', {
@@ -50,6 +50,6 @@
             }
           }
         }
-      })
-  })
-})()
+      });
+  });
+})();

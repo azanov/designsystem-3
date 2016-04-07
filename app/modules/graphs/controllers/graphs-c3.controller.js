@@ -1,8 +1,8 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.graphs').controller('C3Controller', function ($log) {
-    var _this = this
+    var _this = this;
 
     // COLORS
     _this.colors = [
@@ -14,7 +14,7 @@
       '#00B140',
       '#EDB700',
       '#3E53A4'
-    ]
+    ];
 
     _this.mono = [
       '#00436E',
@@ -23,7 +23,7 @@
       '#66AAD4',
       '#CCE3F1',
       '#E5F1F8'
-    ]
+    ];
 
     // DONUT
     _this.donutColor5 = {
@@ -70,7 +70,7 @@
           }
         }
       }
-    }
+    };
 
     _this.donutMono5 = {
       options: {
@@ -116,7 +116,7 @@
           }
         }
       }
-    }
+    };
 
     // PIE
     _this.pieColor5 = {
@@ -163,7 +163,7 @@
           }
         }
       }
-    }
+    };
 
     _this.pieMono5 = {
       options: {
@@ -209,7 +209,7 @@
           }
         }
       }
-    }
+    };
 
     // BAR
     _this.barColor8 = {
@@ -281,7 +281,7 @@
           }
         }
       }
-    }
+    };
 
     _this.barMono8 = {
       options: {
@@ -352,7 +352,7 @@
           }
         }
       }
-    }
+    };
 
     _this.barColor5Multiple = {
       options: {
@@ -416,7 +416,7 @@
           }
         }
       }
-    }
+    };
 
     _this.barMono5Multiple = {
       options: {
@@ -480,7 +480,7 @@
           }
         }
       }
-    }
+    };
 
     // GAUGE
     _this.gauge = {
@@ -510,13 +510,13 @@
             units: 'Progress',
             label: {
               format: function (value, ratio) {
-                return value + ' %'
+                return value + ' %';
               }
             }
           }
         }
       }
-    }
+    };
 
     // AREA
     _this.area = {
@@ -567,6 +567,6 @@
           }
         }
       }
-    }
-  })
-})()
+    };
+  });
+})();

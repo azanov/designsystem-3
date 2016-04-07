@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('app').directive('pbDsFooter', function () {
     return {
@@ -7,6 +7,6 @@
       templateUrl: 'modules/main/templates/footer.html',
       controller: 'FooterController as footer',
       bindToController: true
-    }
-  })
-})()
+    };
+  });
+})();

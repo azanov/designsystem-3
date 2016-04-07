@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.graphs').config(function ($stateProvider) {
     $stateProvider.state('graphs', {
@@ -29,13 +29,12 @@
             controller: 'ChartjsController as chartjs'
           }
         }
-      })
+      });
 
       // .state('graphs.morris', {
       //   url: '/morris',
       //   templateUrl: 'modules/graphs/templates/graphs-morris.html',
       //   controller: 'MorrisController as morris'
       // })
-
-  })
-})()
+  });
+})();

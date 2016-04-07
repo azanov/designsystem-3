@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.resources').config(function ($stateProvider) {
     $stateProvider.state('resources', {
@@ -32,6 +32,6 @@
       .state('resources.roadmap', {
         url: '/roadmap',
         templateUrl: 'modules/resources/templates/resources-roadmap.html'
-      })
-  })
-})()
+      });
+  });
+})();

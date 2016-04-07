@@ -1,9 +1,9 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.tables').controller('TablesOverviewController',
     function ($log, moment) {
-      var _this = this
+      var _this = this;
 
       _this.table = {
         data: [
@@ -24,47 +24,47 @@
           type: 'first_name',
           reverse: false,
           change: function (key) {
-            _this.table.sort.type = key
-            _this.table.sort.reverse = !_this.table.sort.reverse
+            _this.table.sort.type = key;
+            _this.table.sort.reverse = !_this.table.sort.reverse;
           }
         },
         selectedRows: [],
         selectRow: function (data, event) {
-          event.stopPropagation()
+          event.stopPropagation();
 
           if (_this.table.selectedRows.indexOf(data.id) === -1) {
-            _this.table.selectedRows.push(data.id)
-            data.selected = true
+            _this.table.selectedRows.push(data.id);
+            data.selected = true;
           } else {
-            _this.table.selectedRows.splice(_this.table.selectedRows.indexOf(data.id), 1)
-            _this.table.allRowsSelected = false
-            data.selected = false
+            _this.table.selectedRows.splice(_this.table.selectedRows.indexOf(data.id), 1);
+            _this.table.allRowsSelected = false;
+            data.selected = false;
           }
         },
         selectAllRows: function () {
-          var checked = !_this.table.selectAllFilteredRows()
+          var checked = !_this.table.selectAllFilteredRows();
 
-          _this.table.selectedRows = []
+          _this.table.selectedRows = [];
 
           angular.forEach(_this.table.dataFiltered, function (value, key) {
-            value.selected = checked
+            value.selected = checked;
 
             if (checked) {
-              _this.table.selectedRows.push(value.id)
+              _this.table.selectedRows.push(value.id);
             }
-          })
+          });
         },
         selectAllFilteredRows: function () {
-          var selected = 0
+          var selected = 0;
 
           angular.forEach(_this.table.dataFiltered, function (value, key) {
             if (value.selected) {
-              selected++
+              selected++;
             }
-          })
+          });
 
-          return (selected !== 0 && selected === _this.table.dataFiltered.length)
+          return (selected !== 0 && selected === _this.table.dataFiltered.length);
         }
-      }
-    })
-})()
+      };
+    });
+})();

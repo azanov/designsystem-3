@@ -1,42 +1,42 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.elements').controller('InputsController', function ($log, CountriesResolve, PeopleResolve, moment, $http) {
-    var _this = this
+    var _this = this;
 
     // numeric stepper
     _this.numericStepper = {
       limit: [0],
       wheelStep: 1,
       arrowStep: 1
-    }
+    };
 
-    _this.samplePeople = PeopleResolve
+    _this.samplePeople = PeopleResolve;
 
     // controls the "add another row" functionality
-    _this.choices1 = [{id: 'choice1'}]
-    _this.choices2 = [{id: 'choice1', num: '222-555-3456' }]
-    _this.choices3 = [{id: 'choice1'}]
-    _this.choices4 = [{id: 'choice1', num: '222-555-3456' }]
+    _this.choices1 = [{id: 'choice1'}];
+    _this.choices2 = [{id: 'choice1', num: '222-555-3456'}];
+    _this.choices3 = [{id: 'choice1'}];
+    _this.choices4 = [{id: 'choice1', num: '222-555-3456'}];
 
-    _this.maxChoices = 3
+    _this.maxChoices = 3;
 
     _this.addNewChoice = function (arr) {
-      var newItemNo = arr.length + 1
+      var newItemNo = arr.length + 1;
       arr.push({
         id: 'choice' + newItemNo
-      })
-    }
+      });
+    };
 
     _this.showAddChoice = function (choice, arr) {
-      return arr.length !== _this.maxChoices
-    }
+      return arr.length !== _this.maxChoices;
+    };
 
     // for the date picker with calendar button working
     _this.openPicker = function (which) {
-      var item = '#' + which
-      $(item).data('daterangepicker').show()
-    }
+      var item = '#' + which;
+      $(item).data('daterangepicker').show();
+    };
 
     // selectize
     _this.peopleSelect = {
@@ -46,13 +46,13 @@
         searchField: ['name'],
         render: {
           option: function (item, escape) {
-            var html = ''
-            html += '<div>'
-            html += '<div style="font-size: 16px;">' + item.name + '</div>'
-            html += '<div style="">' + item.email + '</div>'
-            html += '</div>'
+            var html = '';
+            html += '<div>';
+            html += '<div style="font-size: 16px;">' + item.name + '</div>';
+            html += '<div style="">' + item.email + '</div>';
+            html += '</div>';
 
-            return html
+            return html;
           }
         }
       },
@@ -88,7 +88,7 @@
         name: 'Nicolás',
         email: 'nicole@email.com'
       }]
-    }
+    };
 
     // selectize country selects (all on page)
     _this.countrySelect = {
@@ -99,7 +99,7 @@
       },
       selected: {},
       countries: CountriesResolve
-    }
+    };
 
     _this.multiCountrySelect = {
       options: {
@@ -110,7 +110,7 @@
       },
       selected: {},
       countries: CountriesResolve
-    }
+    };
 
     // ngTagsInput
     // _this.tags = [
@@ -118,25 +118,25 @@
     //   { text: 'some' },
     //   { text: 'cool' },
     //   { text: 'tags' }
-    // ]
+    // ];
 
     _this.loadTags = function ($query) {
-      // return $http.get('/tags?query=' + query)
-      // return $http.get('core/data/countries.json')
+      // return $http.get('/tags?query=' + query);
+      // return $http.get('core/data/countries.json');
 
-      return $http.get('core/data/countries.json', { cache: true}).then(function (response) {
-        var countries = response.data
+      return $http.get('core/data/countries.json', {cache: true}).then(function (response) {
+        var countries = response.data;
         return countries.filter(function (country) {
-          return country.name.toLowerCase().indexOf($query.toLowerCase()) != -1
-        })
-      })
-    }
+          return country.name.toLowerCase().indexOf($query.toLowerCase()) !== -1;
+        });
+      });
+    };
 
     // SWITCHES
-    _this.switchStatus1 = false
-    _this.switchStatus2 = false
-    _this.switchStatus3 = true
-    _this.switchStatus4 = false
+    _this.switchStatus1 = false;
+    _this.switchStatus2 = false;
+    _this.switchStatus3 = true;
+    _this.switchStatus4 = false;
 
     _this.singlepicker = {
       date: {
@@ -149,7 +149,7 @@
           format: 'MM/DD/YYYY'
         }
       }
-    }
+    };
 
     _this.daterangepicker = {
       date: {
@@ -171,7 +171,7 @@
           'Year to date': [moment().startOf('year'), moment()]
         }
       }
-    }
+    };
 
     _this.daterangepicker2 = {
       date: {
@@ -190,7 +190,7 @@
           'Year to date': [moment().startOf('year'), moment()]
         }
       }
-    }
+    };
 
     _this.daterangepicker3 = {
       date: {
@@ -210,23 +210,23 @@
         }
       },
       displayDate: function (start, end) {
-        var startDate = start || _this.daterangepicker3.date.startDate
-        var endDate = end || _this.daterangepicker3.date.endDate
+        var startDate = start || _this.daterangepicker3.date.startDate;
+        var endDate = end || _this.daterangepicker3.date.endDate;
 
-        var dateDiff = endDate.diff(startDate, 'days')
-        var result = ''
+        var dateDiff = endDate.diff(startDate, 'days');
+        var result = '';
 
         if (dateDiff === 0) {
-          result = 'Today ' + moment(startDate).format('MM/DD/YYYY')
+          result = 'Today ' + moment(startDate).format('MM/DD/YYYY');
         } else if (dateDiff === 6) {
-          result = 'Last 7 days'
+          result = 'Last 7 days';
         } else {
-          result = 'From ' + moment(startDate).format('MM/DD/YYYY') + ' to ' + moment(endDate).format('MM/DD/YYYY')
+          result = 'From ' + moment(startDate).format('MM/DD/YYYY') + ' to ' + moment(endDate).format('MM/DD/YYYY');
         }
 
-        return result
+        return result;
       }
-    }
+    };
 
     _this.customRange = {
       items: [
@@ -265,36 +265,36 @@
       init: function () {
         angular.forEach(_this.customRange.items, function (value, index) {
           if (value.selected === true) {
-            _this.customRange.selected = value
+            _this.customRange.selected = value;
 
-            _this.customRange.start.date.startDate = value.start
-            _this.customRange.start.date.endDate = value.start
+            _this.customRange.start.date.startDate = value.start;
+            _this.customRange.start.date.endDate = value.start;
 
-            _this.customRange.end.date.startDate = value.end
-            _this.customRange.end.date.endDate = value.end
-            return
+            _this.customRange.end.date.startDate = value.end;
+            _this.customRange.end.date.endDate = value.end;
+            return;
           }
-        })
+        });
       },
       click: function (item) {
         angular.forEach(_this.customRange.items, function (value, index) {
-          value.selected = false
-        })
+          value.selected = false;
+        });
 
-        item.selected = true
+        item.selected = true;
 
         if (item.isCustom) {
-          item.start = _this.customRange.selected.start
-          item.end = _this.customRange.selected.end
+          item.start = _this.customRange.selected.start;
+          item.end = _this.customRange.selected.end;
         }
 
-        _this.customRange.start.date.startDate = item.start
-        _this.customRange.start.date.endDate = item.start
+        _this.customRange.start.date.startDate = item.start;
+        _this.customRange.start.date.endDate = item.start;
 
-        _this.customRange.end.date.startDate = item.end
-        _this.customRange.end.date.endDate = item.end
+        _this.customRange.end.date.startDate = item.end;
+        _this.customRange.end.date.endDate = item.end;
 
-        _this.customRange.selected = item
+        _this.customRange.selected = item;
       },
       end: {
         date: {
@@ -335,6 +335,6 @@
         }
       }
 
-    }
-  })
-})()
+    };
+  });
+})();

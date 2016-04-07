@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('app').directive('pbDatetimepicker', function () {
     return {
@@ -9,8 +9,8 @@
         ngModel: '='
       },
       link: function postLink (scope, element, attrs, ngModel) {
-        element.datetimepicker(scope.ngModel)
+        element.datetimepicker(scope.ngModel);
       }
-    }
-  })
-})()
+    };
+  });
+})();

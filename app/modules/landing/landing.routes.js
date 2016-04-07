@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.landing').config(function ($stateProvider) {
     $stateProvider.state('landing', {
@@ -8,7 +8,7 @@
       controller: 'LandingController as landing',
       resolve: {
         NavigationResolve: function ($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'navigation'})
+          return MockDataFactory.query({filename: 'navigation'});
         }
       },
       data: {
@@ -70,6 +70,6 @@
           access: 'public',
           bodyClass: 'landing landing-slider'
         }
-      })
-  })
-})()
+      });
+  });
+})();

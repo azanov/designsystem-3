@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.home').config(function ($stateProvider) {
     $stateProvider.state('home', {
@@ -8,7 +8,7 @@
       controller: 'HomeController as home',
       resolve: {
         NavigationResolve: function ($log, MockDataFactory) {
-          return MockDataFactory.query({filename: 'navigation'})
+          return MockDataFactory.query({filename: 'navigation'});
         }
       },
       data: {
@@ -16,6 +16,6 @@
         access: 'public',
         bodyClass: 'home'
       }
-    })
-  })
-})()
+    });
+  });
+})();

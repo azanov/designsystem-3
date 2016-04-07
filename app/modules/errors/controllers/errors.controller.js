@@ -1,7 +1,7 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.errors').controller('ErrorsController', function ($log) {
-    // var _this = this
-  })
-})()
+  //  var _this = this;
+  });
+})();

@@ -1,9 +1,9 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.tables').controller('TablesDatatableController',
     function ($log, PeopleResolve, moment) {
-      var _this = this
+      var _this = this;
 
       _this.table = {
         data: PeopleResolve,
@@ -11,8 +11,8 @@
           type: 'first_name',
           reverse: false,
           change: function (key) {
-            _this.table.sort.type = key
-            _this.table.sort.reverse = !_this.table.sort.reverse
+            _this.table.sort.type = key;
+            _this.table.sort.reverse = !_this.table.sort.reverse;
           }
         },
         paging: {
@@ -24,66 +24,66 @@
           max: 'Infinity'
         },
         showDetails: function (item, event) {
-          event.stopPropagation()
-          item.showDetails = !item.showDetails
+          event.stopPropagation();
+          item.showDetails = !item.showDetails;
         },
         selectEmail: function (item, event) {
-          event.preventDefault()
-          event.stopPropagation()
+          event.preventDefault();
+          event.stopPropagation();
         },
         showMore: function (item, bool, event) {
-          event.preventDefault()
-          event.stopPropagation()
+          event.preventDefault();
+          event.stopPropagation();
 
           if (bool) {
-            item.limit = _this.table.groups.max
-            return
+            item.limit = _this.table.groups.max;
+            return;
           } else {
-            item.limit = undefined
+            item.limit = undefined;
           }
         },
         search: {
 
         },
         searchClear: function () {
-          _this.table.search.$ = ''
+          _this.table.search.$ = '';
         },
         selectedRows: [],
         selectRow: function (data, $event) {
-          $event.stopPropagation()
+          $event.stopPropagation();
 
           if (_this.table.selectedRows.indexOf(data.id) === -1) {
-            _this.table.selectedRows.push(data.id)
-            data.selected = true
+            _this.table.selectedRows.push(data.id);
+            data.selected = true;
           } else {
-            _this.table.selectedRows.splice(_this.table.selectedRows.indexOf(data.id), 1)
-            _this.table.allRowsSelected = false
-            data.selected = false
+            _this.table.selectedRows.splice(_this.table.selectedRows.indexOf(data.id), 1);
+            _this.table.allRowsSelected = false;
+            data.selected = false;
           }
         },
         selectAllRows: function () {
-          var checked = !_this.table.selectAllFilteredRows()
+          var checked = !_this.table.selectAllFilteredRows();
 
-          _this.table.selectedRows = []
+          _this.table.selectedRows = [];
 
           angular.forEach(_this.table.dataFiltered, function (value, key) {
-            value.selected = checked
+            value.selected = checked;
 
             if (checked) {
-              _this.table.selectedRows.push(value.id)
+              _this.table.selectedRows.push(value.id);
             }
-          })
+          });
         },
         selectAllFilteredRows: function () {
-          var selected = 0
+          var selected = 0;
 
           angular.forEach(_this.table.dataFiltered, function (value, key) {
             if (value.selected) {
-              selected++
+              selected++;
             }
-          })
+          });
 
-          return (selected !== 0 && selected === _this.table.dataFiltered.length)
+          return (selected !== 0 && selected === _this.table.dataFiltered.length);
         },
         daterangepicker: {
           date: {
@@ -101,53 +101,52 @@
             },
             eventHandlers: {
               'apply.daterangepicker': function (ev, picker) {
-                _this.table.daterangepicker.displayDate(picker.startDate, picker.endDate)
+                _this.table.daterangepicker.displayDate(picker.startDate, picker.endDate);
               }
             }
           },
           displayDate: function (start, end) {
-            var startDate = start || _this.table.daterangepicker.date.startDate
-            var endDate = end || _this.table.daterangepicker.date.endDate
+            var startDate = start || _this.table.daterangepicker.date.startDate;
+            var endDate = end || _this.table.daterangepicker.date.endDate;
 
-            var dateDiff = endDate.diff(startDate, 'days')
-            var result = ''
+            var dateDiff = endDate.diff(startDate, 'days');
+            var result = '';
 
             if (dateDiff === 0) {
-              result = 'Today ' + moment(startDate).format('MM/DD/YYYY')
-            }
-            else if (dateDiff === 6) {
-              result = 'Last 7 days'
+              result = 'Today ' + moment(startDate).format('MM/DD/YYYY');
+            } else if (dateDiff === 6) {
+              result = 'Last 7 days';
             } else {
-              result = 'From ' + moment(startDate).format('MM/DD/YYYY') + ' to ' + moment(endDate).format('MM/DD/YYYY')
+              result = 'From ' + moment(startDate).format('MM/DD/YYYY') + ' to ' + moment(endDate).format('MM/DD/YYYY');
             }
 
-            return result
+            return result;
           }
         }
-      }
-    })
+      };
+    });
 
   // TODO: this filter handles the daterange and should be moved to the core/filters
   // NOTE: may want to change filter name, this handles a single date in the object
   angular.module('pb.ds.tables').filter('daterange', function ($log, moment) {
     return function (items, start, end) {
-      // $log.debug('FROM:', moment(start).unix(), 'TO:', moment(end).unix())
+      // $log.debug('FROM:', moment(start).unix(), 'TO:', moment(end).unix());
 
-      var dateStart = moment(start).unix()
-      var dateEnd = moment(end).unix()
+      var dateStart = moment(start).unix();
+      var dateEnd = moment(end).unix();
 
-      var result = []
+      var result = [];
 
       angular.forEach(items, function (value, index) {
-        // $log.debug(value, index)
-        var itemDate = moment(value.date.created).unix()
+        // $log.debug(value, index);
+        var itemDate = moment(value.date.created).unix();
 
         if (itemDate > dateStart && itemDate < dateEnd) {
-          result.push(value)
+          result.push(value);
         }
-      })
+      });
 
-      return result
-    }
-  })
-})()
+      return result;
+    };
+  });
+})();

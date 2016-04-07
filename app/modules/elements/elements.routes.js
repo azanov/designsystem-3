@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.elements').config(function ($stateProvider) {
     $stateProvider.state('elements', {
@@ -11,7 +11,7 @@
         NavigationResolve: function ($log, MockDataFactory) {
           return MockDataFactory.query({
             filename: 'navigation'
-          })
+          });
         }
       },
       data: {
@@ -49,14 +49,14 @@
               PeopleResolve: function ($log, MockDataFactory) {
                 return MockDataFactory.query({
                   filename: 'people'
-                })
+                });
               },
               MillerResolve: function ($log, MockDataFactory) {
                 return MockDataFactory.get({
                   filename: 'millercolumn'
                 }, function (response) {
-                  return response.versionInfos
-                })
+                  return response.versionInfos;
+                });
               }
             }
           },
@@ -85,8 +85,8 @@
             return MockDataFactory.get({
               filename: 'colors'
             }).$promise.then(function (response) {
-              return response
-            })
+              return response;
+            });
           }
         }
       })
@@ -99,12 +99,12 @@
           PeopleResolve: function ($log, MockDataFactory) {
             return MockDataFactory.query({
               filename: 'people_10'
-            })
+            });
           },
           CountriesResolve: function ($log, MockDataFactory) {
             return MockDataFactory.query({
               filename: 'countries'
-            })
+            });
           }
         }
       })
@@ -119,6 +119,6 @@
         url: '/progress',
         templateUrl: 'modules/elements/templates/elements-progress.html',
         controller: 'ProgressController as progress'
-      })
-  })
-})()
+      });
+  });
+})();

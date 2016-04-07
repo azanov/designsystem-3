@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
-  angular.module('pb.ds.mobile', ['ui.router'])
-})()
+  angular.module('pb.ds.mobile', ['ui.router']);
+})();

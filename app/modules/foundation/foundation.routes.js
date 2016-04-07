@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.foundation').config(function ($stateProvider) {
     $stateProvider.state('foundation', {
@@ -67,7 +67,7 @@
           IconsResolve: function ($log, MockDataFactory) {
             return MockDataFactory.query({
               filename: 'fontawesome'
-            })
+            });
           }
         },
         data: {
@@ -125,6 +125,6 @@
             templateUrl: 'modules/foundation/templates/foundation-animation-patterns.html'
           }
         }
-      })
-  })
-})()
+      });
+  });
+})();
