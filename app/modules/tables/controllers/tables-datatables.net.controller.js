@@ -1,8 +1,8 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.tables').controller('TablesDatatablesNetController', function ($log, $compile, $scope, $filter, $window, PeopleResolve, DTOptionsBuilder, DTColumnBuilder, moment) {
-    var _this = this
+    var _this = this;
 
     // datatable model
     _this.datatable = {
@@ -12,29 +12,29 @@
       toggleAll: function toggleAll (selectAll, selectedItems) {
         for (var id in selectedItems) {
           if (selectedItems.hasOwnProperty(id)) {
-            selectedItems[id] = selectAll
+            selectedItems[id] = selectAll;
           }
         }
       },
       toggleOne: function toggleOne (selectedItems) {
-        var me = _this
+        var me = _this;
         for (var id in selectedItems) {
           if (selectedItems.hasOwnProperty(id)) {
             if (!selectedItems[id]) {
-              me.selectAll = false
-              return
+              me.selectAll = false;
+              return;
             }
           }
         }
-        me.selectAll = true
+        me.selectAll = true;
       },
       edit: function (id) {
-        $window.alert('Handle the edit function for row ' + id)
+        $window.alert('Handle the edit function for row ' + id);
       },
       delete: function (id) {
-        $window.alert('Handle the delete function for row ' + id)
+        $window.alert('Handle the delete function for row ' + id);
       }
-    }
+    };
 
     // OPTIONS
     _this.dtOptions = DTOptionsBuilder
@@ -55,13 +55,13 @@
       .withOption('headerCallback', function (header) {
         if (!_this.datatable.headerCompiled) {
           // Use this headerCompiled field to only compile header once
-          _this.datatable.headerCompiled = true
-          $compile(angular.element(header).contents())($scope)
+          _this.datatable.headerCompiled = true;
+          $compile(angular.element(header).contents())($scope);
         }
       })
       .withOption('createdRow', function (row, data, dataIndex) {
         // Recompiling so we can bind Angular directive to the DT
-        $compile(angular.element(row).contents())($scope)
+        $compile(angular.element(row).contents())($scope);
       })
       .withOption('order', [[2, 'asc']]) // column 1 (the ID) is hidden
       .withBootstrap()
@@ -85,17 +85,17 @@
           text: '<i class="nc-icon-mini ui-1_simple-add"></i>',
           className: 'btn btn-default',
           action: function (e, dt, node, config) {
-            $window.alert('Handle adding a new record.')
+            $window.alert('Handle adding a new record.');
           }
         },
         {
           text: '<i class="nc-icon-mini ui-1_trash-simple"></i>',
           className: 'btn btn-default',
           action: function (e, dt, node, config) {
-            $window.alert('Handle deleting a record.')
+            $window.alert('Handle deleting a record.');
           }
         }
-      ])
+      ]);
       // .withTableTools('')
       // .withTableToolsButtons([
       //   {
@@ -127,36 +127,36 @@
     // COLUMNS
     _this.dtColumns = [
       DTColumnBuilder.newColumn(null).withTitle(_this.datatable.titleHtml).renderWith(function (data, type, full, meta) {
-        _this.datatable.selected[full.id] = false
-        return '<input type="checkbox" ng-model="datatablesnet.datatable.selected[' + data.id + ']" ng-click="datatablesnet.datatable.toggleOne(datatablesnet.datatable.selected)">'
+        _this.datatable.selected[full.id] = false;
+        return '<input type="checkbox" ng-model="datatablesnet.datatable.selected[' + data.id + ']" ng-click="datatablesnet.datatable.toggleOne(datatablesnet.datatable.selected)">';
       }).notSortable(),
       DTColumnBuilder.newColumn('id').withTitle('ID').notVisible(),
       DTColumnBuilder.newColumn('first_name').withTitle('First&nbsp;name'),
       DTColumnBuilder.newColumn('last_name').withTitle('Last&nbsp;name'),
       DTColumnBuilder.newColumn('email').withTitle('Email').renderWith(function (data, type, full, meta) {
-        return '<a href="">' + data + '</a>'
+        return '<a href="">' + data + '</a>';
       }),
       DTColumnBuilder.newColumn('country').withTitle('Country').withClass('text-nowrap'),
       DTColumnBuilder.newColumn('date.created').withTitle('Created').withOption('sType', 'date').renderWith(function (data, type, full) {
-        return moment(data).format('MM/DD/YYYY')
+        return moment(data).format('MM/DD/YYYY');
       }),
       DTColumnBuilder.newColumn('groups').withTitle('Groups').renderWith(function (data, type, full) {
-        return data.join(', ')
+        return data.join(', ');
       }).notSortable(),
       DTColumnBuilder.newColumn(null).withTitle('').renderWith(function (data, type, full, meta) {
-        var html = ''
-        html += '<div class="dropdown pull-right">'
-        html += '<a href="" class="dropdown-toggle text-nowrap" data-toggle="dropdown">'
-        html += 'Actions <i class="nc-icon-mini arrows-2_small-down"></i>'
-        html += '</a>'
-        html += '<ul class="dropdown-menu dropdown-menu-right" role="menu">'
-        html += '<li><a href="" ng-click="datatablesnet.datatable.edit(' + data.id + ')">Edit</a></li>'
-        html += '<li><a href="" ng-click="datatablesnet.datatable.edit(' + data.id + ')">Delete</a></li>'
-        html += '</ul>'
-        html += '</div>'
+        var html = '';
+        html += '<div class="dropdown pull-right">';
+        html += '<a href="" class="dropdown-toggle text-nowrap" data-toggle="dropdown">';
+        html += 'Actions <i class="nc-icon-mini arrows-2_small-down"></i>';
+        html += '</a>';
+        html += '<ul class="dropdown-menu dropdown-menu-right" role="menu">';
+        html += '<li><a href="" ng-click="datatablesnet.datatable.edit(' + data.id + ')">Edit</a></li>';
+        html += '<li><a href="" ng-click="datatablesnet.datatable.edit(' + data.id + ')">Delete</a></li>';
+        html += '</ul>';
+        html += '</div>';
 
-        return html
+        return html;
       }).notSortable()
-    ]
-  })
-})()
+    ];
+  });
+})();
