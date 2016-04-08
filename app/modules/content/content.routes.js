@@ -1,5 +1,5 @@
-;(function () {
-  'use strict'
+(function () {
+  'use strict';
 
   angular.module('pb.ds.content').config(function ($stateProvider) {
     $stateProvider.state('content', {
@@ -51,6 +51,6 @@
           access: 'public',
           bodyClass: 'content emails'
         }
-      })
-  })
-})()
+      });
+  });
+})();
