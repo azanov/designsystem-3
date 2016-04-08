@@ -46,7 +46,6 @@
     "ngprogress": "1.1.2",
     "selectize": "0.12.1",
     "ui-router": "0.2.18",
-    "ui-select": "angular-ui-select#0.14.9",
     "yamm3": "1.1.0",
     "ng-tags-input": "3.0.0",
     "angular-slick-carousel": "3.1.4",
@@ -55,7 +54,8 @@
     "ng-file-upload": "12.0.4",
     "datatables.net": "1.10.11",
     "datatables.net-bs": "1.10.11",
-    "datatables.net-buttons": "1.1.2"
+    "datatables.net-buttons": "1.1.2",
+    "ui-select": "angular-ui-select#^0.16.1"
   },
   "resolutions": {
     "angular": "1.4.9"
