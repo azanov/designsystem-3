@@ -137,6 +137,17 @@
         }
       })
 
+      // this is the Forgot Password - Security Question
+      .state('patterns.forgotpassword', {
+        url: '/forgotpassword',
+        templateUrl: 'modules/patterns/templates/forgot-password-security-question.html',
+        controller: 'SignInController as signin',
+        data: {
+          pageTitle: 'Patterns: Forgot Password',
+          bodyClass: 'fullscreen signin'
+        }
+      })
+
       // this is the Forgot Password - Email sent feedback
       .state('patterns.emailsent', {
         url: '/emailsent',
@@ -294,12 +305,6 @@
       .state('patterns.forms', {
         url: '/forms',
         templateUrl: 'modules/patterns/templates/forms-containers.html'
-      })
-
-      .state('patterns.forgotpassword', {
-        url: '/patterns/forgotpassword',
-        templateUrl: 'modules/patterns/templates/forgot-password.html',
-        controller: 'ForgotPasswordController as forgot'
       })
 
       .state('patterns.registration', {
