@@ -8,12 +8,12 @@
 // .tabbable.scroll >.tab-content {
 //   padding: 20px;
 // }
-// .tab-content {
-//   &.tab-content-bordered {
-//     border: 1px solid $nav-tabs-border-color;
-//     border-top: 0;
-//   }
-// }
+.tab-content {
+  &.tab-content-bordered {
+    border: 1px solid $nav-tabs-border-color;
+    border-top: 0;
+  }
+ }
 
 .tabset-bordered {
   .tab-pane {
