@@ -907,6 +907,131 @@
     </div>
   </div>
 
+  <!-- irshad -->
+  <div class="row">
+      <div class="col-md-8">
+        <h1 class="doc-head" id="checkboxes">Checkboxes via Directives</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Styles</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-5">
+    <pre>
+      &lt;pb-checkbox
+            label="Alex"
+            name="checkbox"
+            ng-model="ctrl.model"
+            ng-change="ctrl.onCheckbox(val)"
+            standard
+            disabled="false"&gt;
+      &lt;/pb-checkbox&gt;
+      &lt;pb-checkbox
+            label="Alex"
+            name="checkbox"
+            ng-model="ctrl.model"
+            ng-change="ctrl.onCheckbox(val)"
+            standard="true"
+            disabled="false"&gt;
+      &lt;/pb-checkbox&gt;
+    </pre>
+      </div>
+      <div class="col-md-6 col-md-offset-1">
+        <form name="myForm">
+        <figure>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="controls-stacked">
+                  <pb-checkbox label="CheckboxEnhanced" name="checkbox1" ng-model="inputs.models.checkboxenhanced" ng-change="inputs.onCheckbox(val)" disabled='false'></pb-checkbox>
+
+                  <pb-checkbox label="CheckboxNative" name="checkbox2" ng-model="inputs.models.checkboxstandard" ng-change="inputs.onCheckbox(val)" disabled='false' standard='true'></pb-checkbox>
+                  <pre>{{inputs.models|json}}</pre>
+              </div>
+            </div>
+          </div>
+        </figure>
+      </form>
+      </div>
+    </div>
+
+<div class="row">
+  <div class="col-md-5">
+    <pre>
+      &lt;pb-radio
+        label="Mardy"
+        name="radio"
+        value="mardy-1"
+        ng-model="inputs.models.radio"
+        ng-change="inputs.onRadio(val)"
+        disabled="false"&gt;
+      &lt;/pb-radio>
+
+      &lt;pb-radio
+        label="Melman"
+        name="radio"
+        value="melman-1"
+        ng-model="inputs.models.radio"
+        ng-change="inputs.onRadio(val)"
+        disabled="false"&gt;
+      &lt;/pb-radio&gt;
+    </pre>
+  </div>
+  <div class="col-md-6 col-md-offset-1">
+    <form name="myForm">
+    <figure>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="controls-stacked">
+              <pb-radio label="Mardy" name="radio" value="mardy-1" ng-model="inputs.models.radio" ng-change="inputs.onRadio(val)" disabled="false"></pb-radio>
+              <pb-radio label="Melman" name="radio" value="melman-1" ng-model="inputs.models.radio" ng-change="inputs.onRadio(val)" disabled="false"></pb-radio>
+              <pre ng-click="inputs.models.radio={}">{{inputs.models.radio|json}}</pre>
+          </div>
+        </div>
+      </div>
+    </figure>
+  </form>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-md-5">
+    <pre>
+    &lt;pb-radio-group
+      options="inputs.team"
+      name="team"
+      ng-model="inputs.models.radiogroup"
+      ng-change="inputs.onRadioGroup(val)"
+      disabled="false"
+      horizontal="false"&gt;
+    &lt;/pb-radio-group&gt;
+  </pre>
+  </div>
+  <div class="col-md-6 col-md-offset-1">
+    <form name="myForm">
+    <figure>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="controls-stacked">
+              <pb-radio-group options="inputs.team" name="team" ng-model="inputs.models.radiogroup" ng-change="inputs.onRadioGroup(val)" disabled="false" horizontal="false"></pb-radio-group>
+              <pre ng-click="inputs.models.radiogroup={}">{{inputs.models.radiogroup|json}}</pre>
+          </div>
+        </div>
+      </div>
+    </figure>
+  </form>
+  </div>
+</div>
+
+
+  <!-- irshad ends -->
+
   <div class="row">
     <div class="col-md-8">
       <h1 class="doc-head" id="radios">Radio Buttons</h1>
