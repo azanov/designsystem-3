@@ -130,6 +130,20 @@
     tmhDynamicLocaleProvider.localeLocationPattern('modules/i18n/angular-i18n/angular-locale_{{locale}}.js');
   });
 
+ //Errors right there on your notification, Straight from console.
+  angular.module('app').config(function($provide){
+    $provide.decorator("$exceptionHandler", function ($delegate, $injector) {
+             return function (exception, cause) {
+                 $delegate(exception, cause);
+                 var toastr = $injector.get("toastr");
+                 toastr.error("Error -> " + exception.message,{
+                     closeButton: true,
+                     timeOut:0
+                 });
+             };
+         });
+  });
+
   angular.module('app').run(function ($log, $rootScope, $translate, $document, $timeout, $location, $state) {
     // refresh as parts are added in controllers
     $rootScope.$on('$translatePartialLoaderStructureChanged', function () {
