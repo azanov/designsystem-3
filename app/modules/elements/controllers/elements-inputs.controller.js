@@ -4,28 +4,30 @@
   angular.module('pb.ds.elements').controller('InputsController', function ($log, CountriesResolve, PeopleResolve, moment, $http) {
     var _this = this;
 
-    _this.models={};
-    _this.models.checkboxenhanced=true;
-    _this.models.checkboxstandard=false;
-    _this.models.radio='melman-1';
+    _this.models = {};
+    _this.models.checkbox1 = true;
+    _this.models.checkbox2 = false;
+
+
+    _this.models.radio = 'melman-1';
     _this.team = [
-      {label:'Dan Collete',value:'@dan',disabled:true},
-      {label:'Steve Lombardi',value:'@steve',disabled:false},
-      {label:'Irshad A. Khan',value:'@irshadk',disabled:false},
-      {label:'Carla Pillegi',value:'@carla'},
+      {label: 'Dan Collete', value: '@dan', disabled: false},
+      {label: 'Steve Lombardi', value: '@steve', disabled: false},
+      {label: 'Irshad A. Khan', value: '@irshadk', disabled: true},
+      {label: 'Carla Pillegi', value: '@carla'}
     ];
 
-    _this.onRadioGroup = function(val){
-      console.log('Radio Button Group',val);
-    }
+    _this.onRadioGroup = function (val) {
+      console.log('Radio Button Group', val);
+    };
 
-    _this.onCheckbox = function(val){
-      console.log('Checkbox ',val);
-    }
+    _this.onCheckbox = function (val) {
+      console.log('Checkbox ', val);
+    };
 
-    _this.onRadio = function(val){
-      console.log('Radio Button',val);
-    }
+    _this.onRadio = function (val) {
+      console.log('Radio Button', val);
+    };
 
     // numeric stepper
     _this.numericStepper = {
