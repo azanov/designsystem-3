@@ -106,6 +106,14 @@ th {
       padding: 10px;
     }
   }
+  th {
+    a {
+      color: $table-header-text-color;
+    }
+    i.popover-trigger {
+      cursor: pointer;
+    }
+  }
 }
 
 // remove borders for tables inside detail rows
