@@ -1,0 +1,81 @@
+
+%alert-close {
+  background: transparent url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxNyAxNyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBzdHJva2U9IiNkYzAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTE1LjIxNiAxLjc4NGwtMTQuMTQgMTQuMTRNMS4wNzYgMS43ODRsMTQuMTQgMTQuMTQiLz48L2c+PC9zdmc+') center center no-repeat;
+}
+
+@mixin alert($bg, $bdr, $text: $pb-gray-700) {
+  color: $text;
+  background-color: $bg;
+  border-color: $bdr;
+  i {
+    color: $bdr;
+  }
+}
+
+.alert {
+  border-radius: 0;
+
+  // hide the close button, ui-bootstrap templates add it dynamically
+  // close icon is added in each alert modifier below
+  .close {
+    width: 21px;
+    height: 21px;
+
+    span:not(.sr-only) {
+      display: none;
+    }
+  }
+
+  &.alert-danger {
+    @include alert($state-danger-bg, $state-danger-border);
+    .close {
+      @extend %alert-close;
+    }
+  }
+
+  &.alert-warning {
+    @include alert($state-warning-bg, $state-warning-border);
+    .close {
+      @extend %alert-close;
+    }
+  }
+
+  &.alert-success {
+    @include alert($state-success-bg, $state-success-border);
+    .close {
+      @extend %alert-close;
+    }
+  }
+
+  &.alert-info {
+    @include alert($state-info-bg, $state-info-border);
+    .close {
+      @extend %alert-close;
+    }
+  }
+
+  .alert-link {
+    text-decoration: underline;
+    font-weight: inherit;
+  }
+}
+
+
+#toast-container {
+  > div {
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 6px;
+    padding: 15px 15px 15px 50px;
+    width: 300px;
+    border-radius: 0;
+    background-position: 15px center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 12px #999;
+    color: #fff;
+    opacity: .8;
+  }
+  .toast-error {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNS…tP4P7SP4N3CJZdvzoNyGq2c/HWOXJGsvVg+RA/k2MC/wN6I2YA2Pt8GkAAAAASUVORK5CYII=') !important;
+  }
+}

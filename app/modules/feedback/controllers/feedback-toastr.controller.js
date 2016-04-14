@@ -6,7 +6,7 @@
 
     _this.toast = {
       danger: function () {
-        toastr.error('There was an error with job "98"');
+        toastr.error('There was an error with job "98"', 'Application Error');
       },
       success: function () {
         toastr.success('New job "1238" was successfully created.');
