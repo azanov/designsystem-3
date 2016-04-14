@@ -33,14 +33,34 @@
     </div>
   </div>
 
-  <uib-accordion close-others="uibs.oneAtATime">
-    <uib-accordion-group heading="Static Header, initially expanded" is-open="uibs.status.isFirstOpen" is-disabled="uibs.status.isFirstDisabled">
-      This content is straight in the template.
-    </uib-accordion-group>
-    <uib-accordion-group heading="{{group.title}}" ng-repeat="group in uibs.groups">
-     {{group.content}}
-   </uib-accordion-group>
-  </uib-accordion>
+  <div class="row">
+    <div class="col-md-6">
+      <figure>
+        <figcaption>Standard Accordion</figcaption>
+        <uib-accordion close-others="uibs.oneAtATime">
+          <uib-accordion-group heading="Static Header, initially expanded" is-open="uibs.status.isFirstOpen" is-disabled="uibs.status.isFirstDisabled">
+            This content is straight in the template.
+          </uib-accordion-group>
+          <uib-accordion-group heading="{{group.title}}" ng-repeat="group in uibs.groups">
+           {{group.content}}
+         </uib-accordion-group>
+        </uib-accordion>
+      </figure>
+    </div>
+    <div class="col-md-6">
+      <figure>
+        <figcaption>Compact Accordion</figcaption>
+        <uib-accordion close-others="uibs.oneAtATime" class="compact">
+          <uib-accordion-group heading="Static Header, initially expanded" is-open="uibs.status.isFirstOpen" is-disabled="uibs.status.isFirstDisabled">
+            This content is straight in the template.
+          </uib-accordion-group>
+          <uib-accordion-group heading="{{group.title}}" ng-repeat="group in uibs.groups">
+           {{group.content}}
+         </uib-accordion-group>
+        </uib-accordion>
+      </figure>
+    </div>
+  </div>
 
   <div class="row">
     <div class="col-md-8">
