@@ -6,7 +6,12 @@
 
     // Accordions
     _this.oneAtATime = true;
+    _this.compactOneAtATime = true;
     _this.status = {
+      isFirstOpen: true,
+      isFirstDisabled: false
+    };
+    _this.compactStatus = {
       isFirstOpen: true,
       isFirstDisabled: false
     };
