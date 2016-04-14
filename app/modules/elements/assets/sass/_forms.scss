@@ -137,12 +137,7 @@ a.list-group-item {
     @extend %fancy-focus;
   }
 
-  .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
-    background-color: #f8f8f8 !important;
-    border-color: #dbdbdb;
-    color: #454545;
-    opacity: 1;
-}
+
 
   // Disabled and read-only inputs
   //
