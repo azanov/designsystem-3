@@ -14,6 +14,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var usemin = require('gulp-usemin');
 var sassdoc = require('sassdoc');
+var eslint = require('gulp-eslint');
 
 var today = new Date();
 var pkg = require('./package.json');
@@ -185,6 +186,20 @@ gulp.task('browser-sync', function () {
   });
 });
 
+// lint the code : onBuild
+gulp.task('eslint', function () {
+  return gulp.src(['app/**/*.js', '!node_modules/**', '!app/bower_components/**'])
+    // eslint() attaches the lint output to the "eslint" property
+    // of the file object so it can be used by other modules.
+    .pipe(eslint())
+    // eslint.format() outputs the lint results to the console.
+    // Alternatively use eslint.formatEach() (see Docs).
+    .pipe(eslint.format())
+    // To have the process exit with an error code (1) on
+    // lint error, return the stream and pipe to failAfterError last.
+    .pipe(eslint.failAfterError());
+});
+
 // run from the build folder
 gulp.task('serve-build', [], function () {
   browserSync.init({
@@ -197,6 +212,7 @@ gulp.task('serve-build', [], function () {
 // build
 gulp.task('build', ['clean:dist'], function () {
   runSequence(
+    'eslint',
     'sass-dist',
     'copy:angular-i18n',
     'usemin',
