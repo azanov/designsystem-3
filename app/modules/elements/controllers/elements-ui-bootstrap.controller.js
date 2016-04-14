@@ -15,6 +15,10 @@
       isFirstOpen: true,
       isFirstDisabled: false
     };
+    _this.singleStatus = {
+      isFirstOpen: true,
+      isFirstDisabled: false
+    };
     _this.groups = [
       {
         title: 'Dynamic Group Header - 1',

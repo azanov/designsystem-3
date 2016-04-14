@@ -4,7 +4,7 @@
       <div class="col-md-12">
         <div class="hero-header">
           <div class="eyebrow">Elements</div>
-          <h1>UI-Bootstrap</h1>
+          <h1>AngularUI Bootstrap</h1>
         </div>
       </div>
     </div>
@@ -29,6 +29,21 @@
 
   <div class="row">
     <div class="col-md-8">
+      <h1 class="doc-head">What is Angular Ui Bootstrap?</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <p>The default controls supplied with Boostrap are simple to use, require no additional Javascript development and are configured and used completely from the HTML markup.</p>
+
+      <p>For Angular JS development, there is a set of native AngularJS directives based on Bootstrap's markup and CSS which are styled to match the Design System. For more technical information, installation and usage instructions, please see the <a href="https://angular-ui.github.io/bootstrap/" target="_blank">Angular UI Bootstrap site</a>.</p>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
       <h1 id="accordions" class="doc-head">Accordions</h1>
     </div>
   </div>
@@ -38,7 +53,7 @@
       <figure>
         <figcaption>Standard Accordion</figcaption>
         <uib-accordion close-others="uibs.oneAtATime">
-          <uib-accordion-group heading="Static Header, initially expanded" is-open="uibs.status.isFirstOpen" is-disabled="uibs.status.isFirstDisabled">
+          <uib-accordion-group heading="Static Header" is-open="uibs.status.isFirstOpen" is-disabled="uibs.status.isFirstDisabled">
             This content is straight in the template.
           </uib-accordion-group>
           <uib-accordion-group heading="{{group.title}}" ng-repeat="group in uibs.groups">
@@ -51,7 +66,7 @@
       <figure>
         <figcaption>Compact Accordion</figcaption>
         <uib-accordion close-others="uibs.compactOneAtATime" class="compact">
-          <uib-accordion-group heading="Static Header, initially expanded" is-open="uibs.compactStatus.isFirstOpen" is-disabled="uibs.compactStatus.isFirstDisabled">
+          <uib-accordion-group heading="Static Header" is-open="uibs.compactStatus.isFirstOpen" is-disabled="uibs.compactStatus.isFirstDisabled">
             This content is straight in the template.
           </uib-accordion-group>
           <uib-accordion-group heading="{{group.title}}" ng-repeat="group in uibs.groups">
@@ -62,9 +77,9 @@
     </div>
     <div class="col-md-4">
       <figure>
-        <figcaption>Compact Accordion</figcaption>
+        <figcaption>Single Accordion</figcaption>
         <uib-accordion close-others="uibs.oneAtATime" class="compact">
-          <uib-accordion-group heading="Static Header" is-open="uibs.status.isFirstOpen" is-disabled="uibs.status.isFirstDisabled">
+          <uib-accordion-group heading="Static Header" is-open="uibs.singleStatus.isFirstOpen" is-disabled="uibs.singleStatus.isFirstDisabled">
             This content is straight in the template.
           </uib-accordion-group>
         </uib-accordion>
