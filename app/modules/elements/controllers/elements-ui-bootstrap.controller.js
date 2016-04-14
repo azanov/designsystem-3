@@ -1,9 +1,27 @@
 (function () {
   'use strict';
 
-  angular.module('pb.ds.elements').controller('UiBootstrapController', function ($log, $uibModal, $timeout, $window) {
+  angular.module('pb.ds.elements').controller('UiBootstrapController', function ($log, $uibModal, $scope, $timeout, $window) {
     var _this = this;
 
+    // Accordions
+    _this.oneAtATime = true;
+    _this.status = {
+      isFirstOpen: true,
+      isFirstDisabled: false
+    };
+    _this.groups = [
+      {
+        title: 'Dynamic Group Header - 1',
+        content: 'Dynamic Group Body - 1'
+      },
+      {
+        title: 'Dynamic Group Header - 2',
+        content: 'Dynamic Group Body - 2'
+      }
+    ];
+
+    // modals
     _this.modals = {
       simple: function () {
         $uibModal.open({
@@ -58,38 +76,6 @@
     _this.time = {
       menuClick: function (event) {
         event.preventDefault();
-      }
-    };
-
-    _this.tabs = {
-      tabset01: [{
-        title: 'Dynamic Title 1',
-        content: 'Dynamic content 1'
-      }, {
-        title: 'Dynamic Title 2',
-        content: 'Dynamic content 2',
-        disabled: true
-      }],
-      tabset02: [{
-        title: 'Dynamic Title X',
-        content: 'Dynamic content X'
-      }, {
-        title: 'Dynamic Title Y',
-        content: 'Dynamic content Y',
-        disabled: true
-      }],
-      tabset03: [{
-        title: 'Dynamic Title A',
-        content: 'Dynamic content A'
-      }, {
-        title: 'Dynamic Title B',
-        content: 'Dynamic content B',
-        disabled: true
-      }],
-      alert: function (event) {
-        $timeout(function () {
-          $window.alert("You've selected the alert tab!");
-        });
       }
     };
   });

@@ -15,6 +15,7 @@
       <div class="row">
         <div class="col-md-12">
           <ul class="list-unstyled list-inline jump-menu">
+            <li><a ui-sref="elements.uibootstrap({'#':'accordions'})">Accordions</a></li>
             <li><a ui-sref="elements.uibootstrap({'#':'tabs'})">Tabs</a></li>
           </ul>
         </div>
@@ -26,12 +27,26 @@
 
 <div class="container">
 
-<div class="row">
-  <div class="col-md-8">
-    <h1 id="tabs" class="doc-head">Tabs</h1>
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="accordions" class="doc-head">Accordions</h1>
+    </div>
   </div>
-</div>
 
+  <uib-accordion close-others="uibs.oneAtATime">
+    <uib-accordion-group heading="Static Header, initially expanded" is-open="uibs.status.isFirstOpen" is-disabled="uibs.status.isFirstDisabled">
+      This content is straight in the template.
+    </uib-accordion-group>
+    <uib-accordion-group heading="{{group.title}}" ng-repeat="group in uibs.groups">
+     {{group.content}}
+   </uib-accordion-group>
+  </uib-accordion>
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="tabs" class="doc-head">Tabs</h1>
+    </div>
+  </div>
 
   <div class="row spacer-top-lg">
     <div class="col-md-6">
@@ -97,4 +112,4 @@
       </figure>
     </div>
   </div>
-  </div>
+</div>
