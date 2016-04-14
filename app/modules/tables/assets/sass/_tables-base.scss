@@ -110,6 +110,10 @@ th {
 
     i.popover-trigger {
       cursor: pointer;
+      color: $link-color;
+      &:hover {
+        color: $link-hover-color;
+      }
     }
   }
 }
