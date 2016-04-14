@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.6.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Wed Apr 13 2016 14:22:22 GMT-0400 (EDT) 
+ * Built Thu Apr 14 2016 14:58:50 GMT-0400 (EDT) 
  */
 @charset "UTF-8";
 #header, header, .signin, .landing .bg {
@@ -14512,8 +14512,6 @@ th {
   background-image: linear-gradient(to bottom, #c9c9c9 -5%, #f0f0f0 6%, #f0f0f0 100%); }
 .table .table-details .table-details-content {
   padding: 10px; }
-.table th a {
-  color: #4e4e4e; }
 .table th i.popover-trigger {
   cursor: pointer; }
 
