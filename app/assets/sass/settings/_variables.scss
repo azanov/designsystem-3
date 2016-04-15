@@ -83,9 +83,9 @@ $pb-error-red:           #dc0000;
 
 // bootstrap functional colors
 $brand-primary:          $pb-blue;
-$brand-success:          $pb-dark-green-700;
+$brand-success:          $pb-dark-green;
 $brand-info:             $pb-blue;
-$brand-warning:          $pb-dark-orange-700;
+$brand-warning:          $pb-dark-orange;
 $brand-danger:           $pb-error-red;
 
 
@@ -553,17 +553,20 @@ $jumbotron-font-size: ceil(($font-size-base * 1.5));
 //## Define colors for form feedback states and, by default, alerts.
 
 $state-success-text: $brand-success;
-$state-success-bg: #f2f9f2;
-$state-success-border: #9FE1B7;
+$state-success-bg: #F2F9F2;
+$state-success-border: $brand-success;
+
 $state-info-text: $brand-info;
-$state-info-bg: #EBEDF5;
-$state-info-border: #C5CBE3;
+$state-info-bg: #F5F6FA;
+$state-info-border: $brand-info;
+
 $state-warning-text: $brand-warning;
 $state-warning-bg: #fcf6f2;
-$state-warning-border: #f2e1cc;
+$state-warning-border: $brand-warning;
+
 $state-danger-text: $brand-danger;
-$state-danger-bg: #fef2f2;
-$state-danger-border: rgb(244, 183, 183);
+$state-danger-bg: #fdf2f2;
+$state-danger-border: $brand-danger;
 
 
 
