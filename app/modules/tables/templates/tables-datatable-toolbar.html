@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-12">
-    <h2 class="doc-sectionhead">Working with the Table Toolbar</h2>
+    <h2 class="doc-sectionhead">Items in the Table Toolbar</h2>
   </div>
 </div>
 
@@ -66,13 +66,13 @@
           </thead>
           <tbody>
             <tr>
-              <td>Date</td>
-              <td>Recipient</td>
-              <td>Carrier</td>
-              <td>Shipping Info</td>
-              <td>Tracking #</td>
-              <td>Status</td>
-              <td>Amount</td>
+              <td>2016-Mar-11</td>
+              <td>Tom Swift</td>
+              <td>USPS</td>
+              <td>Normal</td>
+              <td>UPID690-697560-7</td>
+              <td>Delivered</td>
+              <td>$56.99</td>
             </tr>
             <tr><td colspan="8">&#8230;</td></tr>
           </tbody>
@@ -177,13 +177,13 @@
           </thead>
           <tbody>
             <tr>
-              <td>Date</td>
-              <td>Recipient</td>
-              <td>Carrier</td>
-              <td>Shipping Info</td>
-              <td>Tracking #</td>
-              <td>Status</td>
-              <td>Amount</td>
+              <td>2016-Mar-11</td>
+              <td>Tom Swift</td>
+              <td>USPS</td>
+              <td>Normal</td>
+              <td>UPID690-697560-7</td>
+              <td>Delivered</td>
+              <td>$56.99</td>
             </tr>
             <tr><td colspan="8">&#8230;</td></tr>
           </tbody>
@@ -197,13 +197,89 @@
 
 
 
+    <!-- SEARCH MENU -->
+    <div class="row spacer-top-md">
+
+      <div class="col-md-12">
+
+        <figcaption>Filter Search Field with Options Menu</figcaption>
+
+
+          <div class="row toolbar spacer-bottom-md">
+
+            <div class="col-md-12">
+
+              <form class="form-inline pull-right">
+
+                <div class="input-group">
+
+                  <div class="input-group-btn">
+                    <div class="btn-group dropdown">
+                      <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                        <i class="nc-icon-mini ui-1_zoom"></i> <i class="nc-icon-mini arrows-2_small-down"></i>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a href="">Action</a></li>
+                        <li><a href="">Another action</a></li>
+                        <li><a href="">Something else here</a></li>
+                        <li><a href="">Separated link</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                    <input class="form-control search" type="text" placeholder="Search" required>
+                    <button class="btn btn-link search-clear" type="reset" ng-click="datatable.table.searchClear()"><i class="nc-icon-mini fw ui-1_circle-remove"></i></button>
+                </div>
+
+
+              </form>
+
+            </div>
+
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Recipient</th>
+                <th>Carrier</th>
+                <th>Shipping Info</th>
+                <th>Tracking #</th>
+                <th>Status</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2016-Mar-11</td>
+                <td>Tom Swift</td>
+                <td>USPS</td>
+                <td>Normal</td>
+                <td>UPID690-697560-7</td>
+                <td>Delivered</td>
+                <td>$56.99</td>
+              </tr>
+              <tr><td colspan="8">&#8230;</td></tr>
+            </tbody>
+          </table>
+
+
+      </div>
+
+    </div>
+
+
+
+
+
 
   <!-- GLOBAL UTILITY -->
   <div class="row spacer-top-md">
 
     <div class="col-md-12">
 
-      <figcaption>Global Utility Items</figcaption>
+      <figcaption>Utility Items</figcaption>
 
 
         <div class="row toolbar spacer-bottom-md">
@@ -242,13 +318,13 @@
           </thead>
           <tbody>
             <tr>
-              <td>Date</td>
-              <td>Recipient</td>
-              <td>Carrier</td>
-              <td>Shipping Info</td>
-              <td>Tracking #</td>
-              <td>Status</td>
-              <td>Amount</td>
+              <td>2016-Mar-11</td>
+              <td>Tom Swift</td>
+              <td>USPS</td>
+              <td>Normal</td>
+              <td>UPID690-697560-7</td>
+              <td>Delivered</td>
+              <td>$56.99</td>
             </tr>
             <tr><td colspan="8">&#8230;</td></tr>
           </tbody>
@@ -260,79 +336,6 @@
   </div>
 
 
-
-
-  <!-- SEARCH MENU -->
-  <div class="row spacer-top-md">
-
-    <div class="col-md-12">
-
-      <figcaption>Search Field with Options Menu</figcaption>
-
-
-        <div class="row toolbar spacer-top-md spacer-bottom-md">
-
-          <div class="col-md-12">
-
-            <form class="form-inline pull-right">
-
-              <div class="input-group">
-
-                <div class="input-group-btn">
-                  <div class="btn-group dropdown">
-                    <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                      <i class="nc-icon-mini ui-1_zoom"></i> <i class="nc-icon-mini arrows-2_small-down"></i>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a href="">Action</a></li>
-                      <li><a href="">Another action</a></li>
-                      <li><a href="">Something else here</a></li>
-                      <li><a href="">Separated link</a></li>
-                    </ul>
-                  </div>
-                </div>
-
-                  <input class="form-control search" type="text" placeholder="Search" required>
-                  <button class="btn btn-link search-clear" type="reset" ng-click="datatable.table.searchClear()"><i class="nc-icon-mini fw ui-1_circle-remove"></i></button>
-              </div>
-
-
-            </form>
-
-          </div>
-
-        </div>
-
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Recipient</th>
-              <th>Carrier</th>
-              <th>Shipping Info</th>
-              <th>Tracking #</th>
-              <th>Status</th>
-              <th>Amount</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Date</td>
-              <td>Recipient</td>
-              <td>Carrier</td>
-              <td>Shipping Info</td>
-              <td>Tracking #</td>
-              <td>Status</td>
-              <td>Amount</td>
-            </tr>
-            <tr><td colspan="8">&#8230;</td></tr>
-          </tbody>
-        </table>
-
-
-    </div>
-
-  </div>
 
 
 
@@ -445,13 +448,13 @@
           </thead>
           <tbody>
             <tr>
-              <td>Date</td>
-              <td>Recipient</td>
-              <td>Carrier</td>
-              <td>Shipping Info</td>
-              <td>Tracking #</td>
-              <td>Status</td>
-              <td>Amount</td>
+              <td>2016-Mar-11</td>
+              <td>Tom Swift</td>
+              <td>USPS</td>
+              <td>Normal</td>
+              <td>UPID690-697560-7</td>
+              <td>Delivered</td>
+              <td>$56.99</td>
             </tr>
             <tr><td colspan="8">&#8230;</td></tr>
           </tbody>
