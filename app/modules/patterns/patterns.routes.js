@@ -137,10 +137,32 @@
         }
       })
 
-      // this is the Forgot Password - Security Question
+      // this is the Forgot Password - Email Question
       .state('patterns.forgotpassword', {
         url: '/forgotpassword',
-        templateUrl: 'modules/patterns/templates/forgot-password-security-question.html',
+        templateUrl: 'modules/patterns/templates/forgot-password-email.html',
+        controller: 'SignInController as signin',
+        data: {
+          pageTitle: 'Patterns: Forgot Password',
+          bodyClass: 'fullscreen signin'
+        }
+      })
+
+      // this is the Forgot Password: Security Question, Reset by Question, Return to Sign In
+      .state('patterns.forgotpassword-question', {
+        url: '/forgotpassword-question',
+        templateUrl: 'modules/patterns/templates/forgot-password-question.html',
+        controller: 'SignInController as signin',
+        data: {
+          pageTitle: 'Patterns: Forgot Password',
+          bodyClass: 'fullscreen signin'
+        }
+      })
+
+      // this is the Forgot Password: Security Question, Answer Does Not Match
+      .state('patterns.forgotpassword-error', {
+        url: '/forgotpassword-error',
+        templateUrl: 'modules/patterns/templates/forgot-password-error.html',
         controller: 'SignInController as signin',
         data: {
           pageTitle: 'Patterns: Forgot Password',
