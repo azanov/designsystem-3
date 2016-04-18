@@ -18,8 +18,9 @@
         toastr.warning('Please review job "1298" before continuing.');
       },
       closeButton: function () {
-        toastr.info('I have a close button', {
-          closeButton: true
+        toastr.info('I have a close button.', {
+          closeButton: true,
+          timeOut: 0
         });
       },
       progressBar: function () {

@@ -71,10 +71,13 @@ $toastr-list: '.toast-info'     $state-info-bg $state-info-border $pb-gray-700 $
       opacity: 1;
       cursor: pointer;
     }
+    > div {
+      margin-right: 30px;
+    }
     .toast-close-button {
       position: relative;
-      right: -.3em;
-      top: -.3em;
+      right: .1em;
+      top: .3em;
       float: right;
       font-size: 20px;
       font-weight: bold;
