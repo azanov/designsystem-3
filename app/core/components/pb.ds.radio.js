@@ -1,33 +1,6 @@
 (function () {
   'use strict';
-  var module = angular.module('pb.components');
-  module.directive('pbCheckbox', function () {
-    return {
-      restrict: 'E',
-      require: 'ngModel',
-      scope: {},
-      bindToController: {
-        disabled: '=',
-        ngModel: '=',
-        ngChange: '&',
-        label: '@',
-        name: '@'
-      },
-      controller: function () {
-        if (angular.isUndefined(this.label)) {
-          throw Error('label attribute missing');
-        }
-        this.onChange = function () {
-          this.ngChange({val: this.ngModel});
-        };
-      },
-      controllerAs: 'ctrl',
-      templateUrl: 'pbdscheckbox.html',
-      link: function (scope, elem, attrs) {
-        scope.ctrl.native = 'native' in attrs;
-      }
-    };
-  });
+  var module = angular.module('pb.ds.components');
   module.directive('pbRadio', function () {
     return {
       restrict: 'E',
@@ -77,12 +50,10 @@
         name: '@'
       },
       controller: function () {
-
-        if (angular.isUndefined(this.options)) {
+        if (angular.isUndefined(this['options'])) {
           throw Error('options array required');
         }
-        var that = this;
-        angular.forEach(this.options, function (item) {
+        angular.forEach(this['options'], function (item) {
           if (angular.isUndefined(item.label) || angular.isUndefined(item.value)) {
             throw Error('label | value attribute missing');
           }

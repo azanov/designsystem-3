@@ -1,14 +1,12 @@
 (function () {
   'use strict';
 
-  angular.module('pb.ds.elements').controller('InputsController', function ($log, CountriesResolve, PeopleResolve, moment, $http) {
+  angular.module('pb.ds.elements').controller('InputsController', function ($log, CountriesResolve, PeopleResolve, moment, $http, toastr) {
     var _this = this;
 
     _this.models = {};
     _this.models.checkbox1 = true;
     _this.models.checkbox2 = false;
-
-
     _this.models.radio = 'melman-1';
     _this.team = [
       {label: 'Dan Collete', value: '@dan', disabled: false},
@@ -18,15 +16,15 @@
     ];
 
     _this.onRadioGroup = function (val) {
-      console.log('Radio Button Group', val);
+      toastr.info('Radio Button Group', val);
     };
 
     _this.onCheckbox = function (val) {
-      console.log('Checkbox ', val);
+      toastr.info('Checkbox ', val);
     };
 
     _this.onRadio = function (val) {
-      console.log('Radio Button', val);
+      toastr.info('Radio Button', val);
     };
 
     // numeric stepper

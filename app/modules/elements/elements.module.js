@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('pb.ds.elements', ['ui.router']);
+  angular.module('pb.ds.elements', ['ui.router', 'pb.ds.components']);
 
   // TOASTR CONFIG
   angular.module('pb.ds.elements').config(function (toastrConfig) {

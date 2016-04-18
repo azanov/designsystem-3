@@ -33,6 +33,6 @@
     'slickCarousel',
     'ngFileUpload',
     angularDragula(angular),
-    'pb.components'
+    'pb.ds.components'
   ]);
 })();

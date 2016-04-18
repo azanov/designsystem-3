@@ -71,6 +71,12 @@ gulp.task('usemin', function () {
       vendorjs: [
         uglify({mangle: true})
       ],
+      dscomponents: [
+        replace('debug: true', 'debug: false'),
+        ngAnnotate({remove: true, add: true, single_quotes: true}),
+        uglify({mangle: true}),
+        rev
+      ],
       appjs: [
         replace('debug: true', 'debug: false'),
         ngAnnotate({remove: true, add: true, single_quotes: true}),
@@ -212,7 +218,6 @@ gulp.task('serve-build', [], function () {
 // build
 gulp.task('build', ['clean:dist'], function () {
   runSequence(
-    'eslint',
     'sass-dist',
     'copy:angular-i18n',
     'usemin',
