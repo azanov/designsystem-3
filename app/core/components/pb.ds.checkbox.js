@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  angular.module('pb.ds.components').directive('pbCheckbox', function () {
+  angular.module('pb.ds.components').directive('pbdsCheckbox', function () {
     return {
       restrict: 'E',
       require: 'ngModel',

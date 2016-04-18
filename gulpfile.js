@@ -72,7 +72,6 @@ gulp.task('usemin', function () {
         uglify({mangle: true})
       ],
       dscomponents: [
-        replace('debug: true', 'debug: false'),
         ngAnnotate({remove: true, add: true, single_quotes: true}),
         uglify({mangle: true}),
         rev

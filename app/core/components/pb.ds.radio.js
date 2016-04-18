@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   var module = angular.module('pb.ds.components');
-  module.directive('pbRadio', function () {
+  module.directive('pbdsRadio', function () {
     return {
       restrict: 'E',
       require: 'ngModel',
@@ -38,7 +38,7 @@
       }
     };
   });
-  module.directive('pbRadioGroup', function () {
+  module.directive('pbdsRadioGroup', function () {
     return {
       restrict: 'E',
       require: 'ngModel',

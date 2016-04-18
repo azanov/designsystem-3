@@ -923,22 +923,22 @@
     <div class="row">
       <div class="col-md-9">
             <pre>
-              &lt;pb-checkbox
+              &lt;pbds-checkbox
                 label="Enhanced"
                 ng-model="ctrl.model"
                 ng-change="ctrl.onCheckbox(val)"
                 name="form.property.name"
                 disabled="ctrl.isdisabled"&gt;
-              &lt;/pb-checkbox&gt;
+              &lt;/pbds-checkbox&gt;
 
-              &lt;pb-checkbox
+              &lt;pbds-checkbox
                     label="Native"
                     name="form.property.name"
                     ng-model="ctrl.model"
                     ng-change="ctrl.onCheckbox(val)"
                     native
                     disabled="ctrl.isdisabled"&gt;
-              &lt;/pb-checkbox&gt;
+              &lt;/pbds-checkbox&gt;
           </pre>
       </div>
       <div class="col-md-3">
@@ -947,8 +947,8 @@
           <div class="row">
             <div class="col-md-12">
               <div class="controls-stacked">
-                  <pb-checkbox label="Enhanced" name="checkbox1" ng-model="inputs.models.checkbox1" ng-change="inputs.onCheckbox(val)" disabled='inputs.models.checkbox1disabled'></pb-checkbox>
-                  <pb-checkbox label="Native" name="checkbox2" ng-model="inputs.models.checkbox2" ng-change="inputs.onCheckbox(val)" disabled='inputs.models.checkbox2disabled' native></pb-checkbox>
+                  <pbds-checkbox label="Enhanced" name="checkbox1" ng-model="inputs.models.checkbox1" ng-change="inputs.onCheckbox(val)" disabled='inputs.models.checkbox1disabled'></pbds-checkbox>
+                  <pbds-checkbox label="Native" name="checkbox2" ng-model="inputs.models.checkbox2" ng-change="inputs.onCheckbox(val)" disabled='inputs.models.checkbox2disabled' native></pbds-checkbox>
               </div>
             </div>
           </div>
@@ -960,16 +960,16 @@
 <div class="row">
   <div class="col-md-9">
     <pre>
-      &lt;pb-radio
+      &lt;pbds-radio
         label="Mardy"
         value="mardy-1"
         ng-model="ctrl.model"
         ng-change="inputs.onRadio(val)"
         disabled="false"
         name="form.property.name"&gt;
-      &lt;/pb-radio>
+      &lt;/pbds-radio>
 
-      &lt;pb-radio
+      &lt;pbds-radio
         label="Melman"
         name="form.property.name"
         value="melman-1"
@@ -977,7 +977,7 @@
         ng-change="inputs.onRadio(val)"
         disabled="false"
         native&gt;
-      &lt;/pb-radio&gt;
+      &lt;/pbds-radio&gt;
     </pre>
   </div>
   <div class="col-md-3">
@@ -986,8 +986,8 @@
       <div class="row">
         <div class="col-md-12">
           <div class="controls-stacked">
-              <pb-radio label="Mardy" name="radio" value="mardy-1" ng-model="inputs.models.radio" ng-change="inputs.onRadio(val)" disabled="false"></pb-radio>
-              <pb-radio label="Melman" name="radio" value="melman-1" ng-model="inputs.models.radio" ng-change="inputs.onRadio(val)" disabled="false" native></pb-radio>
+              <pbds-radio label="Mardy" name="radio" value="mardy-1" ng-model="inputs.models.radio" ng-change="inputs.onRadio(val)" disabled="false"></pbds-radio>
+              <pbds-radio label="Melman" name="radio" value="melman-1" ng-model="inputs.models.radio" ng-change="inputs.onRadio(val)" disabled="false" native></pbds-radio>
           </div>
         </div>
       </div>
@@ -997,16 +997,15 @@
 </div>
 
 
-
-<div class="row">
+  <div class="row">
   <div class="col-md-9">
     <pre>
-    &lt;pb-radio-group
+    &lt;pbds-radio-group
       options="ctrl.team"
       name="form.property.name"
       ng-model="ctrl.model"
       ng-change="ctrl.onRadioGroup(val)"&gt;
-    &lt;/pb-radio-group&gt;
+    &lt;/pbds-radio-group&gt;
 
     ctrl.team = [
       {label:'Dan Collete',value:'@dan',disabled:true},
@@ -1021,7 +1020,7 @@
     <figure>
       <div class="row">
         <div class="col-md-12">
-              <pb-radio-group options="inputs.team" name="team" ng-model="inputs.models.one" ng-change="inputs.onRadioGroup(val)"></pb-radio-group>
+              <pbds-radio-group options="inputs.team" name="team" ng-model="inputs.models.one" ng-change="inputs.onRadioGroup(val)"></pbds-radio-group>
         </div>
       </div>
     </figure>
@@ -1501,5 +1500,4 @@
       </ul>
     </div>
   </div>
-
 </div>

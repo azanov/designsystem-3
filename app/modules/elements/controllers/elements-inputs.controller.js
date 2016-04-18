@@ -15,6 +15,17 @@
       {label: 'Carla Pillegi', value: '@carla'}
     ];
 
+    _this.list = [];
+    _this.models.one = undefined;
+    _this.submit = function () {
+      console.log(_this.models.one);
+      if (_this.models.one) {
+        _this.list.push(_this.models.one);
+        _this.list.push(_this.models.one11);
+        _this.models.one = '';
+      }
+    };
+
     _this.onRadioGroup = function (val) {
       toastr.info('Radio Button Group', val);
     };
