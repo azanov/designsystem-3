@@ -70,6 +70,25 @@ $icon-info:'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZX
 }
 
 
+@mixin panel-heading-icon($icon) {
+  background-position: 15px center;
+  padding-left: 40px !important;
+  background-image: url($icon);
+  background-repeat: no-repeat;
+}
+
+.panel-heading-danger {
+  @include panel-heading-icon($icon-danger);
+}
+.panel-heading-success {
+  @include panel-heading-icon($icon-success);
+}
+.panel-heading-warning {
+  @include panel-heading-icon($icon-warning);
+}
+.panel-heading-info {
+  @include panel-heading-icon($icon-info);
+}
 
 
 
