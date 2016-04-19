@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.6.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Thu Apr 14 2016 14:58:50 GMT-0400 (EDT) 
+ * Built Tue Apr 19 2016 08:59:28 GMT-0400 (EDT) 
  */
 @charset "UTF-8";
 #header, header, .signin, .landing .bg {
@@ -11941,11 +11941,6 @@ fieldset legend {
   outline: none; }
 .form-control::-moz-focus-inner {
   border: 0; }
-.form-control .form-control[disabled], .form-control .form-control[readonly], .form-control fieldset[disabled] .form-control {
-  background-color: #f8f8f8 !important;
-  border-color: #dbdbdb;
-  color: #454545;
-  opacity: 1; }
 .form-control[disabled], fieldset[disabled] .form-control {
   background-color: #f8f8f8 !important;
   border-color: #dbdbdb;
@@ -12138,7 +12133,7 @@ select:hover {
   position: relative;
   display: inline-block;
   padding-left: 25px;
-  color: #555;
+  color: #717171;
   cursor: pointer; }
 
 .control input {
@@ -12189,9 +12184,15 @@ select:hover {
   border: 1px solid #dbdbdb;
   cursor: default; }
 
-.control.disabled {
+.control.disabled, .radio.disabled label, .checkbox.disabled label {
   color: #dbdbdb;
   cursor: default; }
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  background-color: #f8f8f8;
+  border-color: #dbdbdb;
+  color: #454545;
+  opacity: 1; }
 
 .checkbox .control-indicator {
   border-radius: 0; }
@@ -13984,7 +13985,7 @@ header:not(.demo).shadow {
 #footer .container .contact-us .contact-methods a, #footer .container-fluid .contact-us .contact-methods a, footer .container .contact-us .contact-methods a, footer .container-fluid .contact-us .contact-methods a {
   color: #0072b8; }
 #footer .container .contact-us .contact-methods a.disabled, #footer .container-fluid .contact-us .contact-methods a.disabled, footer .container .contact-us .contact-methods a.disabled, footer .container-fluid .contact-us .contact-methods a.disabled {
-  color: #c0c0c0; }
+  color: #9b9b9b; }
 #footer .container .contact-us .contact-methods a.disabled:hover, #footer .container-fluid .contact-us .contact-methods a.disabled:hover, footer .container .contact-us .contact-methods a.disabled:hover, footer .container-fluid .contact-us .contact-methods a.disabled:hover {
   background-color: transparent;
   cursor: not-allowed;
@@ -14297,6 +14298,7 @@ header:not(.demo).shadow {
 .signin {
   background-color: #254d9d; }
 .signin .signin-wrapper {
+  height: 100vh;
   margin: 0;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14307,9 +14309,6 @@ header:not(.demo).shadow {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column; }
-@media (min-width: 768px) {
-  .signin .signin-wrapper {
-    height: 100vh; } }
 .signin .signin-body-top {
   width: 400px;
   display: -webkit-flex;
@@ -14513,7 +14512,10 @@ th {
 .table .table-details .table-details-content {
   padding: 10px; }
 .table th i.popover-trigger {
-  cursor: pointer; }
+  cursor: pointer;
+  color: #0072b8; }
+.table th i.popover-trigger:hover {
+  color: #005a93; }
 
 .table-details-content table, .table-details-content .table {
   border: 0; }
