@@ -106,31 +106,20 @@
 
   // TRANSLATE CONFIG
   angular.module('app').config(function ($translateProvider, $translatePartialLoaderProvider) {
-    // $translateProvider.useLoaderCache(true);
-    //
-    // $translateProvider.useLoader('$translatePartialLoader', {
-    //  urlTemplate: '{part}/{lang}.json'
-    // });
-    //
-    // // additional parts loaded in module controllers
-    // // $translatePartialLoaderProvider.addPart('modules/i18n');
-    //
-    // $translateProvider.preferredLanguage('en-us');
-    // $translateProvider.fallbackLanguage('en-us');
-    // $translateProvider.useLocalStorage();
-    //
-    // $translateProvider.useSanitizeValueStrategy('escapeParameters');
+    $translateProvider.useLoaderCache(true);
 
-    // TODO Test code to check translation : To be removed
-    $translateProvider.translations('en', {
-      CHECKBOX: 'Check Box',
-      RADIOBUTTON: 'Radio Button'
+    $translateProvider.useLoader('$translatePartialLoader', {
+      urlTemplate: '{part}/{lang}.json'
     });
-    $translateProvider.translations('de', {
-      CHECKBOX: 'Selectievakje',
-      RADIOBUTTON: 'Radio knop'
-    });
-    $translateProvider.preferredLanguage('en');
+
+    // additional parts loaded in module controllers
+    // $translatePartialLoaderProvider.addPart('modules/i18n');
+
+    $translateProvider.preferredLanguage('en-us');
+    $translateProvider.fallbackLanguage('en-us');
+    $translateProvider.useLocalStorage();
+
+    $translateProvider.useSanitizeValueStrategy('escapeParameters');
   });
   // Test code to check translation : Ends
 
@@ -142,18 +131,18 @@
     tmhDynamicLocaleProvider.localeLocationPattern('modules/i18n/angular-i18n/angular-locale_{{locale}}.js');
   });
 
- //Errors right there on your notification, Straight from console.
+ // Errors right there on your notification, Straight from console.
   angular.module('app').config(function($provide){
-    $provide.decorator("$exceptionHandler", function ($delegate, $injector) {
-             return function (exception, cause) {
-                 $delegate(exception, cause);
-                 var toastr = $injector.get("toastr");
-                 toastr.error("Error -> " + exception.message,{
-                     closeButton: true,
-                     timeOut:0
-                 });
-             };
-         });
+    $provide.decorator('$exceptionHandler', function ($delegate, $injector) {
+      return function (exception, cause) {
+        $delegate(exception, cause);
+        var toastr = $injector.get('toastr');
+        toastr.error('Error -> ' + exception.message, {
+          closeButton: true,
+          timeOut: 0
+        });
+       };
+   });
   });
 
   angular.module('app').run(function ($log, $rootScope, $translate, $document, $timeout, $location, $state) {
