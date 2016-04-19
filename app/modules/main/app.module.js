@@ -132,7 +132,7 @@
   });
 
  // Errors right there on your notification, Straight from console.
-  angular.module('app').config(function($provide){
+  angular.module('app').config(function ($provide) {
     $provide.decorator('$exceptionHandler', function ($delegate, $injector) {
       return function (exception, cause) {
         $delegate(exception, cause);
@@ -141,8 +141,8 @@
           closeButton: true,
           timeOut: 0
         });
-       };
-   });
+      };
+    });
   });
 
   angular.module('app').run(function ($log, $rootScope, $translate, $document, $timeout, $location, $state) {
