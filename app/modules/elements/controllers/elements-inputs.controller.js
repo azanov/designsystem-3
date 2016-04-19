@@ -29,9 +29,9 @@
       toastr.info('Radio Button', val);
     };
 
-    _this.changeLanguage = function(lang){
+    _this.changeLanguage = function (lang) {
       $translate.use(lang);
-    }
+    };
 
     // numeric stepper
     _this.numericStepper = {

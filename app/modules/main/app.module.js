@@ -121,7 +121,7 @@
     //
     // $translateProvider.useSanitizeValueStrategy('escapeParameters');
 
-    //TODO Test code to check translation : To be removed
+    // TODO Test code to check translation : To be removed
     $translateProvider.translations('en', {
       CHECKBOX: 'Check Box',
       RADIOBUTTON: 'Radio Button'
@@ -132,7 +132,7 @@
     });
     $translateProvider.preferredLanguage('en');
   });
-  //Test code to check translation : Ends
+  // Test code to check translation : Ends
 
   // DYNAMIC LOCALE CONFIG
   angular.module('app').config(function (tmhDynamicLocaleProvider) {
