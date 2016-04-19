@@ -106,21 +106,33 @@
 
   // TRANSLATE CONFIG
   angular.module('app').config(function ($translateProvider, $translatePartialLoaderProvider) {
-    $translateProvider.useLoaderCache(true);
+    // $translateProvider.useLoaderCache(true);
+    //
+    // $translateProvider.useLoader('$translatePartialLoader', {
+    //  urlTemplate: '{part}/{lang}.json'
+    // });
+    //
+    // // additional parts loaded in module controllers
+    // // $translatePartialLoaderProvider.addPart('modules/i18n');
+    //
+    // $translateProvider.preferredLanguage('en-us');
+    // $translateProvider.fallbackLanguage('en-us');
+    // $translateProvider.useLocalStorage();
+    //
+    // $translateProvider.useSanitizeValueStrategy('escapeParameters');
 
-    $translateProvider.useLoader('$translatePartialLoader', {
-      urlTemplate: '{part}/{lang}.json'
+    //TODO Test code to check translation : To be removed
+    $translateProvider.translations('en', {
+      CHECKBOX: 'Check Box',
+      RADIOBUTTON: 'Radio Button'
     });
-
-    // additional parts loaded in module controllers
-    // $translatePartialLoaderProvider.addPart('modules/i18n');
-
-    $translateProvider.preferredLanguage('en-us');
-    $translateProvider.fallbackLanguage('en-us');
-    $translateProvider.useLocalStorage();
-
-    $translateProvider.useSanitizeValueStrategy('escapeParameters');
+    $translateProvider.translations('de', {
+      CHECKBOX: 'Selectievakje',
+      RADIOBUTTON: 'Radio knop'
+    });
+    $translateProvider.preferredLanguage('en');
   });
+  //Test code to check translation : Ends
 
   // DYNAMIC LOCALE CONFIG
   angular.module('app').config(function (tmhDynamicLocaleProvider) {

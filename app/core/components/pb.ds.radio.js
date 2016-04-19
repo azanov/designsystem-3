@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   var module = angular.module('pb.ds.components');
-  module.directive('pbdsRadio', function () {
+  module.directive('pbdsRadio', function ($timeout) {
     return {
       restrict: 'E',
       require: 'ngModel',
@@ -12,7 +12,11 @@
         ngChange: '&',
         label: '@',
         value: '@',
-        name: '@'
+        name: '@',
+        tipType: '@',
+        tipPosition: '@',
+        tipTitle: '@',
+        tipText: '@'
       },
       controller: function () {
         if (angular.isUndefined(this.label)) {
@@ -34,41 +38,68 @@
       controllerAs: 'ctrl',
       templateUrl: 'pbdsradio.html',
       link: function (scope, elem, attrs) {
-        scope.ctrl.native = 'native' in attrs;
-      }
-    };
-  });
-  module.directive('pbdsRadioGroup', function () {
-    return {
-      restrict: 'E',
-      require: 'ngModel',
-      scope: {},
-      bindToController: {
-        ngModel: '=',
-        ngChange: '&',
-        options: '=',
-        name: '@'
-      },
-      controller: function () {
-        if (angular.isUndefined(this['options'])) {
-          throw Error('options array required');
+        if (scope.ctrl.tipType === 'popover') {
+          scope.ctrl.title = scope.ctrl.tipTitle;
+          scope.ctrl.text = scope.ctrl.tipText;
+          $timeout(function () {
+            $('[data-toggle="popover"]').popover();
+          }, 1000);
+        } else if (scope.ctrl.tipType === 'tooltip') {
+          scope.ctrl.title = scope.ctrl.tipTitle;
+          scope.ctrl.text = scope.ctrl.tipTitle;
+          $timeout(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+          }, 1000);
         }
-        angular.forEach(this['options'], function (item) {
-          if (angular.isUndefined(item.label) || angular.isUndefined(item.value)) {
-            throw Error('label | value attribute missing');
-          }
-        });
-
-        this.onChange = function () {
-          this.ngChange({val: this.ngModel});
-        };
-      },
-      controllerAs: 'ctrl',
-      templateUrl: 'pbdsradiogroup.html',
-      link: function (scope, elem, attrs) {
-        scope.ctrl.native = 'native' in attrs;
-        scope.ctrl.horizontal = 'horizontal' in attrs;
       }
     };
   });
+  //module.directive('pbdsRadioGroup', function ($timeout) {
+  //  return {
+  //    restrict: 'E',
+  //    require: 'ngModel',
+  //    scope: {},
+  //    bindToController: {
+  //      ngModel: '=',
+  //      ngChange: '&',
+  //      options: '=',
+  //      name: '@',
+  //      tipType: '@',
+  //      tipPosition: '@',
+  //      tipTitle: '@',
+  //      tipText: '@'
+  //    },
+  //    controller: function () {
+  //      if (angular.isUndefined(this['options'])) {
+  //        throw Error('options array required');
+  //      }
+  //      angular.forEach(this['options'], function (item) {
+  //        if (angular.isUndefined(item.label) || angular.isUndefined(item.value)) {
+  //          throw Error('label | value attribute missing');
+  //        }
+  //      });
+  //
+  //      this.onChange = function () {
+  //        this.ngChange({val: this.ngModel});
+  //      };
+  //    },
+  //    controllerAs: 'ctrl',
+  //    templateUrl: 'pbdsradiogroup.html',
+  //    link: function (scope, elem, attrs) {
+  //      scope.ctrl.native = 'native' in attrs;
+  //      scope.ctrl.horizontal = 'horizontal' in attrs;
+  //      if (scope.ctrl.tipType === 'popover') {
+  //        scope.ctrl.title = scope.ctrl.tipTitle;
+  //        scope.ctrl.text = scope.ctrl.tipText;
+  //      }else{
+  //        scope.ctrl.title = scope.ctrl.tipTitle;
+  //        scope.ctrl.text = scope.ctrl.tipText;
+  //      }
+  //      $timeout(function () {
+  //        $('[data-toggle="tooltip"]').tooltip();
+  //        $('[data-toggle="popover"]').popover();
+  //      }, 1000);
+  //    }
+  //  };
+  //});
 })();

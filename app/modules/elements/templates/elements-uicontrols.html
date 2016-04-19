@@ -25,6 +25,9 @@
               <a ui-sref="elements.uicontrols({'#':'checkboxes'})">Checkboxes</a>
             </li>
             <li>
+              <a ui-sref="elements.uicontrols({'#':'checkboxesdir'})">Directives</a>
+            </li>
+            <li>
               <a ui-sref="elements.uicontrols({'#':'radios'})">Radio Buttons</a>
             </li>
             <li>
@@ -877,32 +880,24 @@
               </form>
 
             </div>
-          </div>
 
-        </div>
 
-        <div class="row spacer-top-lg">
-          <div class="col-md-8">
-            <figcaption>Enhanced Inline Checkboxes (when enclosed in "form-horizontal")</figcaption>
             <div class="controls-inline">
-              <form class="form-horizontal">
-              <label class="control checkbox">
-                <input type="checkbox">
-                <span class="control-indicator"></span>
-                Custom checkbox
-              </label>
-              <label class="control checkbox">
-                <input type="checkbox">
-                <span class="control-indicator"></span>
-                Custom checkbox
-              </label>
+              <form class="form-inline">
+                <label class="control checkbox">
+                  <input type="checkbox">
+                  <span class="control-indicator"></span>
+                  Custom checkbox
+                </label>
+                <label class="control checkbox">
+                  <input type="checkbox">
+                  <span class="control-indicator"></span>
+                  Custom checkbox
+                </label>
               </form>
-
             </div>
           </div>
-
         </div>
-
       </figure>
     </div>
   </div>
@@ -910,36 +905,27 @@
   <!-- irshad -->
   <div class="row">
       <div class="col-md-8">
-        <h1 class="doc-head" id="checkboxes-121">Checkboxes via Directives</h1>
+        <h1 class="doc-head" id="checkboxesdir">Checkboxes & RadioButton Directives</h1>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="doc-sectionhead">Styles</h2>
-      </div>
-    </div>
+
 
     <div class="row">
       <div class="col-md-9">
-            <pre>
-              &lt;pbds-checkbox
-                label="Enhanced"
-                ng-model="ctrl.model"
-                ng-change="ctrl.onCheckbox(val)"
-                name="form.property.name"
-                disabled="ctrl.isdisabled"&gt;
-              &lt;/pbds-checkbox&gt;
-
-              &lt;pbds-checkbox
-                    label="Native"
-                    name="form.property.name"
-                    ng-model="ctrl.model"
-                    ng-change="ctrl.onCheckbox(val)"
-                    native
-                    disabled="ctrl.isdisabled"&gt;
-              &lt;/pbds-checkbox&gt;
-          </pre>
+          <pre class="prettyprint" style="border:none;background: white">
+          &lt;pbds-checkbox
+            label="String"
+            ng-model="model"
+            ng-change="callBack(val)"
+            disabled='boolean'
+            name="form.property.name"
+            tip-type="popover|tooltip"
+            tip-position="top|left|bottom|right"
+            tip-text="String"
+            tip-title="String"&gt
+          &lt;/pbds-checkbox&gt;
+        </pre>
       </div>
       <div class="col-md-3">
         <form name="myForm1">
@@ -947,8 +933,14 @@
           <div class="row">
             <div class="col-md-12">
               <div class="controls-stacked">
-                  <pbds-checkbox label="Enhanced" name="checkbox1" ng-model="inputs.models.checkbox1" ng-change="inputs.onCheckbox(val)" disabled='inputs.models.checkbox1disabled'></pbds-checkbox>
-                  <pbds-checkbox label="Native" name="checkbox2" ng-model="inputs.models.checkbox2" ng-change="inputs.onCheckbox(val)" disabled='inputs.models.checkbox2disabled' native></pbds-checkbox>
+                  <pbds-checkbox tip-type="popover" tip-position="top"  tip-text="Irshad" tip-title="Top" ng-attr-label="{{'CHECKBOX' | translate}}" name="checkbox1" ng-model="inputs.models.checkbox1" ng-change="inputs.onCheckbox(val)" disabled='inputs.models.checkbox1disabled'></pbds-checkbox>
+                  <button class="btn btn-default btn-xs" ng-click="inputs.models.checkbox1disabled=!inputs.models.checkbox1disabled">
+                    <span ng-if="inputs.models.checkbox1disabled">Enable</span>
+                    <span ng-if="!inputs.models.checkbox1disabled">Disable</span>
+                  </button>
+                  <button class="btn btn-default btn-xs" ng-click="inputs.models.checkbox1=!inputs.models.checkbox1">
+                    Toggle
+                  </button>
               </div>
             </div>
           </div>
@@ -957,111 +949,93 @@
       </div>
     </div>
 
-<div class="row">
-  <div class="col-md-9">
-    <pre>
-      &lt;pbds-radio
-        label="Mardy"
-        value="mardy-1"
-        ng-model="ctrl.model"
-        ng-change="inputs.onRadio(val)"
-        disabled="false"
-        name="form.property.name"&gt;
-      &lt;/pbds-radio>
-
-      &lt;pbds-radio
-        label="Melman"
-        name="form.property.name"
-        value="melman-1"
-        ng-model="inputs.models.radio"
-        ng-change="inputs.onRadio(val)"
-        disabled="false"
-        native&gt;
-      &lt;/pbds-radio&gt;
-    </pre>
-  </div>
-  <div class="col-md-3">
-    <form name="myForm2">
-    <figure>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="controls-stacked">
-              <pbds-radio label="Mardy" name="radio" value="mardy-1" ng-model="inputs.models.radio" ng-change="inputs.onRadio(val)" disabled="false"></pbds-radio>
-              <pbds-radio label="Melman" name="radio" value="melman-1" ng-model="inputs.models.radio" ng-change="inputs.onRadio(val)" disabled="false" native></pbds-radio>
-          </div>
-        </div>
-      </div>
-    </figure>
-  </form>
-  </div>
-</div>
-
-
-  <div class="row">
-  <div class="col-md-9">
-    <pre>
-    &lt;pbds-radio-group
-      options="ctrl.team"
-      name="form.property.name"
-      ng-model="ctrl.model"
-      ng-change="ctrl.onRadioGroup(val)"&gt;
-    &lt;/pbds-radio-group&gt;
-
-    ctrl.team = [
-      {label:'Dan Collete',value:'@dan',disabled:true},
-      {label:'Steve Lombardi',value:'@steve',disabled:false},
-      {label:'Irshad A. Khan',value:'@irshadk',disabled:false},
-      {label:'Carla Pillegi',value:'@carla'},
-    ];
-  </pre>
-  </div>
-  <div class="col-md-3">
-    <form name="myForm3">
-    <figure>
-      <div class="row">
-        <div class="col-md-12">
-              <pbds-radio-group options="inputs.team" name="team" ng-model="inputs.models.one" ng-change="inputs.onRadioGroup(val)"></pbds-radio-group>
-        </div>
-      </div>
-    </figure>
-  </form>
-  </div>
-</div>
-
-
 
 
   <div class="row">
     <div class="col-md-9">
-    <pre>
-    &lt;pb-radio-group
-      options="ctrl.team"
-      name="form.property.name"
-      ng-model="ctrl.model"
-      ng-change="ctrl.onRadioGroup(val)"
-      horizontal&gt;
-    &lt;/pb-radio-group&gt;
-
-    ctrl.team = [
-      {label:'Dan Collete',value:'@dan',disabled:true},
-      {label:'Steve Lombardi',value:'@steve',disabled:false},
-      {label:'Irshad A. Khan',value:'@irshadk',disabled:false},
-      {label:'Carla Pillegi',value:'@carla'},
-    ];
-  </pre>
+          <pre class="prettyprint" style="border:none;background: white">
+          &lt;pbds-radio
+            label="String"
+            ng-model="model"
+            value="String"
+            ng-change="callBack(val)"
+            disabled='boolean'
+            name="form.property.name"
+            tip-type="popover|tooltip"
+            tip-position="top|left|bottom|right"
+            tip-text="String"
+            tip-title="String"&gt
+          &lt;/pbds-radio&gt;
+        </pre>
     </div>
     <div class="col-md-3">
-      <form name="myForm3">
+      <form name="myForm1">
         <figure>
           <div class="row">
             <div class="col-md-12">
-                <pb-radio-group options="inputs.team" name="team1" ng-model="inputs.models.two" ng-change="inputs.onRadioGroup(val)" horizontal></pb-radio-group>
+              <div class="controls-stacked">
+                <pbds-radio tip-type="popover" tip-position="bottom"  tip-text="Irshad" tip-title="Top" ng-attr-label="{{'RADIOBUTTON' | translate}}" name="radio1" ng-model="inputs.models.radio1" value="radio-1" ng-change="inputs.onRadio(val)" disabled='inputs.models.radio1disabled'></pbds-radio>
+                <button class="btn btn-default btn-xs" ng-click="inputs.models.radio1disabled=!inputs.models.radio1disabled">
+                  <span ng-if="inputs.models.radio1disabled">Enable</span>
+                  <span ng-if="!inputs.models.radio1disabled">Disable</span>
+                </button>
+                <button ng-if="inputs.models.radio1!='radio-1'" class="btn btn-default btn-xs" ng-click="inputs.models.radio1='radio-1'">
+                  Set
+                </button>
+                <button class="btn btn-default btn-xs" ng-click="inputs.changeLanguage('en')">
+                  English
+                </button>
+                <button class="btn btn-default btn-xs" ng-click="inputs.changeLanguage('de')">
+                  Deutsch
+                </button>
+              </div>
             </div>
           </div>
         </figure>
       </form>
     </div>
   </div>
+
+<!--<div class="row">-->
+  <!--<div class="col-md-9">-->
+    <!--<pre>-->
+      <!--&lt;pbds-radio-->
+        <!--label="Mardy"-->
+        <!--value="mardy-1"-->
+        <!--ng-model="ctrl.model"-->
+        <!--ng-change="inputs.onRadio(val)"-->
+        <!--disabled="false"-->
+        <!--name="form.property.name"&gt;-->
+      <!--&lt;/pbds-radio>-->
+
+      <!--&lt;pbds-radio-->
+        <!--label="Melman"-->
+        <!--name="form.property.name"-->
+        <!--value="melman-1"-->
+        <!--ng-model="inputs.models.radio"-->
+        <!--ng-change="inputs.onRadio(val)"-->
+        <!--disabled="false"-->
+        <!--native&gt;-->
+      <!--&lt;/pbds-radio&gt;-->
+    <!--</pre>-->
+  <!--</div>-->
+  <!--<div class="col-md-3">-->
+    <!--<form name="myForm2">-->
+    <!--<figure>-->
+      <!--<div class="row">-->
+        <!--<div class="col-md-12">-->
+          <!--<div class="controls-stacked">-->
+              <!--&lt;!&ndash;<pbds-radio tooltip-text="Irshad" label="Mardy" name="radio" value="mardy-1" ng-model="inputs.models.radio" ng-change="inputs.onRadio(val)" disabled="false"></pbds-radio>&ndash;&gt;-->
+              <!--&lt;!&ndash;<pbds-radio tooltip-text="Irshad" label="Melman" name="radio" value="melman-1" ng-model="inputs.models.radio" ng-change="inputs.onRadio(val)" disabled="false" native></pbds-radio>&ndash;&gt;-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</figure>-->
+  <!--</form>-->
+  <!--</div>-->
+<!--</div>-->
+
+
 
   <!-- irshad ends -->
 
@@ -1499,5 +1473,12 @@
         <li>If your error text needs to be longer than its companion field, consider wrapping/flowing it &mdash; bearing in mind that 3-6 columns in width is optimal.</li>
       </ul>
     </div>
+  </div>
+
+  <div class="row">
+      <div class="col-xs-12">
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+        <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content.<span class='alert alert-info'></span> It's very engaging. Right?">Click to toggle popover</button>
+      </div>
   </div>
 </div>

@@ -1,19 +1,14 @@
 (function () {
   'use strict';
 
-  angular.module('pb.ds.elements').controller('InputsController', function ($log, CountriesResolve, PeopleResolve, moment, $http, toastr) {
+  angular.module('pb.ds.elements').controller('InputsController', function ($log, CountriesResolve, PeopleResolve, moment, $http, toastr, $translate) {
     var _this = this;
 
     _this.models = {};
-    _this.models.checkbox1 = true;
-    _this.models.checkbox2 = false;
-    _this.models.radio = 'melman-1';
-    _this.team = [
-      {label: 'Dan Collete', value: '@dan', disabled: false},
-      {label: 'Steve Lombardi', value: '@steve', disabled: false},
-      {label: 'Irshad A. Khan', value: '@irshadk', disabled: true},
-      {label: 'Carla Pillegi', value: '@carla'}
-    ];
+    _this.models.checkbox1 = false;
+
+    _this.models.checkbox1disabled = true;
+    _this.models.radio1disabled = false;
 
     _this.list = [];
     _this.models.one = undefined;
@@ -26,10 +21,6 @@
       }
     };
 
-    _this.onRadioGroup = function (val) {
-      toastr.info('Radio Button Group', val);
-    };
-
     _this.onCheckbox = function (val) {
       toastr.info('Checkbox ', val);
     };
@@ -37,6 +28,10 @@
     _this.onRadio = function (val) {
       toastr.info('Radio Button', val);
     };
+
+    _this.changeLanguage = function(lang){
+      $translate.use(lang);
+    }
 
     // numeric stepper
     _this.numericStepper = {
