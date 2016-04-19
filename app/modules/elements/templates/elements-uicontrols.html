@@ -25,9 +25,6 @@
               <a ui-sref="elements.uicontrols({'#':'checkboxes'})">Checkboxes</a>
             </li>
             <li>
-              <a ui-sref="elements.uicontrols({'#':'checkboxesdir'})">Directives</a>
-            </li>
-            <li>
               <a ui-sref="elements.uicontrols({'#':'radios'})">Radio Buttons</a>
             </li>
             <li>
@@ -41,6 +38,9 @@
             </li>
             <li>
               <a ui-sref="elements.uicontrols({'#':'writing'})">Writing</a>
+            </li>
+            <li>
+              <a ui-sref="elements.uicontrols({'#':'checkboxesdir'})">Directives</a>
             </li>
           </ul>
         </div>
@@ -902,142 +902,7 @@
     </div>
   </div>
 
-  <!-- irshad -->
-  <div class="row">
-      <div class="col-md-8">
-        <h1 class="doc-head" id="checkboxesdir">Checkboxes & RadioButton Directives</h1>
-      </div>
-    </div>
 
-
-
-    <div class="row">
-      <div class="col-md-9">
-          <pre class="prettyprint" style="border:none;background: white">
-          &lt;pbds-checkbox
-            label="String"
-            ng-model="model"
-            ng-change="callBack(val)"
-            disabled='boolean'
-            name="form.property.name"
-            tip-type="popover|tooltip"
-            tip-position="top|left|bottom|right"
-            tip-text="String"
-            tip-title="String"&gt
-          &lt;/pbds-checkbox&gt;
-        </pre>
-      </div>
-      <div class="col-md-3">
-        <form name="myForm1">
-        <figure>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="controls-stacked">
-                  <pbds-checkbox tip-type="popover" tip-position="top"  tip-text="Irshad" tip-title="Top" ng-attr-label="{{'CHECKBOX' | translate}}" name="checkbox1" ng-model="inputs.models.checkbox1" ng-change="inputs.onCheckbox(val)" disabled='inputs.models.checkbox1disabled'></pbds-checkbox>
-                  <button class="btn btn-default btn-xs" ng-click="inputs.models.checkbox1disabled=!inputs.models.checkbox1disabled">
-                    <span ng-if="inputs.models.checkbox1disabled">Enable</span>
-                    <span ng-if="!inputs.models.checkbox1disabled">Disable</span>
-                  </button>
-                  <button class="btn btn-default btn-xs" ng-click="inputs.models.checkbox1=!inputs.models.checkbox1">
-                    Toggle
-                  </button>
-              </div>
-            </div>
-          </div>
-        </figure>
-      </form>
-      </div>
-    </div>
-
-
-
-  <div class="row">
-    <div class="col-md-9">
-          <pre class="prettyprint" style="border:none;background: white">
-          &lt;pbds-radio
-            label="String"
-            ng-model="model"
-            value="String"
-            ng-change="callBack(val)"
-            disabled='boolean'
-            name="form.property.name"
-            tip-type="popover|tooltip"
-            tip-position="top|left|bottom|right"
-            tip-text="String"
-            tip-title="String"&gt
-          &lt;/pbds-radio&gt;
-        </pre>
-    </div>
-    <div class="col-md-3">
-      <form name="myForm1">
-        <figure>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="controls-stacked">
-                <pbds-radio tip-type="popover" tip-position="bottom"  tip-text="Irshad" tip-title="Top" ng-attr-label="{{'RADIOBUTTON' | translate}}" name="radio1" ng-model="inputs.models.radio1" value="radio-1" ng-change="inputs.onRadio(val)" disabled='inputs.models.radio1disabled'></pbds-radio>
-                <button class="btn btn-default btn-xs" ng-click="inputs.models.radio1disabled=!inputs.models.radio1disabled">
-                  <span ng-if="inputs.models.radio1disabled">Enable</span>
-                  <span ng-if="!inputs.models.radio1disabled">Disable</span>
-                </button>
-                <button ng-if="inputs.models.radio1!='radio-1'" class="btn btn-default btn-xs" ng-click="inputs.models.radio1='radio-1'">
-                  Set
-                </button>
-                <button class="btn btn-default btn-xs" ng-click="inputs.changeLanguage('en')">
-                  English
-                </button>
-                <button class="btn btn-default btn-xs" ng-click="inputs.changeLanguage('de')">
-                  Deutsch
-                </button>
-              </div>
-            </div>
-          </div>
-        </figure>
-      </form>
-    </div>
-  </div>
-
-<!--<div class="row">-->
-  <!--<div class="col-md-9">-->
-    <!--<pre>-->
-      <!--&lt;pbds-radio-->
-        <!--label="Mardy"-->
-        <!--value="mardy-1"-->
-        <!--ng-model="ctrl.model"-->
-        <!--ng-change="inputs.onRadio(val)"-->
-        <!--disabled="false"-->
-        <!--name="form.property.name"&gt;-->
-      <!--&lt;/pbds-radio>-->
-
-      <!--&lt;pbds-radio-->
-        <!--label="Melman"-->
-        <!--name="form.property.name"-->
-        <!--value="melman-1"-->
-        <!--ng-model="inputs.models.radio"-->
-        <!--ng-change="inputs.onRadio(val)"-->
-        <!--disabled="false"-->
-        <!--native&gt;-->
-      <!--&lt;/pbds-radio&gt;-->
-    <!--</pre>-->
-  <!--</div>-->
-  <!--<div class="col-md-3">-->
-    <!--<form name="myForm2">-->
-    <!--<figure>-->
-      <!--<div class="row">-->
-        <!--<div class="col-md-12">-->
-          <!--<div class="controls-stacked">-->
-              <!--&lt;!&ndash;<pbds-radio tooltip-text="Irshad" label="Mardy" name="radio" value="mardy-1" ng-model="inputs.models.radio" ng-change="inputs.onRadio(val)" disabled="false"></pbds-radio>&ndash;&gt;-->
-              <!--&lt;!&ndash;<pbds-radio tooltip-text="Irshad" label="Melman" name="radio" value="melman-1" ng-model="inputs.models.radio" ng-change="inputs.onRadio(val)" disabled="false" native></pbds-radio>&ndash;&gt;-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</figure>-->
-  <!--</form>-->
-  <!--</div>-->
-<!--</div>-->
-
-
-
-  <!-- irshad ends -->
 
   <div class="row">
     <div class="col-md-8">
@@ -1475,10 +1340,348 @@
     </div>
   </div>
 
+
+
+
+
+  <!-- irshad -->
+
+
   <div class="row">
-      <div class="col-xs-12">
-        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
-        <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content.<span class='alert alert-info'></span> It's very engaging. Right?">Click to toggle popover</button>
+      <div class="col-md-8">
+        <h1 class="doc-head" id="checkboxesdir">Design System Directives</h1>
       </div>
+    </div>
+
+    <!-- overview -->
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Overview</h2>
+
+        <p>Once you've downloaded the Design System to your application, add the components script to your page. The following example assumes that the Design System was installed using <a href="https://github.com/PBGUX/bower-designsystem">Bower</a>.</p>
+
+<pre class="preview-code prettyprint">
+&lt;script src="bower_components/pb-design-system/dist/js/pb.ds.components.js"&gt;&lt;/script&gt;
+</pre>
+
+        <p class="spacer-top-md">To use the Design System components, you need to add the component module as a dependency in your application as follows.</p>
+
+<pre class="preview-code prettyprint">
+angular.module('app', [
+  'pb.ds.components'
+]);
+</pre>
+      </div>
+    </div>
+
+
+
+    <!-- checkbox -->
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Checkbox Directive</h2>
+
+        <p class="spacer-top-md">The checkbox directive provides an easier implementation of the Design System styled checkbox controls. The directive uses a element tag <code>&lt;pbds-checkbox&gt;&lt;/pbds-checkbox&gt;</code> with the following attributes.</p>
+
+        <table class="table table-hover spacer-top-md spacer-bottom-md">
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>label</td>
+              <td>string</td>
+              <td>none</td>
+              <td>The text label for the checkbox input. When using localized strings with angular-translate, use <code>ng-attr-label</code> to handle the string inerpolation, example <code>ng-attr-label="&#123;&#123;'CHECKBOX' &#124; translate&#125;&#125;"</code></td>
+            </tr>
+            <tr>
+              <td>ng-model</td>
+              <td>object</td>
+              <td>none</td>
+              <td>Controller property bound to the checkbox value.</td>
+            </tr>
+            <tr>
+              <td>ng-change <em>(optional)</em></td>
+              <td>function</td>
+              <td>none</td>
+              <td>Controller function to run when the checkbox value is updated. The value argument is exposed as <code>val</code>, example <code>ng-change="myFunction(val)"</code></td>
+            </tr>
+            <tr>
+              <td>disabled <em>(optional)</em></td>
+              <td>boolean</td>
+              <td>false</td>
+              <td>Set the control as disabled</td>
+            </tr>
+            <tr>
+              <td>name <em>(optional)</em></td>
+              <td>string</td>
+              <td>none</td>
+              <td>Property name of the form under which the control is published.</td>
+            </tr>
+            <tr>
+              <td>tip-type <em>(optional)</em></td>
+              <td>string: popover|tooltip</td>
+              <td>none</td>
+              <td>Define what type of tooltip to display, either a popover or a tooltip.</td>
+            </tr>
+            <tr>
+              <td>tip-position <em>(required for tip-type)</em></td>
+              <td>string: top|left|bottom|right</td>
+              <td>top</td>
+              <td>Define placement of the tooltip.</td>
+            </tr>
+            <tr>
+              <td>tip-text <em>(required for tip-type)</em></td>
+              <td>string</td>
+              <td>none</td>
+              <td>Text used to display in the tooltip or popover.</td>
+            </tr>
+            <tr>
+              <td>tip-title <em>(required for tip-type)</em></td>
+              <td>string</td>
+              <td>none</td>
+              <td>Text used to display in a popover title.</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        <div class="preview-example">
+
+          <div class="row">
+            <div class="col-md-4">
+              <figure>
+                <figcaption>Single Checkbox</figcaption>
+                <div class="controls-stacked">
+                    <pbds-checkbox tip-type="popover" tip-position="top"  tip-text="Irshad" tip-title="Top" ng-attr-label="{{'CHECKBOX' | translate}}" name="checkbox1" ng-model="inputs.models.checkbox1" ng-change="inputs.onCheckbox(val)" disabled='inputs.models.checkbox1disabled'></pbds-checkbox>
+
+                    <button class="btn btn-default btn-xs" ng-click="inputs.models.checkbox1disabled=!inputs.models.checkbox1disabled">
+                      <span ng-if="inputs.models.checkbox1disabled">Enable</span>
+                      <span ng-if="!inputs.models.checkbox1disabled">Disable</span>
+                    </button>
+
+                    <button class="btn btn-default btn-xs" ng-click="inputs.models.checkbox1=!inputs.models.checkbox1">
+                      Toggle
+                    </button>
+                </div>
+              </figure>
+
+            </div>
+
+            <div class="col-md-8">
+              <figure>
+                <figcaption>Inline Checkboxes</figcaption>
+                <div class="controls-inline">
+                  <pbds-checkbox label="Sample" ng-model="inputs.models.checkbox2"></pbds-checkbox>
+                  <pbds-checkbox label="Sample 2" ng-model="inputs.models.checkbox3"></pbds-checkbox>
+                </div>
+              </figure>
+            </div>
+          </div>
+
+        </div>
+
+<div class="preview-code" hljs language="xml">
+<!-- single control -->
+<pbds-checkbox
+  tip-type="popover"
+  tip-position="top"
+  tip-text="Irshad"
+  tip-title="Top"
+  ng-attr-label="{{'CHECKBOX' | translate}}"
+  name="checkbox1"
+  ng-model="inputs.models.checkbox1"
+  ng-change="inputs.onCheckbox(val)"
+  disabled='inputs.models.checkbox1disabled'>
+</pbds-checkbox>
+
+<!-- inline controls -->
+<div class="controls-inline">
+  <pbds-checkbox label="Sample" ng-model="inputs.models.checkbox2"></pbds-checkbox>
+  <pbds-checkbox label="Sample 2" ng-model="inputs.models.checkbox3"></pbds-checkbox>
+</div>
+</div>
+
+      </div>
+    </div>
+
+
+
+    <!-- radio -->
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Radio Button Directive</h2>
+
+        <p class="spacer-top-md">Lorem ipsum...</p>
+
+        <div class="preview-example">
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="controls-stacked">
+                <pbds-radio tip-type="popover" tip-position="bottom"  tip-text="Irshad" tip-title="Top" ng-attr-label="{{'RADIOBUTTON' | translate}}" name="radio1" ng-model="inputs.models.radio1" value="radio-1" ng-change="inputs.onRadio(val)" disabled='inputs.models.radio1disabled'></pbds-radio>
+                <button class="btn btn-default btn-xs" ng-click="inputs.models.radio1disabled=!inputs.models.radio1disabled">
+                  <span ng-if="inputs.models.radio1disabled">Enable</span>
+                  <span ng-if="!inputs.models.radio1disabled">Disable</span>
+                </button>
+                <button ng-if="inputs.models.radio1!='radio-1'" class="btn btn-default btn-xs" ng-click="inputs.models.radio1='radio-1'">
+                  Set
+                </button>
+                <button class="btn btn-default btn-xs" ng-click="inputs.changeLanguage('en')">
+                  English
+                </button>
+                <button class="btn btn-default btn-xs" ng-click="inputs.changeLanguage('de')">
+                  Deutsch
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+<div class="preview-code" hljs language="xml">
+<pbds-radio tip-type="popover" tip-position="bottom"  tip-text="Irshad" tip-title="Top" ng-attr-label="{{'RADIOBUTTON' | translate}}" name="radio1" ng-model="inputs.models.radio1" value="radio-1" ng-change="inputs.onRadio(val)" disabled='inputs.models.radio1disabled'></pbds-radio>
+</div>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="row">
+      <div class="col-md-9">
+          <pre class="prettyprint" style="border:none;background: white">
+          &lt;pbds-checkbox
+            label="String"
+            ng-model="model"
+            ng-change="callBack(val)"
+            disabled='boolean'
+            name="form.property.name"
+            tip-type="popover|tooltip"
+            tip-position="top|left|bottom|right"
+            tip-text="String"
+            tip-title="String"&gt
+          &lt;/pbds-checkbox&gt;
+        </pre>
+      </div>
+      <div class="col-md-3">
+        <form name="myForm1">
+        <figure>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="controls-stacked">
+                  <pbds-checkbox tip-type="popover" tip-position="top"  tip-text="Irshad" tip-title="Top" ng-attr-label="{{'CHECKBOX' | translate}}" name="checkbox1" ng-model="inputs.models.checkbox1" ng-change="inputs.onCheckbox(val)" disabled='inputs.models.checkbox1disabled'></pbds-checkbox>
+                  <button class="btn btn-default btn-xs" ng-click="inputs.models.checkbox1disabled=!inputs.models.checkbox1disabled">
+                    <span ng-if="inputs.models.checkbox1disabled">Enable</span>
+                    <span ng-if="!inputs.models.checkbox1disabled">Disable</span>
+                  </button>
+                  <button class="btn btn-default btn-xs" ng-click="inputs.models.checkbox1=!inputs.models.checkbox1">
+                    Toggle
+                  </button>
+              </div>
+            </div>
+          </div>
+        </figure>
+      </form>
+      </div>
+    </div>
+
+
+
+  <div class="row">
+    <div class="col-md-9">
+          <pre class="prettyprint" style="border:none;background: white">
+          &lt;pbds-radio
+            label="String"
+            ng-model="model"
+            value="String"
+            ng-change="callBack(val)"
+            disabled='boolean'
+            name="form.property.name"
+            tip-type="popover|tooltip"
+            tip-position="top|left|bottom|right"
+            tip-text="String"
+            tip-title="String"&gt
+          &lt;/pbds-radio&gt;
+        </pre>
+    </div>
+    <div class="col-md-3">
+      <form name="myForm1">
+        <figure>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="controls-stacked">
+                <pbds-radio tip-type="popover" tip-position="bottom"  tip-text="Irshad" tip-title="Top" ng-attr-label="{{'RADIOBUTTON' | translate}}" name="radio1" ng-model="inputs.models.radio1" value="radio-1" ng-change="inputs.onRadio(val)" disabled='inputs.models.radio1disabled'></pbds-radio>
+                <button class="btn btn-default btn-xs" ng-click="inputs.models.radio1disabled=!inputs.models.radio1disabled">
+                  <span ng-if="inputs.models.radio1disabled">Enable</span>
+                  <span ng-if="!inputs.models.radio1disabled">Disable</span>
+                </button>
+                <button ng-if="inputs.models.radio1!='radio-1'" class="btn btn-default btn-xs" ng-click="inputs.models.radio1='radio-1'">
+                  Set
+                </button>
+                <button class="btn btn-default btn-xs" ng-click="inputs.changeLanguage('en')">
+                  English
+                </button>
+                <button class="btn btn-default btn-xs" ng-click="inputs.changeLanguage('de')">
+                  Deutsch
+                </button>
+              </div>
+            </div>
+          </div>
+        </figure>
+      </form>
+    </div>
   </div>
+
+<!--<div class="row">-->
+  <!--<div class="col-md-9">-->
+    <!--<pre>-->
+      <!--&lt;pbds-radio-->
+        <!--label="Mardy"-->
+        <!--value="mardy-1"-->
+        <!--ng-model="ctrl.model"-->
+        <!--ng-change="inputs.onRadio(val)"-->
+        <!--disabled="false"-->
+        <!--name="form.property.name"&gt;-->
+      <!--&lt;/pbds-radio>-->
+
+      <!--&lt;pbds-radio-->
+        <!--label="Melman"-->
+        <!--name="form.property.name"-->
+        <!--value="melman-1"-->
+        <!--ng-model="inputs.models.radio"-->
+        <!--ng-change="inputs.onRadio(val)"-->
+        <!--disabled="false"-->
+        <!--native&gt;-->
+      <!--&lt;/pbds-radio&gt;-->
+    <!--</pre>-->
+  <!--</div>-->
+  <!--<div class="col-md-3">-->
+    <!--<form name="myForm2">-->
+    <!--<figure>-->
+      <!--<div class="row">-->
+        <!--<div class="col-md-12">-->
+          <!--<div class="controls-stacked">-->
+              <!--&lt;!&ndash;<pbds-radio tooltip-text="Irshad" label="Mardy" name="radio" value="mardy-1" ng-model="inputs.models.radio" ng-change="inputs.onRadio(val)" disabled="false"></pbds-radio>&ndash;&gt;-->
+              <!--&lt;!&ndash;<pbds-radio tooltip-text="Irshad" label="Melman" name="radio" value="melman-1" ng-model="inputs.models.radio" ng-change="inputs.onRadio(val)" disabled="false" native></pbds-radio>&ndash;&gt;-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</figure>-->
+  <!--</form>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+
+  <!-- irshad ends -->
+
+
 </div>
