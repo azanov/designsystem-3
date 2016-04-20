@@ -18,6 +18,7 @@
             <li><a ui-sref="elements.uibootstrap({'#':'accordions'})">Accordions</a></li>
             <li><a ui-sref="elements.uibootstrap({'#':'tabs'})">Tabs</a></li>
             <li><a ui-sref="elements.uibootstrap({'#':'alerts'})">Alerts</a></li>
+            <li><a ui-sref="elements.uibootstrap({'#':'pagination'})">Pagination</a></li>
           </ul>
         </div>
       </div>
@@ -38,7 +39,8 @@
     <div class="col-md-8">
       <p>The default controls supplied with Boostrap are simple to use, require no additional Javascript development and are configured and used completely from the HTML markup.</p>
 
-      <p>For Angular JS development, there is a set of native AngularJS directives based on Bootstrap's markup and CSS which are styled to match the Design System. For more technical information, installation and usage instructions, please see the <a href="https://angular-ui.github.io/bootstrap/" target="_blank">Angular UI Bootstrap site</a>.</p>
+      <p>For Angular JS development, there is a set of native AngularJS directives based on Bootstrap's markup and CSS which are styled to match the Design System. For more technical information, installation and usage instructions, please see the
+        <a href="https://angular-ui.github.io/bootstrap/" target="_blank">Angular UI Bootstrap site</a>.</p>
 
     </div>
   </div>
@@ -58,8 +60,8 @@
             This content is straight in the template.
           </uib-accordion-group>
           <uib-accordion-group heading="{{group.title}}" ng-repeat="group in uibs.groups">
-           {{group.content}}
-         </uib-accordion-group>
+            {{group.content}}
+          </uib-accordion-group>
         </uib-accordion>
       </figure>
     </div>
@@ -71,8 +73,8 @@
             This content is straight in the template.
           </uib-accordion-group>
           <uib-accordion-group heading="{{group.title}}" ng-repeat="group in uibs.groups">
-           {{group.content}}
-         </uib-accordion-group>
+            {{group.content}}
+          </uib-accordion-group>
         </uib-accordion>
       </figure>
     </div>
@@ -182,23 +184,44 @@
     <div class="col-md-6">
       <h2 class="doc-sectionhead">Defaults</h2>
       <uib-pagination total-items="uibs.totalItems" ng-model="uibs.currentPage" ng-change="uibs.pageChanged()"></uib-pagination>
+
       <uib-pagination boundary-links="true" total-items="uibs.totalItems" ng-model="uibs.currentPage" class="pagination-sm" previous-text="&lt;" next-text="&gt;" first-text="&lt;&lt;" last-text="&gt;&gt;"></uib-pagination>
+
       <uib-pagination direction-links="false" boundary-links="true" total-items="uibs.totalItems" ng-model="uibs.currentPage"></uib-pagination>
+
       <uib-pagination direction-links="false" total-items="uibs.totalItems" ng-model="uibs.currentPage" num-pages="smallnumPages"></uib-pagination>
 
       <pre>The selected page number is: {{uibs.currentPage}}</pre>
       <button type="button" class="btn btn-default" ng-click="uibs.setPage(3)">Set current page to 3</button>
     </div>
-    <div class="col-md-6"></div>
+    <div class="col-md-6">
+      <h2 class="doc-sectionhead">Limit the maximum visible buttons</h2>
+
+        <h6><code>rotate</code> defaulted to<code>true</code>:</h6>
+        <uib-pagination total-items="uibs.bigTotalItems" ng-model="uibs.bigCurrentPage" max-size="uibs.maxSize" class="pagination-sm" boundary-links="true" num-pages="numPages"></uib-pagination>
+
+        <h6><code>rotate</code> defaulted to <code>true</code> and <code>force-ellipses</code>
+        set to <code>true</code>:</h6>
+        <uib-pagination total-items="uibs.bigTotalItems" ng-model="uibs.bigCurrentPage" max-size="uibs.maxSize" class="pagination-sm" boundary-links="true" force-ellipses="true"></uib-pagination>
+
+        <h6><code>rotate</code> set to <code>false</code>:</h6>
+        <uib-pagination total-items="uibs.bigTotalItems" ng-model="uibs.bigCurrentPage" max-size="uibs.maxSize" class="pagination-sm" boundary-links="true" rotate="false"></uib-pagination>
+
+        <h6><code>boundary-link-numbers</code> set to <code>true</code> and <code>rotate</code> defaulted to <code>true</code>:</h6>
+        <uib-pagination total-items="uibs.bigTotalItems" ng-model="uibs.bigCurrentPage" max-size="uibs.maxSize" class="pagination-sm" boundary-link-numbers="true"></uib-pagination>
+
+        <h6><code>boundary-link-numbers</code> set to <code>true</code> and <code>rotate</code> set to <code>false</code>:</h6>
+        <uib-pagination total-items="uibs.bigTotalItems" ng-model="uibs.bigCurrentPage" max-size="uibs.maxSize" class="pagination-sm" boundary-link-numbers="true" rotate="false"></uib-pagination>
+
+        <pre>Page: {{uibs.bigCurrentPage}} / {{numPages}}</pre>
+    </div>
   </div>
 
-
-
-
-</div><!-- end container -->
+</div>
+<!-- end container -->
 
 <script type="text/ng-template" id="alert.html">
-   <div class="alert alert-info" role="alert">
-     <div ng-transclude></div>
-   </div>
- </script>
+  <div class="alert alert-info" role="alert">
+    <div ng-transclude></div>
+  </div>
+</script>
