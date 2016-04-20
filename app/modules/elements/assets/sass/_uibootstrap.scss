@@ -1,6 +1,9 @@
 
 // UI-BOOTSTRAP OVERRIDES //
 
+.alert-dismissable .close, .alert-dismissible .close {
+  right: 0;
+}
 
 // added per bootstrap-ui documentation */
 .nav, .pagination, .carousel, .panel-title a {

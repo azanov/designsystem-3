@@ -32,8 +32,8 @@
 
     // alerts
     _this.alerts = [
-      { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' },
-      { type: 'success', msg: 'Well done! You successfully read this important alert message.' }
+      { type: 'danger', msg: 'We couldn’t complete your request. Please try again in a moment.' },
+      { type: 'success', msg: 'A new address was imported.' }
     ];
 
     _this.addAlert = function () {
@@ -43,6 +43,22 @@
     _this.closeAlert = function (index) {
       _this.alerts.splice(index, 1);
     };
+
+    // pagination
+    _this.totalItems = 64;
+    _this.currentPage = 4;
+
+    _this.setPage = function (pageNo) {
+      _this.currentPage = pageNo;
+    };
+
+    _this.pageChanged = function () {
+      $log.log('Page changed to: ' + _this.currentPage);
+    };
+
+    _this.maxSize = 5;
+    _this.bigTotalItems = 175;
+    _this.bigCurrentPage = 1;
 
     // modals
     _this.modals = {

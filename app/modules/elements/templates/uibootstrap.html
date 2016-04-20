@@ -17,6 +17,7 @@
           <ul class="list-unstyled list-inline jump-menu">
             <li><a ui-sref="elements.uibootstrap({'#':'accordions'})">Accordions</a></li>
             <li><a ui-sref="elements.uibootstrap({'#':'tabs'})">Tabs</a></li>
+            <li><a ui-sref="elements.uibootstrap({'#':'alerts'})">Alerts</a></li>
           </ul>
         </div>
       </div>
@@ -164,5 +165,40 @@
     </div>
   </div>
 
-  
-</div>
+  <div class="row spacer-top-md">
+    <div class="col-md-6">
+      <uib-alert ng-repeat="alert in uibs.alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+      <uib-alert template-url="alert.html">A simple inline alert.</uib-alert>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="pagination" class="doc-head">Pagination</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="doc-sectionhead">Defaults</h2>
+      <uib-pagination total-items="uibs.totalItems" ng-model="uibs.currentPage" ng-change="uibs.pageChanged()"></uib-pagination>
+      <uib-pagination boundary-links="true" total-items="uibs.totalItems" ng-model="uibs.currentPage" class="pagination-sm" previous-text="&lt;" next-text="&gt;" first-text="&lt;&lt;" last-text="&gt;&gt;"></uib-pagination>
+      <uib-pagination direction-links="false" boundary-links="true" total-items="uibs.totalItems" ng-model="uibs.currentPage"></uib-pagination>
+      <uib-pagination direction-links="false" total-items="uibs.totalItems" ng-model="uibs.currentPage" num-pages="smallnumPages"></uib-pagination>
+
+      <pre>The selected page number is: {{uibs.currentPage}}</pre>
+      <button type="button" class="btn btn-default" ng-click="uibs.setPage(3)">Set current page to 3</button>
+    </div>
+    <div class="col-md-6"></div>
+  </div>
+
+
+
+
+</div><!-- end container -->
+
+<script type="text/ng-template" id="alert.html">
+   <div class="alert alert-info" role="alert">
+     <div ng-transclude></div>
+   </div>
+ </script>
