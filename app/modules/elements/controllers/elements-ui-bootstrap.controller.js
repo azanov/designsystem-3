@@ -117,5 +117,44 @@
         event.preventDefault();
       }
     };
+
+    // progress bars
+    _this.max = 20;
+    _this.random = function () {
+      var value = Math.floor(Math.random() * 100 + 1);
+      var type;
+
+      if (value < 25) {
+        type = 'success';
+      } else if (value < 50) {
+        type = 'info';
+      } else if (value < 75) {
+        type = 'warning';
+      } else {
+        type = 'danger';
+      }
+
+      _this.showWarning = type === 'danger' || type === 'warning';
+
+      _this.dynamic = value;
+      _this.type = type;
+    };
+
+    _this.random();
+
+    _this.randomStacked = function () {
+      _this.stacked = [];
+      var types = ['success', 'info', 'warning', 'danger'];
+
+      for (var i = 0, n = Math.floor(Math.random() * 4 + 1); i < n; i++) {
+        var index = Math.floor(Math.random() * 4);
+        _this.stacked.push({
+          value: Math.floor(Math.random() * 30 + 1),
+          type: types[index]
+        });
+      }
+    };
+
+    _this.randomStacked();
   });
 })();
