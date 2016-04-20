@@ -33,6 +33,10 @@
       $translate.use(lang);
     };
 
+    _this.onChangeStepper = function (val) {
+      console.log('hello',val);
+    };
+
     // numeric stepper
     _this.numericStepper = {
       limit: [0],

@@ -36,6 +36,9 @@
             }, {
               "label": "Typography",
               "value": "foundation.typography"
+            }, {
+              "label": "Directives",
+              "value": "foundation.directives"
             }
 
           ]

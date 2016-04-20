@@ -1459,7 +1459,7 @@ angular.module('app', [
               <figure>
                 <figcaption>Single Checkbox</figcaption>
                 <div class="controls-stacked">
-                    <pbds-checkbox tip-type="popover" tip-position="top"  tip-text="Irshad" tip-title="Top" ng-attr-label="{{'CHECKBOX' | translate}}" name="checkbox1" ng-model="inputs.models.checkbox1" ng-change="inputs.onCheckbox(val)" disabled='inputs.models.checkbox1disabled'></pbds-checkbox>
+                    <pbds-checkbox tip-type="popover" tip-position="top"  tip-text="Information" tip-title="title" ng-attr-label="{{'CHECKBOX' | translate}}" name="checkbox1" ng-model="inputs.models.checkbox1" ng-change="inputs.onCheckbox(val)" disabled='inputs.models.checkbox1disabled'></pbds-checkbox>
 
                     <button class="btn btn-default btn-xs" ng-click="inputs.models.checkbox1disabled=!inputs.models.checkbox1disabled">
                       <span ng-if="inputs.models.checkbox1disabled">Enable</span>
@@ -1484,7 +1484,6 @@ angular.module('app', [
               </figure>
             </div>
           </div>
-
         </div>
 
 <div class="preview-code" hljs language="xml">
@@ -1492,8 +1491,8 @@ angular.module('app', [
 <pbds-checkbox
   tip-type="popover"
   tip-position="top"
-  tip-text="Irshad"
-  tip-title="Top"
+  tip-text="Information"
+  tip-title="Title"
   ng-attr-label="{{'CHECKBOX' | translate}}"
   name="checkbox1"
   ng-model="inputs.models.checkbox1"
@@ -1511,8 +1510,6 @@ angular.module('app', [
       </div>
     </div>
 
-
-
     <!-- radio -->
     <div class="row">
       <div class="col-md-12">
@@ -1525,7 +1522,7 @@ angular.module('app', [
           <div class="row">
             <div class="col-md-12">
               <div class="controls-stacked">
-                <pbds-radio tip-type="popover" tip-position="bottom"  tip-text="Irshad" tip-title="Top" ng-attr-label="{{'RADIOBUTTON' | translate}}" name="radio1" ng-model="inputs.models.radio1" value="radio-1" ng-change="inputs.onRadio(val)" disabled='inputs.models.radio1disabled'></pbds-radio>
+                <pbds-radio tip-type="popover" tip-position="bottom"  tip-text="Information" tip-title="title" ng-attr-label="{{'RADIOBUTTON' | translate}}" name="radio1" ng-model="inputs.models.radio1" value="radio-1" ng-change="inputs.onRadio(val)" disabled='inputs.models.radio1disabled'></pbds-radio>
                 <button class="btn btn-default btn-xs" ng-click="inputs.models.radio1disabled=!inputs.models.radio1disabled">
                   <span ng-if="inputs.models.radio1disabled">Enable</span>
                   <span ng-if="!inputs.models.radio1disabled">Disable</span>
@@ -1577,7 +1574,7 @@ angular.module('app', [
           <div class="row">
             <div class="col-md-12">
               <div class="controls-stacked">
-                  <pbds-checkbox tip-type="popover" tip-position="top"  tip-text="Irshad" tip-title="Top" ng-attr-label="{{'CHECKBOX' | translate}}" name="checkbox1" ng-model="inputs.models.checkbox1" ng-change="inputs.onCheckbox(val)" disabled='inputs.models.checkbox1disabled'></pbds-checkbox>
+                  <pbds-checkbox tip-type="popover" tip-position="top"  tip-text="Information" tip-title="Title" ng-attr-label="{{'CHECKBOX' | translate}}" name="checkbox1" ng-model="inputs.models.checkbox1" ng-change="inputs.onCheckbox(val)" disabled='inputs.models.checkbox1disabled'></pbds-checkbox>
                   <button class="btn btn-default btn-xs" ng-click="inputs.models.checkbox1disabled=!inputs.models.checkbox1disabled">
                     <span ng-if="inputs.models.checkbox1disabled">Enable</span>
                     <span ng-if="!inputs.models.checkbox1disabled">Disable</span>
@@ -1618,7 +1615,7 @@ angular.module('app', [
           <div class="row">
             <div class="col-md-12">
               <div class="controls-stacked">
-                <pbds-radio tip-type="popover" tip-position="bottom"  tip-text="Irshad" tip-title="Top" ng-attr-label="{{'RADIOBUTTON' | translate}}" name="radio1" ng-model="inputs.models.radio1" value="radio-1" ng-change="inputs.onRadio(val)" disabled='inputs.models.radio1disabled'></pbds-radio>
+                <pbds-radio tip-type="popover" tip-position="bottom"  tip-text="Information" tip-title="Title" ng-attr-label="{{'RADIOBUTTON' | translate}}" name="radio1" ng-model="inputs.models.radio1" value="radio-1" ng-change="inputs.onRadio(val)" disabled='inputs.models.radio1disabled'></pbds-radio>
                 <button class="btn btn-default btn-xs" ng-click="inputs.models.radio1disabled=!inputs.models.radio1disabled">
                   <span ng-if="inputs.models.radio1disabled">Enable</span>
                   <span ng-if="!inputs.models.radio1disabled">Disable</span>
@@ -1684,4 +1681,27 @@ angular.module('app', [
   <!-- irshad ends -->
 
 
+  <!--stepper-->
+  <div class="row">
+    <div class="col-xs-12" ng-init="inputs.models.stepper1=0;inputs.models.stepper2=0">
+      <form name="stepperFprm">
+        <div class="row">
+            <div class="col-xs-4">
+              <button ng-click="inputs.models.stepper1=11;inputs.models.stepper2=11">Out of Range Positive</button>
+              <button ng-click="inputs.models.stepper2=-1";inputs.models.stepper2=-1>Out of Range Negative</button>
+              <button ng-click="inputs.models.stepper1=undefined;inputs.models.stepper2=undefined">Undefined</button>
+              <button>Model 1.{{ inputs.models.stepper }} 2. {{ inputs.models.stepper }}</button>
+              <div ng-class="{'alert alert-danger':stepperFprm.prop1.$invalid}">
+                <pbds-stepper  type="0" step="2" ng-model="inputs.models.stepper1" required ng-attr-min="0" ng-attr-max="10" ng-change="inputs.onChangeStepper(val)" name="prop1"></pbds-stepper>
+              </div>
+              <div>
+                <pbds-stepper type="1" step="2" ng-model="inputs.models.stepper2" required ng-attr-min="0" ng-attr-max="10" ng-change="inputs.onChangeStepper(val)" name="prop2"></pbds-stepper>
+              </div>
+            </div>
+        </div>
+        <pre>{{ stepperFprm|json }}</pre>
+      </form>
+    </div>
+  </div>
+  <!--stepper ends-->
 </div>
