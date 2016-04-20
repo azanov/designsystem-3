@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.1 (28215) - http://www.bohemiancoding.com/sketch -->
+    <title>circle_x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="New-Product-Take-a-Tour" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Take-a-Tour-1" transform="translate(-1259.000000, -65.000000)" stroke="#FFFFFF" stroke-width="2">
+            <g id="blue-bar" transform="translate(-1.000000, 0.000000)">
+                <g id="Close" transform="translate(1125.000000, 65.000000)">
+                    <g id="circle_x" transform="translate(136.000000, 1.000000)">
+                        <path d="M19.6,8.4 L8.4,19.6" id="Stroke-5683"></path>
+                        <path d="M19.6,19.6 L8.4,8.4" id="Stroke-5684"></path>
+                        <path d="M0,14 C0,6.26826667 6.26826667,0 14,0 C21.7317333,0 28,6.26826667 28,14 C28,21.7317333 21.7317333,28 14,28 C6.26826667,28 0,21.7317333 0,14 L0,14 Z" id="Stroke-5685"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

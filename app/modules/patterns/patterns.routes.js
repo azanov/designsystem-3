@@ -61,6 +61,16 @@
         }
       })
 
+      .state('patterns.tour1', {
+        url: '/tour1',
+        templateUrl: 'modules/patterns/templates/signin-tour1.html',
+        controller: 'SignInController as tour',
+        data: {
+          pageTitle: 'Patterns: Tour',
+          bodyClass: 'fullscreen signin tour'
+        }
+      })
+
       // this is the signin invalid email page
       .state('patterns.invalidemail', {
         url: '/invalidemail',

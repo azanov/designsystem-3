@@ -1,0 +1,41 @@
+.tour {
+  .signin-wrapper {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #ff0;
+  }
+  .signin-body-top {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 2 0 auto;
+    border: 1px solid #0f0;
+  }
+  .floating-unit {
+    //
+  }
+  .tour-band {
+    background-color: $pb-blue;
+    height: 160px;
+    width: 100vw;
+    flex: 1 0 auto;
+    color: #fff;
+    position: relative;
+    .tour-content {
+      border: 1px solid #f60;
+    }
+  }
+  .tour-footer {
+    background-color: #F0F0F0;
+    width: 100vw;
+    .signin-footer {
+      text-align: center;
+      margin: 0 auto;
+      padding: 10px 0 0;
+      color: #454545;
+    }
+  }
+}
