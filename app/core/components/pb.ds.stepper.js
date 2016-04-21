@@ -45,7 +45,7 @@
         };
       },
       controllerAs: 'ctrl',
-      template: '<div ng-if="ctrl.type==0" class="btn-group" role="group"><button class="btn btn-default" ng-click="ctrl.decrement()">-</button><button class="btn btn-default">{{ ctrl.ngModel }}</button><button class="btn btn-default" ng-click="ctrl.increment()">+</button></div>' +
+      template: '<div ng-if="ctrl.type==0" class="btn-group" role="group"><button class="btn btn-default" ng-click="ctrl.decrement()">-</button><input class="form-control" type="number" ng-model="ctrl.ngModel">{{ ctrl.ngModel }}</input><button class="btn btn-default" ng-click="ctrl.increment()">+</button></div>' +
       '<input ng-if="ctrl.type !=0" class="form-control" type="number" step="{{ ctrl.step }}" ng-model-options="{ allowInvalid: false, debounce: { \'default\': 0 } }" ng-model="ctrl.ngModel" ng-change="ctrl.onChange()" ng-attr-min="{{ctrl.min}}" ng-attr-max="{{ctrl.max}}"/>',
       link: function (scope, elem, attrs, ngModelCtrls) {
         var ngModel = ngModelCtrls[0];

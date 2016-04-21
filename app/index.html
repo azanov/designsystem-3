@@ -75,6 +75,103 @@
     <!-- Load Bootstrap RTL theme from CDNJS -->
     <link rel="stylesheet" ng-init="rtl = 'ltr'" ng-if="rtl === 'rtl'" href="https://cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4-rc1/dist/css/bootstrap-rtl.min.css" />
 
+
+    <style>
+
+      .progress-meter {
+        margin: 10px auto 10px;
+        padding: 10px;
+      }
+
+      /*.progress-meter {*/
+        /*counter-reset: point;*/
+      /*}*/
+      .progress-meter .track {
+        position: relative;
+        height: 8px;
+        background: #ddd;
+      }
+      .progress-meter .progress {
+        transition: width 5s;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        /*width: 0;*/
+        height: 8px;
+        background: linear-gradient(90deg, #3e53a4 0%, #cf0989 100%);
+
+      }
+      .progress-meter .progress-points {
+        position: relative;
+        margin: -14px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+      .progress-meter .progress-point {
+        -moz-transition: color 1s;
+        -o-transition: color 1s;
+        -webkit-transition: color 1s;
+        transition: color 5s;
+        position: absolute;
+        display: block;
+        /*width: 100px;*/
+        /*margin-left: -50px;*/
+        text-align: center;
+        cursor: pointer;
+        /*color: #999;*/
+      }
+
+      .progress-meter .progress-point.completed:before {
+        border-color: #777;
+      }
+      .progress-meter .progress-point.active:before {
+        transition-delay: 5s;
+      }
+      .progress-meter .progress-point .label:before {
+        counter-increment: point;
+        content: counter(point) ". ";
+        /* Display the counter */
+      }
+
+      .circle-icon {
+        background: white;
+        border-radius: 100%;
+        padding: 5px;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left : 0;
+      }
+      .circle-icon-active {
+        background: white;
+        border:  2px solid #cf0989;
+        border-radius: 100%;
+        transition-delay: 5s;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left : 0;
+
+      }
+      .step-terminal{
+        background:  green;
+        border:none;
+      }
+
+      .step-start{
+        background:  white;
+        border:2px dotted red;
+
+      }
+
+      .vertical-text {
+        transform: rotate(45deg);
+        transform-origin: left top 0;
+      }
+
+    </style>
+
   </head>
 
   <body ng-controller="AppController as app" dir="{{app.rtl}}" class="site {{$state.current.data.bodyClass}}">
@@ -332,6 +429,7 @@
     <script src="core/components/pb.ds.checkbox.js"></script>
     <script src="core/components/pb.ds.radio.js"></script>
     <script src="core/components/pb.ds.stepper.js"></script>
+    <script src="core/components/pb.ds.stepprogress.js"></script>
     <!-- endbuild  -->
 
   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
