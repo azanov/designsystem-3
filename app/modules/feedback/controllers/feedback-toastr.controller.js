@@ -6,7 +6,7 @@
 
     _this.toast = {
       danger: function () {
-        toastr.error('There was an error with job "98"');
+        toastr.error('There was an error with job "98"', 'Application Error');
       },
       success: function () {
         toastr.success('New job "1238" was successfully created.');
@@ -18,8 +18,9 @@
         toastr.warning('Please review job "1298" before continuing.');
       },
       closeButton: function () {
-        toastr.info('I have a close button', {
-          closeButton: true
+        toastr.info('I have a close button.', {
+          closeButton: true,
+          timeOut: 0
         });
       },
       progressBar: function () {

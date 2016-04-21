@@ -11,7 +11,6 @@
 @import "settings/variables";
 @import "settings/mixins";
 
-
 // Base
 // Site-wide style definitions
 // ========================================
@@ -42,7 +41,6 @@
 // Modules
 // ========================================
 @import '../../modules/elements/assets/sass/accordion';
-@import '../../modules/elements/assets/sass/alerts';
 @import '../../modules/elements/assets/sass/badges';
 @import '../../modules/elements/assets/sass/breadcrumbs';
 @import '../../modules/elements/assets/sass/buttons';
@@ -54,7 +52,6 @@
 @import '../../modules/elements/assets/sass/switches';
 @import '../../modules/elements/assets/sass/tabs';
 @import '../../modules/elements/assets/sass/tabs-fancy';
-@import '../../modules/elements/assets/sass/toastrs';
 @import '../../modules/elements/assets/sass/toggle-switch';
 @import '../../modules/elements/assets/sass/ui-select';
 @import '../../modules/elements/assets/sass/uibootstrap';
@@ -76,10 +73,15 @@
 @import '../../modules/elements/assets/sass/popover';
 @import '../../modules/elements/assets/sass/progress-bar';
 
+@import '../../modules/feedback/assets/sass/alerts';
+@import '../../modules/feedback/assets/sass/toastrs';
+
 @import '../../modules/patterns/assets/sass/signin';
+
 @import '../../modules/tables/assets/sass/tables';
 @import '../../modules/tables/assets/sass/daterangepicker';
 @import '../../modules/graphs/sass/c3';
+
 @import '../../modules/landing/assets/sass/landing';
 
 @import '../../modules/splitview/assets/sass/leftnav';
