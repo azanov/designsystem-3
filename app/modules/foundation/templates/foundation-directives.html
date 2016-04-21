@@ -44,27 +44,15 @@
 <pre class="preview-code prettyprint">
 &lt;script src="bower_components/pb-design-system/dist/js/pb.ds.components.js"&gt;&lt;/script&gt;
 </pre>
+     <p class="spacer-top-md">To use the Design System components, you need to add the component module as a dependency in your application as follows.</p>
+    <pre class="preview-code prettyprint">
 
-            <p class="spacer-top-md">To use the Design System components, you need to add the component module as a dependency in your application as follows.</p>
-
-<pre class="preview-code prettyprint">
-angular.module('app', [
-  'pb.ds.components'
-]);
-</pre>
+    angular.module('app', [
+      'pb.ds.components'
+    ]);
+    </pre>
         </div>
     </div>
-
-    <!--<div class="row spacer-top-xl">-->
-        <!--<div class="col-md-8">-->
-            <!--<p class="doc-lede">The fonts used in our typography were chosen based on the following rationale:-->
-            <!--<ul>-->
-                <!--<li>They support typography found elsewhere in our brand.</li>-->
-                <!--<li>They perform well on web and mobile.</li>-->
-            <!--</ul>-->
-            <!--</p>-->
-        <!--</div>-->
-    <!--</div>-->
 
     <div class="row">
         <div class="col-md-8">
@@ -74,7 +62,6 @@ angular.module('app', [
 
 
     <div class="row">
-
         <div class="col-md-12">
 
             <h2 class="doc-sectionhead">Usage</h2>
@@ -122,30 +109,6 @@ angular.module('app', [
                     <td>none</td>
                     <td>Property name of the form under which the control is published.</td>
                 </tr>
-                <tr>
-                    <td>tip-type <em>(optional)</em></td>
-                    <td>string: popover|tooltip</td>
-                    <td>none</td>
-                    <td>Define what type of tooltip to display, either a popover or a tooltip.</td>
-                </tr>
-                <tr>
-                    <td>tip-position <em>(required for tip-type)</em></td>
-                    <td>string: top|left|bottom|right</td>
-                    <td>top</td>
-                    <td>Define placement of the tooltip.</td>
-                </tr>
-                <tr>
-                    <td>tip-text <em>(required for tip-type)</em></td>
-                    <td>string</td>
-                    <td>none</td>
-                    <td>Text used to display in the tooltip or popover.</td>
-                </tr>
-                <tr>
-                    <td>tip-title <em>(required for tip-type)</em></td>
-                    <td>string</td>
-                    <td>none</td>
-                    <td>Text used to display in a popover title.</td>
-                </tr>
                 </tbody>
             </table>
 
@@ -156,17 +119,12 @@ angular.module('app', [
                     <div class="col-md-4">
                         <figure>
                             <figcaption>Single Checkbox</figcaption>
-                            <div class="controls-stacked">
-                                <pbds-checkbox tip-type="popover" tip-position="top"  tip-text="Information" tip-title="title" ng-attr-label="{{'CHECKBOX' | translate}}" name="checkbox1" ng-model="dirCtrl.models.checkbox1" ng-change="dirCtrl.onCheckbox(val)" disabled='dirCtrl.models.checkbox1disabled'></pbds-checkbox>
-
-                                <button class="btn btn-default btn-xs" ng-click="dirCtrl.models.checkbox1disabled=!dirCtrl.models.checkbox1disabled">
-                                    <span ng-if="dirCtrl.models.checkbox1disabled">Enable</span>
-                                    <span ng-if="!dirCtrl.models.checkbox1disabled">Disable</span>
-                                </button>
-
-                                <button class="btn btn-default btn-xs" ng-click="dirCtrl.models.checkbox1=!dirCtrl.models.checkbox1">
-                                    Toggle
-                                </button>
+                            <div>
+                                <pbds-checkbox label="Check Box" name="checkbox1"
+                                               ng-model="dirCtrl.models.checkbox1"
+                                               ng-change="dirCtrl.onCheckbox(val)">
+                                    <i class="nc-icon-mini ui-e_round-e-help text-info" uib-tooltip="tooltip"></i>
+                                </pbds-checkbox>
                             </div>
                         </figure>
 
@@ -176,8 +134,12 @@ angular.module('app', [
                         <figure>
                             <figcaption>Inline Checkboxes</figcaption>
                             <div class="controls-inline">
-                                <pbds-checkbox label="Sample" ng-model="dirCtrl.models.checkbox2"></pbds-checkbox>
-                                <pbds-checkbox label="Sample 2" ng-model="dirCtrl.models.checkbox3"></pbds-checkbox>
+                                <pbds-checkbox label="Sample" ng-model="dirCtrl.models.checkbox2">
+                                    <i class="nc-icon-mini ui-e_round-e-info" uib-tooltip="tooltip"></i>
+                                </pbds-checkbox>
+                                <pbds-checkbox label="Sample 2" ng-model="dirCtrl.models.checkbox3">
+                                    <i class="nc-icon-mini ui-e_round-e-info" uib-tooltip="tooltip"></i>
+                                </pbds-checkbox>
                             </div>
                         </figure>
                     </div>
@@ -185,65 +147,16 @@ angular.module('app', [
             </div>
 
             <div class="preview-code" hljs language="xml">
-                <!-- single control -->
-                <pbds-checkbox
-                        tip-type="popover"
-                        tip-position="top"
-                        tip-text="Information"
-                        tip-title="Title"
-                        ng-attr-label="{{'CHECKBOX' | translate}}"
-                        name="checkbox1"
-                        ng-model="dirCtrl.models.checkbox1"
-                        ng-change="dirCtrl.onCheckbox(val)"
-                        disabled='dirCtrl.models.checkbox1disabled'>
-                </pbds-checkbox>
-
-                <!-- inline controls -->
-                <div class="controls-inline">
-                    <pbds-checkbox label="Sample" ng-model="dirCtrl.models.checkbox2"></pbds-checkbox>
-                    <pbds-checkbox label="Sample 2" ng-model="dirCtrl.models.checkbox3"></pbds-checkbox>
-                </div>
+<pbds-checkbox
+        label="{{'Check Box' | translate}}"
+        name="checkbox"
+        ng-model="ctrl.checkBoxModel"
+        ng-change="ctrl.onCheckbox(val)"
+        disabled='ctrl.isCheckBoxDisabled'>
+            <i class="nc-icon-mini ui-e_round-e-help text-info" uib-tooltip="tooltip"></i>
+</pbds-checkbox>
             </div>
 
-
-
-            <div class="row">
-                <div class="col-md-9">
-          <pre class="prettyprint" style="border:none;background: white">
-          &lt;pbds-checkbox
-            label="String"
-            ng-model="model"
-            ng-change="callBack(val)"
-            disabled='boolean'
-            name="form.property.name"
-            tip-type="popover|tooltip"
-            tip-position="top|left|bottom|right"
-            tip-text="String"
-            tip-title="String"&gt
-          &lt;/pbds-checkbox&gt;
-        </pre>
-                </div>
-                <div class="col-md-3">
-                    <form name="myForm1">
-                        <figure>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="controls-stacked">
-                                        <pbds-checkbox tip-type="popover" tip-position="top"  tip-text="Information" tip-title="Title" ng-attr-label="{{'CHECKBOX' | translate}}" name="checkbox1" ng-model="dirCtrl.models.checkbox1" ng-change="dirCtrl.onCheckbox(val)" disabled='dirCtrl.models.checkbox1disabled'></pbds-checkbox>
-                                        <button class="btn btn-default btn-xs" ng-click="dirCtrl.models.checkbox1disabled=!dirCtrl.models.checkbox1disabled">
-                                            <span ng-if="dirCtrl.models.checkbox1disabled">Enable</span>
-                                            <span ng-if="!dirCtrl.models.checkbox1disabled">Disable</span>
-                                        </button>
-                                        <button class="btn btn-default btn-xs" ng-click="dirCtrl.models.checkbox1=!dirCtrl.models.checkbox1">
-                                            Toggle
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </figure>
-                    </form>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -258,83 +171,96 @@ angular.module('app', [
 
     <div class="row">
         <div class="col-md-12">
+
             <h2 class="doc-sectionhead">Usage</h2>
 
-            <p class="spacer-top-md">Lorem ipsum...</p>
+            <p class="spacer-top-md">The radio directive provides an easier implementation of the Design System styled radio button controls. The directive uses a element tag <code>&lt;pbds-radio&gt;&lt;/pbds-radio&gt;</code> with the following attributes.</p>
+
+            <table class="table table-hover spacer-top-md spacer-bottom-md">
+                <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>label</td>
+                    <td>string</td>
+                    <td>none</td>
+                    <td>The text label for the checkbox input. When using localized strings with angular-translate, use <code>ng-attr-label</code> to handle the string inerpolation, example <code>ng-attr-label="&#123;&#123;'CHECKBOX' &#124; translate&#125;&#125;"</code></td>
+                </tr>
+                <tr>
+                    <td>ng-model</td>
+                    <td>object</td>
+                    <td>none</td>
+                    <td>Controller property bound to the checkbox value.</td>
+                </tr>
+                <tr>
+                    <td>value</td>
+                    <td>string</td>
+                    <td>none</td>
+                    <td>The value to which the ngModel expression should be set when selected. Note that value only supports string values</td>
+                </tr>
+                <tr>
+                    <td>ng-change <em>(optional)</em></td>
+                    <td>function</td>
+                    <td>none</td>
+                    <td>Controller function to run when the checkbox value is updated. The value argument is exposed as <code>val</code>, example <code>ng-change="myFunction(val)"</code></td>
+                </tr>
+                <tr>
+                    <td>disabled <em>(optional)</em></td>
+                    <td>boolean</td>
+                    <td>false</td>
+                    <td>Set the control as disabled</td>
+                </tr>
+                <tr>
+                    <td>name <em>(optional)</em></td>
+                    <td>string</td>
+                    <td>none</td>
+                    <td>Property name of the form under which the control is published.</td>
+                </tr>
+
+                </tbody>
+            </table>
+
 
             <div class="preview-example">
 
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="controls-stacked">
-                            <pbds-radio tip-type="popover" tip-position="bottom"  tip-text="Information" tip-title="title" ng-attr-label="{{'RADIOBUTTON' | translate}}" name="radio1" ng-model="dirCtrl.models.radio1" value="radio-1" ng-change="dirCtrl.onRadio(val)" disabled='dirCtrl.models.radio1disabled'></pbds-radio>
-                            <button class="btn btn-default btn-xs" ng-click="dirCtrl.models.radio1disabled=!dirCtrl.models.radio1disabled">
-                                <span ng-if="dirCtrl.models.radio1disabled">Enable</span>
-                                <span ng-if="!dirCtrl.models.radio1disabled">Disable</span>
-                            </button>
-                            <button ng-if="dirCtrl.models.radio1!='radio-1'" class="btn btn-default btn-xs" ng-click="dirCtrl.models.radio1='radio-1'">
-                                Set
-                            </button>
-                            <button class="btn btn-default btn-xs" ng-click="dirCtrl.changeLanguage('en-us')">
-                                English
-                            </button>
-                            <button class="btn btn-default btn-xs" ng-click="dirCtrl.changeLanguage('fr-fr')">
-                                Deutsch
-                            </button>
+                        <div>
+                            <pbds-radio tip-type="popover" ng-attr-label="Radio Button" name="radio1" ng-model="dirCtrl.models.radio1" value="radio-1"
+                                        ng-change="dirCtrl.onRadio(val)" disabled='dirCtrl.models.radio1disabled'>
+                                <i uib-popover="ddfdfdf"
+                                   popover-title="title"
+                                   popover-trigger="mouseenter" class="nc-icon-mini ui-e_round-e-help text-info">
+                                </i>
+                            </pbds-radio>
                         </div>
                     </div>
                 </div>
 
+
             </div>
+
 
             <div class="preview-code" hljs language="xml">
-                <pbds-radio tip-type="popover" tip-position="bottom"  tip-text="Irshad" tip-title="Top" ng-attr-label="{{'RADIOBUTTON' | translate}}" name="radio1" ng-model="dirCtrl.models.radio1" value="radio-1" ng-change="dirCtrl.onRadio(val)" disabled='dirCtrl.models.radio1disabled'></pbds-radio>
-            </div>
-
-
-            <div class="row">
-                <div class="col-md-9">
-          <pre class="prettyprint" style="border:none;background: white">
-          &lt;pbds-radio
-            label="String"
-            ng-model="model"
-            value="String"
-            ng-change="callBack(val)"
-            disabled='boolean'
-            name="form.property.name"
-            tip-type="popover|tooltip"
-            tip-position="top|left|bottom|right"
-            tip-text="String"
-            tip-title="String"&gt
-          &lt;/pbds-radio&gt;
-        </pre>
-                </div>
-                <div class="col-md-3">
-                    <form name="myForm1">
-                        <figure>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="controls-stacked">
-                                        <pbds-radio tip-type="popover" tip-position="bottom"  tip-text="Information" tip-title="Title" ng-attr-label="{{'RADIOBUTTON' | translate}}" name="radio1" ng-model="dirCtrl.models.radio1" value="radio-1" ng-change="dirCtrl.onRadio(val)" disabled='dirCtrl.models.radio1disabled'></pbds-radio>
-                                        <button class="btn btn-default btn-xs" ng-click="dirCtrl.models.radio1disabled=!dirCtrl.models.radio1disabled">
-                                            <span ng-if="dirCtrl.models.radio1disabled">Enable</span>
-                                            <span ng-if="!dirCtrl.models.radio1disabled">Disable</span>
-                                        </button>
-                                        <button ng-if="dirCtrl.models.radio1!='radio-1'" class="btn btn-default btn-xs" ng-click="dirCtrl.models.radio1='radio-1'">
-                                            Set
-                                        </button>
-                                        <button class="btn btn-default btn-xs" ng-click="dirCtrl.changeLanguage('en')">
-                                            English
-                                        </button>
-                                        <button class="btn btn-default btn-xs" ng-click="dirCtrl.changeLanguage('de')">
-                                            Deutsch
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </figure>
-                    </form>
-                </div>
+<pbds-radio ng-attr-label="{{'RADIOBUTTON' | translate}}"
+            name="radio1"
+            ng-model="ctrl.radioModel"
+            value="radio-1"
+            ng-change="ctrl.onRadioSelection(val)"
+            disabled='dirCtrl.isRadioDisabled'>
+<i uib-popover="Pop Over Content"
+   popover-title="Pop Over Title"
+   popover-trigger="mouseenter"
+   class="nc-icon-mini ui-e_round-e-help text-info">
+</i>
+</pbds-radio>
             </div>
 
         </div>
@@ -343,56 +269,96 @@ angular.module('app', [
 
     <!-- Numeric Stepper -->
 
-    <div class="row">
-        <div class="col-md-8">
-            <h1 id="numeric-stepper" class="doc-head">Numeric Stepper</h1>
-        </div>
-    </div>
+    <!--<div class="row">-->
+        <!--<div class="col-md-8">-->
+            <!--<h1 id="numeric-stepper" class="doc-head">Numeric Stepper</h1>-->
+        <!--</div>-->
+    <!--</div>-->
 
 
-    <div class="row">
-        <div class="col-md-12">
-            <h2 class="doc-sectionhead">Usage</h2>
+    <!--<div class="row">-->
+        <!--<div class="col-md-12">-->
+            <!--<h2 class="doc-sectionhead">Usage</h2>-->
 
-            <form name="stepperFprm" novalidate ng-init="dirCtrl.models.stepper1=0;dirCtrl.models.stepper2=0">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <pbds-stepper  type="0" step="0.5" ng-model="dirCtrl.models.stepper1" required ng-attr-min="0" ng-attr-max="10" ng-change="dirCtrl.onChangeStepper(val)" name="prop1"></pbds-stepper>
-                    </div>
+            <!--<form name="stepperFprm" novalidate ng-init="dirCtrl.models.stepper1=8;dirCtrl.models.stepper2=7">-->
+                <!--<div class="row">-->
+                    <!--<div class="col-xs-12">-->
+                        <!--<pbds-stepper  type="0" step="0.01" ng-model="dirCtrl.models.stepper1" required ng-attr-min="0" ng-attr-max="10" ng-change="dirCtrl.onChangeStepper(val)" name="prop1"></pbds-stepper>-->
+                    <!--</div>-->
 
-                    <div class="col-xs-2">
-                        <pbds-stepper type="1" step="1" ng-model="dirCtrl.models.stepper2" required ng-attr-min="0" ng-attr-max="10" ng-change="dirCtrl.onChangeStepper(val)" name="prop2"></pbds-stepper>
-                    </div>
-                </div>
+                    <!--<div class="col-xs-10">-->
+                        <!--<pbds-stepper type="1" step="1" ng-model="dirCtrl.models.stepper2" required ng-attr-min="0" ng-attr-max="10" ng-change="dirCtrl.onChangeStepper(val)" name="prop2"></pbds-stepper>-->
+                    <!--</div>-->
 
-                <br>
+                    <!--<div class="input-group">-->
+                        <!--<span class="input-group-addon" id="basic-addon1">-</span>-->
+                        <!--<input type="number" ng-model="dirCtrl.models.stepper2" class="form-control" aria-describedby="basic-addon1">-->
+                        <!--<span class="input-group-addon" id="basic-addon2">+</span>-->
 
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div>
-                            <button class="btn btn-default btn-sm" ng-click="dirCtrl.models.stepper1=11;">Out of Range Positive 1</button>
-                            <button class="btn btn-default btn-sm" ng-click="dirCtrl.models.stepper1=-1";>Out of Range Negative 1</button>
-                            <button class="btn btn-default btn-sm" ng-click="dirCtrl.models.stepper1=undefined;">Undefined 1</button>
-                            <button class="btn btn-default btn-sm">Model {{ dirCtrl.models.stepper1 }}</button>
-                            <button class="btn btn-xs btn-default" ng-class="{'btn-danger':stepperFprm.prop1.$invalid,'btn-success':stepperFprm.prop1.$valid}">Button Stepper</button>
+                    <!--</div>-->
+                <!--</div>-->
 
-                        </div>
+                <!--<br>-->
 
-                        <div>
-                            <button class="btn btn-default btn-sm" ng-click="dirCtrl.models.stepper2=11">Out of Range Positive 2</button>
-                            <button class="btn btn-default btn-sm" ng-click="dirCtrl.models.stepper2=-1";>Out of Range Negative 2</button>
-                            <button class="btn btn-default btn-sm" ng-click="dirCtrl.models.stepper2=undefined">Undefined 2</button>
-                            <button class="btn btn-default btn-sm">Model {{ dirCtrl.models.stepper2 }}</button>
-                            <button class="btn btn-xs btn-default" ng-class="{'btn-danger':stepperFprm.prop2.$invalid,'btn-success':stepperFprm.prop2.$valid}">Input Stepper</button>
-                        </div>
-                    </div>
-                </div>
-                <pre>{{ stepperFprm.$valid|json }}</pre>
-            </form>
-        </div>
-    </div>
+                <!--<div class="row">-->
+                    <!--<div class="col-xs-12">-->
+                        <!--<div>-->
+                            <!--<button class="btn btn-default btn-sm" ng-click="dirCtrl.models.stepper1=11;">Out of Range Positive Button</button>-->
+                            <!--<button class="btn btn-default btn-sm" ng-click="dirCtrl.models.stepper1=-1";>Out of Range Negative Button</button>-->
+                            <!--<button class="btn btn-default btn-sm" ng-click="dirCtrl.models.stepper1=undefined;">Undefined Button</button>-->
+                            <!--<button class="btn btn-default btn-sm">Model {{ dirCtrl.models.stepper1 }}</button>-->
+                            <!--<button class="btn btn-xs btn-default" ng-class="{'btn-danger':stepperFprm.prop1.$invalid,'btn-success':stepperFprm.prop1.$valid}">Button Stepper</button>-->
+
+                        <!--</div>-->
+
+                        <!--<div>-->
+                            <!--<button class="btn btn-default btn-sm" ng-click="dirCtrl.models.stepper2=11">Out of Range Positive Input</button>-->
+                            <!--<button class="btn btn-default btn-sm" ng-click="dirCtrl.models.stepper2=-1";>Out of Range Negative Input</button>-->
+                            <!--<button class="btn btn-default btn-sm" ng-click="dirCtrl.models.stepper2=undefined">Undefined Input</button>-->
+                            <!--<button class="btn btn-default btn-sm">Model {{ dirCtrl.models.stepper2 }}</button>-->
+                            <!--<button class="btn btn-xs btn-default" ng-class="{'btn-danger':stepperFprm.prop2.$invalid,'btn-success':stepperFprm.prop2.$valid}">Input Stepper</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<pre>Valid :- {{ stepperFprm.$valid|json }}</pre>-->
+            <!--</form>-->
+        <!--</div>-->
+    <!--</div>-->
 
 
+
+
+    <!--<div class="row">-->
+        <!--<div class="col-md-8">-->
+            <!--<h1 id="step-progress" class="doc-head">Step Progress</h1>-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+    <!--<div class="row">-->
+        <!--<div class="col-md-12">-->
+            <!--<h2 class="doc-sectionhead">Usage</h2>-->
+
+                <!--<div class="row">-->
+                    <!--<div class="col-xs-12">-->
+                        <!--<pbds-stepprogress ng-model="dirCtrl.currentProp" props="dirCtrl.props"></pbds-stepprogress>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+
+                <!--<br>-->
+            <!--<br>-->
+            <!--<br> <br>-->
+
+                <!--<div class="row">-->
+                    <!--<div class="col-xs-12">-->
+
+                            <!--<button class="btn btn-default" ng-click="dirCtrl.increaseStep()">+</button>-->
+                            <!--<button class="btn btn-default" ng-click="dirCtrl.decreaseStep()">-</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
 
     <!--older-->
 
