@@ -9,15 +9,15 @@
       // allowHtml: false,
       // autoDismiss: false,
       // closeButton: false,
-      closeHtml: '<svg class="close-x" width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg"><g stroke-width="2" fill="none"><path d="M15.216 1.784l-14.14 14.14M1.076 1.784l14.14 14.14"/></g></svg>'
-    // containerId: 'toast-container',
-    // extendedTimeOut: 10000,
-    // iconClasses: {
-    //   error: 'toast-error',
-    //   info: 'toast-info',
-    //   success: 'toast-success',
-    //   warning: 'toast-warning'
-    // },
+      closeHtml: '<svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><path fill="#717171" d="M8 0l-3 3-3-3-2 2 3 3-3 3 2 2 3-3 3 3 2-2-3-3 3-3z"/></svg>',
+      // containerId: 'toast-container',
+      // extendedTimeOut: 10000,
+      iconClasses: {
+        error: 'toast-error',
+        info: 'toast-info',
+        success: 'toast-success',
+        warning: 'toast-warning'
+      }
     // maxOpened: 0,
     // messageClass: 'toast-message',
     // newestOnTop: true,
