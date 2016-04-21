@@ -1,102 +1,100 @@
+[class^="pb-ds-"], [class*=" pb-ds-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'pbfont' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
 
-[class^="pb-"], [class*=" pb-"] {
-	font-family: 'pbfont';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-
-	//* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.pb-treeview:before {
-	content: "\e616";
+.pb-ds-treeview:before {
+    content: "\e616";
 }
-.pb-flag:before {
-	content: "\f11d";
+.pb-ds-flag-o:before {
+    content: "\f11d";
 }
-.pb-scale:before {
-	content: "\e613";
+.pb-ds-scale:before {
+    content: "\e613";
 }
-.pb-metadata:before {
-	content: "\e600";
+.pb-ds-metadata:before {
+    content: "\e600";
 }
-.pb-metadatatemplate:before {
-	content: "\e601";
+.pb-ds-metadatatemplate:before {
+    content: "\e601";
 }
-.pb-connection:before {
-	content: "\e602";
+.pb-ds-connection:before {
+    content: "\e602";
 }
-.pb-newconnection:before {
-	content: "\e603";
+.pb-ds-newconnection:before {
+    content: "\e603";
 }
-.pb-databaseconnection:before {
-	content: "\e604";
+.pb-ds-databaseconnection:before {
+    content: "\e604";
 }
-.pb-filesystemconnection:before {
-	content: "\e605";
+.pb-ds-filesystemconnection:before {
+    content: "\e605";
 }
-.pb-catalog:before {
-	content: "\e606";
+.pb-ds-catalog:before {
+    content: "\e606";
 }
-.pb-newcatalog:before {
-	content: "\e607";
+.pb-ds-newcatalog:before {
+    content: "\e607";
 }
-.pb-addtocatalog:before {
-	content: "\e608";
+.pb-ds-addtocatalog:before {
+    content: "\e608";
 }
-.pb-folder:before {
-	content: "\e609";
+.pb-ds-folder:before {
+    content: "\e609";
 }
-.pb-newfolder:before {
-	content: "\e60a";
+.pb-ds-newfolder:before {
+    content: "\e60a";
 }
-.pb-addtofolder:before {
-	content: "\e60b";
+.pb-ds-addtofolder:before {
+    content: "\e60b";
 }
-.pb-table:before {
-	content: "\e60c";
+.pb-ds-table:before {
+    content: "\e60c";
 }
-.pb-newtable:before {
-	content: "\e60e";
+.pb-ds-newtable:before {
+    content: "\e60e";
 }
-.pb-labellayer:before {
-	content: "\e617";
+.pb-ds-labellayer:before {
+    content: "\e617";
 }
-.pb-layer:before {
-	content: "\e60d";
+.pb-ds-layer:before {
+    content: "\e60d";
 }
-.pb-newlayer:before {
-	content: "\e618";
+.pb-ds-newlayer:before {
+    content: "\e618";
 }
-.pb-map:before {
-	content: "\e60f";
+.pb-ds-map:before {
+    content: "\e60f";
 }
-.pb-newmap:before {
-	content: "\e619";
+.pb-ds-newmap:before {
+    content: "\e619";
 }
-.pb-tile:before {
-	content: "\e610";
+.pb-ds-tile:before {
+    content: "\e610";
 }
-.pb-newtile:before {
-	content: "\e61a";
+.pb-ds-newtile:before {
+    content: "\e61a";
 }
-.pb-addressbook:before {
-	content: "\e614";
+.pb-ds-addressbook:before {
+    content: "\e614";
 }
-.pb-point:before {
-	content: "\e611";
+.pb-ds-point:before {
+    content: "\e611";
 }
-.pb-polygon:before {
-	content: "\e612";
+.pb-ds-polygon:before {
+    content: "\e612";
 }
-.pb-line:before {
-	content: "\e615";
+.pb-ds-line:before {
+    content: "\e615";
 }
-.pb-admin:before {
-	content: "\e61b";
-}
+
