@@ -31,8 +31,6 @@
     }
   }
 
-
-
   header {
     border-bottom: solid 1px rgba(255, 255, 255, .15);
   }
@@ -56,20 +54,8 @@
   }
 
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  strong,
-  em,
-  label,
-  .fa
-  .nc-icon-mini,
-  .nc-icon-outline
-   {
+  h1, h2, h3, h4, h5, h6, p, strong, em, label, .fa
+  .nc-icon-mini, .nc-icon-outline {
     color: #fff;
   }
 
@@ -87,29 +73,26 @@
   }
 
 
+  // the "3 column" page
 
+  .mid-block {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 90%;
 
-
-// the "3 column" page
-
-.mid-block {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  width: 90%;
-
-  div {
-    text-align: center;
-    line-height: 1.5;
-    width: 25%;
-    padding: 0 30px;
-    color: #fff;
-    h3 {
+    div {
+      text-align: center;
+      line-height: 1.5;
+      width: 25%;
+      padding: 0 30px;
       color: #fff;
+      h3 {
+        color: #fff;
+      }
     }
   }
-}
 
   .btn-circle {
     font-family: $font-family-ps-regular;
@@ -121,9 +104,6 @@
     line-height: 47px;
     padding: 0;
   }
-
-
-
 
   // the "form" page
 
@@ -137,7 +117,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  padding-top: 50px;
+    padding-top: 50px;
     width: 750px;
     margin: auto;
     .form-group {
@@ -170,7 +150,7 @@
     }
   }
 
-// one with 4 columns of navigation
+  // one with 4 columns of navigation
   .hero {
     background-image: linear-gradient(90deg, $pb-blue 0%, $pb-magenta 100%);
     height: 40vh;
@@ -180,10 +160,4 @@
   h3 {
     color: $header-color;
   }
-
-
-
-
-
-
 }

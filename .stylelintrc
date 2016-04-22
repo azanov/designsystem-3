@@ -2,7 +2,7 @@
   "extends": "stylelint-config-standard",
   "rules": {
     "number-leading-zero": null,
-    "unit-whitelist": ["em", "rem", "s", "px", "%", "deg", "ms"],
+    "unit-whitelist": ["em", "rem", "s", "px", "%", "deg", "ms", "vh"],
     "at-rule-empty-line-before": null,
     "rule-non-nested-empty-line-before": null,
     "declaration-colon-newline-after": null,

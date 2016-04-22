@@ -12,7 +12,7 @@
   }
 
   select {
-  //  padding: $padding-small-vertical $padding-small-horizontal;
+    //  padding: $padding-small-vertical $padding-small-horizontal;
     font-family: $font-family-ps-regular;
     line-height: $line-height-base;
     font-size: 12px;
@@ -22,12 +22,7 @@
 
 
   // all button types, blue text with gray borders
-  .btn-default,
-  .btn-cancel,
-  .btn-link,
-  .btn-group .btn-default,
-  .btn-group-vertical .btn-default,
-  .dropdown-toggle {
+  .btn-default, .btn-cancel, .btn-link, .btn-group .btn-default, .btn-group-vertical .btn-default, .dropdown-toggle {
     color: $pb-blue;
     background-color: transparent;
     border-color: $input-border;
@@ -37,8 +32,7 @@
     }
   }
 
-  .btn-link:focus,
-  .btn-link:hover {
+  .btn-link:focus, .btn-link:hover {
     text-decoration: none;
   }
 
@@ -53,12 +47,11 @@
       font-size: 12px;
       &.search {
         padding-right: 25px;
-        &:not(:valid) ~.search-clear {
+        &:not(:valid) ~ .search-clear {
           opacity: 0;
           transition: all .3s ease-in-out;
         }
-        &:focus,
-        &.focus {
+        &:focus, &.focus {
           @extend %fancy-focus;
           border-left: 1px solid $pb-blue;
         }
@@ -94,7 +87,7 @@
       background-color: inherit;
     }
   }
-  .dropdown-menu >li >a {
+  .dropdown-menu > li > a {
     font-family: $font-family-ps-regular;
     color: $pb-blue;
     font-size: 13px;
@@ -107,8 +100,7 @@
       text-decoration: none;
     }
   }
-  .dropdown-menu >li >a:focus,
-  .dropdown-menu >li >a:hover {
+  .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
     background-color: $pb-blue;
     color: #fff;
   }
