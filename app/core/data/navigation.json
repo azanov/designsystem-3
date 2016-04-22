@@ -63,9 +63,6 @@
             "label": "Tables",
             "value": "tables.datatable.page"
           }, {
-            "label": "UI Bootstrap Directives",
-            "value": "elements.uibootstrap"
-          }, {
             "label": "UI Controls",
             "value": "elements.uicontrols"
           }, {
