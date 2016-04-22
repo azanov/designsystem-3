@@ -7,6 +7,7 @@
       require: 'ngModel',
       scope: {},
       transclude: true,
+      replace : true,
       bindToController: {
         disabled: '=',
         ngModel: '=',
