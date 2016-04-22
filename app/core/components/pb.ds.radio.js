@@ -20,9 +20,6 @@
         if (angular.isUndefined(this.value)) {
           throw Error('value attribute missing');
         }
-        this.onChange = function () {
-          this.ngChange({val: this.ngModel});
-        };
       },
       controllerAs: 'ctrl',
       templateUrl: 'pbdsradio.html'

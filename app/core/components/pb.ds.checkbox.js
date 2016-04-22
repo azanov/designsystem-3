@@ -15,9 +15,6 @@
         name: '@'
       },
       controller: function () {
-        this.onChange = function () {
-          this.ngChange({val: this.ngModel});
-        };
         if (angular.isUndefined(this.ngModel)) {
           this.ngModel = false;
         }
