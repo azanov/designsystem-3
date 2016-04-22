@@ -8,18 +8,15 @@
   .footer-wrapper {
     margin: 0;
   }
-
   .two-col-wrapper {
     min-height: 100vh;
     display: flex;
     align-items: stretch;
-
     .main-content {
       padding-top: 90px;
       margin-left: 25px;
       padding-bottom: 90px;
     }
-
     .leftnav {
       padding: 90px 0 0;
       min-height: 100%;
@@ -28,8 +25,6 @@
       }
     }
   }
-
-
 }
 
 // gray navbar / white bg / 2 rules
@@ -44,7 +39,6 @@
 // white navbar / gray bg / 3 rules
 .splitview-white {
   background-color: $pb-bg1;
-
   .leftnav {
     background-color: #fff;
     border-left: 1px solid #e8e8e8;
@@ -55,10 +49,9 @@
     border-right: 1px solid #e8e8e8;
   }
 }
-
 
 // white navbar / white bg / 3 rules
-.splitview-white-filled{
+.splitview-white-filled {
   .leftnav {
     border-left: 1px solid #e8e8e8;
     border-right: 1px solid #e8e8e8;
@@ -67,7 +60,6 @@
     border-right: 1px solid #e8e8e8;
   }
 }
-
 
 // white navbar / white bg / 1 rule
 .splitview-white-open {
@@ -94,12 +86,6 @@
 }
 
 //NOTE: set container-fluid in html container tag
-
-
-
-
-
-
 .framed {
   border: 1px solid $pb-light-gray;
 }
