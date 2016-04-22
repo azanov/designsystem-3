@@ -1,0 +1,270 @@
+<div class="doc-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="hero-header">
+                    <div class="eyebrow">Foundations</div>
+                    <h1>Directives</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-unstyled list-inline jump-menu">
+                        <li><a ui-sref="foundation.directives({'#':'checkbox'})">Checkbox </a></li>
+                        <li><a ui-sref="foundation.directives({'#':'radio-button'})">Radio Button</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<div class="container">
+
+    <!-- overview -->
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="doc-sectionhead">Overview</h2>
+
+            <p>Once you've downloaded the Design System to your application, add the components script to your page. The following example assumes that the Design System was installed using <a href="https://github.com/PBGUX/bower-designsystem">Bower</a>.</p>
+
+<pre class="preview-code prettyprint">
+&lt;script src="bower_components/pb-design-system/dist/js/pb.ds.components.js"&gt;&lt;/script&gt;
+</pre>
+     <p class="spacer-top-md">To use the Design System components, you need to add the component module as a dependency in your application as follows.</p>
+    <pre class="preview-code prettyprint">
+
+    angular.module('app', [
+      'pb.ds.components'
+    ]);
+    </pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <h1 id="checkbox" class="doc-head">Checkbox</h1>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <h2 class="doc-sectionhead">Usage</h2>
+
+            <p class="spacer-top-md">The checkbox directive provides an easier implementation of the Design System styled checkbox controls. The directive uses a element tag <code>&lt;pbds-checkbox&gt;&lt;/pbds-checkbox&gt;</code> with the following attributes.</p>
+
+            <table class="table table-hover spacer-top-md spacer-bottom-md">
+                <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>label</td>
+                    <td>string</td>
+                    <td>none</td>
+                    <td>The text label for the checkbox input. When using localized strings with angular-translate, use <code>ng-attr-label</code> to handle the string inerpolation, example <code>ng-attr-label="&#123;&#123;'CHECKBOX' &#124; translate&#125;&#125;"</code></td>
+                </tr>
+                <tr>
+                    <td>ng-model</td>
+                    <td>object</td>
+                    <td>none</td>
+                    <td>Controller property bound to the checkbox value.</td>
+                </tr>
+                <tr>
+                    <td>ng-change <em>(optional)</em></td>
+                    <td>function</td>
+                    <td>none</td>
+                    <td>Controller function to run when the checkbox value is updated. The value argument is exposed as <code>val</code>, example <code>ng-change="myFunction(val)"</code></td>
+                </tr>
+                <tr>
+                    <td>disabled <em>(optional)</em></td>
+                    <td>boolean</td>
+                    <td>false</td>
+                    <td>Set the control as disabled</td>
+                </tr>
+                <tr>
+                    <td>name <em>(optional)</em></td>
+                    <td>string</td>
+                    <td>none</td>
+                    <td>Property name of the form under which the control is published.</td>
+                </tr>
+                </tbody>
+            </table>
+
+
+            <div class="preview-example">
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <figure>
+                            <figcaption>Single Checkbox</figcaption>
+                            <div>
+                                <pbds-checkbox label="Check Box" name="checkbox1"
+                                               ng-model="dirCtrl.models.checkbox1"
+                                               ng-change="dirCtrl.onCheckbox(val)">
+                                    <i class="nc-icon-mini ui-e_round-e-help text-info" uib-tooltip="tooltip"></i>
+                                </pbds-checkbox>
+                                <p>
+                                  Model Value  <code>{{ dirCtrl.models.checkbox1 }}</code>
+                                </p>
+                            </div>
+                        </figure>
+
+                    </div>
+
+                    <div class="col-md-8">
+                        <figure>
+                            <figcaption>Inline Checkboxes</figcaption>
+                            <div class="controls-inline">
+                                <pbds-checkbox label="Sample" ng-model="dirCtrl.models.checkbox2">
+                                    <i class="nc-icon-mini ui-e_round-e-info" uib-tooltip="tooltip"></i>
+                                </pbds-checkbox>
+                                <pbds-checkbox label="Sample 2" ng-model="dirCtrl.models.checkbox3">
+                                    <i class="nc-icon-mini ui-e_round-e-info" uib-tooltip="tooltip"></i>
+                                </pbds-checkbox>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-code" hljs language="xml">
+<pbds-checkbox
+        label="{{'Check Box' | translate}}"
+        name="checkbox"
+        ng-model="ctrl.checkBoxModel"
+        ng-change="ctrl.onCheckbox(val)"
+        disabled='ctrl.isCheckBoxDisabled'>
+            <i class="nc-icon-mini ui-e_round-e-help text-info" uib-tooltip="tooltip"></i>
+</pbds-checkbox>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Radio Button -->
+
+    <div class="row">
+        <div class="col-md-8">
+            <h1 id="radio-button" class="doc-head">Radio Button</h1>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <h2 class="doc-sectionhead">Usage</h2>
+
+            <p class="spacer-top-md">The radio directive provides an easier implementation of the Design System styled radio button controls. The directive uses a element tag <code>&lt;pbds-radio&gt;&lt;/pbds-radio&gt;</code> with the following attributes.</p>
+
+            <table class="table table-hover spacer-top-md spacer-bottom-md">
+                <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>label</td>
+                    <td>string</td>
+                    <td>none</td>
+                    <td>The text label for the checkbox input. When using localized strings with angular-translate, use <code>ng-attr-label</code> to handle the string inerpolation, example <code>ng-attr-label="&#123;&#123;'CHECKBOX' &#124; translate&#125;&#125;"</code></td>
+                </tr>
+                <tr>
+                    <td>ng-model</td>
+                    <td>object</td>
+                    <td>none</td>
+                    <td>Controller property bound to the checkbox value.</td>
+                </tr>
+                <tr>
+                    <td>value</td>
+                    <td>string</td>
+                    <td>none</td>
+                    <td>The value to which the ngModel expression should be set when selected. Note that value only supports string values</td>
+                </tr>
+                <tr>
+                    <td>ng-change <em>(optional)</em></td>
+                    <td>function</td>
+                    <td>none</td>
+                    <td>Controller function to run when the checkbox value is updated. The value argument is exposed as <code>val</code>, example <code>ng-change="myFunction(val)"</code></td>
+                </tr>
+                <tr>
+                    <td>disabled <em>(optional)</em></td>
+                    <td>boolean</td>
+                    <td>false</td>
+                    <td>Set the control as disabled</td>
+                </tr>
+                <tr>
+                    <td>name <em>(optional)</em></td>
+                    <td>string</td>
+                    <td>none</td>
+                    <td>Property name of the form under which the control is published.</td>
+                </tr>
+
+                </tbody>
+            </table>
+
+
+            <div class="preview-example">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div>
+                            <pbds-radio tip-type="popover" ng-attr-label="Radio Button" name="radio1" ng-model="dirCtrl.models.radio1" value="radio-1"
+                                        ng-change="dirCtrl.onRadio(val)" disabled='dirCtrl.models.radio1disabled'>
+                                <i uib-popover="ddfdfdf"
+                                   popover-title="title"
+                                   popover-trigger="mouseenter" class="nc-icon-mini ui-e_round-e-help text-info">
+                                </i>
+                            </pbds-radio>
+                            <p>
+                                Model Value  <code>{{ dirCtrl.models.radio1 }}</code>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="preview-code" hljs language="xml">
+<pbds-radio ng-attr-label="{{'RADIOBUTTON' | translate}}"
+            name="radio1"
+            ng-model="ctrl.radioModel"
+            value="radio-1"
+            ng-change="ctrl.onRadioSelection(val)"
+            disabled='dirCtrl.isRadioDisabled'>
+<i uib-popover="Pop Over Content"
+   popover-title="Pop Over Title"
+   popover-trigger="mouseenter"
+   class="nc-icon-mini ui-e_round-e-help text-info">
+</i>
+</pbds-radio>
+            </div>
+        </div>
+    </div>
+</div>
