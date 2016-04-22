@@ -15,7 +15,7 @@
   font-family: $font-family-sans-serif;
 }
 
-//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+// Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 code,
 .code,
 pre {
@@ -98,7 +98,7 @@ h2.section-divider {
 }
 
 h2.follows-h1,
-h1 +h2 {
+h1 + h2 {
   margin-top: 20px;
 }
 
@@ -168,8 +168,6 @@ h6,
 }
 
 
-
-
 // when you need light text
 // sets the bold and italic accordingly
 // so that B and I tags look correct on light
@@ -236,7 +234,7 @@ dt {
 
 ul.spaced,
 ol.spaced {
-  >li {
+  > li {
     margin-top: 10px;
 
     &:first-child {
@@ -254,7 +252,6 @@ ol {
 }
 
 .btn:focus {
-  // scss-lint:disable ImportantRule
   outline: none !important;
 }
 
@@ -281,8 +278,8 @@ ol {
   transition: all .2s ease-in-out;
 }
 
-.nav-tabs >li >a,
-.nav-pills >li >a {
+.nav-tabs > li > a,
+.nav-pills > li > a {
   font-family: $font-family-ps-regular;
 }
 
@@ -295,7 +292,6 @@ ol {
   font-weight: normal;
   font-size: 14px;
 }
-
 
 
 // boostrap makes changing the weight of the logo quite difficult

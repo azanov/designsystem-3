@@ -25,7 +25,7 @@
 
 //removes native droparrows from select menus in IE11
 select::-ms-expand {
-    display: none;
+  display: none;
 }
 
 
@@ -50,12 +50,12 @@ label {
 
 // any help block class text-error or text-danger is red, period
 .help-block.text-error, .help-block.text-danger {
-    color: $brand-danger;
+  color: $brand-danger;
 }
 
 // handle errors displayed under input-box in a form.
-.has-error .help-block{
-   color: $brand-danger;
+.has-error .help-block {
+  color: $brand-danger;
 }
 
 
@@ -92,8 +92,7 @@ fieldset {
 
 // some items need to be set back to default body font
 // don't know why
-.checkboxList span,
-a.list-group-item {
+.checkboxList span, a.list-group-item {
   font-family: $font-family-base;
   font-size: $font-size-base;
 }
@@ -111,8 +110,6 @@ a.list-group-item {
 .form-control {
   display: block;
   width: 100%;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   color: $input-color;
   background-color: $input-bg;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
@@ -132,12 +129,9 @@ a.list-group-item {
 
   // Customize the `:focus` state to use the FA "fancy focus" defined above.
   //@include form-control-focus;
-  &:focus,
-  &.focus {
+  &:focus, &.focus {
     @extend %fancy-focus;
   }
-
-
 
   // Disabled and read-only inputs
   //
@@ -145,8 +139,7 @@ a.list-group-item {
   // disabled if the fieldset is disabled. Due to implementation difficulty, we
   // don't honor that edge case; we style them as disabled anyway.
 
-  &[disabled],
-  fieldset[disabled] & {
+  &[disabled], fieldset[disabled] & {
     background-color: #f8f8f8 !important;
     border-color: $input-border-disabled;
     color: #454545;
@@ -163,9 +156,7 @@ a.list-group-item {
     color: #4e4e4e;
     pointer-events: none;
     box-shadow: none;
-
   }
-
 }
 
 //****  INPUT GROUPS ***************************
@@ -182,15 +173,13 @@ a.list-group-item {
 
 .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group {
   border-right-color: transparent;
-
 }
 
 select {
   //  scss-lint:disable ImportantRule
 
   background: #fff url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAxNiAyMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+ZHJvcGFycm93PC90aXRsZT48cGF0aCBkPSJNMCA3LjM0NGgxMC41bC01LjI1IDUuNTY2LTUuMjUtNS41NjV6IiBmaWxsPSIjNzE3MTcxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=') right center no-repeat !important;
-  &[multiple],
-  &[size] {
+  &[multiple], &[size] {
     background-image: none !important;
     color: $text-color;
     option {
@@ -209,14 +198,13 @@ select {
 }
 
 .ui-select-bootstrap .ui-select-choices-row.active > a {
-    color: $pb-gray-700;
-    text-decoration: none;
-    outline: 0;
-    background-color: $pb-bg3;
+  color: $pb-gray-700;
+  text-decoration: none;
+  outline: 0;
+  background-color: $pb-bg3;
 }
 
-.input-sm,
-select.input-sm {
+.input-sm, select.input-sm {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -225,11 +213,10 @@ select.input-sm {
 
 
 .input-group-sm > .form-control, .input-group-sm > .input-group-addon, .input-group-sm > .input-group-btn > .btn {
-    border-radius: 0;
+  border-radius: 0;
 }
 
-.input-lg,
-select.input-lg {
+.input-lg, select.input-lg {
   line-height: 1.42857;
 }
 
@@ -242,25 +229,17 @@ select.input-lg {
 
 
 .has-error {
-  .form-control, .form-control:focus  {
+  .form-control, .form-control:focus {
     border-color: $brand-danger;
   }
 }
 
 
 // date and time picker
-.form-control[disabled].datepicker,
-.form-control[readonly].datepicker,
-fieldset[disabled] .form-control.datepicker,
-.form-control[disabled].timepicker,
-.form-control[readonly].timepicker,
-fieldset[disabled] .form-control.timepicker {
+.form-control[disabled].datepicker, .form-control[readonly].datepicker, fieldset[disabled] .form-control.datepicker, .form-control[disabled].timepicker, .form-control[readonly].timepicker, fieldset[disabled] .form-control.timepicker {
   cursor: pointer;
   background-color: #fff;
 }
-
-
-
 
 
 .repeated-field {
@@ -288,14 +267,12 @@ fieldset[disabled] .form-control.timepicker {
   height: 120px;
   background: #fff url('../images/logo-#{$logo}.png') center center no-repeat;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  &:hover,
-  &.hover {
+  &:hover, &.hover {
     @extend %fancy-focus;
   }
 
 
-  &:active,
-  &.active {
+  &:active, &.active {
     border-width: 2px;
     border-color: $pb-blue;
   }
@@ -383,8 +360,7 @@ fieldset[disabled] .form-control.timepicker {
   }
 
 
-  &:hover,
-  &.hover {
+  &:hover, &.hover {
     padding: 14px;
     @extend %fancy-focus;
     @include arrow-inside;
@@ -392,8 +368,7 @@ fieldset[disabled] .form-control.timepicker {
   }
 
 
-  &:active,
-  &.active {
+  &:active, &.active {
     border-width: 2px;
     border-color: $pb-blue;
     background-color: $pb-blue;

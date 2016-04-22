@@ -7,7 +7,7 @@
 .tabs-fancy .nav.nav-tabs li {
   width: 20%;
 }
-.tabs-fancy >.nav.nav-tabs li >a {
+.tabs-fancy > .nav.nav-tabs li > a {
   text-align: center;
   display: table-cell;
   vertical-align: middle;
@@ -16,37 +16,37 @@
   padding: 0 4px;
   height: 40px;
 }
-.tabs-fancy >.nav.nav-tabs li,
-.tabs-fancy >.nav.nav-tabs li >a,
-.tabs-fancy >.nav.nav-tabs li.active,
-.tabs-fancy >.nav.nav-tabs li.active >a {
+.tabs-fancy > .nav.nav-tabs li,
+.tabs-fancy > .nav.nav-tabs li > a,
+.tabs-fancy > .nav.nav-tabs li.active,
+.tabs-fancy > .nav.nav-tabs li.active > a {
   margin-bottom: 0;
   border: 0;
   outline: none;
 }
-.tabs-fancy >.nav.nav-tabs {
+.tabs-fancy > .nav.nav-tabs {
   border-color: $pb-light-gray;
 }
-.tabs-fancy >.nav.nav-tabs li.active a,
-.tabs-fancy >.nav.nav-tabs li.active a:active,
-.tabs-fancy >.nav.nav-tabs li.active a:focus {
+.tabs-fancy > .nav.nav-tabs li.active a,
+.tabs-fancy > .nav.nav-tabs li.active a:active,
+.tabs-fancy > .nav.nav-tabs li.active a:focus {
   border: 0;
 }
-.tabs-fancy >.nav.nav-tabs li.active a:hover,
-.tabs-fancy >.nav.nav-tabs li.active a:active,
-.tabs-fancy >.nav.nav-tabs li.active a:focus {
+.tabs-fancy > .nav.nav-tabs li.active a:hover,
+.tabs-fancy > .nav.nav-tabs li.active a:active,
+.tabs-fancy > .nav.nav-tabs li.active a:focus {
   border: 0;
   margin-bottom: 0;
 }
-.tabs-fancy >.nav.nav-tabs li a,
-.tabs-fancy >.nav.nav-tabs li a:hover,
-.tabs-fancy >.nav.nav-tabs li a:active,
-.tabs-fancy >.nav.nav-tabs li a:focus {
+.tabs-fancy > .nav.nav-tabs li a,
+.tabs-fancy > .nav.nav-tabs li a:hover,
+.tabs-fancy > .nav.nav-tabs li a:active,
+.tabs-fancy > .nav.nav-tabs li a:focus {
   background-color: transparent;
 }
 
 //* start tab styles for undlerline */
-.tabs-fancy >.nav.nav-tabs li:last-child:after {
+.tabs-fancy > .nav.nav-tabs li:last-child:after {
   content: '';
   width: 100%;
   height: 3px;
@@ -57,15 +57,15 @@
   transform: translateX(0);
   transition: all .2s linear;
 }
-.tabs-fancy li:nth-child(1).active ~li:last-child:after {
+.tabs-fancy li:nth-child(1).active ~ li:last-child:after {
   transform: translateX(-300%);
 }
-.tabs-fancy li:nth-child(2).active ~li:last-child:after {
+.tabs-fancy li:nth-child(2).active ~ li:last-child:after {
   transform: translateX(-200%);
 }
-.tabs-fancy li:nth-child(3).active ~li:last-child:after {
+.tabs-fancy li:nth-child(3).active ~ li:last-child:after {
   transform: translateX(-100%);
 }
-.tabs-fancy li:nth-child(4).active ~li:last-child:after {
+.tabs-fancy li:nth-child(4).active ~ li:last-child:after {
   transform: translateX(0);
 }
