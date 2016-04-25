@@ -52,16 +52,19 @@
 
             <p class="spacer-top-lg">Once you've downloaded the Design System to your application, add the components script to your page. The following example assumes that the Design System was installed using <a href="https://github.com/PBGUX/bower-designsystem">Bower</a>.</p>
 
-<pre class="preview-code prettyprint">
-&lt;script src="bower_components/pb-design-system/dist/js/pb.ds.components.js"&gt;&lt;/script&gt;
-</pre>
-     <p class="spacer-top-md">To use the Design System components, you need to add the component module as a dependency in your application as follows.</p>
-<pre class="preview-code prettyprint">
+<!-- see script tag for included html <script> tag -->
+<div class="preview-code" hljs hljs-include="'html-source-code'" language="html"></div>
 
+<script id="html-source-code" type="text/ng-template">
+<script src="bower_components/pb-design-system/dist/js/pb.ds.components.js"></script>
+</script>
+
+     <p class="spacer-top-md">To use the Design System components, you need to add the component module as a dependency in your application as follows.</p>
+<div class="preview-code" hljs language="js">
 angular.module('app', [
   'pb.ds.components'
 ]);
-</pre>
+</div>
         </div>
     </div>
 
