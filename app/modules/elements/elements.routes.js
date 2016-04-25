@@ -121,7 +121,7 @@
       .state('elements.uibootstrap', {
         url: '/uibootstrap',
         templateUrl: 'modules/elements/templates/uibootstrap.html',
-        controller: 'UiBootstrapController as uibootstrap',
+        controller: 'UiBootstrapController as uibs',
         data: {
           pageTitle: 'UI Bootstrap Directives'
         }
