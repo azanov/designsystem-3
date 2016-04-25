@@ -36,7 +36,10 @@
             }, {
               "label": "Typography",
               "value": "foundation.typography"
-            }
+            },{
+            "label": "Angular Directives",
+            "value": "foundation.directives"
+          }
 
           ]
         }, {
