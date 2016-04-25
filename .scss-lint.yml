@@ -32,7 +32,7 @@ linters:
 
   ElsePlacement:
     enabled: true
-    style: same_line # or 'new_line'
+    style: new_line # or 'same_line'
 
   EmptyLineBetweenBlocks:
     enabled: false
