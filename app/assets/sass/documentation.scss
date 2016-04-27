@@ -17,14 +17,14 @@
 
 .home {
   // all hero divs
-  div[class^="hero-"] {
+  div[class^='hero-'] {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 500px;
     @include breakpoint(screen-xs) {
-        flex-direction: column;
-        padding: 20px;
+      flex-direction: column;
+      padding: 20px;
     }
   }
 
@@ -42,19 +42,14 @@
     align-items: center;
 
     @include breakpoint(screen-xs) {
-        flex-direction: column;
-        padding: 0 20px;
-
+      flex-direction: column;
+      padding: 0 20px;
     }
-
-
-
     > div:first-child {
       padding-right: 20px;
       transition: padding .5s ease;
     }
     transition: padding .5s ease;
-
   }
 
   .title-unit {
@@ -64,7 +59,7 @@
       font-family: $font-family-ps-regular;
       margin-top: 5px;
       @include breakpoint(screen-xs) {
-          font-size: 24px;
+        font-size: 24px;
       }
     }
     .eyebrow {
@@ -79,7 +74,7 @@
       &.versions {
         font-size: 12px;
         @include breakpoint(screen-xs) {
-            font-size: 14px;
+          font-size: 14px;
         }
       }
     }
@@ -116,9 +111,9 @@
   .hero-web {
     background: #cf098b url('../images/hero-web-pattern.jpg') top center no-repeat;
     .diptych {
-     >  div:first-child {
-       margin-left: 20px;
-     }
+      > div:first-child {
+        margin-left: 20px;
+      }
     }
     .title-unit {
       h1 {
@@ -132,10 +127,10 @@
       }
     }
     @include breakpoint(screen-xs) {
-        img {
-          max-width: 90%;
-          margin: 20px 0 0;
-        }
+      img {
+        max-width: 90%;
+        margin: 20px 0 0;
+      }
     }
   }
 
@@ -150,17 +145,16 @@
       }
     }
     @include breakpoint(screen-xs) {
-        img {
-          max-width: 60%;
-          margin: 20px 0 0 20px;
-        }
+      img {
+        max-width: 60%;
+        margin: 20px 0 0 20px;
+      }
     }
   }
 
   //
   .hero-global {
-    background:  url('../images/hero-globalization.jpg') center center no-repeat,
-     linear-gradient(90deg, #9a4097 0%, #4951a2 100%);
+    background: url('../images/hero-globalization.jpg') center center no-repeat, linear-gradient(90deg, #9a4097 0%, #4951a2 100%);
     .title-unit {
       h1 {
         color: #fff;
@@ -182,7 +176,6 @@
       }
     }
   }
-
 
   // offset layout for large desktop
   @media screen and (min-width: $screen-lg) {
@@ -225,19 +218,8 @@
         }
       }
     }
-
-
   }
-
-
 }
-
-// .home .title-unit p.versions {
-//   font-size: 12px;
-// }
-//
-
-
 
 // DOCS TYPOGRAPHY differs from DS
 .doc-head {
@@ -270,17 +252,11 @@
 }
 
 
-
-
-
-
 // right side column on sectionbreak has this div added
 .figure-spacer {
   border-top: 1px solid $pb-light-gray;
   padding-top: 40px;
 }
-
-
 
 figure {
   margin-bottom: 10px;
@@ -297,7 +273,7 @@ figcaption {
   margin-bottom: 10px;
   margin-top: 35px;
   //text-transform: capitalize;
-  +h2 {
+  + h2 {
     margin-top: 0;
   }
   &:first-of-type {
@@ -309,12 +285,9 @@ figcaption {
 }
 
 
-
-
-.row:first-child figure:first-child >figcaption {
+.row:first-child figure:first-child > figcaption {
   margin-top: 0;
 }
-
 
 
 .colors {
@@ -330,22 +303,15 @@ figcaption {
   }
 }
 
-
-
 // type samples table
 .type-samples {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     margin: 0;
   }
-  tr >td:first-child {
+  tr > td:first-child {
     width: 40%;
   }
-  tr >td:last-child {
+  tr > td:last-child {
     font-family: $font-family-monospace;
     .swatch {
       display: inline-block;
@@ -360,34 +326,32 @@ figcaption {
   }
 }
 
-
-
 .more-info {
-    background-color: $pb-gray-300;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-family: $font-family-monospace;
-    font-size: 11px;
-    margin: 5px;
-    display: inline-block;
-    text-transform: lowercase;
+  background-color: $pb-gray-300;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-family: $font-family-monospace;
+  font-size: 11px;
+  margin: 5px;
+  display: inline-block;
+  text-transform: lowercase;
+  color: #fff;
+  font-weight: normal;
+
+  &:hover {
     color: #fff;
-    font-weight: normal;
+    background-color: $pb-gray-700;
+    text-decoration: none;
+  }
 
-    &:hover {
-      color: #fff;
-      background-color: $pb-gray-700;
-      text-decoration: none;
-    }
-
-    &.plugin {
-      &:before {
-        font-family: 'Nucleo Mini';
-        content: '\ee37';
-        padding-right: 7px;
-      }
+  &.plugin {
+    &:before {
+      font-family: 'Nucleo Mini';
+      content: '\ee37';
+      padding-right: 7px;
     }
   }
+}
 
 
 %tiny-numbers {
@@ -449,8 +413,7 @@ p.specifications {
   @include show-specs-below(1em);
 }
 
-h2.follows-h1,
-h1 +h2 {
+h2.follows-h1, h1 + h2 {
   &.specifications {
     @include show-specs(20px, 20px);
   }
@@ -528,8 +491,7 @@ h2.table-header.specifications {
 }
 
 .text-center {
-  .pie,
-  .donut {
+  .pie, .donut {
     width: 100px;
     margin: 0 auto 20px;
   }
@@ -672,14 +634,11 @@ h2.table-header.specifications {
 .view-animate {
   transition: opacity .3s;
 
-  &.ng-enter,
-  &.ng-leave {
+  &.ng-enter, &.ng-leave {
     opacity: 1;
   }
 
-  &.ng-enter,
-  &.ng-leave-active,
-  &.ng-hide {
+  &.ng-enter, &.ng-leave-active, &.ng-hide {
     opacity: 0;
   }
 }
@@ -687,7 +646,6 @@ h2.table-header.specifications {
 .pb-icons {
   li {
     font-family: $font-family-monospace;
-
   }
   i {
     font-size: 30px;
@@ -704,7 +662,7 @@ h2.table-header.specifications {
   padding: 0;
   margin: 0 -.55556rem;
 
-  >li {
+  > li {
     display: block;
     height: auto;
     float: left;
@@ -712,20 +670,20 @@ h2.table-header.specifications {
   }
 }
 
-.block-grid-6 >li {
+.block-grid-6 > li {
   width: 16.66666%;
 }
 
-.small-block-grid-3 >li {
+.small-block-grid-3 > li {
   width: 33.33333%;
   list-style: none;
 }
 
-.small-block-grid-3 >li:nth-of-type(1n) {
+.small-block-grid-3 > li:nth-of-type(1n) {
   clear: none;
 }
 
-.small-block-grid-3 >li:nth-of-type(3n+1) {
+.small-block-grid-3 > li:nth-of-type(3n+1) {
   clear: both;
 }
 
@@ -738,9 +696,6 @@ h2.table-header.specifications {
     margin-top: 50px;
   }
 }
-
-
-
 
 // used for example table status, move to Live preview sass
 .status {
@@ -787,7 +742,7 @@ h2.table-header.specifications {
     }
   }
 
-  +.preview-code {
+  + .preview-code {
     margin-top: -25px;
     margin-bottom: 20px;
   }
@@ -800,13 +755,11 @@ h2.table-header.specifications {
     border-top-right-radius: 0;
     margin: 0;
     padding: 10px;
-
     code {
       background: transparent;
     }
   }
 }
-
 
 //RESOURCES
 .fillin-blank {
@@ -817,13 +770,9 @@ h2.table-header.specifications {
 }
 
 .resources {
-
-
   .panel-download {
-
     display: flex;
     flex-direction: column;
-
     border: 0;
     color: #fff;
     text-align: center;
@@ -835,12 +784,11 @@ h2.table-header.specifications {
     }
     .panel-content {
       margin-top: 60px;
-
     }
 
     &.bg-pb-gray-500 {
       .panel-content {
-          margin-top: 40px;
+        margin-top: 40px;
       }
     }
 
@@ -869,16 +817,9 @@ h2.table-header.specifications {
     }
 
     &.illustrator {
-      background-color: #DA1F26;
+      background-color: #da1f26;
+    }
   }
-}
-
-
-
-
-
-
-
 
   hr {
     width: 50%;
@@ -889,7 +830,6 @@ h2.table-header.specifications {
       border-color: $pb-gray-400;
     }
   }
-
 }
 
 .productplan {
@@ -902,7 +842,6 @@ figure .modal-dialog {
 
 //elements > containers > Gallery
 .doc-gallery {
-
   .image-gallery-item {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -959,7 +898,6 @@ ul.icon-grid {
       margin-right: 20px;
     }
   }
-
 }
 
 .outlined, .bordered {
