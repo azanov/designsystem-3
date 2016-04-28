@@ -1,8 +1,8 @@
 /**
  * DesignSystem - 
- * @version v2.6.0
+ * @version v2.7.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Tue Apr 26 2016 15:25:21 GMT-0400 (EDT) 
+ * Built Thu Apr 28 2016 15:36:42 GMT-0400 (EDT) 
  */
 @charset "UTF-8";
 #header, header, .signin, .landing .bg {
@@ -11938,7 +11938,8 @@ select[multiple] option:selected, select[size] option:selected {
   background-color: #fff;
   color: #3e53a4; }
 select.form-control {
-  padding-right: 22px; }
+  padding-right: 22px;
+  -webkit-appearance: none; }
 select:hover {
   cursor: pointer; }
 
