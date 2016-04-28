@@ -1,5 +1,15 @@
 ## Release Notes
 
+###2.7.0 -- April 30, 2016
+
+####CSS Changes
+
+
+
+**NON_BREAKING CHANGES**
+* Icons on Error Pages have been updated, and are now SVG files.
+* Notifiications
+
 ### 2.6.0 -- March 31, 2016
 
 #### CSS Changes
