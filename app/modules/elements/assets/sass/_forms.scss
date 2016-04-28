@@ -191,6 +191,7 @@ select {
   }
   &.form-control {
     padding-right: 22px;
+    -webkit-appearance: none;
   }
   &:hover {
     cursor: pointer;
