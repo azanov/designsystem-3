@@ -48,6 +48,10 @@
 * stylelint-config-standard 6.0.0
 
 
+#### Thanks to the following contributors and bug reporters:
+
+Cameron Chu, Dave Fondacaro, Rick Cole, Rick Dukeshire, Steve Evermore
+
 ------
 
 
