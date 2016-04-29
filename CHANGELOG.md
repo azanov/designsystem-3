@@ -22,8 +22,8 @@
 #### Site Changes
 
 * Added examples of [Sign Up/Forgot Password](http://guxstaging.pbi.global.pvt/design_system/#/patterns/signinup) pages with a security question.
-
 * Fixed several display issues reported on Github.
+* Updated Font Awesome to Nucleo conversion PDF on [Foundation > Iconograpy](http://guxstaging.pbi.global.pvt/design_system/#/foundation/iconography).
 
 #### Updated Libraries
 * angular-bootstrap 1.3.1
