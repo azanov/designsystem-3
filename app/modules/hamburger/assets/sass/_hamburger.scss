@@ -5,7 +5,7 @@
 }
 
 .navmenu-fixed-left, .navbar-offcanvas.navmenu-fixed-left {
-    border-width: 0;
+  border-width: 0;
 }
 
 .hamburger {
@@ -19,8 +19,7 @@
   .navmenu-default, .navbar-default .navbar-offcanvas {
     background-color: #fff;
     border-color: #fff;
-}
-
+  }
   .container-fluid {
     padding-left: 50px;
     padding-right: 50px;
@@ -37,9 +36,6 @@
       margin-right: auto;
     }
   }
-
-
-
 
   .site-content {
     min-height: calc(100vh - (40px + 44px)); // 40 footer margin, 44 footer height
@@ -60,13 +56,11 @@
     box-shadow: 3px 0 10px hsla(0, 0, 0, .3);
   }
 
-
   .navbar-toggle {
     display: inline-block;
     position: relative;
     float: left;
     padding: 9px 12px;
-
     background-color: transparent;
     background-image: none;
     border: 1px solid transparent;
@@ -101,7 +95,6 @@
   }
 
   &.hamburger-auto {
-
     .navmenu .list-group {
       margin-top: 60px;
     }
@@ -168,7 +161,7 @@
     .nav-left {
       position: absolute;
       width: 55px;
-    //  min-height: calc(100vh - (50px + 44px));
+      //  min-height: calc(100vh - (50px + 44px));
       min-height: 100vh;
       top: 50px;
       z-index: 1500;

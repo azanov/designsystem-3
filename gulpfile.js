@@ -70,6 +70,11 @@ gulp.task('usemin', function () {
       vendorjs: [
         uglify({mangle: true})
       ],
+      dscomponents: [
+        ngAnnotate({remove: true, add: true, single_quotes: true}),
+        uglify({mangle: true}),
+        rev
+      ],
       appjs: [
         replace('debug: true', 'debug: false'),
         ngAnnotate({remove: true, add: true, single_quotes: true}),

@@ -23,12 +23,9 @@ th {
   margin-bottom: $line-height-computed;
   border: 1px solid $table-border-color;
   // Cells and heads
-  >thead,
-  >tbody,
-  >tfoot {
-    >tr {
-      >th,
-      >td {
+  > thead, > tbody, > tfoot {
+    > tr {
+      > th, > td {
         padding: $table-cell-padding;
         line-height: $line-height-base;
         vertical-align: top;
@@ -37,10 +34,9 @@ th {
     }
   }
   // cells only, get vertical rules slightly lighter
-  >tbody,
-  >tfoot {
-    >tr {
-      >td {
+  > tbody, > tfoot {
+    > tr {
+      > td {
         color: $table-text-color;
         border-right: 1px solid $table-vertical-cell-dividers;
         &:last-child {
@@ -50,7 +46,7 @@ th {
     }
   }
   // Bottom align for column headings
-  >thead >tr >th {
+  > thead > tr > th {
     vertical-align: bottom;
     background-color: $table-header-background-color;
     font-family: $font-family-ps-regular;
@@ -60,18 +56,15 @@ th {
   }
 
   // Remove top border from thead by default
-  >caption +thead,
-  >colgroup +thead,
-  >thead:first-child {
-    >tr:first-child {
-      >th,
-      >td {
+  > caption + thead, > colgroup + thead, > thead:first-child {
+    > tr:first-child {
+      > th, > td {
         border-top: 0;
       }
     }
   }
   // Account for multiple tbody instances
-  >tbody +tbody {
+  > tbody + tbody {
     border-top: 2px solid $table-border-color;
   }
 
@@ -97,7 +90,7 @@ th {
       border-top-width: 0;
     }
 
-    >td {
+    > td {
       background-image: linear-gradient(to bottom, hsl(0, 0%, 79%) -5%, hsl(0, 0%, 94%) 6%, hsl(0, 0%, 94%) 100%);
     }
 
@@ -107,7 +100,6 @@ th {
     }
   }
   th {
-
     i.popover-trigger {
       cursor: pointer;
       color: $link-color;
@@ -131,8 +123,7 @@ th {
 
 
 // table transitions for hovers
-.table >tbody >tr >td,
-.table >tbody >tr >th {
+.table > tbody > tr > td, .table > tbody > tr > th {
   transition: background-color .3s;
 }
 
@@ -146,40 +137,41 @@ th {
   }
 }
 
-td.centered,
-th.centered {
+td.centered, th.centered {
   text-align: center;
 }
 
 
 .table-condensed {
-  > thead,
-  > tbody,
-  > tfoot {
+  > thead, > tbody, > tfoot {
     > tr {
-      > th,
-      > td {
+      > th, > td {
         padding: $table-condensed-cell-padding;
       }
     }
   }
 }
 
-.table-hover>tbody>tr:hover {
+.table-hover > tbody > tr:hover {
   background-color: $table-bg-hover;
 }
 
 
 .table-condensed-extra {
   font-size: 13px;
-  >thead,
-  >tbody,
-  >tfoot {
-    >tr {
-      >th,
-      >td {
+  > thead, > tbody, > tfoot {
+    > tr {
+      > th, > td {
         padding: $table-condensed-extra-cell-padding $table-condensed-cell-padding;
       }
     }
   }
+}
+
+
+.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: $table-bg-accent;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #fff;
 }

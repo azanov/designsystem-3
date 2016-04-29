@@ -1,6 +1,4 @@
-//* TABS */
-
-
+// TABS /
 
 .tab-pane {
   padding: 15px;
@@ -13,7 +11,7 @@
     border: 1px solid $nav-tabs-border-color;
     border-top: 0;
   }
- }
+}
 
 .tabset-bordered {
   .tab-pane {
@@ -24,24 +22,17 @@
   }
 }
 
-
-
-
-
-
 // Tabs
-// -------------------------
-
 // Give the tabs something to sit on
 .nav-tabs {
   border-bottom: 1px solid $nav-tabs-border-color;
-  >li {
+  > li {
     float: left;
     // Make the list-items overlay the bottom border
     margin-bottom: -1px;
 
     // Actual tabs (as links)
-    >a {
+    > a {
       margin-right: 0;
       line-height: $line-height-base;
       border-radius: 0;
@@ -55,10 +46,8 @@
     }
 
     // Active state, and its :hover to override normal :hover
-    &.active >a {
-      &,
-      &:hover,
-      &:focus {
+    &.active > a {
+      &, &:hover, &:focus {
         color: $header-color;
         background-color: $nav-tabs-active-link-hover-bg;
         border: 1px solid $nav-tabs-active-link-hover-border-color;
@@ -75,31 +64,29 @@
   }
 }
 
-
 // Justified nav links
 // -------------------------
-
 .nav-justified {
   width: 100%;
 
-  >li {
+  > li {
     float: none;
-    >a {
+    > a {
       text-align: center;
       margin-bottom: 5px;
     }
   }
 
-  >.dropdown .dropdown-menu {
+  > .dropdown .dropdown-menu {
     top: auto;
     left: auto;
   }
 
   @media (min-width: $screen-sm-min) {
-    >li {
+    > li {
       display: table-cell;
       width: 1%;
-      >a {
+      > a {
         margin-bottom: 0;
       }
     }
@@ -107,49 +94,35 @@
 }
 
 // Move borders to anchors instead of bottom of list
-//
 // Mixin for adding on top the shared `.nav-justified` styles for our tabs
 .nav-tabs-justified {
   border-bottom: 0;
 
-  >li >a {
+  > li > a {
     // Override margin from .nav-tabs
     margin-right: 0;
     border-radius: 0;
   }
 
-  >.active >a,
-  >.active >a:hover,
-  >.active >a:focus {
+  > .active > a, > .active > a:hover, > .active > a:focus {
     border: 1px solid $nav-tabs-justified-link-border-color;
   }
 
   @media (min-width: $screen-sm-min) {
-    >li >a {
+    > li > a {
       border-bottom: 1px solid $nav-tabs-justified-link-border-color;
       border-radius: 0;
     }
-    >.active >a,
-    >.active >a:hover,
-    >.active >a:focus {
+    > .active > a, > .active > a:hover, > .active > a:focus {
       border-bottom-color: $nav-tabs-justified-active-link-border-color;
       border-top: 2px solid $pb-blue;
     }
   }
 }
 
-
-
-
-
-
-//As I was lyin' in a hospital bed
-//A rock 'n' roll nurse went into my head
-//She says, hold ya arm, stick out ya tongue
-//I gots some pills I'm gonna give you somes
 .nav-pills {
-  >li {
-    >a {
+  > li {
+    > a {
       color: $text-color;
       &:hover {
         background-color: $nav-link-hover-bg;
@@ -158,8 +131,6 @@
   }
 }
 
-.nav-pills >li.active >a,
-.nav-pills >li.active >a:hover,
-.nav-pills >li.active >a:focus {
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
   background-color: $pb-blue;
 }
