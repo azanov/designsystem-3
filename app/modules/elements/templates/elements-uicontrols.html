@@ -371,7 +371,7 @@
               <div class="input-group">
                 <input class="form-control" placeholder="Product name" type="text">
                 <div class="input-group-btn">
-                  <button class="btn btn-pr" type="button">Action</button>
+                  <button class="btn btn-primary" type="button">Action</button>
                 </div>
               </div>
             </div>
@@ -472,8 +472,12 @@
             <figcaption>Default Dropdown</figcaption>
             <label>Text label</label>
             <div class="form-group">
-              <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+              <select class="form-control">
                 <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
               </select>
             </div>
           </figure>
@@ -482,8 +486,13 @@
             <figcaption>Default Dropdown (Focused)</figcaption>
             <div class="form-group">
               <label>Text label</label>
-              <select class="form-control focus" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+
+              <select class="form-control focus">
                 <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
               </select>
             </div>
           </figure>
@@ -495,8 +504,13 @@
             <figcaption>Default Dropdown, Disabled</figcaption>
             <div class="form-group">
               <label>Text label</label>
-              <select class="form-control" disabled ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+
+              <select class="form-control" disabled>
                 <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
               </select>
             </div>
           </figure>
@@ -505,8 +519,12 @@
             <figcaption>Default Dropdown (Error)</figcaption>
             <div class="form-group has-error">
               <label>Text label</label>
-              <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+              <select class="form-control">
                 <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
               </select>
             </div>
           </figure>
@@ -545,8 +563,12 @@
             <figcaption>Default</figcaption>
             <div class="form-group">
               <label>Text label</label>
-              <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+              <select class="form-control">
                 <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
               </select>
             </div>
           </figure>
@@ -555,8 +577,12 @@
             <div class="form-group">
               <figcaption>Small</figcaption>
               <label>Text label</label>
-              <select class="form-control input-sm" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+              <select class="form-control input-sm">
                 <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
               </select>
             </div>
           </figure>
@@ -567,10 +593,12 @@
             <figcaption>Large</figcaption>
             <div class="form-group">
               <label>Text label</label>
-              <select class="form-control input-lg" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
-                <option value="">
-                  Select
-                </option>
+              <select class="form-control input-lg">
+                <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
               </select>
             </div>
           </figure>
@@ -646,7 +674,7 @@
       <p>Note that you have your choice of two multi-select menu controls: ui-select and ngTagsInput. Both offer various options for customizing behavior and appearance — refer to the plugin documentation for those details.</p>
 
       <p>
-        <a class="more-info plugin" href="https://github.com/angular-ui/ui-select" target="_blank">angular-ui-select v0.14.1</a>
+        <a class="more-info plugin" href="https://github.com/angular-ui/ui-select" target="_blank">angular-ui-select v0.16.1</a>
       </p>
 
       <p>

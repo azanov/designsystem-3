@@ -42,8 +42,6 @@ header:not(.demo) {
 }
 
 
-
-
 .help-icon {
   height: 70px;
   i.fa.fa-circle.fa-stack-1x {
@@ -62,7 +60,7 @@ header:not(.demo) {
   }
 
   .dropdown-menu {
-    right: auto;
+    // right: auto; // this breaks menus
   }
   .dropdown-toggle {
     height: 50px;
@@ -103,8 +101,6 @@ header:not(.demo) {
     }
   }
 }
-
-
 
 .nav > li > a:hover, .nav > li > a:focus {
   background-color: $pb-bg2;
@@ -196,8 +192,6 @@ header:not(.demo) {
   }
 
 
-
-
   .navbar-brand {
     // @include navbar-divider;
     float: left;
@@ -231,8 +225,6 @@ header:not(.demo) {
       }
     }
   }
-
-
 
 
   .open a {
@@ -330,8 +322,6 @@ header:not(.demo) {
   }
 }
 
-
-
 /// mega menu --------------------
 .mega-offset {
   margin-left: 140px;
@@ -395,7 +385,7 @@ header:not(.demo) {
         opacity: 1;
         transform: scale(1);
         max-height: 500px;
-        transition:  max-height .5s cubic-bezier(.3, .34, .62, .99), transform 0s linear;
+        transition: max-height .5s cubic-bezier(.3, .34, .62, .99), transform 0s linear;
       }
     }
   }
@@ -436,8 +426,6 @@ header:not(.demo) {
     display: none;
   }
 }
-
-
 
 // put bottom to ensure override
 @media (max-width: $screen-xs-max) {

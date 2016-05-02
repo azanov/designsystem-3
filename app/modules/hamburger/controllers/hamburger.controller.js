@@ -1,9 +1,7 @@
-(function() {
-
+(function () {
   'use strict';
 
-  angular.module('pb.ds.hamburger').controller('HamburgerController', function($log) {
-
+  angular.module('pb.ds.hamburger').controller('HamburgerController', function ($log) {
     var _this = this;
 
     // unclear where this is being stored
@@ -11,9 +9,5 @@
 
     // start the nav as not open
     _this.open = false;
-
-
-
   });
-
 })();

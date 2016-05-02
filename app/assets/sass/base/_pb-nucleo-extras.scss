@@ -1,10 +1,9 @@
-/*-----------------------------
+/* -----------------------------
 	PB Nucleo font extras
--------------------------------*/
+------------------------------- */
 
-.#{$nc-css-prefix}-mini.lg,
-.#{$nc-css-prefix}-outline.lg  {
-	font-size: 1.5em;
+.#{$nc-css-prefix}-mini.lg, .#{$nc-css-prefix}-outline.lg {
+  font-size: 1.5em;
 }
 
 
@@ -14,18 +13,15 @@
 }
 
 
-.#{$nc-css-prefix}-mini.x4,
-.#{$nc-css-prefix}-outline.x4  {
+.#{$nc-css-prefix}-mini.x4, .#{$nc-css-prefix}-outline.x4 {
   font-size: 4em;
 }
 
-.#{$nc-css-prefix}-mini.x5,
-.#{$nc-css-prefix}-outline.x5 {
+.#{$nc-css-prefix}-mini.x5, .#{$nc-css-prefix}-outline.x5 {
   font-size: 5em;
 }
 
-.#{$nc-css-prefix}-mini.x6,
-.#{$nc-css-prefix}-outline.x6  {
+.#{$nc-css-prefix}-mini.x6, .#{$nc-css-prefix}-outline.x6 {
   font-size: 6em;
 }
 
@@ -45,8 +41,8 @@
 
 
 .link-icon {
-	color: $pb-medium-blue;
-	&.disabled {
-		color: $pb-gray;
-	}
+  color: $pb-medium-blue;
+  &.disabled {
+    color: $pb-gray;
+  }
 }

@@ -1,51 +1,46 @@
-(function() {
-
+(function () {
   'use strict';
 
-  angular.module('pb.ds.patterns').controller('DragDropController', function($log, $scope, $timeout, Upload) {
-
+  angular.module('pb.ds.patterns').controller('DragDropController', function ($log, $scope, $timeout, Upload) {
     var _this = this;
 
     $scope.files = [];
 
-    $scope.$watch('files', function() {
+    $scope.$watch('files', function () {
       $scope.upload($scope.files);
     });
-
 
     $scope.log = '';
 
     $scope.upload = function (files) {
       if (files && files.length) {
-          for (var i = 0; i < files.length; i++) {
-            var file = files[i];
-            if (!file.$error) {
-              Upload.upload({
-                  url: 'https://angular-file-upload-cors-srv.appspot.com/upload',
-                  data: {
-                    username: $scope.username,
-                    file: file
-                  }
-              }).then(function (resp) {
-                  $timeout(function() {
-                      $scope.log = 'file: ' +
-                      resp.config.data.file.name +
-                      ', Response: ' + JSON.stringify(resp.data) +
-                      '\n' + $scope.log;
-                  });
-              }, null, function (evt) {
-                  var progressPercentage = parseInt(100.0 *
-                      evt.loaded / evt.total);
-                  $scope.log = 'progress: ' + progressPercentage +
-                    '% ' + evt.config.data.file.name + '\n' +
-                    $scope.log;
+        for (var i = 0; i < files.length; i++) {
+          var file = files[i];
+          if (!file.$error) {
+            Upload.upload({
+              url: 'https://angular-file-upload-cors-srv.appspot.com/upload',
+              data: {
+                username: $scope.username,
+                file: file
+              }
+            }).then(function (resp) {
+              $timeout(function () {
+                $scope.log = 'file: ' +
+                resp.config.data.file.name +
+                ', Response: ' + JSON.stringify(resp.data) +
+                '\n' + $scope.log;
               });
-            }
+            }, null, function (evt) {
+              var progressPercentage = parseInt(100.0 *
+                evt.loaded / evt.total);
+              $scope.log = 'progress: ' + progressPercentage +
+              '% ' + evt.config.data.file.name + '\n' +
+              $scope.log;
+            });
           }
+        }
       }
-  };
-
-
+    };
 
     _this.items = {
       unselected: [{
@@ -70,20 +65,19 @@
 
     _this.isDragging = false;
 
-    $scope.$on('first-bag.drag', function(e, el, container) {
+    $scope.$on('first-bag.drag', function (e, el, container) {
       _this.tooltip.isEnabled = !_this.tooltip.isEnabled;
       _this.isDragging = true;
       $log.debug(e, el, container);
       // if(!el.hasClass('dragging')){
       //     el.addClass('dragging');
       // }
-
     });
 
-    $scope.$on('first-bag.drop', function(e, el, container) {
+    $scope.$on('first-bag.drop', function (e, el, container) {
       _this.tooltip.isEnabled = !_this.tooltip.isEnabled;
       _this.isDragging = false;
-      // el.removeClass('dragging');
+    // el.removeClass('dragging');
     });
 
     // $scope.$on('first-bag.cloned', function(el, clone, original, type) {
@@ -91,22 +85,20 @@
     //   el.addClass('cloned');
     // });
 
-    $scope.$on('first-bag.over', function(e, el, container) {
+    $scope.$on('first-bag.over', function (e, el, container) {
       el.addClass('over');
     });
 
-    $scope.$on('first-bag.out', function(e, el, container) {
+    $scope.$on('first-bag.out', function (e, el, container) {
       el.removeClass('over');
     });
 
-    $scope.$on('first-bag.over', function(e, el, container) {
+    $scope.$on('first-bag.over', function (e, el, container) {
       container.addClass('ex-over');
     });
 
-    $scope.$on('first-bag.out', function(e, el, container) {
+    $scope.$on('first-bag.out', function (e, el, container) {
       container.removeClass('ex-over');
     });
-
   });
-
 })();

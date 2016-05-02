@@ -1,8 +1,7 @@
-(function() {
-
+(function () {
   'use strict';
 
-  angular.module('pb.ds.helpers').config(function($stateProvider) {
+  angular.module('pb.ds.helpers').config(function ($stateProvider) {
     $stateProvider.state('helpers', {
       url: '/helpers',
       templateUrl: 'modules/helpers/templates/helpers.html',
@@ -14,5 +13,4 @@
       }
     });
   });
-
 })();

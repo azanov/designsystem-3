@@ -1,7 +1,5 @@
-(function() {
-
+(function () {
   'use strict';
-
   angular.module('pb.core', [
     'ngCookies',
     'ngAnimate',
@@ -26,7 +24,7 @@
     'infinite-scroll',
     'datatables',
     'datatables.bootstrap',
-    'datatables.tabletools',
+    'datatables.buttons',
     'xeditable',
     'angularChart',
     'duScroll',
@@ -34,7 +32,7 @@
     'ngTagsInput',
     'slickCarousel',
     'ngFileUpload',
-    angularDragula(angular)
+    angularDragula(angular),
+    'pb.ds.components'
   ]);
-
 })();

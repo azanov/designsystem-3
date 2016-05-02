@@ -1,10 +1,5 @@
-(function() {
-
+(function () {
   'use strict';
 
-  angular.module('pb.ds.content').controller('ContentController', function($log) {
-
-
-  });
-
+  angular.module('pb.ds.content').controller('ContentController', function ($log) {});
 })();

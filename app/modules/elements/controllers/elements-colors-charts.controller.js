@@ -1,9 +1,7 @@
-(function() {
-
+(function () {
   'use strict';
 
-  angular.module('pb.ds.elements').controller('ChartColorsController', function($log, ColorsResolve) {
-
+  angular.module('pb.ds.elements').controller('ChartColorsController', function ($log, ColorsResolve) {
     var _this = this;
 
     _this.colorData = ColorsResolve.colors;
@@ -34,8 +32,5 @@
         $red: _this.colorData.charts[5].hex
       }
     };
-
-
   });
-
 })();

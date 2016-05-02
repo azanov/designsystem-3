@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="theme-color" content="#3e53a4">
 
     <!-- build:bowser js/bowser.min.js -->
     <script src="bower_components/bowser/bowser.min.js"></script>
@@ -38,7 +39,8 @@
     <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
     <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.min.css">
     <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css"/>
-    <link rel="stylesheet" href="bower_components/angular-datatables/dist/plugins/bootstrap/datatables.bootstrap.css"/>
+    <link rel="stylesheet" href="bower_components/angular-datatables/dist/plugins/bootstrap/datatables.bootstrap.min.css"/>
+    <!-- <link rel="stylesheet" href="bower_components/datatables.net-buttons-dt/css/buttons.dataTables.css"/> -->
     <link rel="stylesheet" href="bower_components/angular-xeditable/dist/css/xeditable.css"/>
     <link rel="stylesheet" href="bower_components/c3/c3.min.css"/>
     <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css" />
@@ -138,11 +140,12 @@
 
 
     <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
-    <script src="bower_components/datatables/media/js/jquery.dataTables.js"></script>
-    <script src="bower_components/datatables-tabletools/js/dataTables.tableTools.js"></script>
+
+    <script src="bower_components/datatables.net/js/jquery.dataTables.js"></script>
+    <script src="bower_components/datatables.net-buttons/js/dataTables.buttons.js"></script>
     <script src="bower_components/angular-datatables/dist/angular-datatables.js"></script>
-    <script src="bower_components/angular-datatables/dist/plugins/tabletools/angular-datatables.tabletools.js"></script>
     <script src="bower_components/angular-datatables/dist/plugins/bootstrap/angular-datatables.bootstrap.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/buttons/angular-datatables.buttons.js"></script>
     <script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
 
 
@@ -262,6 +265,7 @@
     <script src="modules/foundation/controllers/foundation-iconography.controller.js"></script>
     <script src="modules/foundation/controllers/foundation-typography.controller.js"></script>
     <script src="modules/foundation/controllers/foundation-writing.controller.js"></script>
+    <script src="modules/foundation/controllers/foundation-directives.controller.js"></script>
 
 
     <script src="modules/globalization/globalization.module.js"></script>
@@ -320,6 +324,12 @@
     <script src="modules/resources/resources.module.js"></script>
     <script src="modules/resources/resources.routes.js"></script>
     <script src="modules/resources/controllers/resources.controller.js"></script>
+    <!-- endbuild  -->
+
+    <!-- build:dscomponents js/pb.ds.components.js -->
+    <script src="core/components/pb.ds.components.js"></script>
+    <script src="core/components/pb.ds.checkbox.js"></script>
+    <script src="core/components/pb.ds.radio.js"></script>
     <!-- endbuild  -->
 
 

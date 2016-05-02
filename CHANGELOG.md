@@ -1,5 +1,60 @@
 ## Release Notes
 
+###2.7.0 -- April 30, 2016
+
+####CSS Changes
+
+**BREAKING CHANGES**
+* Notifications ([Alerts and Toastrs](http://guxstaging.pbi.global.pvt/design_system/#/feedback)) have been updated and standardized. To use them, note that the icons are now background SVGs embedded in the CSS; you will need to **remove** icons that you added in the alerts themselves such as `<i class="someicon"></i>`.
+
+   ![alert-ss](img/alert-ss.jpg)
+* The `container-fluid` style has been reset to use Bootstrap standard padding of 15px on each side. This means content  inside a container-fluid will appear slightly wider. This was done since the additional padding we were using caused issues with the responsive nav bar.
+
+**NON-BREAKING CHANGES**
+
+* Added custom directives for Design System checkboxes and radio buttons.  Full details and instructions are at the new [Angular Directives](http://guxstaging.pbi.global.pvt/design_system/#/foundation/directives) page. We will be adding more directives in the coming months, both from the team and from third parties.
+
+* Icons on [Error Pages](http://guxstaging.pbi.global.pvt/design_system/#/patterns/errorpages) have been updated, and are now SVG files.
+
+* Updated table header sort and help icons.  See [Elements > Tables](http://guxstaging.pbi.global.pvt/design_system/#/tables/datatable)
+   ![table-headers](img/table-headers.jpg)
+
+#### Site Changes
+
+* Added examples of [Sign Up/Forgot Password](http://guxstaging.pbi.global.pvt/design_system/#/patterns/signinup) pages with a security question.
+* Fixed several display issues reported on Github.
+* Updated Font Awesome to Nucleo conversion PDF on [Foundation > Iconograpy](http://guxstaging.pbi.global.pvt/design_system/#/foundation/iconography).
+
+#### Updated Libraries
+* angular-bootstrap 1.3.1
+* angular-dragula 1.2.4
+* angular-translate 2.11.0
+* angular-translate-loader-partial 2.11.0
+* angular-translate-storage-cookie 2.11.0
+* angular-translate-storage-local 2.11.0
+* angular-ui-select 0.16.1
+* datatables.net 1.10.11
+* datatables.net-bs 1.10.11
+* datatables.net-buttons 1.1.2
+* eslint 2.7.0
+* eslint-config-angular 0.5.0
+* eslint-config-semistandard 6.0.1
+* eslint-config-standard 5.1.0
+* eslint-plugin-angular 1.0.0
+* eslint-plugin-promise 1.1.0
+* eslint-plugin-standard 1.3.2
+* ng-file-upload 12.0.4
+* stylelint 6.2.0
+* stylelint-config-standard 6.0.0
+
+
+#### Thanks to the following contributors and bug reporters:
+
+Cameron Chu, Dave Fondacaro, Rick Cole, Rick Dukeshire, Steve Evermore
+
+------
+
+
 ### 2.6.0 -- March 31, 2016
 
 #### CSS Changes
