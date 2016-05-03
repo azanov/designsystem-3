@@ -14,6 +14,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var usemin = require('gulp-usemin');
 var sassdoc = require('sassdoc');
+var eslint = require('gulp-eslint');
 
 var today = new Date();
 var pkg = require('./package.json');
@@ -29,6 +30,20 @@ var banner = ['/**',
 // clean dist folder
 gulp.task('clean:dist', function (cb) {
   return del(['./build', './dist'], cb);
+});
+
+// lint the code : onBuild
+gulp.task('eslint', function () {
+  return gulp.src(['app/**/*.js', '!node_modules/**', '!app/bower_components/**', '!app/modules/i18n/angular-i18n/*.js'])
+    // eslint() attaches the lint output to the "eslint" property
+    // of the file object so it can be used by other modules.
+      .pipe(eslint())
+    // eslint.format() outputs the lint results to the console.
+    // Alternatively use eslint.formatEach() (see Docs).
+      .pipe(eslint.format())
+    // To have the process exit with an error code (1) on
+    // lint error, return the stream and pipe to failAfterError last.
+      .pipe(eslint.failAfterError());
 });
 
 gulp.task('sass', function () {
@@ -202,6 +217,7 @@ gulp.task('serve-build', [], function () {
 // build
 gulp.task('build', ['clean:dist'], function () {
   runSequence(
+    'eslint',
     'sass-dist',
     'copy:angular-i18n',
     'usemin',
@@ -217,7 +233,12 @@ gulp.task('build', ['clean:dist'], function () {
 });
 
 // run this to open project in browser and watch for changes in CSS
-gulp.task('default', ['watch'], function () {});
+gulp.task('default', ['clean:dist'], function () {
+  runSequence(
+      'eslint',
+      'watch'
+  );
+});
 
 // Watch
 gulp.task('watch', ['browser-sync', 'sass', 'copy:angular-i18n'], function () {
