@@ -1,8 +1,8 @@
 /**
  * DesignSystem - 
- * @version v2.7.0
+ * @version v2.7.1
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Wed May 04 2016 11:31:55 GMT-0400 (EDT) 
+ * Built Wed May 04 2016 13:10:26 GMT-0400 (EDT) 
  */
 @charset "UTF-8";
 #header, header, .signin, .landing .bg {
@@ -12551,6 +12551,9 @@ Created using IcoMoon - icomoon.io
 
 .text-black {
   color: #000; }
+
+.text-color {
+  color: #717171; }
 
 .text-bg1 {
   color: #f0f0f0; }
