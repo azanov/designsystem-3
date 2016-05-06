@@ -61,9 +61,9 @@
         }
       })
 
-      .state('patterns.tour1', {
-        url: '/tour1',
-        templateUrl: 'modules/patterns/templates/signin-tour1.html',
+      .state('patterns.tour', {
+        url: '/tour',
+        templateUrl: 'modules/patterns/templates/signin-tour.html',
         controller: 'SignInController as tour',
         data: {
           pageTitle: 'Patterns: Tour',
