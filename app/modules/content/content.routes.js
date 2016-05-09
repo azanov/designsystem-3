@@ -24,6 +24,36 @@
         }
       })
 
+      .state('content.voice', {
+        url: '/content/voice',
+        templateUrl: 'modules/content/templates/content-voice.html',
+        data: {
+          pageTitle: 'Content',
+          access: 'public',
+          bodyClass: 'content'
+        }
+      })
+
+      .state('content.style', {
+        url: '/content/style',
+        templateUrl: 'modules/content/templates/content-style.html',
+        data: {
+          pageTitle: 'Content',
+          access: 'public',
+          bodyClass: 'content'
+        }
+      })
+
+      .state('content.legal', {
+        url: '/content/legal',
+        templateUrl: 'modules/content/templates/content-legal.html',
+        data: {
+          pageTitle: 'Content',
+          access: 'public',
+          bodyClass: 'content'
+        }
+      })
+
 
 
       .state('content.emails', {
