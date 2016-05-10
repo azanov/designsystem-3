@@ -11,23 +11,22 @@
     background-image: none !important;
   }
 
-.knob {
+  .knob {
     background-color: $pb-bg2;
     border-color: $input-border;
   }
 
-.switch-left {
+  .switch-left {
     background-color: $pb-blue;
     border-color: $input-border;
   }
 
-.switch-right {
+  .switch-right {
     background-color: $pb-bg2;
     border-color: $input-border;
   }
 
-&.disabled {
-    opacity: 0.55;
+  &.disabled {
+    opacity: .55;
   }
-
 }

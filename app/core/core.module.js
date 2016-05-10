@@ -32,6 +32,7 @@
     'ngTagsInput',
     'slickCarousel',
     'ngFileUpload',
-    angularDragula(angular)
+    angularDragula(angular),
+    'pb.ds.components'
   ]);
 })();

@@ -16,32 +16,45 @@
 
       .state('content.overview', {
         url: '/content/overview',
-        abstract: true,
-        templateUrl: 'modules/content/templates/content-page.html'
-      })
-
-      .state('content.overview.page', {
-        url: '',
-        views: {
-          overview: {
-            templateUrl: 'modules/content/templates/content-overview.html'
-          },
-          voice: {
-            templateUrl: 'modules/content/templates/content-voice.html'
-          },
-          style: {
-            templateUrl: 'modules/content/templates/content-style.html'
-          },
-          terminology: {
-            templateUrl: 'modules/content/templates/content-terminology.html'
-          }
-        },
+        templateUrl: 'modules/content/templates/content-overview.html',
         data: {
           pageTitle: 'Content',
           access: 'public',
           bodyClass: 'content'
         }
       })
+
+      .state('content.voice', {
+        url: '/content/voice',
+        templateUrl: 'modules/content/templates/content-voice.html',
+        data: {
+          pageTitle: 'Content',
+          access: 'public',
+          bodyClass: 'content'
+        }
+      })
+
+      .state('content.style', {
+        url: '/content/style',
+        templateUrl: 'modules/content/templates/content-style.html',
+        data: {
+          pageTitle: 'Content',
+          access: 'public',
+          bodyClass: 'content'
+        }
+      })
+
+      .state('content.legal', {
+        url: '/content/legal',
+        templateUrl: 'modules/content/templates/content-legal.html',
+        data: {
+          pageTitle: 'Content',
+          access: 'public',
+          bodyClass: 'content'
+        }
+      })
+
+
 
       .state('content.emails', {
         url: '/content/emails',
