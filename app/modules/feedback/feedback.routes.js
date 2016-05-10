@@ -8,7 +8,7 @@
       templateUrl: 'modules/feedback/templates/feedback.html',
       controller: 'FeedbackController as feedback',
       data: {
-        pageTitle: 'feedback',
+        pageTitle: 'User Feedback',
         access: 'public',
         bodyClass: 'feedback'
       }

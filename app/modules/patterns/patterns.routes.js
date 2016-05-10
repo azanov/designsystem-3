@@ -137,6 +137,39 @@
         }
       })
 
+      // this is the Forgot Password - Email Question
+      .state('patterns.forgotpassword', {
+        url: '/forgotpassword',
+        templateUrl: 'modules/patterns/templates/forgot-password-email.html',
+        controller: 'SignInController as signin',
+        data: {
+          pageTitle: 'Patterns: Forgot Password Email',
+          bodyClass: 'fullscreen signin'
+        }
+      })
+
+      // this is the Forgot Password: Security Question, Reset by Question, Return to Sign In
+      .state('patterns.forgotpassword-question', {
+        url: '/forgotpassword-question',
+        templateUrl: 'modules/patterns/templates/forgot-password-question.html',
+        controller: 'SignInController as signin',
+        data: {
+          pageTitle: 'Patterns: Forgot Password: Question',
+          bodyClass: 'fullscreen signin'
+        }
+      })
+
+      // this is the Forgot Password: Security Question, Answer Does Not Match
+      .state('patterns.forgotpassword-error', {
+        url: '/forgotpassword-error',
+        templateUrl: 'modules/patterns/templates/forgot-password-error.html',
+        controller: 'SignInController as signin',
+        data: {
+          pageTitle: 'Patterns: Forgot Password: Error',
+          bodyClass: 'fullscreen signin'
+        }
+      })
+
       // this is the Forgot Password - Email sent feedback
       .state('patterns.emailsent', {
         url: '/emailsent',
@@ -293,13 +326,7 @@
 
       .state('patterns.forms', {
         url: '/forms',
-        templateUrl: 'modules/patterns/templates/forms-containers.html'
-      })
-
-      .state('patterns.forgotpassword', {
-        url: '/patterns/forgotpassword',
-        templateUrl: 'modules/patterns/templates/forgot-password.html',
-        controller: 'ForgotPasswordController as forgot'
+        templateUrl: 'modules/patterns/templates/form-elements.html'
       })
 
       .state('patterns.registration', {

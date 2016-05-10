@@ -22,7 +22,10 @@
 
       .state('elements.buttons', {
         url: '/buttons',
-        templateUrl: 'modules/elements/templates/elements-buttons.html'
+        templateUrl: 'modules/elements/templates/elements-buttons.html',
+        data: {
+          pageTitle: 'Buttons'
+        }
       })
 
       .state('elements.containers', {
@@ -73,6 +76,9 @@
           widgets: {
             templateUrl: 'modules/elements/templates/elements-widgets.html'
           }
+        },
+        data: {
+          pageTitle: 'Containers'
         }
       })
 
@@ -106,13 +112,28 @@
               filename: 'countries'
             });
           }
+        },
+        data: {
+          pageTitle: 'UI Controls'
+        }
+      })
+
+      .state('elements.uibootstrap', {
+        url: '/uibootstrap',
+        templateUrl: 'modules/elements/templates/uibootstrap.html',
+        controller: 'UiBootstrapController as uibs',
+        data: {
+          pageTitle: 'UI Bootstrap Directives'
         }
       })
 
       .state('elements.popovers', {
         url: '/popovers',
         templateUrl: 'modules/elements/templates/elements-modals-popovers.html',
-        controller: 'BootstrapUiPopoverController as pop'
+        controller: 'BootstrapUiPopoverController as pop',
+        data: {
+          pageTitle: 'Modals and Popovers'
+        }
       })
 
       .state('elements.progress', {

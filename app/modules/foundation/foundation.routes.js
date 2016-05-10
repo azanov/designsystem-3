@@ -41,6 +41,15 @@
         }
       })
 
+      .state('foundation.directives', {
+        url: '/directives',
+        templateUrl: 'modules/foundation/templates/foundation-directives.html',
+        controller: 'DirectiveController as dirCtrl',
+        data: {
+          pageTitle: 'Foundation - Directives'
+        }
+      })
+
       .state('foundation.nucleo-mini', {
         url: '/nucleo-mini',
         templateUrl: 'modules/foundation/templates/foundation-nucleo-mini.html',

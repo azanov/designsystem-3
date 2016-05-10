@@ -60,7 +60,7 @@
     <div class="col-sm-6">
       <figure>
         <figcaption>Panel with Table</figcaption>
-        <div class="panel panel-filled-heading">
+        <div class="panel">
           <div class="panel-heading">
             Panel Heading
           </div>
@@ -188,7 +188,10 @@
             <div class="col-xs-4 first-column">
               <div class="panel panel-default">
                 <div class="list-group">
-                  <a class="list-group-item" href="" ng-class="{active: $index === panels.millercolumn.dataSelected}" ng-click="panels.getSublevel1($index)" ng-repeat="topLevel in panels.millercolumn.data.versionInfos">
+                  <a class="list-group-item" href=""
+                    ng-class="{active: $index === panels.millercolumn.dataSelected}"
+                    ng-click="panels.getSublevel1(topLevel, $index)"
+                    ng-repeat="topLevel in ::panels.millercolumn.data.versionInfos track by $index">
                     {{::topLevel.name}}
                     <i class="pull-right fa fa-angle-right fa-lg"></i>
                   </a>
@@ -199,9 +202,13 @@
         <!-- level1 -->
             <div class="col-xs-3 inner-column">
               <div class="panel panel-default">
+
                 <div class="list-group">
-                  <a class="list-group-item" href="" ng-class="{active: $index === panels.millercolumn.level1Selected && level1.versionInfos.length > 0}" ng-click="panels.getSublevel2($index)" ng-repeat="level1 in panels.millercolumn.level1">
-                    {{::level1.name}}
+                  <a class="list-group-item" href=""
+                    ng-class="{active: $index === panels.millercolumn.level1Selected }"
+                    ng-click="panels.getSublevel2($index)"
+                    ng-repeat="level1 in panels.millercolumn.level1 track by $index">
+                    {{level1.name}}
                     <i class="pull-right fa fa-fw fa-angle-right fa-lg"></i>
                     <span class="badge">{{::level1.versionInfos.length}}</span>
                   </a>
