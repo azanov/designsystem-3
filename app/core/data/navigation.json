@@ -47,7 +47,7 @@
           "value": "",
           "toggle": "dropdown",
           "children": [{
-            "label": "Buttons",
+            "label": "Buttons and Links",
             "value": "elements.buttons"
           }, {
             "label": "Charts",

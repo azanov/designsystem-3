@@ -180,13 +180,21 @@ a i.nc-icon-mini {
   background-color: transparent;
   border-color: transparent;
 
-  &:hover, &.hover, &:focus, &.focus, &:active, &.active, .open > &.dropdown-toggle {
+  &:hover, &.hover,  &:active, &.active, .open > &.dropdown-toggle {
     color: $pb-blue;
     background-color: #d9dced;
     border-color: #d9dced;
+    text-decoration: underline;
   }
   &:active, &.active, .open > &.dropdown-toggle {
     background-image: none;
+  }
+  &:focus, &.focus {
+    color: $pb-blue-700;
+    background-color: #fff;
+    @include focus-ring;
+    outline: none !important;
+    text-decoration: underline;
   }
   &.disabled, &[disabled], fieldset[disabled] & {
     &, &:hover, &.hover, &:focus, &.focus, &:active, &.active {
@@ -214,7 +222,10 @@ a i.nc-icon-mini {
   border-radius: 40px !important;
   padding: $padding-base-vertical $padding-large-horizontal;
   box-shadow: none !important;
-  
+  &:focus, &.focus {
+    border-color: $pb-cyan;
+  }
+
 }
 
 // BS functional buttons
