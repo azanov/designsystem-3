@@ -45,33 +45,57 @@
 
   <div class="row">
     <div class="col-md-12">
-      <h1 class="doc-sectionhead">States</h1>
+      <h1 class="doc-sectionhead">Button Styles and States</h1>
     </div>
   </div>
 
+<div class="row">
+  <div class="col-md-4">
+    <p>There are 4 button styles, and 4 states of each style. Their style names correspomd to the CSS classes used by Bootstrap.</p>
+    <p>All buttons share the base CSS class <code>.btn</code></p>
+
+
+    <h5>Styles:</h5>
+    <ul class="list-unstyled spaced">
+      <li><code>.btn-primary</code>: The button is intended to be the default action on the screen. There should be only one default button in a group of buttons.</li>
+      <li><code>.btn-default</code>: A normal button.</li>
+      <li><code>.btn-link</code>: When you want an action to be styled like a hyperlink, but need it properly aligned when grouped with the buttons above.</li>
+      <li><code>.btn-pill</code>: A "pill-shaped" button with completely rounded side caps.</li>
+    </ul>
+
+    <h5>States</h5>
+    <ul>
+      <li>Normal</li>
+      <li>Hovered</li>
+      <li>Focused</li>
+      <li>Disabled</li>
+    </ul>
+
+  </div>
+<div class="col-md-8">
   <div class="row">
-    <div class="col-xs-2">
+    <div class="col-xs-3">
       <figure>
         <figcaption>Default</figcaption>
         <button class="btn btn-primary">Primary</button>
       </figure>
     </div>
 
-    <div class="col-xs-2">
+    <div class="col-xs-3">
       <figure>
-        <figcaption>Hover</figcaption>
+        <figcaption>Hovered</figcaption>
         <button class="btn btn-primary hover">Primary</button>
       </figure>
     </div>
 
-    <div class="col-xs-2">
+    <div class="col-xs-3">
       <figure>
-        <figcaption>Focus</figcaption>
+        <figcaption>Focused</figcaption>
         <button class="btn btn-primary focus">Primary</button>
       </figure>
     </div>
 
-    <div class="col-xs-2">
+    <div class="col-xs-3">
       <figure>
         <figcaption>Disabled</figcaption>
         <button class="btn btn-primary" disabled="disabled">Primary</button>
@@ -80,27 +104,27 @@
   </div>
 
   <div class="row spacer-top-lg">
-    <div class="col-xs-2">
+    <div class="col-xs-3">
       <figure>
         <figcaption>Default</figcaption>
         <button class="btn btn-default">Secondary</button>
       </figure>
     </div>
 
-    <div class="col-xs-2">
+    <div class="col-xs-3">
       <figure>
-        <figcaption>Hover</figcaption>
+        <figcaption>Hovered</figcaption>
         <button class="btn btn-default hover">Secondary</button>
       </figure>
     </div>
-    <div class="col-xs-2">
+    <div class="col-xs-3">
       <figure>
-        <figcaption>Focus</figcaption>
+        <figcaption>Focused</figcaption>
         <button class="btn btn-default focus">Secondary</button>
       </figure>
     </div>
 
-    <div class="col-xs-2">
+    <div class="col-xs-3">
       <figure>
         <figcaption>Disabled</figcaption>
         <button class="btn btn-default" disabled="disabled">Secondary</button>
@@ -109,28 +133,28 @@
   </div>
 
   <div class="row spacer-top-lg">
-    <div class="col-xs-2">
+    <div class="col-xs-3">
       <figure>
         <figcaption>Default</figcaption>
         <button class="btn btn-link">Link</button>
       </figure>
     </div>
 
-    <div class="col-xs-2">
+    <div class="col-xs-3">
       <figure>
-        <figcaption>Hover</figcaption>
+        <figcaption>Hovered</figcaption>
         <button class="btn btn-link hover">Link</button>
       </figure>
     </div>
 
-    <div class="col-xs-2">
+    <div class="col-xs-3">
       <figure>
-        <figcaption>Focus</figcaption>
+        <figcaption>Focused</figcaption>
         <button class="btn btn-link focus">Link</button>
       </figure>
     </div>
 
-    <div class="col-xs-2">
+    <div class="col-xs-3">
       <figure>
         <figcaption>Disabled</figcaption>
         <button class="btn btn-link" disabled="disabled">Link</button>
@@ -146,27 +170,27 @@
     </div>
 
       <div class="row">
-          <div class="col-sm-2 spacer-top-xs">
+          <div class="col-xs-3 spacer-top-xs">
             <figure>
               <figcaption>Default</figcaption>
               <button class="btn btn-primary btn-pill">Pill Buttons</button>
             </figure>
           </div>
 
-          <div class="col-sm-2 spacer-top-xs">
+          <div class="col-xs-3 spacer-top-xs">
             <figure>
-              <figcaption>Hover</figcaption>
+              <figcaption>Hovered</figcaption>
               <button class="btn btn-primary btn-pill hover">Pill Buttons</button>
             </figure>
           </div>
-          <div class="col-sm-2 spacer-top-xs">
+          <div class="col-xs-3 spacer-top-xs">
             <figure>
-              <figcaption>Hover</figcaption>
+              <figcaption>Focused</figcaption>
               <button class="btn btn-primary btn-pill focus">Pill Buttons</button>
             </figure>
           </div>
 
-          <div class="col-sm-2 spacer-top-xs">
+          <div class="col-xs-3 spacer-top-xs">
             <figure>
               <figcaption>Disabled</figcaption>
               <button class="btn btn-primary btn-pill " disabled="disabled">Pill Buttons</button>
@@ -175,35 +199,36 @@
       </div>
 
     <div class="row">
-        <div class="col-sm-2 spacer-top-xs">
+        <div class="col-xs-3 spacer-top-xs">
           <figure>
             <figcaption>Default</figcaption>
             <button class="btn btn-default btn-pill ">Pill Buttons</button>
           </figure>
         </div>
 
-        <div class="col-sm-2 spacer-top-xs">
+        <div class="col-xs-3 spacer-top-xs">
           <figure>
-            <figcaption>Hover</figcaption>
+            <figcaption>Hovered</figcaption>
             <button class="btn btn-default btn-pill  hover">Pill Buttons</button>
           </figure>
         </div>
 
-        <div class="col-sm-2 spacer-top-xs">
+        <div class="col-xs-3 spacer-top-xs">
           <figure>
-            <figcaption>Focus</figcaption>
+            <figcaption>Focused</figcaption>
             <button class="btn btn-default btn-pill focus">Pill Buttons</button>
           </figure>
         </div>
 
-        <div class="col-sm-2 spacer-top-xs">
+        <div class="col-xs-3 spacer-top-xs">
           <figure>
             <figcaption>Disabled</figcaption>
             <button class="btn btn-default btn-pill " disabled="disabled">Pill Buttons</button>
           </figure>
         </div>
     </div>
-
+  </div>
+</div>
 
 
 <!-- button sizes -->
@@ -967,7 +992,7 @@
 
     <div class="col-sm-3">
       <figure>
-        <figcaption>Hover</figcaption>
+        <figcaption>Hovered</figcaption>
         <button type="button" name="button" class="btn btn-default tile-button hover"><img src="assets/images/logo-usps.png" alt="" /></button>
       </figure>
     </div>
