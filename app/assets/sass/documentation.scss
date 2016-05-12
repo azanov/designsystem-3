@@ -914,3 +914,51 @@ ul.icon-grid {
     margin-left: -8px;
   }
 }
+
+
+table.accessibility .ui-1_simple-remove {
+  color: #DC0000;
+}
+
+table.accessibility .ui-1_check {
+   color: #008500;
+}
+
+table.accessibility tr td:first-child {
+ text-align:left;
+}
+
+table.accessibility tr th:first-child {
+ text-align:left;
+}
+
+table.accessibility tr td, table.accessibility tr th  {
+  vertical-align:middle;
+  text-align:center;
+}
+
+
+.table-top tr td:first-child {
+ width:40%;
+}
+
+.table-top tr td, .table-top tr, table.table-top  {
+  border:none !important;
+  font-size:10px;
+  margin:0;
+  padding:0;
+}
+
+table.borderless tr td, table.borderless tr, table.borderless  {
+ border:none !important;
+}
+
+table.borderless tr td  {
+ padding:10px 15px;
+}
+
+.acc-table-title {
+  color:#CF0989;
+  font-size:12px;
+  padding-bottom: 10px;
+}
