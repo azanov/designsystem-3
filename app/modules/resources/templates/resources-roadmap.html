@@ -1,25 +1,3 @@
-<style>
-.table .table-details > td {
-background-image: none !important;
-}
-
-.pl-c{color:#969896}
-.pl-c1,.pl-s .pl-v{color:#0086b3}
-.pl-e,.pl-en{color:#795da3}
-.pl-s .pl-s1,.pl-smi{color:#333}
-.pl-ent{color:#63a35c}
-.pl-k{color:#a71d5d}
-.pl-pds,.pl-s,.pl-s .pl-pse .pl-s1,.pl-sr,.pl-sr .pl-cce,.pl-sr .pl-sra,.pl-sr .pl-sre{color:#183691}
-.pl-v{color:#ed6a43}.pl-id{color:#b52a1d}
-.pl-ii{background-color:#b52a1d;color:#f8f8f8}
-.pl-sr .pl-cce{color:#63a35c;font-weight:bold}
-.pl-ml{color:#693a17}.pl-mh,.pl-mh .pl-en,.pl-ms{color:#1d3e81;font-weight:bold}
-.pl-mq{color:#008080}.pl-mi{color:#333;font-style:italic}.pl-mb{color:#333;font-weight:bold}
-.pl-md{background-color:#ffecec;color:#bd2c00}.pl-mi1{background-color:#eaffea;color:#55a532}
-.pl-mdr{color:#795da3;font-weight:bold}.pl-mo{color:#1d3e81}
-
-</style>
-
 <div class="doc-hero">
   <div class="container">
     <div class="row">
@@ -38,7 +16,7 @@ background-image: none !important;
 <div class="container">
   <div class="row spacer-top-xl">
     <div class="col-md-8">
-        <table class="table">
+        <table class="table roadmap">
             <thead>
               <tr>
                 <th>Feature</th>
@@ -155,12 +133,9 @@ background-image: none !important;
 
             </tbody>
             </table>
+<h2 id="web" class="">Release Notes</h2>
 
-
-
-      <h2 id="web" class="">Release Notes</h2>
-
-            <table class="table">
+            <table class="table roadmap">
             <thead>
               <tr>
                 <th style="width:6%"></th>
@@ -170,7 +145,129 @@ background-image: none !important;
 
               </tr>
             </thead>
-            <tbody>
+          <tbody>
+              
+                  <tr>
+                <td>
+                  <a href="" class="table-row-toggle" ng-init="tables.v271 = false" ng-click="tables.v271 = !tables.v271">
+                    <i class="nc-icon-mini lg fw arrows-2_small-right transition-all" ng-class="{'rotate-90': tables.v271}" style=""></i>
+                  </a>
+                </td>
+                <td>v2.7.1 Release Notes</td>
+                <td>v2.7.1</td>
+                <td>May 4, 2016</td>
+
+              </tr>
+              
+                <tr class="table-details">
+                <td colspan="7">
+                  <div uib-collapse="!tables.v271" class="in collapse" aria-expanded="true" aria-hidden="false" style="height: auto;">
+                  <div class="table-details-content">
+
+                    <table class="table no-margin-bottom">
+                      <tbody>
+                        <tr>
+                          <td style="padding:15px;">
+                              <ul>
+<li>Added actual FontAwesome font files and their related CSS for projects that cannot utilize a CDN.  No code changes are required on your part to utilize this change. You will need to copy the font files into your "fonts" folder to use them, or simply use the <a href="https://github.com/PBGUX/bower-designsystem">Bower package of the Design System</a> which includes these automatically. You can also continue to use the FontAwesome CDN if you prefer. Thanks to Rick Dukeshier for raising this issue.</li>
+<li>May the Fourth be with you!</li>
+</ul>
+                              
+                            </td></tr></tbody></table></div></div></td></tr>
+                <tr>
+                <td>
+                  <a href="" class="table-row-toggle" ng-init="tables.v270 = false" ng-click="tables.v270 = !tables.v270">
+                    <i class="nc-icon-mini lg fw arrows-2_small-right transition-all" ng-class="{'rotate-90': tables.v270}" style=""></i>
+                  </a>
+                </td>
+                <td>v2.7.0 Release Notes</td>
+                <td>v2.7.0</td>
+                <td>April 30, 2016</td>
+
+              </tr>
+              
+              
+              <tr class="table-details">
+                <td colspan="7">
+                  <div uib-collapse="!tables.v270" class="in collapse" aria-expanded="true" aria-hidden="false" style="height: auto;">
+                  <div class="table-details-content">
+
+                    <table class="table no-margin-bottom">
+                      <tbody>
+                        <tr>
+                          <td style="padding:15px;">
+                              
+                              
+<p><strong>BREAKING CHANGES</strong></p>
+
+<ul>
+<li><p>Notifications (<a href="http://guxstaging.pbi.global.pvt/design_system/#/feedback">Alerts and Toastrs</a>) have been updated and standardized. To use them, note that the icons are now background SVGs embedded in the CSS; you will need to <strong>remove</strong> icons that you added in the alerts themselves such as <code>&lt;i class="someicon"&gt;&lt;/i&gt;</code>.</p>
+
+<p><a href="/PBGUX/designsystem/blob/master/img/alert-ss.jpg" target="_blank"><img src="https://raw.githubusercontent.com/PBGUX/designsystem/master/img/alert-ss.jpg" alt="alert-ss" style="max-width:100%;"></a></p></li>
+<li>The <code>container-fluid</code> style has been reset to use Bootstrap standard padding of 15px on each side. This means content  inside a container-fluid will appear slightly wider. This was done since the additional padding we were using caused issues with the responsive nav bar.</li>
+</ul>
+
+<p><strong>NON-BREAKING CHANGES</strong></p>
+
+<ul>
+<li><p>Added custom directives for Design System checkboxes and radio buttons.  Full details and instructions are at the new <a href="http://guxstaging.pbi.global.pvt/design_system/#/foundation/directives">Angular Directives</a> page. We will be adding more directives in the coming months, both from the team and from third parties.</p></li>
+<li><p>Icons on <a href="http://guxstaging.pbi.global.pvt/design_system/#/patterns/errorpages">Error Pages</a> have been updated, and are now SVG files.</p></li>
+<li><p>Updated table header sort and help icons.  See <a href="http://guxstaging.pbi.global.pvt/design_system/#/tables/datatable">Elements &gt; Tables</a>
+<a href="/PBGUX/designsystem/blob/master/img/table-headers.jpg" target="_blank"><img src="https://raw.githubusercontent.com/PBGUX/designsystem/master/img/table-headers.jpg" alt="table-headers" style="max-width:100%;"></a></p></li>
+</ul>
+
+<h4>Site Changes</h4>
+
+<ul>
+<li>Added examples of <a href="http://guxstaging.pbi.global.pvt/design_system/#/patterns/signinup">Sign Up/Forgot Password</a> pages with a security question.</li>
+<li>Fixed several display issues reported on Github.</li>
+<li>Updated Font Awesome to Nucleo conversion PDF on <a href="http://guxstaging.pbi.global.pvt/design_system/#/foundation/iconography">Foundation &gt; Iconograpy</a>.</li>
+</ul>
+
+<h4>Updated Libraries</h4>
+
+<ul>
+<li>angular-bootstrap 1.3.1</li>
+<li>angular-dragula 1.2.4</li>
+<li>angular-translate 2.11.0</li>
+<li>angular-translate-loader-partial 2.11.0</li>
+<li>angular-translate-storage-cookie 2.11.0</li>
+<li>angular-translate-storage-local 2.11.0</li>
+<li>angular-ui-select 0.16.1</li>
+<li>datatables.net 1.10.11</li>
+<li>datatables.net-bs 1.10.11</li>
+<li>datatables.net-buttons 1.1.2</li>
+<li>eslint 2.7.0</li>
+<li>eslint-config-angular 0.5.0</li>
+<li>eslint-config-semistandard 6.0.1</li>
+<li>eslint-config-standard 5.1.0</li>
+<li>eslint-plugin-angular 1.0.0</li>
+<li>eslint-plugin-promise 1.1.0</li>
+<li>eslint-plugin-standard 1.3.2</li>
+<li>ng-file-upload 12.0.4</li>
+<li>stylelint 6.2.0</li>
+<li>stylelint-config-standard 6.0.0</li>
+</ul>
+
+<h4>Thanks to the following contributors and bug reporters:</h4>
+
+<p>Cameron Chu, Dave Fondacaro, Rick Cole, Rick Dukeshire, Steve Evermore</p>
+
+                              
+                              
+                              
+                            </td></tr></tbody></table></div></div></td></tr>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
 
               <tr>
                 <td>
@@ -229,7 +326,7 @@ background-image: none !important;
 </div>
     </div>
     
-    <br/>
+     <br/>
 
 <p>&nbsp;
 Before, toward bottom of page:</p>
@@ -250,6 +347,7 @@ Before, toward bottom of page:</p>
 </ div>
 </div>
      <br/>
+     <br/>
 <li><p>In response to Github <a href="https://github.com/PBGUX/designsystem/issues/87">issue #87</a>, the utility menu items (the header right-side menus) have been made responsive on mobile devices using the default Bootstrap mobile menu. Some minor code adjustments to the header will need to be made to enable this, please see the sample file linked from <a href="http://guxstaging.pbi.global.pvt/design_system/#/patterns/headersfooters">Web &gt; Patterns &gt; Headers &amp; Footers</a>.</p></li>
 <li><p>The icon font Font Awesome has been deprecated.  We now include a new icon font, Nucleo, whose icon style fits better with PB branding. For icons less than 24 pixels in size, such as inline icons and buttons, use <em>Nucleo Mini</em> and for icons 24 pixels or larger, use <em>Nucleo Outline</em>.</p>
 
@@ -261,6 +359,7 @@ Before, toward bottom of page:</p>
 <li><p>Icons in links now have padding to the right, so you should not use a space after the icon.  This is because the space character would get underlined.</p>
 
 <p>So, instead of</p>
+    
 
 <p><code>&lt;a href=""&gt;&lt;i class="someicon"&gt;&lt;/i&gt; Click me&lt;/a&gt;</code></p>
 
@@ -277,7 +376,8 @@ Before, toward bottom of page:</p>
 <li>In response to Github <a href="https://github.com/PBGUX/designsystem/issues/73">issue #73</a>, made the calendar icon next to the date pickers into a button which pops open the datepicker, see <a href="http://guxstaging.pbi.global.pvt/design_system/#/uicontrols#datepickers">Web &gt; Elements &gt; UI Controls</a></li>
 <li><p>Added installation via <code>npm</code>:</p>
 
-<div class="highlight highlight-source-shell"><pre>npm install pb-design-system</pre></div></li>
+<div class="preview-code" hljs language="html">
+npm install pb-design-system</div></li>
 </ul>
 
 <h4>Site Changes</h4>
@@ -291,28 +391,66 @@ Before, toward bottom of page:</p>
 <li>Added a Faceted Search sample, <a href="http://guxstaging.pbi.global.pvt/design_system/#/tables/datatable#faceted-search">Web &gt; Elements &gt; Tables</a></li>
 <li>All images in Web section with gradients now correctly show the 2-color gradient</li>
 </ul>
+              
 
-<h4>Updated Libraries</h4>
-
-<p>For version numbers, please see <code>bower.json</code> and <code>package.json</code></p>
+<p><strong>BREAKING CHANGES</strong></p>
 
 <ul>
-<li>angular-chart</li>
-<li>angular-datatables</li>
-<li>angular-moment</li>
-<li>angular-rangeslider</li>
-<li>angular-xeditable</li>
-<li>angular-translate</li>
-<li>highlightjs</li>
-<li>jquery</li>
-<li>ngInfiniteScroll</li>
-<li>angular-ui-select</li>
+<li>None.</li>
+</ul>
+              
+
+<p><strong>Non-breaking Changes</strong></p>
+
+<ul>
+<li>fixed enhanced checkboxes misaligned in <code>.form-horizontal</code>. Our <em>first pull request</em> by Nisha Rana (closes <a href="https://github.com/PBGUX/designsystem/issues/62">#62</a>).</li>
+<li>fixed Web &gt; Foundation &gt; Split Views margin space above footer, vertical spacing and double lines showing on last 2 examples. Note that Split Views are desktop only.</li>
+<li>changed linear gradients from CSS "background" to "background-image", old way worked but was technically incorrect</li>
+</ul>
+
+<p><strong>Additions</strong></p>
+
+<ul>
+<li>added items in Web &gt; Elements &gt; Containers that previously were images, have been converted to live code
+
+<ul>
+<li>Gallery</li>
+<li>Cards</li>
+<li>Widgets: Data Styles</li>
+<li>Widgets: Category Styles</li>
+</ul></li>
+<li>added animated SVG "spinner" in Web &gt; Elements &gt; User Feedback &gt; Process Indicators</li>
+</ul>
+
+<h4>Website Changes</h4>
+
+<ul>
+<li>fixed incorrect color values in the Web &gt; Foundation &gt; Typography &gt; Navigation table.</li>
+<li>added <a href="https://github.com/PBGUX/designsystem/wiki">FAQ section</a> to Github and link on homepage.</li>
+<li>Web &gt; Elements &gt; User Feedback &gt; Process Indicators:
+
+<ul>
+<li>updated and copy has been revised and expanded</li>
+<li>changed progress spinner buttons to correctly retain "normal" appearance whilst "waiting" although the button is actually disabled during this time. (they used to appear "disabled")</li>
+</ul></li>
+<li>added descriptive copy to the Web &gt; Foundation &gt; Grid</li>
+<li>removed alert type "tip" from Web &gt; Elements &gt; User Feedback due to Globalization requirements, use Note or Help examples as an alternative</li>
+<li>updated libraries:
+
+<ul>
+<li>angular-loading-bar v0.8.0</li>
+</ul></li>
+</ul>
+
+<h4>Other Tools</h4>
+
+<ul>
+<li>updated Sketch and Illustrator UI Kits to 2.4.0, see Resources &gt; Tools</li>
 </ul>
 
 <h4>Thanks to the following contributors and bug reporters:</h4>
 
-<p>Andy Grossman, Ania Mastriano, Candice Russell, Colin Brunger, Jim Norris, Joan Doutney, Rajeev Verma, Rick Dukeshier, Ron Cianfaglione, Shawn Sharifi</p>
-
+<p>Globalization Team, Joan Doutney, Nick Roberts, Nisha Rana, Jayachandra Madarapu, Sam Swartz, Adam Czarnik, Andy Grossman, Cassie Gunn, Jim Norris</p>
 
                           </td>
                         </tr>
@@ -322,7 +460,10 @@ Before, toward bottom of page:</p>
                   </div>
               </td>
               </tr>
-                <tr>
+
+
+
+   <tr>
                 <td>
                   <a href="" class="table-row-toggle" ng-init="tables.v250 = false" ng-click="tables.v250 = !tables.v250">
                     <i class="nc-icon-mini lg fw arrows-2_small-right transition-all" ng-class="{'rotate-90': tables.v250}" style=""></i>
@@ -345,8 +486,7 @@ Before, toward bottom of page:</p>
                           <td style="padding:15px;">
 
 <p><strong>BREAKING CHANGES</strong></p>
-
-<ul>
+  <ul>                            
 <li>the footer template has been updated to use the new "Branded Footer with Copyright" version on the <a href="http://guxstaging.pbi.global.pvt/design_system/#/patterns/headersfooters">Headers and Footers page</a>. It is also now updated for proper display on phones. There are updated alfternate header and footer designs there as well.</li>
 <li>all "busy" spinners have been synchroized to use the Font Awesome "slotted circle".  This includes progress buttons and spinners, See <a href="http://guxstaging.pbi.global.pvt/design_system/#/feedback#process">Web &gt; User Feedback</a> for samples. This requires you to use the updates directive at <code>app/core/directives/pb-button-progress.directive.js</code> if you use one of these buttons. The code below will add the correct spinner to the <a href="http://chieffancypants.github.io/angular-loading-bar/">angular-loading-bar</a> via the spinnerTemplate:
 <code>javascript
@@ -355,35 +495,13 @@ angular.module('app')
   cfpLoadingBarProvider.spinnerTemplate = '&lt;div id="loading-bar-spinner"&gt;&lt;i class="fa fa-circle-o-notch fa-spin spinner"&gt;&lt;/i&gt;&lt;/div&gt;';
 });
 </code></li>
-<li><p>The signin pages and its children have been updated with a new layout, approved footer/copyright line (you will need to add the correct links to your privacy policy and T&amp;C) and new HTML structure, below. See <a href="http://guxstaging.pbi.global.pvt/design_system/#/patterns/signinup">Web &gt; Patterns &gt; Sign In &amp; Sign Up</a></p>
-
-
-
-    <div class="preview-code" hljs language="html">
-
-    <body class="site fullscreen signin">
-  <div class="signin-wrapper">
-
-    <div class="signin-body">
-      <a class="signin-pb-logo" href="http://www.pb.com"></a>
-
-      <div class="signin-box">
-        <h1 class="signin-heading">Product Name<sup>™</sup></h1>
-        <h5 class="signin-subheading">Product tag line</h5>
-        <!-- your sign in content here -->
-      </div>
-    </div>
-
-    <div class="signin-footer">
-      Pitney Bowes Inc. the Corporate Logo and Product Name<sup>™</sup> are trademarks of Pitney Bowes Inc. or a subsidiary. All other marks are the intellectual property of their respective owners. <a href="">Privacy</a>&nbsp;|&nbsp;<a href="">Terms and Conditions</a>&nbsp;<a>© 2016 Pitney Bowes Inc. All rights reserved.</a>
-    </div>
-  </div>
-</body>
-    </div>
-
+                              
+                              <li><p>The signin pages and its children have been updated with a new layout, approved footer/copyright line (you will need to add the correct links to your privacy policy and T&amp;C) and new HTML structure, below. See <a href="http://guxstaging.pbi.global.pvt/design_system/#/patterns/signinup">Web &gt; Patterns &gt; Sign In &amp; Sign Up</a></p>
     
 </li>
-</ul>
+
+                              
+     </ul>
 
 <p><strong>Non-breaking Changes</strong></p>
 
@@ -545,8 +663,15 @@ angular.module('app')
                   </div>
                   </div>
               </td>
-              </tr>
-
+              </tr>                         
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
 
                 <tr>
                 <td>
@@ -574,37 +699,42 @@ angular.module('app')
 <ul>
 <li><p>footer html structure has been simplified and now correctly supports mobile view. Please see the following structure and examples on the Web &gt; Headers and Footers</p>
 
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>footer-wrapper<span class="pl-pds">"</span></span>&gt;
-&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>container<span class="pl-pds">"</span></span>&gt;
-  &lt;<span class="pl-ent">footer</span>&gt;
+<div class="preview-code" hljs language="html">
+    
+<div class="footer-wrapper">
+<div class="container">
+  <footer>
 
-  &lt;<span class="pl-ent">div</span>&gt;
-    &lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.pb.com<span class="pl-pds">"</span></span>&gt;&lt;<span class="pl-ent">i</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>pb-footer-logo gradient<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">i</span>&gt;&lt;/<span class="pl-ent">a</span>&gt;&lt;<br><span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>copyright<span class="pl-pds">"</span></span>&gt;© 2015 Pitney Bowes Inc. All rights reserved.&lt;/<span class="pl-ent">span</span>&gt;
-  &lt;/<span class="pl-ent">div</span>&gt;
+  <div>
+    <a href="http://www.pb.com"><i class="pb-footer-logo gradient"></i></a><span class="copyright">© 2015 Pitney Bowes Inc. All rights reserved.</span>
+  </div>
 
-  <span class="pl-c">&lt;!-- Legal --&gt;</span>
-  &lt;<span class="pl-ent">div</span>&gt;
-    &lt;<span class="pl-ent">ul</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>list-unstyled list-inline legal<span class="pl-pds">"</span></span>&gt;
-      &lt;<span class="pl-ent">li</span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span> <span class="pl-e">target</span>=<span class="pl-s"><span class="pl-pds">"</span>_blank<span class="pl-pds">"</span></span>&gt;Terms and Conditions&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
-      &lt;<span class="pl-ent">li</span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span> <span class="pl-e">target</span>=<span class="pl-s"><span class="pl-pds">"</span>_blank<span class="pl-pds">"</span></span>&gt;Privacy Policy&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
-      &lt;<span class="pl-ent">li</span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span> <span class="pl-e">target</span>=<span class="pl-s"><span class="pl-pds">"</span>_blank<span class="pl-pds">"</span></span>&gt;Link&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
-      &lt;<span class="pl-ent">li</span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span> <span class="pl-e">target</span>=<span class="pl-s"><span class="pl-pds">"</span>_blank<span class="pl-pds">"</span></span>&gt;Link&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
-    &lt;/<span class="pl-ent">ul</span>&gt;
-  &lt;/<span class="pl-ent">div</span>&gt;
+  <!-- Legal -->
+  <div>
+    <ul class="list-unstyled list-inline legal">
+      <li><a href="" target="_blank">Terms and Conditions</a></li>
+      <li><a href="" target="_blank">Privacy Policy</a></li>
+      <li><a href="" target="_blank">Link</a></li>
+      <li><a href="" target="_blank">Link</a></li>
+    </ul>
+  </div>
 
-  <span class="pl-c">&lt;!-- Social --&gt;</span>
-  &lt;<span class="pl-ent">div</span>&gt;
-    &lt;<span class="pl-ent">ul</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>list-unstyled list-inline social<span class="pl-pds">"</span></span>&gt;
-      &lt;<span class="pl-ent">li</span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>twitter<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://twitter.com/pitneybowes<span class="pl-pds">"</span></span> <span class="pl-e"><br>target</span>=<span class="pl-s"><span class="pl-pds">"</span>_blank<span class="pl-pds">"</span></span>&gt;&lt;<span class="pl-ent">svg</span>&gt;...&lt;/<span class="pl-ent">svg</span>&gt;&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
-      &lt;<span class="pl-ent">li</span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>facebook<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.facebook.com/pitneybowes<span class="pl-pds">"</span></span> <span class="pl-e"><br>target</span>=<span class="pl-s"><span class="pl-pds">"</span>_blank<span class="pl-pds">"</span></span>&gt;&lt;<span class="pl-ent">svg</span>&gt;...&lt;/<span class="pl-ent">svg</span>&gt;&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
-      &lt;<span class="pl-ent">li</span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>linkedin<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.linkedin.com/company/pitney-bowes<span class="pl-pds">"</span></span> <span class="pl-e"><br>target</span>=<span class="pl-s"><span class="pl-pds">"</span>_blank<span class="pl-pds">"</span></span>&gt;&lt;<span class="pl-ent">svg</span>&gt;...&lt;/<span class="pl-ent">svg</span>&gt;&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
-      &lt;<span class="pl-ent">li</span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>google-plus<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.youtube.com/user/PitneyBowesInc<span class="pl-pds">"</span></span> <span class="pl-e"><br>target</span>=<span class="pl-s"><span class="pl-pds">"</span>_blank<span class="pl-pds">"</span></span>&gt;&lt;<span class="pl-ent">svg</span>&gt;...&lt;/<span class="pl-ent">svg</span>&gt;&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
-    &lt;/<span class="pl-ent">ul</span>&gt;
-  &lt;/<span class="pl-ent">div</span>&gt;
+  <!-- Social -->
+  <div>
+    <ul class="list-unstyled list-inline social">
+      <li><a class="twitter" href="https://twitter.com/pitneybowes" target="_blank"><svg>...</svg></a></li>
+      <li><a class="facebook" href="http://www.facebook.com/pitneybowes" target="_blank"><svg>...</svg></a></li>
+      <li><a class="linkedin" href="http://www.linkedin.com/company/pitney-bowes" target="_blank"><svg>...</svg></a></li>
+      <li><a class="google-plus" href="http://www.youtube.com/user/PitneyBowesInc" target="_blank"><svg>...</svg></a></li>
+    </ul>
+  </div>
 
-&lt;/<span class="pl-ent">footer</span>&gt;
-&lt;/<span class="pl-ent">div</span>&gt;
-&lt;/<span class="pl-ent">div</span>&gt;</pre></div></li>
+</footer>
+</div>
+</div>
+
+    </div>
+</li>
 </ul>
 
 <p><strong>Non-breaking changes</strong></p>
@@ -680,8 +810,7 @@ angular.module('app')
                   </div>
               </td>
               </tr>
-
-              <tr>
+       <tr>
                 <td>
                   <a href="" class="table-row-toggle" ng-init="tables.v220 = false" ng-click="tables.v220 = !tables.v220">
                     <i class="nc-icon-mini lg fw arrows-2_small-right transition-all" ng-class="{'rotate-90': tables.v220}" style=""></i>
@@ -719,24 +848,18 @@ angular.module('app')
 
 <p></p></div></li>
 </ul>
+<div class="preview-code" hljs language="html">
+<input type="checkbox">
 
-<pre><code>&lt;input type="checkbox"&gt;
+<span class="control-indicator"></span> Check this custom checkbox
+</div>
 
-&lt;span class="control-indicator"&gt;&lt;/span&gt; Check this custom checkbox
-</code></pre>
+<div class="preview-code" hljs language="html">
+<input type="checkbox" disabled="disabled">
 
-<p></p>
+<span class="control-indicator"></span> But not this custom checkbox
+</div>
 
-<p></p>
-
-<pre><code>&lt;input type="checkbox" disabled="disabled"&gt;
-
-&lt;span class="control-indicator"&gt;&lt;/span&gt; But not this custom checkbox
-</code></pre>
-
-<p></p>
-
-<p></p>
 
 <div>
 Custom checkbox
@@ -790,11 +913,17 @@ Or toggle this other custom radio
 <li><p>added Web &gt; Patterns &gt; Splitviews:  5 design styles with 3 variations</p></li>
 <li><p>added styling to default Bootstrap breadcrumbs in Web &gt; Buttons &gt; Breadcrumbs, example markup:</p>
 
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">ol</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>breadcrumb<span class="pl-pds">"</span></span>&gt;
-&lt;<span class="pl-ent">li</span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>#<span class="pl-pds">"</span></span>&gt;Home&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
-&lt;<span class="pl-ent">li</span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>#<span class="pl-pds">"</span></span>&gt;Library&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
-&lt;<span class="pl-ent">li</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>active<span class="pl-pds">"</span></span>&gt;Data&lt;/<span class="pl-ent">li</span>&gt;
-&lt;/<span class="pl-ent">ol</span>&gt;</pre></div></li>
+
+<div class="preview-code" hljs language="html">
+
+<ol class="breadcrumb">
+<li><a href="#">Home</a></li>
+<li><a href="#">Library</a></li>
+<li class="active">Data</li>
+</ol>
+</div>
+    
+</li>
 </ul>
 
 <h4>Website changes</h4>
@@ -933,10 +1062,16 @@ Or toggle this other custom radio
 <ul>
 <li><p>modal dialogs no longer need an inline close icon in the <code>modal-header</code>, remove the markup from the html indicated by the NO ICON HERE in the example below. The icon is added by the CSS with an SVG image to the button.</p>
 
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>modal-header<span class="pl-pds">"</span></span>&gt;
-&lt;<span class="pl-ent">button</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>button<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>close<span class="pl-pds">"</span></span> <span class="pl-e">ng-click</span>=<span class="pl-s"><span class="pl-pds">"</span>close()<span class="pl-pds">"</span></span>&gt;<span class="pl-c">&lt;!-- NO ICON HERE --<br>&gt;</span>&lt;<span class="pl-ent">span</span> <span class="pl-e">aria-hidden</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">span</span>&gt;&lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>sr-only<span class="pl-pds">"</span></span>&gt;Close&lt;/<span class="pl-ent">span</span>&gt;&lt;/<span class="pl-ent">button</span>&gt;
-&lt;<span class="pl-ent">h4</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>modal-title<span class="pl-pds">"</span></span>&gt;Simple Dialog Box&lt;/<span class="pl-ent">h4</span>&gt;
-&lt;/<span class="pl-ent">div</span>&gt;</pre></div></li>
+<div class="preview-code" hljs language="html">
+
+<div class="modal-header">
+<button type="button" class="close" ng-click="close()"><!-- NO ICON HERE --><span aria-hidden="true"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title">Simple Dialog Box</h4>
+</div>
+
+</div>
+    
+    </li>
 <li><p>added daterange picker examples, revised styling with new hover/selected states</p></li>
 <li><p>revised color values for accessibility</p></li>
 <li><p>updated pb-font to latest version</p></li>
@@ -1017,33 +1152,33 @@ Or toggle this other custom radio
 <li>uses flexbox and does not need Bootstrap classes</li>
 </ul>
 
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">footer</span>&gt;
-    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>footer-wrapper<span class="pl-pds">"</span></span>&gt;
-      &lt;<span class="pl-ent">div</span>  <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>container<span class="pl-pds">"</span></span>&gt;
-          &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>fb-footer<span class="pl-pds">"</span></span>&gt;
-            <span class="pl-c">&lt;!-- Copyright --&gt;</span>
-            &lt;<span class="pl-ent">div</span>&gt;
-              &lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.pb.com<span class="pl-pds">"</span></span>&gt;&lt;<span class="pl-ent">i</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>pb-footer-logo gradient<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">i</span>&gt;&lt;/<span class="pl-ent">a</span>&gt;&lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span><br>copyright<span class="pl-pds">"</span></span>&gt;<span class="pl-c1">&amp;copy;</span> 2015 Pitney Bowes Inc. All rights reserved.&lt;/<span class="pl-ent">span</span>&gt;
-            &lt;/<span class="pl-ent">div</span>&gt;
+<div class="preview-code" hljs language="html">
+<footer>
+    <div class="footer-wrapper">
+      <div  class="container">
+          <div class="fb-footer">
+            <!-- Copyright -->
+            <div>
+              <a href="http://www.pb.com"><i class="pb-footer-logo gradient"></i></a><span class="copyright">&copy; 2015 Pitney Bowes Inc. All rights reserved.</span>
+            </div>
 
-            <span class="pl-c">&lt;!-- Legal --&gt;</span>
-            &lt;<span class="pl-ent">div</span>&gt;
-              &lt;<span class="pl-ent">ul</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>list-unstyled list-inline legal<span class="pl-pds">"</span></span>&gt;
-                &lt;<span class="pl-ent">li</span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span> <span class="pl-e">target</span>=<span class="pl-s"><span class="pl-pds">"</span>_blank<span class="pl-pds">"</span></span>&gt;Terms and Conditions&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
-                &lt;<span class="pl-ent">li</span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span> <span class="pl-e">target</span>=<span class="pl-s"><span class="pl-pds">"</span>_blank<span class="pl-pds">"</span></span>&gt;Privacy Policy&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
-              &lt;/<span class="pl-ent">ul</span>&gt;
-            &lt;/<span class="pl-ent">div</span>&gt;
+            <!-- Legal -->
+            <div>
+              <ul class="list-unstyled list-inline legal">
+                <li><a href="" target="_blank">Terms and Conditions</a></li>
+                <li><a href="" target="_blank">Privacy Policy</a></li>
+              </ul>
+            </div>
 
-            &lt;<span class="pl-ent">div</span>&gt;
-              &lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>mailto:someone@pb.com<span class="pl-pds">"</span></span>&gt;Send us feedback&lt;/<span class="pl-ent">a</span>&gt;
-            &lt;/<span class="pl-ent">div</span>&gt;
-          &lt;/<span class="pl-ent">div</span>&gt;
-        &lt;/<span class="pl-ent">div</span>&gt;
-    &lt;/<span class="pl-ent">div</span>&gt;
-&lt;/<span class="pl-ent">footer</span>&gt;</pre></div>
-
-
-                          </td>
+            <div>
+              <a href="mailto:someone@pb.com">Send us feedback</a>
+            </div>
+          </div>
+        </div>
+    </div>
+</footer>
+</div>   
+                        </td>
                         </tr>
                       </tbody>
                     </table>
@@ -1458,16 +1593,24 @@ Or toggle this other custom radio
 <ul>
 <li><p>Copy <code>/build/css/design_system.css</code> and overwrite your project design system CSS file</p></li>
 <li><p>Remove <code>&lt;head&gt;</code> links to fonts hosted at Google, for example:</p>
+<div class="preview-code" hljs language="html">
 
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">link</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic<br><span class="pl-pds">"</span></span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/css<span class="pl-pds">"</span></span>&gt;</pre></div></li>
+    
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    </div>
+    
+    </li>
 <li><p>Copy all PrecisionSans fonts from <code>/build/fonts</code> to your project fonts folder</p></li>
 <li><p>Replace the copyright column in the footer with the following markup:</p></li>
 </ul>
+<div class="preview-code" hljs language="html">
 
-<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- Copyright --&gt;</span>
-&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>col-md-6<span class="pl-pds">"</span></span>&gt;
-    &lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.pb.com<span class="pl-pds">"</span></span>&gt;&lt;<span class="pl-ent">i</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>pb-footer-logo gradient<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">i</span>&gt;&lt;/<span class="pl-ent">a</span>&gt;<span class="pl-c1">&amp;copy;<br></span> 2015 Pitney Bowes Inc. All rights reserved.
-&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+<!-- Copyright -->
+<div class="col-md-6">
+    <a href="http://www.pb.com"><i class="pb-footer-logo gradient"></i></a>&copy; 2015 Pitney Bowes Inc. All rights reserved.
+</div>
+                              </div>                         
+                              
 
 <hr>
 
@@ -2146,3 +2289,4 @@ Or toggle this other custom radio
     </div>
 
 </div>
+
