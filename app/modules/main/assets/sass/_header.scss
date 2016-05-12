@@ -37,9 +37,11 @@ header:not(.demo) {
     box-shadow: 0 0 10px rgba(0, 0, 0, .6);
   }
   @include breakpoint(screen-xs) {
-    position: relative; // so mobile menu can scroll
+    position: fixed; // so mobile menu can scroll
   }
 }
+
+
 
 
 .help-icon {
@@ -60,7 +62,7 @@ header:not(.demo) {
   }
 
   .dropdown-menu {
-    // right: auto; // this breaks menus
+//    right: auto; // this breaks menus
   }
   .dropdown-toggle {
     height: 50px;
@@ -101,6 +103,8 @@ header:not(.demo) {
     }
   }
 }
+
+
 
 .nav > li > a:hover, .nav > li > a:focus {
   background-color: $pb-bg2;
@@ -192,6 +196,8 @@ header:not(.demo) {
   }
 
 
+
+
   .navbar-brand {
     // @include navbar-divider;
     float: left;
@@ -225,6 +231,8 @@ header:not(.demo) {
       }
     }
   }
+
+
 
 
   .open a {
@@ -322,6 +330,8 @@ header:not(.demo) {
   }
 }
 
+
+
 /// mega menu --------------------
 .mega-offset {
   margin-left: 140px;
@@ -385,7 +395,7 @@ header:not(.demo) {
         opacity: 1;
         transform: scale(1);
         max-height: 500px;
-        transition: max-height .5s cubic-bezier(.3, .34, .62, .99), transform 0s linear;
+        transition:  max-height .5s cubic-bezier(.3, .34, .62, .99), transform 0s linear;
       }
     }
   }
@@ -426,6 +436,8 @@ header:not(.demo) {
     display: none;
   }
 }
+
+
 
 // put bottom to ensure override
 @media (max-width: $screen-xs-max) {
