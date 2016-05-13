@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.7.1
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Fri May 13 2016 10:00:57 GMT-0400 (EDT) 
+ * Built Fri May 13 2016 10:14:43 GMT-0400 (EDT) 
  */
 @charset "UTF-8";
 #header, header, .signin, .landing .bg {
@@ -13796,8 +13796,6 @@ a i.nc-icon-mini {
 .btn-pill:active, .btn-pill.active, .open > .btn-pill.dropdown-toggle {
   background-image: none; }
 .btn-pill:focus, .btn-pill.focus {
-  color: #314183;
-  background-color: #fff;
   border-color: #189dbd;
   outline: none;
   box-shadow: 0 0 10px rgba(76, 211, 255, 0.77); }

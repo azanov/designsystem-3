@@ -239,8 +239,8 @@ a i.nc-icon-mini {
 
   // focus
   &:focus, &.focus {
-    color: $pb-blue-700;
-    background-color: #fff;
+    // color: $pb-blue-700;
+    // background-color: #fff;
     // box-shadow: 0 0 10px rgba(76, 211, 255, 0.77);
     // outline: none;
     @include focus-ring;
