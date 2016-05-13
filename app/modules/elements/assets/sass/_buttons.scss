@@ -206,7 +206,6 @@ a i.nc-icon-mini {
   }
 }
 
-
 .btn-right {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -217,55 +216,14 @@ a i.nc-icon-mini {
   border-bottom-right-radius: 0;
 }
 
-// // add this class to existing buttons, like btn-primary, to make a pill shape
-// .btn-pill {
-//   border-radius: 40px !important;
-//   padding: $padding-base-vertical $padding-large-horizontal;
-//   box-shadow: none !important;
-//   &:focus, &.focus {
-//     border-color: $pb-cyan;
-//     outline: none !important;
-//   }
-// }
-
 
 // PILL BUTTON
 .btn-pill {
   border-radius: 40px;
-
-  &:active, &.active, .open > &.dropdown-toggle {
-    background-image: none;
-  }
-
   // focus
+  // NOTE: we need to re-apply the focus ring so that it recognizes the border radius
   &:focus, &.focus {
-    // color: $pb-blue-700;
-    // background-color: #fff;
-    // box-shadow: 0 0 10px rgba(76, 211, 255, 0.77);
-    // outline: none;
     @include focus-ring;
-
-  }
-
-  &.disabled, &[disabled], fieldset[disabled] & {
-    &, &:hover, &.hover, &:focus, &.focus, &:active, &.active {
-      color: #c0c0c0;
-      background-color: transparent;
-      border-color: #c0c0c0;
-      opacity: 1;
-    }
-  }
-
-  &.disabled.loading, &[disabled].loading {
-    color: $pb-blue;
-    background-color: transparent;
-    border-color: $pb-blue;
-  }
-
-  .badge {
-    color: #fff;
-    background-color: $pb-magenta;
-    margin-left: 10px;
   }
 }
 
