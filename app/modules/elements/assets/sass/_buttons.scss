@@ -3,31 +3,75 @@
 
 // scss-lint:disable MergeableSelector ImportantRule
 
-// for simplicity's sake in endlessly tweaking button colors
-// i have abandoned the Bootstrap mixin "button-variant"
-// and all of the mixin is hard-coded below for each button type
-// Mazel Tov!
 
 a i.nc-icon-mini {
   padding-right: 5px;
   color: inherit;
 }
 
+// all buttons
+.btn {
+  font-family: $font-family-ps-regular;
+  min-width: 100px;
+}
+
+// -- default sizing definitions
+.btn {
+  // line-height: ensure even-numbered height of button next to input
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-base);
+}
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+  min-width: 80px;
+}
+.btn-xs {
+  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+  min-width: 60px;
+}
+
+// bootstrap functional buttons
+.btn-success {
+  @include functional-button($brand-success);
+}
+.btn-info {
+  @include functional-button($brand-info);
+}
+.btn-warning {
+  @include functional-button($brand-warning);
+}
+.btn-danger {
+  @include functional-button($brand-danger);
+}
+
+
+// PRIMARY BUTTON
 .btn-primary {
   color: #fff;
   background-color: $pb-blue;
   border-color: $pb-blue;
 
   //hover
-  &:hover, &.hover, &:focus, &.focus, &:active, &.active, .open > &.dropdown-toggle {
+  &:hover, &.hover, &:active, &.active, .open > &.dropdown-toggle {
     color: #fff;
-    background-color: #314183;
-    border-color: #314183;
+    background-color: $pb-blue-700;
+    border-color: $pb-blue-700;
   }
 
   // bootstrap no idea why
   &:active, &.active, .open > &.dropdown-toggle {
     background-image: none;
+  }
+
+  // focus
+  &:focus, &.focus {
+    background-color: $pb-blue;
+    @include focus-ring;
+    // outline: none !important;
   }
 
   //disabled
@@ -55,19 +99,29 @@ a i.nc-icon-mini {
 }
 
 
+
+// DEFAULT BUTTON
 .btn-default, .btn-cancel, .btn-group .btn-default, .btn-group-vertical .btn-default {
   color: $pb-blue;
-  background-color: transparent;
+  background-color: #fff;
   border-color: $pb-blue;
 
-  &:hover, &.hover, &:focus, &.focus, &:active, &.active, .open > &.dropdown-toggle {
-    color: #314183;
+  &:hover, &.hover, &:active, &.active, .open > &.dropdown-toggle {
+    color: $pb-blue-700;
     background-color: #d9dced;
-    border-color: #314183;
+    border-color: $pb-blue-700;
   }
 
   &:active, &.active, .open > &.dropdown-toggle {
     background-image: none;
+  }
+
+  // focus
+  &:focus, &.focus {
+    color: $pb-blue-700;
+    background-color: #fff;
+    @include focus-ring;
+    outline: none;
   }
 
   &.disabled, &[disabled], fieldset[disabled] & {
@@ -92,13 +146,13 @@ a i.nc-icon-mini {
   }
 }
 
-
+// BORDERLESS BUTTON
 .btn-group-borderless .btn-default {
   color: $pb-blue;
   background-color: transparent;
   border-color: transparent;
   &:hover, &.hover, &:focus, &.focus, &:active, &.active, .open > &.dropdown-toggle {
-    color: #314183;
+    color: $pb-blue-700;
     background-color: #d9dced;
     border-color: transparent;
   }
@@ -126,13 +180,21 @@ a i.nc-icon-mini {
   background-color: transparent;
   border-color: transparent;
 
-  &:hover, &.hover, &:focus, &.focus, &:active, &.active, .open > &.dropdown-toggle {
+  &:hover, &.hover, &:active, &.active, .open > &.dropdown-toggle {
     color: $pb-blue;
     background-color: #d9dced;
     border-color: #d9dced;
+    text-decoration: underline;
   }
   &:active, &.active, .open > &.dropdown-toggle {
     background-image: none;
+  }
+  &:focus, &.focus {
+    color: $pb-blue-700;
+    background-color: #fff;
+    @include focus-ring;
+    // outline: none !important;
+    text-decoration: underline;
   }
   &.disabled, &[disabled], fieldset[disabled] & {
     &, &:hover, &.hover, &:focus, &.focus, &:active, &.active {
@@ -143,7 +205,6 @@ a i.nc-icon-mini {
     }
   }
 }
-
 
 .btn-right {
   border-top-left-radius: 0;
@@ -156,63 +217,16 @@ a i.nc-icon-mini {
 }
 
 
-//"tertiary", or pill-shaped buttons
-
-.btn-pill-ko {
-  color: $pb-blue;
-  background-color: #fff;
-  border-radius: 40px !important;
-  border: 1px solid #fff;
-  padding: $padding-base-vertical $padding-large-horizontal;
-  min-width: 120px;
-
-  &:disabled {
-    color: #c0c0c0;
-    background-color: transparent;
-    border: 1px solid #c0c0c0;
-  }
-  &:hover, &.hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
-    color: $pb-blue;
-  }
-  &:active, &.active {
-    opacity: .8;
-  }
-}
-
-// add this class to existing buttons, like btn-primary, to make a pill shape
+// PILL BUTTON
 .btn-pill {
-  border-radius: 40px !important;
-  //TODO: add other radii for sm and lg buttons
+  border-radius: 40px;
+  // focus
+  // NOTE: we need to re-apply the focus ring so that it recognizes the border radius
+  &:focus, &.focus {
+    @include focus-ring;
+  }
 }
 
-
-.btn-pill-brand {
-  //color: #fff;
-  //background-color: $pb-blue;
-  border-radius: 40px !important;
-  //border: 1px solid $pb-blue;
-  //padding: $padding-base-vertical $padding-large-horizontal;
-  //min-width: 120px;
-
-  // &:disabled {
-  //   color: #fff;
-  //   background-color: #c0c0c0;
-  //   border: 1px solid #c0c0c0;
-  //   opacity: 1;
-  // }
-
-  // &:hover {
-  //   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  //   color: #fff;
-  //   background-color: $pb-blue;
-  //   border: 1px solid $pb-blue;
-  // }
-
-  // &:active {
-  //   opacity: 0.8;
-  // }
-}
 
 // BS functional buttons
 .btn-success, .btn-info, .btn-warning, .btn-danger {
@@ -226,45 +240,6 @@ a i.nc-icon-mini {
   }
 }
 
-@mixin functional-button($color) {
-  background-color: $color;
-  border-color: $color;
-  &:hover {
-    background-color: darken($color, 10%);
-    border-color: darken($color, 10%);
-  }
-}
-
-.btn-success {
-  @include functional-button($brand-success);
-}
-.btn-info {
-  @include functional-button($brand-info);
-}
-.btn-warning {
-  @include functional-button($brand-warning);
-}
-.btn-danger {
-  @include functional-button($brand-danger);
-}
-
-
-// -- sizing definitions
-.btn {
-  // line-height: ensure even-numbered height of button next to input
-  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-base);
-}
-.btn-lg {
-  // line-height: ensure even-numbered height of button next to large input
-  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
-}
-.btn-sm {
-  // line-height: ensure proper height of button next to small input
-  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);
-}
-.btn-xs {
-  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $border-radius-small);
-}
 
 
 ///** bs overrides **//
@@ -294,6 +269,9 @@ a i.nc-icon-mini {
 
 // font awesome icon size overrides in button groups
 .btn-group {
+  .btn {
+    min-width: auto;
+  }
   &-sm {
     .btn {
       i.fa {

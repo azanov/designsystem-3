@@ -75,6 +75,9 @@
           },
           widgets: {
             templateUrl: 'modules/elements/templates/elements-widgets.html'
+          },
+          writing: {
+            templateUrl: 'modules/elements/templates/elements-containers-writing.html'
           }
         },
         data: {
