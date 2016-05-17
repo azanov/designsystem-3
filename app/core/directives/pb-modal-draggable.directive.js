@@ -9,18 +9,18 @@
           link: function postLink (scope, element, attrs) {
             element.addClass('draggable');
 
-            var $content = element.find('.modal-content'),
-              defaultOffset = {},
-              offsetX = 0,
-              offsetY = 0,
-              mouseXdelta = 0,
-              mouseYdelta = 0;
+            var $content = element.find('.modal-content');
+            // var defaultOffset = {};
+            // var offsetX = 0;
+            // var offsetY = 0;
+            var mouseXdelta = 0;
+            var mouseYdelta = 0;
 
             $document.on('mousedown', function (event) {
               var offset = $content.offset();
 
-              offsetX = offset.left;
-              offsetY = offset.top;
+              // var offsetX = offset.left;
+              // var offsetY = offset.top;
 
               mouseYdelta = event.pageY - offset.top;
               mouseXdelta = event.pageX - offset.left;
@@ -42,7 +42,7 @@
             }
 
             element.on('shown.bs.modal', function (e) {
-              defaultOffset = $content.offset();
+              // defaultOffset = $content.offset();
             });
 
             element.on('hidden.bs.modal', function (e) {

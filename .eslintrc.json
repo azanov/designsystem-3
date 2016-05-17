@@ -9,7 +9,8 @@
     "globals": {
       "angular": true,
       "$": true,
-      "app": true
+      "app": true,
+      "angularDragula":true
     },
     "rules": {
       "no-trailing-spaces": ["error", { "skipBlankLines": true }],
