@@ -1,5 +1,14 @@
 ## Release Notes
 
+### 2.7.1 -- May 4, 2016
+
+#### CSS Changes
+
+* Added actual FontAwesome font files and their related CSS for projects that cannot utilize a CDN.  No code changes are required on your part to utilize this change. You will need to copy the font files into your "fonts" folder to use them, or simply use the [Bower package of the Design System](https://github.com/PBGUX/bower-designsystem) which includes these automatically. You can also continue to use the FontAwesome CDN if you prefer. Thanks to Rick Dukeshier for raising this issue.
+* May the Fourth be with you!
+
+
+
 ###2.7.0 -- April 30, 2016
 
 ####CSS Changes
