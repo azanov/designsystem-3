@@ -1,0 +1,15 @@
+.table-color-swatches {
+  thead tr th {
+    padding-left: 20px;
+  }
+  tbody tr td {
+    border-bottom: 0;
+    border-top: 0;
+    padding: 20px;
+    &.swatch-cell {
+      div {
+        padding: 20px;
+      }
+    }
+  }
+}
