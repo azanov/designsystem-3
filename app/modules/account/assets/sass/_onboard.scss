@@ -5,12 +5,9 @@
   z-index: 1;
   position: relative;
 
-  .dashboard & {
-    margin-top: 0;
-  }
-
   &.opened {
     height: 100%;
+
     .onboarding__navigation__image {
       margin-top: 0;
       margin-bottom: -75px;

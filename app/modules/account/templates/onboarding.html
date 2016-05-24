@@ -1,11 +1,12 @@
 <!-- Stand-alone module, reusable -->
-<uib-carousel no-wrap="true" interval="-1"
-    template-url="modules/account/templates/carousel/carousel.html">
-    <uib-slide class="onboarding__slide" ng-repeat="slide in onboardingCtrl.slides"
+<uib-carousel no-wrap="true" interval="-1" active="0" template-url="modules/account/templates/carousel/carousel.html">
+
+    <uib-slide class="onboarding__slide" ng-repeat="slide in onboardingCtrl.slides track by slide.id"
         active="slide.active" index="slide.id"
         template-url="modules/account/templates/carousel/slide.html">
-        <h2 class="header--sm">{{slide.header}}</h2>
-        <p class="text-large spacer-bottom-md">{{slide.text}}</p>
-        <img src="{{slide.img}}"/>
+        <h2 class="text-center">{{slide.header}}</h2>
+        <p class="text-center lead spacer-bottom-md">{{slide.text}}</p>
+        <img ng-src="{{slide.img}}"/>
     </uib-slide>
+
 </uib-carousel>
