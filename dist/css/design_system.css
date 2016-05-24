@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.7.1
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Fri May 20 2016 10:27:47 GMT-0400 (EDT) 
+ * Built Tue May 24 2016 11:35:14 GMT-0400 (EDT) 
  */
 @charset "UTF-8";
 #header, header, .signin, .landing .bg {
@@ -13996,7 +13996,8 @@ fieldset legend {
 .input-group-btn > .btn {
   border-radius: 0;
   line-height: 1.43857;
-  border-color: #9b9b9b; }
+  border-color: #9b9b9b;
+  min-width: 1px; }
 
 .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group {
   border-right-color: transparent; }
