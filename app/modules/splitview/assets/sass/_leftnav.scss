@@ -1,25 +1,5 @@
-//scss-lint:disable ImportantRule SelectorDepth
-%leftnav-links {
-  font-size: 14px;
-  color: $text-color;
-  &:hover {
-    background-color: $bg-hover;
-    color: $pb-gray-700;
-  }
-  &:active, &.active {
-    background-color: $bg-active;
-    color: $pb-gray-700;
-  }
-  &.badge {
-    color: #fff;
-    font-weight: normal;
-    font-size: 11px;
-    background-color: $pb-magenta;
-    &:hover {
-      background-color: darken($pb-magenta, 10%);
-    }
-  }
-}
+//scss-lint:disable ImportantRule SelectorDepth MergeableSelector
+
 
 .controls-stacked {
   margin: 0 0 15px;
@@ -66,9 +46,26 @@
     }
 
     a.list-group-item {
-      @extend %leftnav-links;
+      font-size: 14px;
+      color: $text-color;
+      &:hover {
+        background-color: $bg-hover;
+        color: $pb-gray-700;
+      }
+      &:active, &.active {
+        background-color: $bg-active;
+        color: $pb-gray-700;
+      }
+      &.badge {
+        color: #fff;
+        font-weight: normal;
+        font-size: 11px;
+        background-color: $pb-magenta;
+        &:hover {
+          background-color: darken($pb-magenta, 10%);
+        }
+      }
     }
-
   }
 }
 
@@ -264,4 +261,38 @@
 }
 .no-csstransforms .minified .menu .menu-collapse i.fa:before {
   content: '\f0a9';
+}
+
+
+// replaced for backward compatibility
+
+.leftnav-tree {
+  * {
+    :focus {
+      outline: none !important;
+    }
+  }
+  .panel-group {
+    .panel-default {
+      border: 0;
+      border-bottom: 1px solid #e8e8e8;
+      background-color: transparent;
+    }
+    .panel-heading {
+      background-color: transparent;
+      padding: 10px;
+      h4.panel-title {
+        cursor: pointer;
+        outline: 0;
+        font-family: 'PrecisionSans_W_Rg', 'Helvetica Neue', Arial, sans-serif;
+        a {
+          font-size: 16px;
+          color: #2e2e2e;
+          i.nc-icon-mini {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
 }
