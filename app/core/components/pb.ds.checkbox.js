@@ -5,7 +5,7 @@
       restrict: 'E',
       require: 'ngModel',
       scope: {},
-      replace : true,
+      replace: true,
       transclude: true,
       bindToController: {
         disabled: '=',
