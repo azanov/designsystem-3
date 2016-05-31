@@ -1,12 +1,19 @@
 (function () {
   'use strict';
-  angular.module('pb.ds.foundation').controller('DirectiveController', function () {
+  angular.module('pb.ds.foundation').controller('DirectiveController', function ($timeout) {
     var _this = this;
-    _this.loading = false;
-    _this.toggleLoading = function () {
-      _this.loading = !_this.loading;
+
+    _this.loading = {
+      isLoading: false,
+      isLoadingMsg: 'Updating',
+      label: 'Start Update',
+      toggle: function () {
+        _this.loading.isLoading = !_this.loading.isLoading;
+
+        $timeout(function () {
+          _this.loading.isLoading = !_this.loading.isLoading;
+        }, 1500);
+      }
     };
-    _this.loadingMsg = 'Loading';
-    _this.labelMsg = 'Send';
   });
 })();
