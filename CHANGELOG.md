@@ -19,6 +19,7 @@
 * Updated and expanded content on guidance for [Emails](http://guxstaging.pbi.global.pvt/design_system/#/content/emails).
 * Clarified guidance for when to use which [Nucleo icon font](http://guxstaging.pbi.global.pvt/design_system/#/foundation/iconography#functional-icons).
 * Tweaked the language on using special characters in passwords on [Sign Up](http://guxstaging.pbi.global.pvt/design_system/#/patterns/signinup#sign-up) screens.
+* Added content guidance on the use of [Language Menus](http://guxstaging.pbi.global.pvt/design_system/#/globalization#menu) in Globalization.
 
 
 ### 2.7.1 -- May 4, 2016
