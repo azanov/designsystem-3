@@ -1,5 +1,27 @@
 ## Release Notes
 
+### 2.8.0 -- May 31, 2016
+
+#### CSS Changes
+
+- "Focus" states have been added for all [Buttons](http://guxstaging.pbi.global.pvt/design_system/#/buttons#action).  No html code changes are required, just use latest css file. When a button is focused, usually via keyboard, they now have a glow ring.
+
+#### Site Changes
+
+* Added additional content for guidance in using [Tabs](http://guxstaging.pbi.global.pvt/design_system/#/containers#tabs).
+* Re-organized and expanded content areas for [Tone of Voice](http://guxstaging.pbi.global.pvt/design_system/#/content/voice) and [Editorial Style](http://guxstaging.pbi.global.pvt/design_system/#/content/style).
+* Added additional content for guidance in marking [form fields as optional](http://guxstaging.pbi.global.pvt/design_system/#/uicontrols).
+* Updated some icons for [Error Pages](http://guxstaging.pbi.global.pvt/design_system/#/patterns/errorpages). These icons will be embedded into CSS in a future release.
+* The [Project Roadmap](http://guxstaging.pbi.global.pvt/design_system/#/resources/roadmap) page has been updated to use a table we can update more frequently.
+* All of the content on the [Accessiblity](http://guxstaging.pbi.global.pvt/design_system/#/foundation/accessibility) page has been made html.
+* The horizontal "jump links" at the top of pages can now scroll horizontally when viewed on a smartphone or other device where they would not fit.
+* The [Hamburger Menu](http://guxstaging.pbi.global.pvt/design_system/#/hamburger/overview) examples now are equipped with expandable sidebar menus.
+* Updated and expanded content on guidance for [Emails](http://guxstaging.pbi.global.pvt/design_system/#/content/emails).
+* Clarified guidance for when to use which [Nucleo icon font](http://guxstaging.pbi.global.pvt/design_system/#/foundation/iconography#functional-icons).
+* Tweaked the language on using special characters in passwords on [Sign Up](http://guxstaging.pbi.global.pvt/design_system/#/patterns/signinup#sign-up) screens.
+* Added content guidance on the use of [Language Menus](http://guxstaging.pbi.global.pvt/design_system/#/globalization#menu) in Globalization.
+
+
 ### 2.7.1 -- May 4, 2016
 
 #### CSS Changes
