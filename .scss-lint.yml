@@ -8,9 +8,16 @@ linters:
     space_before_bang: true
     space_after_bang: false
 
+  BemDepth:
+    enabled: false
+    max_elements: 1
+
   BorderZero:
     enabled: true
     convention: zero # or `none`
+
+  ChainedClasses:
+    enabled: false
 
   ColorKeyword:
     enabled: true
@@ -19,7 +26,8 @@ linters:
     enabled: false
 
   Comment:
-    enabled: false
+    enabled: true
+    style: silent
 
   DebugStatement:
     enabled: true
@@ -41,6 +49,9 @@ linters:
   EmptyRule:
     enabled: true
 
+  ExtendDirective:
+    enabled: false
+
   FinalNewline:
     enabled: true
     present: true
@@ -50,8 +61,8 @@ linters:
     style: short # or 'long'
 
   HexNotation:
-    enabled: false
-  #  style: lowercase # or 'uppercase'
+    enabled: true
+    style: lowercase # or 'uppercase'
 
   HexValidation:
     enabled: true
@@ -87,11 +98,16 @@ linters:
     convention: hyphenated_lowercase # or 'BEM', or a regex pattern
 
   NestingDepth:
-    enabled: false
-    max_depth: 10
+    enabled: true
+    max_depth: 6
+    ignore_parent_selectors: false
 
   PlaceholderInExtend:
     enabled: false
+
+  PrivateNamingConvention:
+    enabled: false
+    prefix: _
 
   PropertyCount:
     enabled: false
@@ -106,6 +122,22 @@ linters:
   PropertySpelling:
     enabled: true
     extra_properties: []
+
+  PropertyUnits:
+    enabled: true
+    global: [
+      'ch', 'em', 'ex', 'rem',                 # Font-relative lengths
+      'cm', 'in', 'mm', 'pc', 'pt', 'px', 'q', # Absolute lengths
+      'vh', 'vw', 'vmin', 'vmax',              # Viewport-percentage lengths
+      'deg', 'grad', 'rad', 'turn',            # Angle
+      'ms', 's',                               # Duration
+      'Hz', 'kHz',                             # Frequency
+      'dpi', 'dpcm', 'dppx',                   # Resolution
+      '%']                                     # Other
+    properties: {}
+
+  PseudoElement:
+    enabled: false
 
   QualifyingElement:
     enabled: false
@@ -123,6 +155,7 @@ linters:
 
   Shorthand:
     enabled: true
+    allowed_shorthands: [1, 2, 3]
 
   SingleLinePerProperty:
     enabled: true
@@ -133,6 +166,7 @@ linters:
 
   SpaceAfterComma:
     enabled: true
+    style: one_space # or 'no_space', or 'at_least_one_space'
 
   SpaceAfterPropertyColon:
     enabled: true
@@ -141,8 +175,19 @@ linters:
   SpaceAfterPropertyName:
     enabled: false
 
+  SpaceAfterVariableColon:
+    enabled: true
+    style: one_space # or 'no_space', 'at_least_one_space' or 'one_space_or_newline'
+
+  SpaceAfterVariableName:
+    enabled: true
+
+  SpaceAroundOperator:
+    enabled: true
+    style: one_space # or 'at_least_one_space', or 'no_space'
+
   SpaceBeforeBrace:
-    enabled: false
+    enabled: true
     style: space # or 'new_line'
     allow_single_line_padding: false
 
@@ -151,7 +196,7 @@ linters:
     spaces: 0
 
   StringQuotes:
-    enabled: false
+    enabled: true
     style: single_quotes # or double_quotes
 
   TrailingSemicolon:
@@ -159,7 +204,11 @@ linters:
 
   TrailingZero:
     enabled: false
+
   TrailingWhitespace:
+    enabled: false
+
+  TransitionAll:
     enabled: false
 
   UnnecessaryMantissa:
