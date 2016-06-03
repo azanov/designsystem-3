@@ -1,5 +1,5 @@
 //* -- FORMS -- */
-// scss-lint:disable VendorPrefix ImportantRule
+// scss-lint:disable VendorPrefix ImportantRule MergeableSelector
 ::-webkit-input-placeholder {
   font-family: $font-family-sans-serif;
   color: $input-color-placeholder !important;
@@ -169,6 +169,7 @@ fieldset {
   border-radius: 0;
   line-height: $line-height-base + .01; //HACK : no idea why, just sick of it
   border-color: $input-border;
+  min-width: 1px;
 }
 
 .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group {
