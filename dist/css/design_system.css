@@ -1,8 +1,8 @@
 /**
  * DesignSystem - 
- * @version v2.7.1
+ * @version v2.8.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Fri May 20 2016 10:27:47 GMT-0400 (EDT) 
+ * Built Tue May 31 2016 16:02:37 GMT-0400 (EDT) 
  */
 @charset "UTF-8";
 #header, header, .signin, .landing .bg {
@@ -13996,7 +13996,8 @@ fieldset legend {
 .input-group-btn > .btn {
   border-radius: 0;
   line-height: 1.43857;
-  border-color: #9b9b9b; }
+  border-color: #9b9b9b;
+  min-width: 1px; }
 
 .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group {
   border-right-color: transparent; }
@@ -15488,7 +15489,7 @@ header:not(.demo).shadow {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); }
 @media (max-width: 767px) {
   header:not(.demo) {
-    position: relative; } }
+    position: fixed; } }
 
 .help-icon {
   height: 70px; }
@@ -17718,23 +17719,6 @@ td.centered, th.centered {
 .landing h3 {
   color: #2e2e2e; }
 
-.leftnav-sectioned .list-group-section a.list-group-item, .splitview .two-col-wrapper .leftnav a {
-  font-size: 14px;
-  color: #717171; }
-.leftnav-sectioned .list-group-section a.list-group-item:hover, .splitview .two-col-wrapper .leftnav a:hover {
-  background-color: #eaedf8;
-  color: #2e2e2e; }
-.leftnav-sectioned .list-group-section a.list-group-item:active, .splitview .two-col-wrapper .leftnav a:active, .leftnav-sectioned .list-group-section a.active.list-group-item, .splitview .two-col-wrapper .leftnav a.active {
-  background-color: #c5cbe3;
-  color: #2e2e2e; }
-.leftnav-sectioned .list-group-section a.badge.list-group-item, .splitview .two-col-wrapper .leftnav a.badge {
-  color: #fff;
-  font-weight: normal;
-  font-size: 11px;
-  background-color: #cf0989; }
-.leftnav-sectioned .list-group-section a.badge.list-group-item:hover, .splitview .two-col-wrapper .leftnav a.badge:hover {
-  background-color: #9e0769; }
-
 .controls-stacked {
   margin: 0 0 15px; }
 .controls-stacked .control {
@@ -17762,6 +17746,22 @@ td.centered, th.centered {
   margin-bottom: 0; }
 .leftnav-sectioned .list-group-section .list-group {
   margin-bottom: 10px; }
+.leftnav-sectioned .list-group-section a.list-group-item {
+  font-size: 14px;
+  color: #717171; }
+.leftnav-sectioned .list-group-section a.list-group-item:hover {
+  background-color: #eaedf8;
+  color: #2e2e2e; }
+.leftnav-sectioned .list-group-section a.list-group-item:active, .leftnav-sectioned .list-group-section a.list-group-item.active {
+  background-color: #c5cbe3;
+  color: #2e2e2e; }
+.leftnav-sectioned .list-group-section a.list-group-item.badge {
+  color: #fff;
+  font-weight: normal;
+  font-size: 11px;
+  background-color: #cf0989; }
+.leftnav-sectioned .list-group-section a.list-group-item.badge:hover {
+  background-color: #9e0769; }
 
 .leftnav-tree {
   border-right: 1px solid #e8e8e8; }
@@ -17890,6 +17890,25 @@ td.centered, th.centered {
 .no-csstransforms .minified .menu .menu-collapse i.fa:before {
   content: '\f0a9'; }
 
+.leftnav-tree * :focus {
+  outline: none !important; }
+.leftnav-tree .panel-group .panel-default {
+  border: 0;
+  border-bottom: 1px solid #e8e8e8;
+  background-color: transparent; }
+.leftnav-tree .panel-group .panel-heading {
+  background-color: transparent;
+  padding: 10px; }
+.leftnav-tree .panel-group .panel-heading h4.panel-title {
+  cursor: pointer;
+  outline: 0;
+  font-family: 'PrecisionSans_W_Rg', 'Helvetica Neue', Arial, sans-serif; }
+.leftnav-tree .panel-group .panel-heading h4.panel-title a {
+  font-size: 16px;
+  color: #2e2e2e; }
+.leftnav-tree .panel-group .panel-heading h4.panel-title a i.nc-icon-mini {
+  padding-right: 0; }
+
 .splitview h1 {
   margin-top: 0; }
 .splitview .footer-wrapper {
@@ -17955,8 +17974,7 @@ td.centered, th.centered {
   border-width: 0; }
 
 .hamburger {
-  overflow-x: hidden;
-  /* Navigation Menu - Background */ }
+  overflow-x: hidden; }
 .hamburger header, .hamburger #header {
   display: none; }
 .hamburger .navmenu-default, .hamburger .navbar-default .navbar-offcanvas {
@@ -18018,6 +18036,8 @@ td.centered, th.centered {
   margin-top: 60px; }
 .hamburger.hamburger-slide .footer-wrapper {
   z-index: 5000; }
+.hamburger.hamburger-slide .navmenu .tree {
+  margin-top: 10px; }
 .hamburger.hamburger-slide .navmenu .list-group {
   margin-top: 21px; }
 .hamburger.hamburger-slide .navmenu .list-group .main-content {
