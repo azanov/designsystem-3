@@ -1,0 +1,138 @@
+<div class="doc-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero-header">
+          <div class="eyebrow">Content</div>
+          <h1>Emails</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-unstyled list-inline jump-menu">
+            <li><a ui-sref="content.emails({'#':'template'})">Template</a></li>
+            <li><a ui-sref="content.emails({'#':'scenarios'})">Scenarios</a></li>
+            <li><a ui-sref="content.emails({'#':'writing'})">Writing</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="template" class="doc-head">Sample Email Template</h1>
+      <p class="doc-lede">Our sample email template is designed to render well on multiple devices and email platforms. It’s also meant to be flexible in terms of how much (or how little) copy you wish to include. The copy shown in samples is directional and can be altered to support the specific scenario that’s triggering the email.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <h3>Required Primary Elements</h3>
+      Your user emails should include these required elements:
+      <ul>
+        <li>Subject line</li>
+        <li>Product name</li>
+        <li>Pitney Bowes logo</li>
+        <li>Email headline </li>
+        <li>A clear description of why the user is receiving this email, and any other helpful information, such as status</li>
+        <li>Legal copy block at bottom of email</li>
+      </ul>
+
+      If the email is automated then you should also include:
+      <ul>
+        <li>A note to that effect, to discourage users from replying to it directly</li>
+        <li>Alternate means for contacting Pitney Bowes (such as a customer support telephone number, link to live chat, etc.)</li>
+      </ul>
+
+      <h3>Optional Elements</h3>
+      Optional elements include:
+      <ul>
+        <li>A call to action button (e.g., “Sign In Now”)</li>
+        <li>A salutation (e.g., “Hi, <code>[[FIRST NAME]]</code>,”)</li>
+        <li>Secondary messaging, such as step-based guidance, or other related content</li>
+        <li>Marketing content, but only if you can confirm that your intended recipients have “opted in” — if in doubt, leave it out</li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="row spacer-top-lg">
+    <div class="col-md-8">
+      <p>
+        The scenarios outlined below can be used as a guidline for copy within the email template. Be sure to make the following changes in the copy:
+      </p>
+      <ul>
+        <li>
+          Replace all occurances of bracketed content, such as
+          <code>[[PRODUCT NAME]]</code>
+          with the appropriate copy and links.
+        </li>
+        <li>
+          Pay attention to indications of register and trademarks.
+        </li>
+        <li>Refer to the Global support copy options at the end of this document, replacing all occurances of
+          <code>[[GLOBAL SUPPORT COPY OPTION]]</code>
+          with your selected option.</li>
+      </ul>
+      <p><a href="https://litmus.com/pub/15299f8" target="_blank">View sample email in an assortment of email clients.</a></p>
+    </div>
+
+  </div>
+
+  <div class="row spacer-top-lg">
+    <div class="col-md-6">
+      <img class="img-responsive framed spacer-bottom-md" src="modules/content/assets/images/email-google.jpg" alt=""/>
+    </div>
+    <div class="col-md-3 col-md-offset-1 col-xs-6">
+      <img class="img-responsive spacer-bottom-md" src="modules/content/assets/images/email-iphone6splus.jpg" alt=""/>
+    </div>
+  </div>
+
+
+
+  <div class="row spacer-bottom-md">
+    <div class="col-md-8">
+      <h1 id="scenarios" class="doc-head">Scenarios</h1>
+      <p>We’ve included some of the most common user email scenarios. You may need to modify body copy to fit a particular business case. Be sure to make the following changes in the copy:</p>
+      <ul>
+        <li>Replace all occurrences of bracketed content, such as <code>[[PRODUCT NAME]]</code>, with the appropriate copy and links.</li>
+        <li>Check that you’ve adhered to all of our legal requirements.</li>
+        <li>Refer to the global support copy options at the end of this document, replacing all occurrences of <code>[[GLOBAL SUPPORT COPY OPTION]]</code> with your selected option.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div ng-include="'modules/content/templates/includes/email-matrix.html'"></div>
+    </div>
+  </div>
+
+<div class="row spacer-bottom-md">
+  <div class="col-md-8">
+    <h1 id="writing" class="doc-head">Writing</h1>
+
+    <p>In general, the more copy an email contains, the less likely it is to be read. Here are some ways to keep emails relevant and readable:</p>
+    <ul>
+      <li>Focus on leading the user to respond to a specific call to action, if you’re including one. </li>
+      <li>Put the most important messaging at the top and present your call to action as early as possible, after you’ve provided some context. </li>
+      <li>Include secondary messaging if it supports the email’s purpose, but avoid including tangential information that doesn’t relate to the email’s subject matter. </li>
+      <li>If detailed information is available online, refer to it via an inline hyperlink rather than repeating the content in the email.</li>
+      <li>Present step-based guidance as numbered steps, not as bullet points.</li>
+      <li>Use sub-headers to set off secondary chunks of information.</li>
+      <li>Use bullet points for presenting content such as features or requirements.</li>
+    </ul>
+  </div>
+</div>
+
+
+</div>

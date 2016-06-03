@@ -1,15 +1,12 @@
-(function() {
-
+(function () {
   'use strict';
 
-  angular.module('pb.ds.splitview').controller('HamburgerController', function($log) {
-
+  angular.module('pb.ds.splitview').controller('HamburgerController', function ($log) {
     var _this = this;
-
 
     _this.checked = false; // This will be binded using the ps-open attribute
 
-    _this.toggle = function() {
+    _this.toggle = function () {
       _this.checked = !_this.checked;
       $log.debug('clicked');
     };
@@ -79,13 +76,9 @@
         'value': ''
       }]
     }];
-
-
   });
 
-  angular.element(document).ready(function() {
-
-  //  c = angular.element(document.querySelector('#controller-demo')).scope();
+  angular.element(document).ready(function () {
+    //  c = angular.element(document.querySelector('#controller-demo')).scope();
   });
-
 })();

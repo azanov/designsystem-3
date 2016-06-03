@@ -1,9 +1,7 @@
-(function() {
-
+(function () {
   'use strict';
 
-  angular.module('pb.ds.elements').controller('BootstrapUiPopoverController', function($scope, $uibModal) {
-
+  angular.module('pb.ds.elements').controller('BootstrapUiPopoverController', function ($scope, $uibModal) {
     var _this = this;
 
     _this.dynamicPopover = {
@@ -13,43 +11,43 @@
     };
 
     _this.modals = {
-      basicMessage: function() {
+      basicMessage: function () {
         $uibModal.open({
           templateUrl: 'modules/elements/templates/modals/elements-basic-message.html',
           controller: 'BootstrapUiBasicMessageModalController'
         });
       },
-      singleChoice: function() {
+      singleChoice: function () {
         $uibModal.open({
           templateUrl: 'modules/elements/templates/modals/elements-single-choice.html',
           controller: 'BootstrapUiSingleChoiceModalController'
         });
       },
-      radioButtons: function() {
+      radioButtons: function () {
         $uibModal.open({
           templateUrl: 'modules/elements/templates/modals/elements-radio-buttons.html',
           controller: 'BootstrapUiRadioButtonsModalController'
         });
       },
-      commentForm: function() {
+      commentForm: function () {
         $uibModal.open({
           templateUrl: 'modules/elements/templates/modals/elements-comment-form.html',
           controller: 'BootstrapUiCommentFormModalController'
         });
       },
-      withCopy: function() {
+      withCopy: function () {
         $uibModal.open({
           templateUrl: 'modules/elements/templates/modals/elements-with-copy.html',
           controller: 'BootstrapUiWithCopyModalController'
         });
       },
-      simple: function() {
+      simple: function () {
         $uibModal.open({
           templateUrl: 'modules/elements/templates/modals/elements-simple.html',
           controller: 'BootstrapUiSimpleModalController'
         });
       },
-      modal: function() {
+      modal: function () {
         $uibModal.open({
           templateUrl: 'modules/elements/templates/modals/elements-modal.html',
           controller: 'BootstrapUiModalController',
@@ -57,17 +55,17 @@
           backdrop: 'static'
         });
       },
-      prompt: function() {
+      prompt: function () {
         $uibModal.open({
           templateUrl: 'modules/elements/templates/modals/elements-prompt.html',
           controller: 'BootstrapUiPromptModalController',
           keyboard: false,
           backdrop: 'static'
-        }).result.then(function(fullname) {
+        }).result.then(function (fullname) {
           _this.fullname = fullname;
         });
       },
-      draggable: function() {
+      draggable: function () {
         $uibModal.open({
           windowTemplateUrl: 'modules/elements/templates/modals/elements-draggable-template.html',
           templateUrl: 'modules/elements/templates/modals/elements-draggable.html',
@@ -77,9 +75,5 @@
         });
       }
     };
-
-
-
   });
-
 })();

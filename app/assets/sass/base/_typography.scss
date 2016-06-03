@@ -1,17 +1,13 @@
-// Definitions of typography settings.  For the variables, see
-
-
 .glyphicon {
   line-height: $line-height-base;
 }
-
-//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 
 // easily change something to serif or sans-serif
 .serif,
 .serif p {
   font-family: $font-family-serif;
 }
+
 .sans-serif,
 .sans,
 .sans-serif p,
@@ -19,6 +15,7 @@
   font-family: $font-family-sans-serif;
 }
 
+// Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 code,
 .code,
 pre {
@@ -101,7 +98,7 @@ h2.section-divider {
 }
 
 h2.follows-h1,
-h1 +h2 {
+h1 + h2 {
   margin-top: 20px;
 }
 
@@ -156,7 +153,6 @@ h6,
   font-family: $font-family-sans-serif;
   font-weight: bold;
   color: $header-color;
-  margin-bottom: 0;
   margin-top: 14px;
 }
 
@@ -169,8 +165,6 @@ h6,
     color: $header-color-alt;
   }
 }
-
-
 
 
 // when you need light text
@@ -239,7 +233,7 @@ dt {
 
 ul.spaced,
 ol.spaced {
-  >li {
+  > li {
     margin-top: 10px;
 
     &:first-child {
@@ -256,14 +250,6 @@ ol {
   padding-left: 1.5em;
 }
 
-.btn:focus {
-  // scss-lint:disable ImportantRule
-  outline: none !important;
-}
-
-.btn {
-  font-family: $font-family-ps-regular;
-}
 
 // Font Awesome additional pb classes
 
@@ -284,8 +270,8 @@ ol {
   transition: all .2s ease-in-out;
 }
 
-.nav-tabs >li >a,
-.nav-pills >li >a {
+.nav-tabs > li > a,
+.nav-pills > li > a {
   font-family: $font-family-ps-regular;
 }
 
@@ -298,7 +284,6 @@ ol {
   font-weight: normal;
   font-size: 14px;
 }
-
 
 
 // boostrap makes changing the weight of the logo quite difficult

@@ -1,0 +1,130 @@
+<div class="doc-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero-header">
+          <div class="eyebrow">Patterns</div>
+          <h1>Drag and Drop</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-unstyled list-inline jump-menu">
+            <li><a ui-sref="patterns.dragdrop({'#':'interactions'})">Interactions</a></li>
+            <li><a ui-sref="patterns.dragdrop({'#':'lists'})">Drag Between Lists</a></li>
+            <li><a ui-sref="patterns.dragdrop({'#':'upload'})">Drag and Drop to Upload</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container spacer-top-lg">
+
+  <div class="row spacer-top-xl spacer-bottom-lg">
+    <div class="col-md-8">
+      <!-- <div ng-include="'modules/patterns/templates/includes/drag-drop-table.html'"></div> -->
+      <h1 class="doc-head" id="interactions">Drag and Drop Interactions</h1>
+      <p class="lede ">For use with Images, Containers, Grid Rows, Grid Columns, Lists</p>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <a href="modules/patterns/assets/images/drag-interaction-worksheet.pdf" target="_blank">
+        <img src="modules/patterns/assets/images/drag-interaction-worksheet.png" srcset="modules/patterns/assets/images/drag-interaction-worksheet.png 1x, modules/patterns/assets/images/drag-interaction-worksheet@2x.png 2x" alt="Drag Drop Interactions" class="img-responsive">
+      </a>
+      <p>
+        <a href="modules/patterns/assets/images/drag-interaction-worksheet.pdf" target="_blank">Download PDF of Chart</a>
+      </p>
+    </div>
+  </div>
+
+
+
+  <div class="row spacer-top-xl spacer-bottom-md">
+    <div class="col-md-4">
+      <h1 class="doc-head" id="lists">Drag Between Lists</h1>
+    </div>
+    <div class="col-md-2">
+      <a class="more-info plugin" href="http://bevacqua.github.io/angular-dragula/" target="_blank">Angular Dragula</a>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-6">
+      <div class="panel panel-default drag-container">
+        <div class="panel-body" dragula="'first-bag'" dragula-model="dragdrop.items.unselected">
+          <!-- <div class="drag-item" ng-repeat="item in dragdrop.items.unselected track by item.id" uib-tooltip="Click and hold to drag." tooltip-enable="dragdrop.tooltip.isEnabled"> -->
+          <div class="drag-item" ng-repeat="item in dragdrop.items.unselected track by item.id">
+            <span>{{::item.label}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="panel panel-default drag-container">
+        <div class="panel-body" dragula="'first-bag'" dragula-model="dragdrop.items.selected">
+          <!-- <div class="drag-item" ng-repeat="item in dragdrop.items.selected track by item.id" uib-tooltip="Click and hold to drag." tooltip-enable="dragdrop.tooltip.isEnabled"> -->
+          <div class="drag-item" ng-repeat="item in dragdrop.items.selected track by item.id">
+            <span>{{::item.label}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- <div class="row">
+    <div class="col-md-6">
+      <pre>{{dragdrop.items.unselected | json}}</pre>
+    </div>
+
+    <div class="col-md-6">
+      <pre>{{dragdrop.items.selected | json}}</pre>
+    </div>
+  </div> -->
+
+  <div class="row spacer-top-xl spacer-bottom-md">
+    <div class="col-md-4">
+      <h1 class="doc-head" id="upload">Drag and Drop to Upload</h1>
+    </div>
+    <div class="col-md-2">
+      <a class="more-info plugin" href="https://github.com/danialfarid/ng-file-upload" target="_blank">ng-file-upload</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div ngf-drop ngf-select ng-model="files" class="drop-box"
+          ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-allow-dir="true"  ngf-resize="{width: 300, height: 400}"
+          accept="image/*,application/pdf"
+          ngf-pattern="'image/*,application/pdf' ">Drag and drop your files here or <a href="">browse</a>.
+      </div>
+
+      <div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
+
+       <!-- <button class="btn btn-default" ngf-select="upload($files)" ngf-multiple="true">Or Click to Select File(s)</button> -->
+
+       <h4 ng-if="files.length">Files Uploaded:</h4>
+        <ul>
+            <li ng-repeat="f in files" style="font:smaller">{{f.name}} {{f.$error}} {{f.$errorParam}}</li>
+        </ul>
+        <!-- Upload Log:
+        <pre>{{log}}</pre> -->
+    </div>
+
+  </div>
+
+
+</div>

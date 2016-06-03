@@ -1,15 +1,12 @@
-(function() {
-
+(function () {
   'use strict';
-
 
   angular.module('app')
     .directive('pbModalDraggable', ['$document',
-      function($document) {
+      function ($document) {
         return {
           restrict: 'EA',
-          link: function postLink(scope, element, attrs) {
-
+          link: function postLink (scope, element, attrs) {
             element.addClass('draggable');
 
             var $content = element.find('.modal-content'),
@@ -19,8 +16,7 @@
               mouseXdelta = 0,
               mouseYdelta = 0;
 
-            $document.on('mousedown', function(event) {
-
+            $document.on('mousedown', function (event) {
               var offset = $content.offset();
 
               offsetX = offset.left;
@@ -33,29 +29,27 @@
               $document.on('mouseup', mouseup);
             });
 
-            function mousemove(event) {
+            function mousemove (event) {
               $content.offset({
                 top: event.pageY - mouseYdelta,
                 left: event.pageX - mouseXdelta
               });
             }
 
-            function mouseup() {
+            function mouseup () {
               $document.off('mousemove', mousemove);
               $document.off('mouseup', mouseup);
             }
 
-            element.on('shown.bs.modal', function(e) {
+            element.on('shown.bs.modal', function (e) {
               defaultOffset = $content.offset();
             });
 
-            element.on('hidden.bs.modal', function(e) {
+            element.on('hidden.bs.modal', function (e) {
               $content.removeAttr('style');
             });
-
           }
         };
       }
     ]);
-
 })();

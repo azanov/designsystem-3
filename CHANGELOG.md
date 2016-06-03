@@ -1,5 +1,195 @@
 ## Release Notes
 
+### 2.8.0 -- May 31, 2016
+
+#### CSS Changes
+
+- "Focus" states have been added for all [Buttons](http://guxstaging.pbi.global.pvt/design_system/#/buttons#action).  No html code changes are required, just use latest css file. When a button is focused, usually via keyboard, they now have a glow ring.
+
+#### Site Changes
+
+* Added additional content for guidance in using [Tabs](http://guxstaging.pbi.global.pvt/design_system/#/containers#tabs).
+* Re-organized and expanded content areas for [Tone of Voice](http://guxstaging.pbi.global.pvt/design_system/#/content/voice) and [Editorial Style](http://guxstaging.pbi.global.pvt/design_system/#/content/style).
+* Added additional content for guidance in marking [form fields as optional](http://guxstaging.pbi.global.pvt/design_system/#/uicontrols).
+* Updated some icons for [Error Pages](http://guxstaging.pbi.global.pvt/design_system/#/patterns/errorpages). These icons will be embedded into CSS in a future release.
+* The [Project Roadmap](http://guxstaging.pbi.global.pvt/design_system/#/resources/roadmap) page has been updated to use a table we can update more frequently.
+* All of the content on the [Accessiblity](http://guxstaging.pbi.global.pvt/design_system/#/foundation/accessibility) page has been made html.
+* The horizontal "jump links" at the top of pages can now scroll horizontally when viewed on a smartphone or other device where they would not fit.
+* The [Hamburger Menu](http://guxstaging.pbi.global.pvt/design_system/#/hamburger/overview) examples now are equipped with expandable sidebar menus.
+* Updated and expanded content on guidance for [Emails](http://guxstaging.pbi.global.pvt/design_system/#/content/emails).
+* Clarified guidance for when to use which [Nucleo icon font](http://guxstaging.pbi.global.pvt/design_system/#/foundation/iconography#functional-icons).
+* Tweaked the language on using special characters in passwords on [Sign Up](http://guxstaging.pbi.global.pvt/design_system/#/patterns/signinup#sign-up) screens.
+* Added content guidance on the use of [Language Menus](http://guxstaging.pbi.global.pvt/design_system/#/globalization#menu) in Globalization.
+
+
+### 2.7.1 -- May 4, 2016
+
+#### CSS Changes
+
+* Added actual FontAwesome font files and their related CSS for projects that cannot utilize a CDN.  No code changes are required on your part to utilize this change. You will need to copy the font files into your "fonts" folder to use them, or simply use the [Bower package of the Design System](https://github.com/PBGUX/bower-designsystem) which includes these automatically. You can also continue to use the FontAwesome CDN if you prefer. Thanks to Rick Dukeshier for raising this issue.
+* May the Fourth be with you!
+
+
+
+###2.7.0 -- April 30, 2016
+
+####CSS Changes
+
+**BREAKING CHANGES**
+* Notifications ([Alerts and Toastrs](http://guxstaging.pbi.global.pvt/design_system/#/feedback)) have been updated and standardized. To use them, note that the icons are now background SVGs embedded in the CSS; you will need to **remove** icons that you added in the alerts themselves such as `<i class="someicon"></i>`.
+
+   ![alert-ss](img/alert-ss.jpg)
+* The `container-fluid` style has been reset to use Bootstrap standard padding of 15px on each side. This means content  inside a container-fluid will appear slightly wider. This was done since the additional padding we were using caused issues with the responsive nav bar.
+
+**NON-BREAKING CHANGES**
+
+* Added custom directives for Design System checkboxes and radio buttons.  Full details and instructions are at the new [Angular Directives](http://guxstaging.pbi.global.pvt/design_system/#/foundation/directives) page. We will be adding more directives in the coming months, both from the team and from third parties.
+
+* Icons on [Error Pages](http://guxstaging.pbi.global.pvt/design_system/#/patterns/errorpages) have been updated, and are now SVG files.
+
+* Updated table header sort and help icons.  See [Elements > Tables](http://guxstaging.pbi.global.pvt/design_system/#/tables/datatable)
+   ![table-headers](img/table-headers.jpg)
+
+#### Site Changes
+
+* Added examples of [Sign Up/Forgot Password](http://guxstaging.pbi.global.pvt/design_system/#/patterns/signinup) pages with a security question.
+* Fixed several display issues reported on Github.
+* Updated Font Awesome to Nucleo conversion PDF on [Foundation > Iconograpy](http://guxstaging.pbi.global.pvt/design_system/#/foundation/iconography).
+
+#### Updated Libraries
+* angular-bootstrap 1.3.1
+* angular-dragula 1.2.4
+* angular-translate 2.11.0
+* angular-translate-loader-partial 2.11.0
+* angular-translate-storage-cookie 2.11.0
+* angular-translate-storage-local 2.11.0
+* angular-ui-select 0.16.1
+* datatables.net 1.10.11
+* datatables.net-bs 1.10.11
+* datatables.net-buttons 1.1.2
+* eslint 2.7.0
+* eslint-config-angular 0.5.0
+* eslint-config-semistandard 6.0.1
+* eslint-config-standard 5.1.0
+* eslint-plugin-angular 1.0.0
+* eslint-plugin-promise 1.1.0
+* eslint-plugin-standard 1.3.2
+* ng-file-upload 12.0.4
+* stylelint 6.2.0
+* stylelint-config-standard 6.0.0
+
+
+#### Thanks to the following contributors and bug reporters:
+
+Cameron Chu, Dave Fondacaro, Rick Cole, Rick Dukeshire, Steve Evermore
+
+------
+
+
+### 2.6.0 -- March 31, 2016
+
+#### CSS Changes
+
+**BREAKING CHANGES**
+* The Sign In and Sign up pages and their siblings have been updated using Flexbox.  The white box and logo and now always vertically centered, and the footer will collapse and stack centered on smaller screens.  The conversion of existing pages requires change to only 3 lines of HTML:
+
+  Before, top of page:
+
+  ```html
+  <div class="signin-wrapper">
+  <div class="signin-body">
+    <a class="signin-pb-logo" href="http://www.pb.com"></a>
+    <div class="signin-box">
+  ```
+  After, add opening tag for `floating-unit` div and replace `signin-body` with `signin-body-top` :
+  ```html
+  <div class="signin-wrapper">
+  <div class="signin-body-top">
+    <div class="floating-unit">
+      <a class="signin-pb-logo" href="http://www.pb.com"></a>
+      <!-- begin white box -->
+      <div class="signin-box">
+  ```
+  &nbsp;
+  Before, toward bottom of page:
+  ```html
+  <!-- // end white box -->
+  </div>
+    <div ng-include="'modules/patterns/templates/includes/footer.html'">  </div>
+  </div>
+  ```
+
+  After, just close the new div after the close of the white box:
+  ```html
+  <!-- // end white box --></div>
+  </div>
+    <div ng-include="'modules/patterns/templates/includes/footer.html'"></div>
+  </div>
+  ```
+
+
+* In response to Github [issue #87](https://github.com/PBGUX/designsystem/issues/87), the utility menu items (the header right-side menus) have been made responsive on mobile devices using the default Bootstrap mobile menu. Some minor code adjustments to the header will need to be made to enable this, please see the sample file linked from [Web > Patterns > Headers & Footers](http://guxstaging.pbi.global.pvt/design_system/#/patterns/headersfooters).
+* The icon font Font Awesome has been deprecated.  We now include a new icon font, Nucleo, whose icon style fits better with PB branding. For icons less than 24 pixels in size, such as inline icons and buttons, use _Nucleo Mini_ and for icons 24 pixels or larger, use _Nucleo Outline_.
+
+  Samples and a PDF conversion table to aid in converting Font Awesome icons to their Nucleo counterparts can be found at [Web > Foundation > Iconography](http://guxstaging.pbi.global.pvt/design_system/#/foundation/iconography).
+
+  The CDN link for Font Awesome (in `index.html`) can still be used for backward compatibility, to avoid breaking icons until you make the switch.
+
+  The fonts files in [/dist/fonts]( https://github.com/PBGUX/designsystem/tree/develop/dist/fonts) must be correctly installed for the new icons to work.
+* Icons in links now have padding to the right, so you should not use a space after the icon.  This is because the space character would get underlined.
+
+  So, instead of
+
+  `<a href=""><i class="someicon"></i> Click me</a>`
+
+  use
+
+  `<a href=""><i class="someicon"></i>Click me</a>` (no space before text).
+* Links in the footer have been edited to reflect the above change.
+
+**NON-BREAKING CHANGES**
+
+* Disabled `input` field colors have been changed to #454545 for the text and #F8F8F8 for the background, matching "read-only" `input` fields
+* In response to Github [issue #73](https://github.com/PBGUX/designsystem/issues/73), made the calendar icon next to the date pickers into a button which pops open the datepicker, see [Web > Elements > UI Controls](http://guxstaging.pbi.global.pvt/design_system/#/uicontrols#datepickers)
+* Added installation via `npm`:
+
+  ```shell
+  npm install pb-design-system
+  ```
+
+
+####Site Changes
+
+* Added guidance for email templates, see [Content > Email](http://guxstaging.pbi.global.pvt/design_system/#/content/emails)
+* Added a sample implementation of Miller Columns, see [Web > Elements > Containers](http://guxstaging.pbi.global.pvt/design_system/#/containers#miller)
+* All Font Awesome icons replaced with Nucleo icons
+* Added Drag and Drop interactions and sample code. See [Web > Patterns > Drag and Drop](http://guxstaging.pbi.global.pvt/design_system/#/patterns/dragdrop)
+* Error pages are now HTML instead of images, [Web > Patterns > Error Pages](http://guxstaging.pbi.global.pvt/design_system/#/patterns/errorpages)
+* Added a Faceted Search sample, [Web > Elements > Tables](http://guxstaging.pbi.global.pvt/design_system/#/tables/datatable#faceted-search)
+* All images in Web section with gradients now correctly show the 2-color gradient
+
+####Updated Libraries
+
+For version numbers, please see `bower.json` and `package.json`
+* angular-chart
+* angular-datatables
+* angular-moment
+* angular-rangeslider
+* angular-xeditable
+* angular-translate
+* highlightjs
+* jquery
+* ngInfiniteScroll
+* angular-ui-select
+
+
+
+####Thanks to the following contributors and bug reporters:
+
+Andy Grossman, Ania Mastriano, Candice Russell, Colin Brunger, Jim Norris, Joan Doutney, Rajeev Verma, Rick Dukeshier, Ron Cianfaglione, Shawn Sharifi
+
+------
+
 ### 2.5.0 -- February 29, 2016
 
 #### CSS Changes
@@ -16,37 +206,37 @@
   ```
 * The signin pages and its children have been updated with a new layout, approved footer/copyright line (you will need to add the correct links to your privacy policy and T&C) and new HTML structure, below. See [Web > Patterns > Sign In & Sign Up](http://guxstaging.pbi.global.pvt/design_system/#/patterns/signinup)
 
-```html
-<body class="site fullscreen signin">
-  <div class="signin-wrapper">
+  ```html
+  <body class="site fullscreen signin">
+    <div class="signin-wrapper">
 
-    <div class="signin-body">
-      <a class="signin-pb-logo" href="http://www.pb.com"></a>
+      <div class="signin-body">
+        <a class="signin-pb-logo" href="http://www.pb.com"></a>
 
-      <div class="signin-box">
-        <h1 class="signin-heading">Product Name<sup>™</sup></h1>
-        <h5 class="signin-subheading">Product tag line</h5>
-        <!-- your sign in content here -->
+        <div class="signin-box">
+          <h1 class="signin-heading">Product Name<sup>™</sup></h1>
+          <h5 class="signin-subheading">Product tag line</h5>
+          <!-- your sign in content here -->
+        </div>
+      </div>
+
+      <div class="signin-footer">
+        Pitney Bowes Inc. the Corporate Logo and Product Name<sup>™</sup> are trademarks of Pitney Bowes Inc. or a subsidiary. All other marks are the intellectual property of their respective owners. <a href="">Privacy</a>&nbsp;|&nbsp;<a href="">Terms and Conditions</a>&nbsp;<a>© 2016 Pitney Bowes Inc. All rights reserved.</a>
       </div>
     </div>
-
-    <div class="signin-footer">
-      Pitney Bowes Inc. the Corporate Logo and Product Name<sup>™</sup> are trademarks of Pitney Bowes Inc. or a subsidiary. All other marks are the intellectual property of their respective owners. <a href="">Privacy</a>&nbsp;|&nbsp;<a href="">Terms and Conditions</a>&nbsp;<a>© 2016 Pitney Bowes Inc. All rights reserved.</a>
-    </div>
-  </div>
-</body>
-```
+  </body>
+  ```
 
 
 **Non-breaking Changes**
 
 * Updated all magenta gradients (such as the header) to a 2-color header, PB Blue to PB Magenta. There is now an extend mixin you can use when you need the gradient in `_mixins.scss`
 
-```scss
-%gradient {
-  background-image: linear-gradient(90deg, $pb-blue 0%, $pb-magenta 100%);
-}
-```
+  ```scss
+  %gradient {
+    background-image: linear-gradient(90deg, $pb-blue 0%, $pb-magenta 100%);
+  }
+  ```
 * Footer copyright updated to 2016 via `new Date()`, no more manual updates
 * The "angular loading bar" plugin has been updated to 0.8.0, and the loading bar itself has been changed from white to turquoise in the css. See [Web > User Feedback](http://guxstaging.pbi.global.pvt/design_system/#/feedback#process).
 * We are now on Angular JS 1.4.9.  See below for all other library updates.

@@ -4,25 +4,26 @@
       <div class="col-md-12">
         <div class="hero-header">
           <div class="eyebrow">Elements</div>
-          <h1>Buttons</h1>
+          <h1>Buttons and Links</h1>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="sub-header jump-bar headroom" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}" headroom offset="240" tolerance="5">
+  <div class="sub-header jump-bar headroom" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}"
+    headroom offset="240" tolerance="5">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <ul class="list-unstyled list-inline jump-menu">
             <li>
-              <a ui-sref="elements.buttons({'#':'action'})">Action</a>
+              <a ui-sref="elements.buttons({'#':'action'})">Action Buttons</a>
             </li>
             <li>
-              <a ui-sref="elements.buttons({'#': 'link'})">Link</a>
+              <a ui-sref="elements.buttons({'#': 'link'})">Links</a>
             </li>
             <li>
-              <a ui-sref="elements.buttons({'#':'tile'})">Tiles</a>
+              <a ui-sref="elements.buttons({'#':'tile'})">Tile Buttons</a>
             </li>
             <li>
               <a ui-sref="elements.buttons({'#':'breadcrumbs'})">Breadcrumbs</a>
@@ -39,9 +40,72 @@
 
   <div class="row">
     <div class="col-md-8">
-      <h1 class="doc-head" id="action">Action</h1>
+      <h1 class="doc-head" id="action">Action Buttons</h1>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="doc-sectionhead">Usage</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      We have four button styles:
+        <ul>
+          <li><b>Primary:</b> Performs the preferred action on the screen. There should be only one default button in a group of buttons.</li>
+          <li><b>Default:</b> The default, non-preferred button.</li>
+          <li><b>Link:</b> Styles the button as a hyperlink that’s aligned with a group of non-link-style buttons.</li>
+          <li><b>Pill:</b> A pill-shaped variation with completely rounded side caps. Currently limited to landing or marketing page use.</li>
+        </ul>
+
+        <p>Their style names correspomd to the CSS classes used by Bootstrap.</p>
+        <p>All buttons share the base CSS class
+          <code>.btn</code>. The other types are created by adding additional classes, as in
+          <code>class="btn btn-primary"</code>.</p>
+
+
+
+    </div>
+    <div class="col-md-7 col-md-offset-1">
+      <div class="row">
+        <div class="col-md-3">
+          <figure>
+            <figcaption>Primary</figcaption>
+          </figure>
+          <button class="btn btn-primary">Label</button>
+        </div>
+        <div class="col-md-3">
+          <figure>
+            <figcaption>Default</figcaption>
+          </figure>
+          <button class="btn btn-default">Label</button>
+        </div>
+        <div class="col-md-3">
+          <figure>
+            <figcaption>Link</figcaption>
+          </figure>
+          <button class="btn btn-link">Label</button>
+        </div>
+        <div class="col-md-3">
+          <figure>
+            <figcaption>Pill (Primary or Default)</figcaption>
+          </figure>
+          <button class="btn btn-default btn-pill">Label</button>
+        </div>
+      </div>
+
+      <div class="row spacer-top-md">
+        <div class="col-md-3"><code>.btn-primary</code></div>
+        <div class="col-md-3"><code>.btn-default</code></div>
+        <div class="col-md-3"><code>.btn-link</code></div>
+        <div class="col-md-3"><code>.btn-pill</code></div>
+      </div>
+    </div>
+  </div>
+
+
 
   <div class="row">
     <div class="col-md-12">
@@ -50,105 +114,169 @@
   </div>
 
   <div class="row">
-    <div class="col-xs-4 col-md-2">
-      <figure>
-        <figcaption>Default</figcaption>
-        <button class="btn btn-primary">Primary</button>
-      </figure>
+    <div class="col-md-4">
+
+      <p>Each button style has four states:</p>
+      <ul>
+        <li>Normal</li>
+        <li>Hovered</li>
+        <li>Focused</li>
+        <li>Disabled</li>
+      </ul>
+
     </div>
-
-    <div class="col-xs-4 col-md-2">
-      <figure>
-        <figcaption>Hover</figcaption>
-        <button class="btn btn-primary hover">Primary</button>
-      </figure>
-    </div>
-
-    <div class="col-xs-4 col-md-2">
-      <figure>
-        <figcaption>Disabled</figcaption>
-        <button class="btn btn-primary" disabled="disabled">Primary</button>
-      </figure>
-    </div>
-  </div>
-
-  <div class="row spacer-top-lg">
-    <div class="col-xs-4 col-md-2">
-      <figure>
-        <figcaption>Default</figcaption>
-        <button class="btn btn-default">Secondary</button>
-      </figure>
-    </div>
-
-    <div class="col-xs-4 col-md-2">
-      <figure>
-        <figcaption>Hover</figcaption>
-        <button class="btn btn-default hover">Secondary</button>
-      </figure>
-    </div>
-
-    <div class="col-xs-4 col-md-2">
-      <figure>
-        <figcaption>Disabled</figcaption>
-        <button class="btn btn-default" disabled="disabled">Secondary</button>
-      </figure>
-    </div>
-  </div>
-
-  <div class="row spacer-top-lg">
-    <div class="col-xs-4 col-md-2">
-      <figure>
-        <figcaption>Default</figcaption>
-        <button class="btn btn-link">Link</button>
-      </figure>
-    </div>
-
-    <div class="col-xs-4 col-md-2">
-      <figure>
-        <figcaption>Hover</figcaption>
-        <button class="btn btn-link hover">Link</button>
-      </figure>
-    </div>
-
-    <div class="col-xs-4 col-md-2">
-      <figure>
-        <figcaption>Disabled</figcaption>
-        <button class="btn btn-link" disabled="disabled">Link</button>
-      </figure>
-    </div>
-  </div>
-
-  <div class="row spacer-top-lg">
-    <div class="col-md-8">
-      <p>Use for landing or marketing pages only</p>
-
-      <div class="doc-gradient clearfix" style="margin: 10px 0; padding: 15px 20px;">
-        <div class="col-sm-4 spacer-top-xs">
+    <div class="col-md-7 col-md-offset-1">
+      <div class="row">
+        <div class="col-xs-3">
           <figure>
-            <figcaption class="ko">Default</figcaption>
-            <button class="btn btn-pill-ko ">Tertiary</button>
+            <figcaption>Normal</figcaption>
+            <button class="btn btn-primary">Primary</button>
           </figure>
         </div>
 
-        <div class="col-sm-4 spacer-top-xs">
+        <div class="col-xs-3">
           <figure>
-            <figcaption class="ko">Hover, slight dropshadow</figcaption>
-            <button class="btn btn-pill-ko  hover">Tertiary</button>
+            <figcaption>Hovered</figcaption>
+            <button class="btn btn-primary hover">Primary</button>
           </figure>
         </div>
 
-        <div class="col-sm-4 spacer-top-xs">
+        <div class="col-xs-3">
           <figure>
-            <figcaption class="ko">Disabled</figcaption>
-            <button class="btn btn-pill-ko " disabled="disabled">Tertiary</button>
+            <figcaption>Focused</figcaption>
+            <button class="btn btn-primary focus">Primary</button>
+          </figure>
+        </div>
+
+        <div class="col-xs-3">
+          <figure>
+            <figcaption>Disabled</figcaption>
+            <button class="btn btn-primary" disabled="disabled">Primary</button>
           </figure>
         </div>
       </div>
 
+      <div class="row spacer-top-lg">
+        <div class="col-xs-3">
+          <figure>
+            <figcaption>Normal</figcaption>
+            <button class="btn btn-default">Default</button>
+          </figure>
+        </div>
+
+        <div class="col-xs-3">
+          <figure>
+            <figcaption>Hovered</figcaption>
+            <button class="btn btn-default hover">Default</button>
+          </figure>
+        </div>
+        <div class="col-xs-3">
+          <figure>
+            <figcaption>Focused</figcaption>
+            <button class="btn btn-default focus">Default</button>
+          </figure>
+        </div>
+
+        <div class="col-xs-3">
+          <figure>
+            <figcaption>Disabled</figcaption>
+            <button class="btn btn-default" disabled="disabled">Default</button>
+          </figure>
+        </div>
+      </div>
+
+      <div class="row spacer-top-lg">
+        <div class="col-xs-3">
+          <figure>
+            <figcaption>Normal</figcaption>
+            <button class="btn btn-link">Link</button>
+          </figure>
+        </div>
+
+        <div class="col-xs-3">
+          <figure>
+            <figcaption>Hovered</figcaption>
+            <button class="btn btn-link hover">Link</button>
+          </figure>
+        </div>
+
+        <div class="col-xs-3">
+          <figure>
+            <figcaption>Focused</figcaption>
+            <button class="btn btn-link focus">Link</button>
+          </figure>
+        </div>
+
+        <div class="col-xs-3">
+          <figure>
+            <figcaption>Disabled</figcaption>
+            <button class="btn btn-link" disabled="disabled">Link</button>
+          </figure>
+        </div>
+      </div>
+
+      <div class="row  spacer-top-lg">
+        <div class="col-xs-3">
+          <figure>
+            <figcaption>Normal</figcaption>
+            <button class="btn btn-primary btn-pill">Pill Buttons</button>
+          </figure>
+        </div>
+
+        <div class="col-xs-3">
+          <figure>
+            <figcaption>Hovered</figcaption>
+            <button class="btn btn-primary btn-pill hover">Pill Buttons</button>
+          </figure>
+        </div>
+        <div class="col-xs-3">
+          <figure>
+            <figcaption>Focused</figcaption>
+            <button class="btn btn-primary btn-pill focus">Pill Buttons</button>
+          </figure>
+        </div>
+
+        <div class="col-xs-3">
+          <figure>
+            <figcaption>Disabled</figcaption>
+            <button class="btn btn-primary btn-pill " disabled="disabled">Pill Buttons</button>
+          </figure>
+        </div>
+      </div>
+
+      <div class="row spacer-top-lg">
+        <div class="col-xs-3">
+          <figure>
+            <figcaption>Normal</figcaption>
+            <button class="btn btn-default btn-pill ">Pill Buttons</button>
+          </figure>
+        </div>
+
+        <div class="col-xs-3">
+          <figure>
+            <figcaption>Hovered</figcaption>
+            <button class="btn btn-default btn-pill  hover">Pill Buttons</button>
+          </figure>
+        </div>
+
+        <div class="col-xs-3">
+          <figure>
+            <figcaption>Focused</figcaption>
+            <button class="btn btn-default btn-pill focus">Pill Buttons</button>
+          </figure>
+        </div>
+
+        <div class="col-xs-3">
+          <figure>
+            <figcaption>Disabled</figcaption>
+            <button class="btn btn-default btn-pill " disabled="disabled">Pill Buttons</button>
+          </figure>
+        </div>
+      </div>
     </div>
   </div>
 
-<!-- button sizes -->
+  <!-- button sizes -->
   <div class="row">
     <div class="col-sm-12">
       <h2 class="doc-sectionhead">Sizes</h2>
@@ -156,70 +284,83 @@
   </div>
 
   <div class="row">
-    <div class="col-sm-6 col-md-4">
-      <figure>
-        <figcaption>Large</figcaption>
-        <button class="btn btn-primary btn-lg">Primary</button>
-        <button class="btn btn-default btn-lg">Secondary</button>
-        <button class="btn btn-link btn-lg">Link</button>
-      </figure>
+    <div class="col-md-4">
+      Buttons are provide in 4 sizes: the default size, which does not require a class;
+      <code>.btn-lg</code>,
+      <code>.btn-sm</code>, and
+      <code>.btn-xs</code>.
     </div>
+    <div class="col-md-7 col-md-offset-1">
+      <div class="row">
+        <div class="col-xs-6">
+          <figure>
+            <figcaption>Large</figcaption>
+            <button class="btn btn-primary btn-lg">Primary</button>
+            <button class="btn btn-default btn-lg">Default</button>
+          </figure>
+        </div>
 
-    <div class="col-sm-6 col-md-4">
-      <figure>
-        <figcaption>Default</figcaption>
-        <button class="btn btn-primary">Primary</button>
-        <button class="btn btn-default">Secondary</button>
-        <button class="btn btn-link">Link</button>
-      </figure>
+        <div class="col-xs-6">
+          <figure>
+            <figcaption>Normal</figcaption>
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-default">Default</button>
+          </figure>
+        </div>
+
+      </div>
+      <div class="row spacer-top-lg">
+
+        <div class="col-xs-6">
+          <figure>
+            <figcaption>Small</figcaption>
+            <button class="btn btn-primary btn-sm">Primary</button>
+            <button class="btn btn-default btn-sm">Default</button>
+            <button class="btn btn-link btn-sm">Link</button>
+          </figure>
+        </div>
+
+        <div class="col-xs-6">
+          <figure>
+            <figcaption>Extra Small</figcaption>
+            <button class="btn btn-primary btn-xs">Primary</button>
+            <button class="btn btn-default btn-xs">Default</button>
+            <button class="btn btn-link btn-xs">Link</button>
+          </figure>
+        </div>
+      </div>
     </div>
-
   </div>
-  <div class="row spacer-top-lg">
 
-    <div class="col-sm-6 col-md-4">
-      <figure>
-        <figcaption>Small</figcaption>
-        <button class="btn btn-primary btn-sm">Primary</button>
-        <button class="btn btn-default btn-sm">Secondary</button>
-        <button class="btn btn-link btn-sm">Link</button>
-      </figure>
-    </div>
-
-    <div class="col-sm-6 col-md-4">
-      <figure>
-        <figcaption>Extra Small</figcaption>
-        <button class="btn btn-primary btn-xs">Primary</button>
-        <button class="btn btn-default btn-xs">Secondary</button>
-        <button class="btn btn-link btn-xs">Link</button>
-      </figure>
-    </div>
-  </div>
-
-<!-- icon buttons -->
+  <!-- icon buttons -->
   <div class="row">
     <div class="col-md-12">
-      <h2 class="doc-sectionhead">Icon</h2>
+      <h2 class="doc-sectionhead">Icons and Badges</h2>
     </div>
   </div>
 
   <div class="row">
+    <div class="col-md-4">
+      Icons or badges can be added to button labels.
+    </div>
 
-    <div class="col-md-3">
+    <div class="col-md-7 col-md-offset-1">
       <figure>
-        <figcaption>Default</figcaption>
         <button class="btn btn-primary">
-          <i class="fa fa-fw fa-envelope"></i>
+          <i class="nc-icon-mini ui-1_email-84"></i>
           Send</button>
         <button class="btn btn-default">
-          <i class="fa fa-fw fa-download"></i>
+          <i class="nc-icon-mini arrows-1_download"></i>
           Download</button>
+        <button class="btn btn-default">Messages
+          <span class="badge">2</span>
+        </button>
       </figure>
     </div>
 
   </div>
 
-<!-- block buttons -->
+  <!-- block buttons -->
   <div class="row">
     <div class="col-md-12">
       <h2 class="doc-sectionhead">Block</h2>
@@ -227,10 +368,12 @@
   </div>
 
   <div class="row">
+    <div class="col-md-4">
+      By adding the class <code>.btn-block</code> to any button, it will take up the maximum width of its container.
+    </div>
 
-    <div class="col-xs-6 col-md-3">
+    <div class="col-md-7 col-md-offset-1">
       <figure>
-        <figcaption>Default</figcaption>
         <button class="btn btn-primary btn-block">Block Button</button>
         <button class="btn btn-default btn-block">Block Button</button>
       </figure>
@@ -238,142 +381,116 @@
 
   </div>
 
-<!-- group buttons -->
+  <!-- group buttons -->
   <div class="row">
     <div class="col-md-12">
       <h2 class="doc-sectionhead">Group</h2>
-
     </div>
   </div>
 
   <div class="row">
-    <div class="col-xs-12 col-md-3">
-      <p>Group a series of buttons together on a single line with the button group.</p>
+    <div class="col-md-4">
+      <p>Group a series of buttons together on a single line by wrapping with
+        <code>div class="btn-group"</code> to create a button group.</p>
     </div>
 
-    <div class="col-xs-8 col-md-5 col-md-offset-1">
+    <div class="col-md-7 col-md-offset-1">
       <figure>
         <figcaption>Standard Button Group</figcaption>
         <div class="btn-group">
-          <div class="btn-group">
-            <button class="btn btn-default" type="button">One</button>
-          </div>
-          <div class="btn-group">
-            <button class="btn btn-default" type="button">Two</button>
-          </div>
-          <div class="btn-group">
-            <button class="btn btn-default" type="button">Three</button>
-          </div>
-          <div class="btn-group">
-            <button class="btn btn-default" type="button">Four</button>
-          </div>
+          <button class="btn btn-default" type="button">One</button>
+          <button class="btn btn-default" type="button">Two</button>
+          <button class="btn btn-default" type="button">Three</button>
+          <button class="btn btn-default" type="button">Four</button>
         </div>
       </figure>
 
-      <figure class="spacer-top-lg">
+      <!-- TODO: need to find a way to make block level button groups work with new min-width rules -->
+
+      <!-- <figure class="spacer-top-lg">
         <figcaption>Block Level Button Group</figcaption>
         <div class="btn-group btn-group-justified">
-          <div class="btn-group">
             <button class="btn btn-default" type="button">One</button>
-          </div>
-          <div class="btn-group">
             <button class="btn btn-default" type="button">Two</button>
-          </div>
-          <div class="btn-group">
             <button class="btn btn-default" type="button">Three</button>
-          </div>
-          <div class="btn-group">
             <button class="btn btn-default" type="button">Four</button>
-          </div>
         </div>
-      </figure>
+      </figure> -->
     </div>
   </div>
 
   <div class="row spacer-top-xl">
-    <div class="col-md-3">
-      <p>You can also add/use icons to create a quick toolbar. For guidelines on Toolbars, please see
+    <div class="col-md-4">
+      <p>You can also add/use icons to create a quick toolbar. For guidelines on Toolbars, please see below and
         <i>Elements &gt; Tables &gt; Datatables</i>.</p>
     </div>
 
-    <div class="col-xs-12 col-md-4 col-md-offset-1">
+    <div class="col-md-7 col-md-offset-1">
+
       <figure>
         <figcaption>Icon Button Group</figcaption>
         <div class="btn-group">
-          <div class="btn-group">
-            <button class="btn btn-default" type="button">
-              <i class="fa fa-commenting fa-lg"></i>
-            </button>
-          </div>
-          <div class="btn-group">
-            <button class="btn btn-default" type="button">
-              <i class="fa fa-hand-stop-o fa-lg"></i>
-            </button>
-          </div>
-          <div class="btn-group">
-            <button class="btn btn-default" type="button">
-              <i class="pb-newfolder pb-lg"></i>
-            </button>
-          </div>
-          <div class="btn-group">
-            <button class="btn btn-default" type="button">
-              <i class="fa fa-object-ungroup fa-lg"></i>
-            </button>
-          </div>
+          <button class="btn btn-default" type="button">
+                <i class="nc-icon-mini ui-2_chat-content"></i>
+              </button>
+
+          <button class="btn btn-default" type="button">
+                <i class="nc-icon-mini files-e_folder-03"></i>
+              </button>
+
+          <button class="btn btn-default" type="button">
+                <i class="nc-icon-mini files-e_folder-add"></i>
+              </button>
+
+          <button class="btn btn-default" type="button">
+                <i class="nc-icon-mini location-e_pin-add"></i>
+              </button>
         </div>
       </figure>
 
       <figure class="spacer-top-lg">
         <figcaption>Icon Button Multiple Groups</figcaption>
-        <div aria-label="Toolbar with button groups" class="btn-toolbar" role="toolbar">
-          <div aria-label="First group" class="btn-group" role="group">
+        <div class="btn-toolbar">
+          <div class="btn-group">
             <button class="btn btn-default" type="button">1</button>
             <button class="btn btn-default" type="button">2</button>
             <button class="btn btn-default" type="button">3</button>
             <button class="btn btn-default" type="button">4</button>
           </div>
-          <div aria-label="Second group" class="btn-group" role="group">
+          <div class="btn-group">
             <button class="btn btn-default" type="button">5</button>
             <button class="btn btn-default" type="button">6</button>
             <button class="btn btn-default" type="button">7</button>
           </div>
-          <div aria-label="Third group" class="btn-group" role="group">
+          <div class="btn-group">
             <button class="btn btn-default" type="button">8</button>
           </div>
         </div>
       </figure>
-    </div>
 
-    <div class="col-md-2">
-      <figure>
+      <figure class="spacer-top-lg">
         <figcaption>Icon Vertical Button Group</figcaption>
         <div class="btn-group btn-group-vertical">
-          <div class="btn-group">
-            <button class="btn btn-default" type="button">
-              <i class="fa fa-commenting"></i>
-            </button>
-          </div>
-          <div class="btn-group">
-            <button class="btn btn-default" type="button">
-              <i class="fa fa-hand-stop-o"></i>
-            </button>
-          </div>
-          <div class="btn-group">
-            <button class="btn btn-default" type="button">
-              <i class="pb-newcatalog"></i>
-            </button>
-          </div>
-          <div class="btn-group">
-            <button class="btn btn-default" type="button">
-              <i class="fa fa-object-ungroup"></i>
-            </button>
-          </div>
+          <button class="btn btn-default" type="button">
+                  <i class="nc-icon-mini ui-2_chat-content"></i>
+                </button>
+
+          <button class="btn btn-default" type="button">
+                  <i class="nc-icon-mini ui-1_settings-gear-64"></i>
+                </button>
+
+          <button class="btn btn-default" type="button">
+                  <i class="nc-icon-mini arrows-e_archive-e-upload"></i>
+                </button>
+
+          <button class="btn btn-default" type="button">
+                  <i class="nc-icon-mini arrows-e_archive-e-download"></i>
+                </button>
+
         </div>
       </figure>
-    </div>
 
-    <div class="col-md-2">
-      <figure>
+      <figure class="spacer-top-lg">
         <figcaption>Vertical Button Group</figcaption>
         <div class="btn-group btn-group-vertical">
           <div class="btn-group">
@@ -390,88 +507,72 @@
           </div>
         </div>
       </figure>
+
     </div>
   </div>
 
-<div class="row">
-  <div class="col-md-12">
-    <h2 class="doc-sectionhead">Toolbar Buttons</h2>
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Toolbar Buttons</h2>
+    </div>
   </div>
-</div>
 
-<div class="row">
-  <div class="col-md-3">
-    Wrap ordinary buttons or icon buttons in a <code>div class="toolbar"</code> to style them as toolbar buttons.  These are used over a table, for example.
-  </div>
-  <div class="col-md-6 col-md-offset-1">
-
-    <div class="row toolbar">
-
-          <div class="col-md-8">
-
-            <button class="btn btn-link" type="button">
-              <i class="fa fa-plus"></i>
+  <div class="row">
+    <div class="col-md-4">
+      <p>Wrap ordinary buttons or icon buttons in a
+        <code>div class="toolbar"</code> to style them as toolbar buttons. These are used over a table, for example. Notice
+        they are slightly smaller and their outlines are dark grey.</p>
+      <p>You can combine buttons and grouped buttons as shown.</p>
+    </div>
+    <div class="col-md-7 col-md-offset-1">
+      <div class="toolbar">
+        <button class="btn btn-link" type="button">
+              <i class="nc-icon-mini ui-1_bold-add"></i>
             </button>
 
-            <div class="btn-group dropdown">
-              <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-print"></i> <i class="fa fa-angle-down"></i>
+        <div class="btn-group dropdown">
+          <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                <i class="nc-icon-mini tech_print"></i>
+                <i class="nc-icon-mini arrows-3_small-down"></i>
               </button>
-              <ul class="dropdown-menu">
-                <li><a href="">Action</a></li>
-                <li><a href="">Another action</a></li>
-                <li><a href="">Something else here</a></li>
-                <li><a href="">Separated link</a></li>
-              </ul>
-            </div>
-
-            <button class="btn btn-link" type="button">
-              <i class="fa fa-trash-o"></i>
-            </button>
-
-            <button class="btn btn-link" type="button">
-              <i class="fa fa-pencil"></i>
-            </button>
-
-            <button class="btn btn-link" type="button">
-              <i class="fa fa-external-link"></i> Export
-            </button>
-
-            <button class="btn btn-link" type="button">
-              Import
-            </button>
-
-          </div>
-          <div class="col-md-4 text-right">
-            <form class="form-inline pull-right ng-pristine ng-valid">
-
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default active">
-                  <input type="radio" name="options-1" autocomplete="off" checked=""><i class="fa fa-fw fa-th-list"></i>
-                </label>
-
-                <label class="btn btn-default">
-                  <input type="radio" name="options-1" autocomplete="off" checked=""><i class="fa fa-fw fa-th"></i>
-                </label>
-              </div>
-
-            </form>
-          </div>
-
+          <ul class="dropdown-menu">
+            <li>
+              <a href="">Action</a>
+            </li>
+            <li>
+              <a href="">Another action</a>
+            </li>
+            <li>
+              <a href="">Something else here</a>
+            </li>
+            <li>
+              <a href="">Separated link</a>
+            </li>
+          </ul>
         </div>
+        <button class="btn btn-default" type="button">
+              <i class="nc-icon-mini ui-1_trash-simple"></i>
+            </button>
 
+        <button class="btn btn-default" type="button">
+              <i class="nc-icon-mini ui-1_pencil"></i>
+            </button>
+        <div class="btn-group">
+          <button class="btn btn-default" type="button">
+                <i class="nc-icon-mini arrows-2_square-upload"></i>
+                Export
+              </button>
+          <button class="btn btn-default" type="button">
+                <i class="nc-icon-mini arrows-2_square-download"></i>
+                Import
+              </button>
+        </div>
+      </div>
 
-
-
-
-
-
+    </div>
   </div>
-</div>
 
-
-
-<!-- toggle buttons -->
+  <!-- toggle buttons -->
   <div class="row">
     <div class="col-md-12">
       <h2 class="doc-sectionhead">Toggle</h2>
@@ -479,71 +580,102 @@
   </div>
 
   <div class="row">
-
-    <div class="col-xs-6 col-md-3">
-      <figure>
-        <figcaption>Simple Toggle</figcaption>
-        <div class="btn-group" data-toggle="buttons">
-          <label class="btn btn-default active">
-            <input autocomplete="off" checked id="option1" name="options" type="radio">
-            Selected
-          </label>
-          <label class="btn btn-default">
-            <input autocomplete="off" id="option2" name="options" type="radio">
-            Default
-          </label>
-
-        </div>
-      </figure>
+    <div class="col-md-4">
+      <p>Toggle buttons are buttons that have a "on" and an "off" state. They can be grouped to create controls for multiple
+        states. Grouped toggle buttons can be act like either "checkboxes" or "radio buttons," to allow for multiple active
+        or mutually exclusive buttons, respectively.</p>
+      <p>For more info on toggle buttons and their methods, please see the
+        <a href="http://getbootstrap.com/javascript/#buttons" target="_blank">Bootstrap documentation</a>.</p>
+      <p>Angular JS developers might also want to consider
+        <a href="https://angular-ui.github.io/bootstrap/#/buttons">Angular Bootstrap components</a> which provide easier
+        inegration with apps.</p>
     </div>
 
-    <div class="col-xs-6 col-md-4">
+    <div class="col-md-7 col-md-offset-1">
+
+      <!-- TODO: Work out active state for single toggle -->
+
+      <!-- <figure>
+          <figcaption>Single Toggle</figcaption>
+          <button type="button" class="btn btn-default" data-toggle="button" aria-pressed="false" autocomplete="off">
+          Single toggle
+          </button>
+        </figure> -->
+
       <figure>
-        <figcaption>Toggle with Notification</figcaption>
+        <figcaption>Checkbox Goup</figcaption>
         <div class="btn-group" data-toggle="buttons">
-          <label class="btn btn-default">
-            <input autocomplete="off" checked id="option4" name="options" type="radio">
-            Data View 1
-          </label>
           <label class="btn btn-default active">
-            <input autocomplete="off" id="option5" name="options" type="radio">
-            Data View 2
-            <span class="badge">2</span>
-          </label>
+                <input type="checkbox" autocomplete="off" checked>
+                Checkbox 1 (pre-checked)
+              </label>
+          <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off">
+                Checkbox 2
+              </label>
+          <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off">
+                Checkbox 3
+              </label>
         </div>
       </figure>
+
+      <figure class="spacer-top-lg">
+        <figcaption>Radio Button Group</figcaption>
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-default active">
+                <input type="radio" name="options" id="option1a" autocomplete="off" checked>
+                Radio 1 (preselected)
+              </label>
+          <label class="btn btn-default">
+                <input type="radio" name="options" id="option2a" autocomplete="off">
+                Radio 2
+              </label>
+          <label class="btn btn-default">
+                <input type="radio" name="options" id="option3a" autocomplete="off">
+                Radio 3
+              </label>
+        </div>
+      </figure>
+
+      <figure class="spacer-top-lg">
+        <figcaption>Toggle with Badge</figcaption>
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-default">
+                <input autocomplete="off" checked id="option4" name="options" type="radio">
+                Data View 1
+              </label>
+          <label class="btn btn-default active">
+                <input autocomplete="off" id="option5" name="options" type="radio">
+                Data View 2
+                <span class="badge">2</span>
+              </label>
+        </div>
+      </figure>
+
     </div>
+
   </div>
 
-<!-- TODO: need more research on ui-sref anchor links, this is not working, see: -->
-<!-- https://github.com/angular-ui/ui-router/pull/1867 -->
-<!-- <div class="row">
-    <div class="col-md-12 spacer-top-lg">
-      <p>See also: <a href="" ui-sref="feedback.page({ '#': 'badges' })">badges</a>, <a href="" ui-sref="elements.uicontrols({'#': 'checkboxes'})">checkboxes</a>, <a href="" ui-sref="elements.uicontrols({'#': 'radios'})">radio buttons</a></p>
-
-    </div>
-  </div> -->
-
-<!-- dropdown buttons -->
+  <!-- dropdown buttons -->
   <div class="row">
     <div class="col-md-12">
       <h2 class="doc-sectionhead">Single Dropdown</h2>
     </div>
   </div>
-
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
       <p>Turn a button into a dropdown toggle with some basic markup changes.</p>
     </div>
 
-    <div class="col-sm-3 col-md-2 col-md-offset-1">
+    <div class="col-md-7 col-md-offset-1">
       <figure>
         <figcaption>Dropdown Button</figcaption>
         <div class="btn-group">
           <button class="btn btn-default btn dropdown-toggle" data-toggle="dropdown" type="button">
-            Button
-            <span class="caret"></span>
-          </button>
+                Button
+                <span class="caret"></span>
+              </button>
           <ul class="dropdown-menu" role="menu">
             <li>
               <a href="#">Action</a>
@@ -561,9 +693,7 @@
           </ul>
         </div>
       </figure>
-    </div>
 
-    <div class="col-sm-6 col-sm-5">
       <figure>
         <figcaption>Dropdown Button in Button Group</figcaption>
         <div class="btn-group">
@@ -571,8 +701,8 @@
           <button class="btn btn-default" type="Button">Button</button>
           <div class="btn-group">
             <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="Button">Dropdown
-              <span class="caret"></span>
-            </button>
+                  <span class="caret"></span>
+                </button>
             <ul class="dropdown-menu">
               <li>
                 <a href="#">Action</a>
@@ -601,22 +731,20 @@
   </div>
 
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
       <p>Place a
-        <code>.btn-group</code>
-        within another
-        <code>.btn-group</code>
-        when you want dropdown menus mixed with a series of buttons.</p>
+        <code>.btn-group</code> within another
+        <code>.btn-group</code> when you want dropdown menus mixed with a series of buttons.</p>
     </div>
 
-    <div class="col-md-3 col-md-offset-1">
+    <div class="col-md-7 col-md-offset-1">
       <figure>
         <figcaption>Split Dropdown Button</figcaption>
         <div class="btn-group">
           <button class="btn btn-default" type="Button">Button</button>
           <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-            <span class="caret"></span>
-          </button>
+                  <span class="caret"></span>
+                </button>
           <ul class="dropdown-menu">
             <li>
               <a href="#">Action</a>
@@ -634,16 +762,14 @@
           </ul>
         </div>
       </figure>
-    </div>
 
-    <div class="col-md-3">
-      <figure>
+      <figure class="spacer-top-lg">
         <figcaption>Dropup Buttons</figcaption>
         <div class="btn-group dropup">
           <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="Button">Button
-            <span class="caret"></span>
-            <span class="sr-only">Toggle Dropdown</span>
-          </button>
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
           <ul class="dropdown-menu" role="menu">
             <li>
               <a href="#">Action</a>
@@ -664,8 +790,8 @@
         <div class="btn-group dropup">
           <button class="btn btn-primary" type="Button">Button</button>
           <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-            <span class="caret"></span>
-          </button>
+                  <span class="caret"></span>
+                </button>
           <ul class="dropdown-menu">
             <li>
               <a href="#">Action</a>
@@ -683,13 +809,8 @@
           </ul>
         </div>
       </figure>
-    </div>
 
-  </div>
-
-  <div class="row spacer-top-md">
-    <div class="col-md-3 col-md-offset-4">
-      <figure>
+      <figure class="spacer-top-lg">
         <figcaption>Mixed Buttons and Drop-buttons</figcaption>
         <div aria-label="..." class="btn-group" role="group">
           <button class="btn btn-default" type="button">1</button>
@@ -697,9 +818,9 @@
 
           <div class="btn-group" role="group">
             <button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
-              Dropdown
-              <span class="caret"></span>
-            </button>
+                    Dropdown
+                    <span class="caret"></span>
+                  </button>
             <ul class="dropdown-menu">
               <li>
                 <a href="#">Dropdown link</a>
@@ -711,10 +832,8 @@
           </div>
         </div>
       </figure>
-    </div>
 
-    <div class="col-md-3">
-      <figure>
+      <figure class="spacer-top-lg">
         <figcaption>Vertical as Well</figcaption>
         <div aria-label="..." class="btn-group-vertical" role="group">
           <button class="btn btn-default" type="button">1</button>
@@ -722,9 +841,9 @@
 
           <div class="btn-group" role="group">
             <button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
-              Dropdown
-              <span class="caret"></span>
-            </button>
+                    Dropdown
+                    <span class="caret"></span>
+                  </button>
             <ul class="dropdown-menu">
               <li>
                 <a href="#">Dropdown link</a>
@@ -737,287 +856,257 @@
         </div>
       </figure>
     </div>
-  </div>
 
-<!-- functional buttons-->
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Functional</h2>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-4">
-      <figure>
-        <figcaption>Bootstrap Functional Colors</figcaption>
-        <button class="btn btn-success">Success</button>
-        <button class="btn btn-info">Info</button>
-        <button class="btn btn-warning">Warning</button>
-        <button class="btn btn-danger">Danger</button>
-      </figure>
-    </div>
-  </div>
-
-<!-- Writing button copy -->
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Writing Button Copy</h2>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-6">
-      <p>All buttons should:</p>
-      <ul>
-        <li>Use title capitalization</li>
-        <li>Never conclude with a period</li>
-        <li>Capitalize all words containing four or more letters</li>
-      </ul>
-
-      <b>Length and Wording</b>
-      <p>Keep word counts to three words or fewer if possible. If you need to use more than three words, use the smallest number of words for conveying the button’s call to action.</p>
-
-      <p>Use action verbs (“get,” “see,” “filter,” “send,” “download,” “go to,” “share,” etc.) and make sure that the terminology you’re using is customer-facing and consistent with the rest of your product.</p>
-
-      <p>
-        Use “OK” in button labels, not “Okay” or “okay”.
-      </p>
-
-      <p>See also: <a href="" ui-sref="foundation.writing.page">writing</a></p>
-
-    </div>
-  </div>
-
-<!-- LINKS -->
-  <div class="row">
-    <div class="col-md-8">
-      <h1 class="doc-head" id="link">Link</h1>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Link Style</h2>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-3">
-      <p>You can include an icon with your link if it will increase the user&rsquo;s understanding. But avoid using icons that are unclear or unnecessary.</p>
+    <!-- functional buttons-->
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Bootstrap Functional Buttons</h2>
+      </div>
     </div>
 
-    <div class="col-md-3 col-md-offset-1">
-      <figure>
-        <figcaption>Standard Link</figcaption>
-        <a href="">Lorem ipsum dolor</a>
-      </figure>
-    </div>
-
-    <div class="col-md-3">
-      <figure>
-        <figcaption>Icon Link</figcaption>
-        <a href="">
-          <i class="fa fa-envelope"></i>
-          Lorem ipsum dolor</a>
-      </figure>
-    </div>
-  </div>
-
-<!-- Writing link copy -->
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Writing Link Copy</h2>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-6">
-      <p>Hyperlinked buttons should:</p>
-      <ul>
-        <li>Feel conversational</li>
-        <li>Use active writing and be positive</li>
-        <li>Use sentence capitalization</li>
-        <li>Never conclude with punctuation unless they are formed as questions</li>
-      </ul>
-
-      <p>See also: <a href="" ui-sref="foundation.writing.page">writing</a></p>
-    </div>
-  </div>
-
-<!-- BUTTON TOOLBARS -->
-<!-- <div class="row">
-    <div class="col-md-8">
-      <h1 id="toolbar" class="doc-head">Toolbar</h1>
-    </div>
-  </div>
-
-
-  <div class="row">
-    <div class="col-md-12">
-      <p>
-        Grouped buttons (see above) can use Icons and therefore be used as a Toolbar
-      </p>
-      <p>Toolbars can be used with or without borders by adding <code>btn-group-borderless</code>.</p>
-    </div>
-  </div>
-
-
-  <div class="row spacer-top-md">
-    <div class="col-md-12">
-      <figure>
-        <figcaption>Default Action Buttons</figcaption>
-          <div class="btn-group">
-            <button class="btn btn-default btn-sm"><i class="fa fa-fw fa-plus"></i> New</button>
-          </div>
-
-          <div class="btn-group">
-            <button class="btn btn-default btn-sm"><i class="fa fa-fw fa-pencil"></i></button>
-            <button class="btn btn-default btn-sm"><i class="fa fa-fw fa-copy"></i></button>
-            <button class="btn btn-default btn-sm"><i class="fa fa-fw fa-trash-o"></i></button>
-          </div>
-
-          <div class="btn-group">
-            <button class="btn btn-default btn-sm"><i class="fa fa-fw fa-th-list"></i></button>
-            <button class="btn btn-default btn-sm"><i class="fa fa-fw fa-th"></i></button>
-          </div>
-
-          <div class="btn-group">
-            <button class="btn btn-default btn-sm"><i class="fa fa-fw fa-sliders"></i></button>
-          </div>
-      </figure>
-    </div>
-  </div>
-
-<div class="row">
-    <div class="col-md-4">
-      <figure>
-        <figcaption>Vertical Toolbar</figcaption>
-        <div class="btn-group-vertical">
-          <button class="btn btn-default" type="Button"><i class="fa fa-floppy-o"/></button>
-          <button class="btn btn-default" type="Button"><i class="fa fa-files-o"/></button>
-          <button class="btn btn-default" type="Button"><i class="fa fa-scissors"/></button>
-          <button class="btn btn-default" type="Button"><i class="fa fa-trash-o"/></button>
-        </div>
-      </figure>
-    </div>
-  </div>
- -->
-
-<!-- BUTTON TILES -->
-  <div class="row">
-    <div class="col-md-8">
-      <h1 class="doc-head" id="tile">Tiles</h1>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Usage</h2>
-      <p>We use tiled buttons to highlight functionality that defines the purpose of a particular product. These buttons:</p>
-      <ul>
-        <li>Can be either bordered or borderless</li>
-        <li>Are visually prominent and highly graphical</li>
-        <li>Make use of icons or recognizable brand elements</li>
-        <li>Are designed to be easy for users to see and click on</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Tile States</h2>
-    </div>
-  </div>
-  <div class="row ">
-    <div class="col-sm-3">
-      <figure>
-        <figcaption>Disabled</figcaption>
-        <button type="button" name="button" class="btn btn-default tile-button" disabled="disabled"><img src="assets/images/logo-usps.png" alt="" /></button>
-
-      </figure>
-    </div>
-
-    <div class="col-sm-3">
-      <figure>
-        <figcaption>Default</figcaption>
-        <button type="button" name="button" class="btn btn-default tile-button"><img src="assets/images/logo-usps.png" alt="" /></button>
-      </figure>
-    </div>
-
-    <div class="col-sm-3">
-      <figure>
-        <figcaption>Hover</figcaption>
-        <button type="button" name="button" class="btn btn-default tile-button hover"><img src="assets/images/logo-usps.png" alt="" /></button>
-      </figure>
-    </div>
-
-    <div class="col-sm-3">
-      <figure>
-        <figcaption>Active</figcaption>
-        <button type="button" name="button" class="btn btn-default tile-button active"><img src="assets/images/logo-usps.png" alt="" /></button>
-      </figure>
-    </div>
-  </div>
-
-
-  <div class="row spacer-top-xl" >
-    <div class="col-md-12">
-      <h1 id="breadcrumbs">Breadcrumbs</h1>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Usage</h2>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-6">
-      <p>Breadcrumb navigation should: </p>
-      <ul>
-        <li>Reflect a product’s static page hierarchy</li>
-        <li>Appear above the H1 header page titles</li>
-      </ul>
-
-      <figure class="spacer-top-lg">
-        <figcaption>Breadcrumb with Home Level</figcaption>
-        <ol class="breadcrumb">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Settings</a></li>
-          <li><a href="#">Billing</a></li>
-          <li class="active">Payment Method</li>
-        </ol>
-        <h1>Sample Title</h1>
-      </figure>
-
-      <figure class="spacer-top-lg">
-        <figcaption>Breadcrumb without Home Level</figcaption>
-        <ol class="breadcrumb">
-          <li><a href="#">Settings</a></li>
-          <li><a href="#">Billing</a></li>
-          <li class="active">Payment Method</li>
-        </ol>
-        <h1>Sample Title</h1>
-      </figure>
-
-      <div class="row">
-        <div class="col-md-12">
-          <h2 class="doc-sectionhead">Style</h2>
-          <p>Breadcrumb navigation: </p>
-          <li>Uses title capitalization</li>
-          <li>Can treat the “Home” level as optional</li>
-          <li>Uses <b>forward slashes</b> (not chevrons, bullets, or colons) as dividers</li>
-          <li>Uses an “em” space on either side of forward slash dividers</li>
-          <li>Displays the current page location, which is not hyperlinked</li>
-          <li>Can abbreviate longer page titles if it’s possible to do so without sacrificing clarity</li>
-        </div>
-
+    <div class="row">
+      <div class="col-md-4">
+        Provided for backward compatibility, these are the functional buttons provided by the Bootstrap framework, with the colors
+        adjusted to match our palette.
+      </div>
+      <div class="col-md-7 col-md-offset-1">
+        <figure>
+          <button class="btn btn-success">Success</button>
+          <button class="btn btn-info">Info</button>
+          <button class="btn btn-warning">Warning</button>
+          <button class="btn btn-danger">Danger</button>
+        </figure>
       </div>
 
-
-
     </div>
-  </div>
 
+    <!-- Writing button copy -->
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Writing Button Copy</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <p>All buttons should:</p>
+        <ul>
+          <li>Use title capitalization</li>
+          <li>Never conclude with a period</li>
+          <li>Capitalize all words containing four or more letters</li>
+        </ul>
+
+        <b>Length and Wording</b>
+        <p>Keep word counts to three words or fewer if possible. If you need to use more than three words, use the smallest
+          number of words for conveying the button’s call to action.</p>
+
+        <p>Use action verbs (“get,” “see,” “filter,” “send,” “download,” “go to,” “share,” etc.) and make sure that the terminology
+          you’re using is customer-facing and consistent with the rest of your product.</p>
+
+        <p>
+          Use “OK” in button labels, not “Okay” or “okay”.
+        </p>
+
+        <p>See also:
+          <a href="" ui-sref="foundation.writing.page">writing</a>
+        </p>
+
+      </div>
+    </div>
+
+    <!-- LINKS -->
+    <div class="row">
+      <div class="col-md-8">
+        <h1 class="doc-head" id="link">Links</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Link Style</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <p>You can include an icon with your link if it will increase the user&rsquo;s understanding. But avoid using icons
+          that are unclear or unnecessary.</p>
+      </div>
+
+      <div class="col-md-3 col-md-offset-1">
+        <figure>
+          <figcaption>Standard Link</figcaption>
+          <a href="">Lorem ipsum dolor</a>
+        </figure>
+      </div>
+
+      <div class="col-md-3">
+        <figure>
+          <figcaption>Icon Link</figcaption>
+
+          <a href="">
+            <i class="nc-icon-mini ui-1_email-84 link-icon"></i>Lorem ipsum dolor</a>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Writing link copy -->
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Writing Link Copy</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <p>Hyperlinked buttons should:</p>
+        <ul>
+          <li>Feel conversational</li>
+          <li>Use active writing and be positive</li>
+          <li>Use sentence capitalization</li>
+          <li>Never conclude with punctuation unless they are formed as questions</li>
+        </ul>
+
+        <p>See also:
+          <a href="" ui-sref="content.overview">writing</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- BUTTON TILES -->
+    <div class="row">
+      <div class="col-md-8">
+        <h1 class="doc-head" id="tile">Tiles</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Usage</h2>
+        <p>We use tiled buttons to highlight functionality that defines the purpose of a particular product. These buttons:</p>
+        <ul>
+          <li>Can be either bordered or borderless</li>
+          <li>Are visually prominent and highly graphical</li>
+          <li>Make use of icons or recognizable brand elements</li>
+          <li>Are designed to be easy for users to see and click on</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Tile States</h2>
+      </div>
+    </div>
+    <div class="row ">
+
+
+      <div class="col-sm-3">
+        <figure>
+          <figcaption>Normal</figcaption>
+          <button type="button" name="button" class="btn btn-default tile-button"><img src="assets/images/logo-usps.png" alt=""/></button>
+        </figure>
+      </div>
+
+      <div class="col-sm-3">
+        <figure>
+          <figcaption>Hovered</figcaption>
+          <button type="button" name="button" class="btn btn-default tile-button hover"><img src="assets/images/logo-usps.png" alt=""/></button>
+        </figure>
+      </div>
+
+      <div class="col-sm-3">
+        <figure>
+          <figcaption>Active</figcaption>
+          <button type="button" name="button" class="btn btn-default tile-button active"><img src="assets/images/logo-usps.png" alt=""/></button>
+        </figure>
+      </div>
+
+      <div class="col-sm-3">
+        <figure>
+          <figcaption>Disabled</figcaption>
+          <button type="button" name="button" class="btn btn-default tile-button" disabled="disabled"><img src="assets/images/logo-usps.png" alt=""/></button>
+
+        </figure>
+      </div>
+    </div>
+
+
+
+    <div class="row spacer-top-xl">
+      <div class="col-md-12">
+        <h1 id="breadcrumbs">Breadcrumbs</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Usage</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <p>Breadcrumb navigation should:
+        </p>
+        <ul>
+          <li>Reflect a product’s static page hierarchy</li>
+          <li>Appear above the H1 header page titles</li>
+        </ul>
+
+      </div>
+      <div class="col-md-7 col-md-offset-1">
+        <figure>
+          <figcaption>Breadcrumb with Home Level</figcaption>
+          <ol class="breadcrumb">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Settings</a>
+            </li>
+            <li>
+              <a href="#">Billing</a>
+            </li>
+            <li class="active">Payment Method</li>
+          </ol>
+          <h1>Sample Title</h1>
+        </figure>
+
+        <figure class="spacer-top-lg">
+          <figcaption>Breadcrumb without Home Level</figcaption>
+          <ol class="breadcrumb">
+            <li>
+              <a href="#">Settings</a>
+            </li>
+            <li>
+              <a href="#">Billing</a>
+            </li>
+            <li class="active">Payment Method</li>
+          </ol>
+          <h1>Sample Title</h1>
+        </figure>
+      </div>
+</div>
+
+
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="doc-sectionhead">Style</h2>
+            <p>Breadcrumb navigation:
+            </p>
+            <li>Uses title capitalization</li>
+            <li>Can treat the “Home” level as optional</li>
+            <li>Uses
+              <b>forward slashes</b> (not chevrons, bullets, or colons) as dividers</li>
+            <li>Uses an “em” space on either side of forward slash dividers</li>
+            <li>Displays the current page location, which is not hyperlinked</li>
+            <li>Can abbreviate longer page titles if it’s possible to do so without sacrificing clarity</li>
+          </div>
+
+        </div>
+
+
+
+  </div>
 </div>

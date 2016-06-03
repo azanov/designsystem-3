@@ -1,9 +1,7 @@
-(function() {
-
+(function () {
   'use strict';
 
-  angular.module('pb.ds.elements').controller('ContainersController', function($log) {
-
+  angular.module('pb.ds.elements').controller('ContainersController', function ($log) {
     var _this = this;
 
     _this.imageGallery = {
@@ -56,7 +54,7 @@
       ],
       selected: 0,
       selectedImage: 'pb_cls_box_157317098',
-      click: function(item, index) {
+      click: function (item, index) {
         _this.imageGallery.selectedImage = item.imageName;
         _this.imageGallery.selected = index;
       },
@@ -82,48 +80,48 @@
           }
         ]
       }
-    }
+    };
 
     _this.itemGallery = {
       items: [
         {
           title: 'Self Assessment',
-          icon: 'fa-search',
+          icon: 'ui-1_zoom',
           description: 'Lorem ipsum dolor'
         },
         {
           title: 'Capital Gains Tax',
-          icon: 'fa-umbrella',
+          icon: 'objects_umbrella-13',
           description: 'Lorem ipsum dolor'
         },
         {
           title: 'Child Benefit',
-          icon: 'fa-wifi',
+          icon: 'tech_wifi',
           description: 'Lorem ipsum dolor'
         },
         {
           title: 'Corporation Tax',
-          icon: 'fa-user',
+          icon: 'users_single-04',
           description: 'Lorem ipsum dolor'
         },
         {
           title: 'Income Tax',
-          icon: 'fa-shopping-cart',
+          icon: 'shopping_cart',
           description: 'Lorem ipsum dolor'
         },
         {
           title: 'Inheritance Tax',
-          icon: 'fa-user',
+          icon: 'users_single-04',
           description: 'Lorem ipsum dolor'
         },
         {
           title: 'Premium Tax',
-          icon: 'fa-glass',
+          icon: 'food_drink',
           description: 'Lorem ipsum dolor'
         },
         {
           title: 'National Insurance',
-          icon: 'fa-tint',
+          icon: 'business_bank',
           description: 'Lorem ipsum dolor'
         }
       ],
@@ -149,8 +147,6 @@
           }
         ]
       }
-    }
-
+    };
   });
-
 })();

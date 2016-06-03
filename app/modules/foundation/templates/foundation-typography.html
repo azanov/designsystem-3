@@ -19,6 +19,7 @@
             <li><a ui-sref="foundation.typography({'#':'tabs-tables'})">Tabs &amp; Tables</a></li>
             <li><a ui-sref="foundation.typography({'#':'navigation'})">Navigation</a></li>
             <li><a ui-sref="foundation.typography({'#':'ui-controls'})">UI Controls</a></li>
+            <li><a ui-sref="foundation.typography({'#':'colors'})">Text Colors</a></li>
             <li><a ui-sref="foundation.typography({'#':'lists'})">Lists</a></li>
           </ul>
         </div>
@@ -92,7 +93,7 @@
         </tbody>
       </table>
 
-      <p>For offline use of Precision Sans, visit <a href="http://152.144.193.74:8503/content/pbdam/en.html" target="_blank">Brand Central</a> to download the font.</p>
+      <p>For offline use of Precision Sans, <a href="modules/foundation/assets/PrecisionSans.zip">download the fonts here</a></p>
     </div>
   </div>
 
@@ -215,24 +216,15 @@
       <figure>
         <h2 class="tab-header specifications">Header Above a Section of Tabs</h2>
 
-          <uib-tabset>
-            <uib-tab>
-              <tab-heading>
-                Tab One
-              </tab-heading>
-            </tab>
-            <uib-tab>
-              <tab-heading>
-                Tab Two
-              </tab-heading>
-            </uib-tab>
-            <uib-tab>
-              <tab-heading>
-                Tab Three
-              </tab-heading>
-            </uib-tab>
-          </uib-tabset>
+        <ul class="nav nav-tabs">
+          <li class="active">
+            <a href="">Tab 1</a>
+          </li>
 
+          <li class="nav-item">
+            <a href="">Tab 2</a>
+          </li>
+        </ul>
       </figure>
     </div>
   </div>
@@ -336,6 +328,19 @@
         </tr>
       </table>
 
+    </div>
+  </div>
+
+
+  <div  class="row">
+    <div class="col-xs-12">
+      <h1 id="colors" class="doc-head">Colors</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <p>Although the colors defined above should be used, in some cases you may need to color a particular piece of text a specific color from the Design System palette. We have provided <a ui-sref="helpers({'#':'text-colors'})">Helper classes</a> designed for this purpose. </p>
     </div>
   </div>
 
@@ -470,5 +475,7 @@
       </figure>
     </div>
   </div>
+
+
 
 </div>

@@ -16,9 +16,12 @@
         <li>Consider using vertical tabs for if you have 5 or more items that won’t fit on one horizontal row</li>
       </ul>
 
+      <p>Below are samples of the default tab controls supplied with Boostrap.  These are simple to use, require no additional Javascript development and are configured and used completely from the HTML markup.</p>
+
+      <p>For Angular JS development, there is a set of native AngularJS directives based on Bootstrap's markup and CSS which are styled to match the Design System. Visit our <a href="" ui-sref="elements.uibootstrap">Angular Bootstrap section</a> for details.</p>
+
     </div>
   </div>
-
 
   <div class="row">
     <div class="col-md-12">
@@ -26,17 +29,15 @@
     </div>
   </div>
 
-
   <div class="row">
     <div class="col-md-6">
       <figure>
         <figcaption>Standard Tabs</figcaption>
-        <!-- Nav tabs -->
         <ul class="nav nav-tabs">
           <li class="active"><a data-target="#home" data-toggle="tab">Home</a></li>
           <li><a data-target="#profile" data-toggle="tab">Profile</a></li>
-          <li><a data-target="#messages" data-toggle="tab">Messages</a></li>
-          <li><a data-target="#settings" data-toggle="tab">Settings</a></li>
+          <li><a data-target="#messages" data-toggle="tab">User Settings</a></li>
+          <li><a data-target="#settings" data-toggle="tab">Cost Accounts</a></li>
         </ul>
         <!-- Tab panes -->
         <div class="tab-content">
@@ -45,18 +46,18 @@
           <div class="tab-pane fade" id="messages">Messages text lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit illo ipsum est in autem eveniet, quae quos id.</div>
           <div class="tab-pane fade" id="settings">Settings text lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore provident maxime possimus quam! Quia doloribus, sint nisi mollitia dolorem ipsa doloremque excepturi ea nemo. In.</div>
         </div>
+
       </figure>
     </div>
 
     <div class="col-md-6">
       <figure>
         <figcaption>Justified Tabs</figcaption>
-        <!-- Nav tabs -->
         <ul class="nav nav-tabs nav-justified">
           <li class="active"><a data-target="#home2" data-toggle="tab">Home</a></li>
           <li><a data-target="#profile2" data-toggle="tab">Profile</a></li>
-          <li><a data-target="#messages2" data-toggle="tab">Messages</a></li>
-          <li><a data-target="#settings2" data-toggle="tab">Settings</a></li>
+          <li><a data-target="#messages2" data-toggle="tab">User Settings</a></li>
+          <li><a data-target="#settings2" data-toggle="tab">Cost Accounts</a></li>
         </ul>
         <!-- Tab panes -->
         <div class="tab-content">
@@ -72,22 +73,32 @@
   <div class="row spacer-top-xl">
     <div class="col-md-6">
       <figure>
-              <figcaption>Sliding Tabs</figcaption>
-              <div class="tabs-fancy">
-                <ul class="nav nav-tabs">
-                  <li class="active"><a data-target="#home3" data-toggle="tab">Home</a></li>
-                  <li><a data-target="#profile3" data-toggle="tab">Profile</a></li>
-                  <li><a data-target="#messages3" data-toggle="tab">Messages</a></li>
-                  <li><a data-target="#settings3" data-toggle="tab">Settings</a></li>
-                </ul>
-                <div class="tab-content">
-                  <div class="tab-pane fade in active" id="home3">Home text lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui nisi quo, dolores ipsa, ut perferendis.</div>
-                  <div class="tab-pane fade" id="profile3">Profile text lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate assumenda ipsam nisi quaerat reiciendis, corporis. Dolor nostrum officia repudiandae, velit sit voluptates aliquid aperiam ut?</div>
-                  <div class="tab-pane fade" id="messages3">Messages text lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit illo ipsum est in autem eveniet, quae quos id.</div>
-                  <div class="tab-pane fade" id="settings3">Settings text lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore provident maxime possimus quam! Quia doloribus, sint nisi mollitia dolorem ipsa doloremque excepturi ea nemo. In.</div>
-                </div>
-              </div>
-            </figure>
+        <figcaption>Sliding Tabs</figcaption>
+        <div class="tabs-fancy">
+          <ul class="nav nav-tabs">
+            <li class="active">
+              <a data-target="#home3" data-toggle="tab">Home</a>
+            </li>
+            <li>
+              <a data-target="#profile3" data-toggle="tab">Profile</a>
+            </li>
+            <li>
+              <a data-target="#messages3" data-toggle="tab">User Settings</a>
+            </li>
+            <li>
+              <a data-target="#settings3" data-toggle="tab">Cost Accounts</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade in active" id="home3">Home text lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui nisi quo, dolores ipsa, ut perferendis.</div>
+            <div class="tab-pane fade" id="profile3">Profile text lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate assumenda ipsam nisi quaerat reiciendis, corporis. Dolor nostrum officia repudiandae, velit sit voluptates aliquid aperiam ut?</div>
+            <div class="tab-pane fade" id="messages3">Messages text lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit illo ipsum est in autem eveniet, quae quos id.</div>
+            <div class="tab-pane fade" id="settings3">Settings text lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore provident maxime possimus quam! Quia doloribus, sint nisi mollitia dolorem ipsa doloremque excepturi ea nemo. In.</div>
+          </div>
+        </div>
+
+
+      </figure>
     </div>
     <div class="col-md-6">
       <figure>
@@ -96,8 +107,8 @@
         <ul class="nav nav-tabs">
           <li class="active"><a data-target="#home4" data-toggle="tab">Home</a></li>
           <li><a data-target="#profile4" data-toggle="tab">Profile</a></li>
-          <li><a data-target="#messages4" data-toggle="tab">Messages</a></li>
-          <li><a data-target="#settings4" data-toggle="tab">Settings</a></li>
+          <li><a data-target="#messages4" data-toggle="tab">User Settings</a></li>
+          <li><a data-target="#settings4" data-toggle="tab">Cost Accounts</a></li>
         </ul>
         <!-- Tab panes -->
         <div class="tab-content tab-content-bordered">
@@ -109,6 +120,5 @@
       </figure>
     </div>
   </div>
-
 
 </div>

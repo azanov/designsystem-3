@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="theme-color" content="#3e53a4">
 
     <!-- build:bowser js/bowser.min.js -->
     <script src="bower_components/bowser/bowser.min.js"></script>
@@ -22,11 +23,10 @@
       }
     </script>
 
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"> -->
 
     <!-- build:bs assets/css/bootstrap.min.css -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-    <link href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet">
     <!-- endbuild  -->
 
     <!-- build:css assets/css/design_system.css -->
@@ -39,7 +39,8 @@
     <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
     <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.min.css">
     <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css"/>
-    <link rel="stylesheet" href="bower_components/angular-datatables/dist/plugins/bootstrap/datatables.bootstrap.css"/>
+    <link rel="stylesheet" href="bower_components/angular-datatables/dist/plugins/bootstrap/datatables.bootstrap.min.css"/>
+    <!-- <link rel="stylesheet" href="bower_components/datatables.net-buttons-dt/css/buttons.dataTables.css"/> -->
     <link rel="stylesheet" href="bower_components/angular-xeditable/dist/css/xeditable.css"/>
     <link rel="stylesheet" href="bower_components/c3/c3.min.css"/>
     <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css" />
@@ -47,6 +48,8 @@
     <link rel="stylesheet" href="bower_components/ui-select/dist/select.css">
     <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.min.css">
     <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.bootstrap.min.css">
+    <link href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="bower_components/angular-dragula/dist/dragula.css">
     <link rel="stylesheet" href="assets/css/design_system.css">
     <!-- endbuild  -->
 
@@ -93,7 +96,6 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
-    <script src="core/directives/pb-auto-collapse-menu.js"></script>
     <script src="bower_components/jquery-ui/ui/core.js"></script>
     <script src="bower_components/jquery-ui/ui/widget.js"></script>
     <script src="bower_components/jquery-ui/ui/mouse.js"></script>
@@ -102,8 +104,8 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/highlightjs/highlight.pack.js"></script>
     <script src="bower_components/angular-highlightjs/build/angular-highlightjs.min.js"></script>
     <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
@@ -129,25 +131,28 @@
     <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
     <script src="bower_components/angular-scroll/angular-scroll.js"></script>
 
+    <script src="bower_components/angular-dragula/dist/angular-dragula.js"></script>
+
     <script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
     <script src="bower_components/angular-daterangepicker/js/angular-daterangepicker.js"></script>
     <script src="bower_components/angular-utils-pagination/dirPagination.js"></script>
 
 
     <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
-    <script src="bower_components/datatables/media/js/jquery.dataTables.js"></script>
-    <script src="bower_components/datatables-tabletools/js/dataTables.tableTools.js"></script>
+
+    <script src="bower_components/datatables.net/js/jquery.dataTables.js"></script>
+    <script src="bower_components/datatables.net-buttons/js/dataTables.buttons.js"></script>
     <script src="bower_components/angular-datatables/dist/angular-datatables.js"></script>
-    <script src="bower_components/angular-datatables/dist/plugins/tabletools/angular-datatables.tabletools.js"></script>
     <script src="bower_components/angular-datatables/dist/plugins/bootstrap/angular-datatables.bootstrap.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/buttons/angular-datatables.buttons.js"></script>
     <script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
 
 
     <script src="bower_components/d3/d3.min.js"></script>
     <script src="bower_components/c3/c3.min.js"></script>
-    <script src="bower_components/angular-chart/angular-chart.min.js"></script>
+    <script src="bower_components/angular-chart/angular-chart.js"></script>
     <script src="bower_components/Chart.js/Chart.min.js"></script>
-    <script src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
     <script src="bower_components/raphael/raphael.js"></script>
     <script src="bower_components/morris.js/morris.js"></script>
     <script src="bower_components/angular-morris-chart/src/angular-morris-chart.js"></script>
@@ -158,6 +163,8 @@
 
     <script src="bower_components/slick-carousel/slick/slick.js"></script>
     <script src="bower_components/angular-slick-carousel/dist/angular-slick.min.js"></script>
+
+    <script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
     <!-- endbuild  -->
 
     <!-- build:appjs js/app.js -->
@@ -190,8 +197,6 @@
     <script src="core/directives/pb-accordion.directive.js"></script>
     <script src="core/directives/pb-numeric-stepper.directive.js"></script>
     <script src="core/directives/pb-fixed-navbar.directive.js"></script>
-    <script src="core/directives/pb-datetimepicker.directive.js"></script>
-    <script src="core/directives/pb-bootstrap-popover.directive.js"></script>
     <script src="core/directives/pb-button-progress.directive.js"></script>
     <script src="core/directives/pb-modal-draggable.directive.js"></script>
     <script src="core/services/mock-data.factory.js"></script>
@@ -257,6 +262,7 @@
     <script src="modules/foundation/controllers/foundation-iconography.controller.js"></script>
     <script src="modules/foundation/controllers/foundation-typography.controller.js"></script>
     <script src="modules/foundation/controllers/foundation-writing.controller.js"></script>
+    <script src="modules/foundation/controllers/foundation-directives.controller.js"></script>
 
 
     <script src="modules/globalization/globalization.module.js"></script>
@@ -275,6 +281,10 @@
     <script src="modules/landing/landing.module.js"></script>
     <script src="modules/landing/landing.routes.js"></script>
     <script src="modules/landing/controllers/landing.controller.js"></script>
+
+    <script src="modules/errors/errors.module.js"></script>
+    <script src="modules/errors/errors.routes.js"></script>
+    <script src="modules/errors/controllers/errors.controller.js"></script>
 
     <script src="modules/splitview/splitview.module.js"></script>
     <script src="modules/splitview/splitview.routes.js"></script>
@@ -306,6 +316,7 @@
     <script src="modules/patterns/controllers/welcome.controller.js"></script>
     <script src="modules/patterns/controllers/signin.controller.js"></script>
     <script src="modules/patterns/controllers/hamburger.controller.js"></script>
+    <script src="modules/patterns/controllers/dragdrop.controller.js"></script>
 
     <script src="modules/resources/resources.module.js"></script>
     <script src="modules/resources/resources.routes.js"></script>
@@ -315,6 +326,12 @@
     <script src="modules/buildanimations/buildanimations.module.js"></script>
     <script src="modules/buildanimations/buildanimations.routes.js"></script>
     <script src="modules/buildanimations/controllers/buildanimations.controller.js"></script>
+    <!-- endbuild  -->
+
+    <!-- build:dscomponents js/pb.ds.components.js -->
+    <script src="core/components/pb.ds.components.js"></script>
+    <script src="core/components/pb.ds.checkbox.js"></script>
+    <script src="core/components/pb.ds.radio.js"></script>
     <!-- endbuild  -->
 
 

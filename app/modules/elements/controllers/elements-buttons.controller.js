@@ -1,9 +1,7 @@
-(function() {
-
+(function () {
   'use strict';
 
-  angular.module('pb.ds.elements').controller('ButtonsController', function($log) {
-
+  angular.module('pb.ds.elements').controller('ButtonsController', function ($log) {
     var _this = this;
 
     _this.singleModel = 1;
@@ -15,7 +13,5 @@
       middle: true,
       right: false
     };
-
   });
-
 })();

@@ -19,7 +19,8 @@
             <li><a ui-sref="tables.datatable.page({'#':'data-tables'})">Data Tables</a></li>
             <li><a ui-sref="tables.datatable.page({'#':'paging'})">Paging</a></li>
             <li><a ui-sref="tables.datatable.page({'#':'infinite-scroll'})">Infinite Scroll</a></li>
-            <li><a ui-sref="tables.datatable.page({'#':'datatables-net'})">Datatables.net</a></li>
+            <!-- <li><a ui-sref="tables.datatable.page({'#':'datatables-net'})">Datatables.net</a></li> -->
+            <li><a ui-sref="tables.datatable.page({'#':'faceted-search'})">Faceted Search</a></li>
           </ul>
         </div>
       </div>
@@ -59,8 +60,7 @@
 
       <p>
         <a class="more-info plugin" href="https://github.com/michaelbromley/angularUtils/tree/master/src/directives/pagination" target="blank">angular-utils-pagination v0.10.0</a>
-        <a class="more-info plugin" href="https://github.com/fragaria/angular-daterangepicker" target="blank">daterangepicker v0.2.2</a>
-        <a class="more-info plugin" href="https://github.com/angular-ui/bootstrap" target="blank">ui-bootstrap v0.14.3</a>
+        <a class="more-info plugin" href="https://github.com/angular-ui/bootstrap" target="blank">ui-bootstrap v1.3.1</a>
       </p>
 
       <p class="spacer-top-md"><a class="btn btn-default" href="" ui-sref="tables.paging" target="_blank">Demo</a></p>
@@ -95,7 +95,7 @@
       <p>
         <a class="more-info plugin" href="http://binarymuse.github.io/ngInfiniteScroll/index.html" target="blank">ngInfiniteScroll v1.2.1</a>
         <a class="more-info plugin" href="https://github.com/fragaria/angular-daterangepicker" target="blank">daterangepicker v0.2.2</a>
-        <a class="more-info plugin" href="https://github.com/angular-ui/bootstrap" target="blank">ui-bootstrap v0.14.3</a>
+        <a class="more-info plugin" href="https://github.com/angular-ui/bootstrap" target="blank">ui-bootstrap v1.3.1</a>
       </p>
 
       <p class="spacer-top-md"><a class="btn btn-default" href="" ui-sref="tables.infiniteScroll" target="_blank">Demo</a></p>
@@ -113,7 +113,7 @@
 
 
   <!-- Datatables.net -->
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-md-8">
       <h1 id="datatables-net" class="doc-head">Datatables.net</h1>
     </div>
@@ -131,8 +131,8 @@
     <div class="col-md-6">
 
       <p>
-        <a class="more-info plugin" href="http://l-lin.github.io/angular-datatables/" target="blank">angular-datatables v0.5.1</a>
-        <a class="more-info plugin" href="http://datatables.net/" target="blank">datatables.net v1.10.9</a>
+        <a class="more-info plugin" href="http://l-lin.github.io/angular-datatables/" target="blank">angular-datatables v0.5.4</a>
+        <a class="more-info plugin" href="http://datatables.net/" target="blank">datatables.net v1.10.11</a>
       </p>
 
       <div class="alert alert-info">
@@ -149,8 +149,37 @@
     <div class="col-md-6">
       <img class="img-responsive" src="modules/tables/assets/images/datatables.png" alt="" />
     </div>
+  </div> -->
+
+
+<!-- Faceted Search -->
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="faceted-search" class="doc-head">Faceted Search</h1>
+    </div>
   </div>
 
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Usage</h2>
+    </div>
+  </div>
+
+
+  <div class="row">
+
+    <div class="col-md-6">
+      <ul>
+        <li>Best suited for quick browsing of large data sets.</li>
+        <li>Use when a simple filter is not sufficient, such as filtering on multiple dimensions.</li>
+      </ul>
+      <p class="spacer-top-lg"><a class="btn btn-default" href="" ui-sref="tables.facetedsearch" target="_blank">Demo</a></p>
+    </div>
+
+    <div class="col-md-6">
+      <a ui-sref="tables.facetedsearch"><img class="img-responsive bordered" src="modules/tables/assets/images/faced-search.png" alt="faceted search" /></a>
+    </div>
+  </div>
 
 
 

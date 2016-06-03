@@ -63,13 +63,14 @@
   </div>
 
   <div class="row">
-    <div class="col-md-3">
-      <p>Input fields have four primary states, each defined by its form and type coloring:</p>
+    <div class="col-md-4">
+      <p>Input fields have five primary states, each defined by its form and type coloring:</p>
       <ul>
         <li>Default</li>
         <li>Active</li>
         <li>Disabled</li>
         <li>Error</li>
+        <li>Read-Only</li>
       </ul>
     </div>
 
@@ -92,6 +93,14 @@
             </div>
           </figure>
 
+          <figure class="spacer-top-md">
+            <figcaption>Read-Only</figcaption>
+            <div class="form-group">
+              <label>Text field label</label>
+              <input class="form-control" readonly="readonly" type="text" value="Display text only">
+            </div>
+          </figure>
+
         </div>
         <div class="col-md-5">
 
@@ -99,7 +108,7 @@
             <figcaption>Disabled</figcaption>
             <div class="form-group">
               <label>Text label</label>
-              <input class="form-control" disabled="disabled" name="text1" type="text"/>
+              <input class="form-control" disabled="disabled" name="text1" type="text" value="I am disabled."/>
             </div>
           </figure>
 
@@ -119,12 +128,37 @@
 
   <div class="row">
     <div class="col-md-12">
+      <h2 class="doc-sectionhead">Optional</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      Input fields are required unless otherwise noted. To indicate to users that a particular field is optional, insert the word “optional” in parentheses immediately following the field’s label. Note that the word "optional" is 12px italic; use the css class "optional."
+    </div>
+    <div class="col-md-3 col-md-offset-1">
+      <figure>
+        <figcaption>Optional Field</figcaption>
+        <div class="form-group">
+          <label>Text field label
+            <span class="optional">(optional)</span>
+          </label>
+          <input class="form-control" type="text">
+        </div>
+      </figure>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-12">
       <h2 class="doc-sectionhead">Sizes</h2>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
       <p>We have three sizes of input fields: small, default and large. Use the default size for all fields except when:</p>
       <ul>
         <li>You have a very crowded form (20+ fields), in which case consider using small input fields; these are also suitable for use in tables or space-challenged forms</li>
@@ -178,7 +212,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
       <p>We apply red to field elements to alert users to an input error that needs their attention.</p>
     </div>
 
@@ -207,7 +241,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
       <p>There are several ways to help users understand what they&rsquo;re being asked to input. These include:</p>
       <ul>
         <li>In-field prompt copy</li>
@@ -236,7 +270,7 @@
             <div class="form-group">
               <label>Text field label
                 <a href="">
-                  <i class="fa fa-info-circle"></i>
+                  <i class="nc-icon-mini ui-2_alert-circle-i"></i>
                 </a>
               </label>
               <input class="form-control" type="text">
@@ -246,17 +280,7 @@
       </div>
       <div class="row">
 
-        <div class="col-md-5">
-          <figure>
-            <figcaption>Optional Field</figcaption>
-            <div class="form-group">
-              <label>Text field label
-                <span class="optional">(optional)</span>
-              </label>
-              <input class="form-control" type="text">
-            </div>
-          </figure>
-        </div>
+
         <div class="col-md-5">
           <figure>
             <figcaption>Read-only Field</figcaption>
@@ -278,7 +302,7 @@
   </div>
 
   <div class="row ">
-    <div class="col-md-3">
+    <div class="col-md-4">
       You can augment regular input field behavior by prepending or appending icons, checkboxes, buttons or dropdown menus to them.
     </div>
 
@@ -317,7 +341,7 @@
               <div class="input-group">
                 <input class="form-control" type="text">
                 <span class="input-group-addon">
-                  <i class="fa fa-filter"></i>
+                  <i class="nc-icon-mini ui-2_filter"></i>
                 </span>
               </div>
             </div>
@@ -362,7 +386,7 @@
               <div class="input-group">
                 <input class="form-control" placeholder="Product name" type="text">
                 <div class="input-group-btn">
-                  <button class="btn btn-pr" type="button">Action</button>
+                  <button class="btn btn-primary" type="button">Action</button>
                 </div>
               </div>
             </div>
@@ -445,7 +469,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
       <p>Dropdown menus have four primary states, each defined by its form and type coloring:</p>
       <ul>
         <li>Default</li>
@@ -463,8 +487,12 @@
             <figcaption>Default Dropdown</figcaption>
             <label>Text label</label>
             <div class="form-group">
-              <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+              <select class="form-control">
                 <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
               </select>
             </div>
           </figure>
@@ -473,8 +501,13 @@
             <figcaption>Default Dropdown (Focused)</figcaption>
             <div class="form-group">
               <label>Text label</label>
-              <select class="form-control focus" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+
+              <select class="form-control focus">
                 <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
               </select>
             </div>
           </figure>
@@ -486,8 +519,13 @@
             <figcaption>Default Dropdown, Disabled</figcaption>
             <div class="form-group">
               <label>Text label</label>
-              <select class="form-control" disabled ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+
+              <select class="form-control" disabled>
                 <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
               </select>
             </div>
           </figure>
@@ -496,8 +534,12 @@
             <figcaption>Default Dropdown (Error)</figcaption>
             <div class="form-group has-error">
               <label>Text label</label>
-              <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+              <select class="form-control">
                 <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
               </select>
             </div>
           </figure>
@@ -515,7 +557,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
       <p>We have three sizes of dropdown menus: default, large and small. Use the default size for all dropdowns except when:</p>
       <ul>
         <li>You have a very crowded form (20+ dropdowns), in which case consider using small dropdown menus</li>
@@ -536,8 +578,12 @@
             <figcaption>Default</figcaption>
             <div class="form-group">
               <label>Text label</label>
-              <select class="form-control" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+              <select class="form-control">
                 <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
               </select>
             </div>
           </figure>
@@ -546,8 +592,12 @@
             <div class="form-group">
               <figcaption>Small</figcaption>
               <label>Text label</label>
-              <select class="form-control input-sm" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
+              <select class="form-control input-sm">
                 <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
               </select>
             </div>
           </figure>
@@ -558,10 +608,12 @@
             <figcaption>Large</figcaption>
             <div class="form-group">
               <label>Text label</label>
-              <select class="form-control input-lg" ng-model="selectedPerson" ng-options="person.full_name for person in inputs.samplePeople">
-                <option value="">
-                  Select
-                </option>
+              <select class="form-control input-lg">
+                <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
               </select>
             </div>
           </figure>
@@ -578,13 +630,13 @@
   </div>
 
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
       <p>When using multiple selection menus, consider letting users know which keys they need to use (Ctrl-click or Cmd-click) on desktop devices in order to use this feature. Or consider using the multi-select with tokens menu.</p>
 
       <p>Mobile devices may present their own UI for making the multiple selection. On iOS, a tap will present a popover menu in which you can scroll and tap choices. Checkmarks appear next to chosen options. When the popover is closed, the "menu" now displays the number of chosen items.</p>
     </div>
 
-    <div class="col-md-8 col-md-offset-1">
+    <div class="col-md-7 col-md-offset-1">
 
       <div class="row">
         <div class="col-md-5">
@@ -631,13 +683,13 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-3">
-      <p>You can use these advanced menu types to augment our standard dropdown menus. “Multi-select with tokens” is a good alternative to the multi-section types above, as it allows users to create a persistent list of selections that they can easily edit.</p
+    <div class="col-md-4">
+      <p>You can use these advanced menu types to augment our standard dropdown menus. “Multi-select with tokens” is a good alternative to the multi-section types above, as it allows users to create a persistent list of selections that they can easily edit.</p>
 
       <p>Note that you have your choice of two multi-select menu controls: ui-select and ngTagsInput. Both offer various options for customizing behavior and appearance — refer to the plugin documentation for those details.</p>
 
       <p>
-        <a class="more-info plugin" href="https://github.com/angular-ui/ui-select" target="_blank">angular-ui-select v0.14.1</a>
+        <a class="more-info plugin" href="https://github.com/angular-ui/ui-select" target="_blank">angular-ui-select v0.16.1</a>
       </p>
 
       <p>
@@ -724,7 +776,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
       <p>We have two styles of checkboxes: enhanced and standard OS.</p>
 
       <p>
@@ -899,7 +951,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
       <p>We have two styles of radio buttons: enhanced and standard OS.</p>
     </div>
 
@@ -1020,12 +1072,12 @@
             <form class="form-horizontal">
               <div class="controls-inline">
                 <label class="control radio">
-                  <input id="radio111" name="radio" type="radio">
+                  <input id="radio1111" name="radio" type="radio">
                   <span class="control-indicator"></span>
                   Custom radio
                 </label>
                 <label class="control radio">
-                  <input id="radio222" name="radio" type="radio">
+                  <input id="radio2222" name="radio" type="radio">
                   <span class="control-indicator"></span>
                   Or Custom radio
                 </label>
@@ -1052,7 +1104,7 @@
   </div>
 
   <div class="row ">
-    <div class="col-md-3">
+    <div class="col-md-4">
       <p>Use the stepper when you want users to select incrementally from a wide range of values, or input their own value.</p>
       <p>
         Steppers, like all Boostrap form controls, expand to fill the width of their container.
@@ -1098,7 +1150,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
       <p>
         <a class="more-info plugin" href="https://github.com/fragaria/angular-daterangepicker" target="_blank">angular-daterangepicker v0.2.2</a>
         <a class="more-info plugin" href="http://www.daterangepicker.com/" target="_blank">Bootstrap Daterange Picker v2.1.12</a>
@@ -1112,9 +1164,11 @@
           <figure>
             <figcaption>Single Date Picker</figcaption>
             <div class="input-group">
-              <input class="form-control" date-range-picker ng-model="inputs.singlepicker.date" options="inputs.singlepicker.options" type="text"/>
-              <span class="input-group-addon">
-                <i class="fa fa-fw fa-calendar"></i>
+              <input class="form-control" id="picker1" date-range-picker ng-model="inputs.singlepicker.date" options="inputs.singlepicker.options" type="text"/>
+              <span class="input-group-btn">
+                <button class="btn btn-default" ng-click="inputs.openPicker('picker1')">
+                  <i class="nc-icon-mini nc-fw ui-1_calendar-57"></i>
+                </button>
               </span>
             </div>
           </figure>
@@ -1126,9 +1180,11 @@
           <figure>
             <figcaption>Date Range Picker</figcaption>
             <div class="input-group">
-              <input class="form-control" date-range-picker ng-model="inputs.daterangepicker.date" options="inputs.daterangepicker.options" type="text"/>
-              <span class="input-group-addon">
-                <i class="fa fa-fw fa-calendar"></i>
+              <input class="form-control" id="picker2" date-range-picker ng-model="inputs.daterangepicker.date" options="inputs.daterangepicker.options" type="text"/>
+              <span class="input-group-btn">
+                <button class="btn btn-default" ng-click="inputs.openPicker('picker2')">
+                  <i class="nc-icon-mini nc-fw ui-1_calendar-57"></i>
+                </button>
               </span>
             </div>
           </figure>
@@ -1140,9 +1196,11 @@
           <figure>
             <figcaption>Date Range Picker with Auto Apply Option</figcaption>
             <div class="input-group">
-              <input class="form-control" date-range-picker ng-model="inputs.daterangepicker2.date" options="inputs.daterangepicker2.options" type="text"/>
-              <span class="input-group-addon">
-                <i class="fa fa-fw fa-calendar"></i>
+              <input class="form-control" id="picker3" date-range-picker ng-model="inputs.daterangepicker2.date" options="inputs.daterangepicker2.options" type="text"/>
+              <span class="input-group-btn">
+                <button class="btn btn-default" ng-click="inputs.openPicker('picker3')">
+                  <i class="nc-icon-mini nc-fw ui-1_calendar-57"></i>
+                </button>
               </span>
             </div>
           </figure>
@@ -1154,9 +1212,9 @@
           <figure>
             <figcaption>Button Range Picker with Formatted Labels</figcaption>
             <a class="btn btn-link" date-range-picker href="" ng-model="inputs.daterangepicker3.date" options="inputs.daterangepicker3.options">
-              <i class="fa fa-fw fa-calendar"></i>
+              <i class="nc-icon-mini nc-fw ui-1_calendar-57"></i>
               {{inputs.daterangepicker3.displayDate()}}
-              <i class="fa fa-angle-down"></i>
+              <i class="nc-icon-mini arrows-2_small-down"></i>
             </a>
           </figure>
         </div>
@@ -1171,11 +1229,12 @@
             <div class="input-group custom-daterange">
 
               <div class="input-group-btn">
-
                 <button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+                  <i class="nc-icon-mini nc-fw ui-1_calendar-57"></i>
                   {{inputs.customRange.selected.label}}
-                  <i class="fa fa-angle-down"></i>
+                   <i class="nc-icon-mini arrows-2_small-down"></i>
                 </button>
+
 
                 <ul class="dropdown-menu">
                   <li ng-init="inputs.customRange.init()" ng-repeat="item in inputs.customRange.items">
@@ -1201,9 +1260,9 @@
                 </div>
               </div>
 
-              <div class="input-group-addon">
+              <!-- <div class="input-group-addon">
                 <i class="fa fa-fw fa-calendar"></i>
-              </div>
+              </div> -->
 
             </div>
           </figure>
@@ -1228,7 +1287,7 @@
   </div>
 
   <div class="row ">
-    <div class="col-md-3">
+    <div class="col-md-4">
       <p>
         <a class="more-info plugin" href="http://jumplink.github.io/angular-toggle-switch/" target="_blank">angular-bootstrap-toggle-switch v0.5.2</a>
       </p>

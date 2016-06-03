@@ -1,13 +1,4 @@
-/**
-* A stylesheet for use with Bootstrap 3.x
-* @author: Dan Grossman http://www.dangrossman.info/
-* @copyright: Copyright (c) 2012-2015 Dan Grossman. All rights reserved.
-* @license: Licensed under the MIT license. See http://www.opensource.org/licenses/mit-license.php
-* @website: https://www.improvely.com/
-*/
-
-/* Container Appearance */
-
+// scss-lint:disable MergeableSelector
 .daterangepicker {
   position: absolute;
   background: #fff;
@@ -16,7 +7,7 @@
   padding: 4px;
   margin-top: 1px;
   border-radius: 4px;
-  width:278px;
+  width: 278px;
 }
 
 .daterangepicker.opensleft:before {
@@ -27,7 +18,7 @@
   border-right: 7px solid transparent;
   border-bottom: 7px solid #ccc;
   border-left: 7px solid transparent;
-  border-bottom-color: rgba(0, 0, 0, 0.2);
+  border-bottom-color: rgba(0, 0, 0, .2);
   content: '';
 }
 
@@ -54,7 +45,7 @@
   border-right: 7px solid transparent;
   border-bottom: 7px solid #ccc;
   border-left: 7px solid transparent;
-  border-bottom-color: rgba(0, 0, 0, 0.2);
+  border-bottom-color: rgba(0, 0, 0, .2);
   content: '';
 }
 
@@ -81,7 +72,7 @@
   border-right: 7px solid transparent;
   border-bottom: 7px solid #ccc;
   border-left: 7px solid transparent;
-  border-bottom-color: rgba(0, 0, 0, 0.2);
+  border-bottom-color: rgba(0, 0, 0, .2);
   content: '';
 }
 
@@ -96,18 +87,18 @@
   content: '';
 }
 
-.daterangepicker.dropup{
+.daterangepicker.dropup {
   margin-top: -5px;
 }
-.daterangepicker.dropup:before{
+.daterangepicker.dropup:before {
   top: initial;
-  bottom:-7px;
+  bottom: -7px;
   border-bottom: initial;
   border-top: 7px solid #ccc;
 }
-.daterangepicker.dropup:after{
+.daterangepicker.dropup:after {
   top: initial;
-  bottom:-6px;
+  bottom: -6px;
   border-bottom: initial;
   border-top: 6px solid #fff;
 }
@@ -132,7 +123,7 @@
 }
 
 .daterangepicker .calendar.single .calendar-table {
-  border: none;
+  border: 0;
 }
 
 /* Calendars */
@@ -243,7 +234,7 @@
   height: 30px;
   line-height: 30px;
   vertical-align: middle;
-  margin: 0 0 5px 0;
+  margin: 0 0 5px;
   padding: 0 6px 0 28px;
   width: 100%;
 }
@@ -318,7 +309,7 @@
 
 /*  Larger Screen Styling */
 @media (min-width: 564px) {
-  .daterangepicker{
+  .daterangepicker {
     width: auto;
   }
 
@@ -329,13 +320,13 @@
     width: 100%;
   }
   .daterangepicker .calendar.left .calendar-table {
-    border-right: none;
+    border-right: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
 
   .daterangepicker .calendar.right .calendar-table {
-    border-left: none;
+    border-left: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
@@ -347,9 +338,8 @@
   .daterangepicker.single .calendar.left {
     clear: none;
   }
-  .daterangepicker.single .ranges,
-  .daterangepicker.single .calendar{
-    float:left;
+  .daterangepicker.single .ranges, .daterangepicker.single .calendar {
+    float: left;
   }
 
   .daterangepicker .calendar.right {
@@ -364,8 +354,7 @@
     padding-right: 12px;
   }
 
-  .daterangepicker .ranges,
-  .daterangepicker .calendar {
+  .daterangepicker .ranges, .daterangepicker .calendar {
     float: left;
   }
 }

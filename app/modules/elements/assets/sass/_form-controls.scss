@@ -4,8 +4,8 @@
 /// Bootstrsp fixes
 /////////////////////////
 
-.form-inline .checkbox input[type="checkbox"] {
-    position: absolute;
+.form-inline .checkbox input[type='checkbox'] {
+  position: absolute;
 }
 
 
@@ -17,7 +17,7 @@
   position: relative;
   display: inline-block;
   padding-left: 25px;
-  color: #555;
+  color: $text-color;
   cursor: pointer;
 }
 .control input {
@@ -30,7 +30,7 @@
   top: 0;
   left: 0;
   display: block;
-  width:  18px;
+  width: 18px;
   height: 18px;
   line-height: 18px;
   font-size: 100%;
@@ -42,9 +42,9 @@
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 //* Hover state */
@@ -52,7 +52,7 @@
 //  color: #fff;
 //  background-color: #ccc;
 //}
-/*/
+//
 
 // Focus */
 .control input:focus ~ .control-indicator {
@@ -61,14 +61,14 @@
 
 //* Checked state */
 .control input:checked ~ .control-indicator {
-  color: #3E53A4;
-  border: 1px solid #3E53A4;
+  color: #3e53a4;
+  border: 1px solid #3e53a4;
   background-color: #fff;
 }
 
 //* Active */
 .control input:active ~ .control-indicator {
-  color: #3E53A4;
+  color: #3e53a4;
   background-color: #fff;
 }
 
@@ -79,9 +79,16 @@
   border: 1px solid #dbdbdb;
   cursor: default;
 }
-.control.disabled {
+.control.disabled, .radio.disabled label, .checkbox.disabled label {
   color: #dbdbdb;
   cursor: default;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  background-color: #f8f8f8;
+  border-color: #dbdbdb;
+  color: #454545;
+  opacity: 1;
 }
 
 //* Checkbox modifiers */
@@ -100,8 +107,6 @@
   background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgNiA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxjaXJjbGUgZmlsbD0iIzNFNTNBNCIgY3g9IjMiIGN5PSIzIiByPSIzIi8+PC9zdmc+');
 }
 
-
-
 ////////////////////
 /// Control layouts
 ////////////////////
@@ -109,12 +114,10 @@
 .controls-stacked {
   margin: 15px 0;
 }
-.controls-stacked .control,
-.controls-stacked .progress {
+.controls-stacked .control, .controls-stacked .progress {
   display: block;
 }
-.controls-stacked .control + .control,
-.controls-stacked .progress + .progress {
+.controls-stacked .control + .control, .controls-stacked .progress + .progress {
   margin-top: 7px;
 }
 
@@ -130,9 +133,9 @@
 
 // for case when the controls are used in a form-horizontal class
 .form-horizontal {
-  & .radio, .checkbox, .radio-inline, .checkbox-inline {
-     padding-top: 0;
-   }
+  .radio, .checkbox, .radio-inline, .checkbox-inline {
+    padding-top: 0;
+  }
 }
 
 .controls-inline .control {
@@ -141,4 +144,17 @@
 }
 .controls-inline .control + .control {
   margin-left: 15px;
+}
+
+// this was just for table toolbats, should really be global
+.search-clear {
+  position: absolute;
+  padding-right: 3px;
+  padding-left: 0;
+  right: 0;
+  z-index: 4;
+  border: 0;
+  opacity: 1;
+  color: #c0c0c0;
+  transition: all .3s ease-in-out;
 }

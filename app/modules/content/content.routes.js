@@ -1,11 +1,10 @@
-(function() {
-
+(function () {
   'use strict';
 
-  angular.module('pb.ds.content').config(function($stateProvider) {
+  angular.module('pb.ds.content').config(function ($stateProvider) {
     $stateProvider.state('content', {
+      url: '',
       abstract: true,
-      url: '/content',
       templateUrl: 'modules/content/templates/content.html',
       controller: 'ContentController as content',
       data: {
@@ -14,31 +13,57 @@
         bodyClass: 'content'
       }
     })
-    
-    .state('content.page', {
-      url: '',
-      views: {
-        overview: {
-          templateUrl: 'modules/content/templates/content-overview.html'
-        },
-        voice: {
-          templateUrl: 'modules/content/templates/content-voice.html'
-        },
-        style: {
-          templateUrl: 'modules/content/templates/content-style.html'
-        },
-        terminology: {
-          templateUrl: 'modules/content/templates/content-terminology.html'
+
+      .state('content.overview', {
+        url: '/content/overview',
+        templateUrl: 'modules/content/templates/content-overview.html',
+        data: {
+          pageTitle: 'Content',
+          access: 'public',
+          bodyClass: 'content'
         }
-      },
-      data: {
-        pageTitle: 'Content',
-        access: 'public',
-        bodyClass: 'content'
-      }
-    });
+      })
+
+      .state('content.voice', {
+        url: '/content/voice',
+        templateUrl: 'modules/content/templates/content-voice.html',
+        data: {
+          pageTitle: 'Content',
+          access: 'public',
+          bodyClass: 'content'
+        }
+      })
+
+      .state('content.style', {
+        url: '/content/style',
+        templateUrl: 'modules/content/templates/content-style.html',
+        data: {
+          pageTitle: 'Content',
+          access: 'public',
+          bodyClass: 'content'
+        }
+      })
+
+      .state('content.legal', {
+        url: '/content/legal',
+        templateUrl: 'modules/content/templates/content-legal.html',
+        data: {
+          pageTitle: 'Content',
+          access: 'public',
+          bodyClass: 'content'
+        }
+      })
 
 
+
+      .state('content.emails', {
+        url: '/content/emails',
+        templateUrl: 'modules/content/templates/content-emails.html',
+        data: {
+          pageTitle: 'Content - Emails',
+          access: 'public',
+          bodyClass: 'content emails'
+        }
+      });
   });
-
 })();
