@@ -1,12 +1,8 @@
 /**
  * DesignSystem - 
- * @version v2.7.1
+ * @version v2.8.0
  * @link http://guxstaging.pbi.global.pvt/design_system
-<<<<<<< HEAD
- * Built Tue May 24 2016 12:52:27 GMT-0400 (EDT) 
-=======
- * Built Tue May 17 2016 14:15:38 GMT-0400 (EDT) 
->>>>>>> dsp-568_expandable-left-nav
+ * Built Tue May 31 2016 16:02:37 GMT-0400 (EDT) 
  */
 @charset "UTF-8";
 #header, header, .signin, .landing .bg {
@@ -15493,7 +15489,7 @@ header:not(.demo).shadow {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); }
 @media (max-width: 767px) {
   header:not(.demo) {
-    position: relative; } }
+    position: fixed; } }
 
 .help-icon {
   height: 70px; }
