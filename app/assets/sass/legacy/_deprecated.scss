@@ -1,0 +1,31 @@
+.btn-pill-ko {
+  color: $pb-blue;
+  background-color: #fff;
+  border-radius: 40px !important;
+  border: 1px solid #fff;
+  padding: $padding-base-vertical $padding-large-horizontal;
+  min-width: 120px;
+
+  &:disabled {
+    color: #c0c0c0;
+    background-color: transparent;
+    border: 1px solid #c0c0c0;
+  }
+  &:hover, &.hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
+    color: $pb-blue;
+  }
+  &:active, &.active {
+    opacity: .8;
+  }
+}
+
+// add this class to existing buttons, like btn-primary, to make a pill shape
+.btn-pill {
+  border-radius: 40px !important;
+}
+
+
+.btn-pill-brand {
+  border-radius: 40px !important;
+}
