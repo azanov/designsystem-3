@@ -47,7 +47,7 @@
           "value": "",
           "toggle": "dropdown",
           "children": [{
-            "label": "Buttons",
+            "label": "Buttons and Links",
             "value": "elements.buttons"
           }, {
             "label": "Charts",
@@ -86,7 +86,7 @@
             "label": "Error Pages",
             "value": "patterns.errorpages"
           }, {
-            "label": "Form Samples",
+            "label": "Form Elements",
             "value": "patterns.forms"
           }, {
             "label": "Getting Started",

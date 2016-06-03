@@ -326,7 +326,7 @@
 
       .state('patterns.forms', {
         url: '/forms',
-        templateUrl: 'modules/patterns/templates/forms-containers.html'
+        templateUrl: 'modules/patterns/templates/form-elements.html'
       })
 
       .state('patterns.registration', {

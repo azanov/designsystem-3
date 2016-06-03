@@ -26,6 +26,9 @@
           reference: {
             templateUrl: 'modules/globalization/templates/globalization-quick-reference.html'
           },
+          menuguidance: {
+            templateUrl: 'modules/globalization/templates/globalization-menu.html'
+          },
           angularjs: {
             templateUrl: 'modules/globalization/templates/globalization-angular-translate.html',
             controller: 'AngularTranslateController as translate',

@@ -1,5 +1,91 @@
 ## Release Notes
 
+### 2.8.0 -- May 31, 2016
+
+#### CSS Changes
+
+- "Focus" states have been added for all [Buttons](http://guxstaging.pbi.global.pvt/design_system/#/buttons#action).  No html code changes are required, just use latest css file. When a button is focused, usually via keyboard, they now have a glow ring.
+
+#### Site Changes
+
+* Added additional content for guidance in using [Tabs](http://guxstaging.pbi.global.pvt/design_system/#/containers#tabs).
+* Re-organized and expanded content areas for [Tone of Voice](http://guxstaging.pbi.global.pvt/design_system/#/content/voice) and [Editorial Style](http://guxstaging.pbi.global.pvt/design_system/#/content/style).
+* Added additional content for guidance in marking [form fields as optional](http://guxstaging.pbi.global.pvt/design_system/#/uicontrols).
+* Updated some icons for [Error Pages](http://guxstaging.pbi.global.pvt/design_system/#/patterns/errorpages). These icons will be embedded into CSS in a future release.
+* The [Project Roadmap](http://guxstaging.pbi.global.pvt/design_system/#/resources/roadmap) page has been updated to use a table we can update more frequently.
+* All of the content on the [Accessiblity](http://guxstaging.pbi.global.pvt/design_system/#/foundation/accessibility) page has been made html.
+* The horizontal "jump links" at the top of pages can now scroll horizontally when viewed on a smartphone or other device where they would not fit.
+* The [Hamburger Menu](http://guxstaging.pbi.global.pvt/design_system/#/hamburger/overview) examples now are equipped with expandable sidebar menus.
+* Updated and expanded content on guidance for [Emails](http://guxstaging.pbi.global.pvt/design_system/#/content/emails).
+* Clarified guidance for when to use which [Nucleo icon font](http://guxstaging.pbi.global.pvt/design_system/#/foundation/iconography#functional-icons).
+* Tweaked the language on using special characters in passwords on [Sign Up](http://guxstaging.pbi.global.pvt/design_system/#/patterns/signinup#sign-up) screens.
+* Added content guidance on the use of [Language Menus](http://guxstaging.pbi.global.pvt/design_system/#/globalization#menu) in Globalization.
+
+
+### 2.7.1 -- May 4, 2016
+
+#### CSS Changes
+
+* Added actual FontAwesome font files and their related CSS for projects that cannot utilize a CDN.  No code changes are required on your part to utilize this change. You will need to copy the font files into your "fonts" folder to use them, or simply use the [Bower package of the Design System](https://github.com/PBGUX/bower-designsystem) which includes these automatically. You can also continue to use the FontAwesome CDN if you prefer. Thanks to Rick Dukeshier for raising this issue.
+* May the Fourth be with you!
+
+
+
+###2.7.0 -- April 30, 2016
+
+####CSS Changes
+
+**BREAKING CHANGES**
+* Notifications ([Alerts and Toastrs](http://guxstaging.pbi.global.pvt/design_system/#/feedback)) have been updated and standardized. To use them, note that the icons are now background SVGs embedded in the CSS; you will need to **remove** icons that you added in the alerts themselves such as `<i class="someicon"></i>`.
+
+   ![alert-ss](img/alert-ss.jpg)
+* The `container-fluid` style has been reset to use Bootstrap standard padding of 15px on each side. This means content  inside a container-fluid will appear slightly wider. This was done since the additional padding we were using caused issues with the responsive nav bar.
+
+**NON-BREAKING CHANGES**
+
+* Added custom directives for Design System checkboxes and radio buttons.  Full details and instructions are at the new [Angular Directives](http://guxstaging.pbi.global.pvt/design_system/#/foundation/directives) page. We will be adding more directives in the coming months, both from the team and from third parties.
+
+* Icons on [Error Pages](http://guxstaging.pbi.global.pvt/design_system/#/patterns/errorpages) have been updated, and are now SVG files.
+
+* Updated table header sort and help icons.  See [Elements > Tables](http://guxstaging.pbi.global.pvt/design_system/#/tables/datatable)
+   ![table-headers](img/table-headers.jpg)
+
+#### Site Changes
+
+* Added examples of [Sign Up/Forgot Password](http://guxstaging.pbi.global.pvt/design_system/#/patterns/signinup) pages with a security question.
+* Fixed several display issues reported on Github.
+* Updated Font Awesome to Nucleo conversion PDF on [Foundation > Iconograpy](http://guxstaging.pbi.global.pvt/design_system/#/foundation/iconography).
+
+#### Updated Libraries
+* angular-bootstrap 1.3.1
+* angular-dragula 1.2.4
+* angular-translate 2.11.0
+* angular-translate-loader-partial 2.11.0
+* angular-translate-storage-cookie 2.11.0
+* angular-translate-storage-local 2.11.0
+* angular-ui-select 0.16.1
+* datatables.net 1.10.11
+* datatables.net-bs 1.10.11
+* datatables.net-buttons 1.1.2
+* eslint 2.7.0
+* eslint-config-angular 0.5.0
+* eslint-config-semistandard 6.0.1
+* eslint-config-standard 5.1.0
+* eslint-plugin-angular 1.0.0
+* eslint-plugin-promise 1.1.0
+* eslint-plugin-standard 1.3.2
+* ng-file-upload 12.0.4
+* stylelint 6.2.0
+* stylelint-config-standard 6.0.0
+
+
+#### Thanks to the following contributors and bug reporters:
+
+Cameron Chu, Dave Fondacaro, Rick Cole, Rick Dukeshire, Steve Evermore
+
+------
+
+
 ### 2.6.0 -- March 31, 2016
 
 #### CSS Changes

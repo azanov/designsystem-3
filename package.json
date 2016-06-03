@@ -1,6 +1,6 @@
 {
   "name": "DesignSystem",
-  "version": "2.6.0",
+  "version": "2.8.0",
   "homepage": "http://guxstaging.pbi.global.pvt/design_system",
   "author": "GUX",
   "private": true,
@@ -21,7 +21,7 @@
     "gulp-usemin": "0.3.21",
     "run-sequence": "1.1.5",
     "sassdoc": "2.1.20",
-    "stylelint": "^6.2.0",
+    "stylelint": "^6.5.1",
     "stylelint-config-standard": "^6.0.0"
   },
   "devDependencies": {
