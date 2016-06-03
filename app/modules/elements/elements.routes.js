@@ -75,6 +75,9 @@
           },
           widgets: {
             templateUrl: 'modules/elements/templates/elements-widgets.html'
+          },
+          writing: {
+            templateUrl: 'modules/elements/templates/elements-containers-writing.html'
           }
         },
         data: {
@@ -128,7 +131,7 @@
       .state('elements.uibootstrap', {
         url: '/uibootstrap',
         templateUrl: 'modules/elements/templates/uibootstrap.html',
-        controller: 'UiBootstrapController as uibootstrap',
+        controller: 'UiBootstrapController as uibs',
         data: {
           pageTitle: 'UI Bootstrap Directives'
         }

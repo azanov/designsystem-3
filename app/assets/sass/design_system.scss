@@ -17,6 +17,7 @@
 @import "base/fonts";
 @import "base/pbfont";
 @import "base/typography";
+@import "fontawesome/font-awesome";
 @import "nucleo_mini/nucleo-mini";
 @import "nucleo_outline/nucleo-outline";
 @import "base/helpers";
@@ -59,6 +60,8 @@
 @import '../../modules/elements/assets/sass/ngTagsInput';
 @import '../../modules/elements/assets/sass/data-widgets';
 @import '../../modules/elements/assets/sass/category-widget';
+@import '../../modules/foundation/assets/sass/pbds-directives';
+
 
 @import '../../../bower_components/slick-carousel/slick/slick';
 @import '../../modules/elements/assets/sass/slick-variables';
@@ -70,6 +73,7 @@
 @import '../../modules/main/assets/sass/sectionlanding';
 
 @import '../../modules/elements/assets/sass/panels';
+@import '../../modules/elements/assets/sass/accordion';
 @import '../../modules/elements/assets/sass/popover';
 @import '../../modules/elements/assets/sass/progress-bar';
 

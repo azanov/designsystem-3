@@ -9,6 +9,12 @@
     "globals": {
       "angular": true,
       "$": true,
-      "angularDragula": true
+      "app": true
+    },
+    "rules": {
+      "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+      "no-multiple-empty-lines": ["error", {"max": 3}],
+      "no-unused-vars": [0, {"vars": "all", "args": "after-used"}]
+
     }
 }

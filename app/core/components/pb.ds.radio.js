@@ -1,12 +1,13 @@
 (function () {
   'use strict';
   var module = angular.module('pb.ds.components');
-  module.directive('pbdsRadio', function ($timeout) {
+  module.directive('pbdsRadio', function () {
     return {
       restrict: 'E',
       require: 'ngModel',
       scope: {},
-      transclude : true,
+      transclude: true,
+      replace : true,
       bindToController: {
         disabled: '=',
         ngModel: '=',

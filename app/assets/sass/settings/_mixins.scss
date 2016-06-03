@@ -17,8 +17,7 @@
 
 @mixin clearfix {
   zoom: 1;
-  &:before,
-  &:after {
+  &:before, &:after {
     content: '';
     display: table;
   }
@@ -59,39 +58,23 @@
     @media (max-width: 767px) {
       @content;
     }
-  } @else if $point == screen-sm {
+  }
+  @else if $point == screen-sm {
     @media (min-width: 768px) {
       @content;
     }
-  } @else if $point == screen-md {
+  }
+  @else if $point == screen-md {
     @media (min-width: 992px) {
       @content;
     }
-  } @else if $point == screen-lg {
+  }
+  @else if $point == screen-lg {
     @media (min-width: 1300px) {
       @content;
     }
   }
 }
-
-
-/// HiDPI mixin. Default value set to 1.3 to target Google Nexus 7
-/// @param {Number} $ratio [1.3] - the pixel ratio of the target
-/// @example css - Usage
-///   @include hidpi(1.5) {
-///    --stuff
-///   }
-/// @param {number} $ratio
-@mixin hidpi($ratio: 1.3) {
-  @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
-  only screen and (min--moz-device-pixel-ratio: $ratio),
-  only screen and (-o-min-device-pixel-ratio: #{$ratio}/1),
-  only screen and (min-resolution: round($ratio * 96dpi)),
-  only screen and (min-resolution: $ratio * 1dppx) {
-    @content;
-  }
-}
-
 
 /// Mixes a color with white by a supplied percentage
 /// @param {Percent} $percentage [] - From 0-100%
@@ -102,7 +85,6 @@
 @function tint($color, $percentage) {
   @return mix($color, #fff, $percentage);
 }
-
 
 /// Mixes a color with black by a supplied percentage
 /// @param {Percent} $percentage [] - From 0-100%
@@ -119,12 +101,12 @@
 @mixin panel-variant($border, $heading-text-color, $heading-bg-color, $heading-border) {
   border-color: $border;
 
-  >.panel-heading {
+  > .panel-heading {
     color: $heading-text-color;
     background-color: $heading-bg-color;
     border-color: $heading-border;
 
-    +.panel-collapse >.panel-body {
+    + .panel-collapse > .panel-body {
       border-top-color: $border;
     }
     .badge {
@@ -132,15 +114,12 @@
       background-color: $heading-text-color;
     }
   }
-  >.panel-footer {
-    +.panel-collapse >.panel-body {
+  > .panel-footer {
+    + .panel-collapse > .panel-body {
       border-bottom-color: $border;
     }
   }
 }
-
-
-
 
 /// Hides the text in an element, commonly used to show an image. Some elements will need block-level styles applied.
 /// @link http://zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement
@@ -162,8 +141,6 @@
   white-space: nowrap;
 }
 
-
-
 // Required mixin pulled from Bootstrap's mixins.scss
 // Creates a wrapper for a series of columns
 /// @param {Number} $gutter [$grid-gutter-width] - Typically 15px
@@ -179,7 +156,6 @@
 }
 $grid-column-padding: 15px;
 
-
 // Contextual backgrounds
 
 // [converter] $parent hack
@@ -192,7 +168,6 @@ $grid-column-padding: 15px;
   }
 }
 
-
 // Typography
 // [converter] $parent hack
 @mixin text-emphasis-variant($parent, $color) {
@@ -204,18 +179,15 @@ $grid-column-padding: 15px;
   }
 }
 
-///
 @mixin triangle-closed {
   content: '\25B8'; // triangle right
   transform: rotate(0deg);
 }
-///
+
 @mixin triangle-opened {
   content: '\25B8'; // triangle right
   transform: rotate(90deg);
 }
-
-
 
 @mixin flat-right($r: $border-radius-base) {
   border-bottom-left-radius: $r;
@@ -229,114 +201,6 @@ $grid-column-padding: 15px;
   border-top-left-radius: 0;
   border-top-right-radius: $r;
   border-bottom-right-radius: $r;
-}
-
-/// @name Button variant
-///
-/// Easily pump out default styles, as well as :hover, :focus, :active,
-/// and disabled options for all buttons
-
-/// @example scss - Usage
-/// .btn-primary {
-///  @include button-variant(#fff, $button-primary, $button-primary, $pb-gray-500, $pb-bg2, #fff, $pb-blue-700);
-/// }
-
-@mixin button-variant(
-                      $fg, $bg, $border,
-                      $disabled-fg, $disabled-bg, $disabled-border,
-                      $hover-fg: $fg, $hover-bg:$bg
-                      ) {
-  color: $fg;
-  background-color: $bg;
-  border-color: $border;
-
-  &:hover,
-  &.hover,
-  &:focus,
-  &.focus,
-  &:active,
-  &.active,
-  .open >&.dropdown-toggle {
-    color: $hover-fg;
-    background-color: $hover-bg;
-    border-color: $border;
-  }
-
-  &:active,
-  &.active,
-  .open >&.dropdown-toggle {
-    background-image: none;
-  }
-
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    &,
-    &:hover,
-    &.hover,
-    &:focus,
-    &.focus,
-    &:active,
-    &.active {
-      background-color: $disabled-bg;
-      border-color: $disabled-border;
-      color: $disabled-fg;
-    }
-  }
-
-  .badge {
-    color: #fff;
-    background-color: $pb-magenta;
-    margin-left: 10px;
-  }
-}
-
-
-
-
-// these are the newer gray outline buttons
-@mixin tertiary-button-variant($color, $background, $border) {
-  color: $color;
-  background-color: $background;
-  border-color: $border;
-
-  &:focus,
-  &.focus,
-  &:active,
-  &.active,
-  .open >&.dropdown-toggle {
-    color: #fff;
-    background-color: $pb-gray-300;
-    border-color: $border;
-    &:hover {
-      color: #fff;
-      background-color: $pb-gray-400;
-      border-color: $border;
-    }
-  }
-  &:hover {
-    color: $color;
-    background-color: $pb-gray-50;
-    border-color: $border;
-  }
-  &:active,
-  &.active,
-  .open >&.dropdown-toggle {
-    background-image: none;
-  }
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    &,
-    &:hover,
-    &:focus,
-    &.focus,
-    &:active,
-    &.active {
-      background-color: $background;
-      border-color: $border;
-    }
-  }
 }
 
 /// Button sizes
@@ -354,7 +218,7 @@ $grid-column-padding: 15px;
 /// bottom
 @mixin border-bottom-radius($radius) {
   border-bottom-right-radius: $radius;
-   border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
 }
 /// right
 @mixin border-right-radius($radius) {
@@ -365,4 +229,32 @@ $grid-column-padding: 15px;
 @mixin border-left-radius($radius) {
   border-bottom-left-radius: $radius;
   border-top-left-radius: $radius;
+}
+
+
+@mixin functional-button($color) {
+  background-color: $color;
+  border-color: $color;
+  &:hover {
+    background-color: darken($color, 10%);
+    border-color: darken($color, 10%);
+  }
+}
+
+
+
+@mixin focus-ring {
+  border-color: #189dbd;
+  // outline-width: 6px;
+  // outline-style: solid;
+  // outline-color: hsla(190, 58%, 79%, .6);
+  outline: none;
+  box-shadow: 0 0 10px rgba(76, 211, 255, 0.77);
+  
+}
+
+@mixin webkit-only {
+  @media (-webkit-min-device-pixel-ratio:0) {
+    @content;
+  }
 }

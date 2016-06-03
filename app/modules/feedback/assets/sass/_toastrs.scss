@@ -6,9 +6,9 @@
 
 //List that pairs toastr classes with colors
 $toastr-list: '.toast-info'     $state-info-bg $state-info-border $pb-gray-700 $icon-info,
-              '.toast-success'  $state-success-bg $state-success-border $pb-gray-700 $icon-success,
-              '.toast-warning'  $state-warning-bg $state-warning-border $pb-gray-700 $icon-warning,
-              '.toast-error'    $state-danger-bg $state-danger-border $pb-gray-700 $icon-danger;
+  '.toast-success'  $state-success-bg $state-success-border $pb-gray-700 $icon-success,
+  '.toast-warning'  $state-warning-bg $state-warning-border $pb-gray-700 $icon-warning,
+  '.toast-error'    $state-danger-bg $state-danger-border $pb-gray-700 $icon-danger;
 
 //mixin that creates a single toastr instance
 @mixin create-toastr($bg, $border, $text, $icon) {
@@ -18,16 +18,14 @@ $toastr-list: '.toast-info'     $state-info-bg $state-info-border $pb-gray-700 $
   $toastr-border-color: $border;
   $toastr-icon: #{$icon};
 
-
-
-  //use colors to style toaster
+  // use colors to style toaster
   background-color: $toastr-bg-color;
   border-color: $toastr-border-color;
   color: $toastr-txt-color;
   background-image: url($toastr-icon) !important;
   padding: 15px 15px 15px 50px !important;
 
-  //see elements.module.js to configure the close X, SVG must be added as global config option
+  // see elements.module.js to configure the close X, SVG must be added as global config option
   .close-x {
     stroke: $text;
     position: absolute;
@@ -41,7 +39,7 @@ $toastr-list: '.toast-info'     $state-info-bg $state-info-border $pb-gray-700 $
   }
 }
 
-//for each instance of $toastr-classes-list
+// for each instance of $toastr-classes-list
 @mixin build-toastrs($list) {
   @each $item in $list {
     $class: nth($item, 1);
@@ -56,7 +54,7 @@ $toastr-list: '.toast-info'     $state-info-bg $state-info-border $pb-gray-700 $
 }
 
 
-//OVERWRITE DEFAULT TOASTR VALUES
+// OVERWRITE DEFAULT TOASTR VALUES
 
 #toast-container {
   .toast {
@@ -120,7 +118,7 @@ $toastr-list: '.toast-info'     $state-info-bg $state-info-border $pb-gray-700 $
 }
 
 
-/*Pull in Animations*/
+/* Pull in Animations */
 .toast {
   &.ng-enter {
     @extend .flipInX;
@@ -144,34 +142,34 @@ $toastr-list: '.toast-info'     $state-info-bg $state-info-border $pb-gray-700 $
 @keyframes flipInX {
   0% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-            transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
     -webkit-transition-timing-function: ease-in;
-            transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
     opacity: 0;
   }
 
   40% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-            transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
     -webkit-transition-timing-function: ease-in;
-            transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
   }
 
   60% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-            transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
     opacity: 1;
   }
 
   80% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-            transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
     opacity: 1;
   }
 
   100% {
     -webkit-transform: perspective(400px);
-            transform: perspective(400px);
+    transform: perspective(400px);
   }
 }
 

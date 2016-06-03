@@ -1,8 +1,8 @@
 // popover
 .popover {
-  box-shadow        : none;
-  border-radius     : 0;
-  background-color  : #fff;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: #fff;
   z-index: 3;
   &.bottom .arrow:after {
     border-bottom-color: #fff;

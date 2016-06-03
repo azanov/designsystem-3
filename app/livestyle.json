@@ -1,3 +1,0 @@
-{
-    "globals": ["modules/**/assets/sass/*.scss", "assets/**/*.scss"]
-}
