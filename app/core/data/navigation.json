@@ -59,10 +59,6 @@
             "label": "Help Prompts",
             "value": "help"
           }, {
-            "label": "Modals & Popovers",
-            "value": "elements.popovers",
-            "className": "popovers"
-          }, {
             "label": "Tables",
             "value": "tables.datatable.page"
           }, {

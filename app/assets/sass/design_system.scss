@@ -49,7 +49,6 @@
 @import '../../modules/elements/assets/sass/form-controls';
 @import '../../modules/elements/assets/sass/list-group';
 @import '../../modules/elements/assets/sass/loading-bar';
-@import '../../modules/elements/assets/sass/notifications';
 @import '../../modules/elements/assets/sass/switches';
 @import '../../modules/elements/assets/sass/tabs';
 @import '../../modules/elements/assets/sass/tabs-fancy';
@@ -73,8 +72,11 @@
 
 @import '../../modules/elements/assets/sass/panels';
 @import '../../modules/elements/assets/sass/accordion';
-@import '../../modules/elements/assets/sass/popover';
 @import '../../modules/elements/assets/sass/progress-bar';
+
+@import '../../modules/modals-popovers/assets/sass/popover';
+@import '../../modules/modals-popovers/assets/sass/modals';
+
 
 @import '../../modules/feedback/assets/sass/alerts';
 @import '../../modules/feedback/assets/sass/toastrs';

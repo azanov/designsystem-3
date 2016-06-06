@@ -130,14 +130,14 @@
         }
       })
 
-      .state('elements.popovers', {
-        url: '/popovers',
-        templateUrl: 'modules/elements/templates/elements-modals-popovers.html',
-        controller: 'BootstrapUiPopoverController as pop',
-        data: {
-          pageTitle: 'Modals and Popovers'
-        }
-      })
+      // .state('elements.popovers', {
+      //   url: '/popovers',
+      //   templateUrl: 'modules/elements/templates/elements-modals-popovers.html',
+      //   controller: 'BootstrapUiPopoverController as pop',
+      //   data: {
+      //     pageTitle: 'Modals and Popovers'
+      //   }
+      // })
 
       .state('elements.progress', {
         url: '/progress',
