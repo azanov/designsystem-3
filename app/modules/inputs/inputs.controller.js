@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('pb.ds.elements').controller('InputsController', function ($log, CountriesResolve, PeopleResolve, moment, $http) {
+  angular.module('pb.ds.inputs').controller('InputsController', function ($log, CountriesResolve, PeopleResolve, moment, $http) {
     var _this = this;
 
     // numeric stepper

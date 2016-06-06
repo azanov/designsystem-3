@@ -23,7 +23,8 @@
     'pb.ds.hamburger',
     'pb.ds.content',
     'pb.ds.errors',
-    'pb.ds.modals'
+    'pb.ds.modals',
+    'pb.ds.inputs'
   ]);
 
   // angular scroll configuration
