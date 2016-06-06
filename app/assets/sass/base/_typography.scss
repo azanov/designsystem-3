@@ -3,22 +3,16 @@
 }
 
 // easily change something to serif or sans-serif
-.serif,
-.serif p {
+.serif, .serif p {
   font-family: $font-family-serif;
 }
 
-.sans-serif,
-.sans,
-.sans-serif p,
-.sans p {
+.sans-serif, .sans, .sans-serif p, .sans p {
   font-family: $font-family-sans-serif;
 }
 
 // Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-code,
-.code,
-pre {
+code, .code, pre {
   font-family: $font-family-monospace;
 }
 
@@ -43,17 +37,11 @@ a {
   }
 }
 
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: inherit; // links take on color of the header they're in
 }
 
-h1,
-.h1 {
+h1, .h1 {
   font-size: 32px;
   font-weight: normal;
   font-family: $font-family-ps-light;
@@ -67,10 +55,12 @@ h1,
   &.alt {
     color: $page-header-color-alt;
   }
+  &.page-title {
+    margin-top: 90px;
+  }
 }
 
-h2,
-.h2 {
+h2, .h2 {
   font-size: 20px;
   font-family: $font-family-ps-regular;
   margin-top: 40px;
@@ -97,8 +87,7 @@ h2.section-divider {
   border-bottom: 1px solid $pb-light-gray;
 }
 
-h2.follows-h1,
-h1 + h2 {
+h2.follows-h1, h1 + h2 {
   margin-top: 20px;
 }
 
@@ -111,8 +100,7 @@ h2.table-header {
 }
 
 
-h3,
-.h3 {
+h3, .h3 {
   font-size: 18px;
   font-family: $font-family-ps-regular;
   font-weight: normal;
@@ -125,16 +113,14 @@ h3,
   }
 }
 
-h4,
-.h4 {
+h4, .h4 {
   font-size: 16px;
   font-family: $font-family-sans-serif;
   font-weight: bold;
   color: $header-color;
 }
 
-h5,
-.h5 {
+h5, .h5 {
   font-size: 14px;
   font-family: $font-family-sans-serif;
   font-weight: bold;
@@ -147,8 +133,7 @@ h5,
   }
 }
 
-h6,
-.h6 {
+h6, .h6 {
   font-size: 12px;
   font-family: $font-family-sans-serif;
   font-weight: bold;
@@ -175,21 +160,17 @@ h6,
   font-weight: normal;
   font-style: normal;
 
-  &.italic,
-  em,
-  i {
+  &.italic, em, i {
     font-family: $font-family-ps-light-italic;
   }
 
   // since regular bold is a bit much on light
-  b,
-  strong {
+  b, strong {
     font-family: $font-family-ps-medium;
   }
 }
 
-p.lead,
-p.lede {
+p.lead, p.lede {
   font-family: $font-family-ps-regular;
   font-size: $font-size-large;
 }
@@ -231,8 +212,7 @@ dt {
   }
 }
 
-ul.spaced,
-ol.spaced {
+ul.spaced, ol.spaced {
   > li {
     margin-top: 10px;
 
@@ -242,8 +222,7 @@ ol.spaced {
   }
 }
 
-ul,
-ol {
+ul, ol {
   margin-top: 0;
   margin-bottom: 10px;
   margin-left: 0;
@@ -270,8 +249,7 @@ ol {
   transition: all .2s ease-in-out;
 }
 
-.nav-tabs > li > a,
-.nav-pills > li > a {
+.nav-tabs > li > a, .nav-pills > li > a {
   font-family: $font-family-ps-regular;
 }
 
@@ -287,10 +265,7 @@ ol {
 
 
 // boostrap makes changing the weight of the logo quite difficult
-#header .navbar .navbar-brand.brand-text,
-#header .navbar .container .navbar-brand.brand-text,
-header .navbar .navbar-brand.brand-text,
-header .navbar .container .navbar-brand.brand-text {
+#header .navbar .navbar-brand.brand-text, #header .navbar .container .navbar-brand.brand-text, header .navbar .navbar-brand.brand-text, header .navbar .container .navbar-brand.brand-text {
   font-family: $font-family-ps-regular;
   font-weight: normal;
 }
@@ -309,9 +284,7 @@ header .navbar .container .navbar-brand.brand-text {
   font-size: $font-size-large;
 }
 
-small,
-.text-small,
-.small {
+small, .text-small, .small {
   font-size: $font-size-small;
 }
 .doc-note {
@@ -375,7 +348,6 @@ small,
 .text-warning {
   color: $state-warning-text;
 }
-.text-danger,
-.text-error {
+.text-danger, .text-error {
   color: $brand-danger;
 }

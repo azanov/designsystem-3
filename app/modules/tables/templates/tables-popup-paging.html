@@ -1,11 +1,10 @@
-<div class="container-fluid">
+<div class="container">
 
   <div class="row">
     <div class="col-md-12">
-      <h1 class="main-title">Paging Example</h1>
+      <h1 class="page-title">Pagination Example</h1>
     </div>
   </div>
-
 
   <div class="row toolbar spacer-top-md spacer-bottom-md">
 
@@ -31,7 +30,9 @@
 
         <div class="form-group dropdown">
           <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-            <i class="nc-icon-mini fw ui-2_filter"></i> {{datatable.table.search.country || 'All countries'}} <i class="nc-icon-mini arrows-2_small-down"></i>
+            <i class="nc-icon-mini fw ui-2_filter"></i>
+            {{datatable.table.search.country || 'All countries'}}
+            <i class="nc-icon-mini arrows-2_small-down"></i>
           </button>
           <ul class="dropdown-menu" role="menu">
             <li class="dropdown-header">Country filter</li>
@@ -45,15 +46,16 @@
           </ul>
         </div>
 
-
         <div class="input-group">
 
           <div class="input-group-addon">
-              <i class="nc-icon-mini fw ui-1_zoom"></i>
+            <i class="nc-icon-mini fw ui-1_zoom"></i>
           </div>
 
-            <input class="form-control search" type="text" placeholder="Search" ng-model="datatable.table.search.$" ng-model-options="{debounce: 300}" required>
-            <button class="btn btn-link search-clear" type="reset" ng-click="datatable.table.searchClear()"><i class="nc-icon-mini fw ui-1_circle-remove"></i></button>
+          <input class="form-control search" type="text" placeholder="Search" ng-model="datatable.table.search.$" ng-model-options="{debounce: 300}" required>
+          <button class="btn btn-link search-clear" type="reset" ng-click="datatable.table.searchClear()">
+            <i class="nc-icon-mini fw ui-1_circle-remove"></i>
+          </button>
         </div>
 
       </form>
@@ -62,7 +64,6 @@
 
   </div>
 
-
   <div class="row">
 
     <div class="col-md-12">
@@ -70,7 +71,7 @@
       <table class="table table-datatable table-hover table-border-bottom">
         <thead>
           <tr>
-            <th><input type="checkbox" ng-model="datatable.table.allRowsSelected" ng-click="datatable.table.selectAllRows()" ng-checked="datatable.table.selectAllFilteredRows()" /></th>
+            <th><input type="checkbox" ng-model="datatable.table.allRowsSelected" ng-click="datatable.table.selectAllRows()" ng-checked="datatable.table.selectAllFilteredRows()"/></th>
             <th>&nbsp;</th>
             <th>
               <a href="" class="text-nowrap" ng-click="datatable.table.sort.change('first_name')">First Name
@@ -96,9 +97,7 @@
           <tr ng-if="!datatable.table.dataFiltered.length">
             <td colspan="9" class="text-center">There are no results.</td>
           </tr>
-          <tr ng-click="datatable.table.selectRow(item, $event)"
-              dir-paginate-start="item in datatable.table.dataFiltered = (datatable.table.data | orderBy:datatable.table.sort.type:datatable.table.sort.reverse | filter: datatable.table.search | daterange:datatable.table.daterangepicker.date.startDate:datatable.table.daterangepicker.date.endDate) | itemsPerPage: datatable.table.paging.size"
-              ng-class="{'row-open': item.showDetails, 'table-row-selected': item.selected}">
+          <tr ng-click="datatable.table.selectRow(item, $event)" dir-paginate-start="item in datatable.table.dataFiltered = (datatable.table.data | orderBy:datatable.table.sort.type:datatable.table.sort.reverse | filter: datatable.table.search | daterange:datatable.table.daterangepicker.date.startDate:datatable.table.daterangepicker.date.endDate) | itemsPerPage: datatable.table.paging.size" ng-class="{'row-open': item.showDetails, 'table-row-selected': item.selected}">
 
             <td><input type="checkbox" ng-model="item.selected" ng-click="datatable.table.selectRow(item, $event)"></td>
             <td>
@@ -108,13 +107,21 @@
             </td>
             <td>{{::item.first_name}}</td>
             <td>{{::item.last_name}}</td>
-            <td><a href="#" ng-click="datatable.table.selectEmail(item, $event)">{{::item.email}}</a></td>
-            <td><span class="text-nowrap">{{::item.country}}</span></td>
+            <td>
+              <a href="#" ng-click="datatable.table.selectEmail(item, $event)">{{::item.email}}</a>
+            </td>
+            <td>
+              <span class="text-nowrap">{{::item.country}}</span>
+            </td>
             <td>{{::item.date.created | date:'MM/dd/yyyy'}}</td>
-            <td><i class="nc-icon-mini fw" ng-class="{'users_single-04': item.userType === 'user', 'users_single-04-secret': item.userType === 'admin'}"></i></td>
+            <td>
+              <i class="nc-icon-mini fw" ng-class="{'users_single-04': item.userType === 'user', 'users_single-04-secret': item.userType === 'admin'}"></i>
+            </td>
             <td>
               <span ng-repeat="group in (item.groups | orderBy: group | limitTo: item.limit || datatable.table.groups.min) track by $index">
-                {{::group}}<span ng-if="!$last">, </span>
+                {{::group}}
+                <span ng-if="!$last">,
+                </span>
               </span>
               <div>
                 <a class="small" href="" ng-if="item.groups.length > datatable.table.groups.min" ng-show="!item.limit" ng-click="datatable.table.showMore(item, true, $event)">Show more</a>
@@ -135,8 +142,10 @@
 
                       <dl class="condensed">
                         <dt>Phone Numbers</dt>
-                        <dd>Work: {{::item.phone.work}}</dd>
-                        <dd>Cell: {{::item.phone.cell}}</dd>
+                        <dd>Work:
+                          {{::item.phone.work}}</dd>
+                        <dd>Cell:
+                          {{::item.phone.cell}}</dd>
                       </dl>
 
                     </div>
@@ -146,7 +155,9 @@
                       <dl class="condensed">
                         <dt>Address</dt>
                         <dd>{{::item.address.street}}</dd>
-                        <dd>{{::item.address.city}}, {{::item.address.state}} {{::item.address.postalCode}}</dd>
+                        <dd>{{::item.address.city}},
+                          {{::item.address.state}}
+                          {{::item.address.postalCode}}</dd>
                       </dl>
 
                     </div>
@@ -184,17 +195,14 @@
 
   <div class="row toolbar toolbar-footer">
 
-    <div class="col-md-2 col-md-push-5 text-center">
+    <div class="col-md-2">
       <form class="form-inline">
-        <select class="form-control" ng-model="datatable.table.paging.size" ng-options="size as size for size in datatable.table.paging.sizes"></select> per page
+        <select class="form-control" ng-model="datatable.table.paging.size" ng-options="size as size for size in datatable.table.paging.sizes"></select>
+        per page
       </form>
     </div>
 
-
-
-      <div dir-pagination-controls boundary-links="true" template-url="modules/tables/templates/tables-datatable-dirPaginate.html"></div>
-
-
+    <div dir-pagination-controls boundary-links="true" template-url="modules/tables/templates/tables-pagination.html"></div>
 
   </div>
 

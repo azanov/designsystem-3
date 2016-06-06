@@ -8,20 +8,20 @@
 // Settings
 // Global variables and mixins, Bower distribute
 // =============================================
-@import "settings/variables";
-@import "settings/mixins";
+@import 'settings/variables';
+@import 'settings/mixins';
 
 // Base
 // Site-wide style definitions
 // ========================================
-@import "base/fonts";
-@import "base/pbfont";
-@import "base/typography";
-@import "fontawesome/font-awesome";
-@import "nucleo_mini/nucleo-mini";
-@import "nucleo_outline/nucleo-outline";
-@import "base/helpers";
-@import "base/pb-nucleo-extras";
+@import 'base/fonts';
+@import 'base/pbfont';
+@import 'base/typography';
+@import 'fontawesome/font-awesome';
+@import 'nucleo_mini/nucleo-mini';
+@import 'nucleo_outline/nucleo-outline';
+@import 'base/helpers';
+@import 'base/pb-nucleo-extras';
 
 // Legacy
 // Items removed from the DS but which we do not want to break if in use
@@ -78,11 +78,12 @@
 
 @import '../../modules/feedback/assets/sass/alerts';
 @import '../../modules/feedback/assets/sass/toastrs';
+// @import '../../modules/elements/assets/sass/daterangepicker';
 
 @import '../../modules/patterns/assets/sass/signin';
 
 @import '../../modules/tables/assets/sass/tables';
-@import '../../modules/tables/assets/sass/daterangepicker';
+
 @import '../../modules/graphs/sass/c3';
 
 @import '../../modules/landing/assets/sass/landing';
