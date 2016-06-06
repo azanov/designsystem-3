@@ -36,10 +36,10 @@
             }, {
               "label": "Typography",
               "value": "foundation.typography"
-            },{
-            "label": "Angular Directives",
-            "value": "foundation.directives"
-          }
+            }, {
+              "label": "Angular Directives",
+              "value": "foundation.directives"
+            }
 
           ]
         }, {
@@ -67,9 +67,12 @@
           }, {
             "label": "User Feedback",
             "value": "feedback.page"
-          },{
+          }, {
             "label": "Modals and Popovers",
             "value": "modals.modals-popovers"
+          },{
+            "label": "Input Fields",
+            "value": "inputs"
             }]
         }, {
           "label": "Patterns",
