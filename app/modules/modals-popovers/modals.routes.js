@@ -6,7 +6,7 @@
       url: '/modals',
       templateUrl: 'modules/modals-popovers/modals-index.html',
       abstract: true,
-      controller: 'ModalsController as modals',
+      controller: 'ModalsController as pop',
       data: {
         pageTitle: 'Modals and Popovers'
       }

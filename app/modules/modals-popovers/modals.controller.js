@@ -13,43 +13,43 @@
     _this.modals = {
       basicMessage: function () {
         $uibModal.open({
-          templateUrl: 'modules/modals-popovers/templates/modals/elements-basic-message.html',
+          templateUrl: 'modules/modals-popovers/modals/basic-message.html',
           controller: 'BootstrapUiBasicMessageModalController'
         });
       },
       singleChoice: function () {
         $uibModal.open({
-          templateUrl: 'modules/modals-popovers/templates/modals/elements-single-choice.html',
+          templateUrl: 'modules/modals-popovers/modals/single-choice.html',
           controller: 'BootstrapUiSingleChoiceModalController'
         });
       },
       radioButtons: function () {
         $uibModal.open({
-          templateUrl: 'modules/modals-popovers/templates/modals/elements-radio-buttons.html',
+          templateUrl: 'modules/modals-popovers/modals/radio-buttons.html',
           controller: 'BootstrapUiRadioButtonsModalController'
         });
       },
       commentForm: function () {
         $uibModal.open({
-          templateUrl: 'modules/modals-popovers/templates/modals/elements-comment-form.html',
+          templateUrl: 'modules/modals-popovers/modals/comment-form.html',
           controller: 'BootstrapUiCommentFormModalController'
         });
       },
       withCopy: function () {
         $uibModal.open({
-          templateUrl: 'modules/modals-popovers/templates/modals/elements-with-copy.html',
+          templateUrl: 'modules/modals-popovers/modals/with-copy.html',
           controller: 'BootstrapUiWithCopyModalController'
         });
       },
       simple: function () {
         $uibModal.open({
-          templateUrl: 'modules/modals-popovers/templates/modals/elements-simple.html',
+          templateUrl: 'modules/modals-popovers/modals/simple.html',
           controller: 'BootstrapUiSimpleModalController'
         });
       },
       modal: function () {
         $uibModal.open({
-          templateUrl: 'modules/modals-popovers/templates/modals/elements-modal.html',
+          templateUrl: 'modules/modals-popovers/modals/modal.html',
           controller: 'BootstrapUiModalController',
           keyboard: false,
           backdrop: 'static'
@@ -57,7 +57,7 @@
       },
       prompt: function () {
         $uibModal.open({
-          templateUrl: 'modules/modals-popovers/templates/modals/elements-prompt.html',
+          templateUrl: 'modules/modals-popovers/modals/prompt.html',
           controller: 'BootstrapUiPromptModalController',
           keyboard: false,
           backdrop: 'static'
@@ -67,8 +67,8 @@
       },
       draggable: function () {
         $uibModal.open({
-          windowTemplateUrl: 'modules/modals-popovers/templates/modals/elements-draggable-template.html',
-          templateUrl: 'modules/modals-popovers/templates/modals/elements-draggable.html',
+          windowTemplateUrl: 'modules/modals-popovers/modals/draggable-template.html',
+          templateUrl: 'modules/modals-popovers/modals/draggable.html',
           controller: 'BootstrapUiDraggableModalController',
           keyboard: false,
           backdrop: 'static'

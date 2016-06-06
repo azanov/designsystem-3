@@ -71,7 +71,10 @@
           }, {
             "label": "User Feedback",
             "value": "feedback.page"
-          }]
+          },{
+            "label": "Modals and Popovers",
+            "value": "modals.modals-popovers"
+            }]
         }, {
           "label": "Patterns",
           "value": "",
