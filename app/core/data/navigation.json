@@ -82,7 +82,10 @@
           }, {
             "label": "Radio Buttons",
             "value": "radiobuttons"
-            }
+          }, {
+            "label": "Switches",
+            "value": "switches"
+          }
           ]
         }, {
           "label": "Patterns",
