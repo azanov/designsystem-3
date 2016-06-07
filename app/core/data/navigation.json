@@ -73,7 +73,10 @@
           },{
             "label": "Input Fields",
             "value": "inputs"
-            }]
+            }, {
+              "label": "Dropdown Menus",
+              "value": "dropdowns"
+              }]
         }, {
           "label": "Patterns",
           "value": "",

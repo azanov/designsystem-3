@@ -24,7 +24,8 @@
     'pb.ds.content',
     'pb.ds.errors',
     'pb.ds.modals',
-    'pb.ds.inputs'
+    'pb.ds.inputs',
+    'pb.ds.dropdowns'
   ]);
 
   // angular scroll configuration

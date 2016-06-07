@@ -1,0 +1,353 @@
+<div class="doc-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero-header">
+          <!-- <div class="eyebrow">????</div> -->
+          <h1>Dropdown Menus</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-header jump-bar headroom" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}" headroom offset="240" tolerance="5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-unstyled list-inline jump-menu">
+            <li>
+              <a ui-sref="inputs({'#':'inputfields'})">xxxx</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="container">
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Usage</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <ul>
+        <li>Best suited for lists containing 7-15 items. For fewer items consider using radio buttons.</li>
+        <li>Never present the user with a blank menu. In most cases, &ldquo;Select&rdquo; should be your first menu item, to help prompt the user to make a selection.</li>
+        <li>Use extreme caution with preselecting an item, especially in required or critical menus &mdash; only do so if at least 80% of users are likely to select that item.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">States</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p>Dropdown menus have four primary states, each defined by its form and type coloring:</p>
+      <ul>
+        <li>Default</li>
+        <li>Focused</li>
+        <li>Active</li>
+        <li>Disabled</li>
+      </ul>
+    </div>
+
+    <div class="col-md-7 col-md-offset-1 ">
+
+      <div class="row">
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Default Dropdown</figcaption>
+            <label>Text label</label>
+            <div class="form-group">
+              <select class="form-control">
+                <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+              </select>
+            </div>
+          </figure>
+
+          <figure>
+            <figcaption>Default Dropdown (Focused)</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+
+              <select class="form-control focus">
+                <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+              </select>
+            </div>
+          </figure>
+
+        </div>
+        <div class="col-md-5">
+
+          <figure>
+            <figcaption>Default Dropdown, Disabled</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+
+              <select class="form-control" disabled>
+                <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+              </select>
+            </div>
+          </figure>
+
+          <figure>
+            <figcaption>Default Dropdown (Error)</figcaption>
+            <div class="form-group has-error">
+              <label>Text label</label>
+              <select class="form-control">
+                <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+              </select>
+            </div>
+          </figure>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Sizes</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p>We have three sizes of dropdown menus: default, large and small. Use the default size for all dropdowns except when:</p>
+      <ul>
+        <li>You have a very crowded form (20+ dropdowns), in which case consider using small dropdown menus</li>
+        <li>You have only a few dropdowns (&lt;10), in which case consider using large dropdown menus</li>
+      </ul>
+
+      <p>Once you&rsquo;ve selected a dropdown menu size, use it consistently throughout your product. The exceptions to this rule are pages that are outside of your product&rsquo;s flow (such as Sign Up), which should use the large size.</p>
+
+      <p>Note that even when using large or small dropdown menus the label font remains the standard size.</p>
+
+    </div>
+
+    <div class="col-md-7 col-md-offset-1">
+
+      <div class="row">
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Default</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <select class="form-control">
+                <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+              </select>
+            </div>
+          </figure>
+
+          <figure>
+            <div class="form-group">
+              <figcaption>Small</figcaption>
+              <label>Text label</label>
+              <select class="form-control input-sm">
+                <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+              </select>
+            </div>
+          </figure>
+        </div>
+
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Large</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <select class="form-control input-lg">
+                <option value="">Select</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+              </select>
+            </div>
+          </figure>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Multiple Selection</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p>When using multiple selection menus, consider letting users know which keys they need to use (Ctrl-click or Cmd-click) on desktop devices in order to use this feature. Or consider using the multi-select with tokens menu.</p>
+
+      <p>Mobile devices may present their own UI for making the multiple selection. On iOS, a tap will present a popover menu in which you can scroll and tap choices. Checkmarks appear next to chosen options. When the popover is closed, the "menu" now displays the number of chosen items.</p>
+    </div>
+
+    <div class="col-md-7 col-md-offset-1">
+
+      <div class="row">
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Multi-Select Menu</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <select class="form-control" multiple ng-model="selectedPerson" ng-options="person.full_name for person in drop.samplePeople" size="6"></select>
+            </div>
+          </figure>
+
+          <figure>
+            <figcaption>Multi-Row Select Menu with Checkboxes</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <div class="checkboxList form-control">
+                <div class="ms-checkboxitem" ng-repeat="person in drop.samplePeople">
+                  <label>
+                    <input ng-model="person.isChecked" type="checkbox">&nbsp;
+                    <span>{{person.full_name}}</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </figure>
+        </div>
+
+        <div class="col-md-5">
+          <figure>
+            <figcaption>Multi-Row Select Menu (Disabled)</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <select class="form-control" disabled multiple ng-model="selectedPersonn" ng-options="person.full_name for person in drop.samplePeople" size="6"></select>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Advanced Select Menus</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <p>You can use these advanced menu types to augment our standard dropdown menus. “Multi-select with tokens” is a good alternative to the multi-section types above, as it allows users to create a persistent list of selections that they can easily edit.</p>
+
+      <p>Note that you have your choice of two multi-select menu controls: ui-select and ngTagsInput. Both offer various options for customizing behavior and appearance — refer to the plugin documentation for those details.</p>
+
+      <p>
+        <a class="more-info plugin" href="https://github.com/angular-ui/ui-select" target="_blank">angular-ui-select v0.16.1</a>
+      </p>
+
+      <p>
+        <a class="more-info plugin" href="https://github.com/mbenford/ngTagsInput" target="_blank">ng-tags-input v3.0.0</a>
+      </p>
+    </div>
+
+    <div class="col-md-7 col-md-offset-1">
+
+      <div class="row">
+        <div class="col-md-10">
+
+          <h4>UI-Select Options</h4>
+
+          <figure>
+            <figcaption>Single-Select with Type-Ahead</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <ui-select ng-model="drop.countrySelect.singleSelected" theme="bootstrap">
+                <ui-select-match placeholder="">{{$select.selected.name}}</ui-select-match>
+                <ui-select-choices repeat="item in drop.countrySelect.countries | filter: $select.search">
+                  <div ng-bind-html="item.name | highlight: $select.search"></div>
+                </ui-select-choices>
+              </ui-select>
+            </div>
+          </figure>
+
+          <figure>
+            <figcaption>Custom Menu Items</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <ui-select ng-model="drop.peopleSelect.selected" theme="bootstrap">
+                <ui-select-match placeholder="">{{$select.selected.name}}</ui-select-match>
+                <ui-select-choices repeat="item in drop.peopleSelect.people | filter: $select.search">
+                  <div ng-bind-html="item.name | highlight: $select.search"></div>
+                  <small ng-bind-html="item.email | highlight: $select.search"></small>
+                </ui-select-choices>
+              </ui-select>
+            </div>
+          </figure>
+
+          <figure>
+            <figcaption>Multi-Select with Tokens</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <ui-select multiple  ng-model="drop.countrySelect.multipleSelected" theme="bootstrap">
+                <ui-select-match placeholder="Add a tag">{{$item.name}}</ui-select-match>
+                <ui-select-choices repeat="item in drop.countrySelect.countries | filter: $select.search">
+                  <div ng-bind-html="item.name | highlight: $select.search"></div>
+                </ui-select-choices>
+              </ui-select>
+            </div>
+          </figure>
+
+          <h4 class="spacer-top-lg">Ng-Tags-Input Option</h4>
+
+          <figure>
+            <figcaption>Multi-Select with Tokens</figcaption>
+            <div class="form-group">
+              <label>Text label</label>
+              <tags-input ng-model="drop.tags" display-property="name" key-property="code">
+                <auto-complete source="drop.loadTags($query)" ></auto-complete>
+              </tags-input>
+            </div>
+          </figure>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+</div>
