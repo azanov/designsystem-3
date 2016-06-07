@@ -22,6 +22,8 @@
 @import 'nucleo_outline/nucleo-outline';
 @import 'base/helpers';
 @import 'base/pb-nucleo-extras';
+@import 'base/forms';
+@import 'base/form-controls';
 
 // Legacy
 // Items removed from the DS but which we do not want to break if in use
@@ -45,15 +47,13 @@
 @import '../../modules/elements/assets/sass/badges';
 @import '../../modules/elements/assets/sass/breadcrumbs';
 @import '../../modules/elements/assets/sass/buttons';
-@import '../../modules/elements/assets/sass/forms';
-@import '../../modules/elements/assets/sass/form-controls';
+
 @import '../../modules/elements/assets/sass/list-group';
 @import '../../modules/elements/assets/sass/loading-bar';
 @import '../../modules/elements/assets/sass/switches';
 @import '../../modules/elements/assets/sass/tabs';
 @import '../../modules/elements/assets/sass/tabs-fancy';
 @import '../../modules/elements/assets/sass/toggle-switch';
-@import '../../modules/elements/assets/sass/ui-select';
 @import '../../modules/elements/assets/sass/uibootstrap';
 @import '../../modules/elements/assets/sass/custom-daterange-picker';
 @import '../../modules/elements/assets/sass/ngTagsInput';
@@ -61,6 +61,7 @@
 @import '../../modules/elements/assets/sass/category-widget';
 @import '../../modules/foundation/assets/sass/pbds-directives';
 
+@import '../../modules/dropdowns/assets/sass/ui-select';
 
 @import '../../../bower_components/slick-carousel/slick/slick';
 @import '../../../bower_components/slick-carousel/slick/slick-theme';
