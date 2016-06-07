@@ -88,6 +88,9 @@
           }, {
             "label": "Steppers",
             "value": "steppers"
+          } , {
+            "label": "Date Pickers",
+            "value": "datepickers"
           }
           ]
         }, {

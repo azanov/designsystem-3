@@ -6,7 +6,7 @@
       url: '/steppers',
       templateUrl: 'modules/steppers/steppers.html',
       // abstract: true,
-      controller: 'SwitchesController as step',
+      controller: 'SteppersController as step',
       data: {
         pageTitle: 'Steppers'
       }

@@ -1,0 +1,182 @@
+<div class="doc-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero-header">
+          <!-- <div class="eyebrow">????</div> -->
+          <h1>Steppers</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-header jump-bar headroom" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}" headroom offset="240" tolerance="5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- <ul class="list-unstyled list-inline jump-menu">
+            <li>
+              <a ui-sref="inputs({'#':'inputfields'})">xxxx</a>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="container">
+
+
+    <!-- DATE PICKER -->
+    <div class="row">
+      <div class="col-md-8">
+        <h1 class="doc-head" id="datepickers">Date Picker</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Usage</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <p>Never present the user with a blank menu. In most cases you should pre-populate the picker&rsquo;s input field with the current day&rsquo;s date (in your user&rsquo;s time zone).</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Styles</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <p>
+          <a class="more-info plugin" href="https://github.com/fragaria/angular-daterangepicker" target="_blank">angular-daterangepicker v0.2.2</a>
+          <a class="more-info plugin" href="http://www.daterangepicker.com/" target="_blank">Bootstrap Daterange Picker v2.1.12</a>
+        </p>
+      </div>
+
+      <div class="col-md-7 col-md-offset-1">
+
+        <div class="row">
+          <div class="col-md-5">
+            <figure>
+              <figcaption>Single Date Picker</figcaption>
+              <div class="input-group">
+                <input class="form-control" id="picker1" date-range-picker ng-model="date.singlepicker.date" options="date.singlepicker.options" type="text"/>
+                <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="date.openPicker('picker1')">
+                    <i class="nc-icon-mini nc-fw ui-1_calendar-57"></i>
+                  </button>
+                </span>
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <div class="row spacer-top-sm">
+          <div class="col-md-5">
+            <figure>
+              <figcaption>Date Range Picker</figcaption>
+              <div class="input-group">
+                <input class="form-control" id="picker2" date-range-picker ng-model="date.daterangepicker.date" options="date.daterangepicker.options" type="text"/>
+                <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="date.openPicker('picker2')">
+                    <i class="nc-icon-mini nc-fw ui-1_calendar-57"></i>
+                  </button>
+                </span>
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <div class="row spacer-top-sm">
+          <div class="col-md-5">
+            <figure>
+              <figcaption>Date Range Picker with Auto Apply Option</figcaption>
+              <div class="input-group">
+                <input class="form-control" id="picker3" date-range-picker ng-model="date.daterangepicker2.date" options="date.daterangepicker2.options" type="text"/>
+                <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="date.openPicker('picker3')">
+                    <i class="nc-icon-mini nc-fw ui-1_calendar-57"></i>
+                  </button>
+                </span>
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <div class="row spacer-top-sm">
+          <div class="col-md-8">
+            <figure>
+              <figcaption>Button Range Picker with Formatted Labels</figcaption>
+              <a class="btn btn-link" date-range-picker href="" ng-model="date.daterangepicker3.date" options="date.daterangepicker3.options">
+                <i class="nc-icon-mini nc-fw ui-1_calendar-57"></i>
+                {{date.daterangepicker3.displayDate()}}
+                <i class="nc-icon-mini arrows-2_small-down"></i>
+              </a>
+            </figure>
+          </div>
+        </div>
+
+        <!-- CUSTOM DATERANGE -->
+        <div class="row spacer-top-sm">
+          <div class="col-md-8">
+
+            <figure>
+              <figcaption>Custom Date Range with Single Date Pickers</figcaption>
+              <div class="input-group custom-daterange">
+
+                <div class="input-group-btn">
+                  <button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+                    <i class="nc-icon-mini nc-fw ui-1_calendar-57"></i>
+                    {{date.customRange.selected.label}}
+                     <i class="nc-icon-mini arrows-2_small-down"></i>
+                  </button>
+
+
+                  <ul class="dropdown-menu">
+                    <li ng-init="date.customRange.init()" ng-repeat="item in date.customRange.items">
+                      <a href="" ng-click="date.customRange.click(item)">{{item.label}}</a>
+                    </li>
+                  </ul>
+
+                </div>
+
+                <div class="custom-daterange-container">
+                  <div class="custom-daterange-labels" ng-show="!date.customRange.selected.isCustom">
+                    <span>{{date.customRange.selected.start | amDateFormat: 'MM/DD/YYYY'}}
+                      <span ng-show="date.customRange.selected.isRange">-
+                        {{date.customRange.selected.end | amDateFormat: 'MM/DD/YYYY'}}</span>
+                    </span>
+                  </div>
+
+                  <div class="custom-daterange-inputs" ng-show="date.customRange.selected.isCustom">
+                    <label>From</label>
+                    <input date-range-picker ng-model="date.customRange.start.date" options="date.customRange.start.options" readonly type="text">
+                    <label>To</label>
+                    <input date-range-picker ng-model="date.customRange.end.date" options="date.customRange.end.options" readonly type="text">
+                  </div>
+                </div>
+
+                <!-- <div class="input-group-addon">
+                  <i class="fa fa-fw fa-calendar"></i>
+                </div> -->
+
+              </div>
+            </figure>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+</div>

@@ -29,7 +29,8 @@
     'pb.ds.checkboxes',
     'pb.ds.radiobuttons',
     'pb.ds.switches',
-    'pb.ds.steppers'
+    'pb.ds.steppers',
+    'pb.ds.datepickers'
   ]);
 
   // angular scroll configuration
