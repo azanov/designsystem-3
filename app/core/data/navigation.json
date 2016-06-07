@@ -62,9 +62,6 @@
             "label": "Tables",
             "value": "tables.page"
           }, {
-            "label": "UI Controls",
-            "value": "elements.uicontrols"
-          }, {
             "label": "User Feedback",
             "value": "feedback.page"
           }, {
