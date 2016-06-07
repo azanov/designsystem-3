@@ -28,26 +28,27 @@
             <li>
               <div class="yamm-content">
 
-                <!-- was able to lost a lot of bootstrap code by going to flexbox here -->
-                  <div class="yamm-child-column" ng-repeat="category in header.nav[1].Web[0].children[0].children">
-                    <p class="section-head">{{category.label}}</p>
+                <div class="yamm-flex-container">
+                  <!-- was able to lost a lot of bootstrap code by going to flexbox here -->
+                    <div class="yamm-child-column" ng-repeat="category in header.nav[1].Web[0].children[0].children">
+                      <p class="section-head">{{category.label}}</p>
 
-                    <ul class="list-unstyled menu-items menu-items-two-column">
+                      <ul class="list-unstyled menu-items menu-items-two-column">
 
-                      <!-- if no sub items-->
-                      <li ng-if="!item.children" ng-repeat="item in category.children">
-                        <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
-                      </li>
-
-                      <!-- if sub items -->
-                      <span ng-if="item.children" ng-repeat="item in category.children">
-                        <li ng-repeat="item in item.children ">
+                        <!-- if no sub items-->
+                        <li ng-if="!item.children" ng-repeat="item in category.children">
                           <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
                         </li>
-                      </span>
-                    </ul>
-                  </div>
 
+                        <!-- if sub items -->
+                        <span ng-if="item.children" ng-repeat="item in category.children">
+                          <li ng-repeat="item in item.children ">
+                            <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
+                          </li>
+                        </span>
+                      </ul>
+                    </div>
+                  </div>
               </div>
             </li>
           </ul>
@@ -60,21 +61,23 @@
             <li>
               <div class="yamm-content ">
 
-                <div class="yamm-child-column" ng-repeat="category in header.nav[2].Mobile[0].children[0].children">
-                  <p class="section-head">{{category.label}}</p>
-                  <ul class="list-unstyled menu-items menu-items-two-column">
-                    <!-- if no sub items-->
-                    <li ng-if="!item.children" ng-repeat="item in category.children">
-                      <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
-                    </li>
-
-                    <!-- if sub items -->
-                    <span ng-if="item.children" ng-repeat="item in category.children">
-                      <li ng-repeat="item in item.children">
+                <div class="yamm-flex-container">
+                  <div class="yamm-child-column" ng-repeat="category in header.nav[2].Mobile[0].children[0].children">
+                    <p class="section-head">{{category.label}}</p>
+                    <ul class="list-unstyled menu-items menu-items-two-column">
+                      <!-- if no sub items-->
+                      <li ng-if="!item.children" ng-repeat="item in category.children">
                         <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
                       </li>
-                    </span>
-                  </ul>
+
+                      <!-- if sub items -->
+                      <span ng-if="item.children" ng-repeat="item in category.children">
+                        <li ng-repeat="item in item.children">
+                          <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
+                        </li>
+                      </span>
+                    </ul>
+                  </div>
                 </div>
 
 
