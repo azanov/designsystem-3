@@ -102,7 +102,7 @@
             "value": "patterns.dragdrop"
           }, {
             "label": "Error Pages",
-            "value": "patterns.errorpages"
+            "value": "errors"
           }, {
             "label": "Form Elements",
             "value": "patterns.forms"
