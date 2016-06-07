@@ -26,7 +26,8 @@
     'pb.ds.modals',
     'pb.ds.inputs',
     'pb.ds.dropdowns',
-    'pb.ds.checkboxes'
+    'pb.ds.checkboxes',
+    'pb.ds.radiobuttons'
   ]);
 
   // angular scroll configuration

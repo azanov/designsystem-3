@@ -1,0 +1,203 @@
+<div class="doc-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero-header">
+          <!-- <div class="eyebrow">????</div> -->
+          <h1>Radio Buttons</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-header jump-bar headroom" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}" headroom offset="240" tolerance="5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- <ul class="list-unstyled list-inline jump-menu">
+            <li>
+              <a ui-sref="inputs({'#':'inputfields'})">xxxx</a>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="container">
+
+
+    <div class="row">
+      <div class="col-md-8">
+        <h1 class="doc-head" id="radios">Radio Buttons</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Usage</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <ul>
+          <li>When possible, you should use the enhanced style.</li>
+          <li>If your product has long lists of radio buttons (and space is an issue), consider using the standard OS style.</li>
+          <li>Use the same style for your radio buttons and checkboxes, and apply that style consistently across your product.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Styles</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <p>We have two styles of radio buttons: enhanced and standard OS.</p>
+      </div>
+
+      <div class="col-md-7 col-md-offset-1">
+        <div class="row">
+          <figure>
+            <div class="col-md-7">
+              <figcaption>Enhanced Radio Buttons</figcaption>
+              <div class="controls-stacked">
+                <label class="control radio">
+                  <input id="radio1" name="radio" type="radio">
+                  <span class="control-indicator"></span>
+                  Toggle this custom radio
+                </label>
+                <label class="control radio">
+                  <input id="radio2" name="radio" type="radio">
+                  <span class="control-indicator"></span>
+                  Or toggle this other custom radio
+                </label>
+                <label class="control radio disabled">
+                  <input id="radio3" name="radio" type="radio" disabled>
+                  <span class="control-indicator"></span>
+                  Or toggle this other custom radio
+                </label>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <figcaption>Standard OS Radio Buttons</figcaption>
+
+              <div class="radio">
+                <label for="rd11">
+                  <input checked id="rd11" name="radioStandard" type="radio">
+                  This is a selected radio button</label>
+              </div>
+              <div class="radio">
+                <label for="rd22">
+                  <input id="rd22" name="radioStandard" type="radio">
+                  This is a deselected radio button</label>
+              </div>
+              <div class="radio disabled">
+                <label for="rd33">
+                  <input disabled id="rd33" name="radioStandard" type="radio">
+                  This is a disabled radio button
+                </label>
+              </div>
+            </div>
+          </figure>
+
+        </div>
+
+
+        <div class="row spacer-top-lg">
+          <figure>
+            <div class="col-md-7">
+              <figcaption>Enhanced Inline Radio Buttons</figcaption>
+              <div class="controls-inline">
+                <label class="control radio">
+                  <input id="radio11" name="radio" type="radio">
+                  <span class="control-indicator"></span>
+                  Custom radio
+                </label>
+                <label class="control radio">
+                  <input id="radio22" name="radio" type="radio">
+                  <span class="control-indicator"></span>
+                  Or Custom radio
+                </label>
+              </div>
+
+            </div>
+            <div class="col-md-5">
+              <figcaption>Standard OS Radio Buttons</figcaption>
+              <label class="radio-inline">
+                <input id="inlineRadio33" name="inlineRadioOptions" type="radio" value="option1">
+                One
+              </label>
+              <label class="radio-inline">
+                <input id="inlineRadi44" name="inlineRadioOptions" type="radio" value="option2">
+                Two
+              </label>
+              <label class="radio-inline">
+                <input id="inlineRadio55" name="inlineRadioOptions" type="radio" value="option3">
+                Three
+              </label>
+            </div>
+          </figure>
+        </div>
+
+
+        <div class="row spacer-top-lg">
+          <figure>
+            <div class="col-md-8">
+              <figcaption>Enhanced Inline Radio Buttons (when enclosed in "form-inline")</figcaption>
+              <form class="form-inline">
+                <div class="controls-inline">
+                  <label class="control radio">
+                    <input id="radio111" name="radio" type="radio">
+                    <span class="control-indicator"></span>
+                    Custom radio
+                  </label>
+                  <label class="control radio">
+                    <input id="radio222" name="radio" type="radio">
+                    <span class="control-indicator"></span>
+                    Or Custom radio
+                  </label>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+          </figure>
+        </div>
+
+        <div class="row spacer-top-lg">
+          <figure>
+            <div class="col-md-8">
+              <figcaption>Enhanced Inline Radio Buttons (when enclosed in "form-horizontal")</figcaption>
+              <form class="form-horizontal">
+                <div class="controls-inline">
+                  <label class="control radio">
+                    <input id="radio1111" name="radio" type="radio">
+                    <span class="control-indicator"></span>
+                    Custom radio
+                  </label>
+                  <label class="control radio">
+                    <input id="radio2222" name="radio" type="radio">
+                    <span class="control-indicator"></span>
+                    Or Custom radio
+                  </label>
+                </div>
+              </form>
+            </div>
+          </figure>
+        </div>
+
+
+      </div>
+    </div>
+
+
+</div>

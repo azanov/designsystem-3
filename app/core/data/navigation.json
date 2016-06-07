@@ -73,10 +73,17 @@
           },{
             "label": "Input Fields",
             "value": "inputs"
-            }, {
-              "label": "Dropdown Menus",
-              "value": "dropdowns"
-              }]
+          }, {
+            "label": "Dropdown Menus",
+            "value": "dropdowns"
+          }, {
+            "label": "Checkboxes",
+            "value": "checkboxes"
+          }, {
+            "label": "Radio Buttons",
+            "value": "radiobuttons"
+            }
+          ]
         }, {
           "label": "Patterns",
           "value": "",
