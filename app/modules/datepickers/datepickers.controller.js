@@ -4,6 +4,13 @@
   angular.module('pb.ds.datepickers').controller('DatePickersController', function ($log, moment) {
     var _this = this;
 
+    // for the date picker with calendar button working
+    _this.openPicker = function (which) {
+      var item = '#' + which;
+      $(item).data('daterangepicker').show();
+    };
+
+
     _this.singlepicker = {
       date: {
         startDate: moment().startOf('year'),
