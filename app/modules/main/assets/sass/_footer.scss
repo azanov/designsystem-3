@@ -1,36 +1,21 @@
-// wrapper box for edge-to-edge color
-// .footer-wrapper {
-//   background-color: $pb-gray-50;
-//   margin-top: 40px;
-//   // width: 100vw;
-//   padding: 10px 0;
-//   &.demo {
-//     margin-top: 0;
-//     width: auto;
-//   }
-// }
-
+// fot correct positioning of footer
 html {
   height: 100%;
 }
 body {
   min-height: 100%;
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
-
+.site-content {
+  flex: 1;
+  margin-bottom: 40px;
+}
+// ----------------
 
 footer {
   background-color: $pb-gray-50;
   padding: 10px 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-top: 40px;
-  &.demo {
-    position: relative;
-
-  }
   .container, .container-fluid {
     color: $text-color;
     font-size: 12px;
