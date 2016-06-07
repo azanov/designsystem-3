@@ -4,13 +4,12 @@
   angular.module('pb.ds.errors').config(function ($stateProvider) {
     $stateProvider.state('errors', {
       url: '/errors',
-      templateUrl: 'modules/errors/templates/errors-template.html',
+      templateUrl: 'modules/errors/templates/errors.html',
       controller: 'ErrorsController as errors',
-      abstract: true,
       data: {
         pageTitle: 'Landing Pages',
         access: 'public',
-        bodyClass: 'errors'
+        bodyClass: ''
       }
     })
 
