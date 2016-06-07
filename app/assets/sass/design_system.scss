@@ -50,17 +50,18 @@
 
 @import '../../modules/elements/assets/sass/list-group';
 @import '../../modules/elements/assets/sass/loading-bar';
-@import '../../modules/elements/assets/sass/switches';
 @import '../../modules/elements/assets/sass/tabs';
 @import '../../modules/elements/assets/sass/tabs-fancy';
-@import '../../modules/elements/assets/sass/toggle-switch';
 @import '../../modules/elements/assets/sass/uibootstrap';
 @import '../../modules/elements/assets/sass/custom-daterange-picker';
-@import '../../modules/elements/assets/sass/ngTagsInput';
 @import '../../modules/elements/assets/sass/data-widgets';
 @import '../../modules/elements/assets/sass/category-widget';
 @import '../../modules/foundation/assets/sass/pbds-directives';
 
+@import '../../modules/switches/assets/sass/switches';
+@import '../../modules/switches/assets/sass/toggle-switch';
+
+@import '../../modules/dropdowns/assets/sass/ngTagsInput';
 @import '../../modules/dropdowns/assets/sass/ui-select';
 
 @import '../../../bower_components/slick-carousel/slick/slick';
