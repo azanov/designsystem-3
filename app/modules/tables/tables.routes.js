@@ -5,22 +5,10 @@
     $stateProvider.state('tables', {
       abstract: true,
       url: '/tables',
-      templateUrl: 'modules/tables/templates/tables.html',
-      controller: 'TablesController as tables',
-      data: {
-        pageTitle: 'Tables',
-        access: 'public',
-        bodyClass: 'tables'
-      }
+      templateUrl: 'modules/tables/templates/tables.html'
     })
 
-      .state('tables.datatable', {
-        abstract: true,
-        url: '/datatable',
-        templateUrl: 'modules/tables/templates/tables-datatable.html'
-      })
-
-      .state('tables.datatable.page', {
+      .state('tables.page', {
         url: '',
         views: {
           basic: {
@@ -87,7 +75,7 @@
       //   controller: 'TablesDatatablesNetController as datatablesnet',
       //   resolve: {
       //     PeopleResolve: function ($log, MockDataFactory) {
-      //       return MockDataFactory.query({filename: 'ds_users'});
+      //       return MockDataFactory.query({filename: 'ds_users'})
       //     }
       //   },
       //   data: {
