@@ -25,7 +25,8 @@
     'pb.ds.errors',
     'pb.ds.modals',
     'pb.ds.inputs',
-    'pb.ds.dropdowns'
+    'pb.ds.dropdowns',
+    'pb.ds.checkboxes'
   ]);
 
   // angular scroll configuration
