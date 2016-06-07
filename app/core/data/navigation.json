@@ -85,6 +85,9 @@
           }, {
             "label": "Switches",
             "value": "switches"
+          }, {
+            "label": "Steppers",
+            "value": "steppers"
           }
           ]
         }, {
