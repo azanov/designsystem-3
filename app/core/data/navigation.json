@@ -60,7 +60,7 @@
             "value": "help"
           }, {
             "label": "Tables",
-            "value": "tables.datatable.page"
+            "value": "tables.page"
           }, {
             "label": "UI Controls",
             "value": "elements.uicontrols"
