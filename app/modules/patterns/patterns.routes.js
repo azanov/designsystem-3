@@ -305,7 +305,8 @@
 
       .state('patterns.gettingstarted', {
         url: '/gettingstarted',
-        templateUrl: 'modules/patterns/templates/getting-started.html'
+        templateUrl: 'modules/patterns/templates/getting-started.html',
+        controller: 'GettingStartedController as gettingstarted'
       })
 
       .state('patterns.hamburger', {

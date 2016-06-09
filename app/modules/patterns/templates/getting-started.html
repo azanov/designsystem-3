@@ -27,8 +27,22 @@
 
 
 
-<div class="container">
+<div class="container"
+  ui-tour ui-tour-on-start="gettingstarted.onTourStart(tour)"
+  ui-tour-on-ready="gettingstarted.onReady(tour)"
+  ui-tour-placement="bottom"
+  ui-tour-append-to-body="true"
+  ui-tour-use-hotkeys="true"
+  ui-tour-scroll-offset="180"
+  ui-tour-template-url="'modules/patterns/templates/tour-step-template2.html'">
 
+    <div tour-step
+      tour-step-template-url="'modules/patterns/templates/tour-step-start.html'"
+      tour-step-order="0"
+      tour-step-popup-class="window"
+      tour-step-backdrop="true"
+    >
+  </div>
 
   <div class="row spacer-top-xl">
     <div class="col-md-8">
@@ -39,7 +53,14 @@
 
   <div class="row" >
     <div class="col-md-8">
-      <h1 id="pointing-modal" class="doc-head">Pointing Modal</h1>
+      <h1 id="pointing-modal" class="doc-head"
+        tour-step
+        tour-step-title="Main Menu" 
+        tour-step-content="Navigate the site using this menu." 
+        tour-step-order="10" 
+        tour-step-placement="bottom" 
+        tour-step-backdrop="true"
+        >Pointing Modal</h1>
       <p class="doc-lede">Pointing modals float over a dimmed screen. They’re useful for explaining features that are procedural in nature. When using these elements we dim the entire screen behind them by placing a gray (#495D69) overlay at 50% opacity.</p>
     </div>
   </div>
@@ -118,7 +139,7 @@
 
   <div class="row" >
     <div class="col-md-8">
-      <h1 id="walkthrough" class="doc-head">Walkthrough</h1>
+      <h1 id="walkthrough" class="doc-head" tour-step tour-step-title="Main Menu" tour-step-content="Navigate the site using this menu." tour-step-order="20" tour-step-placement="top" tour-step-backdrop="true">Walkthrough</h1>
       <p class="doc-lede">Use walkthroughs to highlight discrete elements or functions in the experience flow.</p>
     </div>
   </div>
@@ -133,7 +154,13 @@
 
   <div class="row">
     <div class="col-md-8">
-      <img class="img-responsive" src="modules/patterns/assets/images/onboarding_2a.png" />
+      <img class="img-responsive" src="modules/patterns/assets/images/onboarding_2a.png"
+        tour-step
+        tour-step-title="Main Menu" 
+        tour-step-content="Navigate the site using this menu." 
+        tour-step-order="30" 
+        tour-step-placement="top" 
+        tour-step-backdrop="false" />
     </div>
   </div>
 
@@ -150,25 +177,6 @@
       <img class="img-responsive" src="modules/patterns/assets/images/dashboards_2_1.png" />
     </div>
   </div>
-
-
-  <!-- Dashboard 6 -->
-  <!-- <div class="row">
-    <div class="col-md-12">
-      <h2 class="doc-sectionhead">Walkthrough 3</h2>
-    </div>
-  </div>
-
-  <div class="row">
-
-    <div class="col-md-3">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper, purus quis viverra accumsan, eros ex porta nisl, ut rutrum neque sem in massa. Phasellus mattis lacus a est blandit, at lobortis velit egestas. Nulla lobortis accumsan justo, et fermentum nisi sollicitudin et. </p>
-    </div>
-
-    <div class="col-md-8 col-md-offset-1">
-      <img class="img-responsive" src="modules/patterns/assets/images/walkthrough_03.png" />
-    </div>
-  </div> -->
 
 
 </div>

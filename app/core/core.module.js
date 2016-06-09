@@ -33,6 +33,7 @@
     'slickCarousel',
     'ngFileUpload',
     angularDragula(angular),
+    'bm.uiTour',
     'pb.ds.components'
   ]);
 })();

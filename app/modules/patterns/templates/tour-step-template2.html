@@ -1,0 +1,9 @@
+<div>
+  <div class="popover-content tour-step-content" ng-bind-html="tourStep.trustedContent"></div>
+
+  <div class="popover-navigation tour-step-navigation text-center clearfix spacer-top-md">
+    <button class="btn btn-primary" data-role="end" ng-click="tour.end()">Got it</button>
+    <button class="btn btn-link pull-left" ng-if="tourStep.isPrev" ng-click="tour.prev()"><i class="nc-icon-mini arrows-1_circle-left-38"></i> Previous</button>
+    <button class="btn btn-link pull-right" ng-if="tourStep.isNext" ng-click="tour.next()">Next <i class="nc-icon-mini arrows-1_circle-right-37"></i> </button>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+.tour-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tour-step {
+  min-width: 400px !important;
+}
+
+.window {
+  max-width: 650px;
+  left: 35% !important;
+  box-shadow: 0px 15px 12px -8px rgba(0, 0, 0, 0.20);
+
+  .popover-content {
+    padding: 60px;
+
+    h1 {
+      margin-top: 0;
+    }
+  }
+
+  .arrow {
+    display: none;
+  }
+}
