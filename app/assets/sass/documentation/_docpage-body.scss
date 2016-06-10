@@ -1,0 +1,23 @@
+.doc-body-sidebar {
+  margin-top: 60px;
+}
+
+.doc-body-example {
+  border: solid 1px $pb-light-gray;
+  padding: 20px 30px 10px;
+  margin: 15px 0 30px;
+}
+
+.doc-body-badge {
+  margin-left: 20px;
+  margin-top: -1px;
+}
+
+.doc-body-snippet {
+  //TODO: remove after adding code snippet plugin
+  background-color: $pb-light-gray;
+  height: 310px;
+  line-height: 310px;
+  font-size: 30px;
+  text-align: center;
+}
