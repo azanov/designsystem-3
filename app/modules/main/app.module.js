@@ -34,7 +34,8 @@
     'pb.ds.tabs',
     'pb.ds.accordions',
     'pb.ds.cards',
-    'pb.ds.miller'
+    'pb.ds.miller',
+    'pb.ds.widgets'
   ]);
 
   // angular scroll configuration
