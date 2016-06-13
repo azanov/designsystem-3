@@ -56,9 +56,6 @@
             "label": "Tables",
             "value": "tables.page"
           }, {
-            "label": "User Feedback",
-            "value": "feedback.page"
-          }, {
             "label": "Modals and Popovers",
             "value": "modals.modals-popovers"
           },{
@@ -109,6 +106,15 @@
           }, {
             "label": "Tiles",
             "value": "tiles"
+          }, {
+            "label": "Alerts",
+            "value": "alerts"
+          }, {
+            "label": "Toastrs",
+            "value": "toastrs"
+          }, {
+            "label": "Badges",
+            "value": "badges"
           }
           ]
         }, {

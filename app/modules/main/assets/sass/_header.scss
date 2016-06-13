@@ -353,7 +353,8 @@ header:not(.demo) {
         color: inherit;
         display: block;
         width: 100%;
-        padding: 13px 5px 13px 0;
+        padding: 0 5px 25px 0;
+        line-height: 1.4;
         &:hover {
           text-decoration: none;
           color: $pb-gray-700;
@@ -363,6 +364,14 @@ header:not(.demo) {
     &.menu-items-two-column {
       column-count: 2;
       column-gap: 50px;
+    }
+  }
+  .yamm-child-column {
+    margin: 0 20px;
+    &:nth-child(2) {
+      .menu-items-two-column {
+        column-count: 3;
+      }
     }
   }
 }

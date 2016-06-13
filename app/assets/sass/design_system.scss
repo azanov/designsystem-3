@@ -60,7 +60,6 @@
 
 @import '../../modules/cards/assets/sass/panels';
 
-@import '../../modules/elements/assets/sass/badges';
 @import '../../modules/elements/assets/sass/custom-daterange-picker';
 @import '../../modules/elements/assets/sass/list-group';
 @import '../../modules/elements/assets/sass/loading-bar';
@@ -69,9 +68,11 @@
 
 @import '../../modules/buttons/assets/sass/buttons';
 
+@import '../../modules/badges/assets/sass/badges';
+
 @import '../../modules/errors/assets/sass/errors';
 
-@import '../../modules/feedback/assets/sass/toastrs';
+@import '../../modules/toastrs/assets/sass/toastrs';
 
 @import '../../modules/foundation/assets/sass/pbds-directives';
 

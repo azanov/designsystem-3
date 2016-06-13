@@ -39,7 +39,8 @@
     'pb.ds.breadcrumbs',
     'pb.ds.tiles',
     'pb.ds.alerts',
-    'pb.ds.toastrs'
+    'pb.ds.toastrs',
+    'pb.ds.badges'
   ]);
 
   // angular scroll configuration
