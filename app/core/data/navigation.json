@@ -103,6 +103,9 @@
           }, {
             "label": "Buttons",
             "value": "buttons"
+          }, {
+            "label": "Breadcrumbs",
+            "value": "breadcrumbs"
           }
           ]
         }, {
