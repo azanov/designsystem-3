@@ -33,7 +33,8 @@
     'pb.ds.datepickers',
     'pb.ds.tabs',
     'pb.ds.accordions',
-    'pb.ds.cards'
+    'pb.ds.cards',
+    'pb.ds.miller'
   ]);
 
   // angular scroll configuration

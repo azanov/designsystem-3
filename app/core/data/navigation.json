@@ -97,6 +97,9 @@
           }, {
             "label": "Accordions",
             "value": "accordions"
+          }, {
+            "label": "Miller Columns",
+            "value": "miller"
           }
           ]
         }, {
