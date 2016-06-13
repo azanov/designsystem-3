@@ -103,6 +103,9 @@
           }, {
             "label": "Widgets",
             "value": "widgets"
+          }, {
+            "label": "Gallery",
+            "value": "gallery"
           }
           ]
         }, {
