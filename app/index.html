@@ -79,17 +79,14 @@
 
   <body ng-controller="AppController as app" dir="{{app.rtl}}" class="site {{$state.current.data.bodyClass}}">
 
-
-  <div class="site">
-    <!-- header -->
     <header pb-ds-header pb-fixed-navbar ng-if="app.showHeader"></header>
 
     <!-- content -->
     <div ui-view="" class="view-animate site-content"></div>
 
     <!-- FOOTER -->
-    <footer ng-if="app.footer" pb-ds-footer></footer>
-  </div>
+    <footer pb-ds-footer></footer>
+
 
 
     <!-- build:vendorjs js/vendor.js -->
@@ -209,14 +206,8 @@
     <script src="modules/elements/elements.module.js"></script>
     <script src="modules/elements/elements.routes.js"></script>
     <script src="modules/elements/controllers/elements-colors-charts.controller.js"></script>
-    <script src="modules/elements/controllers/elements-containers.controller.js"></script>
-    <script src="modules/elements/controllers/elements-panels.controller.js"></script>
     <script src="modules/elements/controllers/elements-popover.controller.js"></script>
-    <script src="modules/elements/controllers/elements-tabs.controller.js"></script>
     <script src="modules/elements/controllers/elements-ui-bootstrap.controller.js"></script>
-    <script src="modules/elements/controllers/elements.controller.js"></script>
-
-
 
     <script src="modules/tables/tables.module.js"></script>
     <script src="modules/tables/tables.routes.js"></script>
@@ -228,17 +219,6 @@
     <script src="modules/tables/controllers/tables-datatable-infinite-scroll.controller.js"></script>
     <script src="modules/tables/controllers/tables-datatables.net.controller.js"></script>
     <script src="modules/tables/controllers/tables-faceted-search.controller.js"></script>
-
-    <script src="modules/feedback/feedback.module.js"></script>
-    <script src="modules/feedback/feedback.routes.js"></script>
-    <script src="modules/feedback/controllers/feedback-alerts.controller.js"></script>
-    <script src="modules/feedback/controllers/feedback-badges.controller.js"></script>
-    <script src="modules/feedback/controllers/feedback-header-message.controller.js"></script>
-    <script src="modules/feedback/controllers/feedback-loadingbar.controller.js"></script>
-    <script src="modules/feedback/controllers/feedback-progress.controller.js"></script>
-    <script src="modules/feedback/controllers/feedback-spinners.controller.js"></script>
-    <script src="modules/feedback/controllers/feedback-toastr.controller.js"></script>
-    <script src="modules/feedback/controllers/feedback.controller.js"></script>
 
     <script src="modules/graphs/graphs.module.js"></script>
     <script src="modules/graphs/graphs.routes.js"></script>
@@ -254,7 +234,6 @@
     <script src="modules/foundation/controllers/foundation-typography.controller.js"></script>
     <script src="modules/foundation/controllers/foundation-writing.controller.js"></script>
     <script src="modules/foundation/controllers/foundation-directives.controller.js"></script>
-
 
     <script src="modules/globalization/globalization.module.js"></script>
     <script src="modules/globalization/globalization.routes.js"></script>
@@ -347,8 +326,62 @@
     <script src="modules/switches/switches.module.js"></script>
     <script src="modules/switches/switches.routes.js"></script>
     <script src="modules/switches/switches.controller.js"></script>
-
-
+    <!-- steppers -->
+    <script src="modules/steppers/steppers.module.js"></script>
+    <script src="modules/steppers/steppers.routes.js"></script>
+    <script src="modules/steppers/steppers.controller.js"></script>
+    <!-- datepickers -->
+    <script src="modules/datepickers/datepickers.module.js"></script>
+    <script src="modules/datepickers/datepickers.routes.js"></script>
+    <script src="modules/datepickers/datepickers.controller.js"></script>
+    <!-- tabs -->
+    <script src="modules/tabs/tabs.module.js"></script>
+    <script src="modules/tabs/tabs.routes.js"></script>
+    <script src="modules/tabs/tabs.controller.js"></script>
+    <!-- accordions -->
+    <script src="modules/accordions/accordions.module.js"></script>
+    <script src="modules/accordions/accordions.routes.js"></script>
+    <script src="modules/accordions/accordions.controller.js"></script>
+    <!-- cards -->
+    <script src="modules/cards/cards.module.js"></script>
+    <script src="modules/cards/cards.routes.js"></script>
+    <script src="modules/cards/cards.controller.js"></script>
+    <!-- miller -->
+    <script src="modules/miller/miller.module.js"></script>
+    <script src="modules/miller/miller.routes.js"></script>
+    <script src="modules/miller/miller.controller.js"></script>
+    <!-- widgets -->
+    <script src="modules/widgets/widgets.module.js"></script>
+    <script src="modules/widgets/widgets.routes.js"></script>
+    <script src="modules/widgets/widgets.controller.js"></script>
+    <!-- gallery -->
+    <script src="modules/gallery/gallery.module.js"></script>
+    <script src="modules/gallery/gallery.routes.js"></script>
+    <script src="modules/gallery/gallery.controller.js"></script>
+    <!-- buttons -->
+    <script src="modules/buttons/buttons.module.js"></script>
+    <script src="modules/buttons/buttons.routes.js"></script>
+    <script src="modules/buttons/buttons.controller.js"></script>
+    <!-- breadcrumbs -->
+    <script src="modules/breadcrumbs/breadcrumbs.module.js"></script>
+    <script src="modules/breadcrumbs/breadcrumbs.routes.js"></script>
+    <script src="modules/breadcrumbs/breadcrumbs.controller.js"></script>
+    <!-- tiles -->
+    <script src="modules/tiles/tiles.module.js"></script>
+    <script src="modules/tiles/tiles.routes.js"></script>
+    <script src="modules/tiles/tiles.controller.js"></script>
+    <!-- alerts -->
+    <script src="modules/alerts/alerts.module.js"></script>
+    <script src="modules/alerts/alerts.routes.js"></script>
+    <script src="modules/alerts/alerts.controller.js"></script>
+    <!-- toastrs -->
+    <script src="modules/toastrs/toastrs.module.js"></script>
+    <script src="modules/toastrs/toastrs.routes.js"></script>
+    <script src="modules/toastrs/toastrs.controller.js"></script>
+    <!-- badges -->
+    <script src="modules/badges/badges.module.js"></script>
+    <script src="modules/badges/badges.routes.js"></script>
+    <script src="modules/badges/badges.controller.js"></script>
 
     <!-- endbuild  -->
 

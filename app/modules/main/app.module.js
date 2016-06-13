@@ -4,7 +4,6 @@
     // third party modules are in /core/core.module.js
     'pb.core',
     'pb.ds.home',
-    'pb.ds.elements',
     'pb.ds.forms',
     'pb.ds.foundation',
     'pb.ds.globalization',
@@ -12,7 +11,6 @@
     'pb.ds.helpers',
     'pb.ds.mobile',
     'pb.ds.landing',
-    'pb.ds.feedback',
     'pb.ds.patterns',
     'pb.ds.principles',
     'pb.ds.resources',
@@ -28,7 +26,21 @@
     'pb.ds.dropdowns',
     'pb.ds.checkboxes',
     'pb.ds.radiobuttons',
-    'pb.ds.switches'
+    'pb.ds.switches',
+    'pb.ds.steppers',
+    'pb.ds.datepickers',
+    'pb.ds.tabs',
+    'pb.ds.accordions',
+    'pb.ds.cards',
+    'pb.ds.miller',
+    'pb.ds.widgets',
+    'pb.ds.gallery',
+    'pb.ds.buttons',
+    'pb.ds.breadcrumbs',
+    'pb.ds.tiles',
+    'pb.ds.alerts',
+    'pb.ds.toastrs',
+    'pb.ds.badges'
   ]);
 
   // angular scroll configuration

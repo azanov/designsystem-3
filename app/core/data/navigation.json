@@ -47,26 +47,14 @@
           "value": "",
           "toggle": "dropdown",
           "children": [{
-            "label": "Buttons and Links",
-            "value": "elements.buttons"
-          }, {
             "label": "Charts",
             "value": "graphs.page"
-          }, {
-            "label": "Containers",
-            "value": "elements.containers.page"
-          }, {
+          },{
             "label": "Help Prompts",
             "value": "help"
           }, {
             "label": "Tables",
             "value": "tables.page"
-          }, {
-            "label": "UI Controls",
-            "value": "elements.uicontrols"
-          }, {
-            "label": "User Feedback",
-            "value": "feedback.page"
           }, {
             "label": "Modals and Popovers",
             "value": "modals.modals-popovers"
@@ -82,7 +70,52 @@
           }, {
             "label": "Radio Buttons",
             "value": "radiobuttons"
-            }
+          }, {
+            "label": "Switches",
+            "value": "switches"
+          }, {
+            "label": "Steppers",
+            "value": "steppers"
+          } , {
+            "label": "Date Pickers",
+            "value": "datepickers"
+          }, {
+            "label": "Cards (Panels)",
+            "value": "cards"
+          }, {
+            "label": "Tabs",
+            "value": "tabs"
+          }, {
+            "label": "Accordions",
+            "value": "accordions"
+          }, {
+            "label": "Miller Columns",
+            "value": "miller"
+          }, {
+            "label": "Widgets",
+            "value": "widgets"
+          }, {
+            "label": "Gallery",
+            "value": "gallery"
+          }, {
+            "label": "Buttons",
+            "value": "buttons"
+          }, {
+            "label": "Breadcrumbs",
+            "value": "breadcrumbs"
+          }, {
+            "label": "Tiles",
+            "value": "tiles"
+          }, {
+            "label": "Alerts",
+            "value": "alerts"
+          }, {
+            "label": "Toastrs",
+            "value": "toastrs"
+          }, {
+            "label": "Badges",
+            "value": "badges"
+          }
           ]
         }, {
           "label": "Patterns",
@@ -96,7 +129,7 @@
             "value": "patterns.dragdrop"
           }, {
             "label": "Error Pages",
-            "value": "patterns.errorpages"
+            "value": "errors"
           }, {
             "label": "Form Elements",
             "value": "patterns.forms"

@@ -1,0 +1,171 @@
+<div class="doc-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero-header">
+          <!-- <div class="eyebrow">????</div> -->
+          <h1>Gallery</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-header jump-bar headroom" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}" headroom offset="240" tolerance="5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- <ul class="list-unstyled list-inline jump-menu">
+            <li>
+              <a ui-sref="sample({'#':'sampleID'})">Sample Jump Label</a>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+
+  <!-- <div class="row">
+    <div class="col-md-8">
+      <h1 id="gallery" class="doc-head">Gallery</h1>
+    </div>
+  </div> -->
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Styles</h2>
+    </div>
+  </div>
+
+  <div class="doc-gallery">
+
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          <a class="more-info plugin" href="http://kenwheeler.github.io/slick/" target="_blank">Slick v1.5.9</a>
+        </p>
+        <p>
+          <a class="more-info plugin" href="https://github.com/devmark/angular-slick-carousel" target="_blank">Angular Slick Carousel v3.1.4</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="row spacer-top-xl">
+      <div class="col-md-12">
+
+        <div class="row spacer-bottom-md">
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+            <img class="img-responsive thumbnail" ng-src="modules/elements/assets/images/gallery/{{gallery.imageGallery.selectedImage}}.jpg" />
+          </div>
+        </div>
+
+        <slick settings="gallery.imageGallery.settings">
+          <div class="image-gallery-item thumbnail" ng-class="{'active': gallery.imageGallery.selected === $index}" ng-repeat="i in gallery.imageGallery.items" ng-click="gallery.imageGallery.click(i, $index)">
+              <img class="img-responsive" ng-src="modules/elements/assets/images/gallery/{{i.imageName}}_thumb.jpg" />
+          </div>
+        </slick>
+      </div>
+    </div>
+
+    <div class="row spacer-top-xl">
+      <div class="col-md-12">
+        <slick settings="gallery.itemGallery.settings">
+          <div class="panel panel-default category-widget" ng-repeat="i in ::gallery.itemGallery.items">
+            <div class="panel-body category-widget-icon">
+              <i class="nc-icon-outline {{i.icon}} text-blue"></i>
+            </div>
+            <div class="panel-footer">
+              <h3>{{i.title}}</h3>
+              <p>
+                {{i.description}}
+              </p>
+            </div>
+          </div>
+        </slick>
+      </div>
+    </div>
+
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-8">
+        <h1 id="writing" class="doc-head">Writing for Containers</h1>
+      </div>
+    </div>
+
+
+
+
+    <div class="row">
+      <div class="col-md-8">
+        <p class="lede">When writing headers or labels for container elements, follow these basic principles.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Style</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <ul>
+          <li>Use short, active words and phrases.</li>
+          <li>Structure copy to avoid ambiguity in language.</li>
+          <li>Use the same style and structure for all your labels.</li>
+          <li>To avoid confusing users, use consistent terminology.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Capitalization</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <ul>
+          <li>Use title capitalization for all container headers and labels.</li>
+          <li>Capitalize all words containing four or more letters.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Punctuation</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <ul>
+          <li>Don’t conclude copy with punctuation, such as periods or colons.</li>
+          <li>Don’t phrase your copy as questions.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Word Count</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <ul>
+          <li>Keep word counts to three words or fewer possible.</li>
+          <li>If you need to use more than three words, use the smallest number possible to express the container element’s purpose.</li>
+          <li>“Future proof” your containers by considering if you’ll need to add elements, such as tabs, later on — then choose your wording to allow for those additions.</li>
+          <li>Consider translation needs when choosing words — some languages may require more words or characters to express an idea, which could cause titles in elements such as tab labels to wrap.</li>
+        </ul>
+      </div>
+    </div>
+
+
+
+  </div>

@@ -10,6 +10,8 @@
 
 @import 'documentation/docpage-header';
 @import 'documentation/content';
+@import '../../modules/resources/assets/sass/resources';
+
 
 
 // home page
@@ -916,5 +918,5 @@ ul.icon-grid {
 }
 
 .table.roadmap .table-details > td {
-background-image: none !important;
+  background-image: none !important;
 }
