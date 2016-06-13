@@ -47,9 +47,6 @@
           "value": "",
           "toggle": "dropdown",
           "children": [{
-            "label": "Buttons and Links",
-            "value": "elements.buttons"
-          }, {
             "label": "Charts",
             "value": "graphs.page"
           },{
@@ -103,6 +100,9 @@
           }, {
             "label": "Gallery",
             "value": "gallery"
+          }, {
+            "label": "Buttons",
+            "value": "buttons"
           }
           ]
         }, {

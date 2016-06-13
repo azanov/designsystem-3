@@ -36,7 +36,8 @@
     'pb.ds.cards',
     'pb.ds.miller',
     'pb.ds.widgets',
-    'pb.ds.gallery'
+    'pb.ds.gallery',
+    'pb.ds.buttons'
   ]);
 
   // angular scroll configuration

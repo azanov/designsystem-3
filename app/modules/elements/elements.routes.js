@@ -20,13 +20,6 @@
       }
     })
 
-      .state('elements.buttons', {
-        url: '/buttons',
-        templateUrl: 'modules/elements/templates/elements-buttons.html',
-        data: {
-          pageTitle: 'Buttons'
-        }
-      })
 
       .state('elements.colorcharts', {
         url: '/colorcharts',
