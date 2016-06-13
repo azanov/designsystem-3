@@ -44,7 +44,6 @@
 // Modules
 // ========================================
 @import '../../../bower_components/slick-carousel/slick/slick';
-@import '../../../bower_components/slick-carousel/slick/slick-theme';
 
 @import '../../modules/widgets/assets/sass/widgets';
 
@@ -61,13 +60,13 @@
 @import '../../modules/cards/assets/sass/panels';
 
 @import '../../modules/elements/assets/sass/badges';
-@import '../../modules/elements/assets/sass/buttons';
 @import '../../modules/elements/assets/sass/custom-daterange-picker';
 @import '../../modules/elements/assets/sass/list-group';
 @import '../../modules/elements/assets/sass/loading-bar';
 @import '../../modules/elements/assets/sass/progress-bar';
-@import '../../modules/elements/assets/sass/slick-theme';
 @import '../../modules/elements/assets/sass/uibootstrap';
+
+@import '../../modules/buttons/assets/sass/buttons';
 
 @import '../../modules/errors/assets/sass/errors';
 

@@ -1,3 +1,623 @@
-// sass code here
+//*/ Buttons */
+// --------------------------------------------------
 
-// be sure to import this file in /app/sassets/sass/documentation.scss
+// scss-lint:disable MergeableSelector ImportantRule
+
+
+a i.nc-icon-mini {
+  padding-right: 5px;
+  color: inherit;
+}
+
+// all buttons
+.btn {
+  font-family: $font-family-ps-regular;
+  min-width: 100px;
+}
+
+// -- default sizing definitions
+.btn {
+  // line-height: ensure even-numbered height of button next to input
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-base);
+}
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+  min-width: 80px;
+}
+.btn-xs {
+  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+  min-width: 60px;
+}
+
+// bootstrap functional buttons
+.btn-success {
+  @include functional-button($brand-success);
+}
+.btn-info {
+  @include functional-button($brand-info);
+}
+.btn-warning {
+  @include functional-button($brand-warning);
+}
+.btn-danger {
+  @include functional-button($brand-danger);
+}
+
+
+// PRIMARY BUTTON
+.btn-primary {
+  color: #fff;
+  background-color: $pb-blue;
+  border-color: $pb-blue;
+
+  //hover
+  &:hover, &.hover, &:active, &.active, .open > &.dropdown-toggle {
+    color: #fff;
+    background-color: $pb-blue-700;
+    border-color: $pb-blue-700;
+  }
+
+  // bootstrap no idea why
+  &:active, &.active, .open > &.dropdown-toggle {
+    background-image: none;
+  }
+
+  // focus
+  &:focus, &.focus {
+    background-color: $pb-blue;
+    @include focus-ring;
+    // outline: none !important;
+  }
+
+  //disabled
+  &.disabled, &[disabled], fieldset[disabled] & {
+    &, &:hover, &.hover, &:focus, &.focus, &:active, &.active {
+      background-color: #c0c0c0;
+      border-color: #c0c0c0;
+      color: #fff;
+      opacity: 1;
+    }
+  }
+
+  &.disabled.loading, &[disabled].loading {
+    color: #fff;
+    background-color: $pb-blue;
+    border-color: $pb-blue;
+  }
+
+  // badge in a button - doesn't happen often
+  .badge {
+    color: #fff;
+    background-color: $pb-magenta;
+    margin-left: 10px;
+  }
+}
+
+
+// DEFAULT BUTTON
+.btn-default, .btn-cancel, .btn-group .btn-default, .btn-group-vertical .btn-default {
+  color: $pb-blue;
+  background-color: #fff;
+  border-color: $pb-blue;
+
+  &:hover, &.hover, &:active, &.active, .open > &.dropdown-toggle {
+    color: $pb-blue-700;
+    background-color: #d9dced;
+    border-color: $pb-blue-700;
+  }
+
+  &:active, &.active, .open > &.dropdown-toggle {
+    background-image: none;
+  }
+
+  // focus
+  &:focus, &.focus {
+    color: $pb-blue-700;
+    background-color: #fff;
+    @include focus-ring;
+    outline: none;
+  }
+
+  &.disabled, &[disabled], fieldset[disabled] & {
+    &, &:hover, &.hover, &:focus, &.focus, &:active, &.active {
+      color: #c0c0c0;
+      background-color: transparent;
+      border-color: #c0c0c0;
+      opacity: 1;
+    }
+  }
+
+  &.disabled.loading, &[disabled].loading {
+    color: $pb-blue;
+    background-color: transparent;
+    border-color: $pb-blue;
+  }
+
+  .badge {
+    color: #fff;
+    background-color: $pb-magenta;
+    margin-left: 10px;
+  }
+}
+
+// BORDERLESS BUTTON
+.btn-group-borderless .btn-default {
+  color: $pb-blue;
+  background-color: transparent;
+  border-color: transparent;
+  &:hover, &.hover, &:focus, &.focus, &:active, &.active, .open > &.dropdown-toggle {
+    color: $pb-blue-700;
+    background-color: #d9dced;
+    border-color: transparent;
+  }
+  &:active, &.active, .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled, &[disabled], fieldset[disabled] & {
+    &, &:hover, &.hover, &:focus, &.focus, &:active, &.active {
+      color: #c0c0c0;
+      background-color: transparent;
+      border-color: transparent;
+      opacity: 1;
+    }
+  }
+  .badge {
+    color: #fff;
+    background-color: $pb-magenta;
+    margin-left: 10px;
+  }
+}
+
+
+.btn-link {
+  color: $pb-blue;
+  background-color: transparent;
+  border-color: transparent;
+
+  &:hover, &.hover, &:active, &.active, .open > &.dropdown-toggle {
+    color: $pb-blue;
+    background-color: #d9dced;
+    border-color: #d9dced;
+    text-decoration: underline;
+  }
+  &:active, &.active, .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &:focus, &.focus {
+    color: $pb-blue-700;
+    background-color: #fff;
+    @include focus-ring;
+    // outline: none !important;
+    text-decoration: underline;
+  }
+  &.disabled, &[disabled], fieldset[disabled] & {
+    &, &:hover, &.hover, &:focus, &.focus, &:active, &.active {
+      color: #c0c0c0;
+      background-color: transparent;
+      border-color: transparent;
+      opacity: 1;
+    }
+  }
+}
+
+.btn-right {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.btn-left {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+
+// PILL BUTTON
+.btn-pill {
+  border-radius: 40px;
+  // focus
+  // NOTE: we need to re-apply the focus ring so that it recognizes the border radius
+  &:focus, &.focus {
+    @include focus-ring;
+  }
+}
+
+// BS functional buttons
+.btn-success, .btn-info, .btn-warning, .btn-danger {
+  &.disabled, &[disabled], fieldset[disabled] & {
+    &, &:hover, &.hover, &:focus, &.focus, &:active, &.active {
+      background-color: #c0c0c0;
+      border-color: #c0c0c0;
+      color: #fff;
+      opacity: 1;
+    }
+  }
+}
+
+
+///** bs overrides **//
+// i give up, bootstrap, here you go
+.open > .dropdown-toggle.btn-default {
+  color: #fff;
+  background-color: $pb-blue-300;
+  border-color: $pb-blue;
+  box-shadow: none;
+}
+// just to remove the BS inset shadows
+.btn:active, .btn.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: none;
+}
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+  color: $pb-gray-700;
+  text-decoration: none;
+  background-color: $pb-bg3;
+}
+// there was unneeded 5px padding top and bottom
+.dropdown-menu {
+  padding: 0;
+}
+
+
+// font awesome icon size overrides in button groups
+.btn-group {
+  .btn {
+    min-width: auto;
+  }
+  &-sm {
+    .btn {
+      i.fa {
+        font-size: 16px;
+      }
+    }
+  }
+  &-xs {
+    .btn {
+      i.fa {
+        font-size: 14px;
+      }
+    }
+  }
+}
+.btn-group-borderless {
+  .btn {
+    border: 0;
+  }
+}
+.btn-group .btn-default.active {
+  background-color: $pb-blue;
+  color: #fff;
+}
+
+
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+  pointer-events: none;
+  cursor: not-allowed;
+  box-shadow: none;
+  // opacity: 0.35;
+}
+.btn-group-justified {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  > .btn, > .btn-group {
+    float: none;
+    display: table-cell;
+    width: 1%;
+  }
+  > .btn-group .btn {
+    width: 100%;
+  }
+  // correct the "double borders"
+  > .btn-group:not(:first-child) > .btn {
+    border-left: 0;
+  }
+  > .btn-group .dropdown-menu {
+    left: auto;
+  }
+}
+//  transitory alert msg next to button
+.btn-response {
+  display: inline-block;
+  margin-left: 10px;
+}
+// overrides for bootstrap's Close button
+.close {
+  transition: color .5s;
+  opacity: 1;
+  filter: alpha(opacity = 1);
+  &:hover {
+    opacity: 1;
+    filter: alpha(opacity = 1);
+  }
+}
+
+/////////////////
+// Tile Buttons
+/////////////////
+
+.tile-button {
+  border-radius: 0;
+  height: 120px;
+  width: 160px;
+  &:hover, &.hover {
+    @extend %fancy-focus;
+    background-color: #fff;
+  }
+  &:active, &.active {
+    border-width: 2px;
+    background-color: #fff;
+    &:hover {
+      border-width: 2px;
+      background-color: #fff;
+      border-color: $pb-blue;
+    }
+  }
+  &.disabled, &[disabled] {
+    img {
+      filter: grayscale(100%);
+      border-color: #9b9b9b;
+    }
+  }
+}
+
+
+// Vertical button groups
+// ----------------------
+.btn-group-vertical {
+  > .btn-group {
+    &:first-child:not(:last-child) {
+      > .btn {
+        &:last-child {
+          border-top-right-radius: $border-radius-base;
+        }
+      }
+      > .dropdown-toggle {
+        border-top-right-radius: $border-radius-base;
+      }
+    }
+
+    &:last-child:not(:first-child) {
+      > .btn {
+        &:first-child {
+          border-bottom-left-radius: $border-radius-base;
+        }
+      }
+    }
+  }
+}
+
+// scss-lint:disable MergeableSelector
+
+// Button groups
+// --------------------------------------------------
+
+// Make the div behave like a button
+.btn-group, .btn-group-vertical {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle; // match .btn alignment given font-size hack above
+  > .btn {
+    position: relative;
+    float: left;
+    // Bring the "active" button to the front
+    &:hover, &:focus, &:active, &.active {
+      z-index: 2;
+    }
+  }
+}
+
+// Prevent double borders when buttons are next to each other
+.btn-group {
+  .btn + .btn, .btn + .btn-group, .btn-group + .btn, .btn-group + .btn-group {
+    margin-left: -1px;
+  }
+}
+
+// Optional: Group multiple button groups together for a toolbar
+.btn-toolbar {
+  margin-left: -5px; // Offset the first child's margin
+  @include clearfix;
+
+  .btn-group, .input-group {
+    float: left;
+  }
+  > .btn, > .btn-group, > .input-group {
+    margin-left: 5px;
+  }
+}
+
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  border-radius: 0;
+}
+
+// Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
+.btn-group > .btn:first-child {
+  margin-left: 0;
+  &:not(:last-child):not(.dropdown-toggle) {
+    @include border-right-radius(0);
+  }
+}
+// Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
+.btn-group > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child) {
+  @include border-left-radius(0);
+}
+
+// Custom edits for including btn-groups within btn-groups (useful for including dropdown buttons within a btn-group)
+.btn-group > .btn-group {
+  float: left;
+}
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+  border-radius: 0;
+}
+.btn-group > .btn-group:first-child:not(:last-child) {
+  > .btn:last-child, > .dropdown-toggle {
+    @include border-right-radius(0);
+  }
+}
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
+  @include border-left-radius(0);
+}
+
+// On active and open, don't show outline
+.btn-group .dropdown-toggle:active, .btn-group.open .dropdown-toggle {
+  outline: 0;
+}
+
+
+// Sizing
+//
+// Remix the default button sizing classes into new ones for easier manipulation.
+
+.btn-group-xs > .btn {
+  @extend .btn-xs;
+}
+.btn-group-sm > .btn {
+  @extend .btn-sm;
+}
+.btn-group-lg > .btn {
+  @extend .btn-lg;
+}
+
+
+// Split button dropdowns
+// ----------------------
+
+// Give the line between buttons some depth
+.btn-group > .btn + .dropdown-toggle {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.btn-group > .btn-lg + .dropdown-toggle {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+// The clickable button for toggling the menu
+// Remove the gradient and set the same inset shadow as the :active state
+.btn-group.open .dropdown-toggle {
+  //  @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+
+  // Show no shadow for `.btn-link` since it has no other button styles.
+  &.btn-link {
+    //    @include box-shadow(none);
+  }
+}
+
+
+// Reposition the caret
+.btn .caret {
+  margin-left: 0;
+}
+// Carets in other button sizes
+.btn-lg .caret {
+  border-width: $caret-width-large $caret-width-large 0;
+  border-bottom-width: 0;
+}
+// Upside down carets for .dropup
+.dropup .btn-lg .caret {
+  border-width: 0 $caret-width-large $caret-width-large;
+}
+
+
+// Vertical button groups
+// ----------------------
+
+.btn-group-vertical {
+  > .btn, > .btn-group, > .btn-group > .btn {
+    display: block;
+    float: none;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  // Clear floats so dropdown menus can be properly placed
+  > .btn-group {
+    @include clearfix;
+    > .btn {
+      float: none;
+    }
+  }
+
+  > .btn + .btn, > .btn + .btn-group, > .btn-group + .btn, > .btn-group + .btn-group {
+    margin-top: -1px;
+    margin-left: 0;
+  }
+}
+
+.btn-group-vertical > .btn {
+  &:not(:first-child):not(:last-child) {
+    border-radius: 0;
+  }
+  &:first-child:not(:last-child) {
+    border-top-right-radius: $border-radius-base;
+    @include border-bottom-radius(0);
+  }
+  &:last-child:not(:first-child) {
+    border-bottom-left-radius: $border-radius-base;
+    @include border-top-radius(0);
+  }
+}
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
+  border-radius: 0;
+}
+.btn-group-vertical > .btn-group:first-child:not(:last-child) {
+  > .btn:last-child, > .dropdown-toggle {
+    @include border-bottom-radius(0);
+  }
+}
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
+  @include border-top-radius(0);
+}
+
+
+// Justified button groups
+// ----------------------
+
+.btn-group-justified {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  > .btn, > .btn-group {
+    float: none;
+    display: table-cell;
+    width: 1%;
+  }
+  > .btn-group .btn {
+    width: 100%;
+  }
+
+  > .btn-group .dropdown-menu {
+    left: auto;
+  }
+}
+
+
+// Checkbox and radio options
+//
+// In order to support the browser's form validation feedback, powered by the
+// `required` attribute, we have to "hide" the inputs via `clip`. We cannot use
+// `display: none;` or `visibility: hidden;` as that also hides the popover.
+// Simply visually hiding the inputs via `opacity` would leave them clickable in
+// certain cases which is prevented by using `clip` and `pointer-events`.
+// This way, we ensure a DOM element is visible to position the popover from.
+//
+// See https://github.com/twbs/bootstrap/pull/12794 and
+// https://github.com/twbs/bootstrap/pull/14559 for more information.
+
+[data-toggle='buttons'] {
+  > .btn, > .btn-group > .btn {
+    input[type='radio'], input[type='checkbox'] {
+      position: absolute;
+      clip: rect(0, 0, 0, 0);
+      pointer-events: none;
+    }
+  }
+}
