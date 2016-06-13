@@ -88,6 +88,15 @@
           } , {
             "label": "Date Pickers",
             "value": "datepickers"
+          }, {
+            "label": "Cards (Panels)",
+            "value": "cards"
+          }, {
+            "label": "Tabs",
+            "value": "tabs"
+          }, {
+            "label": "Accordions",
+            "value": "accordions"
           }
           ]
         }, {
