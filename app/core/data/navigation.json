@@ -52,10 +52,7 @@
           }, {
             "label": "Charts",
             "value": "graphs.page"
-          }, {
-            "label": "Containers",
-            "value": "elements.containers.page"
-          }, {
+          },{
             "label": "Help Prompts",
             "value": "help"
           }, {
