@@ -43,43 +43,61 @@
 
 // Modules
 // ========================================
-@import '../../../bower_components/slick-carousel/slick/slick-theme';
-@import '../../../bower_components/slick-carousel/slick/slick';
-@import '../../modules/accordions/assets/sass/accordions';
-@import '../../modules/cards/assets/sass/_cards.scss';
-@import '../../modules/dropdowns/assets/sass/ngTagsInput';
-@import '../../modules/dropdowns/assets/sass/ui-select';
+@import '../../modules/elements/assets/sass/accordion';
 @import '../../modules/elements/assets/sass/badges';
 @import '../../modules/elements/assets/sass/breadcrumbs';
 @import '../../modules/elements/assets/sass/buttons';
-@import '../../modules/elements/assets/sass/category-widget';
-@import '../../modules/elements/assets/sass/custom-daterange-picker';
-@import '../../modules/elements/assets/sass/data-widgets';
+
 @import '../../modules/elements/assets/sass/list-group';
 @import '../../modules/elements/assets/sass/loading-bar';
-@import '../../modules/elements/assets/sass/miller-columns';
-@import '../../modules/elements/assets/sass/progress-bar';
-@import '../../modules/elements/assets/sass/slick-theme';
+@import '../../modules/elements/assets/sass/tabs';
+@import '../../modules/elements/assets/sass/tabs-fancy';
 @import '../../modules/elements/assets/sass/uibootstrap';
-@import '../../modules/errors/assets/sass/errors';
-@import '../../modules/feedback/assets/sass/alerts';
-@import '../../modules/feedback/assets/sass/toastrs';
+@import '../../modules/elements/assets/sass/custom-daterange-picker';
+@import '../../modules/elements/assets/sass/data-widgets';
+@import '../../modules/elements/assets/sass/category-widget';
 @import '../../modules/foundation/assets/sass/pbds-directives';
-@import '../../modules/graphs/sass/c3';
-@import '../../modules/hamburger/assets/sass/hamburger';
-@import '../../modules/landing/assets/sass/landing';
-@import '../../modules/main/assets/sass/footer';
-@import '../../modules/main/assets/sass/header';
-@import '../../modules/main/assets/sass/sectionlanding';
-@import '../../modules/modals-popovers/assets/sass/modals';
-@import '../../modules/modals-popovers/assets/sass/popover';
-@import '../../modules/patterns/assets/sass/dragdrop';
-@import '../../modules/patterns/assets/sass/signin';
-@import '../../modules/resources/assets/sass/resources';
-@import '../../modules/splitview/assets/sass/leftnav';
-@import '../../modules/splitview/assets/sass/splitview';
+
 @import '../../modules/switches/assets/sass/switches';
 @import '../../modules/switches/assets/sass/toggle-switch';
+
+@import '../../modules/dropdowns/assets/sass/ngTagsInput';
+@import '../../modules/dropdowns/assets/sass/ui-select';
+
+@import '../../../bower_components/slick-carousel/slick/slick';
+@import '../../../bower_components/slick-carousel/slick/slick-theme';
+@import '../../modules/elements/assets/sass/slick-theme';
+
+@import '../../modules/main/assets/sass/header';
+@import '../../modules/main/assets/sass/footer';
+@import '../../modules/main/assets/sass/sectionlanding';
+
+@import '../../modules/elements/assets/sass/panels';
+@import '../../modules/elements/assets/sass/accordion';
+@import '../../modules/elements/assets/sass/progress-bar';
+
+@import '../../modules/modals-popovers/assets/sass/popover';
+@import '../../modules/modals-popovers/assets/sass/modals';
+
+
+@import '../../modules/feedback/assets/sass/alerts';
+@import '../../modules/feedback/assets/sass/toastrs';
+// @import '../../modules/elements/assets/sass/daterangepicker';
+
+@import '../../modules/patterns/assets/sass/signin';
+
 @import '../../modules/tables/assets/sass/tables';
-@import '../../modules/tabs/assets/sass/tabs-fancy';
-@import '../../modules/tabs/assets/sass/tabs';
+
+@import '../../modules/graphs/sass/c3';
+
+@import '../../modules/landing/assets/sass/landing';
+
+@import '../../modules/splitview/assets/sass/leftnav';
+@import '../../modules/splitview/assets/sass/splitview';
+
+@import '../../modules/hamburger/assets/sass/hamburger';
+@import '../../modules/resources/assets/sass/resources';
+@import '../../modules/elements/assets/sass/miller-columns';
+
+@import '../../modules/errors/assets/sass/errors';
+@import '../../modules/patterns/assets/sass/dragdrop';
