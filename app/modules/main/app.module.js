@@ -31,7 +31,8 @@
     'pb.ds.switches',
     'pb.ds.steppers',
     'pb.ds.datepickers',
-    'pb.ds.sample'
+    'pb.ds.tabs',
+    'pb.ds.accordions'
   ]);
 
   // angular scroll configuration
