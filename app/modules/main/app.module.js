@@ -41,6 +41,7 @@
     'pb.ds.tabs',
     'pb.ds.tiles',
     'pb.ds.toastrs',
+    'pb.ds.uibootstrap',
     'pb.ds.widgets',
     'pb.ds.writing'
   ]);
