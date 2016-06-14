@@ -58,13 +58,13 @@
 
         <div class="row spacer-bottom-md">
           <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-            <img class="img-responsive thumbnail" ng-src="modules/elements/assets/images/gallery/{{gallery.imageGallery.selectedImage}}.jpg" />
+            <img class="img-responsive thumbnail" ng-src="modules/gallery/assets/images/gallery/{{gallery.imageGallery.selectedImage}}.jpg" />
           </div>
         </div>
 
         <slick settings="gallery.imageGallery.settings">
           <div class="image-gallery-item thumbnail" ng-class="{'active': gallery.imageGallery.selected === $index}" ng-repeat="i in gallery.imageGallery.items" ng-click="gallery.imageGallery.click(i, $index)">
-              <img class="img-responsive" ng-src="modules/elements/assets/images/gallery/{{i.imageName}}_thumb.jpg" />
+              <img class="img-responsive" ng-src="modules/gallery/assets/images/gallery/{{i.imageName}}_thumb.jpg" />
           </div>
         </slick>
       </div>
