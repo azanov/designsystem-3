@@ -9,48 +9,58 @@
       </div>
     </div>
   </div>
-
-  <!-- <div headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="list-unstyled list-inline jump-menu">
-            <li><a href="" du-smooth-scroll="gray" offset="125">Gray Sidebar</a></li>
-            <li><a href="" du-smooth-scroll="white">White Sidebar</a></li>
-            <li><a href="" du-smooth-scroll="sectioned">Sectioned</a></li>
-            <li><a href="" du-smooth-scroll="collapsible">Collapsible</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
 </div>
+
+
 
 <div class="container">
 
-  <div class="row spacer-top-xl">
-    <div class="col-md-8">
-      <p>Our gallery of examples shows the Design System applied to our products. It’s hosted in InVisionApp.
-      </p>
-      <p>
-        <a href="https://invis.io/YE4PVAZ94" target="_blank">Go to the gallery &gt;</a>
-      </p>
-    </div>
-  </div>
+	<div class="row spacer-top-md">
+		<div class="col-md-12">
 
-  <div class="row">
-    <div class="col-md-8">
-      <p>
-        <a href="https://invis.io/YE4PVAZ94" target="_blank"><img alt="Invision" class="img-responsive" src="modules/resources/assets/images/gallery-thumbs.png"/></a>
-      </p>
-      <p>
-        You don’t need to be registered for (or signed in to) an Invision account to view or comment on the gallery, although you will be asked to provide your name and email address before you can view the gallery.
-      </p>
+			<div class="btn-group btn-group-justified" opt-kind="filter" ok-key="filter">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default active" ok-sel="*">Show All</button>
+				</div>
+				<div class="btn-group">
+					<button type="button" class="btn btn-default" ok-sel=".platform">Platform Assets</button>
+				</div>
+				<div class="btn-group">
+					<button type="button" class="btn btn-default" ok-sel=".smb">Shipping & Mailing Apps</button>
+				</div>
+				<div class="btn-group">
+					<button type="button" class="btn btn-default"
+						ok-sel=".ecommerce">Global Ecommerce Apps</button>
+				</div>
+				<div class="btn-group">
+					<button type="button" class="btn btn-default" ok-sel=".li">Location Intelligence Apps</button>
+				</div>
+			</div>
 
-      <p>If you’d like to attach comments or questions to gallery screens, just turn on Invision’s comments mode in the lower-right-hand corner of the Invision screen.
-      </p>
+		</div>
+	</div>
+
+
+	<div class="row spacer-top-sm">
+		<div isotope-container="isotope-container">
+
+			<div class="col-xs-12 col-sm-4 col-md-3 {{x.category}}" ng-repeat="x in gallery.data | unique: 'name'" isotope-item="isotope-item">
+				<div class="panel panel-default category-widget" ng-click="gallery.open(x)">
+					<div class="panel-body category-widget-icon">
+
+						<a href="" class="productDetail">
+              <img class="img-responsive" src="modules/resources/assets/images/41UnIEKfGxL.jpg" alt="" />
+						</a>
+					</div>
+
+					<div class="panel-footer">
+						<h4 class="category-widget-title">{{x.name}}</h4>
+					</div>
+				</div>
+			</div>
+		
     </div>
-  </div>
+	</div>
+
 
 </div>

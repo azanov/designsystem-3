@@ -26,7 +26,13 @@
 
       .state('resources.gallery', {
         url: '/gallery',
-        templateUrl: 'modules/resources/templates/resources-gallery.html'
+        templateUrl: 'modules/resources/templates/resources-gallery.html',
+        controller: 'ResourcesGalleryController as gallery',
+        resolve: {
+          GalleryResolve: function ($log, MockDataFactory) {
+            return MockDataFactory.query({filename: 'gallery'});
+          }
+        }
       })
 
       .state('resources.roadmap', {
