@@ -1,3 +1,21 @@
-// sass code here
+// popover
+.popover {
+  box-shadow: none;
+  border-radius: 0;
+  background-color: #fff;
+  z-index: 3;
+  &.bottom .arrow:after {
+    border-bottom-color: #fff;
+  }
+  &.top .arrow:after {
+    border-top-color: #fff;
+  }
+}
 
-// be sure to import this file in /app/sassets/sass/documentation.scss
+
+.navbar-form .input-group {
+  max-width: 220px;
+  .fa-search {
+    font-size: 16px;
+  }
+}
