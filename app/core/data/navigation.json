@@ -115,6 +115,9 @@
           }, {
             "label": "Badges",
             "value": "badges"
+          }, {
+            "label": "Progress Indicators",
+            "value": "progress"
           }
           ]
         }, {
