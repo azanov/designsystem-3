@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('pb.ds.graphs').controller('MorrisController', function ($log) {
+  angular.module('pb.ds.charts').controller('MorrisController', function ($log) {
     var _this = this;
 
     _this.donut = {

@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('pb.ds.graphs').controller('ChartjsController', function ($log, $scope) {
+  angular.module('pb.ds.charts').controller('ChartjsController', function ($log, $scope) {
     var _this = this;
 
     // COLORS
