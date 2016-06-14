@@ -58,6 +58,9 @@
           }, {
             "label": "Modals",
             "value": "modals"
+          }, {
+            "label": "Popovers",
+            "value": "popovers"
           },{
             "label": "Input Fields",
             "value": "inputs"

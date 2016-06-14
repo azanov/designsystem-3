@@ -4,11 +4,6 @@
   angular.module('pb.ds.modals').controller('ModalsController', function ($scope, $uibModal) {
     var _this = this;
 
-    _this.dynamicPopover = {
-      content: 'Hello, World!',
-      templateUrl: 'myPopoverTemplate.html',
-      title: 'Title'
-    };
 
     _this.modals = {
       basicMessage: function () {
