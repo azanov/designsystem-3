@@ -1,3 +1,6 @@
+.resources {
+  // overflow-y: scroll;
+  
 .panel-body {
   padding: 0;
 }
@@ -13,7 +16,7 @@
   text-align: center;
 }
 
-/* MODALS */
+/* FULLSCREEN MODAL */
 
 $modal: 100%;
 
@@ -63,26 +66,17 @@ body.modal-open {
 //Handle modal sizing & scrolling issues
 .modal-dialog {
   .modal-header,
-  .modal-body,
-  .modal-footer {
+  .modal-body {
     margin: 0 auto;
     width: $modal;
   }
   .modal-header {
     padding: 60px 60px 0;
     border: 0;
-    &:after {
-      content: '';
-      width: 100%;
-      height: 1px;
-      background-color: #ddd;
-      display: block;
-    }
   }
   .modal-body {
     padding: 30px 60px 0;
   }
-  .modal-footer {
-    padding: 0 60px 60px;
-  }
+}
+
 }

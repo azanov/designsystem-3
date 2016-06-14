@@ -18,7 +18,6 @@
         dots: true,
         event: {
           afterChange: function (event, slick, currentSlide, nextSlide) {
-            $log.debug(arguments);
             _this.currentDescription = _this.item.gallery[currentSlide].description;
           }
         }
