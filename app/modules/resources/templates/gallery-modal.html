@@ -1,0 +1,29 @@
+<div class="modal-header">
+	<button type="button" class="close" ng-click="modal.close()">
+		<span aria-hidden="true"></span><span class="sr-only">Close</span>
+	</button>
+	<h3 class="modal-title">{{modal.item.name}}</h3>
+</div>
+
+<div class="modal-body">
+
+	<div class="row">
+		<div class="col-md-7">
+			<a ng-href="{{modal.item.designThumbnail}}" target="_blank">
+			<img class="img-responsive" ng-src="{{modal.item.designThumbnail}}" /></a>
+		</div>
+
+		<div class="col-md-5">
+			<p>
+				<a ng-href="{{modal.item.url}}" target="_blank">{{modal.item.displayurl}}</a>
+				<br>
+          {{modal.item.user}} {{modal.item.username}}<br>
+          {{modal.item.pwd}} {{modal.item.password}} 
+		<p>{{modal.item.description}}</p>
+      
+      <p>
+        <a ng-href="{{modal.item.ref_link}}">{{modal.item.ref_display}}</a>
+      </p>
+		</div>
+	</div>
+</div>
