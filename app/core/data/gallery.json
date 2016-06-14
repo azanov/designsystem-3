@@ -1,4 +1,23 @@
 [ {
+  "name": "Borderfree",
+  "category": "ecommerce",
+   "description": "This solution leverage vast amounts of transactional data over the last 3 years to identify clusters in the purchasing habits of our customers. Identification of these clusters is followed by profiling the customers to define segments by integrating it with other datasets such as CAMEO to leverage the capabilities of our diverse data repository. The goal is to use insights from the data to make data-driven marketing efforts to boost customer interaction on the BorderFree website and eventually drive revenue up.",
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0",
+  "gallery": [
+    {
+      "image": "eov_01.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mattis lacinia accumsan. Maecenas ac justo magna. Suspendisse quis urna pellentesque, scelerisque sapien sed, porta magna."
+    },
+    {
+      "image": "eov_02.png",
+      "description": "Nam fermentum ante laoreet, fringilla quam vel, cursus ligula. Ut at ipsum lacus. Nulla nec venenatis felis, semper volutpat dui."
+    },
+    {
+      "image": "eov_03.png",
+      "description": "Etiam nec nunc felis. Cras congue gravida lorem ac condimentum. Vivamus volutpat sapien et quam semper vulputate. In ornare aliquet ex in tristique."
+    }]
+}, {
   "name": "Engage One Video",
   "category": "platform",
   "url": "http://www.somethinghere.com/",
@@ -132,13 +151,6 @@
   "thumbnail": "eov_thumbnail.png",
   "version": "2.0"
 },
-{
-  "name": "Borderfree",
-  "category": "ecommerce",
-   "description": "This solution leverage vast amounts of transactional data over the last 3 years to identify clusters in the purchasing habits of our customers. Identification of these clusters is followed by profiling the customers to define segments by integrating it with other datasets such as CAMEO to leverage the capabilities of our diverse data repository. The goal is to use insights from the data to make data-driven marketing efforts to boost customer interaction on the BorderFree website and eventually drive revenue up.",
-  "thumbnail": "eov_thumbnail.png",
-  "version": "2.0"
-}, 
 {
   "name": "PB EasySell",
   "category": "ecommerce",
