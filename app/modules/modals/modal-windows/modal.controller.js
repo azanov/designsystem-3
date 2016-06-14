@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('pb.ds.elements').controller('BootstrapUiModalController', function ($scope, $uibModalInstance) {
+  angular.module('pb.ds.modals').controller('BootstrapUiModalController', function ($scope, $uibModalInstance) {
     $scope.close = function () {
       $uibModalInstance.close();
     };
