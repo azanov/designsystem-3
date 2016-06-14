@@ -1,0 +1,88 @@
+.panel-body {
+  padding: 0;
+}
+.productDetail {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  height: 150px;
+}
+.category-widget-title {
+  height: 24px;
+  text-align: center;
+}
+
+/* MODALS */
+
+$modal: 100%;
+
+body.modal-open {
+  overflow: hidden;
+  padding-right: 0 !important;
+}
+.modal-backdrop {
+  display: none !important;
+}
+.modal-open .modal {
+  overflow: hidden;
+}
+
+.modal.fullscreen-modal {
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  z-index: 1050;
+  backface-visibility: visible;   //this is for animation rendering
+  
+  .modal-dialog {
+    background-color: #fff;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    position: relative;
+
+    .modal-content {
+      position: initial;
+      background-color: transparent;
+      border: 0;
+      border-radius: 0;
+      //Kill Box shadow and borders
+      box-shadow: none;
+      height: 100%;
+      margin: 0 auto;
+      overflow: auto;
+      padding-top: 70px;
+      width: 100%;
+      //override default padding from DS2 for non-full width modals
+      padding: 0;
+    }
+  }
+}
+
+//Handle modal sizing & scrolling issues
+.modal-dialog {
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    margin: 0 auto;
+    width: $modal;
+  }
+  .modal-header {
+    padding: 60px 60px 0;
+    border: 0;
+    &:after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: #ddd;
+      display: block;
+    }
+  }
+  .modal-body {
+    padding: 30px 60px 0;
+  }
+  .modal-footer {
+    padding: 0 60px 60px;
+  }
+}

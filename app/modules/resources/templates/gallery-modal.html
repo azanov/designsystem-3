@@ -5,25 +5,56 @@
 	<h3 class="modal-title">{{modal.item.name}}</h3>
 </div>
 
+<!--<div class="modal-body">
+
+	<div class="row">
+		<div class="col-xs-12">
+
+			<slick settings="modal.slickOptions.settings">
+				<div class="image-gallery-item thumbnail" ng-repeat="i in modal.item.gallery">
+						<img ng-src="modules/resources/assets/images/{{i}}" />
+				</div>
+			</slick>
+
+		</div>
+	</div>
+
+	<div class="row spacer-top-md">
+		<div class="col-xs-12">
+			<p>
+				<a ng-href="{{modal.item.url}}" target="_blank">{{modal.item.displayurl}}</a>
+			</p>
+
+			<p>{{modal.item.description}}</p>
+      
+		</div>
+	</div>
+</div>-->
+
 <div class="modal-body">
 
 	<div class="row">
-		<div class="col-md-7">
-			<a ng-href="{{modal.item.designThumbnail}}" target="_blank">
-			<img class="img-responsive" ng-src="{{modal.item.designThumbnail}}" /></a>
+		<div class="col-xs-9">
+
+			<slick settings="modal.slickOptions.settings">
+				<div class="image-gallery-item thumbnail" ng-repeat="i in modal.item.gallery">
+						<img ng-src="modules/resources/assets/images/{{i.image}}" />
+				</div>
+			</slick>
+
 		</div>
 
-		<div class="col-md-5">
+		<div class="col-xs-3">
 			<p>
 				<a ng-href="{{modal.item.url}}" target="_blank">{{modal.item.displayurl}}</a>
-				<br>
-          {{modal.item.user}} {{modal.item.username}}<br>
-          {{modal.item.pwd}} {{modal.item.password}} 
-		<p>{{modal.item.description}}</p>
+			</p>
+
+			<h5>Project Overview</h5>
+			<p>{{modal.item.description}}</p>
+
+			<h5 class="spacer-top-lg">Screenshot Details</h5>
+			<p>{{modal.currentDescription}}</p>
       
-      <p>
-        <a ng-href="{{modal.item.ref_link}}">{{modal.item.ref_display}}</a>
-      </p>
 		</div>
 	</div>
 </div>

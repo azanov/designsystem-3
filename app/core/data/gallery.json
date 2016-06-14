@@ -1,21 +1,32 @@
 [ {
-  "name": "Data Catalogue",
+  "name": "Engage One Video",
   "category": "platform",
-  "url": "http://pbdataportal.ct.pb.com/",
-  "displayurl": "http://pbdataportal.ct.pb.com/",
+  "url": "http://www.somethinghere.com/",
+  "displayurl": "www.somethinghere.com",
   "description": "Data Catalogue is a Data management system that makes data accessible to business users & data scientists. It hold meta-data of PB Data assets and also provides an interface to Manage data catalogue.",
-  "thumbnail": "assets/images/home/data_portal.png",
-  "designThumbnail": "assets/images/home/design/Dataportal.png",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #66aad4)"
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0",
+  "gallery": [
+    {
+      "image": "eov_01.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mattis lacinia accumsan. Maecenas ac justo magna. Suspendisse quis urna pellentesque, scelerisque sapien sed, porta magna."
+    },
+    {
+      "image": "eov_02.png",
+      "description": "Nam fermentum ante laoreet, fringilla quam vel, cursus ligula. Ut at ipsum lacus. Nulla nec venenatis felis, semper volutpat dui."
+    },
+    {
+      "image": "eov_03.png",
+      "description": "Etiam nec nunc felis. Cras congue gravida lorem ac condimentum. Vivamus volutpat sapien et quam semper vulputate. In ornare aliquet ex in tristique."
+    }]
 }, {
   "name": "Fusion Data Explorer",
   "category": "platform",
   "url": "http://databrowser.fusion.pitneycloud.com/",
   "displayurl": "http://databrowser.fusion.pitneycloud.com/",
   "description": "An easy to use web interface to navigate through various data assets in Fusion Data Lake.",
-  "thumbnail": "assets/images/home/images.png",
-   "designThumbnail": "assets/images/home/design/s3browser.png",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #66aad4)"
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0"
 }, 
 {
   "name": "Data Hub",
@@ -23,23 +34,17 @@
   "url": "http://ec2-52-36-238-89.us-west-2.compute.amazonaws.com:9090/",
   "displayurl": "http://ec2-52-36-238-89.us-west-2.compute.amazonaws.com",
  "description": "Data hub facilitates data provider to collect, store, organize, version data stored in data lake by applying basic data quality checks. Datahub leverage Spectrum Technology platform to Ingest Data from different data sources and Automate the Incremental data updates to Fusion Data Lake.",
-  "thumbnail": "assets/images/home/data_hub.png",
-  "designThumbnail": "assets/images/home/design/datahub.png",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #66aad4)"
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0"
 },
 {
   "name": "Data Science Workbench",
   "category": "platform",
   "url": "https://dbc-f9fb6b76-f3a5.cloud.databricks.com/#notebook/34599",
   "displayurl": "https://dbc-f9fb6b76-f3a5.cloud.databricks.com",
-  "user": "username:",
-  "pwd": "password:",
-  "username": "demo@pb.com",
-  "password": "P@55w0rd!",
  "description": "Data Science Workbench enables PB Data Scientists to explore PB data Assets within Fusion Data Lake and build Monitizable insights using cross BU Datasets. It uses Spark as baseline technology and provide rich set of Advanced Analytics & Machine learning Algorithms for data mining.",
-  "thumbnail": "assets/images/home/databricks.png",
-  "designThumbnail": "assets/images/home/design/databricks.png",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #8b98c8)"
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0"
 },
 {
   "name": "Spatial Libraries",
@@ -47,153 +52,101 @@
   "url": "http://ec2-52-26-193-98.us-west-2.compute.amazonaws.com:8080/swagger-ui.html",
   "displayurl": "http://ec2-52-26-193-98.us-west-2.compute.amazonaws.com:8080/swagger-ui.html",
   "description": "A set of java based libraries which provides Geo-Spatial functions to process large amount of data in a distributed & scalable way utilizing Big Data technologies like Hive / MR. This also includes a set of Rest APIs for rapid prototyping and building Internal UI application with very little infrastructure dependency.",
-  "thumbnail": "assets/images/home/spatial_library_git.png",
-   "designThumbnail": "assets/images/home/design/spatial_library_git.png",
-   "ref_link": "http://dbygitmsprod.pbi.global.pvt/big-data/Spatial-Library",
-   "ref_display" : "Explore in GitLabs",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #66aad4)"
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0"
 }, {
   "name": "SMB Insights/Analytics",
   "category": "smb",
   "url": "https://insights.pitneybowes.com/",
   "displayurl": "https://insights.pitneybowes.com/",
-  "user": "username:",
-  "pwd": "password:",
-  "username": "smbuser1@pb.com",
-  "password": "Wipro@123",
   "description": "SMB Insight reports are live in the US and Canada and they offer direct value to our postage meter clients (DM and Connect+). It provides a summary of the client's postage usage and savings broken down by mail class. The hallmark of these reports is that the data is then analyzed to produce a number of recommendations which show the customer how to save more money, save time, or use their meter more effectively. These reports are distributed through MyAccount, and customers will get an email each quarter with a reminder to log in and check their reports. Through these we hope to establish a digital relationship with our clients. Methods: Clustering, Regression",
-  "thumbnail": "assets/images/home/pb_insight.png",
-  "designThumbnail": "assets/images/home/design/smbinsights.png",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #66aad4)"
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0"
 }, {
   "name": "IOT/SmartLink",
   "category": "smb",
   "url": "http://portal-dev-pdx.iot.pitneycloud.com/#/success",
   "displayurl": "http://portal-dev-pdx.iot.pitneycloud.com/smartlink",
-  "user": "username:",
-  "pwd": "password:",
-  "username": "smartlink3@demo.com",
-  "password": "Password1@",
   "description": "SmartLink is a IOT end to end solution to modernise the client experience for our MailStation clients",
-  "thumbnail": "assets/images/home/smartlink.png",
-  "designThumbnail": "assets/images/home/design/smartlink.png",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #8b98c8)"
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0"
 }, {
   "name": "Sales Assist",
   "category": "smb",
   "url": "http://geolocation-testing.elasticbeanstalk.com/welcome.php",
   "displayurl": "http://geolocation-testing.elasticbeanstalk.com/welcome.php",
-  "user": "username:",
-  "pwd": "password:",
-  "username": "<PB Login>",
-  "password": "<PB Password>",
   "description": "Designed to be a prototype for a self service tool allowing PB employees to get a list of US customers satisfying criteria they set. Currently we take data regarding a customer's location, credit history, meter usage, service call center data, and postage spend growth. These attributes are aggregated into an overall health score, and users can get a list of customers who are near a certain location or who meet health score thresholds. Methods: Clustering, Regression",
-  "thumbnail": "assets/images/home/sales_assistant.png",
-  "designThumbnail": "assets/images/home/sales_assistant.png",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #e26bb8)"
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0"
 }, {
   "name": "SMB Health Scoring",
   "category": "smb",
   "url": "http://www.pbfootprint.elasticbeanstalk.com",
   "displayurl": "http://www.pbfootprint.elasticbeanstalk.com",
-  "user": "username:",
-  "pwd": "password:",
-  "username": "beta@pb.com",
-  "password": "zEquXLCyg25N7Jadq9r4",
   "description": "The Business Attributes demo is similar in nature to the Sales Assist application. It takes the health attributes and score of businesses and aggregates them to the block group level, which allows the user to see how businesses in each geographic region are performing at a glance.",
-  "thumbnail": "assets/images/home/mailbox_intellegence.png",
-  "designThumbnail": "assets/images/home/mailbox_intellegence.png",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #e26bb8)"
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0"
 },  
  {
   "name": "PB SmartPostage",
   "category": "smb",
   "url": "http://10.52.10.9/#/workbooks/426/views",
   "displayurl": "http://10.52.10.9/#/workbooks/426/views",
-  "user": "username:",
-  "pwd": "password:",
-  "username": "demo_ops",
-  "password": "zh5RF8TB",
   "description": "Customer Dashboard projects a unified view of active and inactive customer distribution on the basis of time, location, and PCNs.",
-  "thumbnail": "assets/images/home/pbspg.jpg",
-   "designThumbnail": "assets/images/home/CustomerDashboard.png",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #8b98c8)"
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0"
 },
 {
   "name": "Mail Intelligence",
   "category": "smb",
   "url": "http://pbfootprint.elasticbeanstalk.com",
   "displayurl": "http://pbfootprint.elasticbeanstalk.com",
-  "user": "username:",
-  "pwd": "password:",
-  "username": "beta@pb.com",
-  "password": "zEquXLCyg25N7Jadq9r4",
   "description": "This Application provides advanced analytics based on solicitation history pattens across industry category and class type and predict mail box arrival dates.",
-  "thumbnail": "assets/images/home/mailbox_intellegence1.png",
-  "designThumbnail": "assets/images/home/design/MailBoxIntelligence.png",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #e26bb8)"
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0"
 },
 {
   "name": "SMB Web Metrics",
   "category": "smb",
   "url": "https://smbqa.bigdatadev.pitneycloud.com/executivereport-smb.jsp",
   "displayurl": "https://smbqa.bigdatadev.pitneycloud.com/executivereport-smb.jsp",
-  "user": "username:",
-  "pwd": "password:",
-  "username": "pbsmbreporting@gmail.com",
-  "password": "smbpitney123$",
    "description": "A  platform to display a summary view for the usage of SMB Insights Report, including count and details of all customers who have accessed the application,  recommendations they clicked, along with technologies customers are using to check their report.",
-  "thumbnail": "assets/images/home/dashboard.png",
-  "designThumbnail": "assets/images/home/dashboard.png",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #66aad4)"
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0"
 },
 {
   "name": "SMB Web Metrics",
   "category": "li",
   "url": "https://smbqa.bigdatadev.pitneycloud.com/executivereport-smb.jsp",
   "displayurl": "https://smbqa.bigdatadev.pitneycloud.com/executivereport-smb.jsp",
-  "user": "username:",
-  "pwd": "password:",
-  "username": "pbsmbreporting@gmail.com",
-  "password": "smbpitney123$",
    "description": "A  platform to display a summary view for the usage of SMB Insights Report, including count and details of all customers who have accessed the application,  recommendations they clicked, along with technologies customers are using to check their report.",
-  "thumbnail": "assets/images/home/dashboard.png",
-  "designThumbnail": "assets/images/home/dashboard.png",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #66aad4)"
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0"
 },
 {
   "name": "KPI Dashboard",
   "category": "ecommerce",
   "url": "http://10.52.10.9/#/views/HubOperations2_0GSP_Weekly/1_Summary",
   "displayurl": "https://tableau.ecommerce.pb.com",
-  "user": "username:",
-  "pwd": "password:",
-  "username": "demo_ops",
-  "password": "zh5RF8TB",
   "description": "Operational Dashboards for XBEC GSP operations.",
-  "thumbnail": "assets/images/home/xbec_tab.png",
-  "designThumbnail": "assets/images/home/design/xbec_es.png",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #66aad4)"
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0"
 },
 {
   "name": "Borderfree",
   "category": "ecommerce",
    "description": "This solution leverage vast amounts of transactional data over the last 3 years to identify clusters in the purchasing habits of our customers. Identification of these clusters is followed by profiling the customers to define segments by integrating it with other datasets such as CAMEO to leverage the capabilities of our diverse data repository. The goal is to use insights from the data to make data-driven marketing efforts to boost customer interaction on the BorderFree website and eventually drive revenue up.",
-  "thumbnail": "assets/images/home/borderfree.png",
-  "designThumbnail": "assets/images/home/design/borderfree.png",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #8b98c8)"
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0"
 }, 
 {
   "name": "PB EasySell",
   "category": "ecommerce",
   "url": "http://pbeasysell-dev.elasticbeanstalk.com/dashboard.php",
   "displayurl": "http://pbeasysell-dev.elasticbeanstalk.com/dashboard.php",
-  "user": "username:",
-  "username": "Register as new User",
   "description": "Fusion Data Search provides customizable search capabilities for Fusion Data Lake and other datasets and facilitates efficient data analysis through flexible API. An example of it is this web application with type-ahead capabilities using PB WPOI dataset.",
-  "thumbnail": "assets/images/home/easysell.png",
-   "designThumbnail": "assets/images/home/easysell.png",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #e26bb8)"
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0"
 },
 {
   "name": "POI Typeahead Search",
@@ -201,9 +154,8 @@
   "url": "http://fdmc.elasticbeanstalk.com/",
   "displayurl": "http://fdmc.elasticbeanstalk.com/",
   "description": "Fusion Data Search provides customizable search capabilities for Fusion Data Lake and other datasets and facilitates efficient data analysis through flexible API. An example of it is this web application with type-ahead capabilities using PB WPOI dataset.",
-  "thumbnail": "assets/images/home/type_ahead.png",
-   "designThumbnail": "assets/images/home/design/typeahead.png",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #8b98c8)"
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0"
 },
 {
   "name": "POI Typeahead Search",
@@ -211,35 +163,30 @@
   "url": "http://fdmc.elasticbeanstalk.com/",
   "displayurl": "http://fdmc.elasticbeanstalk.com/",
   "description": "Fusion Data Search provides customizable search capabilities for Fusion Data Lake and other datasets and facilitates efficient data analysis through flexible API. An example of it is this web application with type-ahead capabilities using PB WPOI dataset.",
-  "thumbnail": "assets/images/home/type_ahead.png",
-   "designThumbnail": "assets/images/home/design/typeahead.png",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #8b98c8)"
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0"
 }, {
   "name": "Fire Protection",
   "category": "li",
   "url": "http://ec2-52-26-193-98.us-west-2.compute.amazonaws.com/fireprotection/",
   "displayurl": "http://ec2-52-26-193-98.us-west-2.compute.amazonaws.com/",
   "description": "This offering attributes Fire station information like proximity & response time at different traffic conditions to every address in our Master location dataset. This provides insurance companies a easy to use dataset for Fire risk assessment.",
-  "thumbnail": "assets/images/home/fire_station.png",
-  "designThumbnail": "assets/images/home/design/geoenrichment.png",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #8b98c8)"
-  
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0"
 }, {
   "name": "Env. Risk Assessment",
   "category": "li",
   "url": "http://pbadmin:Pitney1a@52.26.193.98/risk/",
   "displayurl": "http://ec2-52-26-193-98.us-west-2.compute.amazonaws.com/risk/",
   "description": "This offering aims at enriching US Blockgroups with Environment Risk scores based on historic events.",
-  "thumbnail": "assets/images/home/risk.png",
-   "designThumbnail": "assets/images/home/risk.png",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #e26bb8)"
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0"
 },
 {
   "name": "Location Profiling",
   "category": "li",
   "description": "Building location Profiles for commercial neighbourhood based on PB data assets and partner datasets. This solution includes geo-enrichment of address dataset, customer mobile traces & segmentation of commercial neighborhood to create location profiles.",
-  "thumbnail": "assets/images/home/loc_profile.png",
-   "designThumbnail": "assets/images/home/loc_profile.png",
-  "bak_color": "linear-gradient(to top,  #FFFFFF 10%, #e26bb8)"
+  "thumbnail": "eov_thumbnail.png",
+  "version": "2.0"
 }
 ]
