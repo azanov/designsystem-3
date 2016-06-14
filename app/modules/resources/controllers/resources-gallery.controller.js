@@ -8,8 +8,9 @@
     _this.open = function (item) {
       $uibModal.open({
         templateUrl: 'modules/resources/templates/gallery-modal.html',
-        controller: 'ModalController as modal',
+        controller: 'GalleryModalController as modal',
         size: 'lg',
+        windowTopClass: 'fullscreen-modal',
         resolve: {
           itemResolve: function () {
             return item;
