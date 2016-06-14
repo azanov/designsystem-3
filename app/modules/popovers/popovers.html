@@ -1,0 +1,106 @@
+<div class="doc-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero-header">
+          <!-- <div class="eyebrow">????</div> -->
+          <h1>Popovers</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-header jump-bar headroom" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}" headroom offset="240" tolerance="5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- <ul class="list-unstyled list-inline jump-menu">
+            <li>
+              <a ui-sref="sample({'#':'sampleID'})">Sample Jump Label</a>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="container">
+
+    <div class="row spacer-top-xl">
+      <div class="col-md-8">
+        <!-- <h1 class="doc-head" id="popovers">Popovers</h1> -->
+        <a class="more-info plugin" href="http://angular-ui.github.io/bootstrap/#/popover" target="_blank">angular ui bootstrap v1.3.1</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Styles</h2>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-3">
+        <figure>
+          <figcaption>Popover with Template</figcaption>
+          <button class="btn btn-default" uib-popover-template="pop.dynamicPopover.templateUrl" popover-trigger="outsideClick" popover-title="Hello World">Popover With Template</button>
+
+          <script id="myPopoverTemplate.html" type="text/ng-template">
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt provident tempora officia.</div>
+          </script>
+        </figure>
+      </div>
+
+      <div class="col-md-3">
+        <figure>
+          <figcaption>Popover Positions</figcaption>
+          <button class="btn btn-default" popover-placement="top" popover-trigger="outsideClick" uib-popover="On the Top!">Top</button>
+          <button class="btn btn-default" popover-placement="left" popover-trigger="outsideClick" uib-popover="On the Left!">Left</button>
+          <button class="btn btn-default" popover-placement="right" popover-trigger="outsideClick" uib-popover="On the Right!">Right</button>
+          <button class="btn btn-default" popover-placement="bottom" popover-trigger="outsideClick" uib-popover="On the Bottom!">Bottom</button>
+        </figure>
+      </div>
+
+      <div class="col-md-3">
+        <figure>
+          <figcaption>Popover Triggers</figcaption>
+          <p>
+            <button class="btn btn-default" popover-trigger="mouseenter" uib-popover="I appeared on mouse enter!">Mouseenter</button>
+          </p>
+          <input class="form-control" popover-trigger="focus" uib-popover="I appeared on focus! Click away and I'll vanish..." type="text" value="Click me!">
+        </figure>
+      </div>
+
+      <div class="col-md-3">
+        <figure>
+          <figcaption>Other Popovers</figcaption>
+          <button class="btn btn-default" popover-trigger="outsideClick" popover-animation="true" uib-popover="I fade in and out!">fading</button>
+          <button class="btn btn-default" popover-trigger="outsideClick" popover-title="The title." uib-popover="I have a title!">title</button>
+
+        </figure>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Writing for Popovers and Modals</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        <p>When writing copy for modals, popovers and tooltips, good writing principles apply. Try to keep your messages succinct, clear and to the point by:</p>
+        <ul>
+          <li>Using active rather than passive writing</li>
+          <li>Focusing on what the user most needs to know</li>
+          <li>Constructing short sentences, written in plain language</li>
+        </ul>
+      </div>
+    </div>
+
+
+</div>
