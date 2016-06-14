@@ -1,0 +1,28 @@
+.chart-color-swatches {
+  display: flex;
+  justify-content: space-between;
+  @include breakpoint(screen-xs) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.chart-color-swatch {
+  padding: 10px;
+  min-width: 135px;
+  > div {
+    color: #fff;
+  }
+  &.text-black {
+    > div {
+      color: #000;
+    }
+  }
+  .chart-color-name {
+    margin-bottom: 5px;
+  }
+  .chart-color-hex, .chart-color-sass {
+    font-size: 12px;
+    font-family: $font-family-monospace;
+  }
+}

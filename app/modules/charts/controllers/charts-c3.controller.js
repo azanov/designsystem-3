@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('pb.ds.graphs').controller('C3Controller', function ($log) {
+  angular.module('pb.ds.charts').controller('C3Controller', function ($log) {
     var _this = this;
 
     // COLORS

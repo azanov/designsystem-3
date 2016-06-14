@@ -34,6 +34,9 @@
 @import 'legacy/stepper';
 @import 'legacy/media-object';
 
+@import 'legacy/list-group';
+@import 'legacy/uibootstrap';
+
 
 // PAGES
 // ========================================
@@ -60,11 +63,12 @@
 
 @import '../../modules/cards/assets/sass/panels';
 
-@import '../../modules/elements/assets/sass/custom-daterange-picker';
-@import '../../modules/elements/assets/sass/list-group';
-@import '../../modules/elements/assets/sass/loading-bar';
-@import '../../modules/elements/assets/sass/progress-bar';
-@import '../../modules/elements/assets/sass/uibootstrap';
+@import '../../modules/datepickers/assets/sass/custom-daterange-picker';
+
+@import '../../modules/progress/assets/sass/progress';
+@import '../../modules/progress/assets/sass/loading-bar';
+
+
 
 @import '../../modules/buttons/assets/sass/buttons';
 
@@ -76,7 +80,7 @@
 
 @import '../../modules/foundation/assets/sass/pbds-directives';
 
-@import '../../modules/graphs/sass/c3';
+@import '../../modules/charts/sass/c3';
 
 @import '../../modules/hamburger/assets/sass/hamburger';
 

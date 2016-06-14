@@ -2,7 +2,7 @@
   'use strict';
   angular.module('pb.ds.toastrs', ['ui.router']);
   // TOASTR CONFIG
-  angular.module('pb.ds.elements').config(function (toastrConfig) {
+  angular.module('pb.ds.toastrs').config(function (toastrConfig) {
     angular.extend(toastrConfig, {
       // allowHtml: false,
       // autoDismiss: false,

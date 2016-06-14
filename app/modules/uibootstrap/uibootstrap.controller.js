@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('pb.ds.elements').controller('UiBootstrapController', function ($log, $uibModal, $scope, $timeout, $window) {
+  angular.module('pb.ds.uibootstrap').controller('uiBootstrapController', function ($log, $uibModal, $scope, $timeout, $window) {
     var _this = this;
 
     // Accordions
