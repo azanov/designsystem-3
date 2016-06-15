@@ -1,0 +1,263 @@
+<div class="doc-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero-header">
+          <!-- <div class="eyebrow">Elements</div> -->
+          <h1>Angular UI Bootstrap</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-unstyled list-inline jump-menu">
+            <li><a ui-sref="elements.uibootstrap({'#':'accordions'})">Accordions</a></li>
+            <li><a ui-sref="elements.uibootstrap({'#':'tabs'})">Tabs</a></li>
+            <li><a ui-sref="elements.uibootstrap({'#':'alerts'})">Alerts</a></li>
+            <li><a ui-sref="elements.uibootstrap({'#':'pagination'})">Pagination</a></li>
+            <li><a ui-sref="elements.uibootstrap({'#':'progressbars'})">Progress Bars</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 class="doc-head">What is Angular Ui Bootstrap?</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <p>The default controls supplied with Boostrap are simple to use, require no additional Javascript development and are configured and used completely from the HTML markup.</p>
+
+      <p>For Angular JS development, there is a set of native AngularJS directives based on Bootstrap's markup and CSS which are styled to match the Design System. For more technical information, installation and usage instructions, please see the
+        <a href="https://angular-ui.github.io/bootstrap/" target="_blank">Angular UI Bootstrap site</a>.</p>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="accordions" class="doc-head">Accordions</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <figure>
+        <figcaption>Standard Accordion</figcaption>
+        <uib-accordion close-others="uibs.oneAtATime">
+          <uib-accordion-group heading="Static Header" is-open="uibs.status.isFirstOpen" is-disabled="uibs.status.isFirstDisabled">
+            This content is straight in the template.
+          </uib-accordion-group>
+          <uib-accordion-group heading="{{group.title}}" ng-repeat="group in uibs.groups">
+            {{group.content}}
+          </uib-accordion-group>
+        </uib-accordion>
+      </figure>
+    </div>
+    <div class="col-md-4">
+      <figure>
+        <figcaption>Compact Accordion</figcaption>
+        <uib-accordion close-others="uibs.compactOneAtATime" class="compact">
+          <uib-accordion-group heading="Static Header" is-open="uibs.compactStatus.isFirstOpen" is-disabled="uibs.compactStatus.isFirstDisabled">
+            This content is straight in the template.
+          </uib-accordion-group>
+          <uib-accordion-group heading="{{group.title}}" ng-repeat="group in uibs.groups">
+            {{group.content}}
+          </uib-accordion-group>
+        </uib-accordion>
+      </figure>
+    </div>
+    <div class="col-md-4">
+      <figure>
+        <figcaption>Single Accordion</figcaption>
+        <uib-accordion close-others="uibs.oneAtATime" class="compact">
+          <uib-accordion-group heading="Static Header" is-open="uibs.singleStatus.isFirstOpen" is-disabled="uibs.singleStatus.isFirstDisabled">
+            This content is straight in the template.
+          </uib-accordion-group>
+        </uib-accordion>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="tabs" class="doc-head">Tabs</h1>
+    </div>
+  </div>
+
+  <div class="row spacer-top-lg">
+    <div class="col-md-6">
+      <figure>
+        <figcaption>Standard Tabs</figcaption>
+        <uib-tabset active="active">
+          <uib-tab index="0" heading="Home">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eaque, dolore vero eum, incidunt tempora distinctio odit quam officiis maxime.
+          </uib-tab>
+          <uib-tab index="1" heading="Profile">
+            Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+          </uib-tab>
+          <uib-tab index="2" heading="Messages">
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl.
+          </uib-tab>
+          <uib-tab index="3" heading="Settings">
+            Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis.
+          </uib-tab>
+        </uib-tabset>
+      </figure>
+    </div>
+
+    <div class="col-md-6">
+      <figure>
+        <figcaption>Justified Tabs</figcaption>
+        <uib-tabset active="activeJustified" justified="true">
+          <uib-tab index="0" heading="Home">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eaque, dolore vero eum, incidunt tempora distinctio odit quam officiis maxime.
+          </uib-tab>
+          <uib-tab index="1" heading="Profile">
+            Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+          </uib-tab>
+          <uib-tab index="2" heading="Messages">
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl.
+          </uib-tab>
+          <uib-tab index="3" heading="Settings">
+            Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis.
+          </uib-tab>
+        </uib-tabset>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <figure>
+        <figcaption>Tabs with Bordered Content</figcaption>
+        <!-- Nav tabs -->
+        <uib-tabset active="active2" class="tabset-bordered">
+          <uib-tab index="0" heading="Home">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eaque, dolore vero eum, incidunt tempora distinctio odit quam officiis maxime.
+          </uib-tab>
+          <uib-tab index="1" heading="Profile">
+            Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+          </uib-tab>
+          <uib-tab index="2" heading="Messages">
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl.
+          </uib-tab>
+          <uib-tab index="3" heading="Settings">
+            Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis.
+          </uib-tab>
+        </uib-tabset>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="alerts" class="doc-head">Alerts</h1>
+    </div>
+  </div>
+
+  <div class="row spacer-top-md">
+    <div class="col-md-6">
+      <uib-alert ng-repeat="alert in uibs.alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+      <uib-alert template-url="alert.html">A simple inline alert.</uib-alert>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="pagination" class="doc-head">Pagination</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="doc-sectionhead">Defaults</h2>
+      <uib-pagination total-items="uibs.totalItems" ng-model="uibs.currentPage" ng-change="uibs.pageChanged()"></uib-pagination>
+
+      <uib-pagination boundary-links="true" total-items="uibs.totalItems" ng-model="uibs.currentPage" class="pagination-sm" previous-text="&lt;" next-text="&gt;" first-text="&lt;&lt;" last-text="&gt;&gt;"></uib-pagination>
+
+      <uib-pagination direction-links="false" boundary-links="true" total-items="uibs.totalItems" ng-model="uibs.currentPage"></uib-pagination>
+
+      <uib-pagination direction-links="false" total-items="uibs.totalItems" ng-model="uibs.currentPage" num-pages="smallnumPages"></uib-pagination>
+
+      <pre>The selected page number is: {{uibs.currentPage}}</pre>
+      <button type="button" class="btn btn-default" ng-click="uibs.setPage(3)">Set current page to 3</button>
+    </div>
+    <div class="col-md-6">
+      <h2 class="doc-sectionhead">Limit the Maximum Visible Buttons</h2>
+
+        <h6><code>rotate</code> defaulted to<code>true</code>:</h6>
+        <uib-pagination total-items="uibs.bigTotalItems" ng-model="uibs.bigCurrentPage" max-size="uibs.maxSize" class="pagination-sm" boundary-links="true" num-pages="numPages"></uib-pagination>
+
+        <h6><code>rotate</code> defaulted to <code>true</code> and <code>force-ellipses</code>
+        set to <code>true</code>:</h6>
+        <uib-pagination total-items="uibs.bigTotalItems" ng-model="uibs.bigCurrentPage" max-size="uibs.maxSize" class="pagination-sm" boundary-links="true" force-ellipses="true"></uib-pagination>
+
+        <h6><code>rotate</code> set to <code>false</code>:</h6>
+        <uib-pagination total-items="uibs.bigTotalItems" ng-model="uibs.bigCurrentPage" max-size="uibs.maxSize" class="pagination-sm" boundary-links="true" rotate="false"></uib-pagination>
+
+        <h6><code>boundary-link-numbers</code> set to <code>true</code> and <code>rotate</code> defaulted to <code>true</code>:</h6>
+        <uib-pagination total-items="uibs.bigTotalItems" ng-model="uibs.bigCurrentPage" max-size="uibs.maxSize" class="pagination-sm" boundary-link-numbers="true"></uib-pagination>
+
+        <h6><code>boundary-link-numbers</code> set to <code>true</code> and <code>rotate</code> set to <code>false</code>:</h6>
+        <uib-pagination total-items="uibs.bigTotalItems" ng-model="uibs.bigCurrentPage" max-size="uibs.maxSize" class="pagination-sm" boundary-link-numbers="true" rotate="false"></uib-pagination>
+
+        <pre>Page: {{uibs.bigCurrentPage}} / {{numPages}}</pre>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 class="doc-head" id="progressbars">Progress Bars</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="doc-sectionhead">Static</h2>
+      <div class="row">
+        <div class="col-sm-4"><uib-progressbar value="55"></uib-progressbar></div>
+        <div class="col-sm-4"><uib-progressbar class="progress-striped" value="22" type="warning">22%</uib-progressbar></div>
+        <div class="col-sm-4"><uib-progressbar class="progress-striped active" max="200" value="166" type="danger"><i>166 / 200</i></uib-progressbar></div>
+      </div>
+
+   <hr>
+
+   <h2 class="doc-sectionhead">Dynamic <button type="button" class="btn btn-xs btn-default" ng-click="uibs.random()">Randomize</button></h2>
+   <uib-progressbar max="max" value="dynamic"><span style="color:white; white-space:nowrap;">{{uibs.dynamic}} / {{uibs.max}}</span></uib-progressbar>
+
+   <small><em>No animation</em></small>
+   <uib-progressbar animate="false" value="dynamic" type="success"><b>{{uibs.dynamic}}%</b></uib-progressbar>
+
+   <small><em>Object (changes type based on value)</em></small>
+   <uib-progressbar class="progress-striped active" value="dynamic" type="{{uibs.type}}">{{uibs.type}} <i ng-show="uibs.showWarning">!!! Watch out !!!</i></uib-progressbar>
+
+   <hr>
+
+   <h2 class="doc-sectionhead">Stacked <button type="button" class="btn btn-xs btn-default" ng-click="uibs.randomStacked()">Randomize</button></h2>
+   <uib-progress><uib-bar ng-repeat="bar in uibs.stacked track by $index" value="bar.value" type="{{bar.type}}"><span ng-hide="bar.value < 5">{{bar.value}}%</span></uib-bar></uib-progress>
+    </div>
+  </div>
+
+
+
+</div>
+<!-- end container -->
+
+<script type="text/ng-template" id="alert.html">
+  <div class="alert alert-info" role="alert">
+    <div ng-transclude></div>
+  </div>
+</script>

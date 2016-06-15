@@ -1,0 +1,378 @@
+<div class="doc-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero-header">
+          <!-- <div class="eyebrow">????</div> -->
+          <h1>Cards</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-header jump-bar headroom" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}" headroom offset="240" tolerance="5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-unstyled list-inline jump-menu">
+            <li>
+              <a ui-sref="sample({'#':'sampleID'})">Sample Jump Label</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-8 col-sm-12">
+      <h1 id="panels" class="doc-head">Cards</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Styles</h2>
+    </div>
+  </div>
+
+  <div class="row ">
+    <div class="col-sm-4">
+      <figure>
+        <figcaption>Default Panel</figcaption>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quis impedit molestiae tempore aliquid sed corporis provident earum iusto qui.</p>
+          </div>
+        </div>
+      </figure>
+    </div>
+
+    <div class="col-sm-4">
+      <figure>
+        <figcaption>Default Panel with Heading</figcaption>
+        <div class="panel panel-default">
+          <div class="panel-heading">Panel Heading</div>
+          <div class="panel-body">
+            Headings can also be Panel Titles or Links. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia odit consequatur beatae, quae odio vero, sint, quod voluptas aut repudiandae itaque in animi velit tempore cumque! Tenetur temporibus fugiat placeat magni ab, eveniet ea excepturi quae commodi! Excepturi, ipsa quod.
+          </div>
+        </div>
+      </figure>
+    </div>
+
+    <div class="col-sm-4">
+      <figure>
+        <figcaption>Panel with Filled Header</figcaption>
+        <div class="panel panel-filled-heading panel-default">
+          <div class="panel-heading">Shipping Address</div>
+          <div class="panel-body">
+            <p><b>Melanine Ann Daniels <br>
+            Company Name</b></p>
+            <p>42 Main Street, Suite 516<br>
+            Bodega Bay, CA, 11021 USA</p>
+
+            <p><a href="mailto:mdaniels@gmail.com">mdaniels@gmail.com</a><br>
+            212-201-2018</p>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </div>
+
+
+  <div class="row spacer-top-xl">
+    <div class="col-sm-6">
+      <figure>
+        <figcaption>Panel with Table</figcaption>
+        <div class="panel">
+          <div class="panel-heading">
+            Panel Heading
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="person in cards.people">
+                <td>00{{::person.id}}</td>
+                <td>{{::person.firstName}}</td>
+                <td>{{::person.lastName}}</td>
+                <td>
+                  <a href="">{{::person.userName}}</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </figure>
+    </div>
+
+    <div class="col-sm-6">
+      <figure>
+        <figcaption>Panel with List Group</figcaption>
+        <div class="panel panel-filled-heading">
+          <div class="panel-heading">Panel Heading</div>
+          <div class="panel-body">
+            A lead-in block of text that goes in the panel body before the list begins.
+          </div>
+          <ul class="list-group">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+          </ul>
+        </div>
+      </figure>
+    </div>
+  </div>
+
+
+
+  <div class="row doc-sectionbreak">
+    <div class="col-md-12">
+      <figure>
+        <figcaption>Drag and Drop Cards (Desktop Browsers Only)</figcaption>
+        <div class="row" ng-model="cards.draggable" pb-panel-draggable>
+        <!-- assign class "column" to any columns you want included in drag-n-drop -->
+          <div class="col-sm-3 column">
+            <div class="panel panel-default">
+              <div class="panel-heading">Panel One
+                <span pb-panel-collapsible></span>
+              </div>
+              <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe omnis nam similique.
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">Panel Two
+                <span pb-panel-collapsible></span>
+              </div>
+              <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis possimus modi id eligendi quae quas eum nisi, provident!
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 column">
+            <div class="panel panel-default">
+              <div class="panel-heading">Panel Three
+                <span pb-panel-collapsible></span>
+              </div>
+              <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nostrum recusandae rerum animi nisi facilis provident, iste modi earum, esse praesentium, amet.
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 column">
+            <div class="panel panel-default">
+              <div class="panel-heading">Panel Four
+                <span pb-panel-collapsible></span>
+              </div>
+              <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, numquam.
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">Panel Five
+                <span pb-panel-collapsible></span>
+              </div>
+              <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem molestias sequi nam est. Libero, officiis alias neque quisquam aliquam perferendis quaerat dignissimos sint, incidunt sit!
+              </div>
+            </div>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 col-sm-12">
+      <h1 id="cards" class="doc-head">Cards</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Styles</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          Admin Information Card
+          <a href="" class="pull-right text-muted"><i class="nc-icon-mini ui-1_pencil"></i></a>
+        </div>
+        <div class="panel-body">
+          <address>
+            <h5>Melanie Ann Daniels</h5>
+            <h5>Company Name</h5>
+            42 Main Street, Suite 516<br>
+            Bodega Bay, CA, 11021 USA
+          </address>
+
+          <address>
+            <a href="mailto:mdaniels@gmail.com">mdaniels@gmail.com</a><br>
+            212-201-2018
+          </address>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          Latest Activity Card
+        </div>
+        <div class="panel-body">
+
+          <table class="table table-condensed table-unstyled">
+            <tbody>
+              <tr>
+                <td>
+                  <i class="nc-icon-mini lg ui-1_check-circle-08 text-success"></i>
+                </td>
+                <td width="100%">
+                  <span class="text-success"><strong>890198385</strong> has successfully shipped!</span>
+                </td>
+                <td class="text-right">
+                  <span class="text-muted">30m</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <i class="nc-icon-mini lg ui-1_check-circle-08 text-success"></i>
+                </td>
+                <td width="100%">
+                  <span class="text-success"><strong>Randy Alberts</strong> accepted your transaction.</span>
+                </td>
+                <td class="text-right">
+                  <span class="text-muted">5h</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <i class="nc-icon-mini ui-3_alert lg text-warning"></i>
+                </td>
+                <td width="100%">
+                  <span class="text-warning"><strong>Amex Account</strong> is low on funds.</span>
+                </td>
+                <td class="text-right">
+                  <span class="text-muted">2h</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <i class="nc-icon-mini lg ui-2_alert-circle- text-danger"></i>
+                </td>
+                <td width="100%">
+                  <span class="text-danger"><strong>Spring Sale</strong> has a processing error.</span>
+                </td>
+                <td class="text-right">
+                  <span class="text-muted">1d</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="writing" class="doc-head">Writing for Containers</h1>
+    </div>
+  </div>
+
+
+
+
+  <div class="row">
+    <div class="col-md-8">
+      <p class="lede">When writing headers or labels for container elements, follow these basic principles.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Style</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <ul>
+        <li>Use short, active words and phrases.</li>
+        <li>Structure copy to avoid ambiguity in language.</li>
+        <li>Use the same style and structure for all your labels.</li>
+        <li>To avoid confusing users, use consistent terminology.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Capitalization</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <ul>
+        <li>Use title capitalization for all container headers and labels.</li>
+        <li>Capitalize all words containing four or more letters.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Punctuation</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <ul>
+        <li>Don’t conclude copy with punctuation, such as periods or colons.</li>
+        <li>Don’t phrase your copy as questions.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Word Count</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <ul>
+        <li>Keep word counts to three words or fewer possible.</li>
+        <li>If you need to use more than three words, use the smallest number possible to express the container element’s purpose.</li>
+        <li>“Future proof” your containers by considering if you’ll need to add elements, such as tabs, later on — then choose your wording to allow for those additions.</li>
+        <li>Consider translation needs when choosing words — some languages may require more words or characters to express an idea, which could cause titles in elements such as tab labels to wrap.</li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+
+
+</div>

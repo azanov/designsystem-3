@@ -1,25 +1,21 @@
-// scss-lint:disable SelectorDepth
-
-//style footer to always be at bottom of screen
+// fot correct positioning of footer
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 .site-content {
-  min-height: calc(100vh - (50px + 40px + 44px)); //50 for nav height, 40 footer margin, 44 footer height
+  flex: 1;
+  margin-bottom: 40px;
 }
+// ----------------
 
-// wrapper box for edge-to-edge color
-.footer-wrapper {
+footer {
   background-color: $pb-gray-50;
-  margin-top: 40px;
-  // width: 100vw;
   padding: 10px 0;
-  &.demo {
-    margin-top: 0;
-    width: auto;
-  }
-}
-
-// "actual" footer is inside container
-// id kept for legacy reasons
-#footer, footer {
   .container, .container-fluid {
     color: $text-color;
     font-size: 12px;
