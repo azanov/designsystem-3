@@ -48,7 +48,7 @@
           "toggle": "dropdown",
           "children": [{
             "label": "Charts",
-            "value": "graphs.page"
+            "value": "charts.page"
           },{
             "label": "Help Prompts",
             "value": "help"

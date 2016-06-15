@@ -10,6 +10,7 @@
     'pb.ds.breadcrumbs',
     'pb.ds.buttons',
     'pb.ds.cards',
+    'pb.ds.charts',
     'pb.ds.checkboxes',
     'pb.ds.content',
     'pb.ds.datepickers',
@@ -19,7 +20,6 @@
     'pb.ds.foundation',
     'pb.ds.gallery',
     'pb.ds.globalization',
-    'pb.ds.graphs',
     'pb.ds.hamburger',
     'pb.ds.help',
     'pb.ds.helpers',
@@ -41,6 +41,7 @@
     'pb.ds.tabs',
     'pb.ds.tiles',
     'pb.ds.toastrs',
+    'pb.ds.uibootstrap',
     'pb.ds.widgets',
     'pb.ds.writing'
   ]);

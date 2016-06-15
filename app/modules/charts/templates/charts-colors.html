@@ -1,0 +1,40 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 id="color-applications" class="doc-head">Color Applications</h1>
+      <p class="doc-lede">We&rsquo;ve designed our chart palettes to support brand consistency and to structure a uniform display of information across all our products.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <p>When representing multiple data categories use our different hues in the following order, left to right</p>
+      <figure class="spacer-top-lg">
+          <div class="chart-color-swatches">
+            <div class="chart-color-swatch" ng-repeat="c in charts.chartColors" style="background-color: {{c.hex}}">
+              <div class="chart-color-name">{{c.name}}</div>
+              <div class="chart-color-hex">{{c.hex}}</div>
+              <div class="chart-color-sass">{{c.sass}}</div>
+            </div>
+          </div>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row spacer-top-lg">
+    <div class="col-md-10">
+      <p>When representing a single data category use up to 6 tints of a single color.  The base color is the 500 tint, as illustrated below with PB Medium Blue.</p>
+      <figure class="spacer-top-lg">
+          <div class="chart-color-swatches">
+            <div class="chart-color-swatch" ng-repeat="t in charts.chartTints" style="background-color: {{t.hex}}" ng-class="{'text-black': $index > 3}">
+              <div class="chart-color-name">{{t.name}}</div>
+              <div class="chart-color-hex">{{t.hex}}</div>
+              <!-- <div class="chart-color-sass">{{t.sass}}</div> -->
+            </div>
+          </div>
+      </figure>
+    </div>
+  </div>
+
+</div>
