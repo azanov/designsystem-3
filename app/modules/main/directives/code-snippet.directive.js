@@ -1,18 +1,27 @@
-//TODO: move template for directive to templates folder
+//TODO: add comment about xmp tag
 (function () {
   'use strict';
 
   angular.module('app').directive('pbCodeSnippet', function () {
     return {
       restrict: 'E',
-      templateUrl: 'modules/main/directives/code-snippet/code-snippet.html',
+      templateUrl: 'modules/main/templates/code-snippet.html',
+      //use options.tabs[mode].editor property as options for codeMirror tool
       scope: {
         options: '='
       },
       link: function postLink (scope, element, attrs) {
 
-        scope.initCodeMirror = function (index, options) {
+        var modeMap = {
+          js: 'javascript',
+          html: 'htmlmixed',
+          css: 'text/css',
+          scss: 'text/x-scss'
+        };
+
+        scope.initCodeMirror = function (index, mode, opt) {
           var includeElement = element.find('ng-include').eq(index);
+          var options = opt || {};
           var text = includeElement.text();
           var codemirrorOptions = angular.extend(
             {
@@ -20,15 +29,18 @@
               lineWrapping: true,
               lineNumbers: true,
               readOnly: 'nocursor',
-              mode: 'htmlmixed'
+              mode: modeMap[mode] || 'htmlmixed'
             },
             options
           );
+          //TODO: think about using factory for geting new codeMirror instance
+          //also add to factory methods for higlighting different files
           var codemirror = new window.CodeMirror(function(cm_el) {
             includeElement.html('');
             includeElement.append(cm_el);
           }, codemirrorOptions);
 
+          //TODO: create separate method for resizing
           var codemirrorLinesElement = includeElement.find('.CodeMirror-lines'),
             paddingTop = parseInt(codemirrorLinesElement.css('padding-top')),
             paddingBottom = parseInt(codemirrorLinesElement.css('padding-bottom'));
