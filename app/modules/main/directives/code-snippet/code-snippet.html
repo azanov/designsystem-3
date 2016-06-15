@@ -1,0 +1,7 @@
+<div class="code-snippet">
+  <uib-tabset active="active">
+    <uib-tab index="$index" ng-repeat="(key, tab) in options.tabs" heading="{{::key.toUpperCase()}}">
+      <ng-include onload="initCodeMirror($index, tab.editor)" src="tab.codeUrl"></ng-include>
+    </uib-tab>
+  </uib-tabset>
+</div>

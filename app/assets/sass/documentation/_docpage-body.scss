@@ -14,10 +14,21 @@
 }
 
 .doc-body-snippet {
-  //TODO: remove after adding code snippet plugin
-  background-color: $pb-light-gray;
-  height: 310px;
-  line-height: 310px;
-  font-size: 30px;
-  text-align: center;
+  height: auto;
+  .CodeMirror {
+    max-height: 41rem;
+    border-bottom: solid 1px #e1e1e1;
+    border-left: solid 1px #e1e1e1;
+    border-right: solid 1px #e1e1e1;
+  }
+  .tab-content > .tab-pane {
+    padding: 0;
+    visibility: hidden;
+    display: block;
+    position: absolute;
+  }
+  .tab-content > .active{
+    position: static;
+    visibility: visible;
+  }
 }
