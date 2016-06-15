@@ -36,10 +36,10 @@
             }, {
               "label": "Typography",
               "value": "foundation.typography"
-            },{
-            "label": "Angular Directives",
-            "value": "foundation.directives"
-          }
+            }, {
+              "label": "Angular Directives",
+              "value": "foundation.directives"
+            }
 
           ]
         }, {
@@ -47,31 +47,82 @@
           "value": "",
           "toggle": "dropdown",
           "children": [{
-            "label": "Buttons and Links",
-            "value": "elements.buttons"
-          }, {
             "label": "Charts",
-            "value": "graphs.page"
-          }, {
-            "label": "Containers",
-            "value": "elements.containers.page"
-          }, {
+            "value": "charts.page"
+          },{
             "label": "Help Prompts",
             "value": "help"
           }, {
-            "label": "Modals & Popovers",
-            "value": "elements.popovers",
-            "className": "popovers"
-          }, {
             "label": "Tables",
-            "value": "tables.datatable.page"
+            "value": "tables.page"
           }, {
-            "label": "UI Controls",
-            "value": "elements.uicontrols"
+            "label": "Modals",
+            "value": "modals"
           }, {
-            "label": "User Feedback",
-            "value": "feedback.page"
-          }]
+            "label": "Popovers",
+            "value": "popovers"
+          },{
+            "label": "Input Fields",
+            "value": "inputs"
+          }, {
+            "label": "Dropdowns",
+            "value": "dropdowns"
+          }, {
+            "label": "Checkboxes",
+            "value": "checkboxes"
+          }, {
+            "label": "Radio Buttons",
+            "value": "radiobuttons"
+          }, {
+            "label": "Switches",
+            "value": "switches"
+          }, {
+            "label": "Steppers",
+            "value": "steppers"
+          } , {
+            "label": "Date Pickers",
+            "value": "datepickers"
+          }, {
+            "label": "Cards/Panels",
+            "value": "cards"
+          }, {
+            "label": "Tabs",
+            "value": "tabs"
+          }, {
+            "label": "Accordions",
+            "value": "accordions"
+          }, {
+            "label": "Miller Columns",
+            "value": "miller"
+          }, {
+            "label": "Widgets",
+            "value": "widgets"
+          }, {
+            "label": "Gallery",
+            "value": "gallery"
+          }, {
+            "label": "Buttons",
+            "value": "buttons"
+          }, {
+            "label": "Breadcrumbs",
+            "value": "breadcrumbs"
+          }, {
+            "label": "Tiles",
+            "value": "tiles"
+          }, {
+            "label": "Alerts",
+            "value": "alerts"
+          }, {
+            "label": "Toastrs",
+            "value": "toastrs"
+          }, {
+            "label": "Badges",
+            "value": "badges"
+          }, {
+            "label": "Progress",
+            "value": "progress"
+          }
+          ]
         }, {
           "label": "Patterns",
           "value": "",
@@ -84,7 +135,7 @@
             "value": "patterns.dragdrop"
           }, {
             "label": "Error Pages",
-            "value": "patterns.errorpages"
+            "value": "errors"
           }, {
             "label": "Form Elements",
             "value": "patterns.forms"

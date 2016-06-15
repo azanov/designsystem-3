@@ -26,37 +26,29 @@
           <a href="" class="dropdown-toggle" data-target="" data-toggle="dropdown">Web</a>
           <ul class="dropdown-menu pb-animate-menu">
             <li>
-              <div class="yamm-content container">
-                <div class="row">
-                  <div class="col-xs-12">
-                    <!-- this row is just so i can do the offset -->
-                    <div class="row">
-                      <div class="col-md-6  mega-offset">
+              <div class="yamm-content">
 
-                        <div class="row">
-                          <div class="col-xs-4" ng-repeat="category in header.nav[1].Web[0].children[0].children">
-                            <p class="section-head">{{category.label}}</p>
+                <div class="yamm-flex-container">
+                  <!-- was able to lost a lot of bootstrap code by going to flexbox here -->
+                    <div class="yamm-child-column" ng-repeat="category in header.nav[1].Web[0].children[0].children">
+                      <p class="section-head">{{category.label}}</p>
 
-                            <ul class="list-unstyled menu-items">
+                      <div class="list-unstyled menu-items menu-items-two-column">
 
-                              <!-- if no sub items-->
-                              <li ng-if="!item.children" ng-repeat="item in category.children">
-                                <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
-                              </li>
-
-                              <!-- if sub items -->
-                              <span ng-if="item.children" ng-repeat="item in category.children">
-                                <li ng-repeat="item in item.children">
-                                  <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
-                                </li>
-                              </span>
-                            </ul>
-                          </div>
+                        <!-- if no sub items-->
+                        <div ng-if="!item.children" ng-repeat="item in category.children">
+                          <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
                         </div>
+
+                        <!-- if sub items -->
+                        <span ng-if="item.children" ng-repeat="item in category.children">
+                          <div ng-repeat="item in item.children ">
+                            <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
+                          </div>
+                        </span>
                       </div>
                     </div>
                   </div>
-                </div>
               </div>
             </li>
           </ul>
@@ -67,37 +59,30 @@
           <a href="" class="dropdown-toggle" data-target="" data-toggle="dropdown">Mobile</a>
           <ul class="dropdown-menu pb-animate-menu">
             <li>
-              <div class="yamm-content container">
-                <div class="row">
-                  <div class="col-xs-12">
-                    <!-- this row is just so i can do the offset -->
-                    <div class="row">
-                      <div class="col-md-6  mega-offset">
+              <div class="yamm-content ">
 
-                        <div class="row">
-                          <div class="col-xs-4" ng-repeat="category in header.nav[2].Mobile[0].children[0].children">
-                            <p class="section-head">{{category.label}}</p>
-
-                            <ul class="list-unstyled menu-items">
-
-                              <!-- if no sub items-->
-                              <li ng-if="!item.children" ng-repeat="item in category.children">
-                                <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
-                              </li>
-
-                              <!-- if sub items -->
-                              <span ng-if="item.children" ng-repeat="item in category.children">
-                                <li ng-repeat="item in item.children">
-                                  <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
-                                </li>
-                              </span>
-                            </ul>
-                          </div>
-                        </div>
+                <div class="yamm-flex-container">
+                  <div class="yamm-child-column" ng-repeat="category in header.nav[2].Mobile[0].children[0].children">
+                    <p class="section-head">{{category.label}}</p>
+                    <div class="list-unstyled menu-items menu-items-two-column">
+                      <!-- if no sub items-->
+                      <div ng-if="!item.children" ng-repeat="item in category.children">
+                        <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
                       </div>
+
+                      <!-- if sub items -->
+                      <span ng-if="item.children" ng-repeat="item in category.children">
+                        <div ng-repeat="item in item.children">
+                          <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
+                        </div>
+                      </span>
                     </div>
                   </div>
                 </div>
+
+
+
+
               </div>
             </li>
           </ul>
