@@ -5,43 +5,18 @@
 	<h3 class="modal-title">{{modal.item.name}}</h3>
 </div>
 
-<!--<div class="modal-body">
-
-	<div class="row">
-		<div class="col-xs-12">
-
-			<slick settings="modal.slickOptions.settings">
-				<div class="image-gallery-item thumbnail" ng-repeat="i in modal.item.gallery">
-						<img ng-src="modules/resources/assets/images/{{i}}" />
-				</div>
-			</slick>
-
-		</div>
-	</div>
-
-	<div class="row spacer-top-md">
-		<div class="col-xs-12">
-			<p>
-				<a ng-href="{{modal.item.url}}" target="_blank">{{modal.item.displayurl}}</a>
-			</p>
-
-			<p>{{modal.item.description}}</p>
-      
-		</div>
-	</div>
-</div>-->
-
 <div class="modal-body">
 
 	<div class="row">
 		<div class="col-xs-9">
-
 			<slick settings="modal.slickOptions.settings">
-				<div class="image-gallery-item thumbnail" ng-repeat="i in modal.item.gallery">
+				<span ng-repeat="i in modal.item.gallery">
+					<div class="image-gallery-item thumbnail" >
 						<img ng-src="modules/resources/assets/images/{{i.image}}" />
-				</div>
+					</div>
+					<p class="image-gallery-item-description">{{i.description}}</p>
+				</span>
 			</slick>
-
 		</div>
 
 		<div class="col-xs-3">
@@ -51,10 +26,7 @@
 
 			<h5>Project Overview</h5>
 			<p>{{modal.item.description}}</p>
-
-			<h5 class="spacer-top-lg">Screenshot Details</h5>
-			<p>{{modal.currentDescription}}</p>
-      
+			
 		</div>
 	</div>
 </div>
