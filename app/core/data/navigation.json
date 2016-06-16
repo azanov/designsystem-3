@@ -54,7 +54,7 @@
             "value": "help"
           }, {
             "label": "Tables",
-            "value": "tables.page"
+            "value": "tables.datatable.page"
           }, {
             "label": "Modals",
             "value": "modals"
