@@ -5,10 +5,22 @@
     $stateProvider.state('tables', {
       abstract: true,
       url: '/tables',
-      templateUrl: 'modules/tables/templates/tables.html'
+      templateUrl: 'modules/tables/templates/tables.html',
+      controller: 'TablesController as tables',
+      data: {
+        pageTitle: 'Tables',
+        access: 'public',
+        bodyClass: 'tables'
+      }
     })
 
-      .state('tables.page', {
+      .state('tables.datatable', {
+        abstract: true,
+        url: '/datatable',
+        templateUrl: 'modules/tables/templates/tables-datatable.html'
+      })
+
+      .state('tables.datatable.page', {
         url: '',
         views: {
           basic: {
@@ -21,25 +33,25 @@
             }
           },
           overview: {
-            templateUrl: 'modules/tables/templates/tables-overview.html',
+            templateUrl: 'modules/tables/templates/tables-datatable-overview.html',
             controller: 'TablesOverviewController as overview'
           },
           toolbar: {
-            templateUrl: 'modules/tables/templates/tables-toolbar.html'
+            templateUrl: 'modules/tables/templates/tables-datatable-toolbar.html'
           },
           data: {
-            templateUrl: 'modules/tables/templates/tables-data.html',
+            templateUrl: 'modules/tables/templates/tables-datatable-data.html',
             controller: 'TablesDataController as data'
           },
           tabbed: {
-            templateUrl: 'modules/tables/templates/tables-tabbed.html'
+            templateUrl: 'modules/tables/templates/tables-datatable-tabbed.html'
           }
         }
       })
 
       .state('tables.paging', {
         url: '/datatable/paging',
-        templateUrl: 'modules/tables/templates/tables-popup-paging.html',
+        templateUrl: 'modules/tables/templates/tables-datatable-popup-paging.html',
         controller: 'TablesDatatableController as datatable',
         resolve: {
           PeopleResolve: function ($log, MockDataFactory) {
@@ -49,13 +61,13 @@
         data: {
           pageTitle: 'Paging',
           access: 'public',
-          bodyClass: 'tables'
+          bodyClass: 'tables fullscreen'
         }
       })
 
       .state('tables.infiniteScroll', {
         url: '/datatable/infiniteScroll',
-        templateUrl: 'modules/tables/templates/tables-popup-infinite-scroll.html',
+        templateUrl: 'modules/tables/templates/tables-datatable-popup-infinite-scroll.html',
         controller: 'TablesDatatableInfiniteScrollController as datatable',
         resolve: {
           PeopleResolve: function ($log, MockDataFactory) {
@@ -65,29 +77,29 @@
         data: {
           pageTitle: 'Infinite Scroll',
           access: 'public',
-          bodyClass: 'tables infinite-scroll'
+          bodyClass: 'tables fullscreen'
         }
       })
 
-      // .state('tables.datatablesnet', {
-      //   url: '/datatablesnet',
-      //   templateUrl: 'modules/tables/templates/tables-datatables.net.html',
-      //   controller: 'TablesDatatablesNetController as datatablesnet',
-      //   resolve: {
-      //     PeopleResolve: function ($log, MockDataFactory) {
-      //       return MockDataFactory.query({filename: 'ds_users'})
-      //     }
-      //   },
-      //   data: {
-      //     pageTitle: 'Datatables.net',
-      //     access: 'public',
-      //     bodyClass: 'tables fullscreen'
-      //   }
-      // })
+      .state('tables.datatablesnet', {
+        url: '/datatablesnet',
+        templateUrl: 'modules/tables/templates/tables-datatables.net.html',
+        controller: 'TablesDatatablesNetController as datatablesnet',
+        resolve: {
+          PeopleResolve: function ($log, MockDataFactory) {
+            return MockDataFactory.query({filename: 'ds_users'});
+          }
+        },
+        data: {
+          pageTitle: 'Datatables.net',
+          access: 'public',
+          bodyClass: 'tables fullscreen'
+        }
+      })
 
       .state('tables.facetedsearch', {
         url: '/facetedsearch',
-        templateUrl: 'modules/tables/templates/tables-popup-faceted-search.html',
+        templateUrl: 'modules/tables/templates/tables-faceted-search.html',
         controller: 'TablesFacetedSearchController as faceted',
         resolve: {
           PeopleResolve: function ($log, MockDataFactory) {
