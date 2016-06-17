@@ -6,7 +6,7 @@
       url: '/toastrs',
       templateUrl: 'modules/toastrs/toastrs.html',
       // abstract: true,
-      controller: 'ToastrsController as toastrs',
+      controller: 'ToastrsController as toastr',
       data: {
         pageTitle: 'Toastrs'
       }

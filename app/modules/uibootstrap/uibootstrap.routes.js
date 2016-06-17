@@ -6,7 +6,7 @@
       url: '/uibootstrap',
       templateUrl: 'modules/uibootstrap/uibootstrap.html',
       // abstract: true,
-      controller: 'uiBootstrapController as uibootstrap',
+      controller: 'uiBootstrapController as uibs',
       data: {
         pageTitle: 'Angular Ui Bootstrap'
       }
