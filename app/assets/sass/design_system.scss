@@ -17,13 +17,13 @@
 @import 'base/fonts';
 @import 'base/pbfont';
 @import 'base/typography';
-@import 'fontawesome/font-awesome';
 @import 'nucleo_mini/nucleo-mini';
 @import 'nucleo_outline/nucleo-outline';
 @import 'base/helpers';
 @import 'base/pb-nucleo-extras';
 @import 'base/forms';
 @import 'base/form-controls';
+@import 'base/slick';
 
 // Legacy
 // Items removed from the DS but which we do not want to break if in use
@@ -46,8 +46,6 @@
 
 // Modules
 // ========================================
-// @import '../../../bower_components/slick-carousel/slick/slick';
-
 @import '../../modules/widgets/assets/sass/widgets';
 @import '../../modules/alerts/assets/sass/alerts';
 
@@ -67,8 +65,6 @@
 
 @import '../../modules/progress/assets/sass/progress';
 @import '../../modules/progress/assets/sass/loading-bar';
-
-
 
 @import '../../modules/buttons/assets/sass/buttons';
 
