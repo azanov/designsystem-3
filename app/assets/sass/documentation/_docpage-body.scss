@@ -43,3 +43,31 @@
     cursor: default;
   }
 }
+
+.pb-demo {
+  .pb-demo-image {
+    margin: 15px 0;
+  }
+  .pb-demo-wrapper {
+    position: relative;
+    display: block;
+    background: black;
+    cursor: pointer;
+
+    &:after {
+      content: 'View Demo';
+      position: absolute;
+      font-family: $font-family-sans-serif;
+      color: white;
+      //TODO: think about other approach to center text
+      left: calc(50% - 42px);
+      top: calc(50% - 16px);
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .pb-demo-image {
+      opacity: 0.3;
+    }
+  }
+}
