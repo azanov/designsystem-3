@@ -9,7 +9,7 @@ var reload = browserSync.reload;
 var replace = require('gulp-replace');
 var rev = require('gulp-rev');
 var runSequence = require('run-sequence');
-var sass = require('gulp-ruby-sass');
+var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var usemin = require('gulp-usemin');
@@ -26,37 +26,46 @@ var banner = ['/**',
   ''
 ].join('\n');
 
+var sassFiles = './app/assets/sass/**/*.{scss,sass}';
+var cssFiles = './app/assets/css';
+var sassOptions = {
+  errLogToConsole: true,
+  outputStyle: 'compact'
+};
+var sassDistOptions = {
+  errLogToConsole: true,
+  outputStyle: 'compressed'
+};
+var autoprefixerOptions = {
+  browsers: ['last 2 versions']
+};
+
 // clean dist folder
 gulp.task('clean:dist', function (cb) {
   return del(['./build', './dist'], cb);
 });
 
 gulp.task('sass', function () {
-  return sass('./app/assets/sass/**/*', { sourcemap: true })
-    .on('error', sass.logError)
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions']
-    }))
-    // For inline sourcemaps
+  return gulp
+    .src(sassFiles)
+    .pipe(sourcemaps.init())
+    .pipe(sass(sassOptions).on('error', sass.logError))
+    .pipe(autoprefixer(autoprefixerOptions))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./app/assets/css'))
+    .pipe(gulp.dest(cssFiles))
     .pipe(browserSync.stream());
 });
 
 gulp.task('sass-dist', function () {
   var cssfilter = filter('design_system.css', {restore: true});
-
-  return sass('./app/assets/sass/**/*', { sourcemap: false, style: 'condensed' })
-    .on('error', sass.logError)
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions']
-    }))
-    // .pipe(cssnano ())
+  return gulp
+    .src(sassFiles)
+    .pipe(sass(sassDistOptions).on('error', sass.logError))
+    .pipe(autoprefixer(autoprefixerOptions))
     .pipe(header(banner, { pkg: pkg }))
     .pipe(gulp.dest('./app/assets/css'))
     .pipe(cssfilter)
     .pipe(gulp.dest('./dist/css')
-
   );
 });
 
