@@ -11,18 +11,11 @@
         sref: '@'
       },
       link: function postLink (scope, element, attrs) {
-        var wrapperClass = 'pb-demo-wrapper';
-        var wrapper = $compile('<a target=\'{{target}}\' ui-sref=\'{{sref}}\' class='+ wrapperClass +'></a>')(scope);
-        scope.triggerOverflow = triggerOverflow;
+        var wrapper = $compile('<a target=\'{{target}}\' ui-sref=\'{{sref}}\'></a>')(scope);
 
-        function triggerOverflow($event) {
-          var target = $($event.currentTarget);
-          if (target.parent('.' + wrapperClass).length) {
-            target.unwrap(wrapper);
-          } else {
-            target.wrap(wrapper);
-          }
-        }
+        var imageElement = element.find('.pb-demo-image-wrapper');
+
+        imageElement.wrap(wrapper);
       }
 
     };

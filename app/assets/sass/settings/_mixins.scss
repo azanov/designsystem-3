@@ -250,11 +250,20 @@ $grid-column-padding: 15px;
   // outline-color: hsla(190, 58%, 79%, .6);
   outline: none;
   box-shadow: 0 0 10px rgba(76, 211, 255, 0.77);
-  
+
 }
 
 @mixin webkit-only {
   @media (-webkit-min-device-pixel-ratio:0) {
     @content;
   }
+}
+
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
 }

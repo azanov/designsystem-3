@@ -45,29 +45,38 @@
 }
 
 .pb-demo {
-  .pb-demo-image {
+  .pb-demo-image-wrapper {
     margin: 15px 0;
-  }
-  .pb-demo-wrapper {
     position: relative;
-    display: block;
-    background: black;
-    cursor: pointer;
+    display: inline-block;
+    background-color: $close-color;
 
-    &:after {
-      content: 'View Demo';
-      position: absolute;
-      font-family: $font-family-sans-serif;
-      color: white;
-      //TODO: think about other approach to center text
-      left: calc(50% - 42px);
-      top: calc(50% - 16px);
-      font-size: 16px;
-      font-weight: bold;
+    img {
+      border: 1px solid $pb-gray;
+      transition: opacity .2s;
+      opacity: 1;
     }
 
-    .pb-demo-image {
-      opacity: 0.3;
+    &:before {
+      content: 'View Demo';
+      font-size: 18px;
+      display: block;
+      color: $close-color;
+      @include vertical-align(absolute);
+      background-color: $pre-border-color;
+      padding: 6px 12px;
+      border-radius: 24px;
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+      img {
+        opacity: .2;
+      }
     }
   }
 }
