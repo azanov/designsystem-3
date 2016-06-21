@@ -20,7 +20,7 @@
         };
 
         scope.initCodeMirror = function (index, mode, opt) {
-          var includeElement = element.find('ng-include').eq(index);
+          var includeElement = element.find('.include-wrapper').eq(index).find('ng-include');
           var options = opt || {};
           var text = includeElement.text();
           var codemirrorOptions = angular.extend(
@@ -47,9 +47,7 @@
 
           codemirror.setSize(null, codemirrorLinesElement.height() + paddingTop + paddingBottom);
         }
-
       }
-
     };
   });
 })();
