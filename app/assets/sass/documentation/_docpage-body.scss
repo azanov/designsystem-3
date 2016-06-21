@@ -30,6 +30,14 @@
     background-color: $pb-light-gray;
   }
 
+  .CodeMirror-lines {
+    padding: 20px 0;
+  }
+
+  .CodeMirror-line {
+    padding: 0 20px;
+  }
+
   .tab-content > .tab-pane {
     padding: 0;
     visibility: hidden;
