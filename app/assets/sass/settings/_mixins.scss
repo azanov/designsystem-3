@@ -254,7 +254,7 @@ $grid-column-padding: 15px;
 }
 
 @mixin webkit-only {
-  @media (-webkit-min-device-pixel-ratio:0) {
+  @media (-webkit-min-device-pixel-ratio: 0) {
     @content;
   }
 }
