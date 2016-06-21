@@ -56,8 +56,8 @@
 }
 
 .pb-demo {
-  .pb-demo-image-wrapper {
-    margin: 15px 0;
+  .pb-demo-image a {
+    margin-top: 15px;
     position: relative;
     display: inline-block;
     background-color: $close-color;
