@@ -59,7 +59,8 @@
     "codemirror": "~5.15.2"
   },
   "resolutions": {
-    "angular": "1.4.9"
+    "angular": "1.4.9",
+    "slick-carousel": "~1.6.0"
   },
   "devDependencies": {}
 }
