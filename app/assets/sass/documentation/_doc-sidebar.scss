@@ -14,32 +14,39 @@
     top: 20px;
   }
 
+  &.affix-bottom {
+    @media (min-width: 768px) { width: 95px; }
+    @media (min-width: 992px) { width: 132px; }
+    @media (min-width: 1200px) { width: 165px; }
+    position: absolute;
+  }
 
-  li {
-    font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif;
-    font-weight: normal;
-
+  h3 {
+    padding: 15px 10px;
+    margin: 0;
     a {
-      font-size: 18px;
+      text-decoration: none;
       color: #2e2e2e;
     }
+    &.active {
+      background-color: #c5cbe3;
+      border-color: #c5cbe3;
+      color: #2e2e2e;
 
-    .nav {
-      a {
-        font-size: 16px;
-        color: #555;
-        padding-left: 30px;
-        &:hover {
-          color: #2e2e2e;
-          background-color: #eaedf8;
-        }
+      & ~ .list-group {
+        display: block;
       }
     }
 
-    &.active > a {
-      background-color: #c5cbe3;
-      color: #2e2e2e;
-    }
 
   }
+
+  .list-group {
+    display: none;
+  }
+
+  .list-group-visible {
+    display: block;
+  }
+
 }
