@@ -5,6 +5,29 @@
     var _this = this;
     _this.data = GalleryResolve;
 
+    _this.filters = null;
+    _this.rankers = null;
+
+    // Update the filters array based on the given filter $param filter: the name of a tab like 'work'
+    _this.filter = function (filter) {
+      if (filter) {
+        _this.filters = [[['tabs', 'contains', filter]]];
+      } else {
+        _this.filters = null;
+      }
+      
+    };
+
+    // Update the rankers array based on the given ranker $param ranker: the name of a card's property or a custom function 
+    _this.orderBy = function (ranker) {
+      if (ranker) {
+        _this.rankers = [[ranker, 'desc']];
+      } else {
+        _this.rankers = null;
+      }
+      
+    };
+
     _this.open = function (item) {
       $uibModal.open({
         templateUrl: 'modules/resources/templates/gallery-modal.html',
@@ -20,42 +43,3 @@
     };
   });
 })();
-
-
-
-/*
-(function() {
-
-	'use strict';
-
-	angular.module('pb.ds.home').controller('HomeController',
-			function($log, MockData, $uibModal, $window) {
-				var _this = this;
-				_this.data = MockData;
-        
-        _this.open = function(item) {
-          $uibModal.open({
-            templateUrl: 'modules/home/templates/modal.html',
-            controller: 'ModalController as modal',
-            size: 'lg',
-            resolve: {
-              itemResolve: function() {
-                return item;
-              }
-            }
-          }); 
-        };
-        
-        _this.openLink = function(obj, event) {
-          event.stopPropagation();
-          event.preventDefault();
-          
-          console.log(obj);
-          
-          $window.open(obj.url, '_blank');
-        }
-        
-			});
-
-})();
-*/

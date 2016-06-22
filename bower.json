@@ -14,7 +14,6 @@
     "angular-dynamic-locale": "0.1.32",
     "angular-highlightjs": "0.5.1",
     "angular-i18n": "1.4.12",
-    "angular-isotope": "0.1.14",
     "angular-loading-bar": "0.9.0",
     "angular-moment": "0.10.3",
     "angular-morris-chart": "1.2.0",
@@ -53,7 +52,8 @@
     "selectize": "0.12.1",
     "ui-router": "0.2.18",
     "ui-select": "angular-ui-select#^0.18.0",
-    "yamm3": "1.1.0"
+    "yamm3": "1.1.0",
+    "angular-dynamic-layout": "^0.1.11"
   },
   "resolutions": {
     "angular": "1.4.12",

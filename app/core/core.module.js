@@ -31,6 +31,6 @@
     'ngFileUpload',
     angularDragula(angular),
     'pb.ds.components',
-    'iso'
+    'dynamicLayout'
   ]);
 })();

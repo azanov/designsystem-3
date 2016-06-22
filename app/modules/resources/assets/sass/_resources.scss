@@ -12,6 +12,52 @@
     height: 250px;
   }
 
+
+
+.dynamic-layout-item-parent {
+  position: relative !important;
+}
+
+// .dynamic-layout-item {
+//   padding: 10px;
+// }
+
+.move-items-animation{
+  transition-property: left, top;
+  transition-duration: .5s;
+  transition-timing-function: ease-in-out;
+}
+
+.dynamic-layout-item-parent.ng-enter{
+  transition: .5s ease-in-out;
+  opacity:0;
+}
+.dynamic-layout-item-parent.ng-enter.ng-enter-active{
+  opacity:1;
+}
+.dynamic-layout-item-parent.ng-leave{
+  transition: .5s ease-in-out;
+  opacity:1;
+}
+.dynamic-layout-item-parent.ng-leave.ng-leave-active{
+  opacity:0;
+}
+
+[dynamic-layout]{
+  //float: left;
+  position: relative;
+}
+// .container-fluid{
+//   position: absolute;
+//   left: 50%;
+//   transform: translate(-50%);
+// }
+// .title{
+//   margin-bottom: 50px;
+// }
+
+
+
   /* FULLSCREEN MODAL */
 
   $modal: 100%;

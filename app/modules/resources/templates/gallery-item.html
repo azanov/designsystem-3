@@ -1,0 +1,11 @@
+<div class="col-xs-12 col-sm-4 col-md-6 clearfix">
+  <div class="panel panel-default category-widget" ng-click="externalScope().gallery.open(it)">
+    <div class="panel-body">
+      <a href="" class="productDetail" ng-style="{'background-image': 'url(modules/resources/assets/images/{{it.thumbnail}})'}"></a>
+    </div>
+
+    <div class="panel-footer clearfix">
+      <h4 class="category-widget-title pull-left">{{it.name}}</h4> <span class="badge badge-gray-text pull-right">DS v{{it.version}}</span>
+    </div>
+  </div>
+</div>

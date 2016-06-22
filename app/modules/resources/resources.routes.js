@@ -30,7 +30,7 @@
         controller: 'ResourcesGalleryController as gallery',
         resolve: {
           GalleryResolve: function ($log, MockDataFactory) {
-            return MockDataFactory.query({filename: 'gallery'});
+            return MockDataFactory.query({filename: 'gallery-2'});
           }
         }
       })
