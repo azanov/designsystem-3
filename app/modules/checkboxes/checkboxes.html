@@ -16,28 +16,30 @@
 <div class="container">
   <!-- TODO: create sidebar directive -->
   <div class="row">
-    <div class="col-md-2 doc-body-sidebar">
-      <div class="list-group-section">
-          <h3>
-            <a ui-sref="checkboxes({'#':'overview'})">Overview</a>
-          </h3>
-      </div>
-
-      <div class="list-group-section">
-          <h3>
-            <a ui-sref="checkboxes({'#':'stacked'})">Stacked Checkboxes</a>
-          </h3>
-          <div class="list-group">
-            <a ui-sref="checkboxes({'#':'enhancedStacked'})" class="list-group-item">Enhanced Stacked Checkboxes</a>
-            <a ui-sref="checkboxes({'#':'osEnhancedStacked'})" class="list-group-item">Standard OS Stacked Checkboxes</a>
-          </div>
-      </div>
-
-      <div class="list-group-section">
-          <h3>
-            <a ui-sref="checkboxes({'#':'inline'})">Inline Checkboxes</a>
-          </h3>
-      </div>
+    <div class="col-md-2">
+      <pb-sidebar class="doc-body-sidebar">
+        <nav>
+          <ul class="nav">
+            <li du-scrollspy="overview">
+              <a du-smooth-scroll="overview" ui-sref="checkboxes({'#':'overview'})">Overview</a>
+            </li>
+            <li du-scrollspy="stacked">
+              <a du-smooth-scroll="stacked" ui-sref="checkboxes({'#':'stacked'})">Stacked Checkboxes</a>
+              <ul class="nav">
+                <li du-scrollspy="enhancedStacked">
+                  <a du-smooth-scroll="enhancedStacked">Enhanced Stacked Checkboxes</a>
+                </li>
+                <li du-scrollspy="osEnhancedStacked">
+                  <a du-smooth-scroll="osEnhancedStacked">Standard OS Stacked Checkboxes</a>
+                </li>
+              </ul>
+            </li>
+            <li du-scrollspy="inline">
+              <a du-smooth-scroll="inline" ui-sref="checkboxes({'#':'inline'})">Inline Checkboxes</a>
+            </li>
+          </ul>
+        </nav>
+      </pb-sidebar>
     </div>
 
     <div class="col-md-10">

@@ -1,0 +1,45 @@
+.doc-body-sidebar {
+  margin-top: 60px;
+  display: none;
+
+  @media (min-width: 960px) {
+    display: block;
+  }
+
+  &.affix {
+    @media (min-width: 768px) { width: 95px; }
+    @media (min-width: 992px) { width: 132px; }
+    @media (min-width: 1200px) { width: 165px; }
+
+    top: 20px;
+  }
+
+
+  li {
+    font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif;
+    font-weight: normal;
+
+    a {
+      font-size: 18px;
+      color: #2e2e2e;
+    }
+
+    .nav {
+      a {
+        font-size: 16px;
+        color: #555;
+        padding-left: 30px;
+        &:hover {
+          color: #2e2e2e;
+          background-color: #eaedf8;
+        }
+      }
+    }
+
+    &.active > a {
+      background-color: #c5cbe3;
+      color: #2e2e2e;
+    }
+
+  }
+}

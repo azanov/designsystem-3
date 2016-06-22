@@ -2,7 +2,7 @@
  * DesignSystem - 
  * @version v2.8.0
  * @link http://guxstaging.pbi.global.pvt/design_system
- * Built Tue Jun 07 2016 15:11:10 GMT-0400 (EDT) 
+ * Built Wed Jun 22 2016 16:43:32 GMT+0300 (EEST) 
  */
 @charset "UTF-8";
 #header, header, .signin, .landing .bg {
@@ -13894,7 +13894,7 @@ div.accordion-group .panel.active .panel-title:before, div.accordion-group .pane
 .badge-gray-dark {
   background-color: #2e2e2e; }
 .badge-gray-dark:hover {
-  background-color: #151515; }
+  background-color: #141414; }
 
 .badge-brand-success {
   background-color: #00a740; }
