@@ -1,0 +1,63 @@
+
+.resources {
+  .panel-download {
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    color: #fff;
+    text-align: center;
+    min-height: 425px;
+    transition: all .3s ease-in-out;
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+    .panel-content {
+      margin-top: 60px;
+    }
+
+    &.bg-pb-gray-500 {
+      .panel-content {
+        margin-top: 40px;
+      }
+    }
+
+    .icon {
+      height: 72px;
+    }
+
+    ul {
+      li {
+        margin-bottom: 8px;
+      }
+    }
+    a {
+      color: #fff;
+      font-weight: 200;
+
+      &:hover {
+        color: #fff;
+        //text-decoration: none;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 11px 20px -5px rgba(0, 0, 0, .5);
+      transition: all .3s ease-in-out;
+    }
+
+    &.illustrator {
+      background-color: #da1f26;
+    }
+  }
+
+  hr {
+    width: 50%;
+    &.web {
+      border-color: $pb-purple-300;
+    }
+    &.ios {
+      border-color: $pb-gray-400;
+    }
+  }
+}

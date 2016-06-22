@@ -56,7 +56,8 @@
   },
   "resolutions": {
     "angular": "1.4.12",
-    "moment": ">=2.8.0 <2.11.0"
+    "moment": ">=2.8.0 <2.11.0",
+    "slick-carousel": "~1.6.0"
   },
   "devDependencies": {}
 }
