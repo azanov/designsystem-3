@@ -39,6 +39,9 @@
             }, {
               "label": "Angular Directives",
               "value": "foundation.directives"
+            }, {
+              "label": "Animation Samples",
+              "value": "animation.page"
             }
 
           ]
