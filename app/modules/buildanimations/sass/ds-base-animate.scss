@@ -1,0 +1,287 @@
+//This file hold all of the "Out of the Box" Animations that DS would provide
+
+
+//** Adding in cases discussed in animation meetings **//
+//*********BUTTONS & LINKS******//
+link, a {
+  transition: color linear $very-fast;
+  &.link-fancy {
+    text-decoration: none;
+    box-shadow: 0 9px 0 -7px transparent, 0 9px 0 -7px transparent;
+    transition: box-shadow $lightning linear;
+    &:hover {
+      box-shadow: -7px 9px 0 -7px $link-hover, 7px 9px 0 -7px $link-hover;
+    }
+  }
+}
+
+.btn {
+  //Add small fades on all btn bg color changes
+  transition: background-color $very-fast linear;
+  //rebuilding pb-fade class directly in button
+  @include pb-animate('fadeOut', $very-fast, 'linear');
+	@include pb-animate('fadeIn', $very-fast, 'linear');
+}
+.btn-primary:not(.disabled):not([disabled]) {
+  //animation that fires when a primary button goes from VISIBLE to HIDDEN
+  @include pb-animate('fadeOut', $very-fast, 'linear');
+  //animation that fires when a primary button goes from HIDDEN to VISIBLE
+  @extend .pb-bounceIn;
+}
+.btn-primary:not(.disabled):not([disabled]):not(.ng-hide) {
+  //need to build this animation from ground up
+  //this animation doesn't get queued by pb-animate, so the namespacing around
+  //our pb- animations prevents this from working
+  @extend %pb-animation-base;
+  animation-name: bounceIn;
+}
+
+
+//*********INPUTS******//
+//TODO: Find this in the original design system and figure out where to put it
+//TODO: Make sure this works with selectize inputs
+.form-control {
+  transition: border-color $very-fast linear, box-shadow $very-fast linear $lightning;
+  box-shadow: none;  //overrides inline box-shadow which makes the transition feel wrong
+}
+.ats-switch {
+  transition: border-color $very-fast linear, box-shadow $very-fast linear $lightning;
+}
+
+//Handle focus states for checkboxes & radios
+.control input ~ .control-indicator {
+  transition: box-shadow $lightning linear;
+}
+.control input:focus ~ .control-indicator {
+  transition: box-shadow $lightning linear $very-fast;
+}
+
+// radio pop animation
+.radio input ~ .control-indicator {
+  background-image: none;
+  &:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50px;
+    display: block;
+    position: absolute;
+    background-color: $pb-blue;
+    top: calc(50% - 4px);
+    left: calc(50% - 4px);
+    backface-visibility: visible;
+    transform: scale3d(0, 0, 0);
+    transition: transform $lightning linear;
+  }
+}
+//radio when checked
+.radio input:checked ~ .control-indicator {
+  background-image: none;
+  &:after {
+    transition-timing-function: $pop;
+    transition-duration: $fast;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+// checkbox animation
+.checkbox input ~ .control-indicator {
+  background-image: none;
+  //removing background image here because I don't want to directly animate background sizes
+  &:after {
+    content: '';
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgOSA4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik03LjIyMSAwbC0uNzkuNzktMy4xNTkgMy4xNTktLjkwMy0uOTAzLS43OS0uNzktMS41NzkgMS41NzkuNzkuNzkgMS42OTIgMS42OTIuNzkuNzkuNzktLjc5IDMuOTQ5LTMuOTQ5Ljc5LS43OS0xLjU3OS0xLjU3OXoiIGZpbGw9IiMzRTUzQTQiLz48L3N2Zz4=");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: calc(50% - 4px);
+    left: calc(50% - 4px);
+    backface-visibility: visible;
+    transform: scale3d(0, 0, 0);
+    transition: transform $lightning linear;
+  }
+}
+//radio when checked
+.checkbox input:checked ~ .control-indicator {
+  background-image: none;
+  &:after {
+    transition-timing-function: linear;
+    transition-duration: $very-fast;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+//*********DROPDOWN MENU********//
+//dropdown menus that start with "pb" & contain "stagger"
+.dropdown-menu:not(.pb-animate-menu) {
+  //TODO: Need to discuss this with Dan & Steve
+  //There's a display: block; attribute on this from bootstrap which shows & hides this
+  //This is great when there's no animations, but I can't animate display properties, and I can't
+  //make opacity work without it being a default display block
+  //the following is an attempt to safely handle this
+  display: block;
+  pointer-events: none;
+  //**************//
+  opacity: 0;
+  animation: fadeOut $very-fast linear forwards;
+  // a { //to transition highlighted list items
+  //   transition: background-color $very-fast linear;
+  // }
+  // &[class*="pb-forwardStagger"] li {
+  //   opacity: 0;
+  // }
+
+}
+.open > .dropdown-menu:not(.pb-animate-menu) {
+  pointer-events: auto;
+  animation: fadeInDownMini $very-fast ease-out forwards;
+  // &[class*="pb-forwardStagger"] li {
+  //   //forcing this to include pb forward stagger so this only affects
+  //   //staggered input - the effect would be odd otherwise
+  //   animation-name: slideInRightSmall;
+  //   animation-duration: $very-fast;
+  //   animation-timing-function: ease-out;
+  //   animation-fill-mode: forwards;
+  //   //so we don't end up animating this along with our menu items
+  //   &.divider {
+  //     animation-name: fadeIn;
+  //   }
+  // }
+}
+
+
+//*********TILES/CONTAINERS********//
+//make tiles bounce up on hover and then shrink down once hover is removed
+
+.tile, .tile-button {
+  background-color: #fff; //need this so tiles in a row don't overlap one another
+  @extend .pb-scaleDown;
+  &:hover {
+    //override backshadow - need to do this so scaling is optimized
+    box-shadow: none;
+    z-index: 100;
+    @extend .pb-scaleUpPop;
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity $medium linear;
+  }
+  &:hover:after {
+    opacity: 1;
+    transition-duration: $very-fast;
+  }
+}
+
+
+//*********POPOVERS/TOOLTIPS********//
+
+//Popovers
+//seleect all popovers except for those with the custom attribute "popover trigger" that's equal to "mouseenter"
+//added unprefixed regular "popover" style so this is backwards compatible
+[uib-popover]:not([popover-trigger="mouseenter"]) + [uib-popover-popup],
+[popover]:not([popover-trigger="mouseenter"]) + [popover-popup] {
+    @extend .pb-pop;
+    //need to set fill mode back to initial so original fade transition supplied by bootstrap can take affect on the animation out
+    animation-fill-mode: initial;
+}
+
+//Hover Top, radiating out from button
+[uib-popover][popover-trigger="mouseenter"] + [uib-popover-popup],
+[popover][popover-trigger="mouseenter"] + [popover-popup],
+[uib-tooltip] + [uib-tooltip-popup],  //don't need to call out mouseenter since it's default behavior for tooltip
+[tooltip] + [tooltip-popup] {
+    transform: translate3d(0, 10px, 0);
+    transition: transform $very-fast linear, opacity $lightning linear;
+    &.in {
+      transform: translate3d(0, 0, 0);
+    }
+    //FIXME: Need either a method to handle all potential directions or different CSS rules
+}
+//Hover right, radiating out from button
+[uib-popover][popover-trigger="mouseenter"][popover-placement="right"] + [uib-popover-popup],
+[popover][popover-trigger="mouseenter"][popover-placement="right"] + [popover-popup],
+[uib-tooltip][tooltip-placement="right"] + [uib-tooltip-popup],  //don't need to call out mouseenter since it's default behavior
+[tooltip][tooltip-placement="right"] + [tooltip-popup]
+ {
+    transform: translate3d(-10px, 0, 0);
+    &.in {
+      transform: translate3d(0, 0, 0);
+    }
+}
+//Hover bottom, radiating out from button
+[uib-popover][popover-trigger="mouseenter"][popover-placement="bottom"] + [uib-popover-popup],
+[popover][popover-trigger="mouseenter"][popover-placement="bottom"] + [popover-popup],
+[uib-tooltip][tooltip-placement="bottom"] + [uib-tooltip-popup],  //don't need to call out mouseenter since it's default behavior
+[tooltip][tooltip-placement="bottom"] + [tooltip-popup] {
+    transform: translate3d(0, -10px, 0);
+    &.in {
+      transform: translate3d(0, 0, 0);
+    }
+}
+//Hover left, radiating out from button
+.magnet[uib-popover][popover-trigger="mouseenter"][popover-placement="left"] + [uib-popover-popup],
+.magnet[popover][popover-trigger="mouseenter"][popover-placement="left"] + [popover-popup],
+.magnet[uib-tooltip][tooltip-placement="left"] + [uib-tooltip-popup],
+.magnet[tooltip][tooltip-placement="left"] + [tooltip-popup] {
+    transform: translate3d(10px, 0, 0);
+    &.in {
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+
+//***SECOND TOOTLIP/POPOVER OPTON***//
+
+.magnet[uib-popover][popover-trigger="mouseenter"] + [uib-popover-popup],
+.magnet[popover][popover-trigger="mouseenter"] + [popover-popup],
+.magnet[uib-tooltip] + [uib-tooltip-popup],
+.magnet[tooltip] + [tooltip-popup] {
+    transform: translate3d(0, -10px, 0);
+    transition: transform $very-fast linear, opacity $lightning linear;
+    &.in {
+      transform: translate3d(0, 0, 0);
+    }
+}
+//Hover right, pulling in towards button
+.magnet[uib-popover][popover-trigger="mouseenter"][popover-placement="right"] + [uib-popover-popup],
+.magnet[popover][popover-trigger="mouseenter"][popover-placement="right"] + [popover-popup],
+.magnet[uib-tooltip][tooltip-placement="right"] + [uib-tooltip-popup],
+.magnet[tooltip][tooltip-placement="right"] + [tooltip-popup] {
+    transform: translate3d(10px, 0, 0);
+    &.in {
+      transform: translate3d(0, 0, 0);
+    }
+}
+//Hover bottom, pulling in towards button
+.magnet[uib-popover][popover-trigger="mouseenter"][popover-placement="bottom"] + [uib-popover-popup],
+.magnet[popover][popover-trigger="mouseenter"][popover-placement="bottom"] + [popover-popup],
+.magnet[uib-tooltip][tooltip-placement="bottom"] + [uib-tooltip-popup],
+.magnet[tooltip][tooltip-placement="bottom"] + [tooltip-popup]  {
+    transform: translate3d(0, 10px, 0);
+    &.in {
+      transform: translate3d(0, 0, 0);
+    }
+}
+//Hover left, pulling in towards button
+.magnet[uib-popover][popover-trigger="mouseenter"][popover-placement="left"] + [uib-popover-popup],
+.magnet[popover][popover-trigger="mouseenter"][popover-placement="left"] + [popover-popup],
+.magnet[uib-tooltip][tooltip-placement="left"] + [uib-tooltip-popup],
+.magnet[tooltip][tooltip-placement="left"] + [tooltip-popup] {
+    transform: translate3d(-10px, 0, 0);
+    &.in {
+      transform: translate3d(0, 0, 0);
+    }
+}

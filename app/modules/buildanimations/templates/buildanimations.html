@@ -1,0 +1,34 @@
+<div class="doc-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero-header">
+          <!-- <div class="eyebrow">Product Framework/ Responsive Web / Patterns</div> -->
+          <h1>PB-Animate</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-unstyled list-inline jump-menu">
+            <li><a ui-sref="buildanimatons.page({'#':'overview'})">Overview</a></li>
+            <li><a ui-sref="buildanimatons.page({'#':'sandbox'})">Sandbox</a></li>
+            <li><a ui-sref="buildanimatons.page({'#':'queue'})">Exit & Entrances</a></li>
+            <li><a ui-sref="buildanimatons.page({'#':'stagger'})">Staggered Animations</a></li>
+            <li><a ui-sref="buildanimatons.page({'#':'base'})">Base Animations</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div ui-view="overview"></div>
+<div ui-view="sandbox"></div>
+<div ui-view="queue"></div>
+<div ui-view="stagger"></div>
+<div ui-view="base"></div>

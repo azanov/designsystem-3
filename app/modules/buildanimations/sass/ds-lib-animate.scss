@@ -1,0 +1,237 @@
+@import "keyframes/accent";
+@import "keyframes/entrances";
+@import "keyframes/exits";
+
+@import "settings/timings";
+@import "settings/mixins";
+
+
+//General class names
+.pb-infinite {
+  animation-iteration-count: infinite;
+}
+
+%pb-animation-base {
+  animation-duration: $medium;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+
+
+//******** Accent animation names *********//
+
+.pb-bounce {
+  @extend %pb-animation-base;
+  animation-name: bounce;
+  transform-origin: center bottom;
+}
+
+.pb-flash {
+  @extend %pb-animation-base;
+  animation-name: flash;
+}
+
+.pb-flip {
+  @extend %pb-animation-base;
+  backface-visibility: visible;
+  animation-name: flip;
+}
+
+.pb-headShake {
+  @extend %pb-animation-base;
+  animation-timing-function: ease-in-out;
+  animation-name: headShake;
+}
+
+.pb-hinge {
+  @extend %pb-animation-base;
+  animation-name: hinge;
+  animation-duration: 2s;
+}
+
+.pb-jello {
+  @extend %pb-animation-base;
+  animation-name: jello;
+  transform-origin: center;
+}
+
+.pb-pop {
+  @extend %pb-animation-base;
+  animation-name: pop;
+}
+
+.pb-pulse {
+  @extend %pb-animation-base;
+  animation-name: pulse;
+}
+
+.pb-rubberBand {
+  @extend %pb-animation-base;
+  animation-name: rubberBand;
+}
+
+.pb-scaleDown {
+  backface-visibility: visible;
+  @extend %pb-animation-base;
+  animation-duration: $very-fast;
+  animation-name: scaleDown;
+}
+
+.pb-scaleUp {
+  backface-visibility: visible;
+  @extend %pb-animation-base;
+  animation-name: scaleUp;
+}
+
+.pb-scaleUpPop {
+  backface-visibility: visible;
+  @extend %pb-animation-base;
+  animation-name: scaleUpPop;
+}
+
+.pb-shake {
+  @extend %pb-animation-base;
+  animation-name: shake;
+}
+
+.pb-swing {
+  @extend %pb-animation-base;
+  transform-origin: top center;
+  animation-name: swing;
+}
+
+.pb-tada {
+  @extend %pb-animation-base;
+  animation-name: tada;
+}
+
+.pb-wobble {
+  @extend %pb-animation-base;
+  animation-name: wobble;
+}
+
+//*************************************************//
+
+
+
+
+//******** In Queue Animations ********//
+
+.pb-bounceIn {
+	@include pb-animate('bounceIn', $medium, 'linear');
+}
+
+.pb-fadeIn {
+	@include pb-animate('fadeIn', $fast, 'linear');
+}
+
+.pb-fadeInUp {
+	@include pb-animate('fadeInUp', $fast, 'linear');
+}
+
+.pb-flipInX {
+	@include pb-animate('flipInX', $medium, 'ease-out');
+}
+
+.pb-slideInLeft {
+  @include pb-animate('slideInLeft', $medium, 'linear');
+}
+
+.pb-slideInLeftSmall {
+  @include pb-animate('slideInLeftSmall', $medium, 'linear');
+}
+
+.pb-slideInRight {
+  @include pb-animate('slideInRight', $medium, 'linear');
+}
+
+.pb-slideInRightSmall {
+  @include pb-animate('slideInRightSmall', $medium, 'linear');
+}
+
+.pb-slideInUp {
+  @include pb-animate('slideInUp', $medium, 'linear');
+}
+
+.pb-zoomIn {
+	@include pb-animate('zoomIn', $medium, 'ease-out');
+}
+
+.pb-zoomInLeft {
+	@include pb-animate('zoomInLeft', $slow, 'ease-out');
+}
+
+//*************************************************//
+
+
+
+//******** Out Queue Animations ********//
+
+.pb-bounceOut {
+	@include pb-animate('bounceOut', $fast, 'linear');
+}
+
+.pb-bounceOutDown {
+	@include pb-animate('bounceOutDown', $fast, 'linear');
+}
+
+.pb-bounceOutLeft {
+	@include pb-animate('bounceOutLeft', $fast, 'linear');
+}
+
+.pb-bounceOutRight {
+	@include pb-animate('bounceOutRight', $fast, 'linear');
+}
+
+.pb-bounceOutUp {
+	@include pb-animate('bounceOutUp', $fast, 'linear');
+}
+
+.pb-fadeOut {
+	@include pb-animate('fadeOut', $fast, 'linear');
+}
+
+.pb-fadeOutDown {
+	@include pb-animate('fadeOutDown', $fast, 'linear');
+}
+
+.pb-fadeInDown {
+	@include pb-animate('fadeInDown', $fast, 'linear');
+}
+
+.pb-fadeOutDownMini {
+	@include pb-animate('fadeInDownMini', $fast, 'linear');
+}
+
+.pb-fadeOutDownBig {
+	@include pb-animate('fadeOutDownBig', $fast, 'linear');
+}
+
+.pb-zoomOut {
+	@include pb-animate('zoomOut', $medium, 'linear');
+}
+
+.pb-slideOutDown {
+  @include pb-animate('slideOutDown', $medium, 'linear');
+}
+
+//*************************************************//
+
+
+
+//**** Compound Animations - syntactic sugar for pre-handled in/out queues ****//
+
+.pb-fade {
+	@include pb-animate('fadeOut', $fast, 'linear');
+	@include pb-animate('fadeIn', $fast, 'linear');
+}
+
+.pb-crossFade {
+	@include pb-animate('fadeIn', $very-fast, 'linear');
+	@include pb-animate('hideOut', $immediate, 'linear', 'none');
+}
+
+.pb-preventDisplacement {
+	@include pb-animate('hideOut', $immediate, 'linear', 'none');
+}

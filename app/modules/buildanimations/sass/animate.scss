@@ -1,0 +1,79 @@
+//Styles for the animations page itself, not the actual tools to build animations
+
+.object {
+	background: $pb-purple;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	display: block;
+	margin: 10px 0;
+	&.green {
+		background-color: $pb-green;
+	}
+}
+
+.pb-fade-demo.on .object {
+	@extend .pb-rubberBand;
+}
+
+.sandbox-wrapper {
+	margin: 0;
+	border: solid 1px $pb-bg3;
+	background-color: #FFF;
+	.controls {
+		background-color: $pb-bg2;
+		padding-top: 8px;
+		height: 49px;
+		border-top: solid 1px $pb-bg3;
+		border-right: solid 1px $pb-bg3;
+		.btn-group {
+			margin-bottom: 0;
+		}
+	}
+	.panel-group {
+		height: 400px;
+		overflow-y: scroll;
+	}
+	.more-info {
+		text-transform: inherit;
+		&.selected {
+			background-color: #2e2e2e;
+			text-decoration: none;
+			color: #FFF;
+		}
+		&:hover:not(.selected) {
+			background-color: $pb-gray-500;
+		}
+	}
+}
+
+.stage-wrapper {
+	padding-left: 0;
+	padding-right: 0;
+	pre {
+		height: 49px;
+		margin-bottom: 0;
+		border-radius: 0;
+		line-height: 28px;
+		border: 0;
+		background-color: $pb-bg2;
+		border-top: solid 1px $pb-bg3;
+	}
+}
+
+.stage {
+	padding: 20px;
+	height: 400px;
+	background-color: #fff;
+}
+
+.panel-group {
+	margin-bottom: 0;
+		.panel .panel-heading {
+		padding-left: 15px;
+		font-size: 14px;
+		label {
+			margin-bottom: 0;
+		}
+	}
+}
