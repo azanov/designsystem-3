@@ -12,10 +12,15 @@
 
 // second level
 .doc-side-nav > nav > .nav > li > .nav > li > a {
-  display: block;
-  color: #f00;
+  color: purple;
 }
 .doc-side-nav > nav > .nav > li > .nav > li > a.active {
+  color: crimson;
+  font-style: italic;
+}
+
+
+.doc-side-nav > nav > .nav > li > a.active ~ .nav > li > a {
   display: block;
-  color: pink;
+  color: orange;
 }
