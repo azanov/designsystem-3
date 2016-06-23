@@ -43,7 +43,7 @@
     'pb.ds.toastrs',
     'pb.ds.uibootstrap',
     'pb.ds.widgets',
-    'pb.ds.buildanimations',
+    'pb.ds.animation',
     'pb.ds.writing'
   ]);
 

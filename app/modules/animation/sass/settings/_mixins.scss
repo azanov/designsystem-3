@@ -3,72 +3,74 @@
 
 //find out if this is animating InOut/In/Out
 @function check-name($string) {
+  $contains-in-out: str-index($string, 'InOut');
+  $contains-out: str-index($string, 'Out');
+  $contains-in: str-index($string, 'In');
 
-	$contains-in-out: str-index($string, 'InOut');
-	$contains-out: str-index($string, 'Out');
-	$contains-in: str-index($string, 'In');
-
-	@if $contains-in-out != null {
-		@return 'inout'
-	} @else if $contains-out != null {
-		@return 'out';
-	} @else if $contains-in != null {
-		@return 'in';
-	} @else {
-		@return false;
-	}
+  @if $contains-in-out != null {
+    @return 'inout';
+  }
+  @else if $contains-out != null {
+    @return 'out';
+  }
+  @else if $contains-in != null {
+    @return 'in';
+  }
+  @else {
+    @return false;
+  }
 }
 
 //This function creates all of the animation CSS properties
 @mixin construct-properties($animation, $timing, $timing-function, $fill-mode: null, $delay: null, $iterations:null) {
-	//REQUIRED parameters
-	animation-name: #{$animation};
-	animation-duration: #{$timing};
-	animation-timing-function: #{$timing-function};
+  //REQUIRED parameters
+  animation-name: #{$animation};
+  animation-duration: #{$timing};
+  animation-timing-function: #{$timing-function};
 
-	//OPTIONAL parameters
-	@if $fill-mode == null {
-		animation-fill-mode: both;
-	 } @else {
-		 animation-fill-mode: #{$fill-mode};
-	}
-	@if $delay != null {
-		 animation-delay: #{$delay};
-	}
-	@if $iterations != null {
-		 animation-iteration-count: #{$iterations};
-	}
+  //OPTIONAL parameters
+  @if $fill-mode == null {
+    animation-fill-mode: both;
+  }
+  @else {
+    animation-fill-mode: #{$fill-mode};
+  }
+  @if $delay != null {
+    animation-delay: #{$delay};
+  }
+  @if $iterations != null {
+    animation-iteration-count: #{$iterations};
+  }
 }
 
 //This is the master function that pulls everything together
 //$varName: null means that parameter is optional
 @mixin pb-animate($animation, $timing, $timing-function, $fill-mode: null, $delay: null, $iterations:null) {
+  //adding in ng-animate serves as namespacing - this means these animations wont interfere with any base animations that were established already
+  &.ng-animate {
+    $queue-is: check-name($animation);
 
-	//adding in ng-animate serves as namespacing - this means these animations wont interfere with any base animations that were established already
-	&.ng-animate {
-		$queue-is: check-name($animation);
-
-		@if $queue-is == "in" {
-			&.ng-hide-remove, &.ng-enter, &.ng-enter-active {
-				@include construct-properties($animation, $timing, $timing-function, $fill-mode: null, $delay:null, $iterations:null);
-			}
-		} @else if $queue-is == "out" {
-			&.ng-hide, &.ng-leave, &.ng-leave-active {
-				@include construct-properties($animation, $timing, $timing-function, $fill-mode: null, $delay:null, $iterations:null);
-			}
-		}
+    @if $queue-is == 'in' {
+      &.ng-hide-remove, &.ng-enter, &.ng-enter-active {
+        @include construct-properties($animation, $timing, $timing-function, $fill-mode: null, $delay:null, $iterations:null);
+      }
+    }
+    @else if $queue-is == 'out' {
+      &.ng-hide, &.ng-leave, &.ng-leave-active {
+        @include construct-properties($animation, $timing, $timing-function, $fill-mode: null, $delay:null, $iterations:null);
+      }
+    }
     //Handle Stagger handles
     //Don't need the pb-stagger class technically, but it's useful since you might not always want staggered animations on every repeating list
     &.pb-stagger {
       &.ng-enter-stagger {
-       animation-delay: $lightning;
+        animation-delay: $lightning;
       }
       &.ng-leave-stagger {
-       animation-delay: $lightning;
+        animation-delay: $lightning;
       }
-
     }
-	}
+  }
 }
 
 
@@ -77,7 +79,7 @@
 @mixin forward-stagger-animation-delay($i, $initial-delay, $stagger-delay) {
   @while $i > 0 {
     &:nth-of-type(#{$i}) {
-			animation-delay: ($initial-delay + $stagger-delay * $i);
+      animation-delay: ($initial-delay + $stagger-delay * $i);
     }
     $i: $i - 1;
   }
@@ -85,12 +87,12 @@
 
 @mixin backward-stagger-animation-delay($i, $initial-delay, $stagger-delay) {
   $x: 1;
-	@while $i > 0 {
+  @while $i > 0 {
     &:nth-of-type(#{$i}) {
-			animation-delay: ($initial-delay + $stagger-delay * $x);
+      animation-delay: ($initial-delay + $stagger-delay * $x);
     }
     $i: $i - 1;
-		$x: $x + 1;
+    $x: $x + 1;
   }
 }
 
@@ -101,17 +103,13 @@
     .pb-#{$direction}Stagger-#{$i} {
       //locking down attributes that people can put a "manual" stagger on - this is meant to prevent someone from using this with a big table or something crazy
       div, span, button, li {
-
         @if $direction == 'forward' {
-
-      		@include forward-stagger-animation-delay($i, 0s, $delay);
-
-        } @else if $direction == 'backward' {
-
+          @include forward-stagger-animation-delay($i, 0s, $delay);
+        }
+        @else if $direction == 'backward' {
           @include backward-stagger-animation-delay($i, 0s, $delay);
-
-        } @else if $direction == 'bidirectional' {
-
+        }
+        @else if $direction == 'bidirectional' {
           &.ng-hide-remove, &.ng-enter, &.ng-enter-active {
             @include forward-stagger-animation-delay($i, 0s, $delay);
           }
@@ -120,7 +118,6 @@
             @include backward-stagger-animation-delay($i, 0s, $delay);
           }
         }
-
       }
     }
     $i: $i + 1;

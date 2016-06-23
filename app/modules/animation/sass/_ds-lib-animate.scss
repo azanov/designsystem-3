@@ -16,7 +16,6 @@
   animation-fill-mode: both;
   animation-timing-function: linear;
 }
-
 //******** Accent animation names *********//
 
 .pb-bounce {
@@ -108,6 +107,9 @@
   @extend %pb-animation-base;
   animation-name: wobble;
 }
+
+//*************************************************//
+
 
 // ******** In Queue Animations ********//
 .pb-bounceIn {

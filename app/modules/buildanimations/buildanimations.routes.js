@@ -1,39 +1,37 @@
-(function() {
-
+(function () {
   'use strict';
 
-  angular.module('pb.ds.buildanimations').config(function($stateProvider) {
-    $stateProvider.state('buildanimations', {
-        url: '',
-        templateUrl: 'modules/buildanimations/templates/buildanimations.html',
-        controller: 'BuildAnimationsController as vm',
-        data: {
-          pageTitle: 'Build Animations',
-          access: 'public',
-          bodyClass: 'buildanimations'
-        }
-      })
+  angular.module('pb.ds.animations').config(function ($stateProvider) {
+    $stateProvider.state('animations', {
+      url: '',
+      templateUrl: 'modules/animations/templates/animations.html',
+      controller: 'BuildAnimationsController as vm',
+      data: {
+        pageTitle: 'Build Animations',
+        access: 'public',
+        bodyClass: 'animations'
+      }
+    })
 
-      .state('buildanimations.page', {
+      .state('animations.page', {
         url: '/animations',
         views: {
           overview: {
-            templateUrl: 'modules/buildanimations/templates/overview.html'
+            templateUrl: 'modules/animations/templates/overview.html'
           },
           sandbox: {
-            templateUrl: 'modules/buildanimations/templates/sandbox.html'
+            templateUrl: 'modules/animations/templates/sandbox.html'
           },
           queue: {
-            templateUrl: 'modules/buildanimations/templates/angular-animations.html'
+            templateUrl: 'modules/animations/templates/angular-animations.html'
           },
           stagger: {
-            templateUrl: 'modules/buildanimations/templates/stagger.html'
+            templateUrl: 'modules/animations/templates/stagger.html'
           },
           base: {
-            templateUrl: 'modules/buildanimations/templates/baseanimations.html'
+            templateUrl: 'modules/animations/templates/baseanimations.html'
           }
         }
       });
-
   });
 })();

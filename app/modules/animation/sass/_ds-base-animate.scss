@@ -1,14 +1,8 @@
 //This file hold all of the "Out of the Box" Animations that DS would provide
-@import 'keyframes/accent';
-@import 'keyframes/entrances';
-@import 'keyframes/exits';
 
 
-@import 'settings/timings';
-@import 'settings/mixins';
-
-//** Adding in cases discussed in animation meetings **//
-//*********BUTTONS & LINKS******//
+// ** Adding in cases discussed in animation meetings ** //
+// ********* BUTTONS & LINKS ****** //
 link, a {
   transition: color linear $very-fast;
   &.link-fancy {
@@ -32,7 +26,7 @@ link, a {
   //animation that fires when a primary button goes from VISIBLE to HIDDEN
   @include pb-animate('fadeOut', $very-fast, 'linear');
   //animation that fires when a primary button goes from HIDDEN to VISIBLE
-  @extend .pb-bounce-in;
+  @extend .pb-bounceIn;
 }
 .btn-primary:not(.disabled):not([disabled]):not(.ng-hide) {
   //need to build this animation from ground up
@@ -44,7 +38,6 @@ link, a {
 
 
 //*********INPUTS******//
-//TODO: Find this in the original design system and figure out where to put it
 //TODO: Make sure this works with selectize inputs
 .form-control {
   transition: border-color $very-fast linear, box-shadow $very-fast linear $lightning;
