@@ -1,9 +1,9 @@
-@import "keyframes/accent";
-@import "keyframes/entrances";
-@import "keyframes/exits";
+@import 'keyframes/accent';
+@import 'keyframes/entrances';
+@import 'keyframes/exits';
 
-@import "settings/timings";
-@import "settings/mixins";
+@import 'settings/timings';
+@import 'settings/mixins';
 
 
 //General class names
@@ -16,9 +16,6 @@
   animation-fill-mode: both;
   animation-timing-function: linear;
 }
-
-
-
 //******** Accent animation names *********//
 
 .pb-bounce {
@@ -114,24 +111,21 @@
 //*************************************************//
 
 
-
-
-//******** In Queue Animations ********//
-
+// ******** In Queue Animations ********//
 .pb-bounceIn {
-	@include pb-animate('bounceIn', $medium, 'linear');
+  @include pb-animate('bounceIn', $medium, 'linear');
 }
 
 .pb-fadeIn {
-	@include pb-animate('fadeIn', $fast, 'linear');
+  @include pb-animate('fadeIn', $fast, 'linear');
 }
 
 .pb-fadeInUp {
-	@include pb-animate('fadeInUp', $fast, 'linear');
+  @include pb-animate('fadeInUp', $fast, 'linear');
 }
 
 .pb-flipInX {
-	@include pb-animate('flipInX', $medium, 'ease-out');
+  @include pb-animate('flipInX', $medium, 'ease-out');
 }
 
 .pb-slideInLeft {
@@ -155,11 +149,11 @@
 }
 
 .pb-zoomIn {
-	@include pb-animate('zoomIn', $medium, 'ease-out');
+  @include pb-animate('zoomIn', $medium, 'ease-out');
 }
 
 .pb-zoomInLeft {
-	@include pb-animate('zoomInLeft', $slow, 'ease-out');
+  @include pb-animate('zoomInLeft', $slow, 'ease-out');
 }
 
 //*************************************************//
@@ -169,47 +163,47 @@
 //******** Out Queue Animations ********//
 
 .pb-bounceOut {
-	@include pb-animate('bounceOut', $fast, 'linear');
+  @include pb-animate('bounceOut', $fast, 'linear');
 }
 
 .pb-bounceOutDown {
-	@include pb-animate('bounceOutDown', $fast, 'linear');
+  @include pb-animate('bounceOutDown', $fast, 'linear');
 }
 
 .pb-bounceOutLeft {
-	@include pb-animate('bounceOutLeft', $fast, 'linear');
+  @include pb-animate('bounceOutLeft', $fast, 'linear');
 }
 
 .pb-bounceOutRight {
-	@include pb-animate('bounceOutRight', $fast, 'linear');
+  @include pb-animate('bounceOutRight', $fast, 'linear');
 }
 
 .pb-bounceOutUp {
-	@include pb-animate('bounceOutUp', $fast, 'linear');
+  @include pb-animate('bounceOutUp', $fast, 'linear');
 }
 
 .pb-fadeOut {
-	@include pb-animate('fadeOut', $fast, 'linear');
+  @include pb-animate('fadeOut', $fast, 'linear');
 }
 
 .pb-fadeOutDown {
-	@include pb-animate('fadeOutDown', $fast, 'linear');
+  @include pb-animate('fadeOutDown', $fast, 'linear');
 }
 
 .pb-fadeInDown {
-	@include pb-animate('fadeInDown', $fast, 'linear');
+  @include pb-animate('fadeInDown', $fast, 'linear');
 }
 
 .pb-fadeOutDownMini {
-	@include pb-animate('fadeInDownMini', $fast, 'linear');
+  @include pb-animate('fadeInDownMini', $fast, 'linear');
 }
 
 .pb-fadeOutDownBig {
-	@include pb-animate('fadeOutDownBig', $fast, 'linear');
+  @include pb-animate('fadeOutDownBig', $fast, 'linear');
 }
 
 .pb-zoomOut {
-	@include pb-animate('zoomOut', $medium, 'linear');
+  @include pb-animate('zoomOut', $medium, 'linear');
 }
 
 .pb-slideOutDown {
@@ -223,15 +217,15 @@
 //**** Compound Animations - syntactic sugar for pre-handled in/out queues ****//
 
 .pb-fade {
-	@include pb-animate('fadeOut', $fast, 'linear');
-	@include pb-animate('fadeIn', $fast, 'linear');
+  @include pb-animate('fadeOut', $fast, 'linear');
+  @include pb-animate('fadeIn', $fast, 'linear');
 }
 
 .pb-crossFade {
-	@include pb-animate('fadeIn', $very-fast, 'linear');
-	@include pb-animate('hideOut', $immediate, 'linear', 'none');
+  @include pb-animate('fadeIn', $very-fast, 'linear');
+  @include pb-animate('hideOut', $immediate, 'linear', 'none');
 }
 
 .pb-preventDisplacement {
-	@include pb-animate('hideOut', $immediate, 'linear', 'none');
+  @include pb-animate('hideOut', $immediate, 'linear', 'none');
 }

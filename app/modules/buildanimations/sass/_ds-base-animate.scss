@@ -1,5 +1,11 @@
 //This file hold all of the "Out of the Box" Animations that DS would provide
+@import 'keyframes/accent';
+@import 'keyframes/entrances';
+@import 'keyframes/exits';
 
+
+@import 'settings/timings';
+@import 'settings/mixins';
 
 //** Adding in cases discussed in animation meetings **//
 //*********BUTTONS & LINKS******//
@@ -20,13 +26,13 @@ link, a {
   transition: background-color $very-fast linear;
   //rebuilding pb-fade class directly in button
   @include pb-animate('fadeOut', $very-fast, 'linear');
-	@include pb-animate('fadeIn', $very-fast, 'linear');
+  @include pb-animate('fadeIn', $very-fast, 'linear');
 }
 .btn-primary:not(.disabled):not([disabled]) {
   //animation that fires when a primary button goes from VISIBLE to HIDDEN
   @include pb-animate('fadeOut', $very-fast, 'linear');
   //animation that fires when a primary button goes from HIDDEN to VISIBLE
-  @extend .pb-bounceIn;
+  @extend .pb-bounce-in;
 }
 .btn-primary:not(.disabled):not([disabled]):not(.ng-hide) {
   //need to build this animation from ground up
@@ -91,7 +97,7 @@ link, a {
   //removing background image here because I don't want to directly animate background sizes
   &:after {
     content: '';
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgOSA4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik03LjIyMSAwbC0uNzkuNzktMy4xNTkgMy4xNTktLjkwMy0uOTAzLS43OS0uNzktMS41NzkgMS41NzkuNzkuNzkgMS42OTIgMS42OTIuNzkuNzkuNzktLjc5IDMuOTQ5LTMuOTQ5Ljc5LS43OS0xLjU3OS0xLjU3OXoiIGZpbGw9IiMzRTUzQTQiLz48L3N2Zz4=");
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgOSA4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik03LjIyMSAwbC0uNzkuNzktMy4xNTkgMy4xNTktLjkwMy0uOTAzLS43OS0uNzktMS41NzkgMS41NzkuNzkuNzkgMS42OTIgMS42OTIuNzkuNzkuNzktLjc5IDMuOTQ5LTMuOTQ5Ljc5LS43OS0xLjU3OS0xLjU3OXoiIGZpbGw9IiMzRTUzQTQiLz48L3N2Zz4=');
     background-size: contain;
     background-repeat: no-repeat;
     width: 10px;
@@ -134,7 +140,6 @@ link, a {
   // &[class*="pb-forwardStagger"] li {
   //   opacity: 0;
   // }
-
 }
 .open > .dropdown-menu:not(.pb-animate-menu) {
   pointer-events: auto;
@@ -171,7 +176,7 @@ link, a {
     display: block;
     width: 100%;
     height: 100%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
     position: absolute;
     top: 0;
     left: 0;
@@ -191,97 +196,74 @@ link, a {
 //Popovers
 //seleect all popovers except for those with the custom attribute "popover trigger" that's equal to "mouseenter"
 //added unprefixed regular "popover" style so this is backwards compatible
-[uib-popover]:not([popover-trigger="mouseenter"]) + [uib-popover-popup],
-[popover]:not([popover-trigger="mouseenter"]) + [popover-popup] {
-    @extend .pb-pop;
-    //need to set fill mode back to initial so original fade transition supplied by bootstrap can take affect on the animation out
-    animation-fill-mode: initial;
+[uib-popover]:not([popover-trigger='mouseenter']) + [uib-popover-popup], [popover]:not([popover-trigger='mouseenter']) + [popover-popup] {
+  @extend .pb-pop;
+  //need to set fill mode back to initial so original fade transition supplied by bootstrap can take affect on the animation out
+  animation-fill-mode: initial;
 }
 
 //Hover Top, radiating out from button
-[uib-popover][popover-trigger="mouseenter"] + [uib-popover-popup],
-[popover][popover-trigger="mouseenter"] + [popover-popup],
-[uib-tooltip] + [uib-tooltip-popup],  //don't need to call out mouseenter since it's default behavior for tooltip
+[uib-popover][popover-trigger='mouseenter'] + [uib-popover-popup], [popover][popover-trigger='mouseenter'] + [popover-popup], [uib-tooltip] + [uib-tooltip-popup], //don't need to call out mouseenter since it's default behavior for tooltip
 [tooltip] + [tooltip-popup] {
-    transform: translate3d(0, 10px, 0);
-    transition: transform $very-fast linear, opacity $lightning linear;
-    &.in {
-      transform: translate3d(0, 0, 0);
-    }
-    //FIXME: Need either a method to handle all potential directions or different CSS rules
+  transform: translate3d(0, 10px, 0);
+  transition: transform $very-fast linear, opacity $lightning linear;
+  &.in {
+    transform: translate3d(0, 0, 0);
+  }
+  //FIXME: Need either a method to handle all potential directions or different CSS rules
 }
 //Hover right, radiating out from button
-[uib-popover][popover-trigger="mouseenter"][popover-placement="right"] + [uib-popover-popup],
-[popover][popover-trigger="mouseenter"][popover-placement="right"] + [popover-popup],
-[uib-tooltip][tooltip-placement="right"] + [uib-tooltip-popup],  //don't need to call out mouseenter since it's default behavior
-[tooltip][tooltip-placement="right"] + [tooltip-popup]
- {
-    transform: translate3d(-10px, 0, 0);
-    &.in {
-      transform: translate3d(0, 0, 0);
-    }
+[uib-popover][popover-trigger='mouseenter'][popover-placement='right'] + [uib-popover-popup], [popover][popover-trigger='mouseenter'][popover-placement='right'] + [popover-popup], [uib-tooltip][tooltip-placement='right'] + [uib-tooltip-popup], //don't need to call out mouseenter since it's default behavior
+[tooltip][tooltip-placement='right'] + [tooltip-popup] {
+  transform: translate3d(-10px, 0, 0);
+  &.in {
+    transform: translate3d(0, 0, 0);
+  }
 }
 //Hover bottom, radiating out from button
-[uib-popover][popover-trigger="mouseenter"][popover-placement="bottom"] + [uib-popover-popup],
-[popover][popover-trigger="mouseenter"][popover-placement="bottom"] + [popover-popup],
-[uib-tooltip][tooltip-placement="bottom"] + [uib-tooltip-popup],  //don't need to call out mouseenter since it's default behavior
-[tooltip][tooltip-placement="bottom"] + [tooltip-popup] {
-    transform: translate3d(0, -10px, 0);
-    &.in {
-      transform: translate3d(0, 0, 0);
-    }
+[uib-popover][popover-trigger='mouseenter'][popover-placement='bottom'] + [uib-popover-popup], [popover][popover-trigger='mouseenter'][popover-placement='bottom'] + [popover-popup], [uib-tooltip][tooltip-placement='bottom'] + [uib-tooltip-popup], //don't need to call out mouseenter since it's default behavior
+[tooltip][tooltip-placement='bottom'] + [tooltip-popup] {
+  transform: translate3d(0, -10px, 0);
+  &.in {
+    transform: translate3d(0, 0, 0);
+  }
 }
 //Hover left, radiating out from button
-.magnet[uib-popover][popover-trigger="mouseenter"][popover-placement="left"] + [uib-popover-popup],
-.magnet[popover][popover-trigger="mouseenter"][popover-placement="left"] + [popover-popup],
-.magnet[uib-tooltip][tooltip-placement="left"] + [uib-tooltip-popup],
-.magnet[tooltip][tooltip-placement="left"] + [tooltip-popup] {
-    transform: translate3d(10px, 0, 0);
-    &.in {
-      transform: translate3d(0, 0, 0);
-    }
+.magnet[uib-popover][popover-trigger='mouseenter'][popover-placement='left'] + [uib-popover-popup], .magnet[popover][popover-trigger='mouseenter'][popover-placement='left'] + [popover-popup], .magnet[uib-tooltip][tooltip-placement='left'] + [uib-tooltip-popup], .magnet[tooltip][tooltip-placement='left'] + [tooltip-popup] {
+  transform: translate3d(10px, 0, 0);
+  &.in {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 
 //***SECOND TOOTLIP/POPOVER OPTON***//
 
-.magnet[uib-popover][popover-trigger="mouseenter"] + [uib-popover-popup],
-.magnet[popover][popover-trigger="mouseenter"] + [popover-popup],
-.magnet[uib-tooltip] + [uib-tooltip-popup],
-.magnet[tooltip] + [tooltip-popup] {
-    transform: translate3d(0, -10px, 0);
-    transition: transform $very-fast linear, opacity $lightning linear;
-    &.in {
-      transform: translate3d(0, 0, 0);
-    }
+.magnet[uib-popover][popover-trigger='mouseenter'] + [uib-popover-popup], .magnet[popover][popover-trigger='mouseenter'] + [popover-popup], .magnet[uib-tooltip] + [uib-tooltip-popup], .magnet[tooltip] + [tooltip-popup] {
+  transform: translate3d(0, -10px, 0);
+  transition: transform $very-fast linear, opacity $lightning linear;
+  &.in {
+    transform: translate3d(0, 0, 0);
+  }
 }
 //Hover right, pulling in towards button
-.magnet[uib-popover][popover-trigger="mouseenter"][popover-placement="right"] + [uib-popover-popup],
-.magnet[popover][popover-trigger="mouseenter"][popover-placement="right"] + [popover-popup],
-.magnet[uib-tooltip][tooltip-placement="right"] + [uib-tooltip-popup],
-.magnet[tooltip][tooltip-placement="right"] + [tooltip-popup] {
-    transform: translate3d(10px, 0, 0);
-    &.in {
-      transform: translate3d(0, 0, 0);
-    }
+.magnet[uib-popover][popover-trigger='mouseenter'][popover-placement='right'] + [uib-popover-popup], .magnet[popover][popover-trigger='mouseenter'][popover-placement='right'] + [popover-popup], .magnet[uib-tooltip][tooltip-placement='right'] + [uib-tooltip-popup], .magnet[tooltip][tooltip-placement='right'] + [tooltip-popup] {
+  transform: translate3d(10px, 0, 0);
+  &.in {
+    transform: translate3d(0, 0, 0);
+  }
 }
 //Hover bottom, pulling in towards button
-.magnet[uib-popover][popover-trigger="mouseenter"][popover-placement="bottom"] + [uib-popover-popup],
-.magnet[popover][popover-trigger="mouseenter"][popover-placement="bottom"] + [popover-popup],
-.magnet[uib-tooltip][tooltip-placement="bottom"] + [uib-tooltip-popup],
-.magnet[tooltip][tooltip-placement="bottom"] + [tooltip-popup]  {
-    transform: translate3d(0, 10px, 0);
-    &.in {
-      transform: translate3d(0, 0, 0);
-    }
+.magnet[uib-popover][popover-trigger='mouseenter'][popover-placement='bottom'] + [uib-popover-popup], .magnet[popover][popover-trigger='mouseenter'][popover-placement='bottom'] + [popover-popup], .magnet[uib-tooltip][tooltip-placement='bottom'] + [uib-tooltip-popup], .magnet[tooltip][tooltip-placement='bottom'] + [tooltip-popup] {
+  transform: translate3d(0, 10px, 0);
+  &.in {
+    transform: translate3d(0, 0, 0);
+  }
 }
 //Hover left, pulling in towards button
-.magnet[uib-popover][popover-trigger="mouseenter"][popover-placement="left"] + [uib-popover-popup],
-.magnet[popover][popover-trigger="mouseenter"][popover-placement="left"] + [popover-popup],
-.magnet[uib-tooltip][tooltip-placement="left"] + [uib-tooltip-popup],
-.magnet[tooltip][tooltip-placement="left"] + [tooltip-popup] {
-    transform: translate3d(-10px, 0, 0);
-    &.in {
-      transform: translate3d(0, 0, 0);
-    }
+.magnet[uib-popover][popover-trigger='mouseenter'][popover-placement='left'] + [uib-popover-popup], .magnet[popover][popover-trigger='mouseenter'][popover-placement='left'] + [popover-popup], .magnet[uib-tooltip][tooltip-placement='left'] + [uib-tooltip-popup], .magnet[tooltip][tooltip-placement='left'] + [tooltip-popup] {
+  transform: translate3d(-10px, 0, 0);
+  &.in {
+    transform: translate3d(0, 0, 0);
+  }
 }

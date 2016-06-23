@@ -1,7 +1,7 @@
 
 @keyframes bounceIn {
   from, 20%, 40%, 60%, 80%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1);
   }
 
   0% {
@@ -35,7 +35,7 @@
 
 @keyframes bounceInDown {
   from, 60%, 75%, 90%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1);
   }
 
   0% {
@@ -64,7 +64,7 @@
 
 @keyframes bounceInLeft {
   from, 60%, 75%, 90%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1);
   }
 
   0% {
@@ -93,7 +93,7 @@
 
 @keyframes bounceInRight {
   from, 60%, 75%, 90%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1);
   }
 
   from {
@@ -120,10 +120,9 @@
 }
 
 
-
 @keyframes bounceInUp {
   from, 60%, 75%, 90%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1);
   }
 
   from {
@@ -148,7 +147,6 @@
     transform: translate3d(0, 0, 0);
   }
 }
-
 
 
 @keyframes fadeIn {
@@ -199,8 +197,6 @@
   }
 }
 
-
-
 @keyframes fadeInDownBig {
   from {
     opacity: 0;
@@ -226,8 +222,6 @@
   }
 }
 
-
-
 @keyframes fadeInLeftBig {
   from {
     opacity: 0;
@@ -239,8 +233,6 @@
     transform: none;
   }
 }
-
-
 
 @keyframes fadeInRight {
   from {
@@ -254,8 +246,6 @@
   }
 }
 
-
-
 @keyframes fadeInRightBig {
   from {
     opacity: 0;
@@ -267,8 +257,6 @@
     transform: none;
   }
 }
-
-
 
 @keyframes fadeInUp {
   from {
@@ -372,7 +360,6 @@
   }
 }
 
-
 @keyframes rotateIn {
   from {
     transform-origin: center;
@@ -386,8 +373,6 @@
     opacity: 1;
   }
 }
-
-
 
 @keyframes rotateInDownLeft {
   from {
@@ -418,8 +403,6 @@
   }
 }
 
-
-
 @keyframes rotateInUpLeft {
   from {
     transform-origin: left bottom;
@@ -449,8 +432,6 @@
   }
 }
 
-
-
 @keyframes rollIn {
   from {
     opacity: 0;
@@ -463,8 +444,6 @@
   }
 }
 
-
-
 @keyframes slideInDown {
   from {
     transform: translate3d(0, -100%, 0);
@@ -475,7 +454,6 @@
     transform: translate3d(0, 0, 0);
   }
 }
-
 
 @keyframes slideInLeft {
   from {
@@ -537,10 +515,6 @@
   }
 }
 
-
-
-
-
 @keyframes zoomIn {
   from {
     opacity: 0;
@@ -561,13 +535,13 @@
   from {
     opacity: 0;
     transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(.55, .055, .675, .19);
   }
 
   60% {
     opacity: 1;
     transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(.175, .885, .32, 1);
   }
 }
 
@@ -576,13 +550,13 @@
   from {
     opacity: 0;
     transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(.55, .055, .675, .19);
   }
 
   60% {
     opacity: 1;
     transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(.175, .885, .32, 1);
   }
 }
 
@@ -591,28 +565,27 @@
   from {
     opacity: 0;
     transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(.55, .055, .675, .19);
   }
 
   60% {
     opacity: 1;
     transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(.175, .885, .32, 1);
   }
 }
-
 
 
 @keyframes zoomInUp {
   from {
     opacity: 0;
     transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(.55, .055, .675, .19);
   }
 
   60% {
     opacity: 1;
     transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(.175, .885, .32, 1);
   }
 }
