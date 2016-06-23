@@ -44,22 +44,6 @@
   }
 }
 .doc-side-nav {
-  ul {
-    width: 100%;
-    li {
-      a {
-        font-size: 20px;
-      }
-      ul {
-        //display: none;
-        li {
-          a {
-            font-size: 16px;
-          }
-        }
-      }
-    }
-  }
 
   // not docked
   &.headroom-top {
