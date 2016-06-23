@@ -27,6 +27,7 @@ var banner = ['/**',
 ].join('\n');
 
 var sassFiles = './app/assets/sass/**/*.{scss,sass}';
+var sassAnimationFiles = './app/assets/sass/**/*.{scss,sass}';
 var cssFiles = './app/assets/css';
 var sassOptions = {
   errLogToConsole: true,
@@ -51,10 +52,12 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer(autoprefixerOptions))
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write(cssFiles))
     .pipe(gulp.dest(cssFiles))
     .pipe(browserSync.stream());
 });
+
+
 
 gulp.task('sass-dist', function () {
   var cssfilter = filter('design_system.css', {restore: true});
