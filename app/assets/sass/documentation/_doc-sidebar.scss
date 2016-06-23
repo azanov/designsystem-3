@@ -24,13 +24,12 @@
   h3 {
     padding: 15px 10px;
     margin: 0;
+    font-size: 16px;
     a {
       text-decoration: none;
       color: #2e2e2e;
     }
     &.active {
-      background-color: #c5cbe3;
-      border-color: #c5cbe3;
       color: #2e2e2e;
 
       & ~ .list-group {
@@ -39,6 +38,12 @@
     }
 
 
+  }
+  .list-group-item {
+    &.active {
+      border-left: 2px solid $pb-blue-500;
+      background-color: #fff;
+    }
   }
 
   .list-group {
