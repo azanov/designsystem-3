@@ -8,7 +8,7 @@
       // abstract: true,
       controller: 'CheckboxesController as check',
       data: {
-        pageTitle: 'Checkboxes'
+        pageTitle: 'Checkboxes (Template)'
       }
     });
   });
