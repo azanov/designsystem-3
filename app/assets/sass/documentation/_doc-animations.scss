@@ -1,0 +1,11 @@
+.view-animate {
+  transition: opacity .3s;
+
+  &.ng-enter, &.ng-leave {
+    opacity: 1;
+  }
+
+  &.ng-enter, &.ng-leave-active, &.ng-hide {
+    opacity: 0;
+  }
+}
