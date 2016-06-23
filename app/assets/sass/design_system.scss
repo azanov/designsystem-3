@@ -15,7 +15,7 @@
 // Site-wide style definitions
 // ========================================
 @import 'base/fonts';
-@import 'base/pbfont';
+// @import 'base/pbfont';
 @import 'base/typography';
 @import 'nucleo_mini/nucleo-mini';
 @import 'nucleo_outline/nucleo-outline';
@@ -74,8 +74,6 @@
 
 @import '../../modules/toastrs/assets/sass/toastrs';
 
-@import '../../modules/foundation/assets/sass/pbds-directives';
-
 @import '../../modules/charts/sass/c3';
 
 @import '../../modules/hamburger/assets/sass/hamburger';
@@ -104,3 +102,5 @@
 @import '../../modules/tables/assets/sass/tables';
 @import '../../modules/tabs/assets/sass/tabs-fancy';
 @import '../../modules/tabs/assets/sass/tabs';
+
+@import '../../modules/animation/sass/ds-animate';

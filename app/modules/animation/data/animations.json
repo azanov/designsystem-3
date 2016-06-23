@@ -1,0 +1,134 @@
+{
+  "bounce": {
+    "name": "pb-bounce",
+    "type": "accent"
+  },
+  "flash": {
+    "name": "pb-flash",
+    "type": "accent"
+  },
+  "flip": {
+    "name": "pb-flip",
+    "type": "accent"
+  },
+  "headShake": {
+    "name": "pb-headShake",
+    "type": "accent"
+  },
+  "hinge": {
+    "name": "pb-hinge",
+    "type": "accent"
+  },
+  "jello": {
+    "name": "pb-jello",
+    "type": "accent"
+  },
+  "pulse": {
+    "name": "pb-pulse",
+    "type": "accent"
+  },
+  "rubber": {
+    "name": "pb-rubberBand",
+    "type": "accent"
+  },
+  "shake": {
+    "name": "pb-shake",
+    "type": "accent"
+  },
+  "swing": {
+    "name": "pb-swing",
+    "type": "accent"
+  },
+  "tada": {
+    "name": "pb-tada",
+    "type": "accent"
+  },
+  "wobble": {
+    "name": "pb-wobble",
+    "type": "accent"
+  },
+  "bounceIn": {
+    "name": "pb-bounceIn",
+    "type": "entrance"
+  },
+  "fadeIn": {
+    "name": "pb-fadeIn",
+    "type": "entrance"
+  },
+  "fadeInUp": {
+    "name": "pb-fadeInUp",
+    "type": "entrance"
+  },
+  "flipInX": {
+    "name": "pb-flipInX",
+    "type": "entrance"
+  },
+  "slideInLeft": {
+    "name": "pb-slideInLeft",
+    "type": "entrance"
+  },
+  "slideInLeftSmall": {
+    "name": "pb-slideInLeftSmall",
+    "type": "entrance"
+  },
+  "slideInRight": {
+    "name": "pb-slideInRight",
+    "type": "entrance"
+  },
+  "slideInRightSmall": {
+    "name": "pb-slideInRightSmall",
+    "type": "entrance"
+  },
+  "slideInUp": {
+    "name": "pb-slideInUp",
+    "type": "entrance"
+  },
+  "zoomIn": {
+    "name": "pb-zoomIn",
+    "type": "entrance"
+  },
+  "zoomInLeft": {
+    "name": "pb-zoomInLeft",
+    "type": "entrance"
+  },
+  "bounceOut": {
+    "name": "pb-bounceOut",
+    "type": "exit"
+  },
+  "bounceOutDown": {
+    "name": "pb-bounceOutDown",
+    "type": "exit"
+  },
+  "bounceOutLeft": {
+    "name": "pb-bounceOutLeft",
+    "type": "exit"
+  },
+  "bounceOutRight": {
+    "name": "pb-bounceOutRight",
+    "type": "exit"
+  },
+  "bounceOutUp": {
+    "name": "pb-bounceOutUp",
+    "type": "exit"
+  },
+  "fadeOut": {
+    "name": "pb-fadeOut",
+    "type": "exit"
+  },
+  "fadeOutDown": {
+    "name": "pb-fadeOutDown",
+    "type": "exit"
+  },
+  "fadeOutDownBig": {
+    "name": "pb-fadeOutDownBig",
+    "type": "exit"
+  },
+  "zoomOut": {
+    "name": "pb-zoomOut",
+    "type": "exit"
+  },
+  "slideOutDown": {
+    "name": "pb-slideOutDown",
+    "type": "exit"
+  }
+}

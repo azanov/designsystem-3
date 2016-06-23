@@ -1,0 +1,180 @@
+
+//****Angular Animations - for Ng-if/ng-hide/ng-show/ng-repeat *******//
+
+//find out if this is animating InOut/In/Out
+@function check-name($string) {
+  $contains-in-out: str-index($string, 'InOut');
+  $contains-out: str-index($string, 'Out');
+  $contains-in: str-index($string, 'In');
+
+  @if $contains-in-out != null {
+    @return 'inout';
+  }
+  @else if $contains-out != null {
+    @return 'out';
+  }
+  @else if $contains-in != null {
+    @return 'in';
+  }
+  @else {
+    @return false;
+  }
+}
+
+//This function creates all of the animation CSS properties
+@mixin construct-properties($animation, $timing, $timing-function, $fill-mode: null, $delay: null, $iterations:null) {
+  //REQUIRED parameters
+  animation-name: #{$animation};
+  animation-duration: #{$timing};
+  animation-timing-function: #{$timing-function};
+
+  //OPTIONAL parameters
+  @if $fill-mode == null {
+    animation-fill-mode: both;
+  }
+  @else {
+    animation-fill-mode: #{$fill-mode};
+  }
+  @if $delay != null {
+    animation-delay: #{$delay};
+  }
+  @if $iterations != null {
+    animation-iteration-count: #{$iterations};
+  }
+}
+
+//This is the master function that pulls everything together
+//$varName: null means that parameter is optional
+@mixin pb-animate($animation, $timing, $timing-function, $fill-mode: null, $delay: null, $iterations:null) {
+  //adding in ng-animate serves as namespacing - this means these animations wont interfere with any base animations that were established already
+  &.ng-animate {
+    $queue-is: check-name($animation);
+
+    @if $queue-is == 'in' {
+      &.ng-hide-remove, &.ng-enter, &.ng-enter-active {
+        @include construct-properties($animation, $timing, $timing-function, $fill-mode: null, $delay:null, $iterations:null);
+      }
+    }
+    @else if $queue-is == 'out' {
+      &.ng-hide, &.ng-leave, &.ng-leave-active {
+        @include construct-properties($animation, $timing, $timing-function, $fill-mode: null, $delay:null, $iterations:null);
+      }
+    }
+    //Handle Stagger handles
+    //Don't need the pb-stagger class technically, but it's useful since you might not always want staggered animations on every repeating list
+    &.pb-stagger {
+      &.ng-enter-stagger {
+        animation-delay: $lightning;
+      }
+      &.ng-leave-stagger {
+        animation-delay: $lightning;
+      }
+    }
+  }
+}
+
+
+//****Manual Stagger Animations - for Ng-if/ng-hide/ng-show *******//
+
+@mixin forward-stagger-animation-delay($i, $initial-delay, $stagger-delay) {
+  @while $i > 0 {
+    &:nth-of-type(#{$i}) {
+      animation-delay: ($initial-delay + $stagger-delay * $i);
+    }
+    $i: $i - 1;
+  }
+}
+
+@mixin backward-stagger-animation-delay($i, $initial-delay, $stagger-delay) {
+  $x: 1;
+  @while $i > 0 {
+    &:nth-of-type(#{$i}) {
+      animation-delay: ($initial-delay + $stagger-delay * $x);
+    }
+    $i: $i - 1;
+    $x: $x + 1;
+  }
+}
+
+
+@mixin construct-stagger-classes($delay, $direction) {
+  $i: 1;
+  @while $i < 11 {
+    .pb-#{$direction}Stagger-#{$i} {
+      //locking down attributes that people can put a "manual" stagger on - this is meant to prevent someone from using this with a big table or something crazy
+      div, span, button, li {
+        @if $direction == 'forward' {
+          @include forward-stagger-animation-delay($i, 0s, $delay);
+        }
+        @else if $direction == 'backward' {
+          @include backward-stagger-animation-delay($i, 0s, $delay);
+        }
+        @else if $direction == 'bidirectional' {
+          &.ng-hide-remove, &.ng-enter, &.ng-enter-active {
+            @include forward-stagger-animation-delay($i, 0s, $delay);
+          }
+
+          &.ng-hide, &.ng-leave, &.ng-leave-active {
+            @include backward-stagger-animation-delay($i, 0s, $delay);
+          }
+        }
+      }
+    }
+    $i: $i + 1;
+  }
+}
+@include construct-stagger-classes($lightning, 'forward');
+@include construct-stagger-classes($lightning, 'backward');
+@include construct-stagger-classes($lightning, 'bidirectional');
+//This way is really inefficient, but I can't think of a better way to do this
+//It can't even be just set a max and be done with it since it won't work with
+// the reverse or the bidirectional fades
+
+
+//***************NOTES****************
+//** FIRST STEP - CONVERT TO ANGULAR ***//
+
+//***Not sure it makes sense to make a mixin yet - thinking we'll test the basic concept with extends using NG-animate, and then work on consolidating them both into a mixin ***//
+
+//**Kind of like using classes cause it means it's super easy to prototype quickly, and then you can move things off into the Sass really easily once it's perfected**
+
+//ng-animate provides some "namespacing" this way you can apply an animation to the base class that could be continuous, but if you have a specific effect for ng-hide/ng-show it provides a layer inbetween
+
+//Tues. Dec 29 - Working on the stagger animations - looks like I might need to write all the animations out in long hand rather then short hand - that way the animation delay still gets applied//
+
+
+//Old Stagger code
+
+// .pb-forwardStagger {
+// 	div, span, button, li {
+// 		@include forward-stagger-animation-delay(4, 0s, $lightning);
+// 	}
+// }
+// .pb-backwardStagger {
+// 	div, span, button, li {
+// 		@include backward-stagger-animation-delay(4, 0s, $lightning);
+// 	}
+// }
+// //targets class that starts with .pb-bidirectionalStagger- that way we can add custom "amounts" at the end of the class name
+// [class^="pb-bidirectionalStagger"] {
+//   //locking down attributes that people can put a "manual" stagger on - this is meant to prevent someone from using this with a big table or something crazy
+// 	div, span, button, li {
+// 		&.ng-hide-remove, &.ng-enter, &.ng-enter-active {
+// 			@include forward-stagger-animation-delay(4, 0s, $lightning);
+// 		}
+// 		&.ng-hide, &.ng-leave, &.ng-leave-active {
+// 			@include backward-stagger-animation-delay(4, 0s, $lightning);
+// 		}
+// 	}
+// }
+
+//Not sure we need this anymore?
+// @mixin stagger-transition-delay($i, $initial-delay, $stagger-delay) {
+//   @while $i > 0 {
+//     &:nth-of-type(#{$i}) {
+//       transition-delay: ($initial-delay + $stagger-delay * $i);
+//     }
+//     $i: $i - 1;
+//   }
+// }
+//**************

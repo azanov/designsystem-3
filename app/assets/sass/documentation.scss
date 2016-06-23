@@ -17,7 +17,9 @@
 @import 'documentation/icons';
 @import 'documentation/preview';
 @import 'documentation/specs';
-@import 'documentation/doc-animations';
+
+@import '../../modules/animation/sass/ds-animate';
+@import 'documentation/animate';
 
 .doc-gradient {
   @extend %gradient;
