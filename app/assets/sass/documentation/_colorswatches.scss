@@ -1,0 +1,38 @@
+
+// color swatches
+.swatches {
+  margin: 0;
+  padding: 0;
+  li {
+    font-family: $font-family-monospace;
+    list-style: none;
+    padding: 15px;
+    color: #fff;
+    &.bk {
+      color: #000;
+    }
+    span {
+      float: right;
+    }
+  }
+  &.spaced {
+    li {
+      margin-bottom: 5px;
+    }
+  }
+  .header {
+    font-family: $font-family-sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+  }
+}
+
+.gradient-swatch {
+  height: 50px;
+  &.gradient1 {
+    @extend %gradient;
+  }
+  &.gradient2 {
+    //background: $gradient2;
+  }
+}

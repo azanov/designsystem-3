@@ -9,12 +9,12 @@
           link: function postLink (scope, element, attrs) {
             element.addClass('draggable');
 
-            var $content = element.find('.modal-content'),
-              defaultOffset = {},
-              offsetX = 0,
-              offsetY = 0,
-              mouseXdelta = 0,
-              mouseYdelta = 0;
+            var $content = element.find('.modal-content');
+            var defaultOffset = {};
+            var offsetX = 0;
+            var offsetY = 0;
+            var mouseXdelta = 0;
+            var mouseYdelta = 0;
 
             $document.on('mousedown', function (event) {
               var offset = $content.offset();
