@@ -18,9 +18,12 @@
   color: crimson;
   font-style: italic;
 }
-
+.doc-side-nav > nav > .nav .nav > li > a {
+  display: none;
+  color: salmon;
+}
 
 .doc-side-nav > nav > .nav > li > a.active ~ .nav > li > a {
   display: block;
-  color: orange;
+  color: salmon;
 }
