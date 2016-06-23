@@ -78,19 +78,6 @@ gulp.task('sass-dist', function () {
     .pipe(gulp.dest('./dist/css'));
 });
 
-// gulp.task('sass-build', function () {
-//   // var cssfilter = filter('design_system.css', {restore: true});
-//   return gulp
-//     .src(sassFiles)
-//     .pipe(sass(sassOptions).on('error', sass.logError))
-//     .pipe(autoprefixer(autoprefixerOptions))
-//     .pipe(header(banner, { pkg: pkg }))
-//     .pipe(gulp.dest(cssFiles))
-//     // .pipe(cssfilter)
-//     .pipe(gulp.dest('./dist/css')
-//   );
-// });
-
 // usemin
 gulp.task('usemin', function () {
   gulp.src('./app/index.html')
