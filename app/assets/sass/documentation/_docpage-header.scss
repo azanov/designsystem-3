@@ -32,38 +32,6 @@
       }
     }
   }
-  .jump-bar {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    background-color: rgba(0, 0, 0, .1);
-    color: rgba(255, 255, 255, 1);
-    font-family: $font-family-ps-regular;
-    z-index: 4;
-    .jump-menu {
-      padding: 15px 0 0;
-      white-space: nowrap;
-      @include breakpoint(screen-xs) {
-        overflow-x: scroll;
-      }
-      li {
-        font-size: 1em;
-        margin-right: 1.5%;
-        transition: all .3s linear;
-        @media (min-width: 1200px) {
-          font-size: 1.2em;
-          margin-right: 4%;
-        }
-        a {
-          color: inherit;
-        }
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-    }
-  }
 }
 
 //tertiary button states
@@ -75,25 +43,36 @@
     opacity: .8;
   }
 }
-.sub-header.jump-bar {
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), linear-gradient(90deg, $pb-blue 0%, $pb-magenta 100%);
+.doc-side-nav {
+  ul {
+    width: 100%;
+    li {
+      a {
+        font-size: 20px;
+      }
+      ul {
+        //display: none;
+        li {
+          a {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
 
   // not docked
   &.headroom-top {
-    // position: relative;
-    height: 50px;
+    position: relative;
+    top: 50px;
     @include breakpoint(screen-xs) {
-      top: 119px;
+      display: none;
     }
   }
 
   //docked
   &.headroom-not-top {
-    overflow-y: scroll;
-    white-space: nowrap;
-    height: 50px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
-    top: 50px;
+    top: 100px;
     position: fixed;
     ul {
       padding-top: 15px;
