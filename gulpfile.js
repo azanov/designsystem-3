@@ -27,8 +27,8 @@ var banner = ['/**',
 ].join('\n');
 
 var sassFiles = './app/assets/sass/**/*.{scss,sass}';
-var sassAnimationFiles = './app/assets/sass/**/*.{scss,sass}';
 var cssFiles = './app/assets/css';
+var cssBuildFiles = './build/assets/css';
 var sassOptions = {
   errLogToConsole: true,
   outputStyle: 'compact'
@@ -52,25 +52,44 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer(autoprefixerOptions))
-    .pipe(sourcemaps.write(cssFiles))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(cssFiles))
     .pipe(browserSync.stream());
 });
-
-
+gulp.task('sass-build', function () {
+  return gulp
+    .src(sassFiles)
+    .pipe(sourcemaps.init())
+    .pipe(sass(sassOptions).on('error', sass.logError))
+    .pipe(autoprefixer(autoprefixerOptions))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(cssFiles))
+    .pipe(gulp.dest(cssBuildFiles));
+});
 
 gulp.task('sass-dist', function () {
-  var cssfilter = filter('design_system.css', {restore: true});
+  // var cssfilter = filter('design_system.css', {restore: true});
   return gulp
     .src(sassFiles)
     .pipe(sass(sassDistOptions).on('error', sass.logError))
     .pipe(autoprefixer(autoprefixerOptions))
+    .pipe(gulp.dest(cssFiles))
     .pipe(header(banner, { pkg: pkg }))
-    .pipe(gulp.dest('./app/assets/css'))
-    .pipe(cssfilter)
-    .pipe(gulp.dest('./dist/css')
-  );
+    .pipe(gulp.dest('./dist/css'));
 });
+
+// gulp.task('sass-build', function () {
+//   // var cssfilter = filter('design_system.css', {restore: true});
+//   return gulp
+//     .src(sassFiles)
+//     .pipe(sass(sassOptions).on('error', sass.logError))
+//     .pipe(autoprefixer(autoprefixerOptions))
+//     .pipe(header(banner, { pkg: pkg }))
+//     .pipe(gulp.dest(cssFiles))
+//     // .pipe(cssfilter)
+//     .pipe(gulp.dest('./dist/css')
+//   );
+// });
 
 // usemin
 gulp.task('usemin', function () {
@@ -215,6 +234,7 @@ gulp.task('serve-build', [], function () {
 // build
 gulp.task('build', ['clean:dist'], function () {
   runSequence(
+    'sass-build',
     'sass-dist',
     'copy:angular-i18n',
     'usemin',
