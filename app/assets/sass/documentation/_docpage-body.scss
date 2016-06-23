@@ -1,7 +1,3 @@
-.doc-body-sidebar {
-  margin-top: 60px;
-}
-
 .doc-body-example {
   border: solid 1px $pb-light-gray;
   padding: 20px 30px 10px;
@@ -23,6 +19,7 @@
 }
 .doc-body-snippet {
   height: auto;
+  margin-bottom: 10px;
 
   .CodeMirror {
     max-height: 41rem;
@@ -61,6 +58,9 @@
 }
 
 .pb-demo {
+  padding-top: 15px;
+  margin-bottom: 30px;
+
   .pb-demo-image a {
     margin-top: 15px;
     position: relative;
@@ -74,14 +74,13 @@
     }
 
     &:before {
+      font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif;
       content: 'View Demo';
       font-size: 18px;
       display: block;
-      color: $close-color;
+      color: #fff;
       @include vertical-align(absolute);
-      background-color: $pre-border-color;
       padding: 6px 12px;
-      border-radius: 24px;
       opacity: 0;
       transition: opacity .3s;
     }

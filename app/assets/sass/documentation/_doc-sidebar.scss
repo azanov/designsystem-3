@@ -1,0 +1,52 @@
+.doc-body-sidebar {
+  margin-top: 60px;
+  display: none;
+
+  @media (min-width: 960px) {
+    display: block;
+  }
+
+  &.affix {
+    @media (min-width: 768px) { width: 95px; }
+    @media (min-width: 992px) { width: 132px; }
+    @media (min-width: 1200px) { width: 165px; }
+
+    top: 20px;
+  }
+
+  &.affix-bottom {
+    @media (min-width: 768px) { width: 95px; }
+    @media (min-width: 992px) { width: 132px; }
+    @media (min-width: 1200px) { width: 165px; }
+    position: absolute;
+  }
+
+  h3 {
+    padding: 15px 10px;
+    margin: 0;
+    a {
+      text-decoration: none;
+      color: #2e2e2e;
+    }
+    &.active {
+      background-color: #c5cbe3;
+      border-color: #c5cbe3;
+      color: #2e2e2e;
+
+      & ~ .list-group {
+        display: block;
+      }
+    }
+
+
+  }
+
+  .list-group {
+    display: none;
+  }
+
+  .list-group-visible {
+    display: block;
+  }
+
+}

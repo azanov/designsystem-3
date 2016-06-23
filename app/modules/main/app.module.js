@@ -182,7 +182,15 @@
     $rootScope.$on('$routeChangeStart', function (newRoute, oldRoute) {});
 
     // STATE CHANGE SUCCESS
-    $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {});
+    $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+      $timeout(function(){
+        $('.doc-body-sidebar').affix({
+          offset: {
+            top: 200,
+            bottom: 70
+          }
+        });});
+    });
 
     // VIEW CONTENT LOADING
     $rootScope.$on('$viewContentLoading', function (event) {
