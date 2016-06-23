@@ -4,6 +4,12 @@
   color: #000;
   text-transform: uppercase;
 }
+.doc-side-nav > nav > .nav > li > a.active {
+  display: block;
+  color: orange;
+}
+
+
 // second level
 .doc-side-nav > nav > .nav > li > .nav > li > a {
   display: block;
