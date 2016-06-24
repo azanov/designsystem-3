@@ -1,0 +1,115 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="doc-head" id="sandbox">Sandbox</h1>
+      <p>Start playing with our different animations and combinations. If you're someone who learns by doing this is a great place to start.</p>
+
+    </div>
+    <div class="col-xs-12">
+      <div class="row sandbox-wrapper">
+        <div class="col-xs-5">
+          <div class="row">
+            <div class="panel-group accordion-group compact" id="accordion2" pb-accordion="">
+              <div class="panel panel-default">
+                <div class="panel-heading" ng-click="vm.showEntrance = !vm.showEntrance">
+                  <label><i class="fa fa-caret-right" ng-class="{'fa-rotate-90': vm.showEntrance}"></i>&nbsp;&nbsp;Entrances</label>
+                </div>
+                <div class="panel-collapse" ng-show="vm.showEntrance">
+                  <div class="panel-body">
+                    <span ng-repeat="entrance in vm.animationClasses" class="more-info" ng-click="vm.pickEntrance(entrance.name)" ng-class="{'selected': vm.selectedEntrance === entrance.name}" ng-if="entrance.type === 'entrance'">{{entrance.name}}
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" ng-click="vm.showExit = !vm.showExit">
+                  <label><i class="fa fa-caret-right" ng-class="{'fa-rotate-90': vm.showExit}"></i>&nbsp;&nbsp;Exits</label>
+                </div>
+                <div class="panel-collapse" ng-show="vm.showExit">
+                  <div class="panel-body">
+                    <span ng-repeat="exit in vm.animationClasses" class="more-info" ng-click="vm.pickExit(exit.name)" ng-class="{'selected': vm.selectedExit === exit.name}" ng-if="exit.type === 'exit'">{{exit.name}}
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" ng-click="vm.showAccent = !vm.showAccent">
+                  <label><i class="fa fa-caret-right" ng-class="{'fa-rotate-90': vm.showAccent}"></i>&nbsp;&nbsp;Emphasis</label>
+                </div>
+                <div class="panel-collapse" ng-show="vm.showAccent">
+                  <div class="panel-body">
+                    <span ng-repeat="accent in vm.animationClasses" class="more-info" ng-click="vm.pickAccent(accent.name)" ng-class="{'selected': vm.selectedAccent === accent.name}" ng-if="accent.type === 'accent'">{{accent.name}}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="controls">
+              <div class="col-xs-12">
+                <div class="btn-group form-group" data-toggle="buttons" ng-init="vm.angularDirective = 'ng-if'">
+                  <label ng-click="vm.angularDirective = 'ng-if'" class="btn btn-default active">
+                    <input type="radio" name="ng-if" id="ng-if" autocomplete="off" ng-checked="vm.angularDirective === 'ng-if'" checked="checked">ng-if
+                  </label>
+                  <label ng-click="vm.angularDirective = 'ng-show'" class="btn btn-default">
+                    <input type="radio" name="ng-show" id="ng-show" autocomplete="off" ng-checked="vm.angularDirective === 'ng-show'" checked="checked">ng-show
+                  </label>
+                  <label ng-click="vm.angularDirective = 'ng-hide'" class="btn btn-default">
+                    <input type="radio" name="ng-hide" id="ng-hide" autocomplete="off" ng-checked="vm.angularDirective === 'ng-hide'" checked="checked">ng-hide
+                  </label>
+                  <label ng-click="vm.angularDirective = 'ng-repeat'" class="btn btn-default">
+                    <input type="radio" name="ng-repeat" id="ng-repeat" autocomplete="off" ng-checked="vm.angularDirective === 'ng-repeat'" checked="checked">ng-repeat
+                  </label>
+                </div>
+                <div ng-hide="vm.angularDirective === 'ng-repeat'" class="btn btn-success pull-right" ng-click="vm.turnOn = !vm.turnOn" ng-init="vm.turnOn = true">Toggle</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-7 stage-wrapper">
+
+        <div class="stage">
+
+            <div ng-if="vm.angularDirective === 'ng-if'" class="pb-crossFade">
+              <div class="{{vm.selectedEntrance}} {{vm.selectedExit}} {{vm.selectedAccent}}" ng-if="vm.turnOn">
+                <img src="http://shirta.com/uploads/t-shirt-designs/f/o/medium/fox-cute-face-square-75691597.png" class="img-responsive center-block">
+              </div>
+            </div>
+
+            <div ng-if="vm.angularDirective === 'ng-show'" class="pb-crossFade">
+              <div class="{{vm.selectedEntrance}} {{vm.selectedExit}} {{vm.selectedAccent}}" ng-show="vm.turnOn">
+                <img src="http://shirta.com/uploads/t-shirt-designs/f/o/medium/fox-cute-face-square-75691597.png" class="img-responsive center-block">
+              </div>
+            </div>
+
+            <div ng-if="vm.angularDirective === 'ng-hide'" class="pb-crossFade">
+              <div class="{{vm.selectedEntrance}} {{vm.selectedExit}} {{vm.selectedAccent}}" ng-hide="vm.turnOn">
+                <img src="http://shirta.com/uploads/t-shirt-designs/f/o/medium/fox-cute-face-square-75691597.png" class="img-responsive center-block">
+              </div>
+            </div>
+
+            <div ng-if="vm.angularDirective === 'ng-repeat'" class="pb-crossFade">
+              <div class="form-group">
+                <input class="form-control" placeholder="Filter to animate" ng-model="vm.filterList">
+              </div>
+              <table class="table">
+                <tr class="pb-stagger {{vm.selectedEntrance}} {{vm.selectedExit}} {{vm.selectedAccent}}" ng-repeat="movie in vm.movies | filter:vm.filterList as results">
+                  <td>{{movie}}</td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+
+          <div>
+            <pre><span ng-if="vm.angularDirective === 'ng-repeat'">.pb-stagger </span><span ng-if="vm.selectedEntrance">.</span>{{vm.selectedEntrance}} <span ng-if="vm.selectedExit">.</span>{{vm.selectedExit}} <span ng-if="vm.selectedAccent">.</span>{{vm.selectedAccent}}</pre>
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

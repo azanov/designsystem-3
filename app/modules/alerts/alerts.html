@@ -1,0 +1,331 @@
+<div class="doc-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero-header">
+          <!-- <div class="eyebrow">????</div> -->
+          <h1>Alerts</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-header jump-bar headroom" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}" headroom offset="240" tolerance="5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- <ul class="list-unstyled list-inline jump-menu">
+            <li>
+              <a ui-sref="sample({'#':'sampleID'})">Sample Jump Label</a>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+
+  <!-- <div class="row">
+    <div class="col-md-8">
+      <h1 id="alerts" class="doc-head">Alerts</h1>
+    </div>
+  </div> -->
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Usage</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <ul>
+        <li>Limit to 1-2 sentences.</li>
+        <li>Be sure to apply the correct color for an alert&rsquo;s level.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Levels</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <p>We have four levels of alerts:</p>
+      <ul>
+        <li>Error: an application error has occurred; this can be due to system issues or insufficient input from the user.</li>
+        <li>Warning: the user is about to perform an irreversible or destructive action; or the result of an action is unexpected, but is not an error.</li>
+        <li>Success: confirmation that the application was able to complete a user’s action or request.</li>
+        <li>Info: the application has non-critical — but helpful — information to share.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Default Alerts</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <figure>
+        <figcaption>Error</figcaption>
+        <div class="alert alert-danger">
+          We couldn’t complete your request. Please try again in a moment.
+        </div>
+      </figure>
+
+      <figure>
+        <figcaption>Warning</figcaption>
+        <div class="alert alert-warning">
+          Enter a valid date using mm/dd/yyyy.
+        </div>
+      </figure>
+
+      <figure>
+        <figcaption>Success</figcaption>
+        <div class="alert alert-success">
+          A new address was imported.
+        </div>
+      </figure>
+
+      <figure>
+        <figcaption>Info</figcaption>
+        <div class="alert alert-info">
+          Learn more about Cost Accounts in the Help section.
+        </div>
+      </figure>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Dismissable Alerts</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <figure>
+        <figcaption>Error</figcaption>
+        <div class="alert alert-danger">
+          <button aria-hidden="true" class="close" data-dismiss="alert" type="button"></button>
+          We couldn’t complete your request. Please try again in a moment.
+        </div>
+      </figure>
+
+      <figure>
+        <figcaption>Warning</figcaption>
+        <div class="alert alert-warning">
+          <button aria-hidden="true" class="close" data-dismiss="alert" type="button"></button>
+          Enter a valid date using mm/dd/yyyy.
+        </div>
+      </figure>
+
+      <figure>
+        <figcaption>Success</figcaption>
+        <div class="alert alert-success">
+          <button aria-hidden="true" class="close" data-dismiss="alert" type="button"></button>
+          A new address was imported.
+        </div>
+      </figure>
+
+      <figure>
+        <figcaption>Info</figcaption>
+        <div class="alert alert-info">
+          <button aria-hidden="true" class="close" data-dismiss="alert" type="button"></button>
+          Learn more about Cost Accounts in the Help section.
+        </div>
+      </figure>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Panel Alerts</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <figure>
+        <figcaption>Collapsible Panel with Error Message</figcaption>
+        <div class="panel panel-filled-heading panel-default">
+          <div class="panel-heading panel-toggle" ng-click="alerts.error.open = !alerts.error.open">
+            <i class="nc-icon-mini ui-2_alert-circle- text-danger"></i>
+            Shipping Address
+            <i class="nc-icon-mini arrows-2_small-right pull-right transition-all" ng-class="{'rotate-90': !alerts.error.open}"></i>
+          </div>
+          <div uib-collapse="alerts.error.open">
+            <div class="panel-body">
+              <div class="alert alert-danger">
+                We couldn’t complete your request. Please try again in a moment.
+              </div>
+
+              <p>
+                <b>Melanine Ann Daniels
+                  <br>
+                  Company Name</b>
+              </p>
+              <p>42 Main Street, Suite 516<br>
+                Bodega Bay, CA, 11021 USA</p>
+
+              <p>
+                <a href="mailto:mdaniels@gmail.com">mdaniels@gmail.com</a><br>
+                212-201-2018</p>
+            </div>
+          </div>
+        </div>
+      </figure>
+    </div>
+
+    <div class="col-sm-4">
+      <figure>
+        <figcaption>Collapsible Panel with Success Message</figcaption>
+        <div class="panel panel-filled-heading panel-default">
+          <div class="panel-heading panel-toggle" ng-click="alerts.success.open = !alerts.success.open">
+            <i class="nc-icon-mini ui-1_check-circle-08 text-success"></i>
+            Shipping Address
+            <i class="nc-icon-mini arrows-2_small-right pull-right transition-all" ng-class="{'rotate-90': !alerts.success.open}"></i>
+          </div>
+          <div uib-collapse="alerts.success.open">
+            <div class="panel-body">
+              <div class="alert alert-success">
+                <strong>Success!</strong>
+                Your new address was imported.
+              </div>
+
+              <p>
+                <b>Melanine Ann Daniels
+                  <br>
+                  Company Name</b>
+              </p>
+              <p>42 Main Street, Suite 516<br>
+                Bodega Bay, CA, 11021 USA</p>
+
+              <p>
+                <a href="mailto:mdaniels@gmail.com">mdaniels@gmail.com</a><br>
+                212-201-2018</p>
+            </div>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Alert Positioning</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-4">
+      <figure>
+        <figcaption>Page Level Alert Position</figcaption>
+        <img class="img-responsive" src="modules/alerts/assets/images/page-level-alert.png" alt=""/>
+      </figure>
+    </div>
+
+    <div class="col-xs-12 col-md-4">
+      <figure>
+        <figcaption>Container Level (Tabs) Alert Position</figcaption>
+        <img class="img-responsive" src="modules/alerts/assets/images/container-level-tabs-alert.png" alt=""/>
+      </figure>
+    </div>
+
+    <div class="col-xs-12 col-md-3">
+      <figure>
+        <figcaption>Container Level (Modal) Alert Position</figcaption>
+        <img class="img-responsive" src="modules/alerts/assets/images/container-level-modal-alert.png" alt=""/>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row spacer-top-xl">
+    <div class="col-xs-12 col-md-6">
+      <figure>
+        <figcaption>Container Level (Accordion) Alert Position</figcaption>
+        <img class="img-responsive" src="modules/alerts/assets/images/container-level-accordion-alert.png" alt=""/>
+      </figure>
+    </div>
+
+    <div class="col-xs-12 col-md-6">
+      <figure>
+        <figcaption>Container Level (Panel) Alert Position</figcaption>
+        <img class="img-responsive" src="modules/alerts/assets/images/container-level-panel-alert.png" alt=""/>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Transitory Alert</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <p>Use to provide an inline alert for a specific onscreen element.</p>
+    </div>
+
+    <div class="col-md-8 col-md-offset-1">
+
+      <figure>
+        <figcaption>Transitory Alert</figcaption>
+        <span ng-model="alerts.transitoryAlert" pb-transitory-alert>
+          <button class="btn btn-primary" ng-click="setMessage()">Click Me</button>
+        </span>
+      </figure>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Writing Alert Copy</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <p>When writing your alerts, focus on providing a clear, simple description of what has happened or what needs to happen next. Here are some basic guidelines for how to write these critical pieces of user interface copy.</p>
+
+      <h3>Goals</h3>
+      <ul>
+        <li>Help the user understand what action caused the alert.</li>
+        <li>Explain what the user can do next to remedy the situation, if applicable.</li>
+      </ul>
+      <h3>Style</h3>
+      <ul>
+        <li>Use active rather than passive writing.</li>
+        <li>Focus on what the user most needs to know.</li>
+        <li>Provide solutions to a problem where possible.</li>
+        <li>Construct short sentences, written in plain language.</li>
+        <li>Use word choices that fit the scenario. The examples above show different ways to describe errors, tips, etc.</li>
+      </ul>
+
+      <h3>Capitalization</h3>
+      <p>Alert labels use sentence capitalization, except when they include words or phrases that are acronyms or proper nouns (e.g., “RMA number,” “Cost Account,” “ZIP Code”).</p>
+
+      <h3>Punctuation</h3>
+      <ul>
+        <li>Conclude your alert copy with a period.</li>
+        <li>Don’t phrase your alert copy as a question. If you need a response from the user, use a modal.</li>
+        <li>You can include exclamation points in success alerts. For warning alerts, reserve their use when alerting users to critical information, not to everyday alerts. Never include an exclamation point in an error alert.</li>
+      </ul>
+
+    </div>
+  </div>
+
+</div>

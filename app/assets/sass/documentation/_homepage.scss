@@ -1,0 +1,208 @@
+// home page
+// scss-lint:disable MergeableSelector
+
+.home {
+  // all hero divs
+  div[class^='hero-'] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    @include breakpoint(screen-xs) {
+      flex-direction: column;
+      padding: 20px;
+    }
+  }
+
+  p.versions {
+    font-size: 12px;
+    a {
+      font-size: 12px;
+      color: hsl(0, 0%, 90%);
+      text-decoration: underline;
+    }
+  }
+
+  .diptych {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(screen-xs) {
+      flex-direction: column;
+      padding: 0 20px;
+    }
+    > div:first-child {
+      padding-right: 20px;
+      transition: padding .5s ease;
+    }
+    transition: padding .5s ease;
+  }
+
+  .title-unit {
+    h1 {
+      color: inherit;
+      font-size: 32px;
+      font-family: $font-family-ps-regular;
+      margin-top: 5px;
+      @include breakpoint(screen-xs) {
+        font-size: 24px;
+      }
+    }
+    .eyebrow {
+      color: inherit;
+      font-size: 20px;
+      font-family: $font-family-ps-light;
+    }
+    p {
+      color: inherit;
+      font-size: 16px;
+      line-height: 1.5;
+      &.versions {
+        font-size: 12px;
+        @include breakpoint(screen-xs) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  //
+  .hero-main {
+    background: #3d52a3 url('../images/hero-bg.jpg') top right 0 no-repeat;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    color: #fff;
+    position: relative;
+    .title-unit {
+      max-width: 600px;
+    }
+    .scroll-down-arrow {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+    }
+  }
+
+  //
+  .hero-principles {
+    .title-unit {
+      h1 {
+        color: #717171;
+      }
+      .eyebrow {
+        color: $pb-magenta;
+      }
+    }
+  }
+
+  //
+  .hero-web {
+    background: #cf098b url('../images/hero-web-pattern.jpg') top center no-repeat;
+    .diptych {
+      > div:first-child {
+        margin-left: 20px;
+      }
+    }
+    .title-unit {
+      h1 {
+        color: #fff;
+      }
+      .eyebrow {
+        color: rgba(255, 255, 255, .6);
+      }
+      p {
+        color: #fff;
+      }
+    }
+    @include breakpoint(screen-xs) {
+      img {
+        max-width: 90%;
+        margin: 20px 0 0;
+      }
+    }
+  }
+
+  //
+  .hero-mobile {
+    .title-unit {
+      h1 {
+        color: #717171;
+      }
+      .eyebrow {
+        color: rgba(207, 9, 137, .65);
+      }
+    }
+    @include breakpoint(screen-xs) {
+      img {
+        max-width: 60%;
+        margin: 20px 0 0 20px;
+      }
+    }
+  }
+
+  //
+  .hero-global {
+    background: url('../images/hero-globalization.jpg') center center no-repeat, linear-gradient(90deg, #9a4097 0%, #4951a2 100%);
+    .title-unit {
+      h1 {
+        color: #fff;
+      }
+      .eyebrow {
+        color: rgba(255, 255, 255, .6);
+      }
+    }
+  }
+
+  //
+  .hero-resources {
+    .title-unit {
+      h1 {
+        color: #717171;
+      }
+      .eyebrow {
+        color: rgba(207, 9, 137, .65);
+      }
+    }
+  }
+
+  // offset layout for large desktop
+  @media screen and (min-width: $screen-lg) {
+    .hero-principles {
+      .diptych {
+        padding-right: 190px;
+        > div:first-child {
+          padding-right: 150px;
+        }
+      }
+    }
+    .hero-web {
+      .diptych {
+        > div:first-child {
+          padding-right: 140px;
+        }
+      }
+    }
+    .hero-mobile {
+      .diptych {
+        padding-right: 170px;
+        > div:first-child {
+          padding-right: 230px;
+        }
+      }
+    }
+    .hero-global {
+      .diptych {
+        padding-right: 100px;
+        > div:first-child {
+          padding-right: 200px;
+        }
+      }
+    }
+    .hero-resources {
+      .diptych {
+        padding-right: 160px;
+        > div:first-child {
+          padding-right: 120px;
+        }
+      }
+    }
+  }
+}

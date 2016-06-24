@@ -4,34 +4,47 @@
     // third party modules are in /core/core.module.js
     'pb.core',
     'pb.ds.home',
-    'pb.ds.elements',
+    'pb.ds.accordions',
+    'pb.ds.alerts',
+    'pb.ds.badges',
+    'pb.ds.breadcrumbs',
+    'pb.ds.buttons',
+    'pb.ds.cards',
+    'pb.ds.charts',
+    'pb.ds.checkboxes',
+    'pb.ds.content',
+    'pb.ds.datepickers',
+    'pb.ds.dropdowns',
+    'pb.ds.errors',
     'pb.ds.forms',
     'pb.ds.foundation',
+    'pb.ds.gallery',
     'pb.ds.globalization',
-    'pb.ds.graphs',
-    'pb.ds.helpers',
-    'pb.ds.mobile',
-    'pb.ds.landing',
-    'pb.ds.feedback',
-    'pb.ds.patterns',
-    'pb.ds.principles',
-    'pb.ds.resources',
-    'pb.ds.tables',
-    'pb.ds.writing',
-    'pb.ds.splitview',
-    'pb.ds.help',
     'pb.ds.hamburger',
-    'pb.ds.content',
-    'pb.ds.errors',
-    'pb.ds.modals',
+    'pb.ds.help',
+    'pb.ds.helpers',
     'pb.ds.inputs',
-    'pb.ds.dropdowns',
-    'pb.ds.checkboxes',
+    'pb.ds.landing',
+    'pb.ds.miller',
+    'pb.ds.mobile',
+    'pb.ds.modals',
+    'pb.ds.patterns',
+    'pb.ds.popovers',
+    'pb.ds.principles',
+    'pb.ds.progress',
     'pb.ds.radiobuttons',
-    'pb.ds.switches',
+    'pb.ds.resources',
+    'pb.ds.splitview',
     'pb.ds.steppers',
-    'pb.ds.datepickers',
-    'pb.ds.sample'
+    'pb.ds.switches',
+    'pb.ds.tables',
+    'pb.ds.tabs',
+    'pb.ds.tiles',
+    'pb.ds.toastrs',
+    'pb.ds.uibootstrap',
+    'pb.ds.widgets',
+    'pb.ds.animation',
+    'pb.ds.writing'
   ]);
 
   // angular scroll configuration
@@ -52,7 +65,7 @@
   // ui-bootstrap tooltip
   angular.module('app').config(function ($uibTooltipProvider) {
     $uibTooltipProvider.options({
-      appendToBody: true
+      // appendToBody: true
     });
   });
 
@@ -207,8 +220,10 @@
         hashScroll($location.$$hash, true);
       }
     });
-
     // handle scrolling to updated hash
+
+
+    //handle scrolling to updated hash
     // @param timeout : boolean, if true use timeout for view animation delay
     function hashScroll (hash, timeout) {
       timeout = timeout || false;

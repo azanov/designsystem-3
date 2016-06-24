@@ -17,8 +17,8 @@
         element.addClass('collapse-btn ' + options.iconOpen);
 
         element.on('click', function (event) {
-          var isOpen = $(this).hasClass('closed'),
-            $panelBody = $(this).closest('.panel').find('.panel-body');
+          var isOpen = $(this).hasClass('closed');
+          var $panelBody = $(this).closest('.panel').find('.panel-body');
 
           if (!isOpen) {
             $panelBody.slideUp(200);

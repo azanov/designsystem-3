@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand brand-text" href="#/">Design System</a>
+      <a class="navbar-brand brand-text" href="#/">Design System 3<span class="pre-release">&alpha;</span></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -33,20 +33,20 @@
                     <div class="yamm-child-column" ng-repeat="category in header.nav[1].Web[0].children[0].children">
                       <p class="section-head">{{category.label}}</p>
 
-                      <ul class="list-unstyled menu-items menu-items-two-column">
+                      <div class="list-unstyled menu-items menu-items-two-column">
 
                         <!-- if no sub items-->
-                        <li ng-if="!item.children" ng-repeat="item in category.children">
+                        <div ng-if="!item.children" ng-repeat="item in category.children">
                           <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
-                        </li>
+                        </div>
 
                         <!-- if sub items -->
                         <span ng-if="item.children" ng-repeat="item in category.children">
-                          <li ng-repeat="item in item.children ">
+                          <div ng-repeat="item in item.children ">
                             <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
-                          </li>
+                          </div>
                         </span>
-                      </ul>
+                      </div>
                     </div>
                   </div>
               </div>
@@ -64,19 +64,19 @@
                 <div class="yamm-flex-container">
                   <div class="yamm-child-column" ng-repeat="category in header.nav[2].Mobile[0].children[0].children">
                     <p class="section-head">{{category.label}}</p>
-                    <ul class="list-unstyled menu-items menu-items-two-column">
+                    <div class="list-unstyled menu-items menu-items-two-column">
                       <!-- if no sub items-->
-                      <li ng-if="!item.children" ng-repeat="item in category.children">
+                      <div ng-if="!item.children" ng-repeat="item in category.children">
                         <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
-                      </li>
+                      </div>
 
                       <!-- if sub items -->
                       <span ng-if="item.children" ng-repeat="item in category.children">
-                        <li ng-repeat="item in item.children">
+                        <div ng-repeat="item in item.children">
                           <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
-                        </li>
+                        </div>
                       </span>
-                    </ul>
+                    </div>
                   </div>
                 </div>
 
