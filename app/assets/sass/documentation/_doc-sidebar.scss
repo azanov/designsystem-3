@@ -3,6 +3,7 @@
   // not docked
   &.headroom-top {
     position: relative;
+    // transition: top .2s;
     top: 50px;
     @include breakpoint(screen-xs) {
       display: none;
@@ -11,7 +12,7 @@
 
   //docked
   &.headroom-not-top {
-    top: 100px;
+    top: 75px;
     position: fixed;
   }
 }
