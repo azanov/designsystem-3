@@ -241,16 +241,13 @@ $grid-column-padding: 15px;
   }
 }
 
-
-
 @mixin focus-ring {
   border-color: #189dbd;
   // outline-width: 6px;
   // outline-style: solid;
   // outline-color: hsla(190, 58%, 79%, .6);
   outline: none;
-  box-shadow: 0 0 10px rgba(76, 211, 255, 0.77);
-
+  box-shadow: 0 0 10px rgba(76, 211, 255, .77);
 }
 
 @mixin webkit-only {
