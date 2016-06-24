@@ -25,15 +25,15 @@
 
 			<h5>Sorting</h5>
 			<div class="btn-group" role="group">
-					<button class="btn btn-default" ng-click="gallery.orderBy(null)">None</button>
+					<button class="btn btn-default active" ng-click="gallery.orderBy('name')">Name</button>
 					<button class="btn btn-default" ng-click="gallery.orderBy('version')">Version</button>
 			</div>
 		</div>
 	
 		<div class="col-md-9">
-			<div class="row">
-				<span dynamic-layout items="gallery.data" filters="gallery.filters" rankers="gallery.rankers"></span>
-			</div>
+			<!--<div class="row">-->
+				<div class="row" dynamic-layout items="gallery.data" filters="gallery.filters" rankers="gallery.rankers"></div>
+			<!--</div>-->
 		</div>
 	</div>
 

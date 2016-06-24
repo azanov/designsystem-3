@@ -76,48 +76,49 @@
   }
 
 
+  [dynamic-layout]{
+    // float: left;
+    position: relative;
+  }
 
-.dynamic-layout-item-parent {
-  position: relative !important;
-}
-
-// .dynamic-layout-item {
-//   padding: 10px;
-// }
-
-.move-items-animation{
-  transition-property: left, top;
-  transition-duration: .5s;
-  transition-timing-function: ease-in-out;
-}
-
-.dynamic-layout-item-parent.ng-enter{
-  transition: .5s ease-in-out;
-  opacity:0;
-}
-.dynamic-layout-item-parent.ng-enter.ng-enter-active{
-  opacity:1;
-}
-.dynamic-layout-item-parent.ng-leave{
-  transition: .5s ease-in-out;
-  opacity:1;
-}
-.dynamic-layout-item-parent.ng-leave.ng-leave-active{
-  opacity:0;
-}
-
-[dynamic-layout]{
-  //float: left;
-  position: relative;
-}
-// .container-fluid{
-//   position: absolute;
-//   left: 50%;
-//   transform: translate(-50%);
-// }
-// .title{
-//   margin-bottom: 50px;
-// }
+  @media (min-width: 900px) {
+    [dynamic-layout]{
+      // width: 900px;
+    }
+  }
+  @media (min-width: 600px) and (max-width: 900px){
+    [dynamic-layout]{
+      // width: 600px;
+    }
+  }
+  @media (max-width: 600px){
+    [dynamic-layout]{
+      // width: 300px;
+    }
+  }
+  .dynamic-layout-item-parent {
+    width: 100%;
+    display: block;
+  }
+  .move-items-animation{
+    transition-property: left, top;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+  }
+  .dynamic-layout-item-parent.ng-enter{
+    transition: .5s ease-in-out;
+    opacity:0;
+  }
+  .dynamic-layout-item-parent.ng-enter.ng-enter-active{
+    opacity:1;
+  }
+  .dynamic-layout-item-parent.ng-leave{
+    transition: .5s ease-in-out;
+    opacity:1;
+  }
+  .dynamic-layout-item-parent.ng-leave.ng-leave-active{
+    opacity:0;
+  }
 
 
 

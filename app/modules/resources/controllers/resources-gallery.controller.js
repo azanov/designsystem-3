@@ -4,9 +4,9 @@
   angular.module('pb.ds.resources').controller('ResourcesGalleryController', function ($log, $uibModal, $window, GalleryResolve) {
     var _this = this;
     _this.data = GalleryResolve;
-
     _this.filters = null;
     _this.rankers = null;
+    _this.rankerOrder = true;
 
     // Update the filters array based on the given filter $param filter: the name of a tab like 'work'
     _this.filter = function (filter) {
@@ -15,17 +15,15 @@
       } else {
         _this.filters = null;
       }
-      
     };
 
     // Update the rankers array based on the given ranker $param ranker: the name of a card's property or a custom function 
     _this.orderBy = function (ranker) {
-      if (ranker) {
-        _this.rankers = [[ranker, 'desc']];
-      } else {
-        _this.rankers = null;
-      }
-      
+
+      var order = (_this.rankerOrder) ? 'desc' : 'asc';
+      _this.rankerOrder = !_this.rankerOrder;
+
+      _this.rankers = [[ranker, order]];
     };
 
     _this.open = function (item) {
