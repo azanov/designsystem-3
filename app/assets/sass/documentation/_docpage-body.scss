@@ -57,6 +57,34 @@ $icon-info: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZ
   height: auto;
   margin-bottom: 10px;
 
+  .extra-links {
+
+    &.extra-links {
+       @media (min-width: 440px) { left: 61%;}
+       @media (min-width: 480px) { left: 62%;}
+       @media (min-width: 508px) { left: 63%;}
+       @media (min-width: 608px) { left: 69%;}
+       @media (min-width: 628px) { left: 70%;}
+       @media (min-width: 668px) { left: 72%;}
+       @media (min-width: 728px) { left: 74%;}
+       @media (min-width: 768px) { left: 75%;}
+    }
+    display: block;
+    position: relative;
+    top: 31px;
+    width: 25%;
+    min-width: 180px;
+
+    .copy-code{ width: 57%;}
+    .plunker{ width: 40%;}
+
+    a{
+      text-decoration: none;
+      display: inline-block;
+      text-align: right;
+    }
+  }
+
   .CodeMirror {
     max-height: 41rem;
     border-bottom: solid 1px $pb-light-gray;

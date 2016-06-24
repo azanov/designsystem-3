@@ -1,4 +1,5 @@
 .doc-body-sidebar {
+
   margin-top: 60px;
   display: none;
 
@@ -21,14 +22,26 @@
     position: absolute;
   }
 
-  h3 {
-    padding: 15px 10px;
+  ul{
+    list-style-type: none;
+    padding: 0;
     margin: 0;
+    li{
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .list-group-section {
+    padding: 5px 0px;
     font-size: 16px;
+
     a {
+      padding-left: 5px;
       text-decoration: none;
       color: #2e2e2e;
     }
+
     &.active {
       color: #2e2e2e;
 
@@ -36,18 +49,31 @@
         display: block;
       }
     }
-
-
   }
+
+  .active-group-heading{
+    border-left: 2px solid $pb-blue-500;
+    background-color: #fff;
+  }
+
   .list-group-item {
+    padding: 0;
+
     &.active {
-      border-left: 2px solid $pb-blue-500;
       background-color: #fff;
     }
   }
 
+  .active {
+    border-left: 2px solid $pb-blue-500;
+  }
+
   .list-group {
     display: none;
+
+    a {
+      padding-left: 15px;
+    }
   }
 
   .list-group-visible {
