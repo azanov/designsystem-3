@@ -13,13 +13,18 @@
 
     $rootScope.$on('duScrollspy:becameActive', function($event, $element, $target){
       var parent = $element.parent('.list-group'),
-        visibleClass = 'list-group-visible';
+        visibleClass = 'list-group-visible',
+        groupHeaddingClass = 'active-group-headding';
 
       $('.' + visibleClass).removeClass(visibleClass);
 
+      $('.' + groupHeaddingClass).removeClass(groupHeaddingClass);
+
       if (parent.length) {
+        parent.prev().find('a').addClass(groupHeaddingClass);
         parent.addClass(visibleClass);
       }
+
 
     });
 
