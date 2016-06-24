@@ -43,6 +43,7 @@
     'pb.ds.toastrs',
     'pb.ds.uibootstrap',
     'pb.ds.widgets',
+    'pb.ds.animation',
     'pb.ds.writing'
   ]);
 
@@ -64,7 +65,7 @@
   // ui-bootstrap tooltip
   angular.module('app').config(function ($uibTooltipProvider) {
     $uibTooltipProvider.options({
-      appendToBody: true
+      // appendToBody: true
     });
   });
 
@@ -211,8 +212,10 @@
         hashScroll($location.$$hash, true);
       }
     });
-
     // handle scrolling to updated hash
+
+
+    //handle scrolling to updated hash
     // @param timeout : boolean, if true use timeout for view animation delay
     function hashScroll (hash, timeout) {
       timeout = timeout || false;
