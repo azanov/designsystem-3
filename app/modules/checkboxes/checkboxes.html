@@ -42,6 +42,7 @@
                 <li><a href="#osInline" du-smooth-scroll du-scrollspy>OS Inline</a></li>
               </ul>
             </li>
+
           </ul>
         </nav>
 
@@ -54,7 +55,7 @@
       <section id="overview">
         <div class="row">
           <div class="col-md-12">
-            <h1 class="doc-head">Overview</h1>
+            <h1>Overview</h1>
           </div>
         </div>
 
@@ -68,7 +69,7 @@
 
         <div class="row">
           <div class="col-md-12">
-            <h2 class="doc-sectionhead" id="usage">Usage</h2>
+            <h2 id="usage">Usage</h2>
           </div>
         </div>
 
@@ -90,22 +91,22 @@
       <section id="stacked">
         <div class="row">
           <div class="col-md-12">
-            <h1 class="doc-head">Stacked Checkboxes</h1>
+            <h1>Stacked Checkboxes</h1>
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-12">
-            <h2 class="doc-sectionhead" id="enhancedStacked">
+            <h2 id="enhancedStacked">
               Enhanced Stacked Checkboxes
-              <div class="doc-body-badge badge badge-brand-success">Added in v. 2.0</div>
+              <div class="badge badge-added">Added in v2.0.3</div>
             </h2>
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-4">
-            <div class="doc-body-example">
+            <figure>
               <div class="controls-stacked">
                 <label class="control checkbox">
                   <input type="checkbox">
@@ -129,7 +130,7 @@
                   But not this custom checkbox
                 </label>
               </div>
-            </div>
+            </figure>
           </div>
         </div>
 
@@ -183,30 +184,28 @@
         </div>
 
         <div class="row">
-
-    <div class="col-md-12">
-      <div class="alert alert-warning alert-noborder">
-        As a best practice, we highly recommend using the button tag element whenever possible to ensure mathcing cross-browser rendering.
-      </div>
-      <div class="alert alert-info alert-noborder">
-        Learn more about Cost Accounts in the Help section.
-      </div>
+          <div class="col-md-12">
+            <div class="alert alert-warning alert-noborder">
+              As a best practice, we highly recommend using the button tag element whenever possible to ensure mathcing cross-browser rendering.
+            </div>
+            <div class="alert alert-info alert-noborder">
+              Learn more about Cost Accounts in the Help section.
+            </div>
           </div>
-
         </div>
 
         <div class="row">
           <div class="col-md-12">
-            <h2 class="doc-sectionhead" id="osStacked">
+            <h2 id="osStacked">
               Standard OS Stacked Checkboxes
-              <div class="doc-body-badge badge badge-brand-success">Added in v. 2.0</div>
+              <span class="badge badge-deprecated">Deprecated in v2.0.0</span>
             </h2>
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-4">
-            <div class="doc-body-example">
+            <figure>
               <div class="checkbox">
                 <label for="c1">
                   <input checked id="c1" type="checkbox">
@@ -224,7 +223,7 @@
                   This is a disabled checkbox
                 </label>
               </div>
-            </div>
+            </figure>
           </div>
         </div>
 
@@ -242,22 +241,22 @@
 
         <div class="row">
           <div class="col-md-12">
-            <h1 class="doc-head">Inline Checkboxes</h1>
+            <h1>Inline Checkboxes</h1>
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-12">
-            <h2 class="doc-sectionhead" id="enhancedInline">
+            <h2 id="enhancedInline">
               Enhanced Inline Checkboxes
-              <div class="badge badge-brand-success">Added in v. 2.0</div>
+              <div class="badge badge-added">Added in v2.0.0</div>
             </h2>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-md-5">
-            <div class="doc-body-example">
+          <div class="col-md-12">
+            <figure>
               <div class="controls-inline">
                 <label class="control checkbox">
                   <input type="checkbox">
@@ -270,13 +269,23 @@
                   Custom checkbox
                 </label>
               </div>
-            </div>
+            </figure>
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-12">
             <div class="doc-body-snippet">
+              <div class="extra-links pull-right">
+              <a class="plunker" href>
+                <i class="nc-icon-mini arrows-1_share-91" aria-hidden="true"></i>
+                Plunker
+              </a>
+              <a class="copy-code" href>
+                <i class="nc-icon-mini files_copy" aria-hidden="true"></i>
+                Copy Code
+              </a>
+              </div>
               <pb-code-snippet options="check.stackedSnippets"></pb-code-snippet>
             </div>
           </div>
@@ -284,9 +293,9 @@
 
         <div class="row">
           <div class="col-md-12">
-            <h2 class="doc-sectionhead" id="osInline">
+            <h2 id="osInline">
               Standard Inline Checkboxes
-              <div class="doc-body-badge badge badge-brand-success">Added in v. 2.0</div>
+              <div class="badge badge-added">Added in v2.0.0</div>
             </h2>
             <p>When enclosed in "form-inline"</p>
           </div>
@@ -294,7 +303,7 @@
 
         <div class="row">
           <div class="col-md-5">
-            <div class="doc-body-example">
+            <figure>
               <div class="controls-inline">
                 <form class="form-inline">
                   <label class="control checkbox">
@@ -309,7 +318,7 @@
                   </label>
                 </form>
               </div>
-            </div>
+            </figure>
           </div>
         </div>
 
@@ -324,7 +333,7 @@
         <!-- For Demo purposes -->
         <div class="row">
           <div class="col-md-12">
-            <h1 class="doc-head" id="errors">400 Series Error Pages</h1>
+            <h1 id="errors">400 Series Error Pages</h1>
           </div>
         </div>
 
@@ -332,7 +341,7 @@
           <div class="col-md-12">
             <h2 class="doc-sectionhead">
               400 Bad Request (Left)
-              <div class="doc-body-badge badge badge-brand-success">Added in v. 2.0</div>
+              <div class="badge badge-added">Added in v2.0.0</div>
             </h2>
           </div>
         </div>

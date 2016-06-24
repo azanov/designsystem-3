@@ -1,18 +1,44 @@
-.doc-body-example {
-  // padding: 20px 30px 10px;
-  margin: 15px 0 30px;
-}
-
-.doc-body-badge {
-  &:hover {
-    background-color: $pb-light-green-500;
-    cursor: default;
+section {
+  margin-top: 30px;
+  // @include breakpoint(screen-xs) {
+  //   margin-top: 10px;
+  // }
+  &:first-of-type {
+    margin-top: 0;
   }
-  background-color: $pb-light-green-500;
-  margin-left: 20px;
-  margin-top: -1px;
+  h1 {
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-family: $font-family-ps-regular;
+    color: $header-color;
+    font-size: 20px;
+    border-bottom: 1px solid $pb-light-gray;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
 }
 
+.doc-lede {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #3a3a3a;
+}
+
+figure {
+  margin: 25px 0 40px;
+}
+
+.badge-added {
+  background-color: $pb-dark-green-700;
+}
+.badge-deprecated {
+  background-color: $pb-dark-orange;
+}
+.badge-removed {
+  background-color: $brand-danger;
+}
 
 .table-open {
   margin-top: 30px;
@@ -20,6 +46,12 @@
 .doc-body-snippet {
   height: auto;
   margin-bottom: 10px;
+  .extra-links {
+    margin-top: 10px;
+    a {
+      margin-left: 20px;
+    }
+  }
 
   .CodeMirror {
     max-height: 41rem;
@@ -74,7 +106,7 @@
     }
 
     &:before {
-      font-family: "PrecisionSans_W_Rg", "Helvetica Neue", Arial, sans-serif;
+      font-family: 'PrecisionSans_W_Rg', 'Helvetica Neue', Arial, sans-serif;
       content: 'View Demo';
       font-size: 18px;
       display: block;

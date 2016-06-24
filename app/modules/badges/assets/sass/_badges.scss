@@ -1,5 +1,7 @@
 .badge {
   background-color: $pb-magenta;
+  font-family: $font-family-sans-serif;
+  font-weight: normal;
 }
 
 //* badge contextual alternatives */
@@ -14,12 +16,10 @@ $badges: (
 
 @each $badge, $color in $badges {
   .badge-#{$badge} {
-    font-family: $font-family-sans-serif;
-    font-weight: normal;
     background-color: $color;
-    &:hover {
-      background-color: darken($color, 10%);
-    }
+    // &:hover {
+    //   background-color: darken($color, 10%);
+    // }
   }
 }
 

@@ -1,4 +1,4 @@
-//TODO: add comment about xmp tag
+// TODO: add comment about xmp tag
 (function () {
   'use strict';
 
@@ -6,12 +6,11 @@
     return {
       restrict: 'E',
       templateUrl: 'modules/main/templates/code-snippet.html',
-      //use options.tabs[mode].editor property as options for codeMirror tool
+      // use options.tabs[mode].editor property as options for codeMirror tool
       scope: {
         options: '='
       },
       link: function postLink (scope, element, attrs) {
-
         var modeMap = {
           js: 'javascript',
           html: 'htmlmixed',
@@ -33,20 +32,13 @@
             },
             options
           );
-          //TODO: think about using factory for geting new codeMirror instance
-          //also add to factory methods for higlighting different files
-          var codemirror = new window.CodeMirror(function(cm_el) {
+          // TODO: think about using factory for geting new codeMirror instance
+          // also add to factory methods for higlighting different files
+          var codemirror = new window.CodeMirror(function (cm_el) {
             includeElement.html('');
             includeElement.append(cm_el);
           }, codemirrorOptions);
-
-          //TODO: create separate method for resizing
-          var codemirrorLinesElement = includeElement.find('.CodeMirror-lines'),
-            paddingTop = parseInt(codemirrorLinesElement.css('padding-top')),
-            paddingBottom = parseInt(codemirrorLinesElement.css('padding-bottom'));
-
-          codemirror.setSize(null, codemirrorLinesElement.height() + paddingTop + paddingBottom);
-        }
+        };
       }
     };
   });

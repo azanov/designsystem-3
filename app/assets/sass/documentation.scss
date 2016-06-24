@@ -9,7 +9,6 @@
 
 @import 'documentation/docpage-header';
 @import 'documentation/doc-sidebar';
-@import 'documentation/docpage-body';
 @import 'documentation/content';
 @import 'documentation/charts';
 @import 'documentation/resources';
@@ -19,6 +18,7 @@
 @import 'documentation/icons';
 @import 'documentation/preview';
 @import 'documentation/specs';
+@import 'documentation/docpage-body';
 
 @import '../../modules/animation/sass/ds-animate';
 @import 'documentation/animate';
@@ -27,31 +27,7 @@
   @extend %gradient;
 }
 
-// DOCS TYPOGRAPHY differs from DS
-.doc-head {
-  margin-top: 80px;
-  margin-bottom: 10px;
-  @include breakpoint(screen-xs) {
-    margin-top: 30px;
-  }
-}
-.doc-lede {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #3a3a3a;
-}
-.doc-sectionhead {
-  font-family: $font-family-ps-regular;
-  color: $header-color;
-  font-size: 20px;
-  border-bottom: 1px solid $pb-light-gray;
-  margin-top: 40px;
-  margin-bottom: 15px;
-  padding-bottom: 15px;
-}
-.doc-sectionbreak {
-  margin-top: 50px;
-}
+
 .colors {
   p {
     margin-top: 10px;
