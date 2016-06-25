@@ -12,70 +12,18 @@
 </div>
 
 <div class="container">
-  <!-- TODO: create sidebar directive -->
 
   <div class="row">
     <div class="col-md-3">
-      <div class="doc-body-sidebar">
-        <div class="list-group-section">
-          <h3 du-scrollspy="overview">
-            <a ui-sref="errors({'#':'overview'})">Overview</a>
-          </h3>
-        </div>
 
-        <div class="list-group-section">
-          <h3 du-scrollspy="400seriesErrorPages">
-            <a ui-sref="errors({'#':'400seriesErrorPages'})">400 Series Error Pages</a>
-          </h3>
-          <div class="list-group">
-            <a du-scrollspy="400badRequestLeft" ui-sref="errors({'#':'400badRequestLeft'})" class="list-group-item">400 Bad Request (Left)</a>
-            <a du-scrollspy="400badRequestCenter" ui-sref="errors({'#':'400badRequestCenter'})" class="list-group-item">400 Bad Request (Center)</a>
-            <a du-scrollspy="401unauthorizedLeft" ui-sref="errors({'#':'401unauthorizedLeft'})" class="list-group-item">401 Unauthorized (Left)</a>
-            <a du-scrollspy="401unauthorizedCenter" ui-sref="errors({'#':'401unauthorizedCenter'})" class="list-group-item">401 Bad Request (Center)</a>
-            <a du-scrollspy="404pageNotFoundLeft" ui-sref="errors({'#':'404pageNotFoundLeft'})" class="list-group-item">404 Page Not Found(Left)</a>
-            <a du-scrollspy="404pageNotFoundCenter" ui-sref="errors({'#':'404pageNotFoundCenter'})" class="list-group-item">404 Page Not Found (Center)</a>
-          </div>
-        </div>
+      <!-- TODO:  Add new sidebar code -->
+      <h2>sidebar to come</h2>
 
-        <div class="list-group-section">
-          <h3 du-scrollspy="500seriesErrorPages">
-            <a ui-sref="errors({'#':'500seriesErrorPages'})">500 Series Error Pages</a>
-          </h3>
-          <div class="list-group">
-            <a du-scrollspy="500internalServerLeft" ui-sref="errors({'#':'500internalServerLeft'})" class="list-group-item">500 Internal Server (Left)</a>
-            <a du-scrollspy="500internalServerCenter" ui-sref="errors({'#':'500internalServerCenter'})" class="list-group-item">500 Internal Server (Center)</a>
-            <a du-scrollspy="502badGatewayLeft" ui-sref="errors({'#':'502badGatewayLeft'})" class="list-group-item">502 Bad Gateway (Left)</a>
-            <a du-scrollspy="502badGatewayCenter" ui-sref="errors({'#':'502badGatewayCenter'})" class="list-group-item">502 Bad Gateway (Center)</a>
-            <a du-scrollspy="504gatewayTimeoutLeft" ui-sref="errors({'#':'504gatewayTimeoutLeft'})" class="list-group-item">504 Gateway Timeout (Left)</a>
-            <a du-scrollspy="504gatewayTimeoutCenter" ui-sref="errors({'#':'504gatewayTimeoutCenter'})" class="list-group-item">504 Gateway Timeout (Center)</a>
-          </div>
-        </div>
-
-        <div class="list-group-section">
-            <h3 du-scrollspy="signedOut">
-              <a ui-sref="errors({'#':'signedOut'})">Signed Out</a>
-            </h3>
-            <div class="list-group">
-              <a du-scrollspy="signedOutLeft" ui-sref="errors({'#':'signedOutLeft'})" class="list-group-item">Signed Out (Left)</a>
-              <a du-scrollspy="signedOutCenter" ui-sref="errors({'#':'signedOutCenter'})" class="list-group-item">Signed Out (Center)</a>
-            </div>
-        </div>
-
-        <div class="list-group-section">
-            <h3 du-scrollspy="Maintenance">
-              <a ui-sref="errors({'#':'Maintenance'})">Maintenance</a>
-            </h3>
-            <div class="list-group">
-              <a du-scrollspy="plannedMaintenanceLeft" ui-sref="errors({'#':'plannedMaintenanceLeft'})" class="list-group-item">Planned Maintenance (Left)</a>
-              <a du-scrollspy="plannedMaintenanceCenter" ui-sref="errors({'#':'plannedMaintenanceCenter'})" class="list-group-item">Planned Maintenance (Center)</a>
-              <a du-scrollspy="unPlannedMaintenanceLeft" ui-sref="errors({'#':'unPlannedMaintenanceLeft'})" class="list-group-item">Unplanned Maintenance (Left)</a>
-              <a du-scrollspy="unplannedMaintenanceCenter" ui-sref="errors({'#':'unplannedMaintenanceCenter'})" class="list-group-item">Unplanned Maintenance (Center)</a>
-            </div>
-        </div>
-      </div>
     </div>
 
     <div class="col-md-9">
+
+      <!-- TODO: Add section tags and IDs as per README-template file (root of project) -->
 
       <div class="row">
         <div class="col-md-12">
@@ -129,7 +77,7 @@
         </div>
         <div class="col-md-12 pb-demo-image">
           <a ui-sref="errors-400-left" target="_blank">
-            <img class="img-responsive framed" src="modules/errors/assets/images/error-400-left.png" />
+            <img class="img-responsive framed" src="modules/errors/assets/images/error-400.png" />
           </a>
         </div>
       </div>
@@ -191,7 +139,7 @@
         </div>
         <div class="col-md-12 pb-demo-image">
           <a ui-sref="errors-400-left" target="_blank">
-            <img class="img-responsive framed" src="modules/errors/assets/images/error-401-left.png" />
+            <img class="img-responsive framed" src="modules/errors/assets/images/error-401.png" />
           </a>
         </div>
       </div>
@@ -253,7 +201,7 @@
         </div>
         <div class="col-md-12 pb-demo-image">
           <a ui-sref="errors-404-left" target="_blank">
-            <img class="img-responsive framed" src="modules/errors/assets/images/error-404-left.png" />
+            <img class="img-responsive framed" src="modules/errors/assets/images/error-404.png" />
           </a>
         </div>
       </div>
@@ -321,7 +269,7 @@
         </div>
         <div class="col-md-12 pb-demo-image">
           <a ui-sref="errors-500-left" target="_blank">
-            <img class="img-responsive framed" src="modules/errors/assets/images/error-500-left.png" />
+            <img class="img-responsive framed" src="modules/errors/assets/images/error-500.png" />
           </a>
         </div>
       </div>
@@ -383,7 +331,7 @@
         </div>
         <div class="col-md-12 pb-demo-image">
           <a ui-sref="errors-502-left" target="_blank">
-            <img class="img-responsive framed" src="modules/errors/assets/images/error-502-left.png" />
+            <img class="img-responsive framed" src="modules/errors/assets/images/error-502.png" />
           </a>
         </div>
       </div>
@@ -445,7 +393,7 @@
         </div>
         <div class="col-md-12 pb-demo-image">
           <a ui-sref="errors-504-left" target="_blank">
-            <img class="img-responsive framed" src="modules/errors/assets/images/error-504-left.png" />
+            <img class="img-responsive framed" src="modules/errors/assets/images/error-504.png" />
           </a>
         </div>
       </div>
@@ -513,7 +461,7 @@
         </div>
         <div class="col-md-12 pb-demo-image">
           <a ui-sref="errors-signed-out-left" target="_blank">
-            <img class="img-responsive framed" src="modules/errors/assets/images/error-signed-out-left.png" />
+            <img class="img-responsive framed" src="modules/errors/assets/images/error-signed-out.png" />
           </a>
         </div>
       </div>
@@ -581,7 +529,7 @@
         </div>
         <div class="col-md-12 pb-demo-image">
           <a ui-sref="errors-planned-maintenance-left" target="_blank">
-            <img class="img-responsive framed" src="modules/errors/assets/images/error-planned-maintenance-left.png" />
+            <img class="img-responsive framed" src="modules/errors/assets/images/error-planned-maintenance.png" />
           </a>
         </div>
       </div>
@@ -643,7 +591,7 @@
         </div>
         <div class="col-md-12 pb-demo-image">
           <a ui-sref="errors-unplanned-maintenance-left" target="_blank">
-            <img class="img-responsive framed" src="modules/errors/assets/images/error-unplanned-maintenance-left.png" />
+            <img class="img-responsive framed" src="modules/errors/assets/images/error-unplanned-maintenance.png" />
           </a>
         </div>
       </div>
