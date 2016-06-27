@@ -18,7 +18,7 @@ link, a {
 .btn {
   //Add small fades on all btn bg color changes
   transition: background-color $very-fast linear;
-  //rebuilding pb-fade class directly in button
+  //rebuilding pb-ds-fade class directly in button
   @include pb-animate('fadeOut', $very-fast, 'linear');
   @include pb-animate('fadeIn', $very-fast, 'linear');
 }
@@ -26,7 +26,7 @@ link, a {
   //animation that fires when a primary button goes from VISIBLE to HIDDEN
   @include pb-animate('fadeOut', $very-fast, 'linear');
   //animation that fires when a primary button goes from HIDDEN to VISIBLE
-  @extend .pb-bounceIn;
+  @extend .pb-ds-bounce-in;
 }
 .btn-primary:not(.disabled):not([disabled]):not(.ng-hide) {
   //need to build this animation from ground up
@@ -157,12 +157,12 @@ link, a {
 
 .tile, .tile-button {
   background-color: #fff; //need this so tiles in a row don't overlap one another
-  @extend .pb-scaleDown;
+  @extend .pb-ds-scale-down;
   &:hover {
     //override backshadow - need to do this so scaling is optimized
     box-shadow: none;
     z-index: 100;
-    @extend .pb-scaleUpPop;
+    @extend .pb-ds-scale-up-pop;
   }
   &:after {
     content: '';
@@ -190,7 +190,7 @@ link, a {
 //seleect all popovers except for those with the custom attribute "popover trigger" that's equal to "mouseenter"
 //added unprefixed regular "popover" style so this is backwards compatible
 [uib-popover]:not([popover-trigger='mouseenter']) + [uib-popover-popup], [popover]:not([popover-trigger='mouseenter']) + [popover-popup] {
-  @extend .pb-pop;
+  @extend .pb-ds-pop;
   //need to set fill mode back to initial so original fade transition supplied by bootstrap can take affect on the animation out
   animation-fill-mode: initial;
 }

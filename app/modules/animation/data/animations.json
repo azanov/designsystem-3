@@ -1,162 +1,162 @@
 {
   "bounce": {
-    "name": "pb-bounce",
+    "name": "pb-ds-bounce",
     "type": "accent"
   },
   "pop": {
-    "name": "pb-pop",
+    "name": "pb-ds-pop",
     "type": "accent"
   },
   "shake": {
-    "name": "pb-shake",
+    "name": "pb-ds-shake",
     "type": "accent"
   },
   "pulse": {
-    "name": "pb-pulse",
+    "name": "pb-ds-pulse",
     "type": "accent"
   },
   "scaleUp": {
-    "name": "pb-scaleUp",
+    "name": "pb-ds-scale-up",
     "type": "accent"
   },
   "scaleUpPop": {
-    "name": "pb-scaleUpPop",
+    "name": "pb-ds-scale-up-pop",
     "type": "accent"
   },
   "scaleDown": {
-    "name": "pb-scaleDown",
+    "name": "pb-ds-scale-down",
     "type": "accent"
   },
   "bounceIn": {
-    "name": "pb-bounceIn",
+    "name": "pb-ds-bounce-in",
     "type": "entrance"
   },
   "fadeIn": {
-    "name": "pb-fadeIn",
+    "name": "pb-ds-fade-in",
     "type": "entrance"
   },
   "fadeInUp": {
-    "name": "pb-fadeInUp",
+    "name": "pb-ds-fade-in-up",
     "type": "entrance"
   },
   "fadeInUpBig": {
-    "name": "pb-fadeInUpBig",
+    "name": "pb-ds-fade-in-up-big",
     "type": "entrance"
   },
   "fadeInDown": {
-    "name": "pb-fadeInDown",
+    "name": "pb-ds-fade-in-down",
     "type": "entrance"
   },
   "fadeInDownMini": {
-    "name": "pb-fadeInDownMini",
+    "name": "pb-ds-fade-in-down-mini",
     "type": "entrance"
   },
   "fadeInDownSubtle": {
-    "name": "pb-fadeInDownSubtle",
+    "name": "pb-ds-fade-in-down-subtle",
     "type": "entrance"
   },
   "fadeInDownBig": {
-    "name": "pb-fadeInDownBig",
+    "name": "pb-ds-fade-in-down-big",
     "type": "entrance"
   },
   "fadeInLeft": {
-    "name": "pb-fadeInLeft",
+    "name": "pb-ds-fade-in-left",
     "type": "entrance"
   },
   "fadeInLeftBig": {
-    "name": "pb-fadeInLeftBig",
+    "name": "pb-ds-fade-in-left-big",
     "type": "entrance"
   },
   "fadeInRight": {
-    "name": "pb-fadeInRight",
+    "name": "pb-ds-fade-in-right",
     "type": "entrance"
   },
   "fadeInRightBig": {
-    "name": "pb-fadeInRightBig",
+    "name": "pb-ds-fade-in-right-big",
     "type": "entrance"
   },
   "flipInY": {
-    "name": "pb-flipInY",
+    "name": "pb-ds-flip-in-y",
     "type": "entrance"
   },
   "slideInLeft": {
-    "name": "pb-slideInLeft",
+    "name": "pb-ds-slide-in-left",
     "type": "entrance"
   },
   "slideInLeftSmall": {
-    "name": "pb-slideInLeftSmall",
+    "name": "pb-ds-slide-in-left-small",
     "type": "entrance"
   },
   "slideInRight": {
-    "name": "pb-slideInRight",
+    "name": "pb-ds-slide-in-right",
     "type": "entrance"
   },
   "slideInRightSmall": {
-    "name": "pb-slideInRightSmall",
+    "name": "pb-ds-slide-in-right-small",
     "type": "entrance"
   },
   "zoomIn": {
-    "name": "pb-zoomIn",
+    "name": "pb-ds-zoom-in",
     "type": "entrance"
   },
   "fadeOut": {
-    "name": "pb-fadeOut",
+    "name": "pb-ds-fade-out",
     "type": "exit"
   },
   "fadeOutUp": {
-    "name": "pb-fadeOutUp",
+    "name": "pb-ds-fade-out-up",
     "type": "exit"
   },
   "fadeOutUpBig": {
-    "name": "pb-fadeOutUpBig",
+    "name": "pb-ds-fade-out-up-big",
     "type": "exit"
   },
   "fadeOutDown": {
-    "name": "pb-fadeOutDown",
+    "name": "pb-ds-fade-out-down",
     "type": "exit"
   },
   "fadeOutDownBig": {
-    "name": "pb-fadeOutDownBig",
+    "name": "pb-ds-fade-out-down-big",
     "type": "exit"
   },
   "fadeOutLeft": {
-    "name": "pb-fadeOutLeft",
+    "name": "pb-ds-fade-out-left",
     "type": "exit"
   },
   "fadeOutLeftBig": {
-    "name": "pb-fadeOutLeftBig",
+    "name": "pb-ds-fade-out-left-big",
     "type": "exit"
   },
   "fadeOutRight": {
-    "name": "pb-fadeOutRight",
+    "name": "pb-ds-fade-out-right",
     "type": "exit"
   },
   "fadeOutRightBig": {
-    "name": "pb-fadeOutRightBig",
+    "name": "pb-ds-fade-out-right-big",
     "type": "exit"
   },
   "flipOutY": {
-    "name": "pb-flipOutY",
+    "name": "pb-ds-flip-out-y",
     "type": "exit"
   },
   "slideOutLeft": {
-    "name": "pb-slideOutLeft",
+    "name": "pb-ds-slide-out-left",
     "type": "exit"
   },
   "slideOutLeftSmall": {
-    "name": "pb-slideOutLeftSmall",
+    "name": "pb-ds-slide-out-left-small",
     "type": "exit"
   },
   "slideOutRight": {
-    "name": "pb-slideOutRight",
+    "name": "pb-ds-slide-out-right",
     "type": "exit"
   },
   "slideOutRightSmall": {
-    "name": "pb-slideOutRightSmall",
+    "name": "pb-ds-slide-out-right-small",
     "type": "exit"
   },
   "zoomOut": {
-    "name": "pb-zoomOut",
+    "name": "pb-ds-zoom-out",
     "type": "exit"
   }
 }
