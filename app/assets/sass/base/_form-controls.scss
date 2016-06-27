@@ -1,17 +1,6 @@
-// scss-lint:disable VendorPrefix, MergeableSelector
-
-/////////////////////////
-/// Bootstrsp fixes
-/////////////////////////
-
 .form-inline .checkbox input[type='checkbox'] {
   position: absolute;
 }
-
-
-/////////////////////////
-/// Checkboxes and radios
-/////////////////////////
 
 .control {
   position: relative;
@@ -107,9 +96,6 @@
   background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgNiA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxjaXJjbGUgZmlsbD0iIzNFNTNBNCIgY3g9IjMiIGN5PSIzIiByPSIzIi8+PC9zdmc+');
 }
 
-////////////////////
-/// Control layouts
-////////////////////
 
 .controls-stacked {
   margin: 15px 0;
