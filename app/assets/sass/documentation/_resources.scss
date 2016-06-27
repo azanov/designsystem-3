@@ -60,9 +60,6 @@
       border-color: $pb-gray-400;
     }
   }
-
-
-  // overflow-y: scroll;
   
   .panel-body {
     padding: 0;
@@ -77,28 +74,17 @@
 
 
   [dynamic-layout]{
-    // float: left;
     position: relative;
-  }
-
-  @media (min-width: 900px) {
-    [dynamic-layout]{
-      // width: 900px;
-    }
-  }
-  @media (min-width: 600px) and (max-width: 900px){
-    [dynamic-layout]{
-      // width: 600px;
-    }
-  }
-  @media (max-width: 600px){
-    [dynamic-layout]{
-      // width: 300px;
-    }
+    height: calc(80vh);
   }
   .dynamic-layout-item-parent {
-    width: 100%;
+    width: 50%;
     display: block;
+    float: left;
+  }
+  .dynamic-layout-item {
+    width: 100% !important;
+    position: relative !important;
   }
   .move-items-animation{
     transition-property: left, top;
