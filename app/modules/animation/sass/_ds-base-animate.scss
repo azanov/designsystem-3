@@ -32,7 +32,7 @@ link, a {
   //need to build this animation from ground up
   //this animation doesn't get queued by pb-animate, so the namespacing around
   //our pb- animations prevents this from working
-  @extend %pb-animation-base;
+  @extend %pb-animation-default;
   animation-name: bounceIn;
 }
 

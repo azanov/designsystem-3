@@ -3,48 +3,28 @@
     "name": "pb-bounce",
     "type": "accent"
   },
-  "flash": {
-    "name": "pb-flash",
-    "type": "accent"
-  },
-  "flip": {
-    "name": "pb-flip",
-    "type": "accent"
-  },
-  "headShake": {
-    "name": "pb-headShake",
-    "type": "accent"
-  },
-  "hinge": {
-    "name": "pb-hinge",
-    "type": "accent"
-  },
-  "jello": {
-    "name": "pb-jello",
-    "type": "accent"
-  },
-  "pulse": {
-    "name": "pb-pulse",
-    "type": "accent"
-  },
-  "rubber": {
-    "name": "pb-rubberBand",
+  "pop": {
+    "name": "pb-pop",
     "type": "accent"
   },
   "shake": {
     "name": "pb-shake",
     "type": "accent"
   },
-  "swing": {
-    "name": "pb-swing",
+  "pulse": {
+    "name": "pb-pulse",
     "type": "accent"
   },
-  "tada": {
-    "name": "pb-tada",
+  "scaleUp": {
+    "name": "pb-scaleUp",
     "type": "accent"
   },
-  "wobble": {
-    "name": "pb-wobble",
+  "scaleUpPop": {
+    "name": "pb-scaleUpPop",
+    "type": "accent"
+  },
+  "scaleDown": {
+    "name": "pb-scaleDown",
     "type": "accent"
   },
   "bounceIn": {
@@ -59,8 +39,44 @@
     "name": "pb-fadeInUp",
     "type": "entrance"
   },
-  "flipInX": {
-    "name": "pb-flipInX",
+  "fadeInUpBig": {
+    "name": "pb-fadeInUpBig",
+    "type": "entrance"
+  },
+  "fadeInDown": {
+    "name": "pb-fadeInDown",
+    "type": "entrance"
+  },
+  "fadeInDownMini": {
+    "name": "pb-fadeInDownMini",
+    "type": "entrance"
+  },
+  "fadeInDownSubtle": {
+    "name": "pb-fadeInDownSubtle",
+    "type": "entrance"
+  },
+  "fadeInDownBig": {
+    "name": "pb-fadeInDownBig",
+    "type": "entrance"
+  },
+  "fadeInLeft": {
+    "name": "pb-fadeInLeft",
+    "type": "entrance"
+  },
+  "fadeInLeftBig": {
+    "name": "pb-fadeInLeftBig",
+    "type": "entrance"
+  },
+  "fadeInRight": {
+    "name": "pb-fadeInRight",
+    "type": "entrance"
+  },
+  "fadeInRightBig": {
+    "name": "pb-fadeInRightBig",
+    "type": "entrance"
+  },
+  "flipInY": {
+    "name": "pb-flipInY",
     "type": "entrance"
   },
   "slideInLeft": {
@@ -79,40 +95,20 @@
     "name": "pb-slideInRightSmall",
     "type": "entrance"
   },
-  "slideInUp": {
-    "name": "pb-slideInUp",
-    "type": "entrance"
-  },
   "zoomIn": {
     "name": "pb-zoomIn",
     "type": "entrance"
   },
-  "zoomInLeft": {
-    "name": "pb-zoomInLeft",
-    "type": "entrance"
-  },
-  "bounceOut": {
-    "name": "pb-bounceOut",
-    "type": "exit"
-  },
-  "bounceOutDown": {
-    "name": "pb-bounceOutDown",
-    "type": "exit"
-  },
-  "bounceOutLeft": {
-    "name": "pb-bounceOutLeft",
-    "type": "exit"
-  },
-  "bounceOutRight": {
-    "name": "pb-bounceOutRight",
-    "type": "exit"
-  },
-  "bounceOutUp": {
-    "name": "pb-bounceOutUp",
-    "type": "exit"
-  },
   "fadeOut": {
     "name": "pb-fadeOut",
+    "type": "exit"
+  },
+  "fadeOutUp": {
+    "name": "pb-fadeOutUp",
+    "type": "exit"
+  },
+  "fadeOutUpBig": {
+    "name": "pb-fadeOutUpBig",
     "type": "exit"
   },
   "fadeOutDown": {
@@ -123,12 +119,44 @@
     "name": "pb-fadeOutDownBig",
     "type": "exit"
   },
-  "zoomOut": {
-    "name": "pb-zoomOut",
+  "fadeOutLeft": {
+    "name": "pb-fadeOutLeft",
     "type": "exit"
   },
-  "slideOutDown": {
-    "name": "pb-slideOutDown",
+  "fadeOutLeftBig": {
+    "name": "pb-fadeOutLeftBig",
+    "type": "exit"
+  },
+  "fadeOutRight": {
+    "name": "pb-fadeOutRight",
+    "type": "exit"
+  },
+  "fadeOutRightBig": {
+    "name": "pb-fadeOutRightBig",
+    "type": "exit"
+  },
+  "flipOutY": {
+    "name": "pb-flipOutY",
+    "type": "exit"
+  },
+  "slideOutLeft": {
+    "name": "pb-slideOutLeft",
+    "type": "exit"
+  },
+  "slideOutLeftSmall": {
+    "name": "pb-slideOutLeftSmall",
+    "type": "exit"
+  },
+  "slideOutRight": {
+    "name": "pb-slideOutRight",
+    "type": "exit"
+  },
+  "slideOutRightSmall": {
+    "name": "pb-slideOutRightSmall",
+    "type": "exit"
+  },
+  "zoomOut": {
+    "name": "pb-zoomOut",
     "type": "exit"
   }
 }
