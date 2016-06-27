@@ -1,9 +1,3 @@
-//*/ Buttons */
-// --------------------------------------------------
-
-// scss-lint:disable MergeableSelector ImportantRule
-
-
 a i.nc-icon-mini {
   padding-right: 5px;
   color: inherit;
@@ -239,7 +233,7 @@ a i.nc-icon-mini {
 }
 
 
-///** bs overrides **//
+// bs overrides //
 // i give up, bootstrap, here you go
 .open > .dropdown-toggle.btn-default {
   color: #fff;
@@ -338,9 +332,9 @@ a i.nc-icon-mini {
   }
 }
 
-/////////////////
+
 // Tile Buttons
-/////////////////
+
 
 .tile-button {
   border-radius: 0;

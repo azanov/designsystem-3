@@ -40,6 +40,9 @@ var sassDistOptions = {
 var autoprefixerOptions = {
   browsers: ['last 2 versions']
 };
+var sassdocOptions = {
+  dest: './app/sassdoc'
+};
 
 // clean dist folder
 gulp.task('clean:dist', function (cb) {
@@ -196,8 +199,8 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('sassdoc', function () {
-  return gulp.src('./app/assets/sass/**/*')
-    .pipe(sassdoc());
+  return gulp.src('./app/**/*.scss')
+    .pipe(sassdoc(sassdocOptions));
 });
 
 // browser-sync task for starting the server.
