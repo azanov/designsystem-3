@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-xs-12">
       <h1 class="doc-head" id="stagger">Staggered Animations</h1>
-      <p>When building a staggered animation you have two options. The first is is to use angular's ng-repeat with your animation class name and the class <code>pb-stagger</code>. This is the more preferrable solution.
+      <p>When building a staggered animation you have two options. The first is is to use angular's ng-repeat with your animation class name and the class <code>pb-ds-stagger</code>. This is the more preferrable solution.
         However, there are cases where we want to put a staggered transition on something that isn't a good fit with ng-repeat, such as a button group. For this case, we provide additional classes.</p>
     </div>
   </div>
@@ -13,21 +13,21 @@
       <h4>ng-repeat Stagger</h4>
       <h5>Stagger entrances and exits using angular's ng-repeat</h5>
       <p><bold>Maybe we should think about limiting this to vertical animations only???</bold></p>
-      <p class="help-text">In order to stagger your entrances and exits simply add <code>pb-stagger</code> and a desired animation class on the element that has the <code>ng-repeat</code> attribute on it.</p>
+      <p class="help-text">In order to stagger your entrances and exits simply add <code>pb-ds-stagger</code> and a desired animation class on the element that has the <code>ng-repeat</code> attribute on it.</p>
     </div>
 
     <div class="col-xs-6">
       <h5>Staggered Fade In & Out, ng-repeat</h5>
 
       <div class="form-group">
-        <p class="help-text">This example uses <code>pb-fade</code> and <code>pb-stagger</code> on the repeated <code>li</code> element.</p>
+        <p class="help-text">This example uses <code>pb-ds-fade</code> and <code>pb-ds-stagger</code> on the repeated <code>li</code> element.</p>
         <!-- <button class="btn btn-default" ng-click="vm.setRepeat = !vm.setRepeat">Stagger In & Out</button> -->
         <div class="form-group">
           <input class="form-control" type="text" ng-model="vm.filter" placeholder="Filter for animations">
         </div>
       </div>
       <ul>
-        <li class="pb-fade pb-stagger" ng-repeat="candy in vm.candies | filter:vm.filter as results">{{candy}}</li>
+        <li class="pb-ds-fade pb-ds-stagger" ng-repeat="candy in vm.candies | filter:vm.filter as results">{{candy}}</li>
       </ul>
 
     </div>
@@ -35,14 +35,14 @@
       <h5>Staggered Slide In Right & Fade Out, ng-repeat</h5>
 
       <div class="form-group">
-        <p class="help-text">This example uses <code>pb-fadeOut</code>, <code>pb-slideUp</code> and <code>pb-stagger</code> on the repeated <code>li</code> element.</p>
+        <p class="help-text">This example uses <code>pb-ds-fade-out</code>, <code>pb-slideUp</code> and <code>pb-ds-stagger</code> on the repeated <code>li</code> element.</p>
         <!-- <button class="btn btn-default" ng-click="vm.setRepeat = !vm.setRepeat">Stagger In & Out</button> -->
         <div class="form-group">
           <input class="form-control" type="text" ng-model="vm.filter2" placeholder="Filter for animations">
         </div>
       </div>
       <ul>
-        <li class="pb-fadeOut pb-fadeInUp pb-stagger" ng-repeat="candy2 in vm.candies | filter:vm.filter2 as results">{{candy2}}</li>
+        <li class="pb-ds-fade-out pb-ds-fade-in-up pb-ds-stagger" ng-repeat="candy2 in vm.candies | filter:vm.filter2 as results">{{candy2}}</li>
       </ul>
     </div>
   </div>
@@ -74,20 +74,20 @@
       <h5>Staggered Fade In & Out</h5>
 
       <div class="form-group">
-        <p class="help-text">This example uses <code>pb-fade</code> on the staggered elements.</p>
+        <p class="help-text">This example uses <code>pb-ds-fade</code> on the staggered elements.</p>
         <button class="btn btn-default" ng-click="vm.setStagger = !vm.setStagger">Stagger In & Out</button>
       </div>
       <div class="pb-forwardStagger-4">
-        <button ng-show="vm.setStagger" class="btn btn-default pb-fade">
+        <button ng-show="vm.setStagger" class="btn btn-default pb-ds-fade">
           <i class="fa fa-trash"></i>
         </button>
-        <button ng-show="vm.setStagger" class="btn btn-default pb-fade">
+        <button ng-show="vm.setStagger" class="btn btn-default pb-ds-fade">
           <i class="fa fa-beer"></i>
         </button>
-        <button ng-show="vm.setStagger" class="btn btn-default pb-fade">
+        <button ng-show="vm.setStagger" class="btn btn-default pb-ds-fade">
           <i class="fa fa-pencil"></i>
         </button>
-        <button ng-show="vm.setStagger" class="btn btn-default pb-fade">
+        <button ng-show="vm.setStagger" class="btn btn-default pb-ds-fade">
           <i class="fa fa-twitter"></i>
         </button>
       </div>
@@ -97,21 +97,21 @@
       <h5>Staggered Fade In</h5>
 
       <div class="form-group">
-        <p class="help-text">This example uses <code>pb-fadeIn</code>  on the staggered elements.</p>
+        <p class="help-text">This example uses <code>pb-ds-fade-in</code>  on the staggered elements.</p>
         <button class="btn btn-default" ng-click="vm.setStaggerIn = !vm.setStaggerIn">Stagger In</button>
       </div>
 
-      <button class="btn btn-default pb-fadeIn">
+      <button class="btn btn-default pb-ds-fade-in">
         <i class="fa fa-trash"></i>
       </button>
       <span class="pb-forwardStagger-3">
-        <button ng-show="vm.setStaggerIn" class="btn btn-default pb-fadeIn">
+        <button ng-show="vm.setStaggerIn" class="btn btn-default pb-ds-fade-in">
           <i class="fa fa-beer"></i>
         </button>
-        <button ng-show="vm.setStaggerIn" class="btn btn-default pb-fadeIn">
+        <button ng-show="vm.setStaggerIn" class="btn btn-default pb-ds-fade-in">
           <i class="fa fa-pencil"></i>
         </button>
-        <button ng-show="vm.setStaggerIn" class="btn btn-default pb-fadeIn">
+        <button ng-show="vm.setStaggerIn" class="btn btn-default pb-ds-fade-in">
           <i class="fa fa-twitter"></i>
         </button>
       </span>
@@ -121,7 +121,7 @@
       <h5>Staggered Fade Out</h5>
 
       <div class="form-group">
-        <p class="help-text">This example uses <code>pb-fadeOut</code>  on the staggered elements.</p>
+        <p class="help-text">This example uses <code>pb-ds-fade-out</code>  on the staggered elements.</p>
         <button class="btn btn-default" ng-click="vm.setStaggerOut = !vm.setStaggerOut">Stagger Out</button>
       </div>
 
@@ -129,13 +129,13 @@
         <i class="fa fa-trash"></i>
       </button>
       <span class="pb-forwardStagger-3">
-        <button ng-hide="vm.setStaggerOut" class="btn btn-default pb-fadeOut">
+        <button ng-hide="vm.setStaggerOut" class="btn btn-default pb-ds-fade-out">
           <i class="fa fa-beer"></i>
         </button>
-        <button ng-hide="vm.setStaggerOut" class="btn btn-default pb-fadeOut">
+        <button ng-hide="vm.setStaggerOut" class="btn btn-default pb-ds-fade-out">
           <i class="fa fa-pencil"></i>
         </button>
-        <button ng-hide="vm.setStaggerOut" class="btn btn-default pb-fadeOut">
+        <button ng-hide="vm.setStaggerOut" class="btn btn-default pb-ds-fade-out">
           <i class="fa fa-twitter"></i>
         </button>
       </span>
@@ -151,20 +151,20 @@
       <h5>Staggered Fade In & Out</h5>
 
       <div class="form-group">
-        <p class="help-text">This example uses <code>pb-fade</code> on the staggered elements.</p>
+        <p class="help-text">This example uses <code>pb-ds-fade</code> on the staggered elements.</p>
         <button class="btn btn-default" ng-click="vm.setBackward = !vm.setBackward">Stagger In & Out</button>
       </div>
       <div class="pb-backwardStagger-4">
-        <button ng-show="vm.setBackward" class="btn btn-default pb-fade">
+        <button ng-show="vm.setBackward" class="btn btn-default pb-ds-fade">
           <i class="fa fa-trash"></i>
         </button>
-        <button ng-show="vm.setBackward" class="btn btn-default pb-fade">
+        <button ng-show="vm.setBackward" class="btn btn-default pb-ds-fade">
           <i class="fa fa-beer"></i>
         </button>
-        <button ng-show="vm.setBackward" class="btn btn-default pb-fade">
+        <button ng-show="vm.setBackward" class="btn btn-default pb-ds-fade">
           <i class="fa fa-pencil"></i>
         </button>
-        <button ng-show="vm.setBackward" class="btn btn-default pb-fade">
+        <button ng-show="vm.setBackward" class="btn btn-default pb-ds-fade">
           <i class="fa fa-twitter"></i>
         </button>
       </div>
@@ -175,21 +175,21 @@
       <h5>Staggered Fade In</h5>
 
       <div class="form-group">
-        <p class="help-text">This example uses <code>pb-fadeIn</code>  on the staggered elements.</p>
+        <p class="help-text">This example uses <code>pb-ds-fade-in</code>  on the staggered elements.</p>
         <button class="btn btn-default" ng-click="vm.setStaggerInReverse = !vm.setStaggerInReverse">Stagger In</button>
       </div>
 
-      <button class="btn btn-default pb-fadeIn">
+      <button class="btn btn-default pb-ds-fade-in">
         <i class="fa fa-trash"></i>
       </button>
       <span class="pb-backwardStagger-3">
-        <button ng-show="vm.setStaggerInReverse" class="btn btn-default pb-fadeIn">
+        <button ng-show="vm.setStaggerInReverse" class="btn btn-default pb-ds-fade-in">
           <i class="fa fa-beer"></i>
         </button>
-        <button ng-show="vm.setStaggerInReverse" class="btn btn-default pb-fadeIn">
+        <button ng-show="vm.setStaggerInReverse" class="btn btn-default pb-ds-fade-in">
           <i class="fa fa-pencil"></i>
         </button>
-        <button ng-show="vm.setStaggerInReverse" class="btn btn-default pb-fadeIn">
+        <button ng-show="vm.setStaggerInReverse" class="btn btn-default pb-ds-fade-in">
           <i class="fa fa-twitter"></i>
         </button>
       </span>
@@ -201,7 +201,7 @@
       <h5>Staggered Fade Out</h5>
 
       <div class="form-group">
-        <p class="help-text">This example uses <code>pb-fadeOut</code>  on the staggered elements.</p>
+        <p class="help-text">This example uses <code>pb-ds-fade-out</code>  on the staggered elements.</p>
         <button class="btn btn-default" ng-click="vm.setStaggerOutReverse = !vm.setStaggerOutReverse">Stagger Out</button>
       </div>
 
@@ -209,13 +209,13 @@
         <i class="fa fa-trash"></i>
       </button>
       <span class="pb-backwardStagger-3">
-        <button ng-hide="vm.setStaggerOutReverse" class="btn btn-default pb-fadeOut">
+        <button ng-hide="vm.setStaggerOutReverse" class="btn btn-default pb-ds-fade-out">
           <i class="fa fa-beer"></i>
         </button>
-        <button ng-hide="vm.setStaggerOutReverse" class="btn btn-default pb-fadeOut">
+        <button ng-hide="vm.setStaggerOutReverse" class="btn btn-default pb-ds-fade-out">
           <i class="fa fa-pencil"></i>
         </button>
-        <button ng-hide="vm.setStaggerOutReverse" class="btn btn-default pb-fadeOut">
+        <button ng-hide="vm.setStaggerOutReverse" class="btn btn-default pb-ds-fade-out">
           <i class="fa fa-twitter"></i>
         </button>
       </span>
@@ -232,20 +232,20 @@
     <h5>Staggered Fade In & Out</h5>
 
     <div class="form-group">
-      <p class="help-text">This example uses <code>pb-fade</code> on the staggered elements.</p>
+      <p class="help-text">This example uses <code>pb-ds-fade</code> on the staggered elements.</p>
       <button class="btn btn-default" ng-click="vm.setBoth = !vm.setBoth">Stagger In & Out</button>
     </div>
     <div class="pb-bidirectionalStagger-4">
-      <button ng-show="vm.setBoth" class="btn btn-default pb-fade">
+      <button ng-show="vm.setBoth" class="btn btn-default pb-ds-fade">
         <i class="fa fa-trash"></i>
       </button>
-      <button ng-show="vm.setBoth" class="btn btn-default pb-fade">
+      <button ng-show="vm.setBoth" class="btn btn-default pb-ds-fade">
         <i class="fa fa-beer"></i>
       </button>
-      <button ng-show="vm.setBoth" class="btn btn-default pb-fade">
+      <button ng-show="vm.setBoth" class="btn btn-default pb-ds-fade">
         <i class="fa fa-pencil"></i>
       </button>
-      <button ng-show="vm.setBoth" class="btn btn-default pb-fade">
+      <button ng-show="vm.setBoth" class="btn btn-default pb-ds-fade">
         <i class="fa fa-twitter"></i>
       </button>
     </div>
@@ -256,20 +256,20 @@
     <h5>Staggered Fade Up In & Fade Down Out</h5>
 
     <div class="form-group">
-      <p class="help-text">This example uses <code>pb-fade</code> on the staggered elements.</p>
+      <p class="help-text">This example uses <code>pb-ds-fade</code> on the staggered elements.</p>
       <button class="btn btn-default" ng-click="vm.setBothSpecial = !vm.setBothSpecial">Stagger In & Out</button>
     </div>
     <div class="pb-bidirectionalStagger-4">
-      <button ng-show="vm.setBothSpecial" class="btn btn-default pb-fadeOut pb-zoomIn">
+      <button ng-show="vm.setBothSpecial" class="btn btn-default pb-ds-fade-out pb-ds-zoom-in">
         <i class="fa fa-trash"></i>
       </button>
-      <button ng-show="vm.setBothSpecial" class="btn btn-default pb-fadeOut pb-zoomIn">
+      <button ng-show="vm.setBothSpecial" class="btn btn-default pb-ds-fade-out pb-ds-zoom-in">
         <i class="fa fa-beer"></i>
       </button>
-      <button ng-show="vm.setBothSpecial" class="btn btn-default pb-fadeOut pb-zoomIn">
+      <button ng-show="vm.setBothSpecial" class="btn btn-default pb-ds-fade-out pb-ds-zoom-in">
         <i class="fa fa-pencil"></i>
       </button>
-      <button ng-show="vm.setBothSpecial" class="btn btn-default pb-fadeOut pb-zoomIn">
+      <button ng-show="vm.setBothSpecial" class="btn btn-default pb-ds-fade-out pb-ds-zoom-in">
         <i class="fa fa-twitter"></i>
       </button>
     </div>
@@ -280,20 +280,20 @@
     <h5>Staggered Fade Up In & Fade Down Out</h5>
 
     <div class="form-group">
-      <p class="help-text">This example uses <code>pb-fade</code> on the staggered elements.</p>
+      <p class="help-text">This example uses <code>pb-ds-fade</code> on the staggered elements.</p>
       <button class="btn btn-default" ng-click="vm.setBothSpecial2 = !vm.setBothSpecial2">Stagger In & Out</button>
     </div>
     <div class="pb-bidirectionalStagger-4">
-      <button ng-show="vm.setBothSpecial2" class="btn btn-default pb-fadeOut pb-bounceIn">
+      <button ng-show="vm.setBothSpecial2" class="btn btn-default pb-ds-fade-out pb-ds-bounce-in">
         <i class="fa fa-trash"></i>
       </button>
-      <button ng-show="vm.setBothSpecial2" class="btn btn-default pb-fadeOut pb-bounceIn">
+      <button ng-show="vm.setBothSpecial2" class="btn btn-default pb-ds-fade-out pb-ds-bounce-in">
         <i class="fa fa-beer"></i>
       </button>
-      <button ng-show="vm.setBothSpecial2" class="btn btn-default pb-fadeOut pb-bounceIn">
+      <button ng-show="vm.setBothSpecial2" class="btn btn-default pb-ds-fade-out pb-ds-bounce-in">
         <i class="fa fa-pencil"></i>
       </button>
-      <button ng-show="vm.setBothSpecial2" class="btn btn-default pb-fadeOut pb-bounceIn">
+      <button ng-show="vm.setBothSpecial2" class="btn btn-default pb-ds-fade-out pb-ds-bounce-in">
         <i class="fa fa-twitter"></i>
       </button>
     </div>
