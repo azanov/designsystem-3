@@ -17,3 +17,5 @@ ds.sublime-workspace
 ds.sublime-project
 documentation.css.map
 design_system.css.map
+app/assets/css/documentation.css.map
+app/assets/css/design_system.css.map
