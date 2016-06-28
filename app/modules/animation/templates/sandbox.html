@@ -69,30 +69,30 @@
 
         <div class="stage">
 
-            <div ng-if="vm.angularDirective === 'ng-if'" class="pb-crossFade">
+            <div ng-if="vm.angularDirective === 'ng-if'" class="pb-ds-crossfade">
               <div class="{{vm.selectedEntrance}} {{vm.selectedExit}} {{vm.selectedAccent}}" ng-if="vm.turnOn">
                 <img src="http://shirta.com/uploads/t-shirt-designs/f/o/medium/fox-cute-face-square-75691597.png" class="img-responsive center-block">
               </div>
             </div>
 
-            <div ng-if="vm.angularDirective === 'ng-show'" class="pb-crossFade">
+            <div ng-if="vm.angularDirective === 'ng-show'" class="pb-ds-crossfade">
               <div class="{{vm.selectedEntrance}} {{vm.selectedExit}} {{vm.selectedAccent}}" ng-show="vm.turnOn">
                 <img src="http://shirta.com/uploads/t-shirt-designs/f/o/medium/fox-cute-face-square-75691597.png" class="img-responsive center-block">
               </div>
             </div>
 
-            <div ng-if="vm.angularDirective === 'ng-hide'" class="pb-crossFade">
+            <div ng-if="vm.angularDirective === 'ng-hide'" class="pb-ds-crossfade">
               <div class="{{vm.selectedEntrance}} {{vm.selectedExit}} {{vm.selectedAccent}}" ng-hide="vm.turnOn">
                 <img src="http://shirta.com/uploads/t-shirt-designs/f/o/medium/fox-cute-face-square-75691597.png" class="img-responsive center-block">
               </div>
             </div>
 
-            <div ng-if="vm.angularDirective === 'ng-repeat'" class="pb-crossFade">
+            <div ng-if="vm.angularDirective === 'ng-repeat'" class="pb-ds-crossfade">
               <div class="form-group">
                 <input class="form-control" placeholder="Filter to animate" ng-model="vm.filterList">
               </div>
               <table class="table">
-                <tr class="pb-stagger {{vm.selectedEntrance}} {{vm.selectedExit}} {{vm.selectedAccent}}" ng-repeat="movie in vm.movies | filter:vm.filterList as results">
+                <tr class="pb-ds-stagger {{vm.selectedEntrance}} {{vm.selectedExit}} {{vm.selectedAccent}}" ng-repeat="movie in vm.movies | filter:vm.filterList as results">
                   <td>{{movie}}</td>
                 </tr>
               </table>
@@ -101,7 +101,7 @@
           </div>
 
           <div>
-            <pre><span ng-if="vm.angularDirective === 'ng-repeat'">.pb-stagger </span><span ng-if="vm.selectedEntrance">.</span>{{vm.selectedEntrance}} <span ng-if="vm.selectedExit">.</span>{{vm.selectedExit}} <span ng-if="vm.selectedAccent">.</span>{{vm.selectedAccent}}</pre>
+            <pre><span ng-if="vm.angularDirective === 'ng-repeat'">.pb-ds-stagger </span><span ng-if="vm.selectedEntrance">.</span>{{vm.selectedEntrance}} <span ng-if="vm.selectedExit">.</span>{{vm.selectedExit}} <span ng-if="vm.selectedAccent">.</span>{{vm.selectedAccent}}</pre>
           </div>
 
         </div>
