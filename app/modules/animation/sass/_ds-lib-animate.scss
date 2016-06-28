@@ -11,150 +11,129 @@
   animation-iteration-count: infinite;
 }
 
-%pb-animation-base {
+%pb-animation-default {
   animation-duration: $medium;
   animation-fill-mode: both;
   animation-timing-function: linear;
 }
 //******** Accent animation names *********//
 
-.pb-bounce {
-  @extend %pb-animation-base;
+.pb-ds-bounce {
+  @extend %pb-animation-default;
   animation-name: bounce;
   transform-origin: center bottom;
 }
 
-.pb-flash {
-  @extend %pb-animation-base;
-  animation-name: flash;
-}
-
-.pb-flip {
-  @extend %pb-animation-base;
-  backface-visibility: visible;
-  animation-name: flip;
-}
-
-.pb-headShake {
-  @extend %pb-animation-base;
-  animation-timing-function: ease-in-out;
-  animation-name: headShake;
-}
-
-.pb-hinge {
-  @extend %pb-animation-base;
-  animation-name: hinge;
-  animation-duration: 2s;
-}
-
-.pb-jello {
-  @extend %pb-animation-base;
-  animation-name: jello;
-  transform-origin: center;
-}
-
-.pb-pop {
-  @extend %pb-animation-base;
+.pb-ds-pop {
+  @extend %pb-animation-default;
   animation-name: pop;
 }
 
-.pb-pulse {
-  @extend %pb-animation-base;
-  animation-name: pulse;
-}
-
-.pb-rubberBand {
-  @extend %pb-animation-base;
-  animation-name: rubberBand;
-}
-
-.pb-scaleDown {
-  backface-visibility: visible;
-  @extend %pb-animation-base;
-  animation-duration: $very-fast;
-  animation-name: scaleDown;
-}
-
-.pb-scaleUp {
-  backface-visibility: visible;
-  @extend %pb-animation-base;
-  animation-name: scaleUp;
-}
-
-.pb-scaleUpPop {
-  backface-visibility: visible;
-  @extend %pb-animation-base;
-  animation-name: scaleUpPop;
-}
-
-.pb-shake {
-  @extend %pb-animation-base;
+.pb-ds-shake {
+  @extend %pb-animation-default;
   animation-name: shake;
 }
 
-.pb-swing {
-  @extend %pb-animation-base;
-  transform-origin: top center;
-  animation-name: swing;
+.pb-ds-pulse {
+  @extend %pb-animation-default;
+  animation-name: pulse;
 }
 
-.pb-tada {
-  @extend %pb-animation-base;
-  animation-name: tada;
+.pb-ds-scale-up {
+  backface-visibility: visible;
+  @extend %pb-animation-default;
+  animation-name: scaleUp;
 }
 
-.pb-wobble {
-  @extend %pb-animation-base;
-  animation-name: wobble;
+.pb-ds-scale-up-pop {
+  backface-visibility: visible;
+  @extend %pb-animation-default;
+  animation-name: scaleUpPop;
+}
+
+.pb-ds-scale-down {
+  backface-visibility: visible;
+  @extend %pb-animation-default;
+  animation-duration: $very-fast;
+  animation-name: scaleDown;
 }
 
 //*************************************************//
 
 
 // ******** In Queue Animations ********//
-.pb-bounceIn {
+.pb-ds-bounce-in {
   @include pb-animate('bounceIn', $medium, 'linear');
 }
 
-.pb-fadeIn {
+.pb-ds-fade-in {
   @include pb-animate('fadeIn', $fast, 'linear');
 }
 
-.pb-fadeInUp {
+.pb-ds-fade-in-up {
   @include pb-animate('fadeInUp', $fast, 'linear');
 }
 
-.pb-flipInX {
-  @include pb-animate('flipInX', $medium, 'ease-out');
+.pb-ds-fade-in-up-big {
+  @include pb-animate('fadeInUpBig', $medium, 'linear');
 }
 
-.pb-slideInLeft {
-  @include pb-animate('slideInLeft', $medium, 'linear');
+.pb-ds-fade-in-down {
+  @include pb-animate('fadeInDown', $fast, 'linear');
 }
 
-.pb-slideInLeftSmall {
-  @include pb-animate('slideInLeftSmall', $medium, 'linear');
+.pb-ds-fade-in-down-mini {
+  @include pb-animate('fadeInDownMini', $very-fast, 'linear');
 }
 
-.pb-slideInRight {
-  @include pb-animate('slideInRight', $medium, 'linear');
+.pb-ds-fade-in-down-subtle {
+  @include pb-animate('fadeInDownSubtle', $fast, 'linear');
 }
 
-.pb-slideInRightSmall {
-  @include pb-animate('slideInRightSmall', $medium, 'linear');
+.pb-ds-fade-in-down-big {
+  @include pb-animate('fadeInDownBig', $medium, 'linear');
 }
 
-.pb-slideInUp {
-  @include pb-animate('slideInUp', $medium, 'linear');
+.pb-ds-fade-in-left {
+  @include pb-animate('fadeInLeft', $fast, 'linear');
 }
 
-.pb-zoomIn {
+.pb-ds-fade-in-left-big {
+  @include pb-animate('fadeInLeftBig', $medium, 'linear');
+}
+
+.pb-ds-fade-in-right {
+  @include pb-animate('fadeInRight', $fast, 'linear');
+}
+
+.pb-ds-fade-in-right-big {
+  @include pb-animate('fadeInRightBig', $medium, 'linear');
+}
+
+.pb-ds-flip-in-y {
+  @include pb-animate('flipInY', $medium, 'ease-out');
+}
+
+.pb-ds-slide-in-left {
+  @include pb-animate('slideInLeft', $medium, 'ease-out');
+}
+
+.pb-ds-slide-in-left-small {
+  @include pb-animate('slideInLeftSmall', $fast, 'ease-out');
+}
+
+.pb-ds-slide-in-right {
+  @include pb-animate('slideInRight', $medium, 'ease-out');
+}
+
+.pb-ds-slide-in-right-small {
+  @include pb-animate('slideInRightSmall', $fast, 'ease-out');
+}
+
+.pb-ds-zoom-in {
   @include pb-animate('zoomIn', $medium, 'ease-out');
 }
 
-.pb-zoomInLeft {
-  @include pb-animate('zoomInLeft', $slow, 'ease-out');
-}
 
 //*************************************************//
 
@@ -162,53 +141,66 @@
 
 //******** Out Queue Animations ********//
 
-.pb-bounceOut {
-  @include pb-animate('bounceOut', $fast, 'linear');
-}
-
-.pb-bounceOutDown {
-  @include pb-animate('bounceOutDown', $fast, 'linear');
-}
-
-.pb-bounceOutLeft {
-  @include pb-animate('bounceOutLeft', $fast, 'linear');
-}
-
-.pb-bounceOutRight {
-  @include pb-animate('bounceOutRight', $fast, 'linear');
-}
-
-.pb-bounceOutUp {
-  @include pb-animate('bounceOutUp', $fast, 'linear');
-}
-
-.pb-fadeOut {
+.pb-ds-fade-out {
   @include pb-animate('fadeOut', $fast, 'linear');
 }
 
-.pb-fadeOutDown {
+.pb-ds-fade-out-up {
+  @include pb-animate('fadeOutUp', $fast, 'linear');
+}
+
+.pb-ds-fade-out-up-big {
+  @include pb-animate('fadeOutUpBig', $medium, 'linear');
+}
+
+.pb-ds-fade-out-down {
   @include pb-animate('fadeOutDown', $fast, 'linear');
 }
 
-.pb-fadeInDown {
-  @include pb-animate('fadeInDown', $fast, 'linear');
+.pb-ds-fade-out-down-big {
+  @include pb-animate('fadeOutDownBig', $medium, 'linear');
 }
 
-.pb-fadeOutDownMini {
-  @include pb-animate('fadeInDownMini', $fast, 'linear');
+.pb-ds-fade-out-left {
+  @include pb-animate('fadeOutLeft', $fast, 'linear');
 }
 
-.pb-fadeOutDownBig {
-  @include pb-animate('fadeOutDownBig', $fast, 'linear');
+.pb-ds-fade-out-left-big {
+  @include pb-animate('fadeOutLeftBig', $medium, 'linear');
 }
 
-.pb-zoomOut {
+.pb-ds-fade-out-right {
+  @include pb-animate('fadeOutRight', $fast, 'linear');
+}
+
+.pb-ds-fade-out-right-big {
+  @include pb-animate('fadeOutRightBig', $medium, 'linear');
+}
+
+.pb-ds-flip-out-y {
+  @include pb-animate('flipOutY', $fast, 'linear');
+}
+
+.pb-ds-slide-out-left {
+  @include pb-animate('slideOutLeft', $medium, 'ease-in');
+}
+
+.pb-ds-slide-out-left-small {
+  @include pb-animate('slideOutLeftSmall', $very-fast, 'ease-in');
+}
+
+.pb-ds-slide-out-right {
+  @include pb-animate('slideOutRight', $medium, 'ease-in');
+}
+
+.pb-ds-slide-out-right-small {
+  @include pb-animate('slideOutRightSmall', $very-fast, 'ease-in');
+}
+
+.pb-ds-zoom-out {
   @include pb-animate('zoomOut', $medium, 'linear');
 }
 
-.pb-slideOutDown {
-  @include pb-animate('slideOutDown', $medium, 'linear');
-}
 
 //*************************************************//
 
@@ -216,16 +208,16 @@
 
 //**** Compound Animations - syntactic sugar for pre-handled in/out queues ****//
 
-.pb-fade {
+.pb-ds-fade {
   @include pb-animate('fadeOut', $fast, 'linear');
   @include pb-animate('fadeIn', $fast, 'linear');
 }
 
-.pb-crossFade {
+.pb-ds-crossfade {
   @include pb-animate('fadeIn', $very-fast, 'linear');
   @include pb-animate('hideOut', $immediate, 'linear', 'none');
 }
 
-.pb-preventDisplacement {
+.pb-ds-prevent-displacement {
   @include pb-animate('hideOut', $immediate, 'linear', 'none');
 }

@@ -2,14 +2,19 @@
 // Variables
 // Do not actually define any selectors here
 // This is only to set variables
-// --------------------------------------------------
-// updated 10/6/15
-// DS 2.1.1
 
-//Use this color palette for primary or accent colors
+
+// Use this color palette for primary or accent colors
 // note that the 500 color is the main color
+
+/// PB Blue 300
+/// @type Color
 $pb-blue-300: #8b98c8;
+
+/// This is the color that should be used for coffee
+/// @type Color
 $pb-blue-500: #3e53a4;
+
 $pb-blue-700: #314183;
 $pb-blue: $pb-blue-500;
 $pb-magenta-300: #e26bb8;
@@ -25,7 +30,7 @@ $pb-purple-500: #a03f9b;
 $pb-purple-700: #80327c;
 $pb-purple: $pb-purple-500;
 
-//Use this color palette for accent colors
+// Use this color palette for accent colors
 // note that the 500 color is the main color
 $pb-cyan-300: #66c4d9;
 $pb-cyan-500: #009dbf;
