@@ -110,6 +110,7 @@
           bodyClass: 'mobile sectionlanding'
         }
       })
+
       .state('otherwise', {
         url: '*path',
         template: '',
@@ -223,7 +224,7 @@
     // handle scrolling to updated hash
 
 
-    //handle scrolling to updated hash
+    // handle scrolling to updated hash
     // @param timeout : boolean, if true use timeout for view animation delay
     function hashScroll (hash, timeout) {
       timeout = timeout || false;

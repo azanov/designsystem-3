@@ -61,8 +61,8 @@
       }
     }
     //Handle Stagger handles
-    //Don't need the pb-stagger class technically, but it's useful since you might not always want staggered animations on every repeating list
-    &.pb-stagger {
+    //Don't need the pb-ds-stagger class technically, but it's useful since you might not always want staggered animations on every repeating list
+    &.pb-ds-stagger {
       &.ng-enter-stagger {
         animation-delay: $lightning;
       }
