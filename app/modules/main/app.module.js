@@ -32,6 +32,7 @@
     'pb.ds.patterns',
     'pb.ds.popovers',
     'pb.ds.principles',
+    'pb.ds.productgallery',
     'pb.ds.progress',
     'pb.ds.radiobuttons',
     'pb.ds.roadmap',
