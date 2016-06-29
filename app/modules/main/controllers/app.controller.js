@@ -11,17 +11,15 @@
 
     _this.rtl = 'ltr';
 
-    $rootScope.$on('duScrollspy:becameActive', function($event, $element, $target){
-      var parent = $element.parent('.list-group'),
-        visibleClass = 'list-group-visible';
+    $rootScope.$on('duScrollspy:becameActive', function ($event, $element, $target) {
+      var parent = $element.parent('.list-group');
+      var visibleClass = 'list-group-visible';
 
       $('.' + visibleClass).removeClass(visibleClass);
 
       if (parent.length) {
         parent.addClass(visibleClass);
       }
-
     });
-
   });
 })();

@@ -72,6 +72,8 @@
     });
   });
 
+  angular.module('app').value('duScrollSpyWait', 1000); // need to play with the value here, might be too high
+
   angular.module('app')
     .config(function (cfpLoadingBarProvider) {
       cfpLoadingBarProvider.spinnerTemplate = '<div id="loading-bar-spinner"><i class="nc-icon-mini loader_circle-04 spin lg"></i></div>';
