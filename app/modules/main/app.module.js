@@ -45,7 +45,8 @@
     'pb.ds.widgets',
     'pb.ds.animation',
     'pb.ds.writing',
-    'pb.ds.tools'
+    'pb.ds.tools',
+    'pb.ds.roadmap'
   ]);
 
   // angular scroll configuration
