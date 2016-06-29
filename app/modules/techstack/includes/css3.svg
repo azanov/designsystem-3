@@ -1,0 +1,35 @@
+ <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="386" height="150"
+ preserveAspectRatio="xMaxYMax meet"  viewBox="0 0 375.847 185.784" >
+ <g id="timeline">
+  <g id="css">
+    <rect x="128.643" y="0" style="fill:#A04098;" width="12.329" height="190.411"/>
+    <polygon style="fill:#A04098;" points="139.893,96.961 147.184,91.561 139.353,86.52"/>
+    <g id="css-badge">
+      <circle style="fill:#A04098;" cx="281.955" cy="92.892" r="92.892"/>
+      <g id="css-details">
+        <text transform="matrix(1 0 0 1 258.8128 121.1215)" style="fill:#FFFFFF; font-family: 'PrecisionSans_W_Bd'; font-size:12.9617px;">Mordern
+        </text>
+
+        <text transform="matrix(1 0 0 1 225.1516 136.6752)" style="fill:#FFFFFF; font-family: 'PrecisionSans_W_Bd'; font-size:12.9617px;">modules for today's</text>
+
+        <text transform="matrix(1 0 0 1 258.8899 152.2299)" style="fill:#FFFFFF; font-family: 'PrecisionSans_W_Bd'; font-size:12.9617px;">browsers.</text>
+      </g>
+      <g id="css-title">
+        <polygon style="fill:#0A71B9;" points="260.081,40.853 305.795,40.853 301.708,87.589 283.065,92.952 263.911,87.589"/>
+        <polygon style="fill:#1F87C1;" points="283.078,45.377 283.078,88.425 298.477,83.995 301.854,45.377"/>
+        <polygon style="fill:#FFFFFF;" points="269.019,56.439 282.81,56.432 269.275,62.305 270.041,67.669 289.961,67.669
+        289.195,75.33 282.458,76.596 276.425,75.075 275.915,70.733 270.297,70.733 271.063,79.672 283.065,82.991 294.558,79.416
+        296.092,61.828 283.791,61.828 297.144,56.365 297.144,50.813 268.253,50.813"/>
+        <polygon style="fill:#010101;" points="269.36,28.863 269.36,37.546 276.512,37.546 276.512,34.737 272.425,34.737
+        272.425,31.804 276.512,31.804 276.512,28.863"/>
+        <polygon style="fill:#010101;" points="279.384,28.863 279.384,31.213 281.874,34.737 279.576,34.737 279.576,37.546
+        286.471,37.546 286.471,34.869 284.173,31.928 286.471,31.928 286.471,28.863"/>
+        <polygon style="fill:#010101;" points="289.23,28.863 289.23,31.213 291.721,34.737 289.422,34.737 289.422,37.546
+        296.318,37.546 296.318,34.869 294.019,31.928 296.318,31.928 296.318,28.863"/>
+      </g>
+    </g>
+
+    <text transform="matrix(1 0 0 1 42.6806 99.4857)" style="fill:#A04098; font-size:21.6028px;">CSS 3</text>
+  </g>
+</g>
+</svg>

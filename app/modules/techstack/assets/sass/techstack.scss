@@ -1,0 +1,81 @@
+#angular, #gulp, #sass, #jquery, #bootstrap, #bower, #css, #html{
+  transform-origin: 517px 484px;
+  cursor: pointer;
+}
+
+#angular-title, #gulp-title, #sass-title, #jquery-title {
+  transform-origin: 95px 122px;
+}
+
+#angular-details, #gulp-details, #sass-details, #jquery-details {
+  transform-origin: 211px 189px;
+}
+
+#angular-badge, #gulp-badge, #sass-badge, #jquery-badge {
+  transform-origin: 189px 102px;
+}
+
+#bootstrap-title, #bower-title, #css-title, #html-title {
+  transform-origin: 284px 130px;
+}
+
+#bootstrap-details, #bower-details, #css-details, #html-details {
+  transform-origin: 211px 189px;
+}
+
+#bootstrap-badge, #bower-badge, #css-badge, #html-badge {
+  transform-origin: 189px 102px;
+}
+
+
+[id$=badge], [id$=title], [id$=details] {
+  transition: transform 0.25s ease-in-out;}
+
+[id$=badge] {
+  transform: scale(0.5, 0.5); }
+
+[id$=title] {
+  transform: scale(1.8) translate(0px, 48px)}
+
+[id$=details] {
+  transform: scale(0, 0); }
+
+#timeline > g:hover [id$=badge], #timeline > g:hover [id$=details] {
+  transform: scale(1, 1);
+  cursor: pointer;
+}
+
+#timeline > g:hover [id$=title] {
+  transform: scale(1) translate(0px, 0px);
+}
+
+///////////////////////////////////////////////////////////////
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+
+@keyframes grow-y {
+  0% {
+    transform: scaleY(0); }
+
+  100% {
+    transform: scaleY(1); } }
+
+@keyframes grow-x {
+  0% {
+    transform: scaleX(0); }
+
+  100% {
+    transform: scaleX(1); } }
+
+@keyframes grow {
+  0% {
+    transform: scale(0, 0); }
+
+  100% {
+    transform: scale(1, 1); } }

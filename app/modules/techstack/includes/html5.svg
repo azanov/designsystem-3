@@ -1,0 +1,37 @@
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="386" height="150"
+  preserveAspectRatio="xMaxYMax meet"  viewBox="0 0 375.847 185.784" >
+  <g id="timeline">
+    <g id="html">
+      <rect x="128.643" y="0" style="fill:#07B14C;" width="12.329" height="190.411"/>
+      <polygon style="fill:#07B14C;" points="139.893,98.041 147.184,92.641 139.353,87.6       "/>
+      <g id="html-badge">
+        <circle style="fill:#07B14C;" cx="281.955" cy="92.892" r="92.892"/>
+        <g id="html-details">
+          <text transform="matrix(1 0 0 1 228.812 121.1215)" style="fill:#FFFFFF; font-family: 'PrecisionSans_W_Bd';  font-size:12.9617px;">The latest version</text>
+
+          <text transform="matrix(1 0 0 1 258.1518 136.6752)" style="fill:#FFFFFF; font-family: 'PrecisionSans_W_Bd';font-size:12.9617px;">of HTML.</text>
+
+        </g>
+        <g id="html-title">
+          <path style="fill:#E44F26;" d="M283.003,94.026l-18.542-5.147l-4.132-46.346h45.404l-4.136,46.339L283.003,94.026z"/>
+          <path style="fill:#F1662A;" d="M298.055,85.921l3.535-39.599h-18.56v43.764L298.055,85.921z"/>
+          <path style="fill:#EBEBEB;" d="M283.031,69.196v-5.684h-7.521l-0.519-5.821h8.041v-5.684h-0.019h-14.233l0.135,1.525
+          l1.397,15.664L283.031,69.196L283.031,69.196z"/>
+          <path style="fill:#EBEBEB;" d="M283.031,78.273l-0.025,0.006l-6.33-1.709l-0.405-4.534h-3.076h-2.63l0.796,8.925l11.643,3.232
+          l0.026-0.007L283.031,78.273L283.031,78.273z"/>
+          <path d="M264.554,29.938h2.888v2.854h2.642v-2.854h2.889v8.642h-2.889v-2.894h-2.642v2.894h-2.888V29.938L264.554,29.938z"/>
+          <path d="M276.772,32.804h-2.543v-2.866h7.976v2.866h-2.544v5.777h-2.888V32.804L276.772,32.804z"/>
+          <path d="M283.471,29.938h3.012l1.853,3.037l1.851-3.037h3.013v8.642h-2.877v-4.283l-1.987,3.073h-0.05l-1.989-3.073v4.283
+          h-2.826L283.471,29.938L283.471,29.938z"/>
+          <path d="M294.637,29.938h2.89v5.786h4.062v2.857h-6.952V29.938L294.637,29.938z"/>
+          <path style="fill:#FFFFFF;" d="M296.224,63.511h-1.532h-11.681v5.684h6.999l-0.66,7.372l-6.339,1.712v5.913l11.653-3.23
+          l0.086-0.96l1.336-14.964L296.224,63.511z"/>
+          <path style="fill:#FFFFFF;" d="M297.25,52.007h-14.238v3.53v2.14v0.014h13.711l0,0h0.018l0.114-1.277l0.259-2.882L297.25,52.007
+          z"/>
+        </g>
+      </g>
+
+      <text transform="matrix(1 0 0 1 23.9512 99.4857)" style="fill:#07B14C; font-size:21.6028px;">HTML 5</text>
+    </g>
+  </g>
+</svg>
