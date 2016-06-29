@@ -4,7 +4,7 @@
   angular.module('app').directive('pbDsHeader', function () {
     return {
       restrict: 'A',
-      templateUrl: 'modules/main/templates/header.html',
+      templateUrl: 'modules/header/header.html',
       controller: 'HeaderController as header'
     };
   });
