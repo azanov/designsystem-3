@@ -90,6 +90,7 @@ The sidenav is constructed as follows:
 - Each top-level section is an `<li du-scrollspy="overview">` where `overview` is the `id` of the corresponding `<section>` tag described earlier.
 - Inside this `li` is at least an `a` tag:
   `<a ui-sref="checkboxes({'#':'usage'})" du-scrollspy>Overview</a>`
+- Note that the `ui-sref` tag includes first the current route of the page (here, `checkboxes()`) and inside the parens is `{'#':'usage'}` where the anchor name is "usage"
 - _If there are subsections_ add a `<ul class="nav" du-spy-context="overview"`, where `overview` is the `id` as described above
 - The actual subsections are `li` tags inside this `ul`, as described above:
   `<li><a ui-sref="checkboxes({'#':'usage'})" du-scrollspy>Usage</a></li>`
