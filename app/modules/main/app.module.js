@@ -42,6 +42,7 @@
     'pb.ds.switches',
     'pb.ds.tables',
     'pb.ds.tabs',
+    'pb.ds.techstack',
     'pb.ds.tiles',
     'pb.ds.toastrs',
     'pb.ds.tools',

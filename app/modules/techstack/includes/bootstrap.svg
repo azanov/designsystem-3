@@ -1,0 +1,35 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="386" height="150"
+preserveAspectRatio="xMaxYMax meet"  viewBox="0 0 375.847 185.784" >
+<g id="timeline">
+<g id="bootstrap">
+  <rect x="129.059" y="0" style="fill:#EE8322;" width="12.329" height="190"></rect>
+  <polygon style="fill:#EE8322;" points="140.309,98.113 147.6,92.712 139.769,87.671"/> <text transform="matrix(1 0 0 1 -1.0164 99.4857)" style="fill:#EE8322; font-size:21.6028px;">Bootstrap</text>
+  <g id="bootstrap-badge">
+    <circle style="fill:#EE8322;" cx="282.371" cy="92.892" r="92.892"/>
+    <g id="bootstrap-details">
+      <text transform="matrix(1 0 0 1 228.2288 121.1215)" style="fill:#FFFFFF; font-family: 'PrecisionSans_W_Bd';  font-size:12.9617px;">An open-source,</text>
+
+      <text transform="matrix(1 0 0 1 242.5676 136.6752)" style="fill:#FFFFFF; font-family: 'PrecisionSans_W_Bd'; font-size:12.9617px;">responsive</text>
+
+      <text transform="matrix(1 0 0 1 242.3059 152.2299)" style="fill:#FFFFFF;  font-family: 'PrecisionSans_W_Bd'; font-size:12.9617px;">framework.</text>
+
+    </g>
+    <g id="bootstrap-title">
+
+      <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="254.9005" y1="15.3465" x2="307.1208" y2="-25.0204" gradientTransform="matrix(1 0 0 1 0 68)">
+        <stop  offset="0" style="stop-color:#121134"/>
+        <stop  offset="1" style="stop-color:#602D50"/>
+      </linearGradient>
+      <path style="fill:url(#SVGID_1_);" d="M313.374,83.642c0,4.488-3.639,8.126-8.126,8.126h-44.236
+        c-4.488,0-8.126-3.639-8.126-8.126V39.407c0-4.487,3.639-8.126,8.126-8.126h44.236c4.488,0,8.126,3.639,8.126,8.126V83.642z"/>
+        <g>
+          <path style="fill:#FFFFFF;" d="M267.431,42.587h17.663c9.998,0,12.158,7.107,12.158,9.913c0,5.675-3.218,7.126-4.825,7.778
+            c2.44,0.688,6.4,2.77,6.4,9.988c0,2.064-0.261,10.198-13.277,10.198h-18.12L267.431,42.587L267.431,42.587z M277.208,57.391
+            h5.377c3.979,0,4.38-2.607,4.38-3.857c0-1.158-0.724-3.693-4.31-3.693h-5.446L277.208,57.391L277.208,57.391z M277.208,73.848
+            h6.165c5.126,0,5.424-3.607,5.424-4.874c0-1.177-0.441-4.816-5.448-4.816h-6.142V73.848z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
