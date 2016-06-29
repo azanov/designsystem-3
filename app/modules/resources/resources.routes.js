@@ -19,10 +19,6 @@
         templateUrl: 'modules/resources/templates/resources-strategy.html'
       })
 
-      .state('resources.tools', {
-        url: '/tools',
-        templateUrl: 'modules/resources/templates/resources-tools.html'
-      })
 
       .state('resources.gallery', {
         url: '/gallery',

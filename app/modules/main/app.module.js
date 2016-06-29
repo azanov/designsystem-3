@@ -44,7 +44,8 @@
     'pb.ds.uibootstrap',
     'pb.ds.widgets',
     'pb.ds.animation',
-    'pb.ds.writing'
+    'pb.ds.writing',
+    'pb.ds.tools'
   ]);
 
   // angular scroll configuration
@@ -136,7 +137,7 @@
     });
 
     // additional parts loaded in module controllers
-    // $translatePartialLoaderProvider.addPart('modules/i18n');
+    // $translatePartialLoaderProvider.addPart('modules/i18n')
 
     $translateProvider.preferredLanguage('en-us');
     $translateProvider.fallbackLanguage('en-us');
@@ -162,7 +163,7 @@
     // LOCATION CHANGE START
     $rootScope.$on('$locationChangeStart', function (event, newUrl) {
       if ($location.$$hash) {
-        // $log.debug('LOCATION CHANGE START WITH $$hash', $location);
+        // $log.debug('LOCATION CHANGE START WITH $$hash', $location)
         hashScroll($location.$$hash);
       }
     });
@@ -171,13 +172,13 @@
     //   $log.debug(
     //     'To State:', toState,
     //     'From state:', fromState
-    //   );
+    //   )
     //
     //   if (!toState || !toState.data) {
-    //     return;
+    //     return
     //   }
     //
-    // });
+    // })
 
     // STATE CHANGE ERROR
     $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
@@ -197,13 +198,14 @@
 
     // STATE CHANGE SUCCESS
     $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
-      $timeout(function(){
+      $timeout(function () {
         $('.doc-body-sidebar').affix({
           offset: {
             top: 200,
             bottom: 70
           }
-        });});
+        });
+      });
     });
 
     // VIEW CONTENT LOADING
@@ -217,12 +219,11 @@
       $location.url($location.url().replace('%23', '#'));
 
       if ($location.$$hash) {
-        // $log.debug('VIEW CONTENT LOADED WITH $$hash', $location);
+        // $log.debug('VIEW CONTENT LOADED WITH $$hash', $location)
         hashScroll($location.$$hash, true);
       }
     });
     // handle scrolling to updated hash
-
 
     // handle scrolling to updated hash
     // @param timeout : boolean, if true use timeout for view animation delay
