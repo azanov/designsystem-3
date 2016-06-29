@@ -52,38 +52,33 @@ The sidenav is constructed as follows:
     <ul class="nav">
 
       <li du-scrollspy="overview">
-        <a href="#overview" du-smooth-scroll du-scrollspy>Overview</a>
+        <a ui-sref="checkboxes({'#':'overview'})" du-scrollspy>Overview</a>
         <ul class="nav" du-spy-context="overview">
-          <li><a href="#usage" du-smooth-scroll du-scrollspy>Usage</a></li>
+          <li><a ui-sref="checkboxes({'#':'usage'})" du-scrollspy>Usage</a></li>
         </ul>
       </li>
 
       <li du-scrollspy="stacked">
-        <a href="#stacked" du-smooth-scroll du-scrollspy>Stacked Checkboxes</a>
+        <a ui-sref="checkboxes({'#':'stacked'})" du-scrollspy>Stacked Checkboxes</a>
         <ul class="nav" du-spy-context="stacked">
-          <li>
-            <a href="#enhancedStacked" du-smooth-scroll du-scrollspy>Enhanced Stacked</a>
-          </li>
-          <li><a href="#osStacked" du-smooth-scroll du-scrollspy>OS Stacked</a></li>
+          <li><a ui-sref="checkboxes({'#':'enhancedStacked'})" du-scrollspy>Enhanced Stacked</a></li>
+          <li><a ui-sref="checkboxes({'#':'osStacked'})" du-scrollspy>OS Stacked</a></li>
         </ul>
       </li>
 
       <li du-scrollspy="inline">
-        <a href="#inline" du-smooth-scroll du-scrollspy>Inline Checkboxes</a>
+        <a ui-sref="checkboxes({'#':'inline'})" du-scrollspy>Inline Checkboxes</a>
         <ul class="nav" du-spy-context="inline">
-          <li>
-             <a href="#enhancedInline" du-smooth-scroll du-scrollspy>Enhanced Inline</a>
-          </li>
-          <li>
-            <a href="#osInline" du-smooth-scroll du-scrollspy>OS Inline</a>
-          </li>
+          <li><a ui-sref="checkboxes({'#':'enhancedInline'})" du-scrollspy>Enhanced Inline</a></li>
+          <li><a ui-sref="checkboxes({'#':'osInline'})" du-scrollspy>OS Inline</a></li>
         </ul>
       </li>
-      
-    </ul>      
+
+    </ul>
   </nav>
 
 </div>
+
 ```
 ### Things to note:
 
@@ -92,12 +87,12 @@ The sidenav is constructed as follows:
 
 
 - Next is a `<ul class="nav">` which holds the whole menu.
-- Each top-level section is an `<li du-scrollspy="#overview">` where `#overview` is the `id` of the corresponding `<section>` tag described earlier.
-- Inside this `li` is at least an `a` tag: 
-  `<a href="#overview" du-smooth-scroll du-scrollspy>Overview</a>`
+- Each top-level section is an `<li du-scrollspy="overview">` where `overview` is the `id` of the corresponding `<section>` tag described earlier.
+- Inside this `li` is at least an `a` tag:
+  `<a ui-sref="checkboxes({'#':'usage'})" du-scrollspy>Overview</a>`
 - _If there are subsections_ add a `<ul class="nav" du-spy-context="overview"`, where `overview` is the `id` as described above
 - The actual subsections are `li` tags inside this `ul`, as described above:
-  `<li><a href="#usage" du-smooth-scroll du-scrollspy>Usage</a></li>`
+  `<li><a ui-sref="checkboxes({'#':'usage'})" du-scrollspy>Usage</a></li>`
 - Continue to add top-level `li` tags and enclosed `ul`/`li` tags as needed.  Follow the example above.
 
 ## Alerts/Warnings/Info blocks
@@ -182,4 +177,3 @@ When there is the occasional _Plunkr_ link, it should be placed inside the `doc-
 ```
 
 Note that the links are in a `<div class="extra-links pull-right">`
-
