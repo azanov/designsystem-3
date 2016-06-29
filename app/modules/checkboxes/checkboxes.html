@@ -21,14 +21,14 @@
           <ul class="nav">
 
             <li du-scrollspy="overview">
-              <a href="#overview" du-smooth-scroll du-scrollspy>Overview</a>
+              <a ui-sref="checkboxes({'#':'overview'}" du-smooth-scroll du-scrollspy>Overview</a>
               <ul class="nav" du-spy-context="overview">
-                <li><a href="#usage" du-smooth-scroll du-scrollspy>Usage</a></li>
+                <li><a ui-sref="checkboxes({'#':'usage'}" du-smooth-scroll du-scrollspy>Usage</a></li>
               </ul>
             </li>
 
             <li du-scrollspy="stacked">
-              <a href="#stacked" du-smooth-scroll du-scrollspy>Stacked Checkboxes</a>
+              <a ui-sref="checkboxes({'#':'stacked'}" du-smooth-scroll du-scrollspy>Stacked Checkboxes</a>
               <ul class="nav" du-spy-context="stacked">
                 <li><a href="#enhancedStacked" du-smooth-scroll du-scrollspy>Enhanced Stacked</a></li>
                 <li><a href="#osStacked" du-smooth-scroll du-scrollspy>OS Stacked</a></li>
