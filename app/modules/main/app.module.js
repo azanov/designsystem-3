@@ -42,6 +42,7 @@
     'pb.ds.switches',
     'pb.ds.tables',
     'pb.ds.tabs',
+    'pb.ds.techstack',
     'pb.ds.tiles',
     'pb.ds.toastrs',
     'pb.ds.tools',
@@ -54,6 +55,8 @@
   angular.module('app').value('duScrollDuration', 750);
   angular.module('app').value('duScrollOffset', 125);
   angular.module('app').value('duScrollGreedy', true);
+  angular.module('app').value('duScrollSpyWait', 1000); // need to play with the value here, might be too high
+
 
   // configure debugging
   angular.module('app').config(function ($logProvider, config) {
@@ -71,7 +74,7 @@
       // appendToBody: true
     });
   });
-
+  
   angular.module('app')
     .config(function (cfpLoadingBarProvider) {
       cfpLoadingBarProvider.spinnerTemplate = '<div id="loading-bar-spinner"><i class="nc-icon-mini loader_circle-04 spin lg"></i></div>';
