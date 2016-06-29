@@ -21,25 +21,25 @@
           <ul class="nav">
 
             <li du-scrollspy="overview">
-              <a ui-sref="checkboxes({'#':'overview'}" du-smooth-scroll du-scrollspy>Overview</a>
+              <a ui-sref="checkboxes({'#':'overview'})" du-scrollspy>Overview</a>
               <ul class="nav" du-spy-context="overview">
-                <li><a ui-sref="checkboxes({'#':'usage'}" du-smooth-scroll du-scrollspy>Usage</a></li>
+                <li><a ui-sref="checkboxes({'#':'usage'})" du-scrollspy>Usage</a></li>
               </ul>
             </li>
 
             <li du-scrollspy="stacked">
-              <a ui-sref="checkboxes({'#':'stacked'}" du-smooth-scroll du-scrollspy>Stacked Checkboxes</a>
+              <a ui-sref="checkboxes({'#':'stacked'})" du-scrollspy>Stacked Checkboxes</a>
               <ul class="nav" du-spy-context="stacked">
-                <li><a href="#enhancedStacked" du-smooth-scroll du-scrollspy>Enhanced Stacked</a></li>
-                <li><a href="#osStacked" du-smooth-scroll du-scrollspy>OS Stacked</a></li>
+                <li><a ui-sref="checkboxes({'#':'enhancedStacked'})" du-scrollspy>Enhanced Stacked</a></li>
+                <li><a ui-sref="checkboxes({'#':'osStacked'})" du-scrollspy>OS Stacked</a></li>
               </ul>
             </li>
 
             <li du-scrollspy="inline">
-              <a href="#inline" du-smooth-scroll du-scrollspy>Inline Checkboxes</a>
+              <a ui-sref="checkboxes({'#':'inline'})" du-scrollspy>Inline Checkboxes</a>
               <ul class="nav" du-spy-context="inline">
-                <li><a href="#enhancedInline" du-smooth-scroll du-scrollspy>Enhanced Inline</a></li>
-                <li><a href="#osInline" du-smooth-scroll du-scrollspy>OS Inline</a></li>
+                <li><a ui-sref="checkboxes({'#':'enhancedInline'})" du-scrollspy>Enhanced Inline</a></li>
+                <li><a ui-sref="checkboxes({'#':'osInline'})" du-scrollspy>OS Inline</a></li>
               </ul>
             </li>
 
