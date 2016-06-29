@@ -3,9 +3,9 @@
   angular.module('app', [
     // third party modules are in /core/core.module.js
     'pb.core',
-    'pb.ds.home',
     'pb.ds.accordions',
     'pb.ds.alerts',
+    'pb.ds.animation',
     'pb.ds.badges',
     'pb.ds.breadcrumbs',
     'pb.ds.buttons',
@@ -23,6 +23,7 @@
     'pb.ds.hamburger',
     'pb.ds.help',
     'pb.ds.helpers',
+    'pb.ds.home',
     'pb.ds.inputs',
     'pb.ds.landing',
     'pb.ds.miller',
@@ -33,20 +34,19 @@
     'pb.ds.principles',
     'pb.ds.progress',
     'pb.ds.radiobuttons',
-    'pb.ds.resources',
+    'pb.ds.roadmap',
     'pb.ds.splitview',
     'pb.ds.steppers',
+    'pb.ds.strategy',
     'pb.ds.switches',
     'pb.ds.tables',
     'pb.ds.tabs',
     'pb.ds.tiles',
     'pb.ds.toastrs',
+    'pb.ds.tools',
     'pb.ds.uibootstrap',
     'pb.ds.widgets',
-    'pb.ds.animation',
-    'pb.ds.writing',
-    'pb.ds.tools',
-    'pb.ds.roadmap'
+    'pb.ds.writing'
   ]);
 
   // angular scroll configuration
