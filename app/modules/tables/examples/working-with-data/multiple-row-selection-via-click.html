@@ -1,0 +1,27 @@
+<xmp><table class="table table-hover table-datatable">
+  <thead>
+    <tr>
+      <th><!-- <input type="checkbox"> --></th>
+      <th>Date</th>
+      <th>Recipient</th>
+      <th>Carrier</th>
+      <th>Shipping Info</th>
+      <th>Tracking #</th>
+      <th>Status</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-click="data.rowclick(row, $event)" ng-repeat="row in data.rowdata" ng-class="{'table-row-selected': row.selected}">
+      <td><input type="checkbox" ng-model="row.selected"></td>
+      <td>{{row.date}}</td>
+      <td>{{row.recipient}}</td>
+      <td>{{row.carrier}}</td>
+      <td>{{row.shipping}}</td>
+      <td>{{row.tracking}}</td>
+      <td>{{row.status}}</td>
+      <td>{{row.amount}}</td>
+    </tr>
+    <tr><td colspan="8">&#8230;</td></tr>
+  </tbody>
+</table></xmp>

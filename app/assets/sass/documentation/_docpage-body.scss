@@ -76,10 +76,10 @@ figure {
     padding: 0;
     visibility: hidden;
     display: block;
-    position: absolute;
+    position: fixed;
   }
 
-  .tab-content > .active {
+  .tab-content > .tab-pane.active {
     position: static;
     visibility: visible;
   }
