@@ -1,0 +1,354 @@
+<section id="basicTables">
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Basic Tables</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 id="defaultTable">
+        Default Table
+        <div class="badge badge-added">Added in v2.0</div>
+      </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <p>
+        !!! Info required !!!
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <figure>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First name</th>
+              <th>Last name</th>
+              <th class="currency">Gross Sales</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="person in tables.people">
+              <td>00{{::person.id}}</td>
+              <td>{{::person.firstName}}</td>
+              <td>{{::person.lastName}}</td>
+              <td class="currency">{{::person.gross_sales}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="doc-body-snippet">
+        <pb-code-snippet options="tables.defaultTableExample"></pb-code-snippet>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 id="stripedTable">
+        Striped Table
+        <div class="badge badge-added">Added in v2.0</div>
+      </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <figure>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First name</th>
+              <th>Last name</th>
+              <th class="currency">Gross Sales</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="person in tables.people">
+              <td>{{$index + 1}}</td>
+              <td>{{::person.firstName}}</td>
+              <td>{{::person.lastName}}</td>
+              <td class="currency">{{::person.gross_sales}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="doc-body-snippet">
+        <pb-code-snippet options="tables.stripedTableExample"></pb-code-snippet>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 id="hoverTable">
+        Table Hover
+        <div class="badge badge-added">Added in v2.0</div>
+      </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <figure>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First name</th>
+              <th>Last name</th>
+              <th class="currency">Gross Sales</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="person in tables.people">
+              <td>00{{::person.id}}</td>
+              <td>{{::person.firstName}}</td>
+              <td>{{::person.lastName}}</td>
+              <td class="currency">{{::person.gross_sales}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="doc-body-snippet">
+        <pb-code-snippet options="tables.hoverTableExample"></pb-code-snippet>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 id="stripedTableHover">
+        Striped Table Hover
+        <div class="badge badge-added">Added in v2.0</div>
+      </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <figure>
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First name</th>
+              <th>Last name</th>
+              <th class="currency">Gross Sales</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="person in tables.people">
+              <td>00{{::person.id}}</td>
+              <td>{{::person.firstName}}</td>
+              <td>{{::person.lastName}}</td>
+              <td class="currency">{{::person.gross_sales}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="doc-body-snippet">
+        <pb-code-snippet options="tables.stripedTableHoverExample"></pb-code-snippet>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 id="condensedTable">
+        Table Condensed
+        <div class="badge badge-added">Added in v2.0</div>
+      </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <figure>
+        <table class="table table-condensed">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First name</th>
+              <th>Last name</th>
+              <th class="currency">Gross Sales</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="person in tables.people">
+              <td>00{{::person.id}}</td>
+              <td>{{::person.firstName}}</td>
+              <td>{{::person.lastName}}</td>
+              <td class="currency">{{::person.gross_sales}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="doc-body-snippet">
+        <pb-code-snippet options="tables.condensedTableExample"></pb-code-snippet>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 id="extraCondensedTable">
+        Table Extra Condensed
+        <div class="badge badge-added">Added in v2.0</div>
+      </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <figure>
+        <table class="table table-condensed-extra">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First name</th>
+              <th>Last name</th>
+              <th class="currency">Gross Sales</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="person in tables.people">
+              <td>00{{::person.id}}</td>
+              <td>{{::person.firstName}}</td>
+              <td>{{::person.lastName}}</td>
+              <td class="currency">{{::person.gross_sales}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="doc-body-snippet">
+        <pb-code-snippet options="tables.extraCondensedTableExample"></pb-code-snippet>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 id="openTable">
+        "Open" Table
+        <div class="badge badge-added">Added in v2.0</div>
+      </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <figure>
+        <table class="table table-open">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First name</th>
+              <th>Last name</th>
+              <th class="currency">Gross Sales</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="person in tables.people">
+              <td>00{{::person.id}}</td>
+              <td>{{::person.firstName}}</td>
+              <td>{{::person.lastName}}</td>
+              <td class="currency">{{::person.gross_sales}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="doc-body-snippet">
+        <pb-code-snippet options="tables.openTableExample"></pb-code-snippet>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 id="unstyledTable">
+        "Unstyled" Table
+        <div class="badge badge-added">Added in v2.0</div>
+      </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <figure>
+        <table class="table table-unstyled">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First name</th>
+              <th>Last name</th>
+              <th class="currency">Gross Sales</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="person in tables.people">
+              <td>00{{::person.id}}</td>
+              <td>{{::person.firstName}}</td>
+              <td>{{::person.lastName}}</td>
+              <td class="currency">{{::person.gross_sales}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="doc-body-snippet">
+        <pb-code-snippet options="tables.unstyledTableExample"></pb-code-snippet>
+      </div>
+    </div>
+  </div>
+
+</section>

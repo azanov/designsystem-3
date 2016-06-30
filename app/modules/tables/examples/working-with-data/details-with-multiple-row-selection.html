@@ -1,0 +1,66 @@
+<xmp><table class="table">
+  <thead>
+    <tr>
+      <th><input type="checkbox"></th>
+      <th></th>
+      <th>Date</th>
+      <th>Recipient</th>
+      <th>Carrier</th>
+      <th>Shipping Info</th>
+      <th>Tracking #</th>
+      <th>Status</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td>
+        <a href="" class="table-row-toggle" ng-init="tables.showDetails02 = true" ng-click="tables.showDetails02 = !tables.showDetails02">
+          <i class="nc-icon-mini lg fw arrows-2_small-right transition-all" ng-class="{'rotate-90': tables.showDetails02}"></i>
+        </a>
+      </td>
+      <td>2016-Mar-11</td>
+      <td>Tom Swift</td>
+      <td>USPS</td>
+      <td>Normal</td>
+      <td>UPID690-697560-7</td>
+      <td>Delivered</td>
+      <td>$56.99</td>
+    </tr>
+    <tr class="table-details">
+      <td colspan="9">
+        <div uib-collapse="!tables.showDetails02">
+        <div class="table-details-content">
+
+          <table class="table no-margin-bottom">
+            <tbody>
+              <tr>
+                <td>
+                  Address Line 1<br>
+                  Address Line 2<br>
+                  Address Line 3<br>
+                  City, State, ZIP
+                </td>
+                <td>
+                  Address Line 1<br>
+                  Address Line 2<br>
+                  Address Line 3<br>
+                  City, State, ZIP
+                </td>
+                <td>
+                  Address Line 1<br>
+                  Address Line 2<br>
+                  Address Line 3<br>
+                  City, State, ZIP
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+    </td>
+    </tr>
+    <tr><td colspan="9">&#8230;</td></tr>
+  </tbody>
+</table></xmp>
