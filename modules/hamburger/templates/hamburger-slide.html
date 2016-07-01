@@ -1,0 +1,31 @@
+<nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas sliding" role="navigation">
+  <div class="close-burger" data-toggle="offcanvas" data-target="#myNavmenu">
+    <!-- <span class="nc-icon-mini ui-1_simple-remove" aria-hidden="true"></span> -->
+    <span class="nc-icon-mini ui-1_simple-remove x2" aria-hidden="true"></span>
+  </div>
+  <div class="tree" ng-include="'modules/hamburger/templates/includes/leftnav-tree.html'"></div>
+</nav>
+
+
+<div class="navbar navbar-default navbar-fixed-top">
+  <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="navbar-brand brand-text" href="#/">Product Name</a>
+</div>
+
+
+
+
+
+<div class="container-fluid main-content">
+  <div class="burger-backdrop"></div>
+  <div class="row">
+    <div class="col-md-12">
+      <div ng-include="'modules/hamburger/templates/includes/fpo-content.html'"></div>
+    </div>
+  </div>
+
+</div>

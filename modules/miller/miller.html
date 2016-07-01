@@ -1,0 +1,188 @@
+<div class="doc-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero-header">
+          <!-- <div class="eyebrow">????</div> -->
+          <h1>Miller Columns</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-header jump-bar headroom" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}" headroom offset="240" tolerance="5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- <ul class="list-unstyled list-inline jump-menu">
+            <li>
+              <a ui-sref="sample({'#':'sampleID'})">Sample Jump Label</a>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+    <!-- <div class="row">
+      <div class="col-md-12">
+        <h1 id="miller" class="doc-head">Miller Columns</h1>
+      </div>
+    </div> -->
+    <div class="row spacer-top-xl">
+      <div class="col-md-8">
+        <p>Miller Columns are a pattern for "drilling down" into a dataset.  This implementation is not intended for smartphone viewports.</p>
+      </div>
+    </div>
+
+    <div class="row spacer-top-md spacer-top-md">
+      <div class="col-md-12">
+        <figure>
+          <!-- miller columns with spectrum data -->
+            <div class="row miller-columns">
+          <!-- top level -->
+              <div class="col-xs-4 first-column">
+                <div class="panel panel-default">
+                  <div class="list-group">
+                    <a class="list-group-item" href=""
+                      ng-class="{active: $index === miller.millercolumn.dataSelected}"
+                      ng-click="miller.getSublevel1(topLevel, $index)"
+                      ng-repeat="topLevel in ::miller.millercolumn.data.versionInfos track by $index">
+                      {{::topLevel.name}}
+                      <i class="pull-right fa fa-angle-right fa-lg"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+          <!-- level1 -->
+              <div class="col-xs-3 inner-column">
+                <div class="panel panel-default">
+
+                  <div class="list-group">
+                    <a class="list-group-item" href=""
+                      ng-class="{active: $index === miller.millercolumn.level1Selected }"
+                      ng-click="miller.getSublevel2($index)"
+                      ng-repeat="level1 in miller.millercolumn.level1 track by $index">
+                      {{level1.name}}
+                      <i class="pull-right fa fa-fw fa-angle-right fa-lg"></i>
+                      <span class="badge">{{::level1.versionInfos.length}}</span>
+                    </a>
+                </div>
+              </div>
+            </div>
+
+          <!-- level 2 -->
+            <div class="col-xs-5 last-column">
+              <div class="panel panel-default">
+                <ul class="list-group list-group-details">
+                  <li class="list-group-item" ng-repeat="level2 in miller.millercolumn.level2">
+                    <div class="form-horizontal">
+                      <h4 class="text-primary">{{::level2.name}}</h4>
+                      <div class="form-group" ng-show="level2.version">
+                        <label class="col-xs-4 control-label">
+                          <strong>Version</strong>
+                        </label>
+                        <p class="col-xs-8 form-control-static">{{::level2.version}}</p>
+                      </div>
+
+          <!-- attributes -->
+                      <div ng-repeat="attribute in level2.attributes">
+                        <div class="form-group">
+                          <label class="col-xs-4 control-label">
+                            <strong>{{::attribute.label}}</strong>
+                          </label>
+                          <p class="col-xs-8 form-control-static">{{::attribute.value}}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        <h1 id="writing" class="doc-head">Writing for Containers</h1>
+      </div>
+    </div>
+
+
+
+
+    <div class="row">
+      <div class="col-md-8">
+        <p class="lede">When writing headers or labels for container elements, follow these basic principles.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Style</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <ul>
+          <li>Use short, active words and phrases.</li>
+          <li>Structure copy to avoid ambiguity in language.</li>
+          <li>Use the same style and structure for all your labels.</li>
+          <li>To avoid confusing users, use consistent terminology.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Capitalization</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <ul>
+          <li>Use title capitalization for all container headers and labels.</li>
+          <li>Capitalize all words containing four or more letters.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Punctuation</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <ul>
+          <li>Don’t conclude copy with punctuation, such as periods or colons.</li>
+          <li>Don’t phrase your copy as questions.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="doc-sectionhead">Word Count</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <ul>
+          <li>Keep word counts to three words or fewer possible.</li>
+          <li>If you need to use more than three words, use the smallest number possible to express the container element’s purpose.</li>
+          <li>“Future proof” your containers by considering if you’ll need to add elements, such as tabs, later on — then choose your wording to allow for those additions.</li>
+          <li>Consider translation needs when choosing words — some languages may require more words or characters to express an idea, which could cause titles in elements such as tab labels to wrap.</li>
+        </ul>
+      </div>
+    </div>
+
+
+
+  </div>

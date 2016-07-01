@@ -1,0 +1,266 @@
+/// your basic clearfix
+/// @example css - Usage
+/// ul {
+///  @include clearfix;
+/// }
+/// @example css - CSS Output
+/// ul {
+///   zoom: 1;
+/// }
+/// ul:before, ul:after {
+///   content: '';
+///   display: table;
+/// }
+/// ul:after {
+///   clear: both;
+/// }
+
+@mixin clearfix {
+  zoom: 1;
+  &:before, &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// this extend used everywhere except where 2 gradients are layered
+// for those, the gradient needs to be copied manually
+%gradient {
+  background-image: linear-gradient(90deg, $pb-blue 0%, $pb-magenta 100%);
+}
+
+
+/// Breakpoint mixins.
+/// The widths are customizable per project.  These have been changed from defaults.
+/// @param {String} $point [] - String representing sizes defined below
+/// @example scss - Usage
+/// .media-thing {
+///   width:300px;
+///   @include breakpoint(screen-xs) {
+///     width: 100px;
+///   }
+/// }
+/// @example css - CSS Output
+/// .media-thing {
+///   width: 300px;
+/// }
+///   @media (max-width: 767px) {
+///     .media-thing {
+///       width: 100px;
+///     }
+/// }
+/// @link http://www.sitepoint.com/managing-responsive-breakpoints-sass/
+@mixin breakpoint($point) {
+  @if $point == screen-xs {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+  @else if $point == screen-sm {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @else if $point == screen-md {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+  @else if $point == screen-lg {
+    @media (min-width: 1300px) {
+      @content;
+    }
+  }
+}
+
+/// Mixes a color with white by a supplied percentage
+/// @param {Percent} $percentage [] - From 0-100%
+/// @example scss - Usage
+/// .tintexample {
+///   color: tint(#e86ea4, 10%); //#fdf1f6
+///  }
+@function tint($color, $percentage) {
+  @return mix($color, #fff, $percentage);
+}
+
+/// Mixes a color with black by a supplied percentage
+/// @param {Percent} $percentage [] - From 0-100%
+/// @example scss - Usage
+/// .shadeexample {
+///   color: shade(#e86ea4, 10%);
+/// }
+@function shade($color, $percentage) {
+  @return mix($color, #000, $percentage);
+}
+
+
+/// Panel Variants
+@mixin panel-variant($border, $heading-text-color, $heading-bg-color, $heading-border) {
+  border-color: $border;
+
+  > .panel-heading {
+    color: $heading-text-color;
+    background-color: $heading-bg-color;
+    border-color: $heading-border;
+
+    + .panel-collapse > .panel-body {
+      border-top-color: $border;
+    }
+    .badge {
+      color: $heading-bg-color;
+      background-color: $heading-text-color;
+    }
+  }
+  > .panel-footer {
+    + .panel-collapse > .panel-body {
+      border-bottom-color: $border;
+    }
+  }
+}
+
+/// Hides the text in an element, commonly used to show an image. Some elements will need block-level styles applied.
+/// @link http://zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement
+/// @example scss - Usage
+///   .element {
+///     @include hide-text;
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     overflow: hidden;
+///     text-indent: 101%;
+///     white-space: nowrap;
+///   }
+///
+@mixin hide-text {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+// Required mixin pulled from Bootstrap's mixins.scss
+// Creates a wrapper for a series of columns
+/// @param {Number} $gutter [$grid-gutter-width] - Typically 15px
+@mixin make-row($gutter: $grid-gutter-width) {
+  margin-left: ($gutter / -2);
+  margin-right: ($gutter / -2);
+  @include clearfix();
+}
+
+// Box sizing
+@mixin box-sizing($boxmodel) {
+  box-sizing: $boxmodel;
+}
+$grid-column-padding: 15px;
+
+// Contextual backgrounds
+
+// [converter] $parent hack
+@mixin bg-variant($parent, $color) {
+  #{$parent} {
+    background-color: $color;
+  }
+  a#{$parent}:hover {
+    background-color: darken($color, 10%);
+  }
+}
+
+// Typography
+// [converter] $parent hack
+@mixin text-emphasis-variant($parent, $color) {
+  #{$parent} {
+    color: $color;
+  }
+  a#{$parent}:hover {
+    color: darken($color, 10%);
+  }
+}
+
+@mixin triangle-closed {
+  content: '\25B8'; // triangle right
+  transform: rotate(0deg);
+}
+
+@mixin triangle-opened {
+  content: '\25B8'; // triangle right
+  transform: rotate(90deg);
+}
+
+@mixin flat-right($r: $border-radius-base) {
+  border-bottom-left-radius: $r;
+  border-top-left-radius: $r;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+@mixin flat-left ($r: $border-radius-base) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: $r;
+  border-bottom-right-radius: $r;
+}
+
+/// Button sizes
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}
+/// top
+@mixin border-top-radius($radius) {
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+}
+/// bottom
+@mixin border-bottom-radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+/// right
+@mixin border-right-radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+}
+/// left
+@mixin border-left-radius($radius) {
+  border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+
+@mixin functional-button($color) {
+  background-color: $color;
+  border-color: $color;
+  &:hover {
+    background-color: darken($color, 10%);
+    border-color: darken($color, 10%);
+  }
+}
+
+@mixin focus-ring {
+  border-color: #189dbd;
+  // outline-width: 6px;
+  // outline-style: solid;
+  // outline-color: hsla(190, 58%, 79%, .6);
+  outline: none;
+  box-shadow: 0 0 10px rgba(76, 211, 255, .77);
+}
+
+@mixin webkit-only {
+  @media (-webkit-min-device-pixel-ratio: 0) {
+    @content;
+  }
+}
+
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,72 @@
+
+//DOCUMENTATION PAGES
+
+.doc-hero {
+  @extend %gradient;
+  height: 220px;
+  border-top: 1px solid rgba(255, 255, 255, .2);
+  margin-top: 50px; // height of navbar
+  position: relative;
+  @include breakpoint(screen-xs) {
+    height: 120px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+  }
+  .hero-header {
+    margin-top: 80px;
+    @include breakpoint(screen-xs) {
+      margin-top: 25px;
+    }
+    .eyebrow {
+      font-family: $font-family-ps-regular;
+      font-size: 16px;
+      color: rgba(255, 255, 255, .5);
+    }
+    h1 {
+      font-size: 40px;
+      color: #fff;
+      font-family: $font-family-ps-light; //NOTE: global spec for h1.ko is reg not light
+      margin-top: 5px;
+      @include breakpoint(screen-xs) {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+//tertiary button states
+.btn-default-ko {
+  &.hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+  }
+  &.active {
+    opacity: .8;
+  }
+}
+.doc-side-nav {
+
+  // not docked
+  &.headroom-top {
+    position: relative;
+    top: 50px;
+    @include breakpoint(screen-xs) {
+      display: none;
+    }
+  }
+
+  //docked
+  &.headroom-not-top {
+    top: 100px;
+    position: fixed;
+  }
+}
+
+.modal-demo {
+  border: 1px solid #c0c0c0;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, .2);
+  margin-bottom: 15px;
+  + .btn {
+    min-width: 120px;
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,227 @@
+<div class="doc-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero-header">
+          <div class="eyebrow">Elements</div>
+          <h1>Help Prompts</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-header jump-bar headroom" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}" headroom offset="240" tolerance="5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-unstyled list-inline jump-menu">
+            <li>
+              <a ui-sref="help({'#':'info'})">Help and Information Popovers</a>
+            </li>
+            <li>
+              <a ui-sref="help({'#':'tooltips'})">Tooltips</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<div class="container">
+
+
+  <div class="row">
+    <div class="col-md-6">
+      <h1 class="doc-head" id="info">Help and Information Popovers</h1>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Usage</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <ul>
+        <li> Limit to 1-2 sentences.</li>
+        <li> Don’t use these to describe what a control does.</li>
+        <li> Use selectively so as not to overcrowd the screen with prompts.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Behavior</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <ul>
+        <li> Prompt copy appears on click, not on hover.</li>
+        <li> A second click dismisses the prompt.</li>
+      </ul>
+    </div>
+    <div class="col-md-4 col-md-offset-1">
+      <figure>
+        <figcaption>Interaction/Placement</figcaption>
+        <div class="form-group">
+          <label class="label-bold">In-memory record limit </label> <i class="nc-icon-mini ui-2_alert-circle" popover-placement="right" uib-popover-template="help.dynamicPopover.templateUrl" popover-trigger="outsideClick"></i>
+          <input type="text" name="" id="" class="form-control">
+        </div>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Symbol Selection</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <p>
+        We offer two popover icons: a lowercase “i” (for “information”) and a question mark to denote help. In most cases, you will use a question mark. Here are criteria to help you recognize which icon to use for your popover.
+      </p>
+
+      <b>Use the question mark when your popover:</b>
+      <ul>
+      <li>Directly answers a question the user is likely to have.</li>
+      <li>Summarizes and/or links to more detailed help content available elsewhere.</li>
+    </ul>
+
+      <b>Use the lowercase “i” when your popover:</b>
+      <ul>
+      <li>Contains useful, but not essential, information about a control.</li>
+      <li>Offers additional explanatory information, but is not “help” per se.</li>
+    </ul>
+
+      <p>Note that the “i” may not be meaningful in some countries. In these cases, we recommend that you use only the question mark icon in your localized product versions.</p>
+
+      <p>When choosing a solid or an outline help icon,  use that style of icon throughout the interface; either all outline icons or all solid icons.  Do not mix types.</p>
+
+    </div>
+    <div class="col-md-4 col-md-offset-1">
+      <figure>
+        <figcaption>Icon/Color Options</figcaption>
+        <div class="row">
+          <div class="col-md-2 text-center">
+
+            <i class="nc-icon-mini ui-e_round-e-help text-info"></i><br>
+            <i class="nc-icon-mini ui-e_round-e-help"></i><br>
+            <i class="nc-icon-mini ui-2_alert-circle text-info"></i><br>
+            <i class="nc-icon-mini ui-2_alert-circle"></i><br/>
+            <i class="nc-icon-mini ui-e_round-e-info"></i><br>
+            <i class="nc-icon-mini ui-e_round-e-info"></i><br>
+            <i class="nc-icon-mini ui-2_alert-circle-i text-info"></i><br>
+            <i class="nc-icon-mini ui-2_alert-circle-i"></i><br>
+
+          </div>
+
+          <div class="col-md-10">
+            <p>
+              Grey icons are <code>$text-color</code>(#717171)<br>
+              Blue icons are <code>$pb-blue-500</code> (#3e53a4)
+            </p>
+          </div>
+
+        </div>
+      </figure>
+
+
+    </div>
+
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h1 class="doc-head" id="tooltips">Tooltips</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Usage</h2>
+      <ul>
+      <li>Limit to a single word or short phrase; sentence fragments are okay.</li>
+      <li>Use only when the purpose of an onscreen element isn’t self-evident.</li>
+      <li>If an element already has a descriptive label then don’t repeat that information in a tooltip.</li>
+    </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Style</h2>
+      <ul>
+      <li>Don’t end tooltip copy with punctuation.</li>
+      <li>Use sentence capitalization except when a tooltip contains a proper noun (e.g., “Address Book”)</li>
+      <li>Use selectively so as not to overcrowd the screen with prompts.</li>
+    </ul>
+
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Examples</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+
+<figure>
+  <figcaption>On Links in Text</figcaption>
+  <p>
+    Pellentesque <a href="#" tooltip-placement="top" uib-tooltip="On Top!">on top</a>,
+    sit amet venenatis urna cursus eget nunc scelerisque viverra mauris, in
+    aliquam. Tincidunt lobortis feugiat vivamus at
+    <a href="#" tooltip-placement="left" uib-tooltip="On the Left!">left</a> eget
+    arcu dictum varius duis at consectetur lorem. Vitae elementum curabitur
+    <a href="#" tooltip-placement="right" uib-tooltip="On the Right!">right</a>
+    nunc sed velit dignissim sodales ut eu sem integer vitae. Turpis egestas
+    <a href="#" tooltip-placement="bottom" uib-tooltip="On the Bottom!">bottom</a>
+    pharetra convallis posuere morbi leo urna,
+    <a href="#" tooltip-animation="false" uib-tooltip="I don't fade. :-(">fading</a>
+    at elementum eu, facilisis sed odio morbi quis commodo odio.
+  </p>
+</figure>
+</div>
+
+
+
+  <div class="col-md-4 col-md-offset-1">
+    <figure>
+      <figcaption>On Buttons</figcaption>
+      <p>
+        <button class="btn btn-primary" tooltip-placement="right" uib-tooltip="Click me for untold riches!">I am a Button</button>
+      </p>
+      </figure>
+
+  </div>
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>

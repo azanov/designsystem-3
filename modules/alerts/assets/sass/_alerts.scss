@@ -1,0 +1,90 @@
+// scss-lint:disable ImportantRule
+$icon-close: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsPSIjNzE3MTcxIiBkPSJNOCAwbC0zIDMtMy0zLTIgMiAzIDMtMyAzIDIgMiAzLTMgMyAzIDItMi0zLTMgMy0zeiIvPjwvc3ZnPgo=';
+
+$icon-danger: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjREMwMDAwIj48cGF0aCBkPSJNMTAgMTcuNWMtNC4xMjUgMC03LjUtMy4zNzUtNy41LTcuNXMzLjM3NS03LjUgNy41LTcuNSA3LjUgMy4zNzUgNy41IDcuNS0zLjM3NSA3LjUtNy41IDcuNW0wLTE3LjVjLTUuNSAwLTEwIDQuNS0xMCAxMHM0LjUgMTAgMTAgMTAgMTAtNC41IDEwLTEwLTQuNS0xMC0xMC0xMCIvPjxwYXRoIGQ9Ik04Ljc1IDVoMi41djYuMjVoLTIuNXoiLz48cGF0aCBkPSJNMTAgMTIuNWMuNjkgMCAxLjI1LjU2IDEuMjUgMS4yNXMtLjU2IDEuMjUtMS4yNSAxLjI1LTEuMjUtLjU2LTEuMjUtMS4yNS41Ni0xLjI1IDEuMjUtMS4yNSIvPjwvZz48L3N2Zz4=';
+
+$icon-warning: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCAyMCAxOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjRUU2NzAwIj48cGF0aCBkPSJNMTkuNTY5IDE1LjYxbC03LjM0NC0xMy43NjhjLS44NDUtMS41ODYtMy4xMTgtMS41ODYtMy45NjQgMGwtNy4zNDMgMTMuNzY5Yy0uNzk4IDEuNDk2LjI4NyAzLjMwNCAxLjk4MyAzLjMwNGgxNC42ODZjMS42OTUgMCAyLjc3OS0xLjgwOCAxLjk4Mi0zLjMwNHptLTEuOTE4IDEuMDIzYy4wMjYuMDQ4LS4wMS4xMDctLjA2My4xMDdoLTE0LjY4NmMtLjA1NSAwLS4wOS0uMDU5LS4wNjUtLjEwN2w3LjM0My0xMy43NjhjLjAyNy0uMDUxLjEwMS0uMDUxLjEyOC0uMDAxbDcuMzQ0IDEzLjc2OXpNMTAuMjQzIDE1LjUwOGMtLjY0IDAtMS4xNTktLjUxOS0xLjE1OS0xLjE1OXMuNTE5LTEuMTU5IDEuMTU5LTEuMTU5IDEuMTU5LjUxOSAxLjE1OSAxLjE1OS0uNTE5IDEuMTU5LTEuMTU5IDEuMTU5ek0xMS40MDMgMTIuMDNoLTIuMzE5di00LjYzOGgyLjMxOXoiLz48L2c+PC9zdmc+';
+
+$icon-success: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMDBBNzQwIj48cGF0aCBkPSJNMTAgMTcuNWMtNC4xMjUgMC03LjUtMy4zNzUtNy41LTcuNXMzLjM3NS03LjUgNy41LTcuNSA3LjUgMy4zNzUgNy41IDcuNS0zLjM3NSA3LjUtNy41IDcuNW0wLTE3LjVjLTUuNSAwLTEwIDQuNS0xMCAxMHM0LjUgMTAgMTAgMTAgMTAtNC41IDEwLTEwLTQuNS0xMC0xMC0xMCIvPjxwYXRoIGQ9Ik05LjI1IDE0Ljc1bC00LjI1LTQuMjUgMS43NS0xLjc1IDIuNSAyLjUgNS01IDEuNzUgMS43NXoiLz48L2c+PC9zdmc+';
+
+$icon-info: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjM0U1M0E0Ij48cGF0aCBkPSJNMTAgMTcuNWMtNC4xMjUgMC03LjUtMy4zNzUtNy41LTcuNXMzLjM3NS03LjUgNy41LTcuNSA3LjUgMy4zNzUgNy41IDcuNS0zLjM3NSA3LjUtNy41IDcuNW0wLTE3LjVjLTUuNSAwLTEwIDQuNS0xMCAxMHM0LjUgMTAgMTAgMTAgMTAtNC41IDEwLTEwLTQuNS0xMC0xMC0xMCIvPjxwYXRoIGQ9Ik04Ljc1IDguNzVoMi41djYuMjVoLTIuNXoiLz48cGF0aCBkPSJNMTAgNWMuNjkgMCAxLjI1LjU2IDEuMjUgMS4yNXMtLjU2IDEuMjUtMS4yNSAxLjI1LTEuMjUtLjU2LTEuMjUtMS4yNS41Ni0xLjI1IDEuMjUtMS4yNSIvPjwvZz48L3N2Zz4=';
+
+
+@mixin alert($bg, $bdr, $icon, $text: $pb-gray-700) {
+  color: $text;
+  background-color: $bg;
+  background-image: url($icon);
+  border-color: $bdr;
+  i {
+    color: $bdr;
+  }
+}
+
+// all alerts
+.alert {
+  border-radius: 0;
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  padding: 15px 15px 15px 50px;
+  .close {
+    width: 21px;
+    height: 21px;
+    background-image: url($icon-close);
+    color: $pb-gray-700;
+    background-repeat: no-repeat;
+    background-position: center center;
+    span:not(.sr-only) {
+      display: none;
+    }
+  }
+}
+
+
+.alert-danger {
+  @include alert($state-danger-bg, $state-danger-border, $icon-danger);
+}
+
+.alert-warning {
+  @include alert($state-warning-bg, $state-warning-border, $icon-warning);
+}
+
+.alert-success {
+  @include alert($state-success-bg, $state-success-border, $icon-success);
+}
+
+.alert-info {
+  @include alert($state-info-bg, $state-info-border, $icon-info);
+}
+
+// modifier class to remove tints
+.alert-notint {
+  background-color: #f00;
+}
+
+.alert-noborder {
+  background-color: transparent;
+  background-position: 0 center;
+  padding: 0 15px 0 30px;
+  border: 0;
+}
+
+
+@mixin panel-heading-icon($icon) {
+  background-position: 15px center;
+  padding-left: 40px !important;
+  background-image: url($icon);
+  background-repeat: no-repeat;
+}
+
+.panel-heading-danger {
+  @include panel-heading-icon($icon-danger);
+}
+.panel-heading-success {
+  @include panel-heading-icon($icon-success);
+}
+.panel-heading-warning {
+  @include panel-heading-icon($icon-warning);
+}
+.panel-heading-info {
+  @include panel-heading-icon($icon-info);
+}

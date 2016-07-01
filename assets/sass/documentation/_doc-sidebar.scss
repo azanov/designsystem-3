@@ -1,0 +1,70 @@
+// for headroom.js
+.doc-side-nav {
+  // not docked
+  &.headroom-top {
+    position: relative;
+    // transition: top .2s;
+    top: 50px;
+    @include breakpoint(screen-xs) {
+      display: none;
+    }
+  }
+
+  //docked
+  &.headroom-not-top {
+    top: 75px;
+    position: fixed;
+  }
+}
+
+
+// global
+.doc-side-nav {
+  font-family: $font-family-ps-regular;
+  font-size: 16px;
+
+  .nav {
+    li {
+      a {
+        padding: 5px 15px;
+        margin: 5px 0;
+        color: $text-color;
+      }
+    }
+  }
+}
+
+// first level, normal
+.doc-side-nav > nav > .nav > li > a {
+  display: block;
+  border-left: 3px solid transparent;
+
+  // color: #000;
+  // text-transform: uppercase;
+}
+
+// first level, active
+.doc-side-nav > nav > .nav > li > a.active {
+  // color: orange;
+  border-left: 3px solid $pb-blue;
+}
+
+
+// second level
+.doc-side-nav > nav > .nav > li > .nav > li > a {
+  // color: purple;
+  border-left: 2px solid transparent;
+  font-size: 14px;
+}
+.doc-side-nav > nav > .nav .nav > li > a {
+  display: none;
+  // color: salmon;
+}
+
+.doc-side-nav > nav > .nav > li > a.active ~ .nav > li > a {
+  display: block;
+}
+.doc-side-nav > nav > .nav > li > .nav > li > a.active {
+  color: $text-active-color;
+  border-left: 2px solid $pb-blue;
+}

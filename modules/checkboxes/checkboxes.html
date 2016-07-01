@@ -1,0 +1,368 @@
+<div class="doc-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero-header">
+          <div class="eyebrow">Elements</div>
+          <h1>Checkboxes (Template)</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+
+      <div headroom class="doc-side-nav headroom" tolerance="50" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
+
+        <nav class="hidden-print hidden-xs hidden-sm" role="tablist">
+          <ul class="nav">
+
+            <li du-scrollspy="overview">
+              <a ui-sref="checkboxes({'#':'overview'})" du-scrollspy>Overview</a>
+              <ul class="nav" du-spy-context="overview">
+                <li><a ui-sref="checkboxes({'#':'usage'})" du-scrollspy>Usage</a></li>
+              </ul>
+            </li>
+
+            <li du-scrollspy="stacked">
+              <a ui-sref="checkboxes({'#':'stacked'})" du-scrollspy>Stacked Checkboxes</a>
+              <ul class="nav" du-spy-context="stacked">
+                <li><a ui-sref="checkboxes({'#':'enhancedStacked'})" du-scrollspy>Enhanced Stacked</a></li>
+                <li><a ui-sref="checkboxes({'#':'osStacked'})" du-scrollspy>OS Stacked</a></li>
+              </ul>
+            </li>
+
+            <li du-scrollspy="inline">
+              <a ui-sref="checkboxes({'#':'inline'})" du-scrollspy>Inline Checkboxes</a>
+              <ul class="nav" du-spy-context="inline">
+                <li><a ui-sref="checkboxes({'#':'enhancedInline'})" du-scrollspy>Enhanced Inline</a></li>
+                <li><a ui-sref="checkboxes({'#':'osInline'})" du-scrollspy>OS Inline</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </nav>
+
+      </div>
+
+    </div>
+
+    <div class="col-md-9">
+
+      <section id="overview">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Overview</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <p>
+              We have two styles of checkboxes: enhanced and standard OS.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h2 id="usage">Usage</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <ul>
+              <li>When possible, you should use the enhanced style.</li>
+              <li>If your product has long lists of checkboxes (and space is an issue), consider using the standard OS style.</li>
+              <li>Use the same style for your checkboxes and radio buttons, and apply that style consistently across your product.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+      <section id="stacked">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Stacked Checkboxes</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h2 id="enhancedStacked">
+              Enhanced Stacked Checkboxes
+              <div class="badge badge-added">Added in v2.0.3</div>
+            </h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <figure>
+              <div class="controls-stacked">
+                <label class="control checkbox">
+                  <input type="checkbox">
+                  <span class="control-indicator"></span>
+                  Check this custom checkbox
+                </label>
+                <label class="control checkbox">
+                  <input type="checkbox">
+                  <span class="control-indicator"></span>
+                  Check this custom checkbox
+                </label>
+                <label class="control checkbox">
+                  <input type="checkbox">
+                  <span class="control-indicator"></span>
+                  Check this custom checkbox
+                </label>
+                <label class="control checkbox disabled">
+                  <!-- you can disabled to the label (class=control) only, or to both it and the input -->
+                  <input disabled="disabled" type="checkbox">
+                  <span class="control-indicator"></span>
+                  But not this custom checkbox
+                </label>
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="doc-body-snippet">
+              <pb-code-snippet options="check.stackedSnippets"></pb-code-snippet>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table table-open">
+              <thead>
+                <tr>
+                  <th>Plugin Name</th>
+                  <th>Version</th>
+                  <th>Link</th>
+                  <th>Comments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>angular-chart</td>
+                  <td>v0.8.8</td>
+                  <td>
+                    <a href="https://github.com/GraFiddle/angular-chart">https://github.com/GraFiddle/angular-chart</a>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>d3</td>
+                  <td>v3</td>
+                  <td>
+                    <a href="https://d3js.org/">https://d3js.org/</a>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>c3</td>
+                  <td>v0.4.x</td>
+                  <td>
+                    <a href="http://c3js.org/">http://c3js.org/</a>
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="alert alert-warning alert-noborder">
+              As a best practice, we highly recommend using the button tag element whenever possible to ensure mathcing cross-browser rendering.
+            </div>
+            <div class="alert alert-info alert-noborder">
+              Learn more about Cost Accounts in the Help section.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h2 id="osStacked">
+              Standard OS Stacked Checkboxes
+              <span class="badge badge-deprecated">Deprecated in v2.0.0</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <figure>
+              <div class="checkbox">
+                <label for="c1">
+                  <input checked id="c1" type="checkbox">
+                  This is a checked checkbox</label>
+              </div>
+              <div class="checkbox">
+                <label for="c2">
+                  <input id="c2" name="check" type="checkbox">
+                  This is an unchecked checkbox
+                </label>
+              </div>
+              <div class="checkbox disabled">
+                <label for="c3">
+                  <input disabled id="c3" name="check" type="checkbox">
+                  This is a disabled checkbox
+                </label>
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="doc-body-snippet">
+              <pb-code-snippet options="check.stackedOSSnippets"></pb-code-snippet>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="inline">
+
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Inline Checkboxes</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h2 id="enhancedInline">
+              Enhanced Inline Checkboxes
+              <div class="badge badge-added">Added in v2.0.0</div>
+            </h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <figure>
+              <div class="controls-inline">
+                <label class="control checkbox">
+                  <input type="checkbox">
+                  <span class="control-indicator"></span>
+                  Custom checkbox
+                </label>
+                <label class="control checkbox">
+                  <input type="checkbox">
+                  <span class="control-indicator"></span>
+                  Custom checkbox
+                </label>
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="doc-body-snippet">
+              <div class="extra-links pull-right">
+              <a class="plunker" href>
+                <i class="nc-icon-mini arrows-1_share-91" aria-hidden="true"></i>
+                Plunker
+              </a>
+              <a class="copy-code" href>
+                <i class="nc-icon-mini files_copy" aria-hidden="true"></i>
+                Copy Code
+              </a>
+              </div>
+              <pb-code-snippet options="check.stackedSnippets"></pb-code-snippet>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h2 id="osInline">
+              Standard Inline Checkboxes
+              <div class="badge badge-added">Added in v2.0.0</div>
+            </h2>
+            <p>When enclosed in "form-inline"</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-5">
+            <figure>
+              <div class="controls-inline">
+                <form class="form-inline">
+                  <label class="control checkbox">
+                    <input type="checkbox">
+                    <span class="control-indicator"></span>
+                    Custom checkbox
+                  </label>
+                  <label class="control checkbox">
+                    <input type="checkbox">
+                    <span class="control-indicator"></span>
+                    Custom checkbox
+                  </label>
+                </form>
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="doc-body-snippet">
+              <pb-code-snippet options="check.stackedSnippets"></pb-code-snippet>
+            </div>
+          </div>
+        </div>
+
+        <!-- For Demo purposes -->
+        <div class="row">
+          <div class="col-md-12">
+            <h1 id="errors">400 Series Error Pages</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="doc-sectionhead">
+              400 Bad Request (Left)
+              <div class="badge badge-added">Added in v2.0.0</div>
+            </h2>
+          </div>
+        </div>
+
+        <div class="row pb-demo">
+          <div class="col-md-12">
+
+          <a class="btn btn-primary" ui-sref="errors-400-left" target="_blank">View Demo</a>
+
+          <div class="pb-demo-image">
+            <a ui-sref="errors-400-left" target="_blank">
+              <img class="img-responsive framed" src="modules/errors/assets/images/error-401.png"/>
+            </a>
+          </div>
+
+        </div>
+      </div>
+      </section>
+
+      <!-- End for Demo purposes -->
+
+    </div>
+  </div>
+</div>

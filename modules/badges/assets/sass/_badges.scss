@@ -1,0 +1,32 @@
+.badge {
+  background-color: $pb-magenta;
+  font-family: $font-family-sans-serif;
+  font-weight: normal;
+}
+
+//* badge contextual alternatives */
+$badges: (
+  'gray-text': $text-color,
+  'gray-dark': $pb-gray-700,
+  'brand-success': $brand-success,
+  'brand-info': $brand-info,
+  'brand-warning': $brand-warning,
+  'brand-danger': $brand-danger,
+);
+
+@each $badge, $color in $badges {
+  .badge-#{$badge} {
+    background-color: $color;
+    // &:hover {
+    //   background-color: darken($color, 10%);
+    // }
+  }
+}
+
+
+.badge-link {
+  background-color: $pb-gray-50;
+  color: $pb-blue;
+  font-family: $font-family-sans-serif;
+  font-weight: normal;
+}

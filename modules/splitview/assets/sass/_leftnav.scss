@@ -1,0 +1,298 @@
+//scss-lint:disable ImportantRule SelectorDepth MergeableSelector
+
+
+.controls-stacked {
+  margin: 0 0 15px;
+  .control {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.reset-link {
+  font-weight: normal !important;
+  color: $link-color !important;
+  font-size: 12px !important;
+}
+
+.list-group-divided {
+  .list-group-item-heading {
+    padding: 10px 0;
+    font-weight: bold;
+    i {
+      padding-top: 5px;
+    }
+  }
+}
+
+.leftnav-sectioned {
+  .list-group-section {
+    &:not(:first-child) {
+      border-top: 1px solid #e8e8e8;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    h3 {
+      font-size: 14px;
+      padding: 10px 15px;
+      margin-bottom: 0;
+    }
+
+    .list-group {
+      margin-bottom: 10px;
+    }
+
+    a.list-group-item {
+      font-size: 14px;
+      color: $text-color;
+      &:hover {
+        background-color: $bg-hover;
+        color: $pb-gray-700;
+      }
+      &:active, &.active {
+        background-color: $bg-active;
+        color: $pb-gray-700;
+      }
+      &.badge {
+        color: #fff;
+        font-weight: normal;
+        font-size: 11px;
+        background-color: $pb-magenta;
+        &:hover {
+          background-color: darken($pb-magenta, 10%);
+        }
+      }
+    }
+  }
+}
+
+
+.leftnav-tree {
+  border-right: 1px solid #e8e8e8;
+
+  .nav-list {
+    .nav-header {
+      margin-top: 10px;
+      padding-top: 10px;
+      &:not(:first-child) {
+        border-top: 1px solid #e8e8e8;
+      }
+
+      &:last-child {
+        border-bottom: 1px solid #e8e8e8;
+        label {
+          margin-bottom: 15px;
+        }
+      }
+
+      label {
+        cursor: pointer;
+        font-family: $font-family-ps-regular;
+        font-size: 16px;
+        color: #2e2e2e;
+        padding-left: 10px;
+      }
+
+      i {
+        float: right;
+        margin-right: 10px;
+        margin-top: 2px;
+        color: #2e2e2e;
+        transition: transform .2s linear;
+      }
+
+      &.open {
+        i {
+          transform: rotate(90deg);
+          margin-right: 10px;
+        }
+      }
+
+      a {
+        font-size: inherit;
+        display: block;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .tree {
+      padding: 0;
+
+      li {
+        padding-left: 0;
+
+        a {
+          font-size: 14px;
+          padding: 10px;
+          color: $pb-gray-700;
+          display: block;
+
+          &:hover {
+            background-color: $bg-hover;
+          }
+
+          &:active, &.active {
+            background-color: $bg-active;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.menu {
+  .menu-heading {
+    white-space: nowrap;
+    padding: 5px 3px;
+    color: #717171;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+      background-color: transparent;
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all .3s;
+      color: #3e53a4;
+    }
+    i.fa {
+      margin-right: 10px;
+    }
+  }
+  .menu-content {
+    display: none;
+    li {
+      white-space: nowrap;
+      &:hover {
+        background: #f8f8f8;
+        color: #3e53a4;
+      }
+      a {
+        color: #717171;
+        text-decoration: none;
+        padding-left: 41px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: block;
+        cursor: pointer;
+        &:hover {
+          color: #3e53a4;
+        }
+        &.active {
+          color: #3e53a4;
+        }
+      }
+    }
+  }
+  .menu-collapse {
+    cursor: default;
+    padding-left: 3px;
+    i.fa {
+      cursor: pointer;
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all .3s;
+      &:hover {
+        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: all .3s;
+        color: #3e53a4;
+      }
+      &:before {
+        content: '\f0a8';
+      }
+    }
+  }
+  > li.open .menu-heading {
+    i {
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all .3s;
+      color: #3e53a4;
+    }
+    .menu-title {
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all .3s;
+      color: #3e53a4;
+    }
+    b {
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all .3s;
+      color: #3e53a4;
+    }
+  }
+}
+.minified .menu {
+  > li:hover {
+    .menu-heading {
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: none;
+      background-color: #f8f8f8;
+      width: 200px;
+    }
+    .menu-title {
+      display: inline-block !important;
+      background-color: #f8f8f8;
+      font-weight: 700;
+    }
+    .menu-content {
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all .3s;
+      background-color: #f8f8f8;
+      position: absolute;
+      width: 165px;
+      left: 45px;
+      display: block !important;
+      li a {
+        padding: 5px;
+      }
+    }
+  }
+  .menu-collapse i.fa {
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all .3s;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(180deg);
+  }
+}
+.no-csstransforms .minified .menu .menu-collapse i.fa:before {
+  content: '\f0a9';
+}
+
+
+// replaced for backward compatibility
+
+.leftnav-tree {
+  * {
+    :focus {
+      outline: none !important;
+    }
+  }
+  .panel-group {
+    .panel-default {
+      border: 0;
+      border-bottom: 1px solid #e8e8e8;
+      background-color: transparent;
+    }
+    .panel-heading {
+      background-color: transparent;
+      padding: 10px;
+      h4.panel-title {
+        cursor: pointer;
+        outline: 0;
+        font-family: 'PrecisionSans_W_Rg', 'Helvetica Neue', Arial, sans-serif;
+        a {
+          font-size: 16px;
+          color: #2e2e2e;
+          i.nc-icon-mini {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

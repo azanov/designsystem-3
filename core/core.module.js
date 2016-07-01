@@ -1,0 +1,35 @@
+(function () {
+  'use strict';
+  angular.module('pb.core', [
+    'ngCookies',
+    'ngAnimate',
+    'ngResource',
+    'ngSanitize',
+    'hljs',
+    'ui.router',
+    'headroom',
+    'angular.morris-chart',
+    'angular-loading-bar',
+    'pascalprecht.translate',
+    'tmh.dynamicLocale',
+    'toggle-switch',
+    'toastr',
+    'ui.bootstrap',
+    'ui.utils',
+    'ui-rangeSlider',
+    'chart.js',
+    'daterangepicker',
+    'angularMoment',
+    'angularUtils.directives.dirPagination',
+    'infinite-scroll',
+    'xeditable',
+    'angularChart',
+    'duScroll',
+    'ui.select',
+    'ngTagsInput',
+    'slickCarousel',
+    'ngFileUpload',
+    angularDragula(angular),
+    'pb.ds.components'
+  ]);
+})();

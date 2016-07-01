@@ -1,0 +1,146 @@
+<div class="navbar yamm navbar-default custom-navbar" role="navigation">
+  <div class="container">
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand brand-text" href="#/">Design System 3<span class="pre-release">&alpha;</span></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="main-navbar">
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical hidden-xs"></li>
+        <li>
+          <a href="" ui-sref="principles.page">Principles</a>
+        </li>
+
+        <!-- mega1 -->
+        <li class="dropdown yamm-fw hidden-xs">
+          <a href="" class="dropdown-toggle" data-target="" data-toggle="dropdown">Web</a>
+          <ul class="dropdown-menu pb-animate-menu">
+            <li>
+              <div class="yamm-content">
+
+                <div class="yamm-flex-container">
+                  <!-- was able to lost a lot of bootstrap code by going to flexbox here -->
+                    <div class="yamm-child-column" ng-repeat="category in header.nav[1].Web[0].children[0].children">
+                      <p class="section-head">{{category.label}}</p>
+
+                      <div class="list-unstyled menu-items menu-items-two-column">
+
+                        <!-- if no sub items-->
+                        <div ng-if="!item.children" ng-repeat="item in category.children">
+                          <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
+                        </div>
+
+                        <!-- if sub items -->
+                        <span ng-if="item.children" ng-repeat="item in category.children">
+                          <div ng-repeat="item in item.children ">
+                            <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+
+        <!-- mega 2 -->
+        <li class="dropdown yamm-fw hidden-xs">
+          <a href="" class="dropdown-toggle" data-target="" data-toggle="dropdown">Mobile</a>
+          <ul class="dropdown-menu pb-animate-menu">
+            <li>
+              <div class="yamm-content ">
+
+                <div class="yamm-flex-container">
+                  <div class="yamm-child-column" ng-repeat="category in header.nav[2].Mobile[0].children[0].children">
+                    <p class="section-head">{{category.label}}</p>
+                    <div class="list-unstyled menu-items menu-items-two-column">
+                      <!-- if no sub items-->
+                      <div ng-if="!item.children" ng-repeat="item in category.children">
+                        <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
+                      </div>
+
+                      <!-- if sub items -->
+                      <span ng-if="item.children" ng-repeat="item in category.children">
+                        <div ng-repeat="item in item.children">
+                          <a href="" ui-sref="{{item.value}}">{{item.label}}</a>
+                        </div>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+              </div>
+            </li>
+          </ul>
+        </li>
+
+        <!-- these 2 items only on phones -->
+        <li class="visible-xs-block">
+          <a href="" ui-sref="weblanding">Web</a>
+        </li>
+        <li class="visible-xs-block">
+          <a href="" ui-sref="mobilelanding">Mobile</a>
+        </li>
+
+
+        <li class="dropdown">
+           <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Content</a>
+           <ul class="dropdown-menu pb-animate-menu">
+             <li><a href="" ui-sref="content.overview">Overview</a></li>
+             <li><a href="" ui-sref="content.voice">Tone of Voice</a></li>
+             <li><a href="" ui-sref="content.style">Editorial Style</a></li>
+             <!-- <li><a href="" ui-sref="content.legal">Legal</a></li> -->
+             <li><a href="" ui-sref="content.emails">Emails</a></li>
+           </ul>
+       </li>
+
+        <li>
+          <a href="" ui-sref="globalization.page">Globalization</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources</a>
+          <ul class="dropdown-menu pb-animate-menu">
+            <li>
+              <a href="" ui-sref="strategy">Strategy</a>
+            </li>
+            <li>
+              <a href="" ui-sref="tools">Tools</a>
+            </li>
+            <li>
+              <a href="" ui-sref="productgallery">Product Gallery</a>
+            </li>
+            <li>
+              <a href="" ui-sref="roadmap">Roadmap</a>
+            </li>
+            <li>
+              <a href="" ui-sref="techstack">Tech Stack</a>
+            </li>
+          </ul>
+        </li>
+        <!-- end left menus -->
+
+      </ul>
+      <!-- end navbar-nav left -->
+
+
+    </div>
+    <!-- /navbar-collapse -->
+  </div>
+  <!-- /container -->
+</div>
+<!-- /navbar -->

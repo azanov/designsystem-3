@@ -1,0 +1,88 @@
+//* -- ACCORDION -- */
+// default
+div.accordion-group, uib-accordion {
+  .panel {
+    .panel-body {
+      padding: 15px;
+    }
+
+  }
+  // compact
+  &.compact {
+    .panel-default {
+      border: 0;
+      border-radius: 0;
+      .panel-heading {
+        border: 0;
+        border-radius: 0;
+        + .panel-collapse {
+          .panel-body {
+            border-top: 0;
+          }
+        }
+      }
+    }
+    .panel + .panel {
+      margin-top: 0;
+    }
+  }
+  .panel-title {
+    cursor: pointer;
+    font-weight: normal;
+    &:hover {
+      color: $link-color;
+      &:before {
+        color: $link-color;
+      }
+    }
+    &:before {
+      @include triangle-closed;
+      display: inline-block;
+      margin-right: 5px;
+      color: $pb-gray-500;
+      transition: all .2s;
+    }
+    a {
+      &:hover {
+        color: $link-color;
+        text-decoration: none;
+      }
+    }
+  }
+  .panel.active, .panel-open {
+    .panel-title {
+      &:before {
+        @include triangle-opened;
+      }
+    }
+  }
+}
+
+.panel-group .panel {
+  border-radius: 0;
+  .panel-heading {
+    background-color: $pb-bg2;
+    margin: 0;
+    padding: 15px 30px 10px 15px;
+    border-bottom: 0;
+  }
+}
+.collapse-button {
+  cursor: pointer;
+  &:hover {
+    color: $link-color;
+    &:before {
+      color: $link-color;
+    }
+  }
+  &:before {
+    @include triangle-closed;
+    display: inline-block;
+    margin-right: 5px;
+    color: $pb-gray-500;
+    transition: all .2s;
+  }
+  &.open:before {
+    @include triangle-opened;
+  }
+}

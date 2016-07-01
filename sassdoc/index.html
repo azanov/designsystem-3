@@ -1,0 +1,114 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Designsystem - v3.0.0</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Designsystem - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="Release the docs!"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title"><a href="http://guxstaging.pbi.global.pvt/design_system">Designsystem - v3.0.0</a></h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="clearfix" data-type="mixin"><a href="#undefined-mixin-clearfix">clearfix</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="breakpoint" data-type="mixin"><a href="#undefined-mixin-breakpoint">breakpoint</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="panel-variant" data-type="mixin"><a href="#undefined-mixin-panel-variant">panel-variant</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="hide-text" data-type="mixin"><a href="#undefined-mixin-hide-text">hide-text</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="make-row" data-type="mixin"><a href="#undefined-mixin-make-row">make-row</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="button-size" data-type="mixin"><a href="#undefined-mixin-button-size">button-size</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="border-top-radius" data-type="mixin"><a href="#undefined-mixin-border-top-radius">border-top-radius</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="border-bottom-radius" data-type="mixin"><a href="#undefined-mixin-border-bottom-radius">border-bottom-radius</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="border-right-radius" data-type="mixin"><a href="#undefined-mixin-border-right-radius">border-right-radius</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="border-left-radius" data-type="mixin"><a href="#undefined-mixin-border-left-radius">border-left-radius</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-function"><a href="#undefined-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="tint" data-type="function"><a href="#undefined-function-tint">tint</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="shade" data-type="function"><a href="#undefined-function-shade">shade</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-variable"><a href="#undefined-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="pb-blue-300" data-type="variable"><a href="#undefined-variable-pb-blue-300">pb-blue-300</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="pb-blue-500" data-type="variable"><a href="#undefined-variable-pb-blue-500">pb-blue-500</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="undefined-mixin-clearfix"><h3 class="item__heading"><a class="item__name" href="#mixin-clearfix">clearfix</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin clearfix() { 
+  zoom: 1;
+  &amp;:before, &amp;:after {
+    content: &#39;&#39;;
+    display: table;
+  }
+  &amp;:after {
+    clear: both;
+  }
+ }" data-collapsed="@mixin clearfix() { ... }"><code>@mixin clearfix() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>your basic clearfix</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-css"><code>ul {
+ @include clearfix;
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>CSS Output</p></div><pre class="example__code language-css"><code>ul {
+  zoom: 1;
+}
+ul:before, ul:after {
+  content: &#39;&#39;;
+  display: table;
+}
+ul:after {
+  clear: both;
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-make-row"><code>make-row</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-breakpoint"><h3 class="item__heading"><a class="item__name" href="#mixin-breakpoint">breakpoint</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin breakpoint($point) { 
+  @if $point == screen-xs {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+  @else if $point == screen-sm {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @else if $point == screen-md {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+  @else if $point == screen-lg {
+    @media (min-width: 1300px) {
+      @content;
+    }
+  }
+ }" data-collapsed="@mixin breakpoint($point) { ... }"><code>@mixin breakpoint($point) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint mixins. The widths are customizable per project. These have been changed from defaults.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$point</code></th><td data-label="desc"><p>String representing sizes defined below</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).<h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>.media-thing {
+  width:300px;
+  @include breakpoint(screen-xs) {
+    width: 100px;
+  }
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>CSS Output</p></div><pre class="example__code language-css"><code>.media-thing {
+  width: 300px;
+}
+  @media (max-width: 767px) {
+    .media-thing {
+      width: 100px;
+    }
+}</code></pre></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">http://www.sitepoint.com/managing-responsive-breakpoints-sass/</a></li></ul></p></section><section class="main__item container item" id="undefined-mixin-panel-variant"><h3 class="item__heading"><a class="item__name" href="#mixin-panel-variant">panel-variant</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin panel-variant() { 
+  border-color: $border;
+
+  &gt; .panel-heading {
+    color: $heading-text-color;
+    background-color: $heading-bg-color;
+    border-color: $heading-border;
+
+    + .panel-collapse &gt; .panel-body {
+      border-top-color: $border;
+    }
+    .badge {
+      color: $heading-bg-color;
+      background-color: $heading-text-color;
+    }
+  }
+  &gt; .panel-footer {
+    + .panel-collapse &gt; .panel-body {
+      border-bottom-color: $border;
+    }
+  }
+ }" data-collapsed="@mixin panel-variant() { ... }"><code>@mixin panel-variant() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Panel Variants</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="undefined-mixin-hide-text"><h3 class="item__heading"><a class="item__name" href="#mixin-hide-text">hide-text</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin hide-text() { 
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+ }" data-collapsed="@mixin hide-text() { ... }"><code>@mixin hide-text() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Hides the text in an element, commonly used to show an image. Some elements will need block-level styles applied.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>.element {
+  @include hide-text;
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>CSS Output</p></div><pre class="example__code language-css"><code>.element {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+}</code></pre></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="http://zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement">http://zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement</a></li></ul></section><section class="main__item container item" id="undefined-mixin-make-row"><h3 class="item__heading"><a class="item__name" href="#mixin-make-row">make-row</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin make-row($gutter: $grid-gutter-width) { 
+  margin-left: ($gutter / -2);
+  margin-right: ($gutter / -2);
+  @include clearfix();
+ }" data-collapsed="@mixin make-row($gutter: $grid-gutter-width) { ... }"><code>@mixin make-row($gutter: $grid-gutter-width) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$gutter</code></th><td data-label="desc"><p>Typically 15px</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>$grid-gutter-width</code></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-clearfix"><code>clearfix</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-button-size"><h3 class="item__heading"><a class="item__name" href="#mixin-button-size">button-size</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin button-size() { 
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+ }" data-collapsed="@mixin button-size() { ... }"><code>@mixin button-size() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Button sizes</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="undefined-mixin-border-top-radius"><h3 class="item__heading"><a class="item__name" href="#mixin-border-top-radius">border-top-radius</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin border-top-radius() { 
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+ }" data-collapsed="@mixin border-top-radius() { ... }"><code>@mixin border-top-radius() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>top</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="undefined-mixin-border-bottom-radius"><h3 class="item__heading"><a class="item__name" href="#mixin-border-bottom-radius">border-bottom-radius</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin border-bottom-radius() { 
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+ }" data-collapsed="@mixin border-bottom-radius() { ... }"><code>@mixin border-bottom-radius() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>bottom</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="undefined-mixin-border-right-radius"><h3 class="item__heading"><a class="item__name" href="#mixin-border-right-radius">border-right-radius</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin border-right-radius() { 
+  border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+ }" data-collapsed="@mixin border-right-radius() { ... }"><code>@mixin border-right-radius() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>right</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="undefined-mixin-border-left-radius"><h3 class="item__heading"><a class="item__name" href="#mixin-border-left-radius">border-left-radius</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin border-left-radius() { 
+  border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+ }" data-collapsed="@mixin border-left-radius() { ... }"><code>@mixin border-left-radius() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>left</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section></section><section class="main__sub-section" id="undefined-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="undefined-function-tint"><h3 class="item__heading"><a class="item__name" href="#function-tint">tint</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function tint($percentage) { 
+  @return mix($color, #fff, $percentage);
+ }" data-collapsed="@function tint($percentage) { ... }"><code>@function tint($percentage) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixes a color with white by a supplied percentage</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$percentage</code></th><td data-label="desc"><p>From 0-100%</p></td><td data-label="type"><code>Percent</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>.tintexample {
+  color: tint(#e86ea4, 10%); //#fdf1f6
+ }</code></pre></div></section><section class="main__item container item" id="undefined-function-shade"><h3 class="item__heading"><a class="item__name" href="#function-shade">shade</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function shade($percentage) { 
+  @return mix($color, #000, $percentage);
+ }" data-collapsed="@function shade($percentage) { ... }"><code>@function shade($percentage) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixes a color with black by a supplied percentage</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$percentage</code></th><td data-label="desc"><p>From 0-100%</p></td><td data-label="type"><code>Percent</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>.shadeexample {
+  color: shade(#e86ea4, 10%);
+}</code></pre></div></section></section><section class="main__sub-section" id="undefined-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="undefined-variable-pb-blue-300"><h3 class="item__heading"><a class="item__name" href="#variable-pb-blue-300">pb-blue-300</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$pb-blue-300: #8b98c8;</code></pre><span class="color-preview--block" style="background: #8b98c8"></span></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>PB Blue 300</p></div><h3 class="item__sub-heading">Type</h3><p><code>Color</code></p></section><section class="main__item container item" id="undefined-variable-pb-blue-500"><h3 class="item__heading"><a class="item__name" href="#variable-pb-blue-500">pb-blue-500</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$pb-blue-500: #3e53a4;</code></pre><span class="color-preview--block" style="background: #3e53a4"></span></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>This is the color that should be used for coffee</p></div><h3 class="item__sub-heading">Type</h3><p><code>Color</code></p></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --><a class="project-info__name" href="http://guxstaging.pbi.global.pvt/design_system">Designsystem</a><!-- Version --> <span class="project-info__version">- v3.0.0</span><!-- License --></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>

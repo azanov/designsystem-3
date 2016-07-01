@@ -1,0 +1,26 @@
+
+#loading-bar {
+  z-index: 10002;
+
+  .bar {
+    background-color: #26c6da !important;
+    height: 2px;
+  }
+  .peg {
+    box-shadow: hsla(201, 79%, 15%, .5) 1px 0 6px 1px;
+    height: 3px;
+  }
+}
+
+#loading-bar-spinner {
+  display: block;
+  position: fixed;
+  z-index: 10002;
+  color: #fff;
+  top: 10px;
+  left: 10px;
+  .spinner-icon {
+    border-top-color: #fff;
+    border-left-color: #fff;
+  }
+}

@@ -1,0 +1,637 @@
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="doc-sectionhead">Working with Data in Tables</h2>
+  </div>
+</div>
+
+
+  <!-- COLUMN SORTING -->
+  <div class="row">
+
+    <div class="col-md-12">
+
+      <!-- <p class="alert alert-info spacer-bottom-xl"><a href="" ui-sref="tables.paging" target="_blank">Paging example</a> shows the following items in action.</p> -->
+
+      <figcaption>Sortable Columns (sorting non-functioning, for style only)</figcaption>
+
+          <table class="table table-datatable">
+            <thead>
+              <tr>
+                <th><a href="">Date</a></th>
+                <th><a href="">Recipient</a></th>
+                <th><a href="">Carrier <i class="nc-icon-mini fw arrows-1_small-triangle-up"></i></a> <i class="nc-icon-mini ui-e_round-e-help popover-trigger" popover-placement="top" uib-popover-template="data.dynamicPopover.templateUrl" popover-trigger="outsideClick"></i></th>
+                <th><a href="">Shipping Info</a> <i class="nc-icon-mini ui-e_round-e-help popover-trigger" popover-placement="top" uib-popover-template="data.dynamicPopover.templateUrl" popover-trigger="outsideClick"></i></th>
+                <th>Tracking #</th>
+                <th>Status <i class="nc-icon-mini ui-e_round-e-help popover-trigger" popover-placement="top" uib-popover-template="data.dynamicPopover.templateUrl" popover-trigger="outsideClick"></i></th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2016-Mar-11</td>
+                <td>Tom Swift</td>
+                <td>USPS</td>
+                <td>Normal</td>
+                <td>UPID690-697560-7</td>
+                <td>Delivered</td>
+                <td>$56.99</td>
+              </tr>
+              <tr><td colspan="8">&#8230;</td></tr>
+            </tbody>
+          </table>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ROW DETAILS -->
+  <div class="row spacer-top-md">
+
+    <div class="col-md-12">
+
+      <figcaption>Showing Row Details</figcaption>
+
+      <div class="alert alert-info spacer-bottom-xl">Try to limit your tables to eight columns. If that&rsquo;s not possible, then use the row details.</div>
+
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Date</th>
+                <th>Recipient</th>
+                <th>Carrier</th>
+                <th>Shipping Info</th>
+                <th>Tracking #</th>
+                <th>Status</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="" class="table-row-toggle" ng-init="tables.showDetails = true" ng-click="tables.showDetails = !tables.showDetails">
+                    <i class="nc-icon-mini lg fw arrows-2_small-right transition-all" ng-class="{'rotate-90': tables.showDetails}"></i>
+                  </a>
+                </td>
+                <td>2016-Mar-11</td>
+                <td>Tom Swift</td>
+                <td>USPS</td>
+                <td>Normal</td>
+                <td>UPID690-697560-7</td>
+                <td>Delivered</td>
+                <td>$56.99</td>
+              </tr>
+              <tr class="table-details">
+                <td>
+
+                </td>
+                <td colspan="7">
+                  <div uib-collapse="!tables.showDetails">
+                  <div class="table-details-content">
+
+                    <table class="table no-margin-bottom">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <b>Address Line 1</b><br>
+                            Address Line 2<br>
+                            Address Line 3<br>
+                            City, State, ZIP
+                          </td>
+                          <td>
+                            <b>Address Line 1</b><br>
+                            Address Line 2<br>
+                            Address Line 3<br>
+                            City, State, ZIP
+                          </td>
+                          <td>
+                            <b>Address Line 1</b><br>
+                            Address Line 2<br>
+                            Address Line 3<br>
+                            City, State, ZIP
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  </div>
+              </td>
+              </tr>
+              <tr><td colspan="8">&#8230;</td></tr>
+            </tbody>
+          </table>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ROW MULTIPLE SELECTION -->
+  <div class="row spacer-top-md">
+
+    <div class="col-md-12">
+
+      <figcaption>Multiple Row Selection with Checkboxes</figcaption>
+
+
+      <table class="table table-datatable">
+        <thead>
+          <tr>
+            <th><input type="checkbox"></th>
+            <th>Date</th>
+            <th>Recipient</th>
+            <th>Carrier</th>
+            <th>Shipping Info</th>
+            <th>Tracking #</th>
+            <th>Status</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>2016-Mar-11</td>
+            <td>Tom Swift</td>
+            <td>USPS</td>
+            <td>Normal</td>
+            <td>UPID690-697560-7</td>
+            <td>Delivered</td>
+            <td>$56.99</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>2016-Mar-11</td>
+            <td>Tom Swift</td>
+            <td>USPS</td>
+            <td>Normal</td>
+            <td>UPID690-697560-7</td>
+            <td>Delivered</td>
+            <td>$56.99</td>
+          </tr>
+          <tr><td colspan="8">&#8230;</td></tr>
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ROW DETAILS & MULTIPLE SELECTION-->
+  <div class="row spacer-top-md">
+
+    <div class="col-md-12">
+
+      <figcaption>Showing Row Details, with Multiple Row Selection</figcaption>
+
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th><input type="checkbox"></th>
+                <th></th>
+                <th>Date</th>
+                <th>Recipient</th>
+                <th>Carrier</th>
+                <th>Shipping Info</th>
+                <th>Tracking #</th>
+                <th>Status</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>
+                  <a href="" class="table-row-toggle" ng-init="tables.showDetails02 = true" ng-click="tables.showDetails02 = !tables.showDetails02">
+                    <i class="nc-icon-mini lg fw arrows-2_small-right transition-all" ng-class="{'rotate-90': tables.showDetails02}"></i>
+                  </a>
+                </td>
+                <td>2016-Mar-11</td>
+                <td>Tom Swift</td>
+                <td>USPS</td>
+                <td>Normal</td>
+                <td>UPID690-697560-7</td>
+                <td>Delivered</td>
+                <td>$56.99</td>
+              </tr>
+              <tr class="table-details">
+                <td colspan="9">
+                  <div uib-collapse="!tables.showDetails02">
+                  <div class="table-details-content">
+
+                    <table class="table no-margin-bottom">
+                      <tbody>
+                        <tr>
+                          <td>
+                            Address Line 1<br>
+                            Address Line 2<br>
+                            Address Line 3<br>
+                            City, State, ZIP
+                          </td>
+                          <td>
+                            Address Line 1<br>
+                            Address Line 2<br>
+                            Address Line 3<br>
+                            City, State, ZIP
+                          </td>
+                          <td>
+                            Address Line 1<br>
+                            Address Line 2<br>
+                            Address Line 3<br>
+                            City, State, ZIP
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  </div>
+              </td>
+              </tr>
+              <tr><td colspan="9">&#8230;</td></tr>
+            </tbody>
+          </table>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ROW ACTIONS -->
+  <div class="row spacer-top-md">
+
+    <div class="col-md-12">
+
+      <figcaption>Single-Row Action Menu</figcaption>
+
+
+          <table class="table table-datatable">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Recipient</th>
+                <th>Carrier</th>
+                <th>Shipping Info</th>
+                <th>Tracking #</th>
+                <th>Status</th>
+                <th>Amount</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2016-Mar-11</td>
+                <td>Tom Swift</td>
+                <td>USPS</td>
+                <td>Normal</td>
+                <td>UPID690-697560-7</td>
+                <td>Delivered</td>
+                <td>$56.99</td>
+                <td>
+                  <div class="dropdown pull-right">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                      Actions <i class="nc-icon-mini fw arrows-2_small-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                      <li><a href="">Edit</a></li>
+                      <li><a href="">Delete</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr><td colspan="8">&#8230;</td></tr>
+            </tbody>
+          </table>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ROW LINKS -->
+  <!-- Just hyperlinkd text, why do we need? -->
+  <!-- <div class="row spacer-top-md">
+
+    <div class="col-md-12">
+
+      <h3>Row Links</h3>
+
+
+          <table class="table table-datatable">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Recipient</th>
+                <th>Carrier</th>
+                <th>Shipping Info</th>
+                <th>Tracking #</th>
+                <th>Status</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Date</td>
+                <td><a href="">Recipient</a></td>
+                <td>Carrier</td>
+                <td>Shipping Info</td>
+                <td><a href="">Tracking #</a></td>
+                <td>Status</td>
+                <td>Amount</td>
+              </tr>
+              <tr><td colspan="8">&#8230;</td></tr>
+            </tbody>
+          </table>
+
+
+    </div>
+
+  </div> -->
+
+
+
+  <!-- ROW SELECTION CLICK -->
+  <div class="row spacer-top-md">
+
+    <div class="col-md-12">
+
+      <figcaption>Multiple Row Selection via Click</figcaption>
+
+      <div class="alert alert-info spacer-bottom-xl">When users click on a row, the only action that should be triggered is a row selection.</div>
+
+
+          <table class="table table-hover table-datatable">
+            <thead>
+              <tr>
+                <th><!-- <input type="checkbox"> --></th>
+                <th>Date</th>
+                <th>Recipient</th>
+                <th>Carrier</th>
+                <th>Shipping Info</th>
+                <th>Tracking #</th>
+                <th>Status</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-click="data.rowclick(row, $event)" ng-repeat="row in data.rowdata" ng-class="{'table-row-selected': row.selected}">
+                <td><input type="checkbox" ng-model="row.selected"></td>
+                <td>{{row.date}}</td>
+                <td>{{row.recipient}}</td>
+                <td>{{row.carrier}}</td>
+                <td>{{row.shipping}}</td>
+                <td>{{row.tracking}}</td>
+                <td>{{row.status}}</td>
+                <td>{{row.amount}}</td>
+              </tr>
+              <tr><td colspan="8">&#8230;</td></tr>
+            </tbody>
+          </table>
+
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ROW ICONS -->
+  <div class="row spacer-top-md">
+
+    <div class="col-md-12">
+
+      <figcaption>Nuceo Mini Row Icons</figcaption>
+        <table class="table table-datatable">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Date</th>
+              <th>Recipient</th>
+              <th>Carrier</th>
+              <th>Shipping Info</th>
+              <th>Tracking #</th>
+              <th>Status</th>
+              <th>Notification</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><i class="nc-icon-mini fw users_single-04"></i></td>
+              <td>2016-Mar-11</td>
+              <td>Tom Swift</td>
+              <td>USPS</td>
+              <td>Normal</td>
+              <td>UPID690-697560-7</td>
+              <td><i class="nc-icon-mini ui-1_check"></i></td>
+              <td><i class="nc-icon-mini ui-1_bell-53"></i></td>
+            </tr>
+            <tr>
+              <td><i class="nc-icon-mini users_single-04"></i></td>
+              <td>2016-Mar-11</td>
+              <td>Tom Swift</td>
+              <td>USPS</td>
+              <td>Normal</td>
+              <td>UPID690-697560-7</td>
+              <td><i class="nc-icon-mini ui-1_simple-remove"></i></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr><td colspan="8">&#8230;</td></tr>
+          </tbody>
+        </table>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ROW STATUS ICONS -->
+  <div class="row spacer-top-md">
+
+    <div class="col-md-12">
+
+      <figcaption>Color Nucleo Mini Row Icons</figcaption>
+
+      <!-- colored icons-->
+
+        <table class="table table-datatable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Recipient</th>
+              <th>Carrier</th>
+              <th>Shipping Info</th>
+              <th>Tracking #</th>
+              <th>Status</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2016-Mar-11</td>
+              <td>Tom Swift</td>
+              <td>USPS</td>
+              <td>Normal</td>
+              <td>UPID690-697560-7</td>
+              <td><i class="nc-icon-mini fw ui-1_circle-removestatus status-error"></i></td>
+              <td>$56.99</td>
+            </tr>
+            <tr>
+              <td>2016-Mar-11</td>
+              <td>Tom Swift</td>
+              <td>USPS</td>
+              <td>Normal</td>
+              <td>UPID690-697560-7</td>
+              <td><i class="nc-icon-mini fw ui-2_alert-circle-i status status-success"></i></td>
+              <td>$56.99</td>
+            </tr>
+            <tr>
+              <td>2016-Mar-11</td>
+              <td>Tom Swift</td>
+              <td>USPS</td>
+              <td>Normal</td>
+              <td>UPID690-697560-7</td>
+              <td><i class="nc-icon-mini ui-3_alert status status-warning"></i></td>
+              <td>$56.99</td>
+            </tr>
+            <tr><td colspan="8">&#8230;</td></tr>
+          </tbody>
+        </table>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ROW PROGRESS BARS -->
+  <div class="row spacer-top-md">
+
+    <div class="col-md-12">
+
+      <figcaption>Row Progress Bars</figcaption>
+
+      <!-- progress bars -->
+
+        <table class="table table-datatable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Recipient</th>
+              <th>Carrier</th>
+              <th>Shipping Info</th>
+              <th>Tracking #</th>
+              <th style="min-width: 200px;">Status</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2016-Mar-11</td>
+              <td>Tom Swift</td>
+              <td>USPS</td>
+              <td>Normal</td>
+              <td>UPID690-697560-7</td>
+              <td>
+                <div class="progress no-margins">
+                  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="progress-bar" role="progressbar" style="width: 60%;">
+                    60%
+                  </div>
+                </div>
+              </td>
+              <td>$56.99</td>
+            </tr>
+            <tr>
+              <td>2016-Mar-11</td>
+              <td>Tom Swift</td>
+              <td>USPS</td>
+              <td>Normal</td>
+              <td>UPID690-697560-7</td>
+              <td>
+                <div class="progress no-margins">
+                  <div class="progress no-margins">
+                    <div class="progress-bar progress-bar-success" style="width: 35%" uib-tooltip="35%">
+                      <span class="sr-only">35% Complete</span>
+                    </div>
+                    <div class="progress-bar progress-bar-warning" style="width: 20%" uib-tooltip="20%">
+                      <span class="sr-only">20% Complete</span>
+                    </div>
+                    <div class="progress-bar progress-bar-danger" style="width: 10%" uib-tooltip="10%">
+                      <span class="sr-only">10% Complete</span>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>$56.99</td>
+            </tr>
+            <tr><td colspan="8">&#8230;</td></tr>
+          </tbody>
+        </table>
+
+    </div>
+
+  </div>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="doc-sectionhead">Inline Editing</h2>
+  </div>
+</div>
+
+
+
+  <!-- INLINE EDIT -->
+  <div class="row">
+    <div class="col-md-12">
+
+        <a class="more-info plugin" href="http://vitalets.github.io/angular-xeditable/#" target="blank">angular-xeditable v0.1.9</a>
+
+      <div class="alert alert-danger spacer-top-md">
+        Not all control types are supported. Please refer to the <a href="http://vitalets.github.io/angular-xeditable/#" target="blank">angular-xeditable</a> documentation for more information.
+      </div>
+
+
+        <table class="table table-datatable">
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Carrier</th>
+              <th>Shipping Info</th>
+              <th>Tracking #</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="item in data.xeditable.data">
+              <td><span editable-text="item.first_name">{{item.first_name}}</span></td>
+              <td><span editable-text="item.last_name">{{item.last_name}}</span></td>
+              <td>
+                <span editable-select="item.carrier" e-ng-options="s as s for s in data.xeditable.carriers">
+                  {{item.carrier || 'none'}}
+                </span>
+              </td>
+              <td>Normal</td>
+              <td>UPID690-697560-7</td>
+              <td>$56.99</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+    </div>
+
+  </div>

@@ -1,0 +1,43 @@
+<div class="signin-wrapper">
+
+  <div class="signin-body-top">
+    <div class="floating-unit">
+    <a class="signin-pb-logo" href="http://www.pb.com"></a>
+
+    <div class="signin-box">
+
+     <h2 class="text-magenta spacer-top-xs">Welcome, Russell</h2>
+
+      <p>It takes just a few moments to register as a new user for Product Name.</p>
+
+      <p class="spacer-top-sm spacer-bottom-sm">Create a password to complete your registration.</p>
+
+
+        <div class="form-group spacer-bottom-sm">
+          <label for="name">Password</label>
+          <input class="form-control" name="name" type="password" ng-init="signin.focus = false" ng-focus="signin.focus = !signin.focus" ng-blur="signin.focus = !signin.focus">
+        </div>
+
+        <div class="form-group spacer-bottom-sm">
+          <label for="name">Confirm password</label>
+          <input class="form-control" name="name" type="password" ng-init="signin.focus = false" ng-focus="signin.focus = !signin.focus" ng-blur="signin.focus = !signin.focus">
+        </div>
+
+        <div uib-collapse="!signin.focus">
+          <div class="alert alert-info">
+            Your password must be at least 8 characters long and contain an uppercase letter plus at least one digit or special character.
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-block btn-lg btn-pill" type="submit">Complete My Registration</button>
+
+      <p class="spacer-top-md">By clicking you agree to <a href="">Terms and Conditions</a>,<br> <a href="">Privacy</a> and <a href="">Refund </a>policies.</p>
+    </div>
+<!-- // end white box --></div>
+    </div>
+
+    <div ng-include="'modules/patterns/templates/includes/footer.html'"></div>
+
+  </div>
+
+</div>

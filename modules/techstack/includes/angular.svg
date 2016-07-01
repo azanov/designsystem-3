@@ -1,0 +1,32 @@
+<svg version="1.1" id="InteractiveSVG" width="301" height="150"
+preserveAspectRatio="xMinYMax meet"  viewBox="0 0 375.847 185.784" >
+<g id="timeline">
+  <g id="angular">
+    <rect x="233.422" y="0" style="fill:#0072B8;" width="12.329" height="190.411"></rect>
+    <polygon style="fill:#0072B8;" points="234.502,88.199 227.211,93.599 235.042,98.64"/>
+    <text transform="matrix(1 0 0 1 276.8128 99.5824)" style="fill:#0072B8; font-size:21.6028px;">Angular</text>
+
+    <g id="angular-badge">
+      <circle style="fill:#0072B8;" cx="93.892" cy="92.988" r="92.892"/>
+      <g id="angular-details">
+        <text transform="matrix(1 0 0 1 63.3093 121.1215)" style="fill:#FFFFFF; font-family: 'PrecisionSans_W_Bd'; font-size:12.9617px;">Extended,</text>
+
+        <text transform="matrix(1 0 0 1 39.6481 136.6752)" style="fill:#FFFFFF; font-family: 'PrecisionSans_W_Bd'; font-size:12.9617px;">dynamic HTML for</text>
+
+        <text transform="matrix(1 0 0 1 63.3864 152.2299)" style="fill:#FFFFFF; font-family: 'PrecisionSans_W_Bd'; font-size:12.9617px;">the web.</text>
+
+      </g>
+      <g id="angular-title">
+        <path style="fill:#B3B3B3;" d="M93.6,29.235L63.452,39.844l4.764,39.498l25.416,13.969l25.546-14.158l4.762-39.496L93.6,29.235z"
+        />
+        <path style="fill:#B63032;" d="M120.933,41.939l-27.404-9.345v57.379l22.966-12.71L120.933,41.939z"/>
+        <path style="fill:#E23337;" d="M66.835,42.108l4.082,35.325l22.612,12.541V32.593L66.835,42.108z"/>
+        <path style="fill:#F3F3F3;" d="M99.881,61.134l-6.302-13.16l-5.548,13.16H99.881z M102.284,66.668H85.579l-3.737,9.348
+        l-6.952,0.128l18.64-41.466l19.289,41.466h-6.443L102.284,66.668z"/>
+        <path style="fill:#B3B3B3;" d="M93.529,34.678l0.05,13.295l6.296,13.171h-6.331l-0.014,5.515l8.754,0.009l4.092,9.478
+        l6.651,0.124L93.529,34.678z"/>
+      </g>
+    </g>
+  </g>
+</g>
+</svg>

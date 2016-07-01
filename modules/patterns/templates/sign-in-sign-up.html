@@ -1,0 +1,346 @@
+<div class="doc-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero-header">
+          <div class="eyebrow">Patterns</div>
+          <h1>Sign In &amp; Sign Up</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div headroom class="sub-header jump-bar headroom" tolerance="5" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-unstyled list-inline jump-menu">
+            <li><a ui-sref="patterns.signinup({'#':'sign-in'})">Sign in</a></li>
+            <!-- <li><a ui-sref="patterns.signinup({'#':'forgot-password'})">Password</a></li> -->
+            <li><a ui-sref="patterns.signinup({'#':'sign-up'})">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<div class="container">
+
+  <!-- SIGN IN -->
+  <div class="row" >
+    <div class="col-md-8">
+      <h1 id="sign-in" class="doc-head">Sign In</h1>
+      <p class="doc-lede">Sign In pages should present minimal information &mdash; enough for users to gain entry to a product or get help with lost access information.</p>
+    </div>
+  </div>
+
+  <!-- SIGN IN : Email -->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Sign In</h2>
+    </div>
+  </div>
+
+  <div class="row ">
+    <div class="col-md-6">
+      <!-- <p>This option supports legacy applications, for which users may be using a non-email username.</p> -->
+      <a href="" ui-sref="patterns.signin" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/signin-signup_sign_in.jpg" /></a>
+    </div>
+  </div>
+
+  <!-- SIGN IN : Invalid Email -->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Sign In: Invalid Email</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.invalidemail" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/signin-signup_invalid_email.jpg" /></a>
+    </div>
+  </div>
+
+  <!-- SIGN IN : Invalid Password -->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead"> Sign In: Invalid Email or Password</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.invalidpassword" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/signin-signup_invalid_password.jpg" /></a>
+    </div>
+  </div>
+
+  <!--Sign In Page - Email identified but account not registered-->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Sign In: Verification Email</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.completeregistration" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/signin-signup_complete_registration.jpg" /></a>
+    </div>
+  </div>
+
+   <!-- Sign In Page - Warning that the next unsuccessful atempt will lock your account-->
+   <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Sign In: Account Lock Warning</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.unsuccessfulattempt" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/signin-signup_unsuccessful_attempt.jpg" /></a>
+    </div>
+  </div>
+
+  <!--Account locked with live chat-->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Sign In: Account Locked: (Live Chat Open)</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.accountlockedchat" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/signin-signup_account_locked_chat.jpg" /></a>
+    </div>
+  </div>
+
+
+  <!--Account locked with no chat-->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Sign In: Account Locked: (Live Chat Closed)</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.accountlocked" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/signin-signup_account_locked_no_chat.jpg" /></a>
+    </div>
+  </div>
+
+  <!--Forgot Password Page  - With return to sign in-->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Forgot Password: Send Reset Email, Go to Verification</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.reset-password" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/signin-signup_reset_password.jpg" /></a>
+    </div>
+  </div>
+
+  <!--Forgot Password: Security Question, Reset by Password, Return to Sign In-->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Forgot Password: Security Question, Reset by Password, Go to Verification</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.forgotpassword" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/forgotpassword.jpg" /></a>
+    </div>
+  </div>
+
+  <!--Forgot Password: Security Question, Reset by Question, Return to Sign In-->
+   <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Forgot Password: Security Question, Reset by Question, Go to Confirm New Password</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.forgotpassword-question" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/forgotpassword-question.jpg" /></a>
+    </div>
+  </div>
+
+  <!--Forgot Password: Security Question, Answer Does Not Match-->
+   <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Forgot Password: Security Question, Answer Does Not Match</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.forgotpassword-error" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/forgotpassword-error.jpg" /></a>
+    </div>
+  </div>
+
+
+  <!--Forgot Password - Email sent feedback-->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Forgot Password: Reset Email Sent</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.emailsent" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/signin-signup_email_sent.jpg" /></a>
+    </div>
+  </div>
+
+ <!--Change Password  - Confirm password-->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Reset Password: Confirm New Password</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.changepassword" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/signin-signup_change_password.jpg" /></a>
+    </div>
+  </div>
+
+  <!--Change Password  - No security questions needed-->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Reset Password: Password Requirements</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.changepassword-noquestion" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/signin-signup_change_password_no_question.jpg" /></a>
+    </div>
+  </div>
+
+  <!--Change Password  - No security questions needed-->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Reset Password: Password Entries Don’t Match</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.changepassword-confirmpassword" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/signin-signup_confirm_password.jpg" /></a>
+    </div>
+  </div>
+
+  <!--Change Password  - Password reset success-->
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Reset Password: Sign In With New Password</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.passwordreset-success" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/signin-signup_reset_success.jpg" /></a>
+    </div>
+  </div>
+
+
+  <!-- Sign Up -->
+  <div class="row" >
+    <div class="col-md-8">
+      <h1 id="sign-up" class="doc-head">Sign Up</h1>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12"><h2>Sign Up</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.invitation-withoutpayment" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/signin-signup_invitation_without_payment.jpg" /></a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Sign Up: Payment Needed (Credit Card)</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.invitation-withpayment" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/signin-signup_invalid_with_payment.jpg" /></a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Sign Up: Payment Needed (Purchase Power)</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.signup-purchasepower" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/signin-signup_purchase_power.jpg" /></a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Sign Up: New Account (Admin)</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.signup-admininvite" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/signin-signup_admin_invite.jpg" /></a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Sign Up: No Payment Needed (Admin)</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.signup-existingaccount" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/signin-signup_existing_account.jpg" /></a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Sign Up: Payment Needed (Admin)</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.signup-withpayment" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/signin-signup_signup_with_payment.jpg" /></a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="doc-sectionhead">Sign Up: Sign In</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="" ui-sref="patterns.signup-postregistration" target="_blank"><img class="img-responsive" src="modules/patterns/assets/images/signin-signup_post-registration.jpg
+      " /></a>
+    </div>
+  </div>
+
+
+</div>

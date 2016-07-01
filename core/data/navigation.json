@@ -1,0 +1,253 @@
+[{
+    "label": "Principles",
+    "value": "principles.page"
+
+  }, {
+    "Web": [{
+      "label": "Product Framework",
+      "value": "",
+      "toggle": "dropdown",
+      "children": [{
+        "label": "Responsive Web",
+        "value": "",
+        "toggle": "dropdown",
+        "children": [{
+          "label": "Foundations",
+          "value": "",
+          "toggle": "dropdown",
+          "children": [{
+              "label": "Accessibility",
+              "value": "foundation.accessibility"
+            }, {
+              "label": "Animation",
+              "value": "foundation.animation.page"
+            }, {
+              "label": "Color",
+              "value": "foundation.color"
+            }, {
+              "label": "Grid",
+              "value": "foundation.grid"
+            }, {
+              "label": "Helpers",
+              "value": "helpers"
+            }, {
+              "label": "Iconography",
+              "value": "foundation.iconography"
+            }, {
+              "label": "Typography",
+              "value": "foundation.typography"
+            }, {
+              "label": "Angular Directives",
+              "value": "foundation.directives"
+            }, {
+              "label": "Animation Samples",
+              "value": "animation.page"
+            }
+
+          ]
+        }, {
+          "label": "Elements",
+          "value": "",
+          "toggle": "dropdown",
+          "children": [{
+            "label": "Charts",
+            "value": "charts.page"
+          },{
+            "label": "Help Prompts",
+            "value": "help"
+          }, {
+            "label": "Tables",
+            "value": "tables.datatable.page"
+          }, {
+            "label": "Modals",
+            "value": "modals"
+          }, {
+            "label": "Popovers",
+            "value": "popovers"
+          },{
+            "label": "Input Fields",
+            "value": "inputs"
+          }, {
+            "label": "Dropdowns",
+            "value": "dropdowns"
+          }, {
+            "label": "Checkboxes (Template)",
+            "value": "checkboxes"
+          }, {
+            "label": "Radio Buttons",
+            "value": "radiobuttons"
+          }, {
+            "label": "Switches",
+            "value": "switches"
+          }, {
+            "label": "Steppers",
+            "value": "steppers"
+          } , {
+            "label": "Date Pickers",
+            "value": "datepickers"
+          }, {
+            "label": "Cards/Panels",
+            "value": "cards"
+          }, {
+            "label": "Tabs",
+            "value": "tabs"
+          }, {
+            "label": "Accordions",
+            "value": "accordions"
+          }, {
+            "label": "Miller Columns",
+            "value": "miller"
+          }, {
+            "label": "Widgets",
+            "value": "widgets"
+          }, {
+            "label": "Gallery",
+            "value": "gallery"
+          }, {
+            "label": "Buttons",
+            "value": "buttons"
+          }, {
+            "label": "Breadcrumbs",
+            "value": "breadcrumbs"
+          }, {
+            "label": "Tiles",
+            "value": "tiles"
+          }, {
+            "label": "Alerts",
+            "value": "alerts"
+          }, {
+            "label": "Toastrs",
+            "value": "toastrs"
+          }, {
+            "label": "Badges",
+            "value": "badges"
+          }, {
+            "label": "Progress",
+            "value": "progress"
+          }
+          ]
+        }, {
+          "label": "Patterns",
+          "value": "",
+          "toggle": "dropdown",
+          "children": [{
+            "label": "Dashboards",
+            "value": "patterns.dashboards"
+          }, {
+            "label": "Drag & Drop",
+            "value": "patterns.dragdrop"
+          }, {
+            "label": "Error Pages",
+            "value": "errors"
+          }, {
+            "label": "Form Elements",
+            "value": "patterns.forms"
+          }, {
+            "label": "Getting Started",
+            "value": "patterns.gettingstarted"
+          }, {
+            "label": "Hamburger Menu",
+            "value": "hamburger.overview"
+          }, {
+            "label": "Headers & Footers",
+            "value": "patterns.headersfooters"
+          }, {
+            "label": "Sign In & Sign Up",
+            "value": "patterns.signinup"
+          }, {
+            "label": "Split Views",
+            "value": "splitview.overview"
+          }, {
+            "label": "Welcome",
+            "value": "patterns.welcome"
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "Mobile": [{
+      "label": "Product Framework",
+      "value": "",
+      "toggle": "dropdown",
+      "children": [{
+        "label": "Responsive Web",
+        "value": "",
+        "toggle": "dropdown",
+        "children": [{
+          "label": "Foundations",
+          "value": "",
+          "toggle": "dropdown",
+          "children": [{
+            "label": "Color",
+            "value": "mobile.color"
+          }, {
+            "label": "Grid",
+            "value": "mobile.grid"
+          }, {
+            "label": "Typography",
+            "value": "mobile.typography"
+          }]
+        }, {
+          "label": "Elements",
+          "value": "",
+          "toggle": "dropdown",
+          "children": [{
+            "label": "Alerts",
+            "value": "mobile.user-feedback"
+          }, {
+            "label": "Buttons",
+            "value": "mobile.buttons"
+          }, {
+            "label": "Containers",
+            "value": "mobile.containers"
+          }, {
+            "label": "Lists",
+            "value": "mobile.lists-grids"
+          }, {
+            "label": "Modals & Popovers",
+            "value": "mobile.modals-popovers"
+          }, {
+            "label": "UI Controls",
+            "value": "mobile.uicontrols"
+          }]
+        }, {
+          "label": "Patterns",
+          "value": "",
+          "toggle": "dropdown",
+          "children": [{
+            "label": "Forms",
+            "value": "mobile.forms"
+          }, {
+            "label": "Getting Started",
+            "value": "mobile.onboarding"
+          }, {
+            "label": "Home Page",
+            "value": "mobile.homepage"
+          }, {
+            "label": "Maps",
+            "value": "mobile.maps"
+          }, {
+            "label": "Navigation",
+            "value": "mobile.navigation"
+          }, {
+            "label": "Search & Results",
+            "value": "mobile.search-results"
+          }, {
+            "label": "Sign In & Sign Up",
+            "value": "mobile.sign-in-up"
+          }, {
+            "label": "Welcome",
+            "value": "mobile.landing"
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "label": "Globalization",
+    "value": "globalization.page"
+  }, {
+    "label": "Resources",
+    "value": "resources.developers"
+  }
+
+]

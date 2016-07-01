@@ -1,0 +1,136 @@
+// TABS /
+
+.tab-pane {
+  padding: 15px;
+}
+// .tabbable.scroll >.tab-content {
+//   padding: 20px;
+// }
+.tab-content {
+  &.tab-content-bordered {
+    border: 1px solid $nav-tabs-border-color;
+    border-top: 0;
+  }
+}
+
+.tabset-bordered {
+  .tab-pane {
+    &.active {
+      border: 1px solid $nav-tabs-border-color;
+      border-top: 0;
+    }
+  }
+}
+
+// Tabs
+// Give the tabs something to sit on
+.nav-tabs {
+  border-bottom: 1px solid $nav-tabs-border-color;
+  > li {
+    float: left;
+    // Make the list-items overlay the bottom border
+    margin-bottom: -1px;
+
+    // Actual tabs (as links)
+    > a {
+      margin-right: 0;
+      line-height: $line-height-base;
+      border-radius: 0;
+      color: #717171;
+      background-color: #f7f7f7;
+      border: 1px solid $nav-tabs-border-color;
+      border-bottom-color: transparent;
+      &:hover {
+        border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color transparent;
+      }
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &, &:hover, &:focus {
+        color: $header-color;
+        background-color: $nav-tabs-active-link-hover-bg;
+        border: 1px solid $nav-tabs-active-link-hover-border-color;
+        border-top: 2px solid $pb-blue;
+        border-bottom-color: transparent;
+        cursor: default;
+      }
+    }
+  }
+  // pulling this in mainly for less shorthand
+  &.nav-justified {
+    @extend .nav-justified;
+    @extend .nav-tabs-justified;
+  }
+}
+
+// Justified nav links
+// -------------------------
+.nav-justified {
+  width: 100%;
+
+  > li {
+    float: none;
+    > a {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+  }
+
+  > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    > li {
+      display: table-cell;
+      width: 1%;
+      > a {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Move borders to anchors instead of bottom of list
+// Mixin for adding on top the shared `.nav-justified` styles for our tabs
+.nav-tabs-justified {
+  border-bottom: 0;
+
+  > li > a {
+    // Override margin from .nav-tabs
+    margin-right: 0;
+    border-radius: 0;
+  }
+
+  > .active > a, > .active > a:hover, > .active > a:focus {
+    border: 1px solid $nav-tabs-justified-link-border-color;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    > li > a {
+      border-bottom: 1px solid $nav-tabs-justified-link-border-color;
+      border-radius: 0;
+    }
+    > .active > a, > .active > a:hover, > .active > a:focus {
+      border-bottom-color: $nav-tabs-justified-active-link-border-color;
+      border-top: 2px solid $pb-blue;
+    }
+  }
+}
+
+.nav-pills {
+  > li {
+    > a {
+      color: $text-color;
+      &:hover {
+        background-color: $nav-link-hover-bg;
+      }
+    }
+  }
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  background-color: $pb-blue;
+}

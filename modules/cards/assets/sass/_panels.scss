@@ -1,0 +1,135 @@
+// Base class
+.panel {
+  margin-bottom: $line-height-computed;
+  background-color: $panel-bg;
+  border: 1px solid #f0f0f0;
+  border-radius: $panel-border-radius;
+  box-shadow: inset 0 1px 0 #e1e1e1;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Panel contents
+.panel-body {
+  padding: $panel-body-padding;
+  @include clearfix;
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Optional heading
+.panel-heading {
+  padding: 15px 0 10px;
+  margin: 0 $panel-body-padding;
+  background-color: transparent;
+  border-bottom: 1px solid #e1e1e1;
+  border-radius: 0;
+  font-family: $font-family-ps-regular;
+  font-size: 16px;
+  color: #2e2e2e;
+  .panel-filled-heading & {
+    margin: 0;
+    padding: 15px $panel-body-padding 10px;
+  }
+
+  > .dropdown .dropdown-toggle {
+    color: inherit;
+  }
+  + .panel-body {
+    padding-top: 20px;
+  }
+
+  &.panel-toggle {
+    cursor: pointer;
+  }
+}
+// Within heading, strip any `h*` tag of its default margins for spacing.
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $font-family-ps-regular;
+  font-size: 16px;
+  color: #2e2e2e;
+
+  > a, > small, > .small, > small > a, > .small > a {
+    color: inherit;
+  }
+}
+
+// Contextual variations
+//$border, $heading-text-color, $heading-bg-color, $heading-border
+.panel-default {
+  @include panel-variant($panel-default-border, #2e2e2e, $panel-default-heading-bg, $panel-default-border);
+}
+.panel-filled-heading {
+  @include panel-variant($panel-default-border, #2e2e2e, none, transparent);
+
+  &.panel-default > .panel-heading {
+    background-color: rgba(200, 200, 200, .2);
+  }
+}
+
+
+//panel states
+//NOTE: these classes are not recommended to use in applications, but the styling is matched to DS just in case the BS classes are used
+.panel-primary {
+  .panel-heading {
+    color: #fff;
+    background-color: $pb-blue;
+  }
+}
+.panel-success {
+  .panel-heading {
+    color: $state-success-text;
+    background-color: $state-success-bg;
+  }
+}
+
+.panel-warning {
+  .panel-heading {
+    color: $state-warning-text;
+    background-color: $state-warning-bg;
+  }
+}
+
+.panel-danger {
+  .panel-heading {
+    color: $state-danger-text;
+    background-color: $state-danger-bg;
+  }
+}
+
+.panel-info {
+  .panel-heading {
+    color: $state-info-text;
+    background-color: $state-info-bg;
+  }
+}
+
+
+// draggable /
+.column {
+  min-height: 300px;
+  .panel-heading {
+    cursor: move;
+  }
+  .placeholder {
+    background: #f0f0f0;
+    border: 1px dashed #ddd;
+  }
+}
+
+// collapsible /
+.collapse-btn {
+  display: inline-block;
+  float: right;
+  cursor: pointer;
+  color: $pb-gray-300;
+  &:hover {
+    color: $brand-primary;
+  }
+}
