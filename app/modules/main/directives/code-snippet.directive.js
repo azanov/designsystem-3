@@ -38,6 +38,12 @@
             includeElement.html('');
             includeElement.append(cm_el);
           }, codemirrorOptions);
+
+          var codemirrorLinesElement = includeElement.find('.CodeMirror-lines'),
+            paddingTop = parseInt(codemirrorLinesElement.css('padding-top')),
+            paddingBottom = parseInt(codemirrorLinesElement.css('padding-bottom'));
+
+          codemirror.setSize(null, codemirrorLinesElement.height() + paddingTop + paddingBottom);
         };
       }
     };
