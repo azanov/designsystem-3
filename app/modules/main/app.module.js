@@ -18,6 +18,7 @@
     'pb.ds.errors',
     'pb.ds.forms',
     'pb.ds.foundation',
+    'pb.ds.directives',
     'pb.ds.gallery',
     'pb.ds.globalization',
     'pb.ds.hamburger',

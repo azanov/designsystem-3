@@ -38,7 +38,7 @@
               "value": "foundation.typography"
             }, {
               "label": "Angular Directives",
-              "value": "foundation.directives"
+              "value": "directives"
             }, {
               "label": "Animation Samples",
               "value": "animation.page"

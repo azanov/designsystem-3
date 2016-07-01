@@ -1,0 +1,401 @@
+<div class="doc-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero-header">
+          <div class="eyebrow">Foundations</div>
+          <h1>Angular Directives</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+
+      <div headroom class="doc-side-nav headroom" tolerance="50" offset="240" classes="{'initial':'','pinned':'','unpinned':'','top':'headroom-top','notTop':'headroom-not-top'}">
+
+        <nav class="hidden-print hidden-xs hidden-sm" role="tablist">
+          <ul class="nav">
+            <li du-scrollspy="overview">
+              <a ui-sref="directives({'#':'overview'})" du-scrollspy>Overview</a>
+              <ul class="nav" du-spy-context="overview">
+                <li><a ui-sref="directives({'#':'usage'})" du-scrollspy>Usage</a></li>
+              </ul>
+            </li>
+            <li du-scrollspy="checkboxes">
+              <a ui-sref="directives({'#':'checkboxes'})" du-scrollspy>Checkboxes</a>
+              <ul class="nav" du-spy-context="overview">
+                <li><a ui-sref="directives({'#':'checkboxesDirProp'})" du-scrollspy>Directive Properties</a></li>
+                <li><a ui-sref="directives({'#':'checkboxesDirs'})" du-scrollspy>Checkbox Directives</a></li>
+              </ul>
+            </li>
+            <li du-scrollspy="radio">
+              <a ui-sref="directives({'#':'radio'})" du-scrollspy>Radio Buttons</a>
+              <ul class="nav" du-spy-context="radio">
+                <li><a ui-sref="directives({'#':'radioDirProp'})" du-scrollspy>Directive Properties</a></li>
+                <li><a ui-sref="directives({'#':'radioDirs'})" du-scrollspy>Radio Button Directives</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+
+    </div>
+
+    <div class="col-md-9">
+
+      <section id="overview">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Overview</h1>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-12">
+            <h2 id="usage">Usage</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <p>The following AngularJS directives make implementing common controls easier:</p>
+            <ul>
+            <!-- TODO: change ui-sref when checkboxes and radio buttons will be added to the page -->
+              <li><a ui-sref="directives({'#':'checkboxes'})">Checkboxes</a></li>
+              <li><a ui-sref="directives({'#':'radio'})">Radio Buttons</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <p class="spacer-top-lg">Once you've downloaded the Design System to your application, add the components script to your page. The following example assumes that the Design System was installed using Bower.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="doc-body-snippet">
+              <pb-code-snippet options="ctrl.bowerScriptExample"></pb-code-snippet>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <p class="spacer-top-md">To use the Design System components, you need to add the component module as a dependency in your application as follows.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="doc-body-snippet">
+              <pb-code-snippet options="ctrl.dependencyExample"></pb-code-snippet>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section id="checkboxes">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Checkboxes</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h2 id="checkboxesDirProp">
+              Directive Properties
+            </h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <p>The checkbox directive provides an easier implementation of the Design System styled checkbox controls. The directive uses a element tag <code>&lt;pbds-checkbox&gt;&lt;/pbds-checkbox&gt;</code> with the following attributes.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table table-hover spacer-top-md">
+                <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>label</td>
+                    <td>string</td>
+                    <td>none</td>
+                    <td>The text label for the checkbox input.<br />The label attribute can be used with angular-translate, for example <code>label="&#123;&ZeroWidthSpace;&#123;'SOMETHING.LABEL' &#124; translate&#125;&ZeroWidthSpace;&#125;"</code></td>
+                </tr>
+                <tr>
+                    <td>ng-model</td>
+                    <td>object</td>
+                    <td>none</td>
+                    <td>Controller property bound to the checkbox value.</td>
+                </tr>
+                <tr>
+                    <td>ng-change <em>(optional)</em></td>
+                    <td>function</td>
+                    <td>none</td>
+                    <td>Controller function to run when the checkbox value is updated. The value argument is exposed as <code>val</code>, example <code>ng-change="myFunction(val)"</code></td>
+                </tr>
+                <tr>
+                    <td>disabled <em>(optional)</em></td>
+                    <td>boolean</td>
+                    <td>false</td>
+                    <td>Set the control as disabled</td>
+                </tr>
+                <tr>
+                    <td>name <em>(optional)</em></td>
+                    <td>string</td>
+                    <td>none</td>
+                    <td>Property name of the form under which the control is published.</td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h2 id="checkboxesDirs">
+              Checkbox Directives
+            </h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h3>
+              Stacked Checkboxes
+            </h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <figure>
+              <div class="controls-stacked">
+                <pbds-checkbox label="Check Box" name="checkbox1" ng-model="model.checkbox1" ng-change="handler(val)"></pbds-checkbox>
+
+                <pbds-checkbox label="Check Box" name="checkbox2" ng-model="model.checkbox2" ng-change="handler(val)">
+                  <a class="control-help" href="" uib-popover="This is a popover example." placement="top"><i class="nc-icon-mini ui-e_round-e-help text-info"></i></a>
+                </pbds-checkbox>
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="doc-body-snippet">
+              <pb-code-snippet options="ctrl.stackedCheckboxesExample"></pb-code-snippet>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-12">
+            <h3>
+              Inline Checkboxes
+            </h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <figure>
+              <div class="controls-inline">
+                <pbds-checkbox label="Sample" ng-model="model.checkbox3">
+                    <i class="nc-icon-mini ui-e_round-e-info control-help" uib-tooltip="tooltip"></i>
+                </pbds-checkbox>
+
+                <pbds-checkbox label="Sample 2" ng-model="model.checkbox4">
+                    <i class="nc-icon-mini ui-e_round-e-info control-help" uib-tooltip="tooltip"></i>
+                </pbds-checkbox>
+
+                <pbds-checkbox label="Sample 3" ng-model="model.checkbox5"></pbds-checkbox>
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="doc-body-snippet">
+              <pb-code-snippet options="ctrl.inlineCheckboxesExample"></pb-code-snippet>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="radio">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Radio Buttons</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h2 id="radioDirProp">
+              Directive Properties
+            </h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <p>The radio directive provides an easier implementation of the Design System styled radio button controls. The directive uses a element tag <code>&lt;pbds-radio&gt;&lt;/pbds-radio&gt;</code> with the following attributes.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table table-hover spacer-top-md">
+                <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>label</td>
+                    <td>string</td>
+                    <td>none</td>
+                    <td>The text label for the checkbox input.<br />The label attribute can be used with angular-translate, for example <code>label="&#123;&ZeroWidthSpace;&#123;'SOMETHING.LABEL' &#124; translate&#125;&ZeroWidthSpace;&#125;"</code></td>
+                </tr>
+                <tr>
+                    <td>ng-model</td>
+                    <td>object</td>
+                    <td>none</td>
+                    <td>Controller property bound to the checkbox value.</td>
+                </tr>
+                <tr>
+                    <td>value</td>
+                    <td>string</td>
+                    <td>none</td>
+                    <td>The value to which the ngModel expression should be set when selected. Note that value only supports string values</td>
+                </tr>
+                <tr>
+                    <td>ng-change <em>(optional)</em></td>
+                    <td>function</td>
+                    <td>none</td>
+                    <td>Controller function to run when the checkbox value is updated. The value argument is exposed as <code>val</code>, example <code>ng-change="myFunction(val)"</code></td>
+                </tr>
+                <tr>
+                    <td>disabled <em>(optional)</em></td>
+                    <td>boolean</td>
+                    <td>false</td>
+                    <td>Set the control as disabled</td>
+                </tr>
+                <tr>
+                    <td>name <em>(optional)</em></td>
+                    <td>string</td>
+                    <td>none</td>
+                    <td>Property name of the form under which the control is published.</td>
+                </tr>
+
+                </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h2 id="radioDirs">
+              Radio Button Directives
+            </h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h3>
+              Stacked Radio Buttons
+            </h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <figure>
+              <div class="controls-stacked">
+                <pbds-radio ng-attr-label="Radio Button" name="radio1" ng-model="model.radio1" value="radio-1" ng-change="handler(val)" disabled='model.radio1disabled'></pbds-radio>
+
+                <pbds-radio ng-attr-label="Radio Button" name="radio1" ng-model="model.radio2" value="radio-2" ng-change="handler(val)" disabled='model.radio2disabled'>
+                  <a href="" class="control-help" uib-popover="This is a popover example." popover-trigger="click" ><i class="nc-icon-mini ui-e_round-e-help text-info"></i></a>
+                </pbds-radio>
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="doc-body-snippet">
+              <pb-code-snippet options="ctrl.stackedRadioExample"></pb-code-snippet>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-12">
+            <h3>
+              Inline Radio Buttons
+            </h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <figure>
+              <div class="controls-inline">
+                <pbds-radio tip-type="popover" ng-attr-label="Radio Button" name="radio2" ng-model="model.radio3" value="radio-3" ng-change="handler(val)" disabled='model.radio3disabled'></pbds-radio>
+
+                <pbds-radio tip-type="popover" ng-attr-label="Radio Button" name="radio2" ng-model="model.radio4" value="radio-4" ng-change="handler(val)" disabled='model.radio4disabled'>
+                  <a href="" class="control-help" uib-popover="This is a popover example." popover-trigger="click"><i class="nc-icon-mini ui-e_round-e-help"></i></a>
+                </pbds-radio>
+
+                <pbds-radio tip-type="popover" ng-attr-label="Radio Button" name="radio2" ng-model="model.radio5" value="radio-5" ng-change="handler(val)" disabled='model.radio5disabled'>
+                  <a href="" class="control-help" uib-popover="This is a popover example." popover-trigger="click"><i class="nc-icon-mini ui-e_round-e-help"></i></a>
+                </pbds-radio>
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="doc-body-snippet">
+              <pb-code-snippet options="ctrl.inlineRadioExample"></pb-code-snippet>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
